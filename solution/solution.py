@@ -96,11 +96,14 @@ def _hif4_from_scale(
         >= 2.0
     ).to(torch.float32)
 
-    rec_for = rec.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)
     e1_8_for = e1_8.unsqueeze(-1).unsqueeze(-1)
     e1_16_for = e1_16.unsqueeze(-1)
-    element_scale = rec_for * (2.0 ** (-e1_8_for)) * (2.0 ** (-e1_16_for))
-    scaled = xb * element_scale
+    element_scale = (
+        scale_factor.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)
+        * (2.0 ** e1_8_for)
+        * (2.0 ** e1_16_for)
+    )
+    scaled = xb / element_scale
     sign, mant = _s1p2_quant(scaled)
     dequant = sign * mant * element_scale
 
@@ -219,8 +222,8 @@ def hif4_calibration_and_quantize_weight(
     weight_scaled = weight * smooth
     weight_params = _quantize_hif4(
         weight_scaled,
-        importance=importance,
-        search_candidates=False,
+        importance=None,
+        search_candidates=True,
         candidate_radius=1,
     )
 

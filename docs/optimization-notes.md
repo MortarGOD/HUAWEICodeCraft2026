@@ -47,3 +47,5 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 - `solution_v2.py`: Linear SmoothQuant-style per-channel scale; online inverse
   scale for activations; attention still direct-cast. Local mini-sample Linear
   output MSE improved from ~5.87 to ~5.47.
+- `solution_v3.py`: v2 + per-block E6M2 candidate search for weight
+  quantization. Local mini-sample Linear output MSE improved to ~5.18.
