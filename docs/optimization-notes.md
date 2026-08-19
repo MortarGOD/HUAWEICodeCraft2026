@@ -49,3 +49,6 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   output MSE improved from ~5.87 to ~5.47.
 - `solution_v3.py`: v2 + per-block E6M2 candidate search for weight
   quantization. Local mini-sample Linear output MSE improved to ~5.18.
+- `solution_v4.py`: v3 + per-layer Linear smooth-scale alpha search and
+  Attention Q/K smooth-scale alpha search. Local mini-sample Linear ~5.13,
+  Attention ~0.01417.
