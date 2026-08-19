@@ -40,3 +40,10 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 3. Per-64-block optimal discrete scale/E1 search for HiF4.
 4. Attention: apply the same Hadamard rotation to Q and K offline/online to
    preserve `Q K^T` while reducing outliers.
+
+## Version history
+
+- `solution_v1.py`: direct-cast baseline.
+- `solution_v2.py`: Linear SmoothQuant-style per-channel scale; online inverse
+  scale for activations; attention still direct-cast. Local mini-sample Linear
+  output MSE improved from ~5.87 to ~5.47.
