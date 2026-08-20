@@ -285,58 +285,10 @@ def hif4_calibration_attention(
     kv_num_heads: int,
     head_dim: int,
 ) -> dict[str, Any]:
-    """Offline Attention calibration for Q/K smooth scaling."""
-    q_cal: list[torch.Tensor] = []
-    k_cal: list[torch.Tensor] = []
-    v_cal: list[torch.Tensor] = []
-    for sample in calib_qkv_list:
-        q_cal.append(dequantize_nvfp4(sample["q"][0], sample["q"][1]).to(torch.float32))
-        k_cal.append(dequantize_nvfp4(sample["k"][0], sample["k"][1]).to(torch.float32))
-        v_cal.append(dequantize_nvfp4(sample["v"][0], sample["v"][1]).to(torch.float32))
-
-    amax_q_list = []
-    amax_k_list = []
-    for q, k in zip(q_cal, k_cal):
-        q_heads = q.reshape(-1, q_num_heads, head_dim)
-        k_heads = k.reshape(-1, kv_num_heads, head_dim)
-        amax_q_list.append(q_heads.abs().amax(dim=(0, 1)))
-        amax_k_list.append(k_heads.abs().amax(dim=(0, 1)))
-    amax_q = torch.stack(amax_q_list).amax(dim=0)
-    amax_k = torch.stack(amax_k_list).amax(dim=0)
-    eps = 1e-12
-
-    best_scale = torch.ones(head_dim, dtype=torch.float32)
-    best_mse = float("inf")
-    for alpha in (0.0, 0.2, 0.35, 0.5, 0.65, 0.8, 1.0):
-        scale = (amax_q.clamp(min=eps) ** alpha) / (
-            amax_k.clamp(min=eps) ** (1.0 - alpha)
-        )
-        scale = torch.clamp(scale, min=1e-4, max=1e4)
-        inv_scale = 1.0 / scale
-
-        total = 0.0
-        for q, k, v in zip(q_cal, k_cal, v_cal):
-            q_scaled = q.reshape(-1, q_num_heads, head_dim) * scale
-            k_scaled = k.reshape(-1, kv_num_heads, head_dim) * inv_scale
-            q_hat = _dequantize_hif4_params(
-                _quantize_hif4(q_scaled.reshape_as(q)), q.shape
-            )
-            k_hat = _dequantize_hif4_params(
-                _quantize_hif4(k_scaled.reshape_as(k)), k.shape
-            )
-            v_hat = _dequantize_hif4_params(_quantize_hif4(v), v.shape)
-
-            ref = _run_attention(q, k, v, q_num_heads, kv_num_heads, head_dim)
-            out = _run_attention(q_hat, k_hat, v_hat, q_num_heads, kv_num_heads, head_dim)
-            total += float(((ref - out) ** 2).mean().item())
-        mse = total / max(1, len(q_cal))
-        if mse < best_mse:
-            best_mse = mse
-            best_scale = scale
-
+    """Attention calibration state for the current version."""
     return {
-        "q_state": {"smooth_scale": best_scale},
-        "k_state": {"smooth_scale": 1.0 / best_scale},
+        "q_state": None,
+        "k_state": None,
         "v_state": None,
     }
 
@@ -369,10 +321,6 @@ def hif4_dynamic_quantize_q(
     q_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(q_quant, q_scale).to(torch.float32)
-    if isinstance(q_state, dict) and "smooth_scale" in q_state:
-        scale = q_state["smooth_scale"].to(value.device)
-        value = value.reshape(-1, q_num_heads, head_dim) * scale
-        value = value.reshape(-1, q_num_heads * head_dim)
     return _quantize_hif4(value)
 
 
@@ -384,10 +332,6 @@ def hif4_dynamic_quantize_k(
     k_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(k_quant, k_scale).to(torch.float32)
-    if isinstance(k_state, dict) and "smooth_scale" in k_state:
-        scale = k_state["smooth_scale"].to(value.device)
-        value = value.reshape(-1, kv_num_heads, head_dim) * scale
-        value = value.reshape(-1, kv_num_heads * head_dim)
     return _quantize_hif4(value)
 
 

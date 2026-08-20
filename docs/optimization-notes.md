@@ -54,3 +54,7 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   Attention ~0.01417.
 - `solution_v5.py`: v4 + per-block scale search for online activation and V.
   Local mini-sample Linear ~4.77, Attention ~0.01337.
+- `solution_v6.py`: v5 but reverts the harmful Attention Q/K smooth-scale
+  search; keeps Linear improvements and V per-block scale search. Local
+  datasets_0818 subset attention improves over v1 while v4/v5 attention was
+  worse.
