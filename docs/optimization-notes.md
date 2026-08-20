@@ -68,3 +68,9 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   ~5.8301. Linear unchanged.
 - `solution_v10.py`: v9 + finer coarse-to-fine Linear smooth-scale alpha
   search. Local datasets_0818 linear subset total MSE ~3089.37 vs v9 ~3101.55.
+- `solution_v11.py`: v9 (not v10) + output-aware importance weighting for
+  online Linear activation per-block E6M2 scale search. The activation
+  importance is `smooth^2 * sum_o(W_oc^2)`, derived from the output-error term
+  `E_A * diag(smooth) * W^T`. v10's finer alpha search was reverted because it
+  regressed online (12748 / 204s vs v9 12806 / 183s). Local datasets_0818
+  linear subset (groups 0-3) total MSE ~2861.07 vs v9 ~3101.55.

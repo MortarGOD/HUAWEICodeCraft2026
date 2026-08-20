@@ -1,14 +1,12 @@
 """
 NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 2:
-- Linear offline calibration uses calibration activations to compute a
-  SmoothQuant-style per-input-channel scale and channel importance.
-- Weight quantization searches nearby legal E6M2 scales per HiF4 block and
-  picks the one minimizing importance-weighted quantization error.
-- Online activation quantization applies the stored inverse smooth scale and
-  uses the fast direct-cast HiF4 converter.
-- Attention still uses the direct-cast converter in this version.
+Version 11:
+- v9 baseline (shared Q/K Hadamard rotation for Attention) plus
+  output-aware importance weighting for online Linear activation
+  quantization.
+- Reverts v10's coarse-to-fine Linear alpha refinement, which regressed
+  online (12748 / 204s vs v9 12806 / 183s).
 """
 
 from __future__ import annotations
@@ -228,8 +226,7 @@ def hif4_calibration_and_quantize_weight(
 
     best_alpha = 0.5
     best_mse = float("inf")
-
-    def eval_alpha(alpha: float) -> float:
+    for alpha in (0.0, 0.2, 0.35, 0.5, 0.65, 0.8, 1.0):
         smooth = _smooth_scale(weight, calib, alpha=alpha)
         weight_scaled = weight * smooth
         weight_params = _quantize_hif4(weight_scaled, search_candidates=False)
@@ -244,23 +241,7 @@ def hif4_calibration_and_quantize_weight(
             )
             error = activation @ weight.t() - activation_hat @ weight_hat.t()
             total += float((error * error).mean().item())
-        return total / max(1, len(calib))
-
-    for alpha in (0.0, 0.2, 0.4, 0.6, 0.8, 1.0):
-        mse = eval_alpha(alpha)
-        if mse < best_mse:
-            best_mse = mse
-            best_alpha = alpha
-
-    refine = sorted(
-        {
-            round(best_alpha + delta, 2)
-            for delta in (-0.1, -0.05, 0.0, 0.05, 0.1)
-            if 0.0 <= best_alpha + delta <= 1.0
-        }
-    )
-    for alpha in refine:
-        mse = eval_alpha(alpha)
+        mse = total / max(1, len(calib))
         if mse < best_mse:
             best_mse = mse
             best_alpha = alpha
@@ -277,10 +258,15 @@ def hif4_calibration_and_quantize_weight(
         search_candidates=True,
         candidate_radius=1,
     )
+    act_importance = (smooth * smooth * (weight * weight).sum(dim=0)).clamp(min=0.0)
+    act_importance = act_importance.reshape(1, channels // 64, 8, 2, 4)
 
     return {
         "weight_params": weight_params,
-        "activation_state": {"smooth_scale": smooth},
+        "activation_state": {
+            "smooth_scale": smooth,
+            "importance": act_importance,
+        },
     }
 
 
@@ -291,10 +277,19 @@ def hif4_dynamic_quantize_activation(
 ) -> dict[str, torch.Tensor]:
     """Online activation quantization using the stored smooth scale."""
     activation = dequantize_nvfp4(activation_quant, activation_scale).to(torch.float32)
-    if isinstance(activation_state, dict) and "smooth_scale" in activation_state:
-        smooth = activation_state["smooth_scale"].to(activation.device)
-        activation = activation / smooth
-    return _quantize_hif4(activation, search_candidates=True, candidate_radius=1)
+    importance = None
+    if isinstance(activation_state, dict):
+        if "smooth_scale" in activation_state:
+            smooth = activation_state["smooth_scale"].to(activation.device)
+            activation = activation / smooth
+        if "importance" in activation_state:
+            importance = activation_state["importance"].to(activation.device)
+    return _quantize_hif4(
+        activation,
+        importance=importance,
+        search_candidates=True,
+        candidate_radius=1,
+    )
 
 
 # =============================================================================
