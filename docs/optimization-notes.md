@@ -60,3 +60,6 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   worse.
 - `solution_v7.py`: v6 + per-block scale search for Attention Q and K. Local
   datasets_0818 attention subset improves from ~0.2472 (v6) to ~0.2332.
+- `solution_v8.py`: v7 + importance-weighted per-block E6M2 scale search for
+  Linear weights. Local datasets_0818 linear subset total MSE ~3101.5 vs v7
+  ~3161.1.

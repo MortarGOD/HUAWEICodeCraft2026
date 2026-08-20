@@ -250,8 +250,13 @@ def hif4_calibration_and_quantize_weight(
 
     smooth = _smooth_scale(weight, calib, alpha=best_alpha)
     weight_scaled = weight * smooth
+    channels = int(weight.shape[-1])
+    act_sq = torch.stack([(a * a).mean(dim=0) for a in calib]).mean(dim=0)
+    importance = (act_sq / (smooth * smooth)).clamp(min=0.0)
+    importance = importance.reshape(1, channels // 64, 8, 2, 4)
     weight_params = _quantize_hif4(
         weight_scaled,
+        importance=importance,
         search_candidates=True,
         candidate_radius=1,
     )
