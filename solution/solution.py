@@ -321,7 +321,7 @@ def hif4_dynamic_quantize_q(
     q_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(q_quant, q_scale).to(torch.float32)
-    return _quantize_hif4(value)
+    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
 
 
 def hif4_dynamic_quantize_k(
@@ -332,7 +332,7 @@ def hif4_dynamic_quantize_k(
     k_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(k_quant, k_scale).to(torch.float32)
-    return _quantize_hif4(value)
+    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
 
 
 def hif4_dynamic_quantize_v(

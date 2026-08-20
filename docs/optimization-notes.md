@@ -58,3 +58,5 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   search; keeps Linear improvements and V per-block scale search. Local
   datasets_0818 subset attention improves over v1 while v4/v5 attention was
   worse.
+- `solution_v7.py`: v6 + per-block scale search for Attention Q and K. Local
+  datasets_0818 attention subset improves from ~0.2472 (v6) to ~0.2332.
