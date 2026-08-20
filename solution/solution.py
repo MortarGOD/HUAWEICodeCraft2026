@@ -228,7 +228,8 @@ def hif4_calibration_and_quantize_weight(
 
     best_alpha = 0.5
     best_mse = float("inf")
-    for alpha in (0.0, 0.2, 0.35, 0.5, 0.65, 0.8, 1.0):
+
+    def eval_alpha(alpha: float) -> float:
         smooth = _smooth_scale(weight, calib, alpha=alpha)
         weight_scaled = weight * smooth
         weight_params = _quantize_hif4(weight_scaled, search_candidates=False)
@@ -243,7 +244,23 @@ def hif4_calibration_and_quantize_weight(
             )
             error = activation @ weight.t() - activation_hat @ weight_hat.t()
             total += float((error * error).mean().item())
-        mse = total / max(1, len(calib))
+        return total / max(1, len(calib))
+
+    for alpha in (0.0, 0.2, 0.4, 0.6, 0.8, 1.0):
+        mse = eval_alpha(alpha)
+        if mse < best_mse:
+            best_mse = mse
+            best_alpha = alpha
+
+    refine = sorted(
+        {
+            round(best_alpha + delta, 2)
+            for delta in (-0.1, -0.05, 0.0, 0.05, 0.1)
+            if 0.0 <= best_alpha + delta <= 1.0
+        }
+    )
+    for alpha in refine:
+        mse = eval_alpha(alpha)
         if mse < best_mse:
             best_mse = mse
             best_alpha = alpha
