@@ -74,3 +74,6 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   `E_A * diag(smooth) * W^T`. v10's finer alpha search was reverted because it
   regressed online (12748 / 204s vs v9 12806 / 183s). Local datasets_0818
   linear subset (groups 0-3) total MSE ~2861.07 vs v9 ~3101.55.
+- `solution_v12.py`: v11 + smaller shared Q/K Hadamard rotation block size
+  (16 -> 4) for Attention. Local datasets_0818 all 50 attention groups total
+  MSE ~39.05 vs ~43.11 for block size 16; linear is unchanged.

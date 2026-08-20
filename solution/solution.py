@@ -1,12 +1,10 @@
 """
 NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 11:
-- v9 baseline (shared Q/K Hadamard rotation for Attention) plus
-  output-aware importance weighting for online Linear activation
-  quantization.
-- Reverts v10's coarse-to-fine Linear alpha refinement, which regressed
-  online (12748 / 204s vs v9 12806 / 183s).
+Version 12:
+- v11 baseline plus a smaller shared Q/K Hadamard rotation block size
+  (16 -> 4) for Attention. Local datasets_0818 attention MSE improves
+  from ~43.11 (block 16) to ~39.05 (block 4) across all 50 groups.
 """
 
 from __future__ import annotations
@@ -303,7 +301,7 @@ def hif4_calibration_attention(
     head_dim: int,
 ) -> dict[str, Any]:
     """Attention calibration state for the current version."""
-    rotation = _make_qk_rotation_state(head_dim, block_size=16)
+    rotation = _make_qk_rotation_state(head_dim, block_size=4)
     return {
         "q_state": rotation,
         "k_state": rotation,
