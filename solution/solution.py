@@ -291,11 +291,50 @@ def hif4_calibration_attention(
     head_dim: int,
 ) -> dict[str, Any]:
     """Attention calibration state for the current version."""
+    rotation = _make_qk_rotation_state(head_dim, block_size=16)
     return {
-        "q_state": None,
-        "k_state": None,
+        "q_state": rotation,
+        "k_state": rotation,
         "v_state": None,
     }
+
+
+def _make_qk_rotation_state(
+    head_dim: int,
+    block_size: int = 16,
+) -> dict[str, torch.Tensor]:
+    """Create a shared Q/K Hadamard rotation state."""
+    if head_dim % block_size != 0:
+        raise ValueError("head_dim must be divisible by rotation block_size")
+    h = torch.tensor([[1.0]])
+    while h.shape[0] < block_size:
+        h = torch.cat(
+            [torch.cat([h, h], dim=1), torch.cat([h, -h], dim=1)], dim=0
+        ) / math.sqrt(2.0)
+    torch.manual_seed(0)
+    signs = torch.randint(0, 2, (head_dim,)) * 2 - 1
+    return {
+        "block_size": int(block_size),
+        "rot16": h.to(torch.float32),
+        "signs": signs.to(torch.float32),
+    }
+
+
+def _apply_qk_rotation(
+    value: torch.Tensor,
+    num_heads: int,
+    head_dim: int,
+    state: dict[str, Any],
+) -> torch.Tensor:
+    """Apply the shared orthogonal rotation to Q or K."""
+    block_size = int(state["block_size"])
+    rot = state["rot16"].to(value.device, value.dtype)
+    signs = state["signs"].to(value.device, value.dtype)
+    seq = int(value.shape[0])
+    x = value.reshape(seq, num_heads, head_dim // block_size, block_size)
+    x = x @ rot
+    x = x.reshape(seq, num_heads, head_dim) * signs
+    return x.reshape(seq, num_heads * head_dim)
 
 
 def _run_attention(
@@ -326,6 +365,8 @@ def hif4_dynamic_quantize_q(
     q_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(q_quant, q_scale).to(torch.float32)
+    if isinstance(q_state, dict) and "rot16" in q_state:
+        value = _apply_qk_rotation(value, q_num_heads, head_dim, q_state)
     return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
 
 
@@ -337,6 +378,8 @@ def hif4_dynamic_quantize_k(
     k_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(k_quant, k_scale).to(torch.float32)
+    if isinstance(k_state, dict) and "rot16" in k_state:
+        value = _apply_qk_rotation(value, kv_num_heads, head_dim, k_state)
     return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
 
 

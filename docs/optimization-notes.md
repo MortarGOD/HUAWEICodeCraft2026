@@ -63,3 +63,6 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 - `solution_v8.py`: v7 + importance-weighted per-block E6M2 scale search for
   Linear weights. Local datasets_0818 linear subset total MSE ~3101.5 vs v7
   ~3161.1.
+- `solution_v9.py`: v8 + shared Q/K Hadamard rotation (block size 16) for
+  Attention. Local datasets_0818 attention subset total MSE ~4.3118 vs v8
+  ~5.8301. Linear unchanged.
