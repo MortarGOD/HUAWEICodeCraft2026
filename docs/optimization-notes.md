@@ -52,3 +52,5 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 - `solution_v4.py`: v3 + per-layer Linear smooth-scale alpha search and
   Attention Q/K smooth-scale alpha search. Local mini-sample Linear ~5.13,
   Attention ~0.01417.
+- `solution_v5.py`: v4 + per-block scale search for online activation and V.
+  Local mini-sample Linear ~4.77, Attention ~0.01337.

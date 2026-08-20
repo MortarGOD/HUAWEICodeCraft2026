@@ -272,7 +272,7 @@ def hif4_dynamic_quantize_activation(
     if isinstance(activation_state, dict) and "smooth_scale" in activation_state:
         smooth = activation_state["smooth_scale"].to(activation.device)
         activation = activation / smooth
-    return _quantize_hif4(activation)
+    return _quantize_hif4(activation, search_candidates=True, candidate_radius=1)
 
 
 # =============================================================================
@@ -399,4 +399,4 @@ def hif4_dynamic_quantize_v(
     v_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(v_quant, v_scale)
-    return _quantize_hif4(value)
+    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
