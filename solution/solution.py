@@ -1,10 +1,10 @@
 """
 NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 12:
-- v11 baseline plus a smaller shared Q/K Hadamard rotation block size
-  (16 -> 4) for Attention. Local datasets_0818 attention MSE improves
-  from ~43.11 (block 16) to ~39.05 (block 4) across all 50 groups.
+Version 13:
+- Revert v12's Attention Q/K rotation block size change (4 -> 16).
+  v12 regressed online (12952 / 161s vs v11 13349 / 183s), so v13
+  restores the v11 linear + attention configuration.
 """
 
 from __future__ import annotations
@@ -301,7 +301,7 @@ def hif4_calibration_attention(
     head_dim: int,
 ) -> dict[str, Any]:
     """Attention calibration state for the current version."""
-    rotation = _make_qk_rotation_state(head_dim, block_size=4)
+    rotation = _make_qk_rotation_state(head_dim, block_size=16)
     return {
         "q_state": rotation,
         "k_state": rotation,

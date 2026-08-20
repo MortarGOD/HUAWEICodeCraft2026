@@ -77,3 +77,6 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 - `solution_v12.py`: v11 + smaller shared Q/K Hadamard rotation block size
   (16 -> 4) for Attention. Local datasets_0818 all 50 attention groups total
   MSE ~39.05 vs ~43.11 for block size 16; linear is unchanged.
+- `solution_v13.py`: revert v12's Attention rotation block size back to 16.
+  v12 regressed online (12952 / 161s vs v11 13349 / 183s), so v13 restores
+  the v11 configuration exactly.
