@@ -2,12 +2,15 @@
 
 Usage:
     /opt/miniconda3/envs/codecraft/bin/python local_eval.py \
-        --solution solution/solution_v8.py \
+        --solution solution/solution_v14.py \
         --linear-groups 0,1,2,3 \
-        --attn-groups 0,1,2,3,4
+        --attn-groups 0,1,2,3,4 \
+        --calibrate-online
 
-The tool reports Linear and Attention MSE separately. It does not estimate
-online runtime; the local CPU differs from the 96-core online judge.
+Raw MSE remains the primary local metric. With ``--calibrate-online``, v1 is
+used as a proxy for the unavailable official HiF4 baseline, while the measured
+v13 result (13349 score / 182 seconds) anchors score and runtime estimates.
+The calibrated numbers are comparative estimates, not judge-equivalent values.
 """
 
 from __future__ import annotations
@@ -17,16 +20,21 @@ import importlib.util
 import math
 import os
 import sys
+import time
 from pathlib import Path
 
 import torch
 
 
 ROOT = Path(__file__).resolve().parent
+DEFAULT_PROXY_BASELINE = ROOT / "solution" / "solution_v1.py"
+DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v13.py"
+DEFAULT_REFERENCE_ONLINE_SCORE = 13349.0
+DEFAULT_REFERENCE_ONLINE_SECONDS = 182.0
 
 
-def load_module(path: str):
-    spec = importlib.util.spec_from_file_location("candidate_solution", path)
+def load_module(path: str, name: str):
+    spec = importlib.util.spec_from_file_location(name, path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"failed to load solution from {path}")
     module = importlib.util.module_from_spec(spec)
@@ -62,8 +70,8 @@ def run_attention(q, k, v, q_num_heads, kv_num_heads, head_dim):
 
 
 def eval_linear(module, linear_data, group_ids):
-    total = 0.0
-    count = 0
+    errors = []
+    started = time.perf_counter()
     for gi in group_ids:
         group = linear_data[gi]
         w_quant, w_scale = group["weight"]
@@ -80,14 +88,13 @@ def eval_linear(module, linear_data, group_ids):
                 ),
                 activation.shape,
             )
-            total += mse(activation @ weight.t(), act_hat @ weight_hat.t())
-            count += 1
-    return total, count
+            errors.append(mse(activation @ weight.t(), act_hat @ weight_hat.t()))
+    return errors, time.perf_counter() - started
 
 
 def eval_attention(module, attn_data, group_ids):
-    total = 0.0
-    count = 0
+    errors = []
+    started = time.perf_counter()
     for gi in group_ids:
         group = attn_data[gi]
         qh = int(group["q_num_heads"])
@@ -108,16 +115,68 @@ def eval_attention(module, attn_data, group_ids):
             q0 = module.dequantize_nvfp4(sample["q"][0], sample["q"][1]).float()
             k0 = module.dequantize_nvfp4(sample["k"][0], sample["k"][1]).float()
             v0 = module.dequantize_nvfp4(sample["v"][0], sample["v"][1]).float()
-            total += mse(
+            errors.append(mse(
                 run_attention(q0, k0, v0, qh, kvh, hd),
                 run_attention(outs["q"], outs["k"], outs["v"], qh, kvh, hd),
-            )
-            count += 1
-    return total, count
+            ))
+    return errors, time.perf_counter() - started
 
 
-def parse_ids(text: str) -> list[int]:
-    return [int(x) for x in text.split(",") if x.strip() != ""]
+def parse_ids(text: str, group_count: int) -> list[int]:
+    if text.strip().lower() == "all":
+        return list(range(group_count))
+    result = [int(x) for x in text.split(",") if x.strip() != ""]
+    invalid = [idx for idx in result if idx < 0 or idx >= group_count]
+    if invalid:
+        raise ValueError(f"group ids out of range 0..{group_count - 1}: {invalid}")
+    return result
+
+
+def evaluate(module, linear_data, attn_data, linear_ids, attn_ids):
+    linear_errors, linear_seconds = eval_linear(module, linear_data, linear_ids)
+    attn_errors, attn_seconds = eval_attention(module, attn_data, attn_ids)
+    return {
+        "linear_errors": linear_errors,
+        "attn_errors": attn_errors,
+        "linear_seconds": linear_seconds,
+        "attn_seconds": attn_seconds,
+        "seconds": linear_seconds + attn_seconds,
+    }
+
+
+def print_raw(label: str, result: dict, linear_ids: list[int], attn_ids: list[int]):
+    linear_errors = result["linear_errors"]
+    attn_errors = result["attn_errors"]
+    linear_total = sum(linear_errors)
+    attn_total = sum(attn_errors)
+    print(
+        f"{label} Linear: groups={linear_ids} cases={len(linear_errors)} "
+        f"total_mse={linear_total:.6f} "
+        f"mean_mse={linear_total / max(1, len(linear_errors)):.6f} "
+        f"seconds={result['linear_seconds']:.3f}"
+    )
+    print(
+        f"{label} Attention: groups={attn_ids} cases={len(attn_errors)} "
+        f"total_mse={attn_total:.6f} "
+        f"mean_mse={attn_total / max(1, len(attn_errors)):.6f} "
+        f"seconds={result['attn_seconds']:.3f}"
+    )
+    print(f"{label} local_total_seconds={result['seconds']:.3f}")
+
+
+def proxy_score(result: dict, baseline: dict) -> tuple[float, float, float]:
+    def component(player_errors, baseline_errors):
+        if len(player_errors) != len(baseline_errors):
+            raise ValueError("candidate and proxy baseline case counts differ")
+        return 100.0 * sum(
+            (base - player) / base
+            for player, base in zip(player_errors, baseline_errors)
+            if base > 0.0
+        )
+
+    linear = component(result["linear_errors"], baseline["linear_errors"])
+    attention = component(result["attn_errors"], baseline["attn_errors"])
+    return linear, attention, linear + attention
 
 
 def main():
@@ -125,11 +184,24 @@ def main():
     parser.add_argument("--solution", required=True)
     parser.add_argument("--linear-groups", default="0,1,2,3")
     parser.add_argument("--attn-groups", default="0,1,2,3,4")
+    parser.add_argument("--calibrate-online", action="store_true")
+    parser.add_argument(
+        "--proxy-baseline", default=str(DEFAULT_PROXY_BASELINE)
+    )
+    parser.add_argument(
+        "--online-reference", default=str(DEFAULT_ONLINE_REFERENCE)
+    )
+    parser.add_argument(
+        "--reference-online-score",
+        type=float,
+        default=DEFAULT_REFERENCE_ONLINE_SCORE,
+    )
+    parser.add_argument(
+        "--reference-online-seconds",
+        type=float,
+        default=DEFAULT_REFERENCE_ONLINE_SECONDS,
+    )
     args = parser.parse_args()
-
-    module = load_module(args.solution)
-    linear_ids = parse_ids(args.linear_groups)
-    attn_ids = parse_ids(args.attn_groups)
 
     linear_data = torch.load(
         ROOT / "datasets_0818" / "linear.pt", weights_only=True, map_location="cpu"
@@ -137,11 +209,55 @@ def main():
     attn_data = torch.load(
         ROOT / "datasets_0818" / "attn.pt", weights_only=True, map_location="cpu"
     )
+    linear_ids = parse_ids(args.linear_groups, len(linear_data))
+    attn_ids = parse_ids(args.attn_groups, len(attn_data))
 
-    lin_total, lin_count = eval_linear(module, linear_data, linear_ids)
-    attn_total, attn_count = eval_attention(module, attn_data, attn_ids)
-    print(f"Linear  groups={linear_ids} cases={lin_count} total_mse={lin_total:.6f} mean_mse={lin_total / lin_count:.6f}")
-    print(f"Attention groups={attn_ids} cases={attn_count} total_mse={attn_total:.6f} mean_mse={attn_total / attn_count:.6f}")
+    module = load_module(args.solution, "candidate_solution")
+    candidate = evaluate(module, linear_data, attn_data, linear_ids, attn_ids)
+    print_raw("Candidate", candidate, linear_ids, attn_ids)
+
+    if not args.calibrate_online:
+        return
+
+    baseline_module = load_module(args.proxy_baseline, "proxy_baseline_solution")
+    baseline = evaluate(
+        baseline_module, linear_data, attn_data, linear_ids, attn_ids
+    )
+    if Path(args.solution).resolve() == Path(args.online_reference).resolve():
+        reference = candidate
+    else:
+        reference_module = load_module(
+            args.online_reference, "online_reference_solution"
+        )
+        reference = evaluate(
+            reference_module, linear_data, attn_data, linear_ids, attn_ids
+        )
+    print_raw("Reference", reference, linear_ids, attn_ids)
+
+    cand_lin, cand_attn, cand_proxy = proxy_score(candidate, baseline)
+    ref_lin, ref_attn, ref_proxy = proxy_score(reference, baseline)
+    if ref_proxy == 0.0:
+        raise RuntimeError("reference proxy score is zero; cannot calibrate")
+    if reference["seconds"] <= 0.0:
+        raise RuntimeError("reference runtime is zero; cannot calibrate")
+    estimated_score = args.reference_online_score * cand_proxy / ref_proxy
+    estimated_seconds = (
+        args.reference_online_seconds
+        * candidate["seconds"]
+        / reference["seconds"]
+    )
+    print(
+        f"Proxy score: candidate={cand_proxy:.3f} "
+        f"(linear={cand_lin:.3f}, attention={cand_attn:.3f}) "
+        f"reference={ref_proxy:.3f} "
+        f"(linear={ref_lin:.3f}, attention={ref_attn:.3f})"
+    )
+    print(
+        f"Calibrated online estimate: score={estimated_score:.1f} "
+        f"seconds={estimated_seconds:.1f} "
+        f"anchors=v13:{args.reference_online_score:.0f}/"
+        f"{args.reference_online_seconds:.0f}s"
+    )
 
 
 if __name__ == "__main__":

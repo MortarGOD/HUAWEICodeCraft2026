@@ -1,8 +1,9 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 14:
-- Use v138's output-aware Linear calibration, including the shared Hadamard
-  transform, ridge-fitted weight candidates, and held-out code refinement.
+Version 15:
+- Keep v14's output-aware Linear transform, but use only three compact E6M2
+  scale candidates and select between the baseline and one ridge-fitted
+  weight candidate. Remove gain candidates and iterative code refinement.
 - Keep v13's proven Attention path unchanged: shared Q/K Hadamard rotation
   with block size 16 and per-block E6M2 candidate search for Q/K/V.
 """
@@ -18,14 +19,10 @@ import torch
 E6M2_MIN = 2.0 ** (-48)
 E6M2_MAX = 49152.0  # 2^15 * 1.5
 
-_LINEAR_SCALE_OFFSETS = (0, 1, 2, 3, 4)
+_LINEAR_SCALE_OFFSETS = (0, 1, 2)
 _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.39
-_LINEAR_RIDGE_LAMBDAS = (10.0, 20.0)
-_LINEAR_RIDGE_SWITCH_MARGIN = 0.05
-_WEIGHT_REFINEMENT_RIDGE = 0.01
-_WEIGHT_REFINEMENT_STEP = 0.04
-_WEIGHT_REFINEMENT_CHECKPOINTS = (1, 2, 3, 4, 5)
+_LINEAR_RIDGE_LAMBDA = 20.0
 
 
 # =============================================================================
@@ -357,125 +354,28 @@ def _output_aware_quantize_weight(
     weight: torch.Tensor,
     baseline: dict[str, torch.Tensor],
 ) -> dict[str, torch.Tensor]:
-    """Fit a fixed HiF4 Q(W) directly against calibration output A @ W.T."""
+    """Fit one ridge candidate and select fixed Q(W) rows by output MSE."""
     activation_params = _quantize_linear_values(activation)
     quantized_activation = _dequantize_linear_params(activation_params)
     activation_importance = activation.square().mean(0)
-    candidates = [baseline, _quantize_linear_values(weight)]
     target_output = activation @ weight.T
-    initial_weights = torch.stack(
-        [_dequantize_linear_params(params) for params in candidates]
-    )
-    initial_outputs = torch.matmul(
-        quantized_activation, initial_weights.transpose(1, 2)
-    )
-    initial_errors = (target_output.unsqueeze(0) - initial_outputs).square().mean(1)
-    rows = torch.arange(weight.shape[0])
-    best_output = initial_outputs[initial_errors.argmin(0), :, rows].T
-    for source_output in (initial_outputs[0], best_output):
-        denominator = source_output.square().sum(0).clamp_min(
-            torch.finfo(torch.float32).tiny
-        )
-        gain = (target_output * source_output).sum(0) / denominator
-        candidates.append(
-            _quantize_linear_values(
-                weight * gain.clamp(0.875, 1.125).unsqueeze(1),
-                activation_importance,
-            )
-        )
-
     kernel = quantized_activation @ quantized_activation.T
     residual = target_output - quantized_activation @ weight.T
     ridge_scale = kernel.diag().mean()
     identity = torch.eye(
         kernel.shape[0], dtype=kernel.dtype, device=kernel.device
     )
-    ridge_candidates = []
-    for ridge_lambda in _LINEAR_RIDGE_LAMBDAS:
-        dual = torch.linalg.solve(
-            kernel + ridge_lambda * ridge_scale * identity,
-            residual,
-        )
-        fitted_weight = weight + (quantized_activation.T @ dual).T
-        ridge_candidates.append(
-            _quantize_linear_values(fitted_weight, activation_importance)
-        )
-
-    row_params = [
-        _choose_weight_rows(
-            target_output,
-            quantized_activation,
-            candidates + [ridge_candidate],
-        )
-        for ridge_candidate in ridge_candidates
-    ]
-    row_errors = [
-        (
-            target_output
-            - quantized_activation @ _dequantize_linear_params(params).T
-        ).square().mean(0)
-        for params in row_params
-    ]
-    use_lower_ridge = row_errors[0] <= row_errors[1] * (
-        1.0 - _LINEAR_RIDGE_SWITCH_MARGIN
+    dual = torch.linalg.solve(
+        kernel + _LINEAR_RIDGE_LAMBDA * ridge_scale * identity,
+        residual,
     )
-    output_count = weight.shape[0]
-    return {
-        name: torch.where(
-            use_lower_ridge.view(output_count, *([1] * (lower.ndim - 1))),
-            lower,
-            row_params[1][name],
-        )
-        for name, lower in row_params[0].items()
-    }
-
-
-def _refine_weight_codes(
-    activation_parts: list[torch.Tensor],
-    transformed_activation_parts: list[torch.Tensor],
-    weight: torch.Tensor,
-    weight_params: dict[str, torch.Tensor],
-) -> dict[str, torch.Tensor]:
-    """Refine fixed weight codes on train calibration data and select held-out."""
-    if len(activation_parts) < 2:
-        return weight_params
-    quantized_parts = [
-        _dequantize_linear_params(_quantize_linear_values(part))
-        for part in transformed_activation_parts
-    ]
-    train_activation = torch.cat(activation_parts[:-1])
-    train_quantized = torch.cat(quantized_parts[:-1])
-    train_target = train_activation @ weight.T
-    energy = train_quantized.square().sum(0)
-    denominator = energy + _WEIGHT_REFINEMENT_RIDGE * energy.mean()
-    scalar_scale = (
-        weight_params["scale_factor"].to(torch.float32)
-        * weight_params["scale_lv2"].to(torch.float32)
-        * weight_params["scale_lv3"].to(torch.float32)
-    ).expand_as(weight_params["mant"]).flatten(-4, -1)
-    candidate = dict(weight_params)
-    checkpoints = [weight_params]
-    for iteration in range(1, _WEIGHT_REFINEMENT_CHECKPOINTS[-1] + 1):
-        candidate_weight = _dequantize_linear_params(candidate)
-        residual = train_target - train_quantized @ candidate_weight.T
-        update = (residual.T @ train_quantized) / denominator.clamp_min(
-            torch.finfo(torch.float32).tiny
-        ).unsqueeze(0)
-        continuous_weight = candidate_weight + _WEIGHT_REFINEMENT_STEP * update
-        signed_code = torch.round(continuous_weight / scalar_scale * 4.0).clamp(
-            -7, 7
-        )
-        shaped_code = signed_code.reshape_as(weight_params["mant"])
-        candidate["sign"] = shaped_code.sign().to(torch.bfloat16)
-        candidate["mant"] = (shaped_code.abs() / 4.0).to(torch.bfloat16)
-        if iteration in _WEIGHT_REFINEMENT_CHECKPOINTS:
-            checkpoints.append(dict(candidate))
-    checkpoints.append(
-        _quantize_linear_values(continuous_weight, train_quantized.square().mean(0))
+    fitted_weight = weight + (quantized_activation.T @ dual).T
+    ridge = _quantize_linear_values(fitted_weight, activation_importance)
+    return _choose_weight_rows(
+        target_output,
+        quantized_activation,
+        [baseline, ridge],
     )
-    heldout_target = activation_parts[-1] @ weight.T
-    heldout_quantized = quantized_parts[-1]
-    return _choose_weight_rows(heldout_target, heldout_quantized, checkpoints)
 
 
 def _rms(values: torch.Tensor) -> torch.Tensor:
@@ -552,7 +452,7 @@ def _linear_transform(values: torch.Tensor, state: dict[str, Any]) -> torch.Tens
 
 
 # =============================================================================
-# Linear: v138 output-aware calibration
+# Linear: accelerated output-aware calibration
 # =============================================================================
 
 @torch.inference_mode()
@@ -578,7 +478,7 @@ def hif4_calibration_and_quantize_weight(
     transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
     importance = transformed_activation.square().mean(0)
     activation_state = {
-        "version": 14,
+        "version": 15,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
     }
@@ -587,15 +487,6 @@ def hif4_calibration_and_quantize_weight(
         transformed_activation,
         transformed_weight,
         baseline,
-    )
-    transformed_activation_parts = [
-        _linear_transform(part, activation_state) for part in activation_parts
-    ]
-    weight_params = _refine_weight_codes(
-        activation_parts,
-        transformed_activation_parts,
-        weight,
-        weight_params,
     )
     return {"weight_params": weight_params, "activation_state": activation_state}
 

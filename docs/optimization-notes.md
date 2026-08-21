@@ -5,6 +5,27 @@
 - Baseline score: `1185`
 - Baseline total time: `108s`
 - Total time limit: `300s` (5 minutes)
+- v13 online result: `13349 / 182s`.
+- v14 online result: timed out (`>300s`).
+
+## Online-calibrated local evaluation
+
+`local_eval.py --calibrate-online` uses `solution_v1.py` as a proxy for the
+unavailable official HiF4 baseline, then scales both the proxy score and local
+runtime so that `solution_v13.py` maps to the confirmed `13349 / 182s` result.
+Use the same Linear and Attention group IDs when comparing candidates:
+
+```bash
+/opt/miniconda3/envs/codecraft/bin/python local_eval.py \
+    --solution solution/solution_v15.py \
+    --linear-groups 0,1,2,3 \
+    --attn-groups 0,1,2,3,4 \
+    --calibrate-online
+```
+
+The calibrated values are comparative estimates rather than replacements for
+the judge, because the official baseline MSE and server performance profile are
+not available locally.
 
 ## Online dataset characteristics
 
@@ -88,4 +109,14 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   in behavior to v13 (shared Q/K rotation block size 16 and candidate search).
   On the default local subset, Linear total MSE improves from ~2861.07 to
   ~1868.71 while Attention remains ~4.31184. Local runtime rises from ~26.7s
-  to ~99.2s, so the 300s online limit remains the main risk.
+  to ~99.2s. The version subsequently exceeded the 300s online limit.
+- `solution_v15.py`: accelerate v14 while preserving v13 Attention. Linear
+  reduces the compact E6M2 offsets from five to three, removes both gain
+  candidates, keeps one ridge fit (`lambda=20`), selects between only the
+  baseline and ridge candidate, and removes five-step code refinement. Linear
+  quantization calls per representative group drop from 18 to 8 including the
+  five online test activations. On groups 0-3, Linear total MSE is ~1941.41
+  versus v13's ~2861.07 and v14's ~1868.71; Attention stays ~4.31184. The
+  online-calibrated estimate is ~16569 / 195s. A disjoint groups 4-7 / 5-9
+  check estimates ~17182, with timing variation indicating a practical
+  expected runtime around 190-220s.
