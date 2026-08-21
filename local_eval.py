@@ -9,7 +9,7 @@ Usage:
 
 Raw MSE remains the primary local metric. With ``--calibrate-online``, v1 is
 used as a proxy for the unavailable official HiF4 baseline, while the measured
-v15 result (15463 score / 170 seconds) anchors score and runtime estimates.
+v16 result (15539 score / 156 seconds) anchors score and runtime estimates.
 The calibrated numbers are comparative estimates, not judge-equivalent values.
 """
 
@@ -28,9 +28,9 @@ import torch
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_PROXY_BASELINE = ROOT / "solution" / "solution_v1.py"
-DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v15.py"
-DEFAULT_REFERENCE_ONLINE_SCORE = 15463.0
-DEFAULT_REFERENCE_ONLINE_SECONDS = 170.0
+DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v16.py"
+DEFAULT_REFERENCE_ONLINE_SCORE = 15539.0
+DEFAULT_REFERENCE_ONLINE_SECONDS = 156.0
 
 
 def load_module(path: str, name: str):

@@ -8,17 +8,18 @@
 - v13 online result: `13349 / 182s`.
 - v14 online result: timed out (`>300s`).
 - v15 online result: `15463 / 170s`.
+- v16 online result: `15539 / 156s`.
 
 ## Online-calibrated local evaluation
 
 `local_eval.py --calibrate-online` uses `solution_v1.py` as a proxy for the
 unavailable official HiF4 baseline, then scales both the proxy score and local
-runtime so that `solution_v15.py` maps to the confirmed `15463 / 170s` result.
+runtime so that `solution_v16.py` maps to the confirmed `15539 / 156s` result.
 Use the same Linear and Attention group IDs when comparing candidates:
 
 ```bash
 /opt/miniconda3/envs/codecraft/bin/python local_eval.py \
-    --solution solution/solution_v15.py \
+    --solution solution/solution_v16.py \
     --linear-groups 0,1,2,3 \
     --attn-groups 0,1,2,3,4 \
     --calibrate-online
@@ -132,4 +133,26 @@ applies the learned output-aware objective to the incoming activation.
   about 0.07% extra MSE improvement on the disjoint subset. On groups 0-3,
   Linear MSE improves from v15's ~1941.41 to ~1904.40; groups 4-7 improve from
   ~2020.19 to ~1964.92. Attention remains ~4.31184. With v15 as the online
-  anchor, the default-subset estimate is about `15600 / 154s`.
+  anchor, the default-subset estimate was about `15600 / 154s`; the confirmed
+  online result is `15539 / 156s`. The estimate errors were only +0.39% in
+  score and -1.28% in runtime, so groups 0-3 Linear plus groups 0-4 Attention
+  are currently the primary local validation subset.
+
+## Candidate DAG and direction decisions
+
+```text
+v13 (stable Attention)
+  └─ v14 (full output-aware Linear; >300s, abandon implementation)
+      └─ v15 (time-safe weight fitting; 15463 / 170s, retained base)
+          └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
+```
+
+- Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
+  v16 improved score by 76 and runtime by 14 seconds over v15.
+- Modify: low-rank Gram approximation; rank 2 is retained, while rank 4 needs
+  a cheaper implementation before reconsideration because its local accuracy
+  gain was marginal relative to its runtime cost.
+- Abandon: v14's multi-candidate refinement path in its current form because
+  it exceeded the 300-second online limit.
+- Hold/revert base: Attention remains on v13 behavior until a candidate shows
+  consistent gains on both the primary subset and a disjoint subset.
