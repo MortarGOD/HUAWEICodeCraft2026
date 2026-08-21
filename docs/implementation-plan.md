@@ -340,3 +340,46 @@ Acceptance criteria and outcome:
    time falls 31.9%, projecting total online runtime around `145-170s`.
 5. Attention must remain byte-identical to v24 and all format checks must pass
    before push.
+
+## v26 feedback capacity plan
+
+Anchor v25 is `17049 / 176s`. Its all-50 raw Linear proxy gain of `192.167940`
+maps to +549 online points for this exact branch, providing a local slope of
+about `2.8568 points/proxy-unit`.
+
+Candidate DAG:
+
+```text
+v25: rows32 / window4 / trust0.50
+  ├─ trust0.75
+  ├─ rows64 / window4
+  ├─ rows128 / window4
+  ├─ rows32 / window8
+  └─ rows64 / window8
+```
+
+Acceptance criteria:
+
+1. Change one capacity dimension at a time on groups 0-3, then confirm the
+   winner on groups 4-7 without retuning.
+2. Require positive official-proxy gain on both raw batches. Donor may regress
+   because it reversed the verified v24-to-v25 online direction, but the loss
+   must remain smaller than the external implementation's donor loss.
+3. Run all 50 groups and require at least 100 additional proxy units, which
+   projects v26 above 17300. Runtime must remain below 240 seconds online.
+4. Preserve v25 Attention byte-for-byte and pass all 1100 format checks.
+
+Humanize remains unavailable; the steps and acceptance criteria are refined
+manually before implementation.
+
+### v26 selection outcome
+
+- Reject rows 64/128: both reduce the primary official proxy, confirming that
+  32-row subsampling acts as regularization.
+- Continue window 8 and trust 0.75: both are independently positive and their
+  combination improves primary and disjoint raw batches while adding only a
+  small donor penalty.
+- Full 50-group proxy is `16027.331849`, +179.696813 from v25; every consecutive
+  five-group batch improves. The controlled center estimate is `17562`.
+- Local Linear runtime is `365.30s`, no regression from v25. Preserve v25
+  Attention exactly and complete all format checks before push.

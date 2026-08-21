@@ -484,3 +484,31 @@ v13 (stable Attention)
 - Final validation: the v24 Attention section is byte-identical, submission and
   `solution_v25.py` match, syntax/diff checks pass, and all `1100/1100` format
   checks pass. The full format run is also materially faster than v24.
+
+## v25 online result and v26 calibration
+
+- Confirmed v25 result: `17049 / 176s`, +549 points and -22 seconds versus v24
+  `16500 / 198s`. Bounded Linear feedback is the first post-v22 mechanism with
+  a large controlled online gain and is retained.
+- The same-branch coefficient is `549 / 192.167940 = 2.8568` online points per
+  all-50 raw Linear proxy unit. Use it only for nearby feedback-parameter
+  changes; do not transfer it to Attention or unrelated algorithms.
+- v26 keeps Attention fixed and screens feedback rows `32/64/128`, propagation
+  window `4/8`, and trust step `0.5/0.75`. Primary and disjoint raw official
+  proxies select the direction; donor remains a risk bound because its v25
+  direction contradicts the now-controlled online result.
+- Screen result: increasing calibration rows from 32 to 64/128 regresses, so
+  low row count is useful regularization. Window 8 and trust 0.75 are each
+  positive; together they show a stable synergy on groups 0-3 (`+13.630372`)
+  and 4-7 (`+13.292340`) versus v25.
+- Donor risk is bounded: the combined candidate loses only `4.391211` and
+  `5.244874` proxy units on the two batches, versus roughly 97 and 81 for the
+  external implementation relative to v25.
+- All-50 v26 Linear proxy is `16027.331849`, +179.696813 over v25; MSE falls
+  from `22255.925182` to `21832.206329`, and all ten consecutive batches
+  improve. Local Linear time is `365.30s`, slightly below v25 `374.39s`.
+- Controlled estimate is `17049 + 2.8568 * 179.696813 = 17562` points. Report
+  `17350-17800 / 165-185s` to allow coefficient and platform drift.
+- Final validation: v25 Attention is byte-identical, `solution.py` matches
+  `solution_v26.py`, syntax/diff checks pass, and all `1100/1100` output-format
+  checks pass.

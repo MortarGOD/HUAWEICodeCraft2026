@@ -1,8 +1,8 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 25:
+Version 26:
 - Quantize Linear weights sequentially and propagate a ridge-regularized
-  low-row output residual into four nearby blocks with a 0.5 trust step.
+  low-row output residual into eight nearby blocks with a 0.75 trust step.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply one shared 64-wide orthogonal transform so the exact QK product is
   preserved before quantization, with a calibration-only dense-layout gate.
@@ -30,9 +30,9 @@ _LINEAR_BALANCE_EXPONENT = 0.44
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
 _LINEAR_FEEDBACK_ROWS = 32
-_LINEAR_FEEDBACK_WINDOW = 4
+_LINEAR_FEEDBACK_WINDOW = 8
 _LINEAR_FEEDBACK_RIDGE = 0.1
-_LINEAR_FEEDBACK_STEP = 0.5
+_LINEAR_FEEDBACK_STEP = 0.75
 
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
