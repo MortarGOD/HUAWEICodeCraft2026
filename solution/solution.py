@@ -1,18 +1,16 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 22:
-- Improve fixed Q(W) selection with calibration-A low-rank sensitivity.
-- Choose compact or wide Q(A) scale profiles from activation reconstruction
-  only; never use A @ W or output error to infer Q(A).
-- Score Q(A) with W-only per-64-block sensitivity statistics: diagonal
-  residual energy plus two Gram directions. This never computes A @ W for Q(A).
-- Select a shared Q/K Hadamard block profile from calibration Attention output;
-  fixed block size 16 remains the trusted fallback for weak evidence.
+Version 23:
+- Keep v22's independently validated Linear path unchanged.
+- Balance replicated Q heads and their K head with reciprocal RMS factors.
+- Apply one shared 64-wide orthogonal transform so the exact QK product is
+  preserved before quantization.
+- Select HiF4 scales by reconstruction error plus bounded energy drift; no
+  calibration output is used to tune dynamic Q/K/V quantization.
 """
 
 from __future__ import annotations
 
-import math
 from typing import Any, Iterable
 
 import torch
@@ -32,10 +30,10 @@ _LINEAR_RIDGE_LAMBDA = 20.0
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
 
-_ATTENTION_ROTATION_BLOCKS = (4, 8, 16)
-_ATTENTION_TRUSTED_BLOCK = 16
-_ATTENTION_PROFILE_ROWS_PER_SHAPE = 64
-_ATTENTION_PROFILE_MIN_GAIN = 0.01
+_ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
+_ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
+_ATTENTION_ENERGY_PENALTY = 0.125
+_ATTENTION_HADAMARD = 64
 
 
 # =============================================================================
@@ -700,179 +698,90 @@ def hif4_calibration_attention(
     kv_num_heads: int,
     head_dim: int,
 ) -> dict[str, Any]:
-    """Select one fixed shared Q/K rotation using calibration output error."""
-    rotation = _select_qk_rotation(
-        calib_qkv_list,
-        q_num_heads,
-        kv_num_heads,
-        head_dim,
+    """Build reciprocal per-KV-head Q/K balance from calibration moments."""
+    q_values = torch.cat([
+        dequantize_nvfp4(*sample["q"]).to(torch.float32)
+        for sample in calib_qkv_list
+    ])
+    k_values = torch.cat([
+        dequantize_nvfp4(*sample["k"]).to(torch.float32)
+        for sample in calib_qkv_list
+    ])
+    replicas = q_num_heads // kv_num_heads
+    q_energy = q_values.reshape(-1, q_num_heads, head_dim).square().mean(0)
+    q_rms = q_energy.reshape(
+        kv_num_heads, replicas, head_dim
+    ).mean(1).sqrt()
+    k_rms = k_values.reshape(-1, kv_num_heads, head_dim).square().mean(0).sqrt()
+    tiny = torch.finfo(torch.float32).tiny
+    balance = (k_rms.clamp_min(tiny) / q_rms.clamp_min(tiny)).sqrt()
+    balance = balance.clamp(1.0 / 16.0, 16.0)
+    balance = torch.where(
+        (q_rms > 0) & (k_rms > 0), balance, torch.ones_like(balance)
     )
     return {
-        "q_state": rotation,
-        "k_state": rotation,
+        "q_state": {
+            "coefficient": balance.repeat_interleave(replicas, dim=0),
+            "hadamard": _ATTENTION_HADAMARD,
+        },
+        "k_state": {
+            "coefficient": balance.reciprocal(),
+            "hadamard": _ATTENTION_HADAMARD,
+        },
         "v_state": None,
     }
 
 
-def _make_qk_rotation_state(
-    head_dim: int,
-    block_size: int = 16,
+def _quantize_attention_values(
+    values: torch.Tensor,
+    offsets: tuple[int, ...],
+    energy_penalty: float = 0.0,
 ) -> dict[str, torch.Tensor]:
-    """Create a shared Q/K Hadamard rotation state."""
-    if head_dim % block_size != 0:
-        raise ValueError("head_dim must be divisible by rotation block_size")
-    h = torch.tensor([[1.0]])
-    while h.shape[0] < block_size:
-        h = torch.cat(
-            [torch.cat([h, h], dim=1), torch.cat([h, -h], dim=1)], dim=0
-        ) / math.sqrt(2.0)
-    torch.manual_seed(0)
-    signs = torch.randint(0, 2, (head_dim,)) * 2 - 1
-    return {
-        "block_size": int(block_size),
-        "rot16": h.to(torch.float32),
-        "signs": signs.to(torch.float32),
-    }
+    """Select legal scales with an optional per-block energy drift cost."""
+    candidates = [
+        _quantize_linear_values(values, offsets=(offset,))
+        for offset in offsets
+    ]
+    if len(candidates) == 1:
+        return candidates[0]
+    channels = int(values.shape[-1])
+    target = values.to(torch.float32).reshape(
+        *values.shape[:-1], channels // 64, 64
+    )
+    target_energy = target.square().sum(-1).clamp_min(
+        torch.finfo(torch.float32).tiny
+    )
+    scores = []
+    for params in candidates:
+        reconstructed = _dequantize_linear_params(params).reshape_as(target)
+        residual_cost = (target - reconstructed).square().sum(-1)
+        if energy_penalty:
+            energy_drift = target_energy - reconstructed.square().sum(-1)
+            residual_cost = residual_cost + (
+                energy_penalty * energy_drift.square() / target_energy
+            )
+        scores.append(residual_cost)
+    best = torch.stack(scores).argmin(0)
+    result: dict[str, torch.Tensor] = {}
+    for name in candidates[0]:
+        stacked = torch.stack([candidate[name] for candidate in candidates])
+        tail = stacked.shape[1 + best.ndim:]
+        index = best.reshape((1,) + best.shape + (1,) * len(tail))
+        index = index.expand((1,) + best.shape + tail)
+        result[name] = torch.gather(stacked, 0, index).squeeze(0)
+    return result
 
 
-def _apply_qk_rotation(
-    value: torch.Tensor,
-    num_heads: int,
+def _transform_attention_qk(
+    values: torch.Tensor,
+    heads: int,
     head_dim: int,
     state: dict[str, Any],
 ) -> torch.Tensor:
-    """Apply the shared orthogonal rotation to Q or K."""
-    block_size = int(state["block_size"])
-    rot = state["rot16"].to(value.device, value.dtype)
-    signs = state["signs"].to(value.device, value.dtype)
-    seq = int(value.shape[0])
-    x = value.reshape(seq, num_heads, head_dim // block_size, block_size)
-    x = x @ rot
-    x = x.reshape(seq, num_heads, head_dim) * signs
-    return x.reshape(seq, num_heads * head_dim)
-
-
-def _run_attention(
-    q: torch.Tensor,
-    k: torch.Tensor,
-    v: torch.Tensor,
-    q_num_heads: int,
-    kv_num_heads: int,
-    head_dim: int,
-) -> torch.Tensor:
-    seq = int(q.shape[0])
-    q = q.reshape(seq, q_num_heads, head_dim)
-    k = k.reshape(seq, kv_num_heads, head_dim)
-    v = v.reshape(seq, kv_num_heads, head_dim)
-    ratio = q_num_heads // kv_num_heads
-    k = k.repeat_interleave(ratio, dim=1)
-    v = v.repeat_interleave(ratio, dim=1)
-    scores = q @ k.transpose(-1, -2) / math.sqrt(head_dim)
-    probs = torch.softmax(scores, dim=-1)
-    return probs @ v
-
-
-@torch.inference_mode()
-def _select_qk_rotation(
-    calib_qkv_list: list,
-    q_num_heads: int,
-    kv_num_heads: int,
-    head_dim: int,
-) -> dict[str, torch.Tensor]:
-    """Choose a deterministic profile while retaining block 16 as fallback."""
-    candidates = [
-        _make_qk_rotation_state(head_dim, block_size)
-        for block_size in _ATTENTION_ROTATION_BLOCKS
-        if head_dim % block_size == 0
-    ]
-    trusted_index = next(
-        (
-            i
-            for i, state in enumerate(candidates)
-            if int(state["block_size"]) == _ATTENTION_TRUSTED_BLOCK
-        ),
-        len(candidates) - 1,
-    )
-    if not calib_qkv_list or not candidates:
-        return _make_qk_rotation_state(
-            head_dim,
-            block_size=_ATTENTION_TRUSTED_BLOCK,
-        )
-
-    scores = torch.zeros(len(candidates), dtype=torch.float64)
-    valid_shapes = 0
-    for sample in calib_qkv_list:
-        q = dequantize_nvfp4(*sample["q"]).to(torch.float32)
-        k = dequantize_nvfp4(*sample["k"]).to(torch.float32)
-        v = dequantize_nvfp4(*sample["v"]).to(torch.float32)
-        rows = int(q.shape[0])
-        if rows > _ATTENTION_PROFILE_ROWS_PER_SHAPE:
-            index = torch.linspace(
-                0,
-                rows - 1,
-                _ATTENTION_PROFILE_ROWS_PER_SHAPE,
-                device=q.device,
-            ).round().to(torch.int64)
-            q = q.index_select(0, index)
-            k = k.index_select(0, index)
-            v = v.index_select(0, index)
-
-        reference = _run_attention(
-            q, k, v, q_num_heads, kv_num_heads, head_dim
-        )
-        normalizer = reference.square().mean().clamp_min(1.0e-12)
-        v_params = _quantize_hif4(
-            v,
-            search_candidates=True,
-            candidate_radius=1,
-        )
-        v_hat = _dequantize_hif4_params(v_params, tuple(v.shape))
-
-        for candidate_index, state in enumerate(candidates):
-            q_rotated = _apply_qk_rotation(
-                q, q_num_heads, head_dim, state
-            )
-            k_rotated = _apply_qk_rotation(
-                k, kv_num_heads, head_dim, state
-            )
-            q_params = _quantize_hif4(
-                q_rotated,
-                search_candidates=True,
-                candidate_radius=1,
-            )
-            k_params = _quantize_hif4(
-                k_rotated,
-                search_candidates=True,
-                candidate_radius=1,
-            )
-            q_hat = _dequantize_hif4_params(q_params, tuple(q.shape))
-            k_hat = _dequantize_hif4_params(k_params, tuple(k.shape))
-            output = _run_attention(
-                q_hat,
-                k_hat,
-                v_hat,
-                q_num_heads,
-                kv_num_heads,
-                head_dim,
-            )
-            scores[candidate_index] += (
-                (reference - output).square().mean() / normalizer
-            ).to(torch.float64).cpu()
-        valid_shapes += 1
-
-    if valid_shapes == 0 or not torch.isfinite(scores).all():
-        return candidates[trusted_index]
-
-    best_index = int(torch.argmin(scores).item())
-    trusted_score = float(scores[trusted_index].item())
-    best_score = float(scores[best_index].item())
-    if (
-        best_index != trusted_index
-        and best_score
-        > trusted_score * (1.0 - _ATTENTION_PROFILE_MIN_GAIN)
-    ):
-        best_index = trusted_index
-    return candidates[best_index]
+    shaped = values.reshape(-1, heads, head_dim)
+    coefficient = state["coefficient"].to(values.device, values.dtype)
+    shaped = shaped * coefficient.unsqueeze(0)
+    return _hadamard(shaped, int(state["hadamard"])).reshape_as(values)
 
 
 def hif4_dynamic_quantize_q(
@@ -883,9 +792,12 @@ def hif4_dynamic_quantize_q(
     q_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(q_quant, q_scale).to(torch.float32)
-    if isinstance(q_state, dict) and "rot16" in q_state:
-        value = _apply_qk_rotation(value, q_num_heads, head_dim, q_state)
-    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
+    value = _transform_attention_qk(value, q_num_heads, head_dim, q_state)
+    return _quantize_attention_values(
+        value,
+        _ATTENTION_QK_OFFSETS,
+        _ATTENTION_ENERGY_PENALTY,
+    )
 
 
 def hif4_dynamic_quantize_k(
@@ -896,9 +808,12 @@ def hif4_dynamic_quantize_k(
     k_state: Any,
 ) -> dict[str, torch.Tensor]:
     value = dequantize_nvfp4(k_quant, k_scale).to(torch.float32)
-    if isinstance(k_state, dict) and "rot16" in k_state:
-        value = _apply_qk_rotation(value, kv_num_heads, head_dim, k_state)
-    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
+    value = _transform_attention_qk(value, kv_num_heads, head_dim, k_state)
+    return _quantize_attention_values(
+        value,
+        _ATTENTION_QK_OFFSETS,
+        _ATTENTION_ENERGY_PENALTY,
+    )
 
 
 def hif4_dynamic_quantize_v(
@@ -908,5 +823,5 @@ def hif4_dynamic_quantize_v(
     head_dim: int,
     v_state: Any,
 ) -> dict[str, torch.Tensor]:
-    value = dequantize_nvfp4(v_quant, v_scale)
-    return _quantize_hif4(value, search_candidates=True, candidate_radius=1)
+    value = dequantize_nvfp4(v_quant, v_scale).to(torch.float32)
+    return _quantize_attention_values(value, _ATTENTION_V_OFFSETS)

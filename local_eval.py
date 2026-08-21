@@ -9,9 +9,10 @@ Usage:
 
 By default, test tensors are taken from a structurally identical, calibration-
 feature-matched donor group so the copied 0818 calibration/test values cannot
-leak. With ``--calibrate-online``, Linear deltas are calibrated from the known
-v16-to-v21 online change. Attention deltas receive zero extrapolation weight
-until an Attention-only online change demonstrates a nonzero score effect.
+leak. With ``--calibrate-online``, Linear deltas are calibrated from the
+controlled v21-to-v22 online change. Attention deltas receive zero
+extrapolation weight in the conservative estimate; mixed external results are
+recorded separately.
 """
 
 from __future__ import annotations
@@ -30,11 +31,11 @@ import torch
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_PROXY_BASELINE = ROOT / "solution" / "solution_v1.py"
-DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v21.py"
-DEFAULT_REFERENCE_ONLINE_SCORE = 15678.0
-DEFAULT_REFERENCE_ONLINE_SECONDS = 163.0
-DEFAULT_LINEAR_CALIBRATION_REFERENCE = ROOT / "solution" / "solution_v16.py"
-DEFAULT_LINEAR_CALIBRATION_ONLINE_SCORE = 15539.0
+DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v22.py"
+DEFAULT_REFERENCE_ONLINE_SCORE = 16359.0
+DEFAULT_REFERENCE_ONLINE_SECONDS = 197.0
+DEFAULT_LINEAR_CALIBRATION_REFERENCE = ROOT / "solution" / "solution_v21.py"
+DEFAULT_LINEAR_CALIBRATION_ONLINE_SCORE = 15678.0
 DEFAULT_HOLDOUT_MANIFEST = ROOT / "datasets_holdout_v2" / "manifest.json"
 
 
@@ -63,15 +64,15 @@ def mse(a: torch.Tensor, b: torch.Tensor) -> float:
 
 def run_attention(q, k, v, q_num_heads, kv_num_heads, head_dim):
     seq = int(q.shape[0])
-    q = q.reshape(seq, q_num_heads, head_dim)
-    k = k.reshape(seq, kv_num_heads, head_dim)
-    v = v.reshape(seq, kv_num_heads, head_dim)
+    q = q.reshape(seq, q_num_heads, head_dim).transpose(0, 1)
+    k = k.reshape(seq, kv_num_heads, head_dim).transpose(0, 1)
+    v = v.reshape(seq, kv_num_heads, head_dim).transpose(0, 1)
     ratio = q_num_heads // kv_num_heads
-    k = k.repeat_interleave(ratio, dim=1)
-    v = v.repeat_interleave(ratio, dim=1)
+    k = k.repeat_interleave(ratio, dim=0)
+    v = v.repeat_interleave(ratio, dim=0)
     scores = q @ k.transpose(-1, -2) / math.sqrt(head_dim)
     probs = torch.softmax(scores, dim=-1)
-    return probs @ v
+    return (probs @ v).transpose(0, 1).flatten(-2, -1)
 
 
 def eval_linear(module, linear_data, group_ids):
@@ -343,7 +344,7 @@ def main():
     )
     proxy_linear_delta = ref_lin - calibration_lin
     if linear_ids and abs(proxy_linear_delta) < 1.0e-12:
-        raise RuntimeError("v16-to-reference Linear proxy delta is zero")
+        raise RuntimeError("calibration-to-reference Linear proxy delta is zero")
     linear_points_per_proxy = (
         online_linear_delta / proxy_linear_delta if linear_ids else 0.0
     )
@@ -367,7 +368,8 @@ def main():
     print(
         f"Online delta coefficients: linear={linear_points_per_proxy:.6f} "
         f"attention={attention_points_per_proxy:.6f} points/proxy-unit "
-        f"linear_anchor=solution_v16:{args.linear_calibration_online_score:.0f}"
+        f"linear_anchor={Path(args.linear_calibration_reference).stem}:"
+        f"{args.linear_calibration_online_score:.0f}"
     )
     print(
         f"Calibrated online estimate: score={estimated_score:.1f} "

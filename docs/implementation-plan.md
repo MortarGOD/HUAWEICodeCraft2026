@@ -207,3 +207,45 @@ candidate and report the evidence-based estimate and remaining gap.
   ratio is 1.295, projecting about `211s`. The evidence does not support a
   >17000 center estimate, but v22 is accepted as the first leakage-free,
   all-group-positive step toward that target.
+
+## v23 learn-without-copying plan
+
+New online anchors are v22 `16359 / 197s` and external `solution_cxw_v1.py`
+`17562 / 249s`. The objective is to identify causal mechanisms in the latter,
+then implement independent variants that exceed 17562 without reproducing its
+code structure.
+
+Mechanism hypotheses:
+
+1. Linear sequential block error propagation is a candidate, not an assumed
+   gain: after quantizing one 64-channel weight block, it moves residual into
+   future blocks, but must beat v22 on the independent donor holdout.
+2. Correct standard Attention is computed over sequence positions. The old
+   local evaluator and v21 calibration accidentally computed head-to-head
+   attention per token, invalidating all previous Attention proxy conclusions.
+3. Reciprocal per-head Q/K balancing and a shared orthogonal transform may be
+   the dominant Attention gain. Adaptive rotation and V profiles must justify
+   their complexity independently.
+
+Execution:
+
+1. Correct only the evaluator's Attention axes and measure v22 versus cxw on
+   independent donors. Separately report Linear and Attention.
+2. Reject external Linear propagation for v23: on donor groups 0-3 its total
+   MSE is `2153.199535`, versus v22's `1889.581486` (+13.95%). Keep v22 Linear
+   exactly unchanged rather than trading verified generalization for a guess.
+3. Independently ablate Attention balance, shared rotation, scale offsets, and
+   energy preservation. Retain the smallest fixed mechanism that is stable
+   across disjoint batches; do not reproduce the external controller.
+4. The retained v23 uses reciprocal RMS balance, shared Hadamard-64, Q/K
+   offsets `0..4`, V offsets `-1..3`, and energy penalty `0.125`. Full 50-group
+   standard-Attention MSE is `75.937482`, down 14.52% from v22's `88.832125`;
+   external is `74.921704`. Runtime is `45.16s`, versus v22 `78.35s` and
+   external `81.30s` in the same Attention-only run.
+5. Accept only after all 1100 interface/format checks, byte-identical v22
+   Linear output, and projected runtime below 270 seconds. Because no clean
+   Attention-only online anchor exists, report both a conservative floor and a
+   mixed-anchor estimate instead of presenting a false-precision score.
+
+Humanize is not installed in this workspace. The executable steps and
+acceptance criteria above were therefore refined manually before code changes.

@@ -15,6 +15,10 @@
 - v20 online result: `15678 / 183s`.
 - v21 online result: `15678 / 163s` (Attention adaptation produced zero score
   gain; runtime improved by 20 seconds).
+- v22 online result: `16359 / 197s`; previous estimate `16138 / 206s` was low by
+  221 points and high by 9 seconds.
+- External comparison `solution_cxw_v1.py`: `17562 / 249s`, +1203 points and
+  +52 seconds versus v22.
 
 ## Online-calibrated local evaluation
 
@@ -358,3 +362,51 @@ v13 (stable Attention)
   model. v22's center estimate is about 16138; its purpose is to obtain a clean
   online Linear-only feedback point and recalibrate the next iteration without
   repeating v21's Attention extrapolation error.
+
+## v23 external-mechanism audit
+
+- Do not copy the external implementation. Treat its online result as evidence
+  for mechanisms, then design independent implementations and ablations.
+- Its unique Linear mechanism is sequential 64-channel Q(W) error propagation,
+  unlike v22's whole-matrix ridge candidate. Its unique Attention mechanisms
+  include reciprocal Q/K balance, data-gated rotation size, moment-aware scale
+  objectives, and output-selected V profiles.
+- Critical evaluator bug found: local `run_attention` reshaped as
+  `[seq, heads, dim]` and multiplied across heads per token. Standard Attention
+  must transpose to `[heads, seq, dim]` and multiply across sequence positions.
+  All pre-v23 local Attention score mappings are therefore rejected, not merely
+  down-weighted.
+- Linear finding: the external sequential residual-propagation path scores
+  `2153.199535` on independent donor groups 0-3, 13.95% worse than v22's
+  `1889.581486`. This mechanism is rejected for v23; v22 Linear is retained.
+- Attention ablation finding: V-profile search changes only about 0.15%; moment
+  penalty adds about 1.27%. Reciprocal Q/K balance alone and rotation alone are
+  weak, while their combination is strong. The causal gain is their product-
+  preserving synergy, not the external branch controller.
+- v23 independently computes one RMS balance per KV-head/channel, applies the
+  reciprocal factors to Q/K, then uses the repository's existing Hadamard-64
+  transform. Its block scale objective combines direct reconstruction with a
+  bounded energy-drift term (`0.125`). It performs no online parameter search
+  and never scores calibration Attention outputs.
+- Correct standard-Attention all-50 result: v22 `88.832125 / 78.35s`, external
+  `74.921704 / 81.30s`, v23 `75.937482 / 45.16s`. v23 improves v22 by 14.52%,
+  is only 1.36% behind the external Attention error, and is 44.5% faster than
+  the external Attention path in the same local run.
+- Parameter stability: balance exponent `0.4` wins groups 0-4 but reverses on
+  groups 5-9; retain the invariant-preserving exponent `0.5`. Fixed block 64
+  beats 256, negative Q/K offsets regress, and penalty `0.125` is the stable
+  local minimum. No shape-based online search is introduced from leaked tests.
+- Mixed-anchor estimate: the controlled v21-to-v22 Linear gain is 681 points
+  for an 80.702137 primary-donor MSE reduction. Applying that coefficient says
+  the external Linear path would cost about 2225 points locally, so its observed
+  +1203 net gain implies a large Attention contribution. v23 captures 92.70%
+  of the external Attention MSE reduction while retaining v22 Linear, yielding
+  a model center near `19536`. Because this decomposition crosses local/online
+  distributions, report a wider `18000-19500` score range, not a guarantee.
+- Runtime projection: v22 all-group local components are approximately
+  `498.77s Linear + 78.35s Attention`; v23 keeps Linear and reduces Attention
+  to `45.16s`. Scaling the total ratio from v22's online 197 seconds gives
+  `185.7s`; use `185-200s` as the submission range.
+- Final validation: `solution.py` and `solution_v23.py` are identical,
+  `py_compile` and `git diff --check` pass, and `self_check.py` passes all
+  `1100/1100` calibration/output-format checks across 50+50 groups.
