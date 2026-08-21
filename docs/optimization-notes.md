@@ -11,6 +11,7 @@
 - v16 online result: `15539 / 156s`.
 - v17 online result: `7062 / 172s` (low-lambda overfit).
 - v18 online result: `2887 / 206s` (severe accuracy regression, not timeout).
+- v19 online result: `15543 / 198s` (safe but low-value adaptive search).
 
 ## Online-calibrated local evaluation
 
@@ -149,7 +150,7 @@ v13 (stable Attention)
           └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
               └─ v17 (ridge lambda 0.01; 7062 / 172s, reject)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
-              └─ v19 (held-out lambda controller; current online probe)
+              └─ v19 (held-out lambda controller; 15543 / 198s, modify)
               └─ v20 (A-only layout profile selection; current candidate)
 ```
 
@@ -216,6 +217,13 @@ v13 (stable Attention)
   is about 210 seconds, below the
   270-second safety target. The purpose of the online submission is to observe
   whether hidden calibration groups safely select lambda 10.
+- Confirmed online v19 is `15543 / 198s`, versus v16's `15539 / 156s`.
+  Score improves by only 4 while runtime rises by 42 seconds. The controller
+  successfully prevents the v17/v18 collapse, and its `15539 / 210s` estimate
+  was accurate in score and conservative by 12 seconds in runtime. However,
+  the gain/cost ratio is too low for production. This suggests hidden groups
+  either almost always retain lambda 20 or accept lambda 10 only rarely; that
+  is an inference because the judge does not expose per-layer choices.
 
 ## 0819-V2 rules and v20 layout profiles
 

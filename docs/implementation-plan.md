@@ -68,9 +68,10 @@ must earn its place through an isolated, reversible improvement.
    calibration shape into fit/validation partitions. It compares lambda 10
    against trusted lambda 20, chooses once per layer on validation `A @ W`,
    and applies a correction-norm trust region.
-3. Submit v19 for online feedback. Locally all tested layers select lambda 20,
-   exactly reproducing v16 accuracy at an estimated 210 seconds. Record how
-   many hidden layers select lambda 10 if future diagnostics expose the count.
+3. Completed: v19 returned `15543 / 198s`, only +4 score for +42 seconds over
+   v16. Mark the held-out controller safe but inefficient; retain its validation
+   principle while rejecting the full two-lambda Q(W) search as a production
+   path unless shape-isolated feedback identifies a materially useful family.
 4. Only after held-out selection tracks online direction should one residual
    correction be reintroduced as a separate ablation.
 5. Completed in parallel as v20: build a synthetic layout/profile bank under
