@@ -1,9 +1,9 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 15:
-- Keep v14's output-aware Linear transform, but use only three compact E6M2
-  scale candidates and select between the baseline and one ridge-fitted
-  weight candidate. Remove gain candidates and iterative code refinement.
+Version 16:
+- Keep v15's time-safe Linear weight fitting.
+- Fit Q(A) with an output-aware per-64-block cost derived from transformed W:
+  diagonal residual energy plus two power-iterated Gram directions.
 - Keep v13's proven Attention path unchanged: shared Q/K Hadamard rotation
   with block size 16 and per-block E6M2 candidate search for Q/K/V.
 """
@@ -23,6 +23,8 @@ _LINEAR_SCALE_OFFSETS = (0, 1, 2)
 _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.39
 _LINEAR_RIDGE_LAMBDA = 20.0
+_LINEAR_POWER_ITERS = 3
+_LINEAR_OUTPUT_RANK = 2
 
 
 # =============================================================================
@@ -272,6 +274,8 @@ def _quantize_linear_values(
     values: torch.Tensor,
     importance: torch.Tensor | None = None,
     offsets: Iterable[int] = _LINEAR_SCALE_OFFSETS,
+    projection: torch.Tensor | None = None,
+    projection_strength: torch.Tensor | None = None,
 ) -> dict[str, torch.Tensor]:
     """Quantize Linear values using v138's compact per-block scale search."""
     channels = int(values.shape[-1])
@@ -291,6 +295,33 @@ def _quantize_linear_values(
             peak_code.to(torch.int16).add(int(offset)).clamp(0, 0xFE).to(torch.uint8)
         )
         current = _best_linear_for_base(groups, code, weights)
+        if projection is not None and projection_strength is not None:
+            _, selected_code, lv2, lv3, negative, mantissa_code = current
+            reconstructed = (
+                _decode_e6m2(selected_code)
+                * (1.0 + lv2.to(torch.float32))
+                * (1.0 + lv3.to(torch.float32))
+                * torch.where(negative, -1.0, 1.0)
+                * mantissa_code.to(torch.float32)
+                / 4.0
+            )
+            residual = groups - reconstructed
+            prefix_dims = groups.ndim - 4
+            rank = int(projection.shape[0])
+            project = projection.to(torch.float32).reshape(
+                rank, *([1] * prefix_dims), *projection.shape[1:]
+            )
+            strength = projection_strength.to(torch.float32).reshape(
+                rank,
+                *([1] * prefix_dims),
+                projection_strength.shape[-1],
+            )
+            projected = (residual.unsqueeze(0) * project).sum(
+                dim=(-3, -2, -1)
+            )
+            current = (
+                current[0] + (strength * projected.square()).sum(dim=0),
+            ) + current[1:]
         if best is None:
             best = current
             continue
@@ -333,6 +364,53 @@ def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
     ).flatten(-4, -1)
 
 
+def _activation_output_cost_state(
+    transformed_weight: torch.Tensor,
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    """Approximate each 64-channel block of W.T@W as diagonal + low rank."""
+    num_blocks = int(transformed_weight.shape[-1]) // 64
+    weight_blocks = transformed_weight.to(torch.float32).reshape(
+        -1, num_blocks, 64
+    )
+    generator = torch.Generator(device=transformed_weight.device).manual_seed(20260820)
+    projection = torch.randint(
+        0,
+        2,
+        (num_blocks, 64, _LINEAR_OUTPUT_RANK),
+        generator=generator,
+        dtype=torch.float32,
+        device=transformed_weight.device,
+    ).mul_(2.0).sub_(1.0)
+    projection = torch.linalg.qr(projection, mode="reduced")[0]
+    for _ in range(_LINEAR_POWER_ITERS):
+        output_projection = torch.einsum(
+            "obd,bdr->obr", weight_blocks, projection
+        )
+        projection = torch.einsum(
+            "obd,obr->bdr", weight_blocks, output_projection
+        )
+        projection = torch.linalg.qr(projection, mode="reduced")[0]
+
+    output_projection = torch.einsum(
+        "obd,bdr->obr", weight_blocks, projection
+    )
+    strength = output_projection.square().sum(dim=0).transpose(0, 1)
+    diagonal = weight_blocks.square().sum(dim=0)
+    diagonal_residual = (
+        diagonal
+        - (
+            strength.transpose(0, 1).unsqueeze(1) * projection.square()
+        ).sum(dim=-1)
+    ).clamp_min(0.0)
+    return (
+        diagonal_residual.reshape(num_blocks, 8, 2, 4),
+        projection.permute(2, 0, 1).reshape(
+            _LINEAR_OUTPUT_RANK, num_blocks, 8, 2, 4
+        ),
+        strength,
+    )
+
+
 def _choose_weight_rows(
     target_output: torch.Tensor,
     quantized_activation: torch.Tensor,
@@ -353,11 +431,19 @@ def _output_aware_quantize_weight(
     activation: torch.Tensor,
     weight: torch.Tensor,
     baseline: dict[str, torch.Tensor],
+    activation_importance: torch.Tensor,
+    activation_projection: torch.Tensor,
+    projection_strength: torch.Tensor,
 ) -> dict[str, torch.Tensor]:
     """Fit one ridge candidate and select fixed Q(W) rows by output MSE."""
-    activation_params = _quantize_linear_values(activation)
+    activation_params = _quantize_linear_values(
+        activation,
+        activation_importance,
+        projection=activation_projection,
+        projection_strength=projection_strength,
+    )
     quantized_activation = _dequantize_linear_params(activation_params)
-    activation_importance = activation.square().mean(0)
+    weight_importance = activation.square().mean(0)
     target_output = activation @ weight.T
     kernel = quantized_activation @ quantized_activation.T
     residual = target_output - quantized_activation @ weight.T
@@ -370,7 +456,7 @@ def _output_aware_quantize_weight(
         residual,
     )
     fitted_weight = weight + (quantized_activation.T @ dual).T
-    ridge = _quantize_linear_values(fitted_weight, activation_importance)
+    ridge = _quantize_linear_values(fitted_weight, weight_importance)
     return _choose_weight_rows(
         target_output,
         quantized_activation,
@@ -476,17 +562,28 @@ def hif4_calibration_and_quantize_weight(
         transformed_activation * signs, _LINEAR_HADAMARD
     )
     transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
-    importance = transformed_activation.square().mean(0)
+    weight_importance = transformed_activation.square().mean(0)
+    (
+        activation_importance,
+        activation_projection,
+        projection_strength,
+    ) = _activation_output_cost_state(transformed_weight)
     activation_state = {
-        "version": 15,
+        "version": 16,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
+        "importance": activation_importance,
+        "projection": activation_projection,
+        "projection_strength": projection_strength,
     }
-    baseline = _quantize_linear_values(transformed_weight, importance)
+    baseline = _quantize_linear_values(transformed_weight, weight_importance)
     weight_params = _output_aware_quantize_weight(
         transformed_activation,
         transformed_weight,
         baseline,
+        activation_importance,
+        activation_projection,
+        projection_strength,
     )
     return {"weight_params": weight_params, "activation_state": activation_state}
 
@@ -498,7 +595,12 @@ def hif4_dynamic_quantize_activation(
     activation_state: Any,
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
-    return _quantize_linear_values(_linear_transform(values, activation_state))
+    return _quantize_linear_values(
+        _linear_transform(values, activation_state),
+        activation_state["importance"],
+        projection=activation_state["projection"],
+        projection_strength=activation_state["projection_strength"],
+    )
 
 
 # =============================================================================

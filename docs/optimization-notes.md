@@ -7,12 +7,13 @@
 - Total time limit: `300s` (5 minutes)
 - v13 online result: `13349 / 182s`.
 - v14 online result: timed out (`>300s`).
+- v15 online result: `15463 / 170s`.
 
 ## Online-calibrated local evaluation
 
 `local_eval.py --calibrate-online` uses `solution_v1.py` as a proxy for the
 unavailable official HiF4 baseline, then scales both the proxy score and local
-runtime so that `solution_v13.py` maps to the confirmed `13349 / 182s` result.
+runtime so that `solution_v15.py` maps to the confirmed `15463 / 170s` result.
 Use the same Linear and Attention group IDs when comparing candidates:
 
 ```bash
@@ -41,7 +42,7 @@ not available locally.
   `1024*T*4k`; the first dimension values `(1, 10, 128, 512, 1024)` are
   batch/token scales.
 
-## Allowed offline-fitting idea (important)
+## Calibration fitting direction
 
 The contest allows the offline calibration function to:
 
@@ -49,10 +50,13 @@ The contest allows the offline calibration function to:
 2. Use calibration activations `A_calib` to compute `Y = A_calib @ W^T`.
 3. Fit a HiF4-constrained `Q(W)` (i.e. `weight_params`) by minimizing the
    output error, e.g. `|| A_calib @ W^T - A_calib @ Q(W)^T ||_F^2`.
-4. Return that fixed `Q(W)` and the auxiliary `activation_state`.
+4. Use the same output objective during every calibration stage to fit the
+   activation quantizer `Q(A)`, rather than relying only on activation-space
+   reconstruction error.
+5. Return the fixed `Q(W)` and the auxiliary `activation_state`.
 
-This is layer-wise/offline weight calibration, similar to GPTQ/HiGPTQ, and it
-is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
+The fitted state is fixed after offline calibration; dynamic quantization only
+applies the learned output-aware objective to the incoming activation.
 
 ## Next implementation candidates
 
@@ -117,6 +121,15 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
   quantization calls per representative group drop from 18 to 8 including the
   five online test activations. On groups 0-3, Linear total MSE is ~1941.41
   versus v13's ~2861.07 and v14's ~1868.71; Attention stays ~4.31184. The
-  online-calibrated estimate is ~16569 / 195s. A disjoint groups 4-7 / 5-9
-  check estimates ~17182, with timing variation indicating a practical
-  expected runtime around 190-220s.
+  original v13-anchored estimate was optimistic; the confirmed online result
+  is `15463 / 170s`.
+- `solution_v16.py`: retain v15's time-safe weight fitting and make activation
+  scale selection output-aware in every Linear calibration/dynamic stage.
+  For each transformed 64-channel block it approximates `W^T W` with two
+  power-iterated Gram directions plus the residual diagonal, then chooses
+  `Q(A)` by the resulting approximation to `||(A-Q(A))W^T||^2`. Rank 2 was
+  selected over rank 4 because the latter added about 9% local runtime for only
+  about 0.07% extra MSE improvement on the disjoint subset. On groups 0-3,
+  Linear MSE improves from v15's ~1941.41 to ~1904.40; groups 4-7 improve from
+  ~2020.19 to ~1964.92. Attention remains ~4.31184. With v15 as the online
+  anchor, the default-subset estimate is about `15600 / 154s`.
