@@ -148,6 +148,7 @@ v13 (stable Attention)
           └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
               └─ v17 (ridge lambda 0.01; online-unverified, unsafe)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
+              └─ v19 (held-out lambda controller; current online probe)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -192,3 +193,20 @@ v13 (stable Attention)
   `4.890355` on the disjoint subset.
 - Abandon: four-way calibration selection of Q/K sign rotations preserved the
   same Attention MSE but roughly tripled Attention time.
+
+## v19 held-out parameter controller
+
+- `solution_v19.py` branches from v16, not v17/v18. For each of the five
+  calibration activation shapes, it forms deterministic even/odd fit and
+  validation rows, capped at 64 rows per shape for runtime control.
+- It fits lambda 10 and 20 candidates only on fit rows, scores validation
+  `A @ W` output MSE with all shapes weighted equally, and requires at least
+  0.2% validation improvement plus a 1.5x Q(W)-deviation trust region before
+  accepting lambda 10. Selection is once per layer, never per output row.
+- On Linear groups 0-7, every layer conservatively selects lambda 20. Outputs
+  and MSE are therefore exactly v16 (`1904.398739` primary, `1964.920799`
+  disjoint), showing the controller rejects the locally seductive aggressive
+  fit. After reusing the held-out ridge system, the calibrated runtime estimate
+  is about 210 seconds, below the
+  270-second safety target. The purpose of the online submission is to observe
+  whether hidden calibration groups safely select lambda 10.

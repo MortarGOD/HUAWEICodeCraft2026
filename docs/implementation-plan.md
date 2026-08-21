@@ -25,12 +25,13 @@ must earn its place through an isolated, reversible improvement.
 
 1. Use v16's recorded Linear groups 0-3 and Attention groups 0-4 result as the
    primary benchmark (`1904.398739`, `4.311844`, online `15539 / 156s`).
-2. Build v19 from v16, not v17/v18. Split rows within every calibration shape
-   into fit/validation partitions; fit candidate lambdas only on fit rows and
-   choose a single layer-level candidate on validation `A @ W` output error.
-3. Search a conservative logarithmic lambda set around v16 (`5, 10, 20, 40`),
-   with zero residual-refinement steps. Add a correction-norm/trust-region
-   rejection so an apparently good candidate cannot move Q(W) too far from W.
+2. Completed: v19 branches from v16 and splits bounded rows within every
+   calibration shape into fit/validation partitions. It compares lambda 10
+   against trusted lambda 20, chooses once per layer on validation `A @ W`,
+   and applies a correction-norm trust region.
+3. Submit v19 for online feedback. Locally all tested layers select lambda 20,
+   exactly reproducing v16 accuracy at an estimated 210 seconds. Record how
+   many hidden layers select lambda 10 if future diagnostics expose the count.
 4. Only after held-out selection tracks online direction should one residual
    correction be reintroduced as a separate ablation.
 5. Run `py_compile`, `self_check.py`, `git diff --check`, and verify the v13
@@ -48,3 +49,5 @@ must earn its place through an isolated, reversible improvement.
   the 300-second limit.
 - No Attention regression unless an intentional Attention experiment has
   evidence on both subsets.
+- For adaptive controllers, selecting the trusted branch must reproduce v16
+  output exactly and calibrated runtime must remain below 270 seconds.
