@@ -1,4 +1,4 @@
-"""Local evaluation tool based on datasets_0818 (not mini_sample).
+"""Leakage-resistant local evaluation based on datasets_0818 source tensors.
 
 Usage:
     /opt/miniconda3/envs/codecraft/bin/python local_eval.py \
@@ -7,16 +7,18 @@ Usage:
         --attn-groups 0,1,2,3,4 \
         --calibrate-online
 
-Raw MSE remains the primary local metric. With ``--calibrate-online``, v1 is
-used as a proxy for the unavailable official HiF4 baseline, while the measured
-v20 result (15678 score / 183 seconds) anchors score and runtime estimates.
-The calibrated numbers are comparative estimates, not judge-equivalent values.
+By default, test tensors are taken from a structurally identical, calibration-
+feature-matched donor group so the copied 0818 calibration/test values cannot
+leak. With ``--calibrate-online``, Linear deltas are calibrated from the known
+v16-to-v21 online change. Attention deltas receive zero extrapolation weight
+until an Attention-only online change demonstrates a nonzero score effect.
 """
 
 from __future__ import annotations
 
 import argparse
 import importlib.util
+import json
 import math
 import os
 import sys
@@ -28,9 +30,12 @@ import torch
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_PROXY_BASELINE = ROOT / "solution" / "solution_v1.py"
-DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v20.py"
+DEFAULT_ONLINE_REFERENCE = ROOT / "solution" / "solution_v21.py"
 DEFAULT_REFERENCE_ONLINE_SCORE = 15678.0
-DEFAULT_REFERENCE_ONLINE_SECONDS = 183.0
+DEFAULT_REFERENCE_ONLINE_SECONDS = 163.0
+DEFAULT_LINEAR_CALIBRATION_REFERENCE = ROOT / "solution" / "solution_v16.py"
+DEFAULT_LINEAR_CALIBRATION_ONLINE_SCORE = 15539.0
+DEFAULT_HOLDOUT_MANIFEST = ROOT / "datasets_holdout_v2" / "manifest.json"
 
 
 def load_module(path: str, name: str):
@@ -132,6 +137,63 @@ def parse_ids(text: str, group_count: int) -> list[int]:
     return result
 
 
+def apply_holdout_manifest(linear_data, attn_data, manifest_path: str):
+    """Replace copied tests with independent, structurally matched donors."""
+    if not manifest_path:
+        return linear_data, attn_data
+    with open(manifest_path, "r", encoding="utf-8") as handle:
+        manifest = json.load(handle)
+
+    def donor_index(mapping, index, count, kind):
+        donor = int(mapping[str(index)])
+        if donor < 0 or donor >= count or donor == index:
+            raise ValueError(f"invalid {kind} donor {index}->{donor}")
+        return donor
+
+    linear_mapping = manifest["linear_donors"]
+    remapped_linear = []
+    for index, group in enumerate(linear_data):
+        donor = linear_data[
+            donor_index(linear_mapping, index, len(linear_data), "Linear")
+        ]
+        receiver_shapes = [
+            tuple(item[0].shape) for item in group["test_activation_list"]
+        ]
+        donor_shapes = [
+            tuple(item[0].shape) for item in donor["test_activation_list"]
+        ]
+        if receiver_shapes != donor_shapes:
+            raise ValueError(f"Linear donor shape mismatch for group {index}")
+        remapped = dict(group)
+        remapped["test_activation_list"] = donor["test_activation_list"]
+        remapped_linear.append(remapped)
+
+    attention_mapping = manifest["attention_donors"]
+    remapped_attention = []
+    for index, group in enumerate(attn_data):
+        donor = attn_data[
+            donor_index(attention_mapping, index, len(attn_data), "Attention")
+        ]
+        receiver_signature = (
+            int(group["q_num_heads"]),
+            int(group["kv_num_heads"]),
+            int(group["head_dim"]),
+            [tuple(item["q"][0].shape) for item in group["test"]],
+        )
+        donor_signature = (
+            int(donor["q_num_heads"]),
+            int(donor["kv_num_heads"]),
+            int(donor["head_dim"]),
+            [tuple(item["q"][0].shape) for item in donor["test"]],
+        )
+        if receiver_signature != donor_signature:
+            raise ValueError(f"Attention donor signature mismatch for group {index}")
+        remapped = dict(group)
+        remapped["test"] = donor["test"]
+        remapped_attention.append(remapped)
+    return remapped_linear, remapped_attention
+
+
 def evaluate(module, linear_data, attn_data, linear_ids, attn_ids):
     linear_errors, linear_seconds = eval_linear(module, linear_data, linear_ids)
     attn_errors, attn_seconds = eval_attention(module, attn_data, attn_ids)
@@ -201,6 +263,20 @@ def main():
         type=float,
         default=DEFAULT_REFERENCE_ONLINE_SECONDS,
     )
+    parser.add_argument(
+        "--linear-calibration-reference",
+        default=str(DEFAULT_LINEAR_CALIBRATION_REFERENCE),
+    )
+    parser.add_argument(
+        "--linear-calibration-online-score",
+        type=float,
+        default=DEFAULT_LINEAR_CALIBRATION_ONLINE_SCORE,
+    )
+    parser.add_argument(
+        "--holdout-manifest",
+        default=str(DEFAULT_HOLDOUT_MANIFEST),
+        help="cross-group donor manifest; pass an empty string for leaked raw tests",
+    )
     args = parser.parse_args()
 
     linear_data = torch.load(
@@ -209,6 +285,13 @@ def main():
     attn_data = torch.load(
         ROOT / "datasets_0818" / "attn.pt", weights_only=True, map_location="cpu"
     )
+    linear_data, attn_data = apply_holdout_manifest(
+        linear_data, attn_data, args.holdout_manifest
+    )
+    if args.holdout_manifest:
+        print(f"Holdout manifest: {args.holdout_manifest}")
+    else:
+        print("Holdout manifest: disabled (raw tests contain known leakage)")
     linear_ids = parse_ids(args.linear_groups, len(linear_data))
     attn_ids = parse_ids(args.attn_groups, len(attn_data))
 
@@ -232,15 +315,44 @@ def main():
         reference = evaluate(
             reference_module, linear_data, attn_data, linear_ids, attn_ids
         )
+    linear_calibration_module = load_module(
+        args.linear_calibration_reference, "linear_calibration_solution"
+    )
+    linear_calibration = evaluate(
+        linear_calibration_module,
+        linear_data,
+        attn_data,
+        linear_ids,
+        [],
+    )
     print_raw("Reference", reference, linear_ids, attn_ids)
 
     cand_lin, cand_attn, cand_proxy = proxy_score(candidate, baseline)
     ref_lin, ref_attn, ref_proxy = proxy_score(reference, baseline)
-    if ref_proxy == 0.0:
-        raise RuntimeError("reference proxy score is zero; cannot calibrate")
     if reference["seconds"] <= 0.0:
         raise RuntimeError("reference runtime is zero; cannot calibrate")
-    estimated_score = args.reference_online_score * cand_proxy / ref_proxy
+    calibration_lin, _, _ = proxy_score(
+        linear_calibration,
+        {
+            "linear_errors": baseline["linear_errors"],
+            "attn_errors": [],
+        },
+    )
+    online_linear_delta = (
+        args.reference_online_score - args.linear_calibration_online_score
+    )
+    proxy_linear_delta = ref_lin - calibration_lin
+    if linear_ids and abs(proxy_linear_delta) < 1.0e-12:
+        raise RuntimeError("v16-to-reference Linear proxy delta is zero")
+    linear_points_per_proxy = (
+        online_linear_delta / proxy_linear_delta if linear_ids else 0.0
+    )
+    attention_points_per_proxy = 0.0
+    estimated_score = (
+        args.reference_online_score
+        + linear_points_per_proxy * (cand_lin - ref_lin)
+        + attention_points_per_proxy * (cand_attn - ref_attn)
+    )
     estimated_seconds = (
         args.reference_online_seconds
         * candidate["seconds"]
@@ -251,6 +363,11 @@ def main():
         f"(linear={cand_lin:.3f}, attention={cand_attn:.3f}) "
         f"reference={ref_proxy:.3f} "
         f"(linear={ref_lin:.3f}, attention={ref_attn:.3f})"
+    )
+    print(
+        f"Online delta coefficients: linear={linear_points_per_proxy:.6f} "
+        f"attention={attention_points_per_proxy:.6f} points/proxy-unit "
+        f"linear_anchor=solution_v16:{args.linear_calibration_online_score:.0f}"
     )
     print(
         f"Calibrated online estimate: score={estimated_score:.1f} "

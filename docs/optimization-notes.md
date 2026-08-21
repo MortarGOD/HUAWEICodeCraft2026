@@ -12,6 +12,9 @@
 - v17 online result: `7062 / 172s` (low-lambda overfit).
 - v18 online result: `2887 / 206s` (severe accuracy regression, not timeout).
 - v19 online result: `15543 / 198s` (safe but low-value adaptive search).
+- v20 online result: `15678 / 183s`.
+- v21 online result: `15678 / 163s` (Attention adaptation produced zero score
+  gain; runtime improved by 20 seconds).
 
 ## Online-calibrated local evaluation
 
@@ -283,3 +286,46 @@ v13 (stable Attention)
   v20 if the online score does not exceed 17000 or runtime materially exceeds
   205 seconds; that would indicate the new hidden Attention layouts break the
   local calibration/test relationship.
+
+## v21 online contradiction and dataset leakage
+
+- Confirmed v21 is `15678 / 163s`: score is byte-for-byte equal to v20's
+  `15678`, so the predicted `19751` was wrong by 4073 points. The controlled
+  v20-to-v21 change touched only Attention, which makes zero the only defensible
+  current online coefficient for this local Attention improvement.
+- Audit result: `datasets_0818/attn.pt` has 1500/1500 corresponding calibration
+  and test tensors exactly equal; `datasets_0818/linear.pt` has 500/500 exactly
+  equal. They do not alias storage after loading, but their values are copies.
+  Consequently v21's 44/50 selection/test agreement and v17/v18's large local
+  gains were contaminated by complete calibration-test leakage.
+- Abandon: the v21 Attention controller as a score-improvement direction. Keep
+  v21 only as a faster online runtime anchor until a leakage-free holdout and a
+  controlled online result justify Attention changes again.
+- Modify: local validation will use a deterministic cross-group donor holdout,
+  matched only by calibration-side NVFP4 distribution features within exact
+  shape/head signatures. This cannot reproduce the private judge, but it is a
+  materially stricter generalization test than copied calibration tensors.
+
+## Independent donor holdout v2 results
+
+- `tools/build_independent_holdout.py` extracts bounded calibration-only NVFP4
+  statistics and pairs nearest different groups within exact structural
+  signatures. `datasets_holdout_v2/manifest.json` contains 50 Linear and 50
+  Attention donors and regenerates byte-identically. It adds no tensor copies.
+- Independence check passes: corresponding receiver-calibration/donor-test
+  equality is 0/500 Linear tensors and 0/1500 Attention tensors, versus
+  500/500 and 1500/1500 in the raw 0818 data.
+- The primary Linear holdout now follows the decisive online overfit direction:
+  v16 is `1992.915516`, v17 is `2789.953941` (+40.00%), and v18 is
+  `2940.751350` (+47.56%). v20/v21 is `1970.283623`, a conservative 1.14%
+  improvement over v16, consistent with the small online gain.
+- Attention improves from v20's `43.114502` to v21's `38.446426` on all 50
+  donor groups (10.83%), but online gain is exactly zero. This proves value
+  independence alone does not repair the 0818-to-online Attention distribution
+  mismatch. Do not translate local Attention gains into points; use them only
+  to reject regressions until a controlled online ablation supplies a valid
+  coefficient.
+- `local_eval.py` now enables the donor manifest by default, anchors runtime to
+  v21's `163s`, and derives the Linear point coefficient from v16 `15539` to
+  v21 `15678`. The current primary coefficient is about `13.6315` online points
+  per Linear proxy unit; the Attention coefficient is explicitly zero.

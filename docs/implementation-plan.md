@@ -111,3 +111,45 @@ reversible improvement.
   evidence on both subsets.
 - For adaptive controllers, selecting the trusted branch must reproduce v16
   output exactly and calibrated runtime must remain below 270 seconds.
+
+## Independent holdout rebuild after v21
+
+The confirmed v21 result is `15678 / 163s`, exactly the same score as v20
+despite the locally predicted Attention gain. A full audit found that every
+paired calibration/test tensor in `datasets_0818` is an exact copy: 1500/1500
+Attention carrier/scale tensors and 500/500 Linear tensors compare equal.
+Previous calibration-to-test agreement is therefore invalid evidence.
+
+1. Preserve `datasets_0818` as immutable source material; do not create another
+   multi-gigabyte copy.
+2. Build a deterministic donor manifest within identical structural signatures.
+   Pair each group with the nearest different group by calibration-only NVFP4
+   distribution features, producing independent test values without observing
+   candidate errors.
+3. Make `local_eval.py` apply this manifest by default and validate shape/head
+   compatibility before evaluation.
+4. Calibrate Linear score deltas from the controlled v16 (`15539`) to v20/v21
+   (`15678`) online change. Set the Attention extrapolation coefficient to zero
+   until an online controlled Attention-only version demonstrates nonzero gain.
+
+### Holdout acceptance criteria
+
+- No group may donate test data to itself, and all donor tensors must have the
+  exact shapes required by the receiving group.
+- The manifest must be deterministic and contain all 50 Linear and 50 Attention
+  groups.
+- v21's adaptive Attention advantage must be remeasured on the independent
+  donor holdout; leaked-data results are retained only as rejected evidence.
+- Evaluation tooling and documentation changes pass `py_compile`, manifest
+  validation, and `git diff --check` before push.
+
+### Holdout validation outcome
+
+- Complete non-self mappings: passed for 50/50 Linear and 50/50 Attention.
+- Exact calibration/test equality after remapping: 0/500 Linear and 0/1500
+  Attention, passed.
+- Historical direction: v17 and v18 now regress 40.00% and 47.56% from v16 on
+  primary Linear, matching their severe online score collapse; passed.
+- Attention score calibration: failed to transfer even after value leakage was
+  removed. Keep its online coefficient at zero and require future online
+  ablations before using it for score prediction.
