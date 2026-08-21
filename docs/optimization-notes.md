@@ -155,7 +155,8 @@ v13 (stable Attention)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
               └─ v19 (held-out lambda controller; 15543 / 198s, modify)
               └─ v20 (A-only layout profile selection; 15678 / 183s)
-                  └─ v21 (adaptive Attention Q/K block; push candidate)
+                  └─ v21 (15678 / 163s; current online anchor)
+                      └─ v22 (leakage-free Linear improvement; push candidate)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -329,3 +330,31 @@ v13 (stable Attention)
   v21's `163s`, and derives the Linear point coefficient from v16 `15539` to
   v21 `15678`. The current primary coefficient is about `13.6315` online points
   per Linear proxy unit; the Attention coefficient is explicitly zero.
+
+## v22 leakage-free Linear optimization
+
+- v22 freezes v21 Attention and changes only Linear. The retained parameters
+  are balance exponent `0.44`, Q(A) offsets `(0,1,2,3,4)`, fixed Q(W) offsets
+  `(0,1,2,3)`, and rank 4 for both W-only Q(A) sensitivity and calibration-A
+  sensitivity used to select fixed Q(W). `A @ W` remains confined to the λ20
+  fixed-weight fit and row choice; it is never used to infer Q(A).
+- Primary donor holdout improves from v21 `1970.283623` to `1889.581486`
+  (-4.096%); groups 4-7 improve from `2049.866459` to `1968.391388`
+  (-3.974%). The v16-to-v21 coefficient estimates `16138 / 206s`.
+- Across all 50 Linear groups, v21 is `24713.431183` and v22 is
+  `23785.392948`, a 3.755% reduction. Every group improves; ten consecutive
+  five-group batches improve by 2.45%-4.30%. Local Linear time rises from
+  385.14 to 498.77 seconds (1.295x), projecting about 211 seconds online from
+  the v21 163-second anchor.
+- Continue: moderate scale-space expansion and low-rank sensitivity are the
+  only directions with consistent primary, disjoint, and all-group gains.
+- Modify: ridge remains λ20 because no-ridge slightly regressed disjoint data;
+  higher lambdas converge toward no-ridge and add no meaningful accuracy.
+- Abandon in current form: repeated residual correction, per-block A@W
+  coordinate fitting, output-row profile selection, block-wise α selection,
+  quant-aware sign search, sorted/interleaved channel permutation, offset5,
+  and rank16/32. Their gains were absent or reversed on independent donors.
+- The requested 17000 threshold is not yet supported by the corrected local
+  model. v22's center estimate is about 16138; its purpose is to obtain a clean
+  online Linear-only feedback point and recalibrate the next iteration without
+  repeating v21's Attention extrapolation error.

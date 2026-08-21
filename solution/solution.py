@@ -1,7 +1,7 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 21:
-- Keep v20's trusted Linear path unchanged.
+Version 22:
+- Improve fixed Q(W) selection with calibration-A low-rank sensitivity.
 - Choose compact or wide Q(A) scale profiles from activation reconstruction
   only; never use A @ W or output error to infer Q(A).
 - Score Q(A) with W-only per-64-block sensitivity statistics: diagonal
@@ -22,14 +22,15 @@ E6M2_MIN = 2.0 ** (-48)
 E6M2_MAX = 49152.0  # 2^15 * 1.5
 
 _LINEAR_SCALE_OFFSETS = (0, 1, 2)
-_LINEAR_WIDE_SCALE_OFFSETS = (0, 1, 2, 3)
+_LINEAR_WIDE_SCALE_OFFSETS = (0, 1, 2, 3, 4)
+_LINEAR_WEIGHT_SCALE_OFFSETS = (0, 1, 2, 3)
 _LINEAR_PROFILE_MIN_GAIN = 0.005
 _LINEAR_PROFILE_ROWS_PER_SHAPE = 64
 _LINEAR_HADAMARD = 64
-_LINEAR_BALANCE_EXPONENT = 0.39
+_LINEAR_BALANCE_EXPONENT = 0.44
 _LINEAR_RIDGE_LAMBDA = 20.0
 _LINEAR_POWER_ITERS = 3
-_LINEAR_OUTPUT_RANK = 2
+_LINEAR_OUTPUT_RANK = 4
 
 _ATTENTION_ROTATION_BLOCKS = (4, 8, 16)
 _ATTENTION_TRUSTED_BLOCK = 16
@@ -445,6 +446,9 @@ def _output_aware_quantize_weight(
     activation_projection: torch.Tensor,
     projection_strength: torch.Tensor,
     activation_offsets: Iterable[int],
+    weight_importance: torch.Tensor,
+    weight_projection: torch.Tensor,
+    weight_projection_strength: torch.Tensor,
 ) -> dict[str, torch.Tensor]:
     """Fit one ridge candidate and select fixed Q(W) rows by output MSE."""
     activation_params = _quantize_linear_values(
@@ -455,7 +459,6 @@ def _output_aware_quantize_weight(
         projection_strength=projection_strength,
     )
     quantized_activation = _dequantize_linear_params(activation_params)
-    weight_importance = activation.square().mean(0)
     target_output = activation @ weight.T
     kernel = quantized_activation @ quantized_activation.T
     residual = target_output - quantized_activation @ weight.T
@@ -468,7 +471,13 @@ def _output_aware_quantize_weight(
         residual,
     )
     fitted_weight = weight + (quantized_activation.T @ dual).T
-    ridge = _quantize_linear_values(fitted_weight, weight_importance)
+    ridge = _quantize_linear_values(
+        fitted_weight,
+        weight_importance,
+        offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
+        projection=weight_projection,
+        projection_strength=weight_projection_strength,
+    )
     return _choose_weight_rows(
         target_output,
         quantized_activation,
@@ -629,8 +638,13 @@ def hif4_calibration_and_quantize_weight(
         activation_projection,
         projection_strength,
     ) = _activation_output_cost_state(transformed_weight)
+    (
+        weight_importance,
+        weight_projection,
+        weight_projection_strength,
+    ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 20,
+        "version": 22,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -638,7 +652,13 @@ def hif4_calibration_and_quantize_weight(
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
     }
-    baseline = _quantize_linear_values(transformed_weight, weight_importance)
+    baseline = _quantize_linear_values(
+        transformed_weight,
+        weight_importance,
+        offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
+        projection=weight_projection,
+        projection_strength=weight_projection_strength,
+    )
     weight_params = _output_aware_quantize_weight(
         transformed_activation,
         transformed_weight,
@@ -647,6 +667,9 @@ def hif4_calibration_and_quantize_weight(
         activation_projection,
         projection_strength,
         activation_offsets,
+        weight_importance,
+        weight_projection,
+        weight_projection_strength,
     )
     return {"weight_params": weight_params, "activation_state": activation_state}
 

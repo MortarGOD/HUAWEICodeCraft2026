@@ -2,7 +2,7 @@
 
 ## Objective
 
-Develop the next version from v20 while keeping online runtime below 300
+Develop the next version from v21 while keeping online runtime below 300
 seconds. Linear may use calibration-time `A @ W` only to fit fixed `Q(W)`;
 `Q(A)` remains activation-only under the 0819-V2 rule. The long-term online
 target is 22000; each version must earn its place through an isolated,
@@ -153,3 +153,57 @@ Previous calibration-to-test agreement is therefore invalid evidence.
 - Attention score calibration: failed to transfer even after value leakage was
   removed. Keep its online coefficient at zero and require future online
   ablations before using it for score prediction.
+
+## v22 Linear-only optimization plan
+
+Objective: exceed `17000` from the v21 anchor `15678 / 163s`, using only
+leakage-free Linear evidence. Attention is frozen and contributes zero to the
+prediction. The primary holdout is Linear groups 0-3; groups 4-7 and the other
+three structural batches are disjoint gates.
+
+Candidate DAG:
+
+```text
+v21 (15678 / 163s; runtime anchor)
+  └─ v22 Linear parameter screen
+      ├─ Q(A) scale offsets 0..4 / 0..5
+      ├─ W-only output metric rank 4
+      ├─ balance exponent 0.30 / 0.45 / 0.50
+      └─ Q(W) ridge lambda 10 / 30 / 40
+```
+
+Execution and risk controls:
+
+1. Screen each parameter in isolation against v21 on the independent donor
+   holdout. No candidate may observe donor tests during calibration.
+2. Reject low-lambda Q(W) fits unless every structural batch improves; v17/v18
+   prove that calibration fit alone is unsafe.
+3. Combine only independently positive parameters, then rerun groups 0-7 and
+   all 50 Linear groups. Revert parameters whose gains disappear off-primary.
+4. Use the v16-to-v21 online coefficient for score estimation. A push candidate
+   must estimate above 17000, stay below 270 seconds, pass 22/22 format checks,
+   and keep Attention byte-identical to v21.
+
+Acceptance caveat: if no leakage-free candidate estimates above 17000, do not
+manufacture that prediction. Push only a materially improving, cross-batch
+candidate and report the evidence-based estimate and remaining gap.
+
+### v22 selection outcome
+
+- Retain: balance exponent `0.44`, Q(A) offsets `0..4`, fixed Q(W) offsets
+  `0..3`, rank-4 W-only sensitivity for Q(A), and rank-4 calibration-A
+  sensitivity for fitting fixed Q(W).
+- Retain λ20 ridge: removing it slightly regressed the disjoint subset even
+  though it was faster. Additional residual refinements selected no useful
+  donor-generalizing rows and were rejected.
+- Reject: α0.30/0.42/0.46/0.48/0.50, offset5, lower λ, block-wise α, quant-aware
+  sign search, global Q(W) profiles, coordinate block fitting, channel sorting,
+  rank16/32, and Hadamard32. Each was weaker, inconsistent, or reversed on the
+  independent donor holdout.
+- Full validation: all 50/50 Linear groups improve. Total MSE is
+  `23785.392948` versus v21 `24713.431183` (-3.755%); every consecutive
+  five-group batch improves by 2.45%-4.30%.
+- Primary calibrated estimate is `16138 / 206s`; the all-group local runtime
+  ratio is 1.295, projecting about `211s`. The evidence does not support a
+  >17000 center estimate, but v22 is accepted as the first leakage-free,
+  all-group-positive step toward that target.
