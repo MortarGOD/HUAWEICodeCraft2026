@@ -151,7 +151,8 @@ v13 (stable Attention)
               └─ v17 (ridge lambda 0.01; 7062 / 172s, reject)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
               └─ v19 (held-out lambda controller; 15543 / 198s, modify)
-              └─ v20 (A-only layout profile selection; current candidate)
+              └─ v20 (A-only layout profile selection; 15678 / 183s)
+                  └─ v21 (adaptive Attention Q/K block; push candidate)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -248,3 +249,37 @@ v13 (stable Attention)
   versus v16's `23901.842773`, a 1.31% improvement; all ten five-group batches
   improve. The primary v16-anchored estimate is about `15620 / 155s`. Unlike
   v17/v18, Q(A) profile selection never observes Linear output error.
+- Confirmed online v20 is `15678 / 183s`, versus v19's `15543 / 198s` and
+  v16's `15539 / 156s`. The legal A-only profile selector adds 135 points over
+  v19 while recovering 15 seconds, so retain v20 as the new production and
+  local-calibration anchor. It is still 1322 points short of the next requested
+  17000 threshold; repeated Linear lambda/profile tuning is now a low-yield
+  direction, so v21 changes only Attention.
+
+## v21 adaptive Attention profile
+
+- v21 keeps v20 Linear unchanged and compares fixed shared Q/K Hadamard block
+  sizes 4, 8, and 16 against true calibration Attention output. It selects one
+  profile per Attention group, requires an alternative to beat trusted block 16
+  by at least 1%, and never observes test tensors during selection.
+- With 128 sampled rows per calibration shape, selection agrees with the test
+  oracle on 44/50 groups. Aggregate normalized test error is `1.036959` versus
+  block 16's `1.246145` (16.79% lower) and the oracle's `1.034466` (only 0.24%
+  regret). Selected profiles are block 4/8/16 on 20/23/7 groups.
+- Reducing the cap to 64 rows preserves 44/50 decisions relative to the
+  128-row controller and cuts all-50 calibration selection time from roughly
+  32 to 16 seconds locally. The six changed decisions have approximately
+  neutral aggregate test regret, so 64 rows is retained for online headroom.
+- The first ten groups produce Attention MSE `7.636810` versus v20's
+  `8.799336` (13.21% lower). With identical Linear, the v20-anchored local proxy
+  estimate is `19751 / 188s`.
+- At the retained 64-row cap, all 50 groups produce Attention MSE `35.907929`
+  versus v20's `43.114502` (16.72% lower). Candidate Attention time is 55.16
+  seconds versus 40.84 for v20, only 14.32 seconds of net local overhead across
+  all groups. Since Linear dominates the complete evaluation, the online
+  runtime projection is conservatively `190-205s`, below the 270-second gate.
+- Continue this direction: profile selection has strong calibration/test
+  agreement, low oracle regret, and bounded calibration-only cost. Roll back to
+  v20 if the online score does not exceed 17000 or runtime materially exceeds
+  205 seconds; that would indicate the new hidden Attention layouts break the
+  local calibration/test relationship.

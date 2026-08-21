@@ -2,10 +2,11 @@
 
 ## Objective
 
-Develop the next version from v16 while keeping online runtime below 300
-seconds and improving output accuracy through calibration-time `A @ W` fitting
-of `Q(A)` and/or `Q(W)`. The long-term online target is 22000; each version
-must earn its place through an isolated, reversible improvement.
+Develop the next version from v20 while keeping online runtime below 300
+seconds. Linear may use calibration-time `A @ W` only to fit fixed `Q(W)`;
+`Q(A)` remains activation-only under the 0819-V2 rule. The long-term online
+target is 22000; each version must earn its place through an isolated,
+reversible improvement.
 
 ## 0819-V2 compliance boundary
 
@@ -81,6 +82,22 @@ must earn its place through an isolated, reversible improvement.
    Attention section hash if Attention was intentionally unchanged.
 7. Update the candidate DAG with the evidence and mark the direction continue,
    modify, or abandon before committing and pushing.
+8. For v21, keep v20 Linear fixed and evaluate deterministic shared Q/K
+   Hadamard block profiles (4, 8, and trusted 16) against the true calibration
+   Attention output. Select once per Attention group with equal weight per
+   calibration shape, capped at 64 deterministic rows; do not fit tensor values
+   or use test data.
+
+### v21 acceptance criteria
+
+- Calibration-selected Attention profiles must improve both groups 0-4 and a
+  disjoint group subset relative to fixed block 16.
+- Selection/test winner agreement and aggregate regret are reported across all
+  50 local groups. Block 16 remains the fallback for weak or invalid evidence.
+- The v20-anchored calibrated estimate must exceed 17000 and remain below 270
+  seconds before v21 is committed and pushed.
+- Linear output must remain byte-identical to v20; all 22 interface checks and
+  `git diff --check` must pass.
 
 ## Acceptance criteria
 
