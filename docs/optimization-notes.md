@@ -145,6 +145,8 @@ v13 (stable Attention)
   └─ v14 (full output-aware Linear; >300s, abandon implementation)
       └─ v15 (time-safe weight fitting; 15463 / 170s, retained base)
           └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
+              └─ v17 (ridge lambda 0.01; fast rollback candidate)
+                  └─ v18 (two Q(W) residual corrections; current candidate)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -156,3 +158,27 @@ v13 (stable Attention)
   it exceeded the 300-second online limit.
 - Hold/revert base: Attention remains on v13 behavior until a candidate shows
   consistent gains on both the primary subset and a disjoint subset.
+
+## v17-v18 offline evidence
+
+- `solution_v17.py`: reduce the normalized ridge lambda from 20 to 0.01. On
+  all 50 Linear groups, total MSE falls from v16's `23901.842773` to
+  `12382.298023` (48.20%). Every five-group batch improves by roughly the same
+  amount. The primary calibrated estimate is about `18570 / 155s`.
+- `solution_v18.py`: factor the same regularized calibration kernel once and
+  apply two post-quantization residual corrections to Q(W), choosing the best
+  candidate per output row against `A @ W`. Primary Linear MSE is `787.307289`
+  versus v17's `992.771124`; disjoint groups 4-7 are `806.183283` versus
+  `1022.246878`. Across all 50 groups, Linear MSE is `9784.265111`, improving
+  20.98% over v17 and 59.06% over v16; all ten five-group batches improve. The
+  v16-anchored estimate is about `19290 / 228s`, below the 270-second safety
+  threshold. A third iteration is not used because the projected runtime would
+  approach/exceed the 300-second limit.
+- Abandon: recomputing Q(A)'s Gram state from final Q(W) without refitting
+  regressed primary MSE to `844.291557`; closing the loop with a second full
+  Q(A)/Q(W) fit recovered only to `816.894451` while adding about 44% runtime.
+- Abandon: calibration-derived diagonal Q/K sensitivity worsened Attention
+  from `4.311844` to `4.682031` on the primary subset and from `4.487492` to
+  `4.890355` on the disjoint subset.
+- Abandon: four-way calibration selection of Q/K sign rotations preserved the
+  same Attention MSE but roughly tripled Attention time.

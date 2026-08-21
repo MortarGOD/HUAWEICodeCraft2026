@@ -1,7 +1,9 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 16:
-- Keep v15's time-safe Linear weight fitting.
+Version 18:
+- Keep v17's low-regularization, rank-2 output-aware Q(A)/Q(W) fitting.
+- Reuse one Cholesky factor for two quantization-residual correction steps,
+  selecting the best fixed Q(W) per output row against A @ W.
 - Fit Q(A) with an output-aware per-64-block cost derived from transformed W:
   diagonal residual energy plus two power-iterated Gram directions.
 - Keep v13's proven Attention path unchanged: shared Q/K Hadamard rotation
@@ -22,7 +24,8 @@ E6M2_MAX = 49152.0  # 2^15 * 1.5
 _LINEAR_SCALE_OFFSETS = (0, 1, 2)
 _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.39
-_LINEAR_RIDGE_LAMBDA = 20.0
+_LINEAR_RIDGE_LAMBDA = 0.01
+_LINEAR_REFINEMENT_STEPS = 2
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 2
 
@@ -451,16 +454,27 @@ def _output_aware_quantize_weight(
     identity = torch.eye(
         kernel.shape[0], dtype=kernel.dtype, device=kernel.device
     )
-    dual = torch.linalg.solve(
-        kernel + _LINEAR_RIDGE_LAMBDA * ridge_scale * identity,
-        residual,
+    regularized_kernel = (
+        kernel + _LINEAR_RIDGE_LAMBDA * ridge_scale * identity
     )
+    factor = torch.linalg.cholesky(regularized_kernel)
+    dual = torch.cholesky_solve(residual, factor)
     fitted_weight = weight + (quantized_activation.T @ dual).T
     ridge = _quantize_linear_values(fitted_weight, weight_importance)
+    candidates = [baseline, ridge]
+    refined_weight = _dequantize_linear_params(ridge)
+    for _ in range(_LINEAR_REFINEMENT_STEPS):
+        residual = target_output - quantized_activation @ refined_weight.T
+        dual = torch.cholesky_solve(residual, factor)
+        refined_weight = refined_weight + (quantized_activation.T @ dual).T
+        candidates.append(
+            _quantize_linear_values(refined_weight, weight_importance)
+        )
+        refined_weight = _dequantize_linear_params(candidates[-1])
     return _choose_weight_rows(
         target_output,
         quantized_activation,
-        [baseline, ridge],
+        candidates,
     )
 
 
@@ -569,7 +583,7 @@ def hif4_calibration_and_quantize_weight(
         projection_strength,
     ) = _activation_output_cost_state(transformed_weight)
     activation_state = {
-        "version": 16,
+        "version": 18,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
