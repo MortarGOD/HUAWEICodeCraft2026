@@ -249,3 +249,62 @@ Execution:
 
 Humanize is not installed in this workspace. The executable steps and
 acceptance criteria above were therefore refined manually before code changes.
+
+## v24 controlled Linear recovery plan
+
+Online anchors are v22 `16359 / 197s`, v23 `16477 / 193s`, and the external
+mixed implementation `17562 / 249s`. v24 keeps v23 Attention fixed and targets
+the unexplained Linear/adaptation gap without copying the external code.
+
+Candidate DAG:
+
+```text
+v23 (16477 / 193s)
+  └─ within-group exact-twin-excluded evaluator
+      ├─ trusted v22 fixed-weight ridge (fallback)
+      ├─ bounded sequential output-residual compensation
+      ├─ propagation window and trust shrinkage ablations
+      └─ optional row-wise fallback selected on excluded calibration shape
+```
+
+Execution and acceptance criteria:
+
+1. Add a leave-one-out mode that removes each test tensor's exact calibration
+   twin before fitting state. It preserves the group's layout while preventing
+   the target value from entering calibration. First require it to order the
+   known v22/v23/external feedback more plausibly than raw or donor evaluation.
+2. First correct the evaluation objective to the official per-case relative
+   score. The MSE-sum ranking is rejected because it hides regressions on
+   low-baseline, high-score-weight cases.
+3. Screen one variable at a time on groups 0-3, gate on groups 4-7 and
+   structural batches, and retain v23 when the validation margin is weak.
+4. Keep Attention byte-identical to v23. Require all format checks, runtime
+   below 270 seconds, and evidence in both twin-excluded and donor views.
+5. Score estimates use only controlled same-branch online anchors. No mixed
+   result is algebraically decomposed into component points.
+
+### v24 selected branch
+
+The official objective changes the diagnosis. Across all 50 raw Attention
+groups, v23 has proxy `9097.752851`, while the external implementation has
+`9329.868856`; their close MSE totals had hidden a meaningful per-case gap.
+Linear remains weaker externally on both raw and donor primary groups, so v24
+is kept as a controlled Attention-only change and Linear propagation is
+deferred to a later isolated branch.
+
+v24 changes the Q statistic from `sqrt(mean(head energy))` to
+`mean(sqrt(head energy))` within each replicated KV group. This avoids letting
+one high-energy Q replica dominate all peers. A calibration-only density gate
+uses full-head rotation for one dense layout and Hadamard-64 otherwise. Q/K
+offsets `0..4` and energy penalty `0.125` remain; copying the external offset
+set and penalty regressed.
+
+Acceptance evidence:
+
+- Official raw Attention proxy: v23 `9097.752851`, external `9329.868856`, v24
+  `9607.884916`. v24 wins 9/10 consecutive five-group batches versus v23.
+- Twin-excluded groups 0-9: v23 `-781.733716`, external `-671.010899`, v24
+  `-603.164937`. Absolute transfer remains poor, but v24 improves both relevant
+  comparisons without seeing the held-out twin.
+- Attention local runtime is `54.99s`, between v23 `45.48s` and external
+  `67.90s`; Linear is unchanged, so the online projection remains below 210s.

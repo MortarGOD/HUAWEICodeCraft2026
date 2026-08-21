@@ -12,7 +12,8 @@ feature-matched donor group so the copied 0818 calibration/test values cannot
 leak. With ``--calibrate-online``, Linear deltas are calibrated from the
 controlled v21-to-v22 online change. Attention deltas receive zero
 extrapolation weight in the conservative estimate; mixed external results are
-recorded separately.
+recorded separately. ``--leave-one-out`` instead preserves the original group
+but excludes each test tensor's exact calibration twin before fitting state.
 """
 
 from __future__ import annotations
@@ -75,18 +76,53 @@ def run_attention(q, k, v, q_num_heads, kv_num_heads, head_dim):
     return (probs @ v).transpose(0, 1).flatten(-2, -1)
 
 
-def eval_linear(module, linear_data, group_ids):
+def _tensor_pair_equal(left, right) -> bool:
+    return torch.equal(left[0], right[0]) and torch.equal(left[1], right[1])
+
+
+def _attention_sample_equal(left, right) -> bool:
+    return all(
+        _tensor_pair_equal(left[role], right[role])
+        for role in ("q", "k", "v")
+    )
+
+
+def eval_linear(module, linear_data, group_ids, leave_one_out=False):
     errors = []
     started = time.perf_counter()
     for gi in group_ids:
         group = linear_data[gi]
         w_quant, w_scale = group["weight"]
         weight = module.dequantize_nvfp4(w_quant, w_scale).float()
-        result = module.hif4_calibration_and_quantize_weight(
-            w_quant, w_scale, group["calib_activation_list"]
-        )
-        weight_hat = dequant_hif4(result["weight_params"], weight.shape)
-        for a_quant, a_scale in group["test_activation_list"]:
+        tests = group["test_activation_list"]
+        shared_result = None
+        if not leave_one_out:
+            shared_result = module.hif4_calibration_and_quantize_weight(
+                w_quant, w_scale, group["calib_activation_list"]
+            )
+        for test in tests:
+            result = shared_result
+            if leave_one_out:
+                matches = [
+                    index
+                    for index, item in enumerate(group["calib_activation_list"])
+                    if _tensor_pair_equal(test, item)
+                ]
+                if len(matches) != 1:
+                    raise ValueError(
+                        f"Linear group {gi} test requires one exact twin; "
+                        f"found {len(matches)}"
+                    )
+                calib = [
+                    item
+                    for index, item in enumerate(group["calib_activation_list"])
+                    if index != matches[0]
+                ]
+                result = module.hif4_calibration_and_quantize_weight(
+                    w_quant, w_scale, calib
+                )
+            weight_hat = dequant_hif4(result["weight_params"], weight.shape)
+            a_quant, a_scale = test
             activation = module.dequantize_nvfp4(a_quant, a_scale).float()
             act_hat = dequant_hif4(
                 module.hif4_dynamic_quantize_activation(
@@ -98,7 +134,7 @@ def eval_linear(module, linear_data, group_ids):
     return errors, time.perf_counter() - started
 
 
-def eval_attention(module, attn_data, group_ids):
+def eval_attention(module, attn_data, group_ids, leave_one_out=False):
     errors = []
     started = time.perf_counter()
     for gi in group_ids:
@@ -106,8 +142,30 @@ def eval_attention(module, attn_data, group_ids):
         qh = int(group["q_num_heads"])
         kvh = int(group["kv_num_heads"])
         hd = int(group["head_dim"])
-        states = module.hif4_calibration_attention(group["calib"], qh, kvh, hd)
+        shared_states = None
+        if not leave_one_out:
+            shared_states = module.hif4_calibration_attention(
+                group["calib"], qh, kvh, hd
+            )
         for sample in group["test"]:
+            states = shared_states
+            if leave_one_out:
+                matches = [
+                    index
+                    for index, item in enumerate(group["calib"])
+                    if _attention_sample_equal(sample, item)
+                ]
+                if len(matches) != 1:
+                    raise ValueError(
+                        f"Attention group {gi} test requires one exact twin; "
+                        f"found {len(matches)}"
+                    )
+                calib = [
+                    item
+                    for index, item in enumerate(group["calib"])
+                    if index != matches[0]
+                ]
+                states = module.hif4_calibration_attention(calib, qh, kvh, hd)
             outs = {}
             for role, func, state, nh in (
                 ("q", module.hif4_dynamic_quantize_q, states["q_state"], qh),
@@ -195,9 +253,20 @@ def apply_holdout_manifest(linear_data, attn_data, manifest_path: str):
     return remapped_linear, remapped_attention
 
 
-def evaluate(module, linear_data, attn_data, linear_ids, attn_ids):
-    linear_errors, linear_seconds = eval_linear(module, linear_data, linear_ids)
-    attn_errors, attn_seconds = eval_attention(module, attn_data, attn_ids)
+def evaluate(
+    module,
+    linear_data,
+    attn_data,
+    linear_ids,
+    attn_ids,
+    leave_one_out=False,
+):
+    linear_errors, linear_seconds = eval_linear(
+        module, linear_data, linear_ids, leave_one_out
+    )
+    attn_errors, attn_seconds = eval_attention(
+        module, attn_data, attn_ids, leave_one_out
+    )
     return {
         "linear_errors": linear_errors,
         "attn_errors": attn_errors,
@@ -249,6 +318,11 @@ def main():
     parser.add_argument("--attn-groups", default="0,1,2,3,4")
     parser.add_argument("--calibrate-online", action="store_true")
     parser.add_argument(
+        "--leave-one-out",
+        action="store_true",
+        help="exclude each raw test tensor's exact calibration twin",
+    )
+    parser.add_argument(
         "--proxy-baseline", default=str(DEFAULT_PROXY_BASELINE)
     )
     parser.add_argument(
@@ -286,10 +360,12 @@ def main():
     attn_data = torch.load(
         ROOT / "datasets_0818" / "attn.pt", weights_only=True, map_location="cpu"
     )
-    linear_data, attn_data = apply_holdout_manifest(
-        linear_data, attn_data, args.holdout_manifest
-    )
-    if args.holdout_manifest:
+    if args.leave_one_out:
+        print("Holdout mode: within-group exact-twin-excluded")
+    elif args.holdout_manifest:
+        linear_data, attn_data = apply_holdout_manifest(
+            linear_data, attn_data, args.holdout_manifest
+        )
         print(f"Holdout manifest: {args.holdout_manifest}")
     else:
         print("Holdout manifest: disabled (raw tests contain known leakage)")
@@ -297,7 +373,14 @@ def main():
     attn_ids = parse_ids(args.attn_groups, len(attn_data))
 
     module = load_module(args.solution, "candidate_solution")
-    candidate = evaluate(module, linear_data, attn_data, linear_ids, attn_ids)
+    candidate = evaluate(
+        module,
+        linear_data,
+        attn_data,
+        linear_ids,
+        attn_ids,
+        args.leave_one_out,
+    )
     print_raw("Candidate", candidate, linear_ids, attn_ids)
 
     if not args.calibrate_online:
@@ -305,7 +388,12 @@ def main():
 
     baseline_module = load_module(args.proxy_baseline, "proxy_baseline_solution")
     baseline = evaluate(
-        baseline_module, linear_data, attn_data, linear_ids, attn_ids
+        baseline_module,
+        linear_data,
+        attn_data,
+        linear_ids,
+        attn_ids,
+        args.leave_one_out,
     )
     if Path(args.solution).resolve() == Path(args.online_reference).resolve():
         reference = candidate
@@ -314,7 +402,12 @@ def main():
             args.online_reference, "online_reference_solution"
         )
         reference = evaluate(
-            reference_module, linear_data, attn_data, linear_ids, attn_ids
+            reference_module,
+            linear_data,
+            attn_data,
+            linear_ids,
+            attn_ids,
+            args.leave_one_out,
         )
     linear_calibration_module = load_module(
         args.linear_calibration_reference, "linear_calibration_solution"
@@ -325,6 +418,7 @@ def main():
         attn_data,
         linear_ids,
         [],
+        args.leave_one_out,
     )
     print_raw("Reference", reference, linear_ids, attn_ids)
 

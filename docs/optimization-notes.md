@@ -410,3 +410,48 @@ v13 (stable Attention)
 - Final validation: `solution.py` and `solution_v23.py` are identical,
   `py_compile` and `git diff --check` pass, and `self_check.py` passes all
   `1100/1100` calibration/output-format checks across 50+50 groups.
+
+## v23 online correction
+
+- Confirmed v23 result: `16477 / 193s`, only +118 points and -4 seconds versus
+  v22 `16359 / 197s`. The runtime projection was sound; the `18000-19500`
+  score estimate was decisively false.
+- Reject the mixed-anchor decomposition. A single external total score cannot
+  identify Linear and Attention contributions, and a v21-to-v22 Linear
+  coefficient cannot be transported to a different algorithm and holdout.
+- Raw Attention MSE is not a score proxy: its 14.52% v23 gain was measured with
+  exact calibration/test twins. The donor warning was stronger evidence—v23
+  regressed from `7.9567` to `14.9405` on primary independent Attention—but
+  was incorrectly discounted.
+- The new controlled Attention anchor is v22-to-v23: the retained mechanism is
+  slightly positive online (+118), not the multi-thousand-point explanation
+  of the external result. Most of the remaining 1085-point external advantage
+  must be sought in Linear or hidden-distribution adaptation.
+
+## v24 official-objective correction
+
+- The official score is the sum of per-case relative improvements, not a
+  function of aggregate MSE. Recomputing the correct proxy gives Attention
+  scores v22 `9120.328019`, v23 `9097.752851`, and external `9329.868856`.
+  v23 reduced aggregate MSE while regressing score-weighted small-error cases.
+- Linear official proxy on raw groups 0-3 is v22 `1270.961823` versus external
+  `1255.193206`; donor is `1217.403978` versus `1107.055835`. This keeps
+  sequential Linear compensation out of v24 despite its possible hidden-data
+  value; it requires a later isolated online probe.
+- Primary retained mechanism: compute RMS for each replicated Q head before
+  averaging within its KV group. This raises all-50 Attention proxy to
+  `9575.777924`; a calibration-density gated full-head rotation raises it to
+  `9607.884916`. Higher energy penalty and removing offset 2 regress.
+- v24 aggregate Attention MSE is `73.616000`; proxy improves 9/10 consecutive
+  batches versus v23. Twin-excluded groups 0-9 improve by 178.57 proxy units
+  versus v23 and 67.85 versus the external implementation.
+- Candidate DAG decision: continue per-head RMS aggregation and the one-layout
+  rotation gate; modify the local evaluator to expose twin-excluded mode;
+  abandon aggregate-MSE parameter selection; defer Linear propagation.
+- Final validation: v24 keeps the complete Linear section byte-identical to
+  v23, `solution.py` matches `solution_v24.py`, syntax/diff checks pass, and
+  all `1100/1100` output-format checks pass.
+- Score forecast is deliberately bounded to `17000-17800` with a center near
+  `17400`; runtime is projected at `190-205s`. The external mixed result is not
+  used as a linear point coefficient, so this forecast is a hypothesis to be
+  recalibrated by the v24 Attention-only online result.
