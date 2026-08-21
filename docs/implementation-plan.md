@@ -9,9 +9,10 @@ must earn its place through an isolated, reversible improvement.
 
 ## Candidate directions
 
-1. Completed/continue: low-regularization Q(W) fitting and quantization-residual
-   correction. v17 establishes the lambda gain; v18 spends part of the runtime
-   margin on two residual corrections.
+1. Modify/reject current form: low-regularization Q(W) fitting and repeated
+   residual correction overfit calibration. v18 scored only 2887 online even
+   though all local batches improved. Retain the A @ W objective, restore v16's
+   trust region, and select parameters with held-out calibration outputs.
 2. Next: activation-scale selection using calibration-derived blockwise output
    residual statistics in addition to the rank-2 `W^T W` approximation. Risk:
    state size and dynamic scoring cost may grow. Prototype only if direction 1
@@ -24,14 +25,17 @@ must earn its place through an isolated, reversible improvement.
 
 1. Use v16's recorded Linear groups 0-3 and Attention groups 0-4 result as the
    primary benchmark (`1904.398739`, `4.311844`, online `15539 / 156s`).
-2. Submit v18 for online feedback; compare its score/runtime to the calibrated
-   estimate (`19290 / 228s`) and retain v17 as the fast rollback candidate.
-3. Use the online result to recalibrate all local batches before starting v19.
-   The next candidate must improve activation fitting or coupled Attention
-   accuracy without spending the remaining runtime margin blindly.
-4. Run `py_compile`, `self_check.py`, `git diff --check`, and verify the v13
+2. Build v19 from v16, not v17/v18. Split rows within every calibration shape
+   into fit/validation partitions; fit candidate lambdas only on fit rows and
+   choose a single layer-level candidate on validation `A @ W` output error.
+3. Search a conservative logarithmic lambda set around v16 (`5, 10, 20, 40`),
+   with zero residual-refinement steps. Add a correction-norm/trust-region
+   rejection so an apparently good candidate cannot move Q(W) too far from W.
+4. Only after held-out selection tracks online direction should one residual
+   correction be reintroduced as a separate ablation.
+5. Run `py_compile`, `self_check.py`, `git diff --check`, and verify the v13
    Attention section hash if Attention was intentionally unchanged.
-5. Update the candidate DAG with the evidence and mark the direction continue,
+6. Update the candidate DAG with the evidence and mark the direction continue,
    modify, or abandon before committing and pushing.
 
 ## Acceptance criteria

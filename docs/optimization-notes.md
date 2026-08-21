@@ -9,6 +9,7 @@
 - v14 online result: timed out (`>300s`).
 - v15 online result: `15463 / 170s`.
 - v16 online result: `15539 / 156s`.
+- v18 online result: `2887 / 206s` (severe accuracy regression, not timeout).
 
 ## Online-calibrated local evaluation
 
@@ -145,8 +146,8 @@ v13 (stable Attention)
   └─ v14 (full output-aware Linear; >300s, abandon implementation)
       └─ v15 (time-safe weight fitting; 15463 / 170s, retained base)
           └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
-              └─ v17 (ridge lambda 0.01; fast rollback candidate)
-                  └─ v18 (two Q(W) residual corrections; current candidate)
+              └─ v17 (ridge lambda 0.01; online-unverified, unsafe)
+                  └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -174,6 +175,15 @@ v13 (stable Attention)
   v16-anchored estimate is about `19290 / 228s`, below the 270-second safety
   threshold. A third iteration is not used because the projected runtime would
   approach/exceed the 300-second limit.
+- Online v18 contradicted the local estimate: `2887 / 206s` versus the
+  predicted `19290 / 228s`. Runtime stayed legal, but score fell 81.42% from
+  v16 despite a 59.06% local Linear-MSE improvement. This is strong evidence
+  of calibration overfit: lambda 0.01 weakens the trust region, residual
+  corrections repeatedly fit the same quantized calibration matrix, and
+  per-output-row selection evaluates candidates on the same rows used to fit
+  them. v18 is rejected; v17 is not considered a safe rollback because it
+  shares the low-lambda fit and has no online result. v16 remains the stable
+  base and online calibration anchor.
 - Abandon: recomputing Q(A)'s Gram state from final Q(W) without refitting
   regressed primary MSE to `844.291557`; closing the loop with a second full
   Q(A)/Q(W) fit recovered only to `816.894451` while adding about 44% runtime.
