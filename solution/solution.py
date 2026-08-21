@@ -1,11 +1,11 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 19:
-- Keep v16 as the trusted Linear/Attention base.
-- Select ridge lambda from (10, 20) on held-out calibration rows, weighting
-  all five activation shapes equally and enforcing a Q(W) trust region.
-- Fit Q(A) with an output-aware per-64-block cost derived from transformed W:
-  diagonal residual energy plus two power-iterated Gram directions.
+Version 20:
+- Keep v16's trusted lambda-20 Q(W) fitting and v13 Attention.
+- Choose compact or wide Q(A) scale profiles from activation reconstruction
+  only; never use A @ W or output error to infer Q(A).
+- Score Q(A) with W-only per-64-block sensitivity statistics: diagonal
+  residual energy plus two Gram directions. This never computes A @ W for Q(A).
 - Keep v13's proven Attention path unchanged: shared Q/K Hadamard rotation
   with block size 16 and per-block E6M2 candidate search for Q/K/V.
 """
@@ -22,13 +22,12 @@ E6M2_MIN = 2.0 ** (-48)
 E6M2_MAX = 49152.0  # 2^15 * 1.5
 
 _LINEAR_SCALE_OFFSETS = (0, 1, 2)
+_LINEAR_WIDE_SCALE_OFFSETS = (0, 1, 2, 3)
+_LINEAR_PROFILE_MIN_GAIN = 0.005
+_LINEAR_PROFILE_ROWS_PER_SHAPE = 64
 _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.39
 _LINEAR_RIDGE_LAMBDA = 20.0
-_LINEAR_RIDGE_CANDIDATES = (10.0, 20.0)
-_LINEAR_TRUST_RATIO = 1.5
-_LINEAR_VALIDATION_MARGIN = 0.002
-_LINEAR_CV_ROWS_PER_SHAPE = 64
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 2
 
@@ -433,35 +432,6 @@ def _choose_weight_rows(
     }
 
 
-def _fit_ridge_weight(
-    activation: torch.Tensor,
-    quantized_activation: torch.Tensor,
-    weight: torch.Tensor,
-    weight_importance: torch.Tensor,
-    ridge_lambda: float,
-    target_output: torch.Tensor | None = None,
-    kernel: torch.Tensor | None = None,
-    residual: torch.Tensor | None = None,
-) -> dict[str, torch.Tensor]:
-    """Fit and quantize one ridge Q(W) candidate against A @ W."""
-    if target_output is None:
-        target_output = activation @ weight.T
-    if kernel is None:
-        kernel = quantized_activation @ quantized_activation.T
-    if residual is None:
-        residual = target_output - quantized_activation @ weight.T
-    ridge_scale = kernel.diag().mean()
-    identity = torch.eye(
-        kernel.shape[0], dtype=kernel.dtype, device=kernel.device
-    )
-    dual = torch.linalg.solve(
-        kernel + ridge_lambda * ridge_scale * identity,
-        residual,
-    )
-    fitted_weight = weight + (quantized_activation.T @ dual).T
-    return _quantize_linear_values(fitted_weight, weight_importance)
-
-
 def _output_aware_quantize_weight(
     activation: torch.Tensor,
     weight: torch.Tensor,
@@ -469,25 +439,31 @@ def _output_aware_quantize_weight(
     activation_importance: torch.Tensor,
     activation_projection: torch.Tensor,
     projection_strength: torch.Tensor,
-    ridge_lambda: float,
+    activation_offsets: Iterable[int],
 ) -> dict[str, torch.Tensor]:
     """Fit one ridge candidate and select fixed Q(W) rows by output MSE."""
     activation_params = _quantize_linear_values(
         activation,
         activation_importance,
+        offsets=activation_offsets,
         projection=activation_projection,
         projection_strength=projection_strength,
     )
     quantized_activation = _dequantize_linear_params(activation_params)
+    weight_importance = activation.square().mean(0)
     target_output = activation @ weight.T
-    ridge = _fit_ridge_weight(
-        activation,
-        quantized_activation,
-        weight,
-        activation.square().mean(0),
-        ridge_lambda,
-        target_output=target_output,
+    kernel = quantized_activation @ quantized_activation.T
+    residual = target_output - quantized_activation @ weight.T
+    ridge_scale = kernel.diag().mean()
+    identity = torch.eye(
+        kernel.shape[0], dtype=kernel.dtype, device=kernel.device
     )
+    dual = torch.linalg.solve(
+        kernel + _LINEAR_RIDGE_LAMBDA * ridge_scale * identity,
+        residual,
+    )
+    fitted_weight = weight + (quantized_activation.T @ dual).T
+    ridge = _quantize_linear_values(fitted_weight, weight_importance)
     return _choose_weight_rows(
         target_output,
         quantized_activation,
@@ -495,36 +471,48 @@ def _output_aware_quantize_weight(
     )
 
 
-def _validation_output_mse(
-    activation_parts: list[torch.Tensor],
-    quantized_parts: tuple[torch.Tensor, ...],
-    weight: torch.Tensor,
-    candidate: dict[str, torch.Tensor],
+def _sample_profile_rows(values: torch.Tensor) -> torch.Tensor:
+    """Bound profile-search rows while covering the full sequence layout."""
+    if values.shape[0] <= _LINEAR_PROFILE_ROWS_PER_SHAPE:
+        return values
+    indices = torch.linspace(
+        0,
+        values.shape[0] - 1,
+        _LINEAR_PROFILE_ROWS_PER_SHAPE,
+        device=values.device,
+    ).round().to(torch.int64)
+    return values[indices]
+
+
+def _activation_reconstruction_score(
+    parts: list[torch.Tensor],
+    offsets: Iterable[int],
 ) -> torch.Tensor:
-    """Score Q(W) on held-out shapes with equal weight per activation shape."""
-    quantized_weight = _dequantize_linear_params(candidate)
-    errors = [
-        (activation @ weight.T - quantized @ quantized_weight.T).square().mean()
-        for activation, quantized in zip(activation_parts, quantized_parts)
-    ]
+    """Equal-shape Q(A) reconstruction score; intentionally has no W input."""
+    errors = []
+    for part in parts:
+        sample = _sample_profile_rows(part)
+        params = _quantize_linear_values(sample, offsets=offsets)
+        reconstructed = _dequantize_linear_params(params)
+        error = (sample - reconstructed).square().mean()
+        energy = sample.square().mean().clamp_min(torch.finfo(torch.float32).tiny)
+        errors.append(error / energy)
     return torch.stack(errors).mean()
 
 
-def _sample_calibration_rows(
-    part: torch.Tensor,
-    parity: int,
-) -> torch.Tensor:
-    """Take a bounded deterministic even/odd row split for cheap CV."""
-    rows = part[parity::2]
-    if rows.shape[0] <= _LINEAR_CV_ROWS_PER_SHAPE:
-        return rows
-    indices = torch.linspace(
-        0,
-        rows.shape[0] - 1,
-        _LINEAR_CV_ROWS_PER_SHAPE,
-        device=rows.device,
-    ).round().to(torch.int64)
-    return rows[indices]
+def _select_activation_offsets(
+    parts: list[torch.Tensor],
+) -> tuple[int, ...]:
+    """Choose a synthetic-profile candidate using legal A-only calibration."""
+    compact_score = _activation_reconstruction_score(
+        parts, _LINEAR_SCALE_OFFSETS
+    )
+    wide_score = _activation_reconstruction_score(
+        parts, _LINEAR_WIDE_SCALE_OFFSETS
+    )
+    if wide_score < (1.0 - _LINEAR_PROFILE_MIN_GAIN) * compact_score:
+        return _LINEAR_WIDE_SCALE_OFFSETS
+    return _LINEAR_SCALE_OFFSETS
 
 
 def _rms(values: torch.Tensor) -> torch.Tensor:
@@ -625,23 +613,11 @@ def hif4_calibration_and_quantize_weight(
         transformed_activation * signs, _LINEAR_HADAMARD
     )
     transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
-    transformed_parts = list(
-        torch.split(
-            transformed_activation,
-            [int(part.shape[0]) for part in activation_parts],
-        )
-    )
-    fit_parts = [
-        _sample_calibration_rows(part, 0)
-        for part in transformed_parts
-        if part.shape[0] > 1
-    ]
-    validation_parts = [
-        _sample_calibration_rows(part, 1) if part.shape[0] > 1 else part
-        for part in transformed_parts
-    ]
-    fit_activation = torch.cat(fit_parts)
-    validation_activation = torch.cat(validation_parts)
+    transformed_parts = list(torch.split(
+        transformed_activation,
+        [int(part.shape[0]) for part in activation_parts],
+    ))
+    activation_offsets = _select_activation_offsets(transformed_parts)
     weight_importance = transformed_activation.square().mean(0)
     (
         activation_importance,
@@ -649,80 +625,15 @@ def hif4_calibration_and_quantize_weight(
         projection_strength,
     ) = _activation_output_cost_state(transformed_weight)
     activation_state = {
-        "version": 19,
+        "version": 20,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
         "projection": activation_projection,
         "projection_strength": projection_strength,
+        "activation_offsets": activation_offsets,
     }
     baseline = _quantize_linear_values(transformed_weight, weight_importance)
-    fit_params = _quantize_linear_values(
-        fit_activation,
-        activation_importance,
-        projection=activation_projection,
-        projection_strength=projection_strength,
-    )
-    quantized_fit = _dequantize_linear_params(fit_params)
-    validation_params = _quantize_linear_values(
-        validation_activation,
-        activation_importance,
-        projection=activation_projection,
-        projection_strength=projection_strength,
-    )
-    quantized_validation = _dequantize_linear_params(validation_params)
-    validation_lengths = [int(part.shape[0]) for part in validation_parts]
-    quantized_validation_parts = torch.split(
-        quantized_validation, validation_lengths
-    )
-    fit_importance = fit_activation.square().mean(0)
-    fit_target = fit_activation @ transformed_weight.T
-    fit_kernel = quantized_fit @ quantized_fit.T
-    fit_residual = fit_target - quantized_fit @ transformed_weight.T
-    ridge_candidates = [
-        _fit_ridge_weight(
-            fit_activation,
-            quantized_fit,
-            transformed_weight,
-            fit_importance,
-            ridge_lambda,
-            target_output=fit_target,
-            kernel=fit_kernel,
-            residual=fit_residual,
-        )
-        for ridge_lambda in _LINEAR_RIDGE_CANDIDATES
-    ]
-    validation_scores = torch.stack([
-        _validation_output_mse(
-            validation_parts,
-            quantized_validation_parts,
-            transformed_weight,
-            candidate,
-        )
-        for candidate in ridge_candidates
-    ])
-    trusted_index = _LINEAR_RIDGE_CANDIDATES.index(_LINEAR_RIDGE_LAMBDA)
-    trusted_weight = _dequantize_linear_params(ridge_candidates[trusted_index])
-    trusted_deviation = (trusted_weight - transformed_weight).square().mean()
-    deviations = torch.stack([
-        (_dequantize_linear_params(candidate) - transformed_weight).square().mean()
-        for candidate in ridge_candidates
-    ])
-    eligible = deviations <= _LINEAR_TRUST_RATIO * trusted_deviation
-    eligible[trusted_index] = True
-    guarded_scores = torch.where(
-        eligible,
-        validation_scores,
-        torch.full_like(validation_scores, torch.inf),
-    )
-    selected_index = int(guarded_scores.argmin())
-    trusted_score = validation_scores[trusted_index]
-    if validation_scores[selected_index] > (
-        1.0 - _LINEAR_VALIDATION_MARGIN
-    ) * trusted_score:
-        selected_index = trusted_index
-    selected_lambda = float(_LINEAR_RIDGE_CANDIDATES[selected_index])
-    activation_state["ridge_lambda"] = selected_lambda
     weight_params = _output_aware_quantize_weight(
         transformed_activation,
         transformed_weight,
@@ -730,7 +641,7 @@ def hif4_calibration_and_quantize_weight(
         activation_importance,
         activation_projection,
         projection_strength,
-        selected_lambda,
+        activation_offsets,
     )
     return {"weight_params": weight_params, "activation_state": activation_state}
 
@@ -745,6 +656,7 @@ def hif4_dynamic_quantize_activation(
     return _quantize_linear_values(
         _linear_transform(values, activation_state),
         activation_state["importance"],
+        offsets=activation_state["activation_offsets"],
         projection=activation_state["projection"],
         projection_strength=activation_state["projection_strength"],
     )

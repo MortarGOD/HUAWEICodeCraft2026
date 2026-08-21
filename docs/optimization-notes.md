@@ -150,6 +150,7 @@ v13 (stable Attention)
               └─ v17 (ridge lambda 0.01; 7062 / 172s, reject)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
               └─ v19 (held-out lambda controller; current online probe)
+              └─ v20 (A-only layout profile selection; current candidate)
 ```
 
 - Continue: output-aware `A @ W` calibration for both `Q(A)` and `Q(W)`;
@@ -215,3 +216,27 @@ v13 (stable Attention)
   is about 210 seconds, below the
   270-second safety target. The purpose of the online submission is to observe
   whether hidden calibration groups safely select lambda 10.
+
+## 0819-V2 rules and v20 layout profiles
+
+- The 0819-V2 task explicitly prohibits computing `A @ W` and using the
+  result to infer `Q(A)`. v20's activation-profile selector therefore receives
+  only transformed activation samples and scores normalized activation
+  reconstruction. `A @ W` remains confined to fitting fixed `Q(W)`.
+- `tools/layout_param_search.py` generates four proxy aspect ratios, five row
+  shapes, eight distribution layouts, and four deterministic seeds as
+  NVFP4-like inputs. It evaluates Q(A) profiles without output targets and
+  Q(W) profiles separately with held-out output error. The auditable result is
+  stored in `docs/layout-profile-report.json`.
+- Synthetic Q(W) lambda winners vary across shapes and held-out seeds, so that
+  mapping is rejected rather than embedded. Q(A)'s compact `(0,1,2)` and wide
+  `(0,1,2,3)` scale-offset profiles are sufficiently stable to retain.
+- `solution_v20.py` branches from v16. It samples at most 64 rows from each
+  calibration activation shape, uses A-only normalized reconstruction, and
+  accepts wide only for at least 0.5% improvement. Unknown or weakly separated
+  layouts fall back to compact. Q(W) stays on trusted lambda 20 and Attention
+  stays byte-identical to v13.
+- All 50 real local Linear groups select wide. Total MSE is `23588.473789`
+  versus v16's `23901.842773`, a 1.31% improvement; all ten five-group batches
+  improve. The primary v16-anchored estimate is about `15620 / 155s`. Unlike
+  v17/v18, Q(A) profile selection never observes Linear output error.

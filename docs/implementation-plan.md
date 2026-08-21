@@ -7,6 +7,43 @@ seconds and improving output accuracy through calibration-time `A @ W` fitting
 of `Q(A)` and/or `Q(W)`. The long-term online target is 22000; each version
 must earn its place through an isolated, reversible improvement.
 
+## 0819-V2 compliance boundary
+
+- `A @ W` may be used to fit or validate fixed `Q(W)` during calibration.
+- Never use `A @ W` or output error to infer/select `Q(A)`. Activation
+  parameter profiles must be selected from activation-only reconstruction and
+  distribution features; W-only sensitivity statistics remain separate.
+- Submission code performs no file I/O. Any synthetic-layout profile produced
+  by development tools must be embedded as small constants.
+- The second phase may increase N and finals add performance scoring, so search
+  complexity must be bounded independently of dataset count.
+
+## Synthetic layout profile plan
+
+1. Generate NVFP4-like proxy tensors for the four observed Linear aspect
+   ratios and varied Gaussian, Laplace, heavy-tail, sparse-outlier,
+   channel-outlier, block-outlier, correlated, and heteroscedastic layouts.
+2. Extract scale-free layout features: aspect ratio, activation/weight peak to
+   RMS, channel imbalance, block imbalance, sparsity, and correlation proxy.
+3. For Q(A), rank legal scale-search profiles using activation reconstruction
+   only. For Q(W), evaluate conservative ridge/trust profiles with held-out
+   `A @ W`, never feeding output targets into Q(A) selection.
+4. Summarize robust winners by layout bucket and emit an auditable profile
+   report. Embed only profiles that win across multiple seeds and retain v16's
+   lambda-20 path as mandatory fallback.
+5. Online calibration evaluates at most two embedded Q(A) profiles on bounded
+   A-only samples. Unknown or weakly separated layouts fall back to compact.
+
+### Synthetic-profile acceptance criteria
+
+- Every layout family has at least three deterministic seeds and a held-out
+  seed; no profile is accepted from its training seed alone.
+- Q(A) profiles are never scored with `A @ W` or Linear output error.
+- A Q(W) profile must beat the trusted candidate on held-out synthetic layouts
+  and real calibration holdout without exceeding a 1.5x deviation trust bound.
+- Online selection uses two profiles and at most 64 rows per activation shape,
+  requires no file I/O, and keeps total calibrated runtime below 270 seconds.
+
 ## Candidate directions
 
 1. Modify/reject current form: low-regularization Q(W) fitting and repeated
@@ -36,9 +73,12 @@ must earn its place through an isolated, reversible improvement.
    many hidden layers select lambda 10 if future diagnostics expose the count.
 4. Only after held-out selection tracks online direction should one residual
    correction be reintroduced as a separate ablation.
-5. Run `py_compile`, `self_check.py`, `git diff --check`, and verify the v13
+5. Completed in parallel as v20: build a synthetic layout/profile bank under
+   0819-V2 compliance, reject unstable synthetic Q(W) lambda mappings, and
+   retain only A-reconstruction-selected compact/wide Q(A) scale profiles.
+6. Run `py_compile`, `self_check.py`, `git diff --check`, and verify the v13
    Attention section hash if Attention was intentionally unchanged.
-6. Update the candidate DAG with the evidence and mark the direction continue,
+7. Update the candidate DAG with the evidence and mark the direction continue,
    modify, or abandon before committing and pushing.
 
 ## Acceptance criteria
