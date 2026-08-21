@@ -80,3 +80,12 @@ is not the prohibited online `A @ W`-to-fit-`Q(A)` behavior.
 - `solution_v13.py`: revert v12's Attention rotation block size back to 16.
   v12 regressed online (12952 / 161s vs v11 13349 / 183s), so v13 restores
   the v11 configuration exactly.
+- `solution_v14.py`: combine v138's output-aware Linear calibration with
+  v13's proven Attention implementation. Linear applies a shared 64-wide
+  Hadamard transform, fits legal HiF4 weight candidates against calibration
+  outputs, performs ridge residual fitting, and selects refined weight codes
+  on a held-out calibration sample. Attention remains byte-for-byte equivalent
+  in behavior to v13 (shared Q/K rotation block size 16 and candidate search).
+  On the default local subset, Linear total MSE improves from ~2861.07 to
+  ~1868.71 while Attention remains ~4.31184. Local runtime rises from ~26.7s
+  to ~99.2s, so the 300s online limit remains the main risk.
