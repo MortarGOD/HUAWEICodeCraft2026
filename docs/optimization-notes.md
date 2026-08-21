@@ -9,6 +9,7 @@
 - v14 online result: timed out (`>300s`).
 - v15 online result: `15463 / 170s`.
 - v16 online result: `15539 / 156s`.
+- v17 online result: `7062 / 172s` (low-lambda overfit).
 - v18 online result: `2887 / 206s` (severe accuracy regression, not timeout).
 
 ## Online-calibrated local evaluation
@@ -146,7 +147,7 @@ v13 (stable Attention)
   └─ v14 (full output-aware Linear; >300s, abandon implementation)
       └─ v15 (time-safe weight fitting; 15463 / 170s, retained base)
           └─ v16 (rank-2 output-aware Q(A); 15539 / 156s, current base)
-              └─ v17 (ridge lambda 0.01; online-unverified, unsafe)
+              └─ v17 (ridge lambda 0.01; 7062 / 172s, reject)
                   └─ v18 (two Q(W) residual corrections; 2887 / 206s, reject)
               └─ v19 (held-out lambda controller; current online probe)
 ```
@@ -166,7 +167,10 @@ v13 (stable Attention)
 - `solution_v17.py`: reduce the normalized ridge lambda from 20 to 0.01. On
   all 50 Linear groups, total MSE falls from v16's `23901.842773` to
   `12382.298023` (48.20%). Every five-group batch improves by roughly the same
-  amount. The primary calibrated estimate is about `18570 / 155s`.
+  amount. The primary calibrated estimate was about `18570 / 155s`, but the
+  confirmed online result is only `7062 / 172s`: score falls 54.55% from v16
+  while runtime rises 10.26%. This isolates low regularization as a primary
+  overfit cause even without residual refinement.
 - `solution_v18.py`: factor the same regularized calibration kernel once and
   apply two post-quantization residual corrections to Q(W), choosing the best
   candidate per output row against `A @ W`. Primary Linear MSE is `787.307289`
@@ -183,8 +187,9 @@ v13 (stable Attention)
   corrections repeatedly fit the same quantized calibration matrix, and
   per-output-row selection evaluates candidates on the same rows used to fit
   them. v18 is rejected; v17 is not considered a safe rollback because it
-  shares the low-lambda fit and has no online result. v16 remains the stable
-  base and online calibration anchor.
+  shares the low-lambda fit. Comparing v17 with v18 also shows that two residual
+  corrections compound the failure: another 59.12% score loss and 34 seconds
+  relative to v17. v16 remains the stable base and online calibration anchor.
 - Abandon: recomputing Q(A)'s Gram state from final Q(W) without refitting
   regressed primary MSE to `844.291557`; closing the loop with a second full
   Q(A)/Q(W) fit recovered only to `816.894451` while adding about 44% runtime.

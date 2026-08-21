@@ -10,9 +10,11 @@ must earn its place through an isolated, reversible improvement.
 ## Candidate directions
 
 1. Modify/reject current form: low-regularization Q(W) fitting and repeated
-   residual correction overfit calibration. v18 scored only 2887 online even
-   though all local batches improved. Retain the A @ W objective, restore v16's
-   trust region, and select parameters with held-out calibration outputs.
+   residual correction overfit calibration. v17 scored `7062 / 172s` with
+   lambda 0.01 and no refinement; v18 fell further to `2887 / 206s` after two
+   corrections, even though all local batches improved. Retain the A @ W
+   objective, restore v16's trust region, and select parameters with held-out
+   calibration outputs.
 2. Next: activation-scale selection using calibration-derived blockwise output
    residual statistics in addition to the rank-2 `W^T W` approximation. Risk:
    state size and dynamic scoring cost may grow. Prototype only if direction 1
