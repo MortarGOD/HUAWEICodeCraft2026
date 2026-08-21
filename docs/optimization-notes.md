@@ -455,3 +455,32 @@ v13 (stable Attention)
   `17400`; runtime is projected at `190-205s`. The external mixed result is not
   used as a linear point coefficient, so this forecast is a hypothesis to be
   recalibrated by the v24 Attention-only online result.
+
+## v24 online result and v25 Linear branch
+
+- Confirmed v24 result: `16500 / 198s`, only +23 points and +5 seconds versus
+  v23. Per-head RMS aggregation is retained as a small positive mechanism, but
+  local Attention proxy magnitude still does not transfer online.
+- This controlled result shifts the unexplained external advantage toward its
+  unique Linear residual-compensation family. The first diagonal projection
+  prototype was rejected: increasing its trust step monotonically regressed
+  both raw and donor official proxies.
+- v25 independently uses 32 deterministic calibration rows, natural channel
+  order, a fixed four-block future window, sample-space ridge `0.1`, and trust
+  step `0.5`. Q(A) is finalized before propagation; residuals only alter fixed
+  Q(W). It does not use the external energy order, all-row solve, or shape
+  thresholds.
+- Primary groups 0-3: raw proxy `1270.961823 -> 1285.598884`; donor proxy
+  `1217.403978 -> 1204.004249`. Groups 4-7 reproduce the tradeoff:
+  `1301.983485 -> 1317.999483` raw and `1283.481112 -> 1269.540903` donor.
+  The donor loss is about one eighth of the external implementation's loss.
+- All 50 raw Linear groups: official proxy `15655.467096 -> 15847.635036`,
+  MSE `22636.136776 -> 22255.925182`; all ten consecutive five-group batches
+  improve. Local Linear time falls from `549.56s` to `374.39s` because v25
+  removes v24's full calibration-output ridge solve and row selector.
+- v25 forecast: `16800-17600` points and `145-170s`. The score range is wide
+  because no locally reliable Linear point coefficient covers this mechanism;
+  runtime is anchored by the measured all-group total ratio to v24 `198s`.
+- Final validation: the v24 Attention section is byte-identical, submission and
+  `solution_v25.py` match, syntax/diff checks pass, and all `1100/1100` format
+  checks pass. The full format run is also materially faster than v24.

@@ -308,3 +308,35 @@ Acceptance evidence:
   comparisons without seeing the held-out twin.
 - Attention local runtime is `54.99s`, between v23 `45.48s` and external
   `67.90s`; Linear is unchanged, so the online projection remains below 210s.
+
+## v25 bounded Linear residual propagation
+
+The v24 online result `16500 / 198s` supplies another controlled Attention-only
+anchor: its large local proxy gain produced only +23 points. v25 therefore
+freezes Attention and isolates the remaining major external mechanism family,
+fixed-weight sequential error compensation.
+
+Candidate DAG:
+
+```text
+v24 (16500 / 198s)
+  └─ Linear residual propagation
+      ├─ diagonal future-channel projection: reject
+      └─ 32-row sample-space ridge, natural order
+          ├─ trust 0.75: modify (higher donor loss)
+          └─ trust 0.50: retain as v25
+```
+
+Acceptance criteria and outcome:
+
+1. Q(A) must be completely determined before any residual propagation; only
+   the returned fixed Q(W) may change. Passed.
+2. Primary and disjoint raw official proxies must improve, and donor regression
+   must be materially smaller than the external implementation. Passed on
+   groups 0-3 and 4-7.
+3. All ten full-dataset batches must improve. Passed: total proxy gain is
+   `+192.167940`, and aggregate MSE falls 1.68%.
+4. Total projected runtime must remain below 270 seconds. Passed: Linear local
+   time falls 31.9%, projecting total online runtime around `145-170s`.
+5. Attention must remain byte-identical to v24 and all format checks must pass
+   before push.

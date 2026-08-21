@@ -1,7 +1,8 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 24:
-- Keep v22's independently validated Linear path unchanged.
+Version 25:
+- Quantize Linear weights sequentially and propagate a ridge-regularized
+  low-row output residual into four nearby blocks with a 0.5 trust step.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply one shared 64-wide orthogonal transform so the exact QK product is
   preserved before quantization, with a calibration-only dense-layout gate.
@@ -26,9 +27,12 @@ _LINEAR_PROFILE_MIN_GAIN = 0.005
 _LINEAR_PROFILE_ROWS_PER_SHAPE = 64
 _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.44
-_LINEAR_RIDGE_LAMBDA = 20.0
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
+_LINEAR_FEEDBACK_ROWS = 32
+_LINEAR_FEEDBACK_WINDOW = 4
+_LINEAR_FEEDBACK_RIDGE = 0.1
+_LINEAR_FEEDBACK_STEP = 0.5
 
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
@@ -422,26 +426,78 @@ def _activation_output_cost_state(
     )
 
 
-def _choose_weight_rows(
-    target_output: torch.Tensor,
+def _residual_feedback_weight(
     quantized_activation: torch.Tensor,
-    candidates: list[dict[str, torch.Tensor]],
+    weight: torch.Tensor,
+    weight_importance: torch.Tensor,
+    weight_projection: torch.Tensor,
+    weight_projection_strength: torch.Tensor,
 ) -> dict[str, torch.Tensor]:
-    """Select the lowest-output-MSE HiF4 candidate per output channel."""
-    weights = torch.stack([_dequantize_linear_params(p) for p in candidates])
-    outputs = torch.matmul(quantized_activation, weights.transpose(1, 2))
-    choices = (target_output.unsqueeze(0) - outputs).square().mean(1).argmin(0)
-    rows = torch.arange(choices.numel())
+    """Propagate each quantized block's output residual into nearby blocks."""
+    rows = int(quantized_activation.shape[0])
+    if rows > _LINEAR_FEEDBACK_ROWS:
+        indices = torch.linspace(
+            0,
+            rows - 1,
+            _LINEAR_FEEDBACK_ROWS,
+            device=quantized_activation.device,
+        ).round().to(torch.int64)
+        activation = quantized_activation.index_select(0, indices)
+    else:
+        activation = quantized_activation
+
+    channels = int(weight.shape[-1])
+    block_count = channels // 64
+    work = weight.to(torch.float32).clone()
+    pieces: dict[str, list[torch.Tensor]] = {}
+    tiny = torch.finfo(torch.float32).tiny
+    for block in range(block_count):
+        start = block * 64
+        stop = start + 64
+        params = _quantize_linear_values(
+            work[:, start:stop],
+            weight_importance[block:block + 1],
+            offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
+            projection=weight_projection[:, block:block + 1],
+            projection_strength=weight_projection_strength[:, block:block + 1],
+        )
+        quantized_block = _dequantize_linear_params(params)
+        for name, tensor in params.items():
+            pieces.setdefault(name, []).append(tensor)
+
+        future_stop = min(
+            channels,
+            stop + _LINEAR_FEEDBACK_WINDOW * 64,
+        )
+        if future_stop <= stop:
+            continue
+        block_activation = activation[:, start:stop]
+        future_activation = activation[:, stop:future_stop]
+        output_residual = block_activation @ (
+            work[:, start:stop] - quantized_block
+        ).T
+        kernel = future_activation @ future_activation.T
+        ridge = _LINEAR_FEEDBACK_RIDGE * kernel.diag().mean().clamp_min(tiny)
+        identity = torch.eye(
+            kernel.shape[0],
+            dtype=kernel.dtype,
+            device=kernel.device,
+        )
+        dual = torch.linalg.solve(kernel + ridge * identity, output_residual)
+        correction = (future_activation.T @ dual).T
+        work[:, stop:future_stop].add_(
+            correction,
+            alpha=_LINEAR_FEEDBACK_STEP,
+        )
     return {
-        name: torch.stack([params[name] for params in candidates])[choices, rows]
-        for name in candidates[0]
+        name: torch.cat(tensors, dim=-4)
+        for name, tensors in pieces.items()
     }
 
 
-def _output_aware_quantize_weight(
+def _feedback_quantize_weight(
     activation: torch.Tensor,
     weight: torch.Tensor,
-    baseline: dict[str, torch.Tensor],
     activation_importance: torch.Tensor,
     activation_projection: torch.Tensor,
     projection_strength: torch.Tensor,
@@ -450,7 +506,7 @@ def _output_aware_quantize_weight(
     weight_projection: torch.Tensor,
     weight_projection_strength: torch.Tensor,
 ) -> dict[str, torch.Tensor]:
-    """Fit one ridge candidate and select fixed Q(W) rows by output MSE."""
+    """Fix Q(A), then build one bounded residual-feedback Q(W)."""
     activation_params = _quantize_linear_values(
         activation,
         activation_importance,
@@ -459,29 +515,12 @@ def _output_aware_quantize_weight(
         projection_strength=projection_strength,
     )
     quantized_activation = _dequantize_linear_params(activation_params)
-    target_output = activation @ weight.T
-    kernel = quantized_activation @ quantized_activation.T
-    residual = target_output - quantized_activation @ weight.T
-    ridge_scale = kernel.diag().mean()
-    identity = torch.eye(
-        kernel.shape[0], dtype=kernel.dtype, device=kernel.device
-    )
-    dual = torch.linalg.solve(
-        kernel + _LINEAR_RIDGE_LAMBDA * ridge_scale * identity,
-        residual,
-    )
-    fitted_weight = weight + (quantized_activation.T @ dual).T
-    ridge = _quantize_linear_values(
-        fitted_weight,
-        weight_importance,
-        offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
-        projection=weight_projection,
-        projection_strength=weight_projection_strength,
-    )
-    return _choose_weight_rows(
-        target_output,
+    return _residual_feedback_weight(
         quantized_activation,
-        [baseline, ridge],
+        weight,
+        weight_importance,
+        weight_projection,
+        weight_projection_strength,
     )
 
 
@@ -652,17 +691,9 @@ def hif4_calibration_and_quantize_weight(
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
     }
-    baseline = _quantize_linear_values(
-        transformed_weight,
-        weight_importance,
-        offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
-        projection=weight_projection,
-        projection_strength=weight_projection_strength,
-    )
-    weight_params = _output_aware_quantize_weight(
+    weight_params = _feedback_quantize_weight(
         transformed_activation,
         transformed_weight,
-        baseline,
         activation_importance,
         activation_projection,
         projection_strength,
