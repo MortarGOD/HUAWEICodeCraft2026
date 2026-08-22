@@ -1,11 +1,11 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 27:
+Version 28:
 - Quantize Linear weights sequentially and propagate a ridge-regularized
   low-row output residual through 32 activation-energy-ordered future blocks.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
-- Apply one shared 64-wide orthogonal transform so the exact QK product is
-  preserved before quantization, with a calibration-only dense-layout gate.
+- Apply a full-head product-preserving Q/K transform only for dense layouts;
+  sparse layouts retain reciprocal balancing without a rotation.
 - Select HiF4 scales by reconstruction error plus bounded energy drift; no
   calibration output is used to tune dynamic Q/K/V quantization.
 """
@@ -39,7 +39,6 @@ _LINEAR_FEEDBACK_DESCENDING = True
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
 _ATTENTION_ENERGY_PENALTY = 0.125
-_ATTENTION_HADAMARD = 64
 _ATTENTION_NEAR_ZERO_RATIO = 0.01
 _ATTENTION_SPARSE_THRESHOLD = 0.25
 
@@ -778,7 +777,7 @@ def hif4_calibration_attention(
     balance = torch.where(
         (q_rms > 0) & (k_rms > 0), balance, torch.ones_like(balance)
     )
-    hadamard = _ATTENTION_HADAMARD
+    hadamard = 1
     global_rms = k_values.square().mean().sqrt()
     if bool(global_rms > 0):
         near_zero = (

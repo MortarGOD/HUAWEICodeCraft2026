@@ -419,3 +419,36 @@ Humanize remains unavailable, so acceptance criteria are refined manually.
 - Reject trust 1.0 and rows 64: both reverse the primary improvement.
 - All-50 proxy improves by `107.548101`, with 10/10 batches positive. Local
   Linear time grows 12.0%, projecting total online runtime around 202 seconds.
+
+## v28 standard-baseline replay and sparse Attention guard
+
+Online anchor v27 is `17283 / 192s`. The new `rand_sample` and organizer
+`hif4_quant.py` replace the submitted-solution proxy with the published
+per-case score. The ten-version replay rejects the equal-weight random total
+as an online estimator (Pearson -0.432 on the common valid intersection), but
+retains it as a robustness suite and shape-family panel.
+
+Candidate DAG:
+
+```text
+v27 (17283 / 192s)
+  ├─ Linear feedback-drift fallback
+  │   └─ reject: improves extremes but remains negative and mixes causality
+  └─ Attention calibration-density guard
+      ├─ dense: retain full-head product-preserving transform
+      └─ sparse: identity transform + reciprocal Q/K balance (v28)
+```
+
+Acceptance criteria and outcome:
+
+1. Score with the supplied standard quantizer and independent tests. Passed.
+2. Eliminate `head_dim=32` zero-block failures. Passed: 47/47 valid Attention
+   groups complete, versus three v27 failures.
+3. Require a positive common-case score and bounded runtime. Passed: common
+   Attention score `-20155.855 -> 5182.602`; local quantization time
+   `32.80s -> 34.67s`.
+4. Keep Linear byte-identical to v27 and pass every output/state check. Passed:
+   `1100/1100` on `rand_sample`.
+
+Humanize remains unavailable; the plan and acceptance criteria were refined
+manually before selection.

@@ -539,3 +539,30 @@ v13 (stable Attention)
 - Final validation: v26 Attention is byte-identical, natural-order fallback
   reproduces v26 exactly, submission matches `solution_v27.py`, and all
   `1100/1100` output-format checks pass.
+
+## v27 online result and official random replay
+
+- Confirmed v27 result: `17283 / 192s`, +51 points and +9 seconds versus v26.
+  Energy ordering remains positive but its marginal gain is small.
+- Added `tools/official_benchmark.py`, which uses the supplied standard HiF4
+  codec and exact published per-case score. It separates candidate quantizer
+  time from MatMul/Attention/scoring and preserves group/case evidence.
+- `rand_sample` is independent and structurally diverse, but ten groups have
+  zero standard MSE and several layouts are outside older versions' numerical
+  domain. The all-shape total reverses the online ordering (Pearson -0.432,
+  Spearman -0.830), so it must not replace online calibration wholesale.
+- Continue: use correlated shape families as validation panels and the full
+  set as a tail-risk suite. Modify: exclude only formula-undefined zero-MSE
+  groups and compare versions on a common successful intersection. Abandon:
+  fitting one global online-score mapping to the equal-weight random total.
+- v28 isolates a sparse Attention guard. Dense calibration layouts retain the
+  full-head transform; sparse layouts use identity plus reciprocal Q/K balance.
+  It fixes all three v27 random Attention failures and changes common-group
+  score from `-20155.855` to `5182.602`, with 24 wins, 12 ties, and 8 losses.
+- A Linear feedback-drift fallback was prototyped and rejected: the 0.15 drift
+  boundary identifies extreme failures, but the conservative candidate still
+  has large negative score. Preserve v27 Linear until that branch can be
+  isolated without mixing the low-rank target and feedback effects.
+- v28 validation: full random-data format/state checks pass `1100/1100`;
+  Attention quantization time is `34.67s` versus v27 `32.80s`. Use a cautious
+  online estimate of `17250-17600 / 185-205s`.
