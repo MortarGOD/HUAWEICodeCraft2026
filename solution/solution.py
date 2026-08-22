@@ -1,14 +1,4 @@
-"""NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
-
-Version 28:
-- Quantize Linear weights sequentially and propagate a ridge-regularized
-  low-row output residual through 32 activation-energy-ordered future blocks.
-- Average per-Q-head RMS within each KV group before reciprocal balancing.
-- Apply a full-head product-preserving Q/K transform only for dense layouts;
-  sparse layouts retain reciprocal balancing without a rotation.
-- Select HiF4 scales by reconstruction error plus bounded energy drift; no
-  calibration output is used to tune dynamic Q/K/V quantization.
-"""
+"""Version 29: cxw_v1 Linear mechanisms with the proven v28 Attention path."""
 
 from __future__ import annotations
 
@@ -17,24 +7,42 @@ from typing import Any, Iterable
 import torch
 
 
-E6M2_MIN = 2.0 ** (-48)
-E6M2_MAX = 49152.0  # 2^15 * 1.5
-
-_LINEAR_SCALE_OFFSETS = (0, 1, 2)
-_LINEAR_WIDE_SCALE_OFFSETS = (0, 1, 2, 3, 4)
-_LINEAR_WEIGHT_SCALE_OFFSETS = (0, 1, 2, 3)
-_LINEAR_PROFILE_MIN_GAIN = 0.005
-_LINEAR_PROFILE_ROWS_PER_SHAPE = 64
+_SCALE_OFFSETS = (0, 1, 2, 3, 4)
+_QK_SCALE_OFFSETS = (0, 1, 3, 4)
+_V_SCALE_OFFSETS = (0, 1, 2, 3)
 _LINEAR_HADAMARD = 64
-_LINEAR_BALANCE_EXPONENT = 0.44
-_LINEAR_POWER_ITERS = 3
-_LINEAR_OUTPUT_RANK = 4
-_LINEAR_FEEDBACK_ROWS = 32
-_LINEAR_FEEDBACK_WINDOW = 32
-_LINEAR_FEEDBACK_RIDGE = 0.1
-_LINEAR_FEEDBACK_STEP = 0.75
-_LINEAR_FEEDBACK_ENERGY_ORDER = True
-_LINEAR_FEEDBACK_DESCENDING = True
+_QK_NEAR_RMS_RATIO = 0.01
+_QK_SPARSE_THRESHOLD = 0.25
+_LINEAR_BALANCE_EXPONENT = 0.39
+_LINEAR_RIDGE_LAMBDAS = (10.0, 20.0)
+_LINEAR_RIDGE_SWITCH_MARGIN = 0.05
+_WEIGHT_REFINEMENT_RIDGE = 0.01
+_WEIGHT_REFINEMENT_STEP = 0.04
+_WEIGHT_REFINEMENT_CHECKPOINTS = (1, 2, 3, 4, 5)
+_WEIGHT_REFINEMENT_FINAL_REQUANTIZE = True
+_Q_MOMENT_PENALTIES = (0.0, 0.25)
+_K_MOMENT_PENALTIES = (0.0, 0.25)
+_V_MOMENT_PENALTIES = (0.0, 0.0)
+_V_CONFIGS = (
+    ((0, 1, 2, 3), 0.0, 0.0),
+    ((-1, 0, 1, 2, 3), 0.0, 0.0),
+    ((0, 1, 2, 3), 0.125, 0.0),
+    ((0, 1, 2, 3), 0.0, 0.125),
+    ((-1, 0, 1, 2, 3), 0.0, 0.125),
+)
+_GPTQ_RIDGE = 0.1
+_GPTQ_USE_ALL_CALIBRATION = True
+_GPTQ_SELECT_ROWS = False
+_GPTQ_WEIGHT_IMPORTANCE = False
+_GPTQ_FULL_PROPAGATION_MAX_GROUPS = 16
+_GPTQ_WIDE_PROPAGATION_GROUPS = 8
+_GPTQ_FULL_PROPAGATION_MAX_GROUP_ROWS = 8192
+_GPTQ_CONTIGUOUS_ORDERED_WORK = True
+_GPTQ_TALL_OUTPUT_ROWS = 1024
+_GPTQ_TALL_PROPAGATION_GROUPS = 4
+_LINEAR_SIGN_WEIGHT_ROWS = 512
+_GPTQ_LARGE_WEIGHT_OFFSETS = (0, 1, 2, 3)
+_GPTQ_SKIP_UNUSED_BASELINE = True
 
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
@@ -43,184 +51,20 @@ _ATTENTION_NEAR_ZERO_RATIO = 0.01
 _ATTENTION_SPARSE_THRESHOLD = 0.25
 
 
-# =============================================================================
-# NVFP4 helper
-# =============================================================================
-
 def dequantize_nvfp4(
-    quant_float: torch.Tensor,
-    scale_float: torch.Tensor,
-    blk_size: int = 16,
+    quant_float: torch.Tensor, scale_float: torch.Tensor, blk_size: int = 16
 ) -> torch.Tensor:
-    """Decode NVFP4 carrier + block scale into a BF16 tensor."""
-    channels = int(quant_float.shape[-1])
-    if channels % blk_size != 0:
-        raise ValueError(
-            f"last dimension {channels} is not divisible by block size {blk_size}"
-        )
-
-    x = quant_float.unflatten(-1, (-1, blk_size))
-    x = x * scale_float.unsqueeze(-1)
-    return x.flatten(-2, -1).to(torch.bfloat16)
-
-
-# =============================================================================
-# HiF4 conversion helpers
-# =============================================================================
-
-def _e6m2_quant(x: torch.Tensor) -> torch.Tensor:
-    """Round a positive scale into the legal unsigned E6M2 value set."""
-    x = torch.clamp(x, min=E6M2_MIN, max=E6M2_MAX)
-    exp = torch.floor(torch.log2(x))
-    mant = torch.round(x * (2.0 ** (2.0 - exp)))
-    return mant * (2.0 ** (exp - 2.0))
-
-
-def _s1p2_quant(x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
-    """Quantize a signed value into HiF4 S1P2 sign and mantissa fields."""
-    sign = torch.sign(x)
-    mag = torch.abs(x)
-    q = torch.round(mag * 4.0) / 4.0
-    q = torch.clamp(q, min=0.0, max=1.75)
-    sign = torch.where(q == 0.0, torch.zeros_like(sign), sign)
-    return sign, q
-
-
-def _e6m2_candidates(sf: torch.Tensor, radius: int = 1) -> list[torch.Tensor]:
-    """Return a small list of legal E6M2 candidates around ``sf``."""
-    base_exp = torch.floor(torch.log2(sf))
-    candidates: list[torch.Tensor] = []
-    for delta in range(-radius, radius + 1):
-        exp = (base_exp + delta).clamp(-48.0, 15.0)
-        for mant in (1.0, 1.25, 1.5, 1.75):
-            value = (2.0 ** exp) * mant
-            value = torch.clamp(value, min=E6M2_MIN, max=E6M2_MAX)
-            candidates.append(value)
-    return candidates
-
-
-def _hif4_from_scale(
-    xb: torch.Tensor,
-    v16: torch.Tensor,
-    v8: torch.Tensor,
-    scale_factor: torch.Tensor,
-) -> tuple[dict[str, torch.Tensor], torch.Tensor]:
-    """Quantize a reshaped block tensor given a candidate E6M2 scale factor."""
-    rec = 1.0 / scale_factor
-
-    e1_8 = (v8 * rec.unsqueeze(-1) >= 4.0).to(torch.float32)
-    e1_8_pairs = e1_8.unsqueeze(-1)
-    e1_16 = (
-        v16
-        * rec.unsqueeze(-1).unsqueeze(-1)
-        * (2.0 ** (-e1_8_pairs))
-        >= 2.0
-    ).to(torch.float32)
-
-    e1_8_for = e1_8.unsqueeze(-1).unsqueeze(-1)
-    e1_16_for = e1_16.unsqueeze(-1)
-    element_scale = (
-        scale_factor.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)
-        * (2.0 ** e1_8_for)
-        * (2.0 ** e1_16_for)
-    )
-    scaled = xb / element_scale
-    sign, mant = _s1p2_quant(scaled)
-    dequant = sign * mant * element_scale
-
-    params = {
-        "scale_factor": scale_factor.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1),
-        "scale_lv2": (2.0 ** e1_8).unsqueeze(-1).unsqueeze(-1),
-        "scale_lv3": (2.0 ** e1_16).unsqueeze(-1),
-        "sign": sign,
-        "mant": mant,
-    }
-    return params, dequant
-
-
-def _quantize_hif4(
-    x: torch.Tensor,
-    importance: torch.Tensor | None = None,
-    search_candidates: bool = False,
-    candidate_radius: int = 1,
-) -> dict[str, torch.Tensor]:
-    """Convert a BF16/FP32 tensor to HiF4 parameters along its last dim."""
-    x = x.to(torch.float32)
-    shape = x.shape
-    channels = int(shape[-1])
-    if channels % 64 != 0:
-        raise ValueError(
-            f"last dimension {channels} is not divisible by HiF4 block size 64"
-        )
-
-    num_blocks = channels // 64
-    prefix = shape[:-1]
-    xb = x.reshape(*prefix, num_blocks, 8, 2, 4)
-
-    v16 = xb.abs().amax(dim=-1)
-    v8 = v16.amax(dim=-1)
-    vmax = v8.amax(dim=-1, keepdim=True)
-    sf_std = _e6m2_quant(vmax.squeeze(-1) / 7.0)
-
-    if not search_candidates:
-        params, _ = _hif4_from_scale(xb, v16, v8, sf_std)
-        return params
-
-    candidates = _e6m2_candidates(sf_std, radius=candidate_radius)
-    all_params: list[dict[str, torch.Tensor]] = []
-    costs: list[torch.Tensor] = []
-
-    if importance is not None:
-        imp_b = importance.to(torch.float32)
-    else:
-        imp_b = None
-
-    for sf in candidates:
-        params, dequant = _hif4_from_scale(xb, v16, v8, sf)
-        err = (dequant - xb) ** 2
-        if imp_b is not None:
-            cost = (err * imp_b).sum(dim=(-3, -2, -1))
-        else:
-            cost = err.sum(dim=(-3, -2, -1))
-        all_params.append(params)
-        costs.append(cost)
-
-    cost_stack = torch.stack(costs, dim=0)  # [C, *prefix, nblocks]
-    best_idx = torch.argmin(cost_stack, dim=0)  # [*prefix, nblocks]
-
-    result: dict[str, torch.Tensor] = {}
-    for key in all_params[0]:
-        stacked = torch.stack([p[key] for p in all_params], dim=0)
-        tail_shape = stacked.shape[1 + len(prefix) + 1:]
-        index = best_idx.reshape((1,) + best_idx.shape + (1,) * len(tail_shape))
-        index = index.expand((1,) + best_idx.shape + tail_shape)
-        result[key] = torch.gather(stacked, 0, index).squeeze(0)
-    return result
-
-
-def _dequantize_hif4_params(
-    params: dict[str, torch.Tensor],
-    shape: tuple[int, ...],
-) -> torch.Tensor:
-    """Decode HiF4 parameters back to a floating-point tensor."""
-    return (
-        params["sign"].to(torch.float32)
-        * params["mant"].to(torch.float32)
-        * params["scale_lv3"].to(torch.float32)
-        * params["scale_lv2"].to(torch.float32)
-        * params["scale_factor"].to(torch.float32)
-    ).reshape(shape)
+    values = quant_float.unflatten(-1, (-1, blk_size))
+    return (values * scale_float.unsqueeze(-1)).flatten(-2, -1).to(torch.bfloat16)
 
 
 def _decode_e6m2(code: torch.Tensor) -> torch.Tensor:
-    """Decode the compact unsigned E6M2 code used by the Linear search."""
     code64 = code.to(torch.int64)
     mantissa = 1.0 + (code64 & 3).to(torch.float32) / 4.0
     return torch.ldexp(mantissa, (code64 >> 2) - 48)
 
 
 def _encode_e6m2(scale: torch.Tensor) -> torch.Tensor:
-    """Encode a positive scale as a compact legal unsigned E6M2 code."""
     positive = scale > 0
     safe = torch.where(positive, scale, torch.ones_like(scale))
     exponent = torch.floor(torch.log2(safe)).to(torch.int64)
@@ -230,27 +74,23 @@ def _encode_e6m2(scale: torch.Tensor) -> torch.Tensor:
     exponent = (exponent + carry.to(torch.int64)).clamp(-48, 15)
     mantissa = torch.where(carry, torch.zeros_like(mantissa), mantissa).clamp(0, 3)
     code = (((exponent + 48) << 2) | mantissa).clamp(0, 0xFE)
-    default = torch.full_like(code, 48 << 2)
-    return torch.where(positive, code, default).to(torch.uint8)
+    return torch.where(positive, code, torch.full_like(code, 48 << 2)).to(torch.uint8)
 
 
-def _best_linear_for_base(
+def _best_for_base(
     groups: torch.Tensor,
     scale_code: torch.Tensor,
     weights: torch.Tensor | None = None,
+    mean_penalty: float = 0.0,
+    norm_penalty: float = 0.0,
 ) -> tuple[torch.Tensor, ...]:
-    """Find the best legal E1_8/E1_16 split for one Linear base scale."""
     base = _decode_e6m2(scale_code)
     factors = groups.new_tensor((1.0, 2.0, 4.0)).view(
         *([1] * (groups.ndim - 2)), 3, 1, 1
     )
     scaled = groups.unsqueeze(-3) / base.unsqueeze(-3) / factors
     negative = scaled < 0
-    mantissa = (
-        torch.round(scaled.abs().clamp(max=1.75) * 4.0)
-        .to(torch.uint8)
-        .clamp(max=7)
-    )
+    mantissa = torch.round(scaled.abs().clamp(max=1.75) * 4.0).to(torch.uint8).clamp(max=7)
     reconstructed = (
         base.unsqueeze(-3)
         * factors
@@ -258,7 +98,9 @@ def _best_linear_for_base(
         * mantissa.to(torch.float32)
         / 4.0
     )
-    errors = (groups.unsqueeze(-3) - reconstructed).square()
+    target = groups.unsqueeze(-3)
+    residual = target - reconstructed
+    errors = residual.square()
     if weights is not None:
         errors = errors * weights.unsqueeze(-3)
     errors = errors.sum(dim=-1)
@@ -271,11 +113,24 @@ def _best_linear_for_base(
     index = factor_index.unsqueeze(-2).unsqueeze(-1).expand(
         *factor_index.shape[:-1], 1, 2, 4
     )
-    selected = torch.gather(reconstructed, -3, index).squeeze(-3)
-    selected_errors = (groups - selected).square()
+    selected_reconstruction = torch.gather(reconstructed, -3, index).squeeze(-3)
+    selected_residual = groups - selected_reconstruction
+    selected_errors = selected_residual.square()
     if weights is not None:
         selected_errors = selected_errors * weights
     score = selected_errors.sum(dim=(-3, -2, -1))
+    if mean_penalty:
+        score = score + mean_penalty * selected_residual.sum(
+            dim=(-3, -2, -1)
+        ).square()
+    if norm_penalty:
+        target_energy = groups.square().sum(dim=(-3, -2, -1))
+        reconstructed_energy = selected_reconstruction.square().sum(
+            dim=(-3, -2, -1)
+        )
+        score = score + norm_penalty * (
+            target_energy - reconstructed_energy
+        ).square() / target_energy.clamp_min(torch.finfo(torch.float32).tiny)
     return (
         score,
         scale_code,
@@ -286,80 +141,41 @@ def _best_linear_for_base(
     )
 
 
-def _quantize_linear_values(
+def _quantize_values(
     values: torch.Tensor,
     importance: torch.Tensor | None = None,
-    offsets: Iterable[int] = _LINEAR_SCALE_OFFSETS,
-    projection: torch.Tensor | None = None,
-    projection_strength: torch.Tensor | None = None,
+    offsets: Iterable[int] = _SCALE_OFFSETS,
+    mean_penalty: float = 0.0,
+    norm_penalty: float = 0.0,
 ) -> dict[str, torch.Tensor]:
-    """Quantize Linear values using v138's compact per-block scale search."""
     channels = int(values.shape[-1])
     groups = values.to(torch.float32).reshape(
         *values.shape[:-1], channels // 64, 8, 2, 4
     )
     weights = None
     if importance is not None:
-        weights = importance.to(torch.float32).reshape(
-            1, channels // 64, 8, 2, 4
-        )
-    peak = groups.abs().amax(dim=(-3, -2, -1), keepdim=True) / 7.0
-    peak_code = _encode_e6m2(peak)
+        weights = importance.to(torch.float32).reshape(1, channels // 64, 8, 2, 4)
+    peak_code = _encode_e6m2(groups.abs().amax(dim=(-3, -2, -1), keepdim=True) / 7.0)
     best = None
     for offset in offsets:
-        code = (
-            peak_code.to(torch.int16).add(int(offset)).clamp(0, 0xFE).to(torch.uint8)
+        code = (peak_code.to(torch.int16) + int(offset)).clamp(0, 0xFE).to(torch.uint8)
+        current = _best_for_base(
+            groups, code, weights, mean_penalty, norm_penalty
         )
-        current = _best_linear_for_base(groups, code, weights)
-        if projection is not None and projection_strength is not None:
-            _, selected_code, lv2, lv3, negative, mantissa_code = current
-            reconstructed = (
-                _decode_e6m2(selected_code)
-                * (1.0 + lv2.to(torch.float32))
-                * (1.0 + lv3.to(torch.float32))
-                * torch.where(negative, -1.0, 1.0)
-                * mantissa_code.to(torch.float32)
-                / 4.0
-            )
-            residual = groups - reconstructed
-            prefix_dims = groups.ndim - 4
-            rank = int(projection.shape[0])
-            project = projection.to(torch.float32).reshape(
-                rank, *([1] * prefix_dims), *projection.shape[1:]
-            )
-            strength = projection_strength.to(torch.float32).reshape(
-                rank,
-                *([1] * prefix_dims),
-                projection_strength.shape[-1],
-            )
-            projected = (residual.unsqueeze(0) * project).sum(
-                dim=(-3, -2, -1)
-            )
-            current = (
-                current[0] + (strength * projected.square()).sum(dim=0),
-            ) + current[1:]
         if best is None:
             best = current
             continue
         choose = current[0] < best[0]
         mask = choose[..., None, None, None]
         best = (torch.where(choose, current[0], best[0]),) + tuple(
-            torch.where(mask, new, old)
-            for new, old in zip(current[1:], best[1:])
+            torch.where(mask, new, old) for new, old in zip(current[1:], best[1:])
         )
-
-    if best is None:
-        raise RuntimeError("Linear scale candidate set must not be empty")
     _, code, lv2, lv3, negative, mantissa_code = best
     mantissa = mantissa_code.to(torch.bfloat16) / 4.0
     sign = torch.where(
         mantissa == 0,
         torch.zeros_like(mantissa),
-        torch.where(
-            negative,
-            -torch.ones_like(mantissa),
-            torch.ones_like(mantissa),
-        ),
+        torch.where(negative, -torch.ones_like(mantissa), torch.ones_like(mantissa)),
     )
     return {
         "scale_factor": _decode_e6m2(code).to(torch.bfloat16),
@@ -370,7 +186,7 @@ def _quantize_linear_values(
     }
 
 
-def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
+def _dequantize_hif4(params: dict[str, torch.Tensor]) -> torch.Tensor:
     return (
         params["scale_factor"].to(torch.float32)
         * params["scale_lv2"].to(torch.float32)
@@ -380,259 +196,371 @@ def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
     ).flatten(-4, -1)
 
 
-def _activation_output_cost_state(
-    transformed_weight: torch.Tensor,
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Approximate each 64-channel block of W.T@W as diagonal + low rank."""
-    num_blocks = int(transformed_weight.shape[-1]) // 64
-    weight_blocks = transformed_weight.to(torch.float32).reshape(
-        -1, num_blocks, 64
+def _gather_offset(t: torch.Tensor, best_off: torch.Tensor) -> torch.Tensor:
+    rest = t.shape[1 + best_off.ndim:]
+    idx = best_off.reshape((1,) + best_off.shape + (1,) * len(rest)).expand(
+        (1,) + best_off.shape + rest
     )
-    generator = torch.Generator(device=transformed_weight.device).manual_seed(20260820)
-    projection = torch.randint(
-        0,
-        2,
-        (num_blocks, 64, _LINEAR_OUTPUT_RANK),
-        generator=generator,
-        dtype=torch.float32,
-        device=transformed_weight.device,
-    ).mul_(2.0).sub_(1.0)
-    projection = torch.linalg.qr(projection, mode="reduced")[0]
-    for _ in range(_LINEAR_POWER_ITERS):
-        output_projection = torch.einsum(
-            "obd,bdr->obr", weight_blocks, projection
-        )
-        projection = torch.einsum(
-            "obd,obr->bdr", weight_blocks, output_projection
-        )
-        projection = torch.linalg.qr(projection, mode="reduced")[0]
-
-    output_projection = torch.einsum(
-        "obd,bdr->obr", weight_blocks, projection
-    )
-    strength = output_projection.square().sum(dim=0).transpose(0, 1)
-    diagonal = weight_blocks.square().sum(dim=0)
-    diagonal_residual = (
-        diagonal
-        - (
-            strength.transpose(0, 1).unsqueeze(1) * projection.square()
-        ).sum(dim=-1)
-    ).clamp_min(0.0)
-    return (
-        diagonal_residual.reshape(num_blocks, 8, 2, 4),
-        projection.permute(2, 0, 1).reshape(
-            _LINEAR_OUTPUT_RANK, num_blocks, 8, 2, 4
-        ),
-        strength,
-    )
+    return torch.gather(t, 0, idx)[0]
 
 
-def _residual_feedback_weight(
-    quantized_activation: torch.Tensor,
-    weight: torch.Tensor,
-    weight_importance: torch.Tensor,
-    weight_projection: torch.Tensor,
-    weight_projection_strength: torch.Tensor,
+def _quantize_values_vec(
+    values: torch.Tensor,
+    importance: torch.Tensor | None = None,
+    offsets: Iterable[int] = _SCALE_OFFSETS,
+    mean_penalty: float = 0.0,
+    norm_penalty: float = 0.0,
 ) -> dict[str, torch.Tensor]:
-    """Propagate each quantized block's output residual into nearby blocks."""
-    rows = int(quantized_activation.shape[0])
-    if rows > _LINEAR_FEEDBACK_ROWS:
-        indices = torch.linspace(
-            0,
-            rows - 1,
-            _LINEAR_FEEDBACK_ROWS,
-            device=quantized_activation.device,
-        ).round().to(torch.int64)
-        activation = quantized_activation.index_select(0, indices)
-    else:
-        activation = quantized_activation
+    channels = int(values.shape[-1])
+    groups = values.to(torch.float32).reshape(
+        *values.shape[:-1], channels // 64, 8, 2, 4
+    )
+    lead = groups.shape[:-4]
+    weights = None
+    if importance is not None:
+        weights = importance.to(torch.float32).reshape(1, channels // 64, 8, 2, 4)
+    peak = groups.abs().amax(dim=(-3, -2, -1), keepdim=True) / 7.0
+    peak_code = _encode_e6m2(peak)
+    offs = torch.tensor(list(offsets), device=groups.device)
+    codes = (
+        peak_code.unsqueeze(0).to(torch.int16)
+        + offs.view(-1, *([1] * groups.ndim))
+    ).clamp(0, 0xFE).to(torch.uint8)
+    base = _decode_e6m2(codes)
+    g = groups.unsqueeze(0).unsqueeze(-3)
+    b = base.unsqueeze(-3)
+    f = groups.new_tensor((1.0, 2.0, 4.0)).view(*([1] * (g.ndim - 3)), 3, 1, 1)
+    scaled = g / b / f
+    negative = scaled < 0
+    mantissa = torch.round(scaled.abs().clamp(max=1.75) * 4.0).to(torch.uint8).clamp(max=7)
+    reconstructed = (
+        b * f * torch.where(negative, -1.0, 1.0) * mantissa.to(torch.float32) / 4.0
+    )
+    residual = g - reconstructed
+    errors = residual.square()
+    if weights is not None:
+        errors = errors * weights.view(1, *([1] * len(lead)), channels // 64, 8, 1, 2, 4)
+    errors = errors.sum(dim=-1)
+    error0, lv30 = errors[..., :2, :].min(dim=-2)
+    error1, lv31 = errors[..., 1:, :].min(dim=-2)
+    use1 = error1.sum(dim=-1) < error0.sum(dim=-1)
+    lv2 = use1.to(torch.uint8)
+    lv3 = torch.where(use1.unsqueeze(-1), lv31, lv30).to(torch.uint8)
+    factor_index = (lv2.unsqueeze(-1) + lv3).to(torch.int64)
+    index = factor_index.unsqueeze(-2).unsqueeze(-1).expand(
+        *factor_index.shape[:-1], 1, 2, 4
+    )
+    selected_reconstruction = torch.gather(reconstructed, -3, index).squeeze(-3)
+    selected_residual = groups - selected_reconstruction
+    selected_errors = selected_residual.square()
+    if weights is not None:
+        selected_errors = selected_errors * weights.view(
+            1, *([1] * len(lead)), channels // 64, 8, 2, 4
+        )
+    score = selected_errors.sum(dim=(-3, -2, -1))
+    if mean_penalty:
+        score = score + mean_penalty * selected_residual.sum(
+            dim=(-3, -2, -1)
+        ).square()
+    if norm_penalty:
+        target_energy = groups.square().sum(dim=(-3, -2, -1))
+        reconstructed_energy = selected_reconstruction.square().sum(
+            dim=(-3, -2, -1)
+        )
+        score = score + norm_penalty * (
+            target_energy - reconstructed_energy
+        ).square() / target_energy.clamp_min(torch.finfo(torch.float32).tiny)
+    best_off = score.argmin(0)
+    neg_all = torch.gather(negative, -3, index).squeeze(-3)
+    mant_all = torch.gather(mantissa, -3, index).squeeze(-3)
+    code_g = _gather_offset(codes, best_off)
+    lv2_g = _gather_offset(lv2.unsqueeze(-1).unsqueeze(-1), best_off)
+    lv3_g = _gather_offset(lv3.unsqueeze(-1), best_off)
+    neg_g = _gather_offset(neg_all, best_off)
+    mant_g = _gather_offset(mant_all, best_off)
+    mantissa_f = mant_g.to(torch.bfloat16) / 4.0
+    sign = torch.where(
+        mantissa_f == 0,
+        torch.zeros_like(mantissa_f),
+        torch.where(neg_g, -torch.ones_like(mantissa_f), torch.ones_like(mantissa_f)),
+    )
+    return {
+        "scale_factor": _decode_e6m2(code_g).to(torch.bfloat16),
+        "scale_lv2": 1.0 + lv2_g.to(torch.bfloat16),
+        "scale_lv3": 1.0 + lv3_g.to(torch.bfloat16),
+        "sign": sign,
+        "mant": mantissa_f,
+    }
 
-    channels = int(weight.shape[-1])
-    block_count = channels // 64
-    work = weight.to(torch.float32).clone()
-    if _LINEAR_FEEDBACK_ENERGY_ORDER:
-        block_energy = quantized_activation.reshape(
-            -1, block_count, 64
-        ).square().sum(dim=(0, 2))
-        order = block_energy.argsort(
-            descending=_LINEAR_FEEDBACK_DESCENDING
-        ).tolist()
-    else:
-        order = list(range(block_count))
+
+def _choose_weight_rows(
+    target_output: torch.Tensor,
+    quantized_activation: torch.Tensor,
+    candidates: list[dict[str, torch.Tensor]],
+) -> dict[str, torch.Tensor]:
+    weights = torch.stack([_dequantize_hif4(params) for params in candidates])
+    outputs = torch.matmul(quantized_activation, weights.transpose(1, 2))
+    choices = (target_output.unsqueeze(0) - outputs).square().mean(1).argmin(0)
+    rows = torch.arange(choices.numel())
+    return {
+        name: torch.stack([params[name] for params in candidates])[choices, rows]
+        for name in candidates[0]
+    }
+
+
+def _block_gptq_weight(
+    quantized_activation: torch.Tensor, weight: torch.Tensor
+) -> dict[str, torch.Tensor]:
+    channels = weight.shape[-1]
+    group_count = channels // 64
     pieces: dict[str, list[torch.Tensor | None]] = {}
     tiny = torch.finfo(torch.float32).tiny
-    for position, block in enumerate(order):
-        block_indices = torch.arange(
-            block * 64,
-            (block + 1) * 64,
-            device=work.device,
-        )
-        work_block = work.index_select(1, block_indices)
-        params = _quantize_linear_values(
-            work_block,
-            weight_importance[block:block + 1],
-            offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
-            projection=weight_projection[:, block:block + 1],
-            projection_strength=weight_projection_strength[:, block:block + 1],
-        )
-        quantized_block = _dequantize_linear_params(params)
+    order = _gptq_group_order(quantized_activation)
+    ordered_indices = torch.cat(
+        [torch.arange(group * 64, (group + 1) * 64) for group in order]
+    )
+    ordered_activation = quantized_activation.index_select(-1, ordered_indices)
+    work = weight.to(torch.float32).index_select(-1, ordered_indices).clone()
+    propagation_groups = _gptq_propagation_groups(group_count, work.shape[0])
+    weight_offsets = _gptq_weight_offsets(group_count, work.shape[0])
+    for position, group in enumerate(order):
+        start = position * 64
+        stop = start + 64
+        activation_block = ordered_activation[..., start:stop]
+        params = _quantize_values(work[..., start:stop], offsets=weight_offsets)
+        quantized_block = _dequantize_hif4(params)
         for name, tensor in params.items():
-            pieces.setdefault(name, [None] * block_count)[block] = tensor
-
-        future_blocks = order[
-            position + 1:position + 1 + _LINEAR_FEEDBACK_WINDOW
-        ]
-        if not future_blocks:
+            pieces.setdefault(name, [None] * group_count)[group] = tensor
+        future_stop = min(channels, stop + propagation_groups * 64)
+        if future_stop == stop:
             continue
-        future_indices = torch.cat([
-            torch.arange(
-                future * 64,
-                (future + 1) * 64,
-                device=work.device,
-            )
-            for future in future_blocks
-        ])
-        block_activation = activation.index_select(1, block_indices)
-        future_activation = activation.index_select(1, future_indices)
-        output_residual = block_activation @ (
-            work_block - quantized_block
-        ).T
+        future_activation = ordered_activation[..., stop:future_stop]
+        residual = activation_block @ (work[..., start:stop] - quantized_block).T
         kernel = future_activation @ future_activation.T
-        ridge = _LINEAR_FEEDBACK_RIDGE * kernel.diag().mean().clamp_min(tiny)
-        identity = torch.eye(
-            kernel.shape[0],
-            dtype=kernel.dtype,
-            device=kernel.device,
+        ridge = _GPTQ_RIDGE * kernel.diag().mean().clamp_min(tiny)
+        dual = torch.linalg.solve(
+            kernel + ridge * torch.eye(kernel.shape[0]), residual
         )
-        dual = torch.linalg.solve(kernel + ridge * identity, output_residual)
-        correction = (future_activation.T @ dual).T
-        future_weight = work.index_select(1, future_indices)
-        future_weight.add_(
-            correction,
-            alpha=_LINEAR_FEEDBACK_STEP,
-        )
-        work.index_copy_(1, future_indices, future_weight)
+        work[..., stop:future_stop] += (future_activation.T @ dual).T
     return {
-        name: torch.cat(
-            [tensor for tensor in tensors if tensor is not None],
-            dim=-4,
-        )
+        name: torch.cat([tensor for tensor in tensors if tensor is not None], dim=-4)
         for name, tensors in pieces.items()
     }
 
 
-def _feedback_quantize_weight(
+def _gptq_group_order(activation: torch.Tensor) -> list[int]:
+    groups = activation.shape[-1] // 64
+    energy = activation.to(torch.float32).reshape(-1, groups, 64).square().sum((0, 2))
+    return energy.argsort(descending=True).tolist()
+
+
+def _gptq_propagation_groups(group_count: int, output_rows: int) -> int:
+    if (
+        group_count <= _GPTQ_FULL_PROPAGATION_MAX_GROUPS
+        and group_count * output_rows <= _GPTQ_FULL_PROPAGATION_MAX_GROUP_ROWS
+    ):
+        return group_count
+    if output_rows >= _GPTQ_TALL_OUTPUT_ROWS:
+        return _GPTQ_TALL_PROPAGATION_GROUPS
+    return _GPTQ_WIDE_PROPAGATION_GROUPS
+
+
+def _gptq_weight_offsets(group_count: int, output_rows: int) -> tuple[int, ...]:
+    if (
+        group_count <= _GPTQ_FULL_PROPAGATION_MAX_GROUPS
+        and group_count * output_rows <= _GPTQ_FULL_PROPAGATION_MAX_GROUP_ROWS
+    ):
+        return _SCALE_OFFSETS
+    return _GPTQ_LARGE_WEIGHT_OFFSETS
+
+
+def _output_aware_quantize_weight(
     activation: torch.Tensor,
     weight: torch.Tensor,
-    activation_importance: torch.Tensor,
-    activation_projection: torch.Tensor,
-    projection_strength: torch.Tensor,
-    activation_offsets: Iterable[int],
-    weight_importance: torch.Tensor,
-    weight_projection: torch.Tensor,
-    weight_projection_strength: torch.Tensor,
+    baseline: dict[str, torch.Tensor],
 ) -> dict[str, torch.Tensor]:
-    """Fix Q(A), then build one bounded residual-feedback Q(W)."""
-    activation_params = _quantize_linear_values(
-        activation,
-        activation_importance,
-        offsets=activation_offsets,
-        projection=activation_projection,
-        projection_strength=projection_strength,
+    # Q(A) is finalized before either output is formed. Only returned W fields vary.
+    activation_params = _quantize_values(activation)
+    quantized_activation = _dequantize_hif4(activation_params)
+    activation_importance = activation.square().mean(0)
+    candidates = [
+        baseline,
+        _quantize_values(weight),
+    ]
+    target_output = activation @ weight.T
+    initial_weights = torch.stack([_dequantize_hif4(params) for params in candidates])
+    initial_outputs = torch.matmul(
+        quantized_activation, initial_weights.transpose(1, 2)
     )
-    quantized_activation = _dequantize_linear_params(activation_params)
-    return _residual_feedback_weight(
-        quantized_activation,
-        weight,
-        weight_importance,
-        weight_projection,
-        weight_projection_strength,
+    initial_errors = (target_output.unsqueeze(0) - initial_outputs).square().mean(1)
+    rows = torch.arange(weight.shape[0])
+    best_output = initial_outputs[initial_errors.argmin(0), :, rows].T
+    for source_output in (initial_outputs[0], best_output):
+        denominator = source_output.square().sum(0).clamp_min(
+            torch.finfo(torch.float32).tiny
+        )
+        gain = (target_output * source_output).sum(0) / denominator
+        candidates.append(
+            _quantize_values(
+                weight * gain.clamp(0.875, 1.125).unsqueeze(1),
+                activation_importance,
+            )
+        )
+    kernel = quantized_activation @ quantized_activation.T
+    residual = target_output - quantized_activation @ weight.T
+    ridge_scale = kernel.diag().mean()
+    identity = torch.eye(
+        kernel.shape[0], dtype=kernel.dtype, device=kernel.device
+    )
+    ridge_candidates = []
+    for ridge_lambda in _LINEAR_RIDGE_LAMBDAS:
+        dual = torch.linalg.solve(
+            kernel + ridge_lambda * ridge_scale * identity, residual
+        )
+        fitted_weight = weight + (quantized_activation.T @ dual).T
+        ridge_candidates.append(
+            _quantize_values(fitted_weight, activation_importance)
+        )
+    row_params = [
+        _choose_weight_rows(
+            target_output, quantized_activation, candidates + [ridge_candidate]
+        )
+        for ridge_candidate in ridge_candidates
+    ]
+    row_errors = [
+        (
+            target_output
+            - quantized_activation @ _dequantize_hif4(params).T
+        ).square().mean(0)
+        for params in row_params
+    ]
+    use_lower_ridge = row_errors[0] <= row_errors[1] * (
+        1.0 - _LINEAR_RIDGE_SWITCH_MARGIN
+    )
+    output_count = weight.shape[0]
+    return {
+        name: torch.where(
+            use_lower_ridge.view(output_count, *([1] * (lower.ndim - 1))),
+            lower,
+            row_params[1][name],
+        )
+        for name, lower in row_params[0].items()
+    }
+
+
+def _refine_weight_codes(
+    activation_parts: list[torch.Tensor],
+    transformed_activation_parts: list[torch.Tensor],
+    weight: torch.Tensor,
+    weight_params: dict[str, torch.Tensor],
+) -> dict[str, torch.Tensor]:
+    if len(activation_parts) < 2:
+        return weight_params
+
+    quantized_parts = [
+        _dequantize_hif4(_quantize_values(part))
+        for part in transformed_activation_parts
+    ]
+    train_activation = torch.cat(activation_parts[:-1])
+    train_quantized = torch.cat(quantized_parts[:-1])
+    train_target = train_activation @ weight.T
+    energy = train_quantized.square().sum(0)
+    denominator = energy + _WEIGHT_REFINEMENT_RIDGE * energy.mean()
+
+    scalar_scale = (
+        weight_params["scale_factor"].to(torch.float32)
+        * weight_params["scale_lv2"].to(torch.float32)
+        * weight_params["scale_lv3"].to(torch.float32)
+    ).expand_as(weight_params["mant"]).flatten(-4, -1)
+    candidate = dict(weight_params)
+    checkpoints = [weight_params]
+    for iteration in range(1, _WEIGHT_REFINEMENT_CHECKPOINTS[-1] + 1):
+        candidate_weight = _dequantize_hif4(candidate)
+        residual = train_target - train_quantized @ candidate_weight.T
+        update = (residual.T @ train_quantized) / denominator.clamp_min(
+            torch.finfo(torch.float32).tiny
+        ).unsqueeze(0)
+        continuous_weight = candidate_weight + _WEIGHT_REFINEMENT_STEP * update
+        signed_code = torch.round(continuous_weight / scalar_scale * 4.0).clamp(
+            -7, 7
+        )
+        shaped_code = signed_code.reshape_as(weight_params["mant"])
+        candidate["sign"] = shaped_code.sign().to(torch.bfloat16)
+        candidate["mant"] = (shaped_code.abs() / 4.0).to(torch.bfloat16)
+        if iteration in _WEIGHT_REFINEMENT_CHECKPOINTS:
+            checkpoints.append(dict(candidate))
+    checkpoints.append(
+        _quantize_values(continuous_weight, train_quantized.square().mean(0))
     )
 
-
-def _sample_profile_rows(values: torch.Tensor) -> torch.Tensor:
-    """Bound profile-search rows while covering the full sequence layout."""
-    if values.shape[0] <= _LINEAR_PROFILE_ROWS_PER_SHAPE:
-        return values
-    indices = torch.linspace(
-        0,
-        values.shape[0] - 1,
-        _LINEAR_PROFILE_ROWS_PER_SHAPE,
-        device=values.device,
-    ).round().to(torch.int64)
-    return values[indices]
-
-
-def _activation_reconstruction_score(
-    parts: list[torch.Tensor],
-    offsets: Iterable[int],
-) -> torch.Tensor:
-    """Equal-shape Q(A) reconstruction score; intentionally has no W input."""
-    errors = []
-    for part in parts:
-        sample = _sample_profile_rows(part)
-        params = _quantize_linear_values(sample, offsets=offsets)
-        reconstructed = _dequantize_linear_params(params)
-        error = (sample - reconstructed).square().mean()
-        energy = sample.square().mean().clamp_min(torch.finfo(torch.float32).tiny)
-        errors.append(error / energy)
-    return torch.stack(errors).mean()
-
-
-def _select_activation_offsets(
-    parts: list[torch.Tensor],
-) -> tuple[int, ...]:
-    """Choose a synthetic-profile candidate using legal A-only calibration."""
-    compact_score = _activation_reconstruction_score(
-        parts, _LINEAR_SCALE_OFFSETS
-    )
-    wide_score = _activation_reconstruction_score(
-        parts, _LINEAR_WIDE_SCALE_OFFSETS
-    )
-    if wide_score < (1.0 - _LINEAR_PROFILE_MIN_GAIN) * compact_score:
-        return _LINEAR_WIDE_SCALE_OFFSETS
-    return _LINEAR_SCALE_OFFSETS
+    heldout_target = activation_parts[-1] @ weight.T
+    heldout_quantized = quantized_parts[-1]
+    return _choose_weight_rows(heldout_target, heldout_quantized, checkpoints)
 
 
 def _rms(values: torch.Tensor) -> torch.Tensor:
-    return (
-        values.to(torch.float32)
-        .reshape(-1, values.shape[-1])
-        .square()
-        .mean(0)
-        .sqrt()
-    )
+    return values.to(torch.float32).reshape(-1, values.shape[-1]).square().mean(0).sqrt()
+
+
+def _balanced_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+    tiny = torch.finfo(torch.float32).tiny
+    multiplier = (right.clamp_min(tiny) / left.clamp_min(tiny)).sqrt()
+    multiplier = multiplier.clamp(1.0 / 16.0, 16.0)
+    return torch.where((left > 0) & (right > 0), multiplier, torch.ones_like(multiplier))
 
 
 def _linear_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
     tiny = torch.finfo(torch.float32).tiny
-    multiplier = (right.clamp_min(tiny) / left.clamp_min(tiny)).pow(
-        _LINEAR_BALANCE_EXPONENT
-    )
+    multiplier = (
+        right.clamp_min(tiny) / left.clamp_min(tiny)
+    ).pow(_LINEAR_BALANCE_EXPONENT)
     multiplier = multiplier.clamp(1.0 / 16.0, 16.0)
-    return torch.where(
-        (left > 0) & (right > 0), multiplier, torch.ones_like(multiplier)
-    )
+    return torch.where((left > 0) & (right > 0), multiplier, torch.ones_like(multiplier))
+
+
+_HADAMARD_CACHE: dict[int, torch.Tensor] = {}
+
+
+def _hadamard_matrix(block: int) -> torch.Tensor:
+    cached = _HADAMARD_CACHE.get(block)
+    if cached is not None:
+        return cached
+    if block < 2 or block & (block - 1):
+        return torch.empty(0)
+    base = torch.ones(1, 1)
+    size = 1
+    while size < block:
+        top = torch.cat([base, base], dim=1)
+        bot = torch.cat([base, -base], dim=1)
+        base = torch.cat([top, bot], dim=0)
+        size *= 2
+    matrix = (base / (block**0.5)).to(torch.float32)
+    _HADAMARD_CACHE[block] = matrix
+    return matrix
 
 
 def _hadamard(values: torch.Tensor, block: int) -> torch.Tensor:
-    result = values.to(torch.float32).reshape(
-        -1, values.shape[-1] // block, block
-    ).clone()
-    stride = 1
-    while stride < block:
-        pairs = result.reshape(
-            *result.shape[:-1], block // (2 * stride), 2, stride
-        )
-        left = pairs[..., 0, :].clone()
-        right = pairs[..., 1, :].clone()
-        pairs[..., 0, :] = left + right
-        pairs[..., 1, :] = left - right
-        stride *= 2
-    return (result / block**0.5).reshape_as(values)
+    matrix = _hadamard_matrix(block)
+    if matrix.numel() == 0:
+        result = values.to(torch.float32).reshape(
+            -1, values.shape[-1] // block, block
+        ).clone()
+        stride = 1
+        while stride < block:
+            pairs = result.reshape(
+                *result.shape[:-1], block // (2 * stride), 2, stride
+            )
+            left = pairs[..., 0, :].clone()
+            right = pairs[..., 1, :].clone()
+            pairs[..., 0, :] = left + right
+            pairs[..., 1, :] = left - right
+            stride *= 2
+        return (result / block**0.5).reshape_as(values)
+    flat = values.to(torch.float32).reshape(-1, block)
+    return (flat @ matrix).reshape_as(values)
 
 
-def _linear_sign_candidates() -> torch.Tensor:
+def _sign_candidates() -> torch.Tensor:
     generator = torch.Generator().manual_seed(20260819)
     random = torch.randint(0, 2, (7, 64), generator=generator).to(torch.float32)
     return torch.cat((torch.ones(1, 64), random.mul_(2).sub_(1)))
@@ -644,38 +572,37 @@ def _peak_ratio(values: torch.Tensor) -> torch.Tensor:
     return peak / energy.clamp_min(torch.finfo(torch.float32).tiny)
 
 
-def _select_linear_signs(
-    activation: torch.Tensor,
-    weight: torch.Tensor,
-) -> torch.Tensor:
+def _select_linear_signs(activation: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:
     group_count = activation.shape[-1] // 64
     a = activation.reshape(-1, group_count, 64)
     w = weight.reshape(-1, group_count, 64)
-    candidates = _linear_sign_candidates()
+    candidates = _sign_candidates()
     scores = [
-        _peak_ratio(_hadamard(a * signs, 64))
-        + _peak_ratio(_hadamard(w * signs, 64))
+        _peak_ratio(_hadamard(a * signs, 64)) + _peak_ratio(_hadamard(w * signs, 64))
         for signs in candidates
     ]
     return candidates[torch.stack(scores).argmin(0)].reshape(-1)
 
 
+def _sample_sign_weight_rows(weight: torch.Tensor) -> torch.Tensor:
+    if weight.shape[0] <= _LINEAR_SIGN_WEIGHT_ROWS:
+        return weight
+    indices = torch.linspace(
+        0,
+        weight.shape[0] - 1,
+        _LINEAR_SIGN_WEIGHT_ROWS,
+        device=weight.device,
+    ).round().to(torch.int64)
+    return weight.index_select(0, indices)
+
+
 def _linear_transform(values: torch.Tensor, state: dict[str, Any]) -> torch.Tensor:
-    return _hadamard(
-        values.to(torch.float32) * state["coefficient"],
-        int(state["hadamard"]),
-    )
+    return _hadamard(values.to(torch.float32) * state["coefficient"], state["hadamard"])
 
-
-# =============================================================================
-# Linear: accelerated output-aware calibration
-# =============================================================================
 
 @torch.inference_mode()
 def hif4_calibration_and_quantize_weight(
-    weight_quant: torch.Tensor,
-    weight_scale: torch.Tensor,
-    calib_activation_list: list,
+    weight_quant: torch.Tensor, weight_scale: torch.Tensor, calib_activation_list: list
 ) -> dict[str, Any]:
     weight = dequantize_nvfp4(weight_quant, weight_scale).to(torch.float32)
     activation_parts = [
@@ -686,65 +613,41 @@ def hif4_calibration_and_quantize_weight(
     multiplier = _linear_multiplier(_rms(activation), _rms(weight))
     transformed_activation = activation * multiplier
     transformed_weight = weight / multiplier
-    signs = _select_linear_signs(transformed_activation, transformed_weight)
-    coefficient = multiplier * signs
-    transformed_activation = _hadamard(
-        transformed_activation * signs, _LINEAR_HADAMARD
+    signs = _select_linear_signs(
+        transformed_activation, _sample_sign_weight_rows(transformed_weight)
     )
+    coefficient = multiplier * signs
+    transformed_activation = _hadamard(transformed_activation * signs, _LINEAR_HADAMARD)
     transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
-    transformed_parts = list(torch.split(
-        transformed_activation,
-        [int(part.shape[0]) for part in activation_parts],
-    ))
-    activation_offsets = _select_activation_offsets(transformed_parts)
-    weight_importance = transformed_activation.square().mean(0)
-    (
-        activation_importance,
-        activation_projection,
-        projection_strength,
-    ) = _activation_output_cost_state(transformed_weight)
-    (
-        weight_importance,
-        weight_projection,
-        weight_projection_strength,
-    ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 22,
+        "version": 224,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
-        "importance": activation_importance,
-        "projection": activation_projection,
-        "projection_strength": projection_strength,
-        "activation_offsets": activation_offsets,
     }
-    weight_params = _feedback_quantize_weight(
-        transformed_activation,
-        transformed_weight,
-        activation_importance,
-        activation_projection,
-        projection_strength,
-        activation_offsets,
-        weight_importance,
-        weight_projection,
-        weight_projection_strength,
-    )
+    transformed_activation_parts = [
+        _linear_transform(part, activation_state) for part in activation_parts
+    ]
+    if transformed_activation_parts:
+        quantized_parts = [
+            _dequantize_hif4(_quantize_values(part))
+            for part in transformed_activation_parts
+        ]
+        all_quantized = torch.cat(quantized_parts)
+        weight_params = _block_gptq_weight(
+            all_quantized, transformed_weight
+        )
+    else:
+        importance = transformed_activation.square().mean(0)
+        weight_params = _quantize_values(transformed_weight, importance)
     return {"weight_params": weight_params, "activation_state": activation_state}
 
 
 @torch.inference_mode()
 def hif4_dynamic_quantize_activation(
-    activation_quant: torch.Tensor,
-    activation_scale: torch.Tensor,
-    activation_state: Any,
+    activation_quant: torch.Tensor, activation_scale: torch.Tensor, activation_state: Any
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
-    return _quantize_linear_values(
-        _linear_transform(values, activation_state),
-        activation_state["importance"],
-        offsets=activation_state["activation_offsets"],
-        projection=activation_state["projection"],
-        projection_strength=activation_state["projection_strength"],
-    )
+    return _quantize_values_vec(_linear_transform(values, activation_state))
 
 
 # =============================================================================
@@ -805,7 +708,7 @@ def _quantize_attention_values(
 ) -> dict[str, torch.Tensor]:
     """Select legal scales with an optional per-block energy drift cost."""
     candidates = [
-        _quantize_linear_values(values, offsets=(offset,))
+        _quantize_values_vec(values, offsets=(offset,))
         for offset in offsets
     ]
     if len(candidates) == 1:
@@ -819,7 +722,7 @@ def _quantize_attention_values(
     )
     scores = []
     for params in candidates:
-        reconstructed = _dequantize_linear_params(params).reshape_as(target)
+        reconstructed = _dequantize_hif4(params).reshape_as(target)
         residual_cost = (target - reconstructed).square().sum(-1)
         if energy_penalty:
             energy_drift = target_energy - reconstructed.square().sum(-1)

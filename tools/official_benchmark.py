@@ -362,6 +362,13 @@ def main() -> None:
     parser.add_argument("--dataset-dir", default=str(ROOT / "rand_sample"))
     parser.add_argument("--linear-groups", default="all")
     parser.add_argument("--attn-groups", default="all")
+    parser.add_argument(
+        "--donor-manifest",
+        help=(
+            "optional independent-holdout manifest; calibration/weights stay "
+            "on each receiver while tests come from its shape-matched donor"
+        ),
+    )
     parser.add_argument("--output")
     args = parser.parse_args()
 
@@ -389,11 +396,28 @@ def main() -> None:
             for name, path in zip(modules, solutions)
         },
     }
+    donor_manifest = None
+    if args.donor_manifest:
+        donor_path = Path(args.donor_manifest)
+        donor_manifest = json.loads(donor_path.read_text(encoding="utf-8"))
+        report["donor_manifest"] = str(donor_path.resolve())
 
     dataset_dir = Path(args.dataset_dir)
     linear_data = torch.load(
         dataset_dir / "linear.pt", weights_only=True, map_location="cpu"
     )
+    if donor_manifest is not None:
+        original = linear_data
+        donors = donor_manifest["linear_donors"]
+        linear_data = [
+            {
+                **group,
+                "test_activation_list": original[int(donors[str(group_id)])][
+                    "test_activation_list"
+                ],
+            }
+            for group_id, group in enumerate(original)
+        ]
     linear_ids = parse_ids(args.linear_groups, len(linear_data))
     report["linear_groups"] = linear_ids
     baseline_started = time.perf_counter()
@@ -425,6 +449,16 @@ def main() -> None:
     attention_data = torch.load(
         dataset_dir / "attn.pt", weights_only=True, map_location="cpu"
     )
+    if donor_manifest is not None:
+        original = attention_data
+        donors = donor_manifest["attention_donors"]
+        attention_data = [
+            {
+                **group,
+                "test": original[int(donors[str(group_id)])]["test"],
+            }
+            for group_id, group in enumerate(original)
+        ]
     attention_ids = parse_ids(args.attn_groups, len(attention_data))
     report["attention_groups"] = attention_ids
     baseline_started = time.perf_counter()

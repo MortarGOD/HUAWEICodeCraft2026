@@ -566,3 +566,25 @@ v13 (stable Attention)
 - v28 validation: full random-data format/state checks pass `1100/1100`;
   Attention quantization time is `34.67s` versus v27 `32.80s`. Use a cautious
   online estimate of `17250-17600 / 185-205s`.
+
+## v28 online result and v29 complete Linear transfer
+
+- Confirmed v28 is `17283 / 184s`: score is unchanged from v27 and runtime
+  improves by 8 seconds. The sparse Attention guard therefore has zero current
+  online score coefficient, despite its large random-tail benefit.
+- At explicit user direction, v29 transfers every Linear mechanism from
+  `solution_cxw_v1.py`; this is a complete mechanism port, not the earlier
+  selective-learning branch. v28 Attention is retained and matches exactly on
+  the 25-case official donor comparison.
+- On the online-shaped independent donor panel, v29 Linear is `1119.474`
+  versus v28 `1221.061`. This is negative local evidence, but the transferred
+  Linear implementation is retained because its source submission has the
+  positive hidden-distribution result `17562 / 249s`.
+- On the complete official random suite, v29 combines Linear `3436.684` with
+  v28 Attention `5412.720`, total `8849.404`, versus the source implementation's
+  `-34070.21`. Quantization time is `217.70s`; all groups complete.
+- Score transport remains uncertain because donor and random panels disagree
+  with the source online result. Use a deliberately wide `17000-18100` score
+  forecast and `225-265s` runtime forecast rather than claiming 19000.
+- Final validation: `solution.py` matches `solution_v29.py`, syntax and diff
+  checks pass, and the full random-data format check passes `1100/1100`.

@@ -452,3 +452,36 @@ Acceptance criteria and outcome:
 
 Humanize remains unavailable; the plan and acceptance criteria were refined
 manually before selection.
+
+## v29 complete cxw_v1 Linear transfer
+
+Online anchor v28 is `17283 / 184s`. At the user's explicit direction, v29
+transfers the complete `solution_cxw_v1.py` Linear path rather than selecting
+only individual mechanisms, while retaining v28 Attention behavior.
+
+Candidate DAG:
+
+```text
+v28: bounded low-row energy-ordered Linear + sparse-safe Attention
+  └─ v29: cxw_v1 Linear constants/helpers/calibration/dynamic path
+          + v28 Attention calibration/dynamic path
+```
+
+Transferred Linear mechanisms include exponent-0.39 balance, bounded sign
+search, Hadamard-64, all-calibration activation quantization, contiguous
+block-GPTQ, ridge 0.1, and shape/output-row adaptive propagation width and
+weight offset space. Q(A) remains the source implementation's fixed dynamic
+quantizer; calibration output fitting only produces fixed Q(W).
+
+Acceptance criteria and outcome:
+
+1. Linear source must match the reference implementation except version and
+   Attention-only constants. Passed.
+2. Attention outputs must match v28 on a direct donor comparison. Passed on
+   all 25 checked cases.
+3. Full official random evaluation must complete below 300 seconds with no
+   failures. Passed: score `8849.404`, quantization `217.70s`.
+4. Submission and version file must match and all format checks must pass.
+   Passed: `1100/1100`.
+
+Humanize is unavailable; acceptance criteria were refined manually.
