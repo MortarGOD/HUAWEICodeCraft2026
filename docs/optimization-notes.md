@@ -512,3 +512,30 @@ v13 (stable Attention)
 - Final validation: v25 Attention is byte-identical, `solution.py` matches
   `solution_v26.py`, syntax/diff checks pass, and all `1100/1100` output-format
   checks pass.
+
+## v26 online result and v27 ordering plan
+
+- Confirmed v26 result: `17232 / 183s`, +183 points and +7 seconds versus v25.
+  The controlled local slope contracts from 2.8568 to
+  `183 / 179.696813 = 1.0184` points/proxy-unit. Window/trust capacity remains
+  positive, but linear extrapolation from v25 overestimated the gain.
+- v27 freezes rows 32, window 8, ridge 0.1, trust 0.75, and all Attention code.
+  It tests one structural change: order 64-channel blocks by calibration-side
+  quantized-activation energy before residual propagation, then reconstruct
+  returned parameters in original channel order.
+- This is an independent bounded implementation: it retains the v25/v26
+  low-row trust region and has no all-row solve or shape-dependent propagation
+  thresholds. Natural order remains the exact fallback candidate.
+- Natural-order compatibility passes exactly: disabling energy order reproduces
+  v26 Q(W) tensors bit-for-bit. Descending energy improves raw primary/disjoint
+  by `1.481189/1.385716` and donor by `4.560914/1.167014`; ascending order
+  regresses, validating the ordering direction rather than mere permutation.
+- With energy order, window 16 then 32 improve all four raw/donor views; trust
+  1.0 and rows 64 remain negative. Stop at window 32 because its marginal gain
+  is already small and runtime grows.
+- All-50 v27 Linear proxy is `16134.879950`, +107.548101 versus v26; MSE falls
+  to `21561.046608`, and all ten consecutive batches improve. Local Linear time
+  is `409.06s`; projected online result is `17280-17550 / 195-215s`.
+- Final validation: v26 Attention is byte-identical, natural-order fallback
+  reproduces v26 exactly, submission matches `solution_v27.py`, and all
+  `1100/1100` output-format checks pass.

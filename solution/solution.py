@@ -1,8 +1,8 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 26:
+Version 27:
 - Quantize Linear weights sequentially and propagate a ridge-regularized
-  low-row output residual into eight nearby blocks with a 0.75 trust step.
+  low-row output residual through 32 activation-energy-ordered future blocks.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply one shared 64-wide orthogonal transform so the exact QK product is
   preserved before quantization, with a calibration-only dense-layout gate.
@@ -30,9 +30,11 @@ _LINEAR_BALANCE_EXPONENT = 0.44
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
 _LINEAR_FEEDBACK_ROWS = 32
-_LINEAR_FEEDBACK_WINDOW = 8
+_LINEAR_FEEDBACK_WINDOW = 32
 _LINEAR_FEEDBACK_RIDGE = 0.1
 _LINEAR_FEEDBACK_STEP = 0.75
+_LINEAR_FEEDBACK_ENERGY_ORDER = True
+_LINEAR_FEEDBACK_DESCENDING = True
 
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
@@ -449,13 +451,26 @@ def _residual_feedback_weight(
     channels = int(weight.shape[-1])
     block_count = channels // 64
     work = weight.to(torch.float32).clone()
-    pieces: dict[str, list[torch.Tensor]] = {}
+    if _LINEAR_FEEDBACK_ENERGY_ORDER:
+        block_energy = quantized_activation.reshape(
+            -1, block_count, 64
+        ).square().sum(dim=(0, 2))
+        order = block_energy.argsort(
+            descending=_LINEAR_FEEDBACK_DESCENDING
+        ).tolist()
+    else:
+        order = list(range(block_count))
+    pieces: dict[str, list[torch.Tensor | None]] = {}
     tiny = torch.finfo(torch.float32).tiny
-    for block in range(block_count):
-        start = block * 64
-        stop = start + 64
+    for position, block in enumerate(order):
+        block_indices = torch.arange(
+            block * 64,
+            (block + 1) * 64,
+            device=work.device,
+        )
+        work_block = work.index_select(1, block_indices)
         params = _quantize_linear_values(
-            work[:, start:stop],
+            work_block,
             weight_importance[block:block + 1],
             offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
             projection=weight_projection[:, block:block + 1],
@@ -463,18 +478,25 @@ def _residual_feedback_weight(
         )
         quantized_block = _dequantize_linear_params(params)
         for name, tensor in params.items():
-            pieces.setdefault(name, []).append(tensor)
+            pieces.setdefault(name, [None] * block_count)[block] = tensor
 
-        future_stop = min(
-            channels,
-            stop + _LINEAR_FEEDBACK_WINDOW * 64,
-        )
-        if future_stop <= stop:
+        future_blocks = order[
+            position + 1:position + 1 + _LINEAR_FEEDBACK_WINDOW
+        ]
+        if not future_blocks:
             continue
-        block_activation = activation[:, start:stop]
-        future_activation = activation[:, stop:future_stop]
+        future_indices = torch.cat([
+            torch.arange(
+                future * 64,
+                (future + 1) * 64,
+                device=work.device,
+            )
+            for future in future_blocks
+        ])
+        block_activation = activation.index_select(1, block_indices)
+        future_activation = activation.index_select(1, future_indices)
         output_residual = block_activation @ (
-            work[:, start:stop] - quantized_block
+            work_block - quantized_block
         ).T
         kernel = future_activation @ future_activation.T
         ridge = _LINEAR_FEEDBACK_RIDGE * kernel.diag().mean().clamp_min(tiny)
@@ -485,12 +507,17 @@ def _residual_feedback_weight(
         )
         dual = torch.linalg.solve(kernel + ridge * identity, output_residual)
         correction = (future_activation.T @ dual).T
-        work[:, stop:future_stop].add_(
+        future_weight = work.index_select(1, future_indices)
+        future_weight.add_(
             correction,
             alpha=_LINEAR_FEEDBACK_STEP,
         )
+        work.index_copy_(1, future_indices, future_weight)
     return {
-        name: torch.cat(tensors, dim=-4)
+        name: torch.cat(
+            [tensor for tensor in tensors if tensor is not None],
+            dim=-4,
+        )
         for name, tensors in pieces.items()
     }
 

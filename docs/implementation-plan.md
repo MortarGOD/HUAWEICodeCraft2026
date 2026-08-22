@@ -383,3 +383,39 @@ manually before implementation.
   five-group batch improves. The controlled center estimate is `17562`.
 - Local Linear runtime is `365.30s`, no regression from v25. Preserve v25
   Attention exactly and complete all format checks before push.
+
+## v27 activation-energy ordering
+
+Online anchor v26 is `17232 / 183s`. Its +179.696813 local proxy gain maps to
+only +183 online points, so capacity expansion has reached diminishing returns.
+v27 changes propagation topology while keeping every v26 capacity parameter.
+
+Candidate DAG:
+
+```text
+v26: natural order / rows32 / window8 / trust0.75
+  ├─ descending activation-block energy
+  └─ ascending activation-block energy (diagnostic only)
+```
+
+Acceptance criteria:
+
+1. Returned HiF4 blocks must be restored to original channel order; Q(A) must
+   remain finalized before ordering or output-residual propagation.
+2. Descending order must improve official proxy on groups 0-3 and 4-7 without
+   donor loss approaching the external implementation.
+3. Require all-50 gain on at least 8/10 batches and projected runtime below
+   230 seconds. Otherwise retain v26.
+4. Preserve v26 Attention byte-for-byte and pass all 1100 format checks.
+
+Humanize remains unavailable, so acceptance criteria are refined manually.
+
+### v27 selection outcome
+
+- Descending activation energy beats natural order on both raw and donor
+  primary/disjoint gates; ascending energy regresses and is rejected.
+- Under energy ordering, window 16 and 32 remain positive on all four gates.
+  Select window 32, then stop expansion because marginal gain is diminishing.
+- Reject trust 1.0 and rows 64: both reverse the primary improvement.
+- All-50 proxy improves by `107.548101`, with 10/10 batches positive. Local
+  Linear time grows 12.0%, projecting total online runtime around 202 seconds.
