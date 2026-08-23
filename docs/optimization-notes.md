@@ -607,3 +607,19 @@ v13 (stable Attention)
 - Deterministic full random v30 is `-31395.201` in about `200.63s`; the huge tail recovery is real,
   but historical random/online anti-correlation means it does not justify a
   fabricated 21000+ forecast. The defensible pre-online interval remains wide.
+
+## v31 complementary Q(W)/Q(A) candidate selection
+
+- Online v30 is `17521 / 174s`: +238 points versus v28 while solving v29's
+  runtime regression. This supports output-aware Q(A), but shows low transport
+  from calibration gain to hidden-test gain.
+- v31 evaluates four joint pairs: baseline/aggressive Q(W) crossed with
+  baseline/global Q(A). It scores each of five calibration layouts separately
+  against exact A@W instead of allowing one large layout to dominate.
+- An unconditional second Q(W) doubled donor-panel time and was rejected.
+  Final v31 builds it only for `in_features >= 32 * out_features`; ordinary
+  shapes use the same Q(W) as v30 and require both aggregate and layout gates.
+- Donor groups 0-5 remain exactly equal to v30. Random groups 8-9 improve by
+  `669.646` points, while ordinary groups 2/3/5 improve by `0.694` overall.
+- Full random score is `-30967.769` in `162.70s`, improving v30 by `427.432`.
+  This is a robustness delta, not a direct online-score conversion.

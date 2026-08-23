@@ -1,26 +1,20 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 29 (robustness hardening on top of v28):
-- Output-aware Q(A) scale-candidate selection: choose the Linear activation
-  scale offset set by A@W output MSE (legal in calibration, matching the
-  scoring objective) instead of a pure A reconstruction score.
-- Hadamard guard: skip the Hadamard rotation when it does not reduce the
-  64-element block peak-to-energy ratio (degenerate constant / all-max /
-  single-sign data).
-- Importance guard: fall back to unweighted quantization when the
-  W^T W / A^T A low-rank spectrum estimate collapses (too many zero
-  importance positions), which otherwise corrupts scale selection.
-- RMS-balance guard: skip per-channel RMS balancing when the multiplier
-  varies too much inside a 64-element block, widening intra-block dynamic
-  range and harming HiF4 quantization.
-
-Version 28 baseline:
-- Quantize Linear weights sequentially and propagate a ridge-regularized
-  low-row output residual through 32 activation-energy-ordered future blocks.
+Version 31:
+- Retain v28's fast Linear weight feedback and v28 Attention path.
+- Compress W's dominant global row-space to rank 32 during unrestricted
+  calibration, then use exact held-in A@W loss to gate a sequential Q(A)
+  scale search that captures cross-block cancellation.
+- Preserve v30's aggregate Q(A) gate and add a per-layout robustness gate.
+- Build the second Q(W) candidate only for at least 32:1 compressed Linear
+  shapes, where the block-local v28 cost is structurally incomplete.
+- Jointly select baseline/aggressive Q(W) and baseline/global Q(A) using
+  layout-wise calibration A@W errors, including a worst-layout guard.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
-- Select HiF4 scales by reconstruction error plus bounded energy drift.
+- Select HiF4 scales by reconstruction error plus bounded energy drift; no
+  calibration output is used to tune dynamic Q/K/V quantization.
 """
 
 from __future__ import annotations
@@ -39,14 +33,21 @@ _LINEAR_WEIGHT_SCALE_OFFSETS = (0, 1, 2, 3)
 _LINEAR_PROFILE_MIN_GAIN = 0.005
 _LINEAR_PROFILE_ROWS_PER_SHAPE = 64
 _LINEAR_HADAMARD = 64
-_LINEAR_HADAMARD_MIN_GAIN = 0.02
-_LINEAR_IMPORTANCE_MAX_ZERO_RATIO = 0.2
-_LINEAR_BALANCE_MAX_BLOCK_RATIO = 4.0
 _LINEAR_BALANCE_EXPONENT = 0.44
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
+_LINEAR_GLOBAL_OUTPUT_RANK = 32
+_LINEAR_GLOBAL_SCALE_OFFSETS = (0, 1, 2, 3, 4)
+_LINEAR_GLOBAL_MIN_COMPRESSION = 32
+_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE = 16
 _LINEAR_FEEDBACK_ROWS = 32
 _LINEAR_FEEDBACK_WINDOW = 32
+_LINEAR_AGGRESSIVE_FEEDBACK_ROWS = 48
+_LINEAR_AGGRESSIVE_FEEDBACK_WINDOW = 64
+_LINEAR_JOINT_MIN_GAIN = 0.003
+_LINEAR_JOINT_MAX_LAYOUT_REGRESSION = 1.05
+_LINEAR_JOINT_MIN_WIN_LAYOUTS = 3
+_LINEAR_JOINT_WORST_WEIGHT = 0.25
 _LINEAR_FEEDBACK_RIDGE = 0.1
 _LINEAR_FEEDBACK_STEP = 0.75
 _LINEAR_FEEDBACK_ENERGY_ORDER = True
@@ -396,6 +397,204 @@ def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
     ).flatten(-4, -1)
 
 
+def _global_output_cost_state(
+    transformed_weight: torch.Tensor,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Compress the dominant global W row-space into a legal online sketch."""
+    with torch.random.fork_rng(devices=[]):
+        torch.manual_seed(20260823)
+        _, singular, right = torch.pca_lowrank(
+            transformed_weight.to(torch.float32),
+            q=_LINEAR_GLOBAL_OUTPUT_RANK,
+            center=False,
+            niter=2,
+        )
+    projection = singular[:, None] * right.T
+    diagonal = (
+        transformed_weight.square().sum(0) - projection.square().sum(0)
+    ).clamp_min(0.0)
+    return diagonal, projection
+
+
+def _select_linear_candidate_params(
+    candidates: list[dict[str, torch.Tensor]],
+    choices: torch.Tensor,
+    prefix_dims: int,
+) -> dict[str, torch.Tensor]:
+    result: dict[str, torch.Tensor] = {}
+    for name in candidates[0]:
+        selected = torch.zeros_like(candidates[0][name])
+        tail_dims = selected.ndim - prefix_dims - 1
+        for index, candidate in enumerate(candidates):
+            mask = (choices == index).reshape(
+                *choices.shape,
+                *([1] * tail_dims),
+            )
+            selected = torch.where(mask, candidate[name], selected)
+        result[name] = selected
+    return result
+
+
+def _quantize_linear_global_output(
+    values: torch.Tensor,
+    diagonal: torch.Tensor,
+    projection: torch.Tensor,
+) -> dict[str, torch.Tensor]:
+    """Choose scales sequentially using a low-rank approximation of ||e W.T||."""
+    candidates = [
+        _quantize_linear_values(
+            values,
+            diagonal.reshape(-1, 8, 2, 4),
+            offsets=(offset,),
+        )
+        for offset in _LINEAR_GLOBAL_SCALE_OFFSETS
+    ]
+    reconstructed = [_dequantize_linear_params(params) for params in candidates]
+    block_count = int(values.shape[-1]) // 64
+    prefix = values.shape[:-1]
+    choices = torch.ones(
+        (*prefix, block_count), dtype=torch.int64, device=values.device
+    )
+    current = reconstructed[1].clone()
+    projected = (values.to(torch.float32) - current) @ projection.T
+    order = values.to(torch.float32).reshape(
+        -1, block_count, 64
+    ).square().sum(dim=(0, 2)).argsort(descending=True).tolist()
+    for block in order:
+        start = block * 64
+        stop = start + 64
+        old = current[..., start:stop]
+        scores = []
+        for candidate in reconstructed:
+            new = candidate[..., start:stop]
+            candidate_projected = projected + (old - new) @ projection[:, start:stop].T
+            local = (
+                (values[..., start:stop].to(torch.float32) - new).square()
+                * diagonal[start:stop]
+            ).sum(dim=-1)
+            scores.append(candidate_projected.square().sum(dim=-1) + local)
+        best = torch.stack(scores, dim=-1).argmin(dim=-1)
+        choices[..., block] = best
+        stacked = torch.stack(
+            [candidate[..., start:stop] for candidate in reconstructed], dim=-2
+        )
+        gather_index = best[..., None, None].expand(*best.shape, 1, 64)
+        new = torch.gather(stacked, -2, gather_index).squeeze(-2)
+        projected.add_((old - new) @ projection[:, start:stop].T)
+        current[..., start:stop] = new
+    return _select_linear_candidate_params(candidates, choices, values.ndim - 1)
+
+
+def _global_activation_seed_promising(
+    parts: list[torch.Tensor],
+    transformed_weight: torch.Tensor,
+    weight_params: dict[str, torch.Tensor],
+    activation_state: dict[str, Any],
+) -> bool:
+    """Retain v30's aggregate gate as the first ordinary-shape condition."""
+    sample = torch.cat([
+        _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
+        for part in parts
+    ])
+    baseline = _dequantize_linear_params(_quantize_linear_values(
+        sample,
+        activation_state["importance"],
+        offsets=activation_state["activation_offsets"],
+        projection=activation_state["projection"],
+        projection_strength=activation_state["projection_strength"],
+    ))
+    global_quantized = _dequantize_linear_params(_quantize_linear_global_output(
+        sample,
+        activation_state["global_diagonal"],
+        activation_state["global_projection"],
+    ))
+    quantized_weight = _dequantize_linear_params(weight_params)
+    target = sample @ transformed_weight.T
+    baseline_error = (
+        target - baseline @ quantized_weight.T
+    ).square().mean()
+    global_error = (
+        target - global_quantized @ quantized_weight.T
+    ).square().mean()
+    return bool(
+        global_error
+        < (1.0 - _LINEAR_JOINT_MIN_GAIN) * baseline_error
+    )
+
+
+def _select_joint_linear_policy(
+    parts: list[torch.Tensor],
+    transformed_weight: torch.Tensor,
+    baseline_weight_params: dict[str, torch.Tensor],
+    aggressive_weight_params: dict[str, torch.Tensor],
+    activation_state: dict[str, Any],
+) -> tuple[dict[str, torch.Tensor], bool]:
+    """Select one Q(W),Q(A) pair by robust per-layout calibration output loss."""
+    baseline_weight = _dequantize_linear_params(baseline_weight_params)
+    aggressive_weight = _dequantize_linear_params(aggressive_weight_params)
+    layout_quantized: list[tuple[torch.Tensor, torch.Tensor, torch.Tensor]] = []
+    for part in parts:
+        sample = _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
+        baseline_activation = _dequantize_linear_params(_quantize_linear_values(
+            sample,
+            activation_state["importance"],
+            offsets=activation_state["activation_offsets"],
+            projection=activation_state["projection"],
+            projection_strength=activation_state["projection_strength"],
+        ))
+        global_activation = _dequantize_linear_params(
+            _quantize_linear_global_output(
+                sample,
+                activation_state["global_diagonal"],
+                activation_state["global_projection"],
+            )
+        )
+        layout_quantized.append((
+            sample @ transformed_weight.T,
+            baseline_activation,
+            global_activation,
+        ))
+
+    candidates = (
+        (baseline_weight_params, baseline_weight, False),
+        (aggressive_weight_params, aggressive_weight, False),
+        (baseline_weight_params, baseline_weight, True),
+        (aggressive_weight_params, aggressive_weight, True),
+    )
+    errors = []
+    for _, quantized_weight, use_global in candidates:
+        errors.append(torch.stack([
+            (
+                target
+                - (global_activation if use_global else baseline_activation)
+                @ quantized_weight.T
+            ).square().mean()
+            for target, baseline_activation, global_activation in layout_quantized
+        ]))
+    errors = torch.stack(errors)
+    tiny = torch.finfo(torch.float32).tiny
+    ratios = errors / errors[0].clamp_min(tiny)
+    log_ratios = ratios.clamp_min(tiny).log()
+    robust = log_ratios.mean(dim=1) + _LINEAR_JOINT_WORST_WEIGHT * (
+        log_ratios.max(dim=1).values.clamp_min(0.0)
+    )
+    best_index = 0
+    best_score = robust[0]
+    for index in range(1, len(candidates)):
+        wins = int((ratios[index] < 1.0).sum())
+        if wins < _LINEAR_JOINT_MIN_WIN_LAYOUTS:
+            continue
+        if bool(ratios[index].max() > _LINEAR_JOINT_MAX_LAYOUT_REGRESSION):
+            continue
+        if bool(robust[index] < best_score):
+            best_index = index
+            best_score = robust[index]
+    if bool(best_score >= torch.log(errors.new_tensor(1.0 - _LINEAR_JOINT_MIN_GAIN))):
+        best_index = 0
+    selected_params, _, use_global = candidates[best_index]
+    return selected_params, use_global
+
+
 def _activation_output_cost_state(
     transformed_weight: torch.Tensor,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
@@ -443,38 +642,22 @@ def _activation_output_cost_state(
     )
 
 
-def _importance_healthy(importance: torch.Tensor) -> bool:
-    """Whether a spectrum-derived importance weight is trustworthy.
-
-    On degenerate data (constant / single-sign / all-max blocks) the low-rank
-    spectrum estimate collapses: many positions get zero importance while a
-    few dominate. Using such weights in scale selection corrupts accuracy, so
-    we fall back to unweighted quantization when the zero ratio is too high.
-    """
-    if importance is None:
-        return False
-    imp = importance.to(torch.float32)
-    total = int(imp.numel())
-    if total == 0:
-        return False
-    zeros = int((imp <= 0).sum().item())
-    return (zeros / total) <= _LINEAR_IMPORTANCE_MAX_ZERO_RATIO
-
-
 def _residual_feedback_weight(
     quantized_activation: torch.Tensor,
     weight: torch.Tensor,
     weight_importance: torch.Tensor,
     weight_projection: torch.Tensor,
     weight_projection_strength: torch.Tensor,
+    feedback_rows: int = _LINEAR_FEEDBACK_ROWS,
+    feedback_window: int = _LINEAR_FEEDBACK_WINDOW,
 ) -> dict[str, torch.Tensor]:
     """Propagate each quantized block's output residual into nearby blocks."""
     rows = int(quantized_activation.shape[0])
-    if rows > _LINEAR_FEEDBACK_ROWS:
+    if rows > feedback_rows:
         indices = torch.linspace(
             0,
             rows - 1,
-            _LINEAR_FEEDBACK_ROWS,
+            feedback_rows,
             device=quantized_activation.device,
         ).round().to(torch.int64)
         activation = quantized_activation.index_select(0, indices)
@@ -502,34 +685,19 @@ def _residual_feedback_weight(
             device=work.device,
         )
         work_block = work.index_select(1, block_indices)
-        imp_block = (
-            None
-            if weight_importance is None
-            else weight_importance[block:block + 1]
-        )
-        proj_block = (
-            None
-            if weight_projection is None
-            else weight_projection[:, block:block + 1]
-        )
-        strength_block = (
-            None
-            if weight_projection_strength is None
-            else weight_projection_strength[:, block:block + 1]
-        )
         params = _quantize_linear_values(
             work_block,
-            imp_block,
+            weight_importance[block:block + 1],
             offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
-            projection=proj_block,
-            projection_strength=strength_block,
+            projection=weight_projection[:, block:block + 1],
+            projection_strength=weight_projection_strength[:, block:block + 1],
         )
         quantized_block = _dequantize_linear_params(params)
         for name, tensor in params.items():
             pieces.setdefault(name, [None] * block_count)[block] = tensor
 
         future_blocks = order[
-            position + 1:position + 1 + _LINEAR_FEEDBACK_WINDOW
+            position + 1:position + 1 + feedback_window
         ]
         if not future_blocks:
             continue
@@ -580,6 +748,8 @@ def _feedback_quantize_weight(
     weight_importance: torch.Tensor,
     weight_projection: torch.Tensor,
     weight_projection_strength: torch.Tensor,
+    feedback_rows: int = _LINEAR_FEEDBACK_ROWS,
+    feedback_window: int = _LINEAR_FEEDBACK_WINDOW,
 ) -> dict[str, torch.Tensor]:
     """Fix Q(A), then build one bounded residual-feedback Q(W)."""
     activation_params = _quantize_linear_values(
@@ -596,6 +766,8 @@ def _feedback_quantize_weight(
         weight_importance,
         weight_projection,
         weight_projection_strength,
+        feedback_rows,
+        feedback_window,
     )
 
 
@@ -612,55 +784,31 @@ def _sample_profile_rows(values: torch.Tensor) -> torch.Tensor:
     return values[indices]
 
 
-def _activation_output_score(
+def _activation_reconstruction_score(
     parts: list[torch.Tensor],
-    weight: torch.Tensor,
-    importance: torch.Tensor,
-    projection: torch.Tensor,
-    projection_strength: torch.Tensor,
     offsets: Iterable[int],
 ) -> torch.Tensor:
-    """Q(A) score on the Linear output: MSE of Q(A)@W^T vs A@W^T.
-
-    Uses calibration A and W directly. This is legal in the calibration stage
-    (no restriction per the clarified rules) and matches the exact scoring
-    objective, unlike a pure reconstruction score.
-    """
-    tiny = torch.finfo(torch.float32).tiny
+    """Equal-shape Q(A) reconstruction score; intentionally has no W input."""
     errors = []
     for part in parts:
         sample = _sample_profile_rows(part)
-        params = _quantize_linear_values(
-            sample,
-            importance,
-            offsets=offsets,
-            projection=projection,
-            projection_strength=projection_strength,
-        )
-        quantized = _dequantize_linear_params(params)
-        reference = sample @ weight.T
-        output = quantized @ weight.T
-        error = (reference - output).square().mean()
-        energy = reference.square().mean().clamp_min(tiny)
+        params = _quantize_linear_values(sample, offsets=offsets)
+        reconstructed = _dequantize_linear_params(params)
+        error = (sample - reconstructed).square().mean()
+        energy = sample.square().mean().clamp_min(torch.finfo(torch.float32).tiny)
         errors.append(error / energy)
     return torch.stack(errors).mean()
 
 
 def _select_activation_offsets(
     parts: list[torch.Tensor],
-    weight: torch.Tensor,
-    importance: torch.Tensor,
-    projection: torch.Tensor,
-    projection_strength: torch.Tensor,
 ) -> tuple[int, ...]:
-    """Choose the scale candidate set by Linear output error (A@W aware)."""
-    compact_score = _activation_output_score(
-        parts, weight, importance, projection, projection_strength,
-        _LINEAR_SCALE_OFFSETS,
+    """Choose a synthetic-profile candidate using legal A-only calibration."""
+    compact_score = _activation_reconstruction_score(
+        parts, _LINEAR_SCALE_OFFSETS
     )
-    wide_score = _activation_output_score(
-        parts, weight, importance, projection, projection_strength,
-        _LINEAR_WIDE_SCALE_OFFSETS,
+    wide_score = _activation_reconstruction_score(
+        parts, _LINEAR_WIDE_SCALE_OFFSETS
     )
     if wide_score < (1.0 - _LINEAR_PROFILE_MIN_GAIN) * compact_score:
         return _LINEAR_WIDE_SCALE_OFFSETS
@@ -686,25 +834,6 @@ def _linear_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
     return torch.where(
         (left > 0) & (right > 0), multiplier, torch.ones_like(multiplier)
     )
-
-
-def _rms_balance_healthy(multiplier: torch.Tensor) -> bool:
-    """Whether per-channel RMS balancing is safe for 64-element blocks.
-
-    HiF4 quantizes in 64-element blocks, so a wildly varying multiplier inside
-    a single block widens the intra-block dynamic range and hurts accuracy.
-    Skip balancing when the block-internal max/min ratio is too large.
-    """
-    if multiplier is None:
-        return False
-    m = multiplier.to(torch.float32)
-    channels = int(m.shape[-1])
-    if channels % 64 != 0:
-        return False
-    mb = m.reshape(-1, channels // 64, 64)
-    tiny = torch.finfo(torch.float32).tiny
-    ratio = (mb.max(-1)[0] / mb.min(-1)[0].clamp_min(tiny)).mean()
-    return bool(ratio <= _LINEAR_BALANCE_MAX_BLOCK_RATIO)
 
 
 def _hadamard(values: torch.Tensor, block: int) -> torch.Tensor:
@@ -739,14 +868,7 @@ def _peak_ratio(values: torch.Tensor) -> torch.Tensor:
 def _select_linear_signs(
     activation: torch.Tensor,
     weight: torch.Tensor,
-) -> tuple[torch.Tensor, bool]:
-    """Select Hadamard signs and decide whether Hadamard helps at all.
-
-    Hadamard is only beneficial when it reduces the block peak-to-energy
-    ratio (i.e. disperses outliers). On degenerate data (constant / all-max /
-    single-sign blocks) it can concentrate energy instead and harm accuracy,
-    so we fall back to no rotation in that case.
-    """
+) -> torch.Tensor:
     group_count = activation.shape[-1] // 64
     a = activation.reshape(-1, group_count, 64)
     w = weight.reshape(-1, group_count, 64)
@@ -756,14 +878,7 @@ def _select_linear_signs(
         + _peak_ratio(_hadamard(w * signs, 64))
         for signs in candidates
     ]
-    stack = torch.stack(scores)  # [C, group_count]
-    best_signs = candidates[stack.argmin(0)].reshape(-1)
-    best_peak = stack.min(0)[0]  # [group_count]
-    base_peak = _peak_ratio(a) + _peak_ratio(w)  # [group_count], no Hadamard
-    use_hadamard = bool(
-        best_peak.mean() < base_peak.mean() * (1.0 - _LINEAR_HADAMARD_MIN_GAIN)
-    )
-    return best_signs, use_hadamard
+    return candidates[torch.stack(scores).argmin(0)].reshape(-1)
 
 
 def _linear_transform(values: torch.Tensor, state: dict[str, Any]) -> torch.Tensor:
@@ -790,65 +905,94 @@ def hif4_calibration_and_quantize_weight(
     ]
     activation = torch.cat(activation_parts)
     multiplier = _linear_multiplier(_rms(activation), _rms(weight))
-    if not _rms_balance_healthy(multiplier):
-        multiplier = torch.ones_like(multiplier)
     transformed_activation = activation * multiplier
     transformed_weight = weight / multiplier
-    signs, use_hadamard = _select_linear_signs(
-        transformed_activation, transformed_weight
+    signs = _select_linear_signs(transformed_activation, transformed_weight)
+    coefficient = multiplier * signs
+    transformed_activation = _hadamard(
+        transformed_activation * signs, _LINEAR_HADAMARD
     )
-    if use_hadamard:
-        coefficient = multiplier * signs
-        transformed_activation = _hadamard(
-            transformed_activation * signs, _LINEAR_HADAMARD
-        )
-        transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
-    else:
-        coefficient = multiplier
+    transformed_weight = _hadamard(transformed_weight * signs, _LINEAR_HADAMARD)
     transformed_parts = list(torch.split(
         transformed_activation,
         [int(part.shape[0]) for part in activation_parts],
     ))
+    activation_offsets = _select_activation_offsets(transformed_parts)
+    weight_importance = transformed_activation.square().mean(0)
     (
         activation_importance,
         activation_projection,
         projection_strength,
     ) = _activation_output_cost_state(transformed_weight)
-    act_imp_ok = _importance_healthy(activation_importance)
-    activation_offsets = _select_activation_offsets(
-        transformed_parts,
-        transformed_weight,
-        activation_importance if act_imp_ok else None,
-        activation_projection if act_imp_ok else None,
-        projection_strength if act_imp_ok else None,
+    global_diagonal, global_projection = _global_output_cost_state(
+        transformed_weight
     )
-    weight_importance = transformed_activation.square().mean(0)
     (
         weight_importance,
         weight_projection,
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
-    w_imp_ok = _importance_healthy(weight_importance)
     activation_state = {
-        "version": 22,
+        "version": 31,
         "coefficient": coefficient,
-        "hadamard": _LINEAR_HADAMARD if use_hadamard else 1,
-        "importance": activation_importance if act_imp_ok else None,
-        "projection": activation_projection if act_imp_ok else None,
-        "projection_strength": projection_strength if act_imp_ok else None,
+        "hadamard": _LINEAR_HADAMARD,
+        "importance": activation_importance,
+        "projection": activation_projection,
+        "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
+        "global_diagonal": global_diagonal,
+        "global_projection": global_projection,
     }
-    weight_params = _feedback_quantize_weight(
+    baseline_weight_params = _feedback_quantize_weight(
         transformed_activation,
         transformed_weight,
-        activation_importance if act_imp_ok else None,
-        activation_projection if act_imp_ok else None,
-        projection_strength if act_imp_ok else None,
+        activation_importance,
+        activation_projection,
+        projection_strength,
         activation_offsets,
-        weight_importance if w_imp_ok else None,
-        weight_projection if w_imp_ok else None,
-        weight_projection_strength if w_imp_ok else None,
+        weight_importance,
+        weight_projection,
+        weight_projection_strength,
     )
+    seed_global_output = _global_activation_seed_promising(
+        transformed_parts,
+        transformed_weight,
+        baseline_weight_params,
+        activation_state,
+    )
+    compressed = (
+        int(transformed_weight.shape[-1])
+        >= _LINEAR_GLOBAL_MIN_COMPRESSION
+        * int(transformed_weight.shape[0])
+    )
+    if compressed:
+        aggressive_weight_params = _feedback_quantize_weight(
+            transformed_activation,
+            transformed_weight,
+            activation_importance,
+            activation_projection,
+            projection_strength,
+            activation_offsets,
+            weight_importance,
+            weight_projection,
+            weight_projection_strength,
+            _LINEAR_AGGRESSIVE_FEEDBACK_ROWS,
+            _LINEAR_AGGRESSIVE_FEEDBACK_WINDOW,
+        )
+    else:
+        aggressive_weight_params = baseline_weight_params
+    weight_params, use_global_output = _select_joint_linear_policy(
+        transformed_parts,
+        transformed_weight,
+        baseline_weight_params,
+        aggressive_weight_params,
+        activation_state,
+    )
+    if not compressed and not seed_global_output:
+        weight_params, use_global_output = baseline_weight_params, False
+    if not use_global_output:
+        activation_state.pop("global_diagonal")
+        activation_state.pop("global_projection")
     return {"weight_params": weight_params, "activation_state": activation_state}
 
 
@@ -859,8 +1003,15 @@ def hif4_dynamic_quantize_activation(
     activation_state: Any,
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
+    transformed = _linear_transform(values, activation_state)
+    if activation_state.get("global_projection") is not None:
+        return _quantize_linear_global_output(
+            transformed,
+            activation_state["global_diagonal"],
+            activation_state["global_projection"],
+        )
     return _quantize_linear_values(
-        _linear_transform(values, activation_state),
+        transformed,
         activation_state["importance"],
         offsets=activation_state["activation_offsets"],
         projection=activation_state["projection"],

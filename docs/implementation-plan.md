@@ -518,3 +518,31 @@ Acceptance evidence:
 4. Deterministic full random score is `-31395.201` (`Linear -36807.922`,
    Attention `5412.720`) in about `200.63s`, a large tail improvement over the v27/v28 family
    but not a directly transportable online-score estimate.
+
+## v31 joint Q(W)/Q(A) selection
+
+Online anchor v30 is `17521 / 174s`. v31 tests the complementary-error
+hypothesis without paying v29's unconditional Q(W) cost.
+
+```text
+v30 baseline Q(W), baseline Q(A)
+  ├─ baseline Q(W), global Q(A)
+  ├─ aggressive Q(W), baseline Q(A)   (compression >= 32:1 only)
+  └─ aggressive Q(W), global Q(A)     (compression >= 32:1 only)
+        ↓
+aggregate A@W gate + five-layout robust gate
+```
+
+The robust gate requires at least three improving layouts, no layout worse
+than 5%, and at least 0.3% robust geometric gain. Ordinary shapes must also
+pass v30's aggregate gate. This preserves v30's generalization behavior while
+allowing Q(W)/Q(A) error cancellation only where it is consistent.
+
+Evidence:
+
+1. Online-shaped donor groups 0-5 remain exactly equal to v30/v28.
+2. Random groups 2/3/5 change `236.701 -> 237.395` with essentially equal
+   runtime; group 2 and 5 preserve v30 while group 3 rejects its regression.
+3. Compression groups 8/9 improve `-4741.572 -> -4071.926`.
+4. Full random score improves `-31395.201 -> -30967.769`; quantization time is
+   `162.70s` in the final run and all scoring groups complete.
