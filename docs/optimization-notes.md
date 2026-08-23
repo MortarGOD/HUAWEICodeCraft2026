@@ -588,3 +588,22 @@ v13 (stable Attention)
   forecast and `225-265s` runtime forecast rather than claiming 19000.
 - Final validation: `solution.py` matches `solution_v29.py`, syntax and diff
   checks pass, and the full random-data format check passes `1100/1100`.
+
+## v29 online rejection and v30 global output-aware Q(A)
+
+- v29 online is `17578 / 272s`; discard all of its Linear changes as the next
+  base because the +295 score over v28 costs +88 seconds.
+- v30 starts byte-for-byte from v28, then adds a rank-32 approximation of the
+  global W row-space. Online Q(A) performs a sequential five-offset search
+  against that sketch, capturing cross-block output-error cancellation that
+  v28's independent block costs cannot represent.
+- Exact calibration A@W is used after Q(W) is fixed to compare the new policy
+  with v28. Ordinary shapes keep the new policy only above a 0.3% calibration
+  MSE margin; `in_features >= 32 * out_features` forces it because the local
+  block model is structurally weak in that low-rank regime.
+- Independent donor groups 0-5 remain exactly equal to v28 (`1881.130` total),
+  while deterministic random groups 0-5 improve `421.077 -> 432.973`. Random
+  compression groups 8-9 improve from `-25870.818` to `-4741.572`.
+- Deterministic full random v30 is `-31395.201` in about `200.63s`; the huge tail recovery is real,
+  but historical random/online anti-correlation means it does not justify a
+  fabricated 21000+ forecast. The defensible pre-online interval remains wide.

@@ -485,3 +485,36 @@ Acceptance criteria and outcome:
    Passed: `1100/1100`.
 
 Humanize is unavailable; acceptance criteria were refined manually.
+
+## v30 calibration-output-gated global Q(A)
+
+v29 is rejected as a submission base after the online result `17578 / 272s`:
+relative to v28 it costs 88 seconds for 295 points. v30 therefore starts from
+v28 and preserves its weight and Attention paths.
+
+Candidate DAG:
+
+```text
+v28
+  ├─ reject: fixed Q(A) offsets/gains (no held-out benefit)
+  ├─ reject: output-selected signs (score loss, doubled local time)
+  ├─ reject: unconditional rank-32 Q(A) (ordinary donor regression)
+  └─ v30: rank-32 global W row-space Q(A)
+          ├─ force only when in_features >= 32 * out_features
+          └─ otherwise require exact calibration A@W MSE gain
+```
+
+The online path uses only A and a rank-32 W row-space sketch learned during
+calibration. It never stores W or computes test A@W. The gate compares the
+joint output MSE of v28 Q(A) and the global policy against calibration truth
+after Q(W) has been fixed.
+
+Acceptance evidence:
+
+1. Six online-shaped donor groups are exactly equal to v28 after the gate.
+2. Six ordinary random groups improve `421.077 -> 432.973` Linear points.
+3. Two strong-compression tails improve `-25870.818 -> -4741.572` while the
+   ten-group quantization time remains essentially flat.
+4. Deterministic full random score is `-31395.201` (`Linear -36807.922`,
+   Attention `5412.720`) in about `200.63s`, a large tail improvement over the v27/v28 family
+   but not a directly transportable online-score estimate.
