@@ -1,15 +1,14 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 31:
+Version 32:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant global row-space to rank 32 during unrestricted
   calibration, then use exact held-in A@W loss to gate a sequential Q(A)
   scale search that captures cross-block cancellation.
-- Preserve v30's aggregate Q(A) gate and add a per-layout robustness gate.
-- Build the second Q(W) candidate only for at least 32:1 compressed Linear
-  shapes, where the block-local v28 cost is structurally incomplete.
-- Jointly select baseline/aggressive Q(W) and baseline/global Q(A) using
-  layout-wise calibration A@W errors, including a worst-layout guard.
+- Preserve v30's single fast Q(W), then select baseline/global Q(A) separately
+  for each calibrated row layout using exact A@W loss.
+- Batch the calibration comparison across layouts and use a stricter margin
+  for tiny layouts; online selection is a constant-time row-count lookup.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -42,12 +41,10 @@ _LINEAR_GLOBAL_MIN_COMPRESSION = 32
 _LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE = 16
 _LINEAR_FEEDBACK_ROWS = 32
 _LINEAR_FEEDBACK_WINDOW = 32
-_LINEAR_AGGRESSIVE_FEEDBACK_ROWS = 48
-_LINEAR_AGGRESSIVE_FEEDBACK_WINDOW = 64
-_LINEAR_JOINT_MIN_GAIN = 0.003
-_LINEAR_JOINT_MAX_LAYOUT_REGRESSION = 1.05
-_LINEAR_JOINT_MIN_WIN_LAYOUTS = 3
-_LINEAR_JOINT_WORST_WEIGHT = 0.25
+_LINEAR_GLOBAL_SELECT_MIN_GAIN = 0.003
+_LINEAR_GLOBAL_LAYOUT_MIN_GAIN = 0.005
+_LINEAR_GLOBAL_TINY_LAYOUT_MIN_GAIN = 0.02
+_LINEAR_GLOBAL_TINY_LAYOUT_ROWS = 16
 _LINEAR_FEEDBACK_RIDGE = 0.1
 _LINEAR_FEEDBACK_STEP = 0.75
 _LINEAR_FEEDBACK_ENERGY_ORDER = True
@@ -485,17 +482,18 @@ def _quantize_linear_global_output(
     return _select_linear_candidate_params(candidates, choices, values.ndim - 1)
 
 
-def _global_activation_seed_promising(
+def _select_global_activation_layouts(
     parts: list[torch.Tensor],
     transformed_weight: torch.Tensor,
     weight_params: dict[str, torch.Tensor],
     activation_state: dict[str, Any],
-) -> bool:
-    """Retain v30's aggregate gate as the first ordinary-shape condition."""
-    sample = torch.cat([
+) -> dict[str, bool]:
+    """Select a fixed Q(A) policy for each calibrated row-count layout."""
+    samples = [
         _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
         for part in parts
-    ])
+    ]
+    sample = torch.cat(samples)
     baseline = _dequantize_linear_params(_quantize_linear_values(
         sample,
         activation_state["importance"],
@@ -516,83 +514,43 @@ def _global_activation_seed_promising(
     global_error = (
         target - global_quantized @ quantized_weight.T
     ).square().mean()
-    return bool(
+    aggregate_global = bool(
         global_error
-        < (1.0 - _LINEAR_JOINT_MIN_GAIN) * baseline_error
+        < (1.0 - _LINEAR_GLOBAL_SELECT_MIN_GAIN) * baseline_error
     )
 
-
-def _select_joint_linear_policy(
-    parts: list[torch.Tensor],
-    transformed_weight: torch.Tensor,
-    baseline_weight_params: dict[str, torch.Tensor],
-    aggressive_weight_params: dict[str, torch.Tensor],
-    activation_state: dict[str, Any],
-) -> tuple[dict[str, torch.Tensor], bool]:
-    """Select one Q(W),Q(A) pair by robust per-layout calibration output loss."""
-    baseline_weight = _dequantize_linear_params(baseline_weight_params)
-    aggressive_weight = _dequantize_linear_params(aggressive_weight_params)
-    layout_quantized: list[tuple[torch.Tensor, torch.Tensor, torch.Tensor]] = []
-    for part in parts:
-        sample = _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
-        baseline_activation = _dequantize_linear_params(_quantize_linear_values(
-            sample,
-            activation_state["importance"],
-            offsets=activation_state["activation_offsets"],
-            projection=activation_state["projection"],
-            projection_strength=activation_state["projection_strength"],
-        ))
-        global_activation = _dequantize_linear_params(
-            _quantize_linear_global_output(
-                sample,
-                activation_state["global_diagonal"],
-                activation_state["global_projection"],
-            )
+    policies: dict[str, bool] = {}
+    layout_counts: dict[int, int] = {}
+    start = 0
+    for part, sampled in zip(parts, samples):
+        stop = start + int(sampled.shape[0])
+        baseline_layout_error = (
+            target[start:stop] - baseline[start:stop] @ quantized_weight.T
+        ).square().mean()
+        global_layout_error = (
+            target[start:stop] - global_quantized[start:stop] @ quantized_weight.T
+        ).square().mean()
+        rows = int(part.shape[0])
+        layout_counts[rows] = layout_counts.get(rows, 0) + 1
+        margin = (
+            _LINEAR_GLOBAL_TINY_LAYOUT_MIN_GAIN
+            if rows < _LINEAR_GLOBAL_TINY_LAYOUT_ROWS
+            else _LINEAR_GLOBAL_LAYOUT_MIN_GAIN
         )
-        layout_quantized.append((
-            sample @ transformed_weight.T,
-            baseline_activation,
-            global_activation,
-        ))
+        selected = aggregate_global and bool(
+            global_layout_error < (1.0 - margin) * baseline_layout_error
+        )
+        policies[str(rows)] = selected
+        start = stop
 
-    candidates = (
-        (baseline_weight_params, baseline_weight, False),
-        (aggressive_weight_params, aggressive_weight, False),
-        (baseline_weight_params, baseline_weight, True),
-        (aggressive_weight_params, aggressive_weight, True),
-    )
-    errors = []
-    for _, quantized_weight, use_global in candidates:
-        errors.append(torch.stack([
-            (
-                target
-                - (global_activation if use_global else baseline_activation)
-                @ quantized_weight.T
-            ).square().mean()
-            for target, baseline_activation, global_activation in layout_quantized
-        ]))
-    errors = torch.stack(errors)
-    tiny = torch.finfo(torch.float32).tiny
-    ratios = errors / errors[0].clamp_min(tiny)
-    log_ratios = ratios.clamp_min(tiny).log()
-    robust = log_ratios.mean(dim=1) + _LINEAR_JOINT_WORST_WEIGHT * (
-        log_ratios.max(dim=1).values.clamp_min(0.0)
-    )
-    best_index = 0
-    best_score = robust[0]
-    for index in range(1, len(candidates)):
-        wins = int((ratios[index] < 1.0).sum())
-        if wins < _LINEAR_JOINT_MIN_WIN_LAYOUTS:
-            continue
-        if bool(ratios[index].max() > _LINEAR_JOINT_MAX_LAYOUT_REGRESSION):
-            continue
-        if bool(robust[index] < best_score):
-            best_index = index
-            best_score = robust[index]
-    if bool(best_score >= torch.log(errors.new_tensor(1.0 - _LINEAR_JOINT_MIN_GAIN))):
-        best_index = 0
-    selected_params, _, use_global = candidates[best_index]
-    return selected_params, use_global
+    for rows, count in layout_counts.items():
+        if count > 1:
+            policies[str(rows)] = aggregate_global
+
+    # The aggregate v30 decision remains a conservative fallback for row
+    # layouts not represented by calibration data.
+    policies["fallback"] = aggregate_global
+    return policies
 
 
 def _activation_output_cost_state(
@@ -933,7 +891,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 31,
+        "version": 32,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -943,7 +901,7 @@ def hif4_calibration_and_quantize_weight(
         "global_diagonal": global_diagonal,
         "global_projection": global_projection,
     }
-    baseline_weight_params = _feedback_quantize_weight(
+    weight_params = _feedback_quantize_weight(
         transformed_activation,
         transformed_weight,
         activation_importance,
@@ -954,45 +912,27 @@ def hif4_calibration_and_quantize_weight(
         weight_projection,
         weight_projection_strength,
     )
-    seed_global_output = _global_activation_seed_promising(
-        transformed_parts,
-        transformed_weight,
-        baseline_weight_params,
-        activation_state,
-    )
     compressed = (
         int(transformed_weight.shape[-1])
         >= _LINEAR_GLOBAL_MIN_COMPRESSION
         * int(transformed_weight.shape[0])
     )
     if compressed:
-        aggressive_weight_params = _feedback_quantize_weight(
-            transformed_activation,
-            transformed_weight,
-            activation_importance,
-            activation_projection,
-            projection_strength,
-            activation_offsets,
-            weight_importance,
-            weight_projection,
-            weight_projection_strength,
-            _LINEAR_AGGRESSIVE_FEEDBACK_ROWS,
-            _LINEAR_AGGRESSIVE_FEEDBACK_WINDOW,
-        )
+        activation_state["global_layouts"] = {
+            **{str(int(part.shape[0])): True for part in transformed_parts},
+            "fallback": True,
+        }
     else:
-        aggressive_weight_params = baseline_weight_params
-    weight_params, use_global_output = _select_joint_linear_policy(
-        transformed_parts,
-        transformed_weight,
-        baseline_weight_params,
-        aggressive_weight_params,
-        activation_state,
-    )
-    if not compressed and not seed_global_output:
-        weight_params, use_global_output = baseline_weight_params, False
-    if not use_global_output:
+        activation_state["global_layouts"] = _select_global_activation_layouts(
+            transformed_parts,
+            transformed_weight,
+            weight_params,
+            activation_state,
+        )
+    if not any(activation_state["global_layouts"].values()):
         activation_state.pop("global_diagonal")
         activation_state.pop("global_projection")
+        activation_state.pop("global_layouts")
     return {"weight_params": weight_params, "activation_state": activation_state}
 
 
@@ -1004,7 +944,12 @@ def hif4_dynamic_quantize_activation(
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
     transformed = _linear_transform(values, activation_state)
-    if activation_state.get("global_projection") is not None:
+    rows = int(values.numel()) // int(values.shape[-1])
+    global_layouts = activation_state.get("global_layouts", {})
+    use_global = global_layouts.get(
+        str(rows), global_layouts.get("fallback", False)
+    )
+    if use_global and activation_state.get("global_projection") is not None:
         return _quantize_linear_global_output(
             transformed,
             activation_state["global_diagonal"],

@@ -546,3 +546,35 @@ Evidence:
 3. Compression groups 8/9 improve `-4741.572 -> -4071.926`.
 4. Full random score improves `-31395.201 -> -30967.769`; quantization time is
    `162.70s` in the final run and all scoring groups complete.
+
+## v32 row-layout Q(A) policy
+
+The confirmed v31 result is `17493 / 202s`, versus v30 `17521 / 174s`.
+Therefore the aggressive strong-compression Q(W) candidate and the repeated
+five-layout joint scorer are rejected: the local tail gain did not transfer,
+while their runtime cost did.
+
+```text
+v30: one fast Q(W) + one aggregate baseline/global Q(A) gate
+  └─ v32: preserve the same Q(W)
+      ├─ aggregate gate remains mandatory
+      ├─ separately reject global Q(A) for identifiable row layouts
+      ├─ use a 2% margin below 16 rows and 0.5% otherwise
+      └─ duplicate/unknown row layouts fall back to the aggregate decision
+```
+
+Acceptance criteria and outcome:
+
+1. Remove v31's second Q(W) and per-layout joint candidate loop. Passed.
+2. Preserve v30 exactly when the aggregate gate rejects, when layouts are not
+   identifiable by row count, and on strong-compression fallback shapes.
+3. Independent donor groups 0-7 are case-for-case identical to v30; their
+   Linear total is `2496.869`. The local runtime delta is about 2%.
+4. Full random score is `-31392.796` (`Linear -36805.516`, Attention
+   `5412.720`) in `156.34s`, a small `+2.405` over v30 rather than a claimed
+   online-score predictor. All random groups complete without failure.
+5. Submission state uses string keys only and must pass all 1100 format checks
+   before push.
+
+Humanize remains unavailable; the executable steps and acceptance criteria
+were refined manually.

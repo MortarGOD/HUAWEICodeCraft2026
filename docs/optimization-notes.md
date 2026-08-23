@@ -623,3 +623,22 @@ v13 (stable Attention)
   `669.646` points, while ordinary groups 2/3/5 improve by `0.694` overall.
 - Full random score is `-30967.769` in `162.70s`, improving v30 by `427.432`.
   This is a robustness delta, not a direct online-score conversion.
+
+## v31 online result and v32 layout gate
+
+- Confirmed v31 is `17493 / 202s`: `-28` points and `+28s` versus v30. This
+  rejects the v31 aggressive Q(W) branch and repeated robust joint selection;
+  the strong random-tail improvement is anti-correlated with the hidden set.
+- v32 returns to v30's one bounded-feedback Q(W). Exact calibration `A@W`
+  first applies v30's aggregate baseline/global Q(A) gate, then permits each
+  uniquely identifiable activation row layout to reject the global policy.
+  Thus layout fitting is a conservative refinement, not an independent route
+  around the online-positive v30 gate.
+- Tiny layouts below 16 rows require 2% calibration improvement; ordinary
+  layouts require 0.5%. Repeated row counts and unseen row counts use the
+  aggregate decision because calibration sample identity cannot be recovered
+  from the online activation shape.
+- Online-shaped donor groups 0-7 are exactly equal to v30. Full random score
+  changes only `-31395.201 -> -31392.796`, while quantization time is
+  `156.34s`. Treat v32 as a low-risk online probe of layout-conditioned Q(A),
+  not as evidence for a large score forecast.
