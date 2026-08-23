@@ -578,3 +578,42 @@ Acceptance criteria and outcome:
 
 Humanize remains unavailable; the executable steps and acceptance criteria
 were refined manually.
+
+## v33 joint W/Q(W) output-space optimization
+
+The confirmed v32 result is `17507 / 188s`, so its layout-conditioned gate is
+not a useful continuation. v33 returns to v30's Q(W) and changes the Q(A)
+objective itself.
+
+```text
+v30: fixed Q(W) + rank-32 ||(A-Q(A))W.T||
+  └─ v33: fixed Q(W)
+      ├─ project W and Q(W) into the same rank-2048 output subspace
+      ├─ minimize ||A W.T - Q(A) Q(W).T|| by block coordinates
+      ├─ exact calibration A@W selects baseline/rank-32/joint policy
+      ├─ 3 sweeps for rows <= 512; 1 sweep for longer activations
+      └─ batched candidates + QR-only tall-matrix subspace acceleration
+```
+
+Acceptance criteria and evidence:
+
+1. Preserve v30's Q(W) and v28 Attention, so the new evidence isolates Q(A).
+   Passed.
+2. Require positive transfer on two disjoint donor batches. Passed:
+   `+81.253` on groups 0-7 and `+95.021` on groups 8-15, with no selected
+   group regression.
+3. Exceed a calibrated 19000 online estimate. Passed: the 16-group mean delta,
+   expanded to 50 Linear groups and mapped with the historical coefficient,
+   predicts `19095` from the v30 online anchor.
+4. Avoid an unconditional multi-sweep cost on the largest row layout. Passed:
+   1024-row cases use one sweep; shorter equal-weight cases use three.
+5. Validate all output/state constraints before push. Passed `1100/1100` on
+   the complete random suite.
+
+Candidate DAG decision: continue v30 -> v33. Reject v32's row-layout gate,
+rank-4096 PCA (lower donor score and higher cost), adaptive Attention energy
+profiles (donor regression), ascending coordinate order, and unconditional
+second Q(W). Retain the strong-compression alternating Q(W) branch only behind
+its existing exact robust calibration gate.
+
+Humanize remains unavailable; acceptance criteria were refined manually.

@@ -642,3 +642,33 @@ v13 (stable Attention)
   changes only `-31395.201 -> -31392.796`, while quantization time is
   `156.34s`. Treat v32 as a low-risk online probe of layout-conditioned Q(A),
   not as evidence for a large score forecast.
+
+## v32 online result and v33 joint output objective
+
+- Confirmed v32 is `17507 / 188s`: only `-14` points and `+14s` versus v30.
+  The row-layout gate is therefore rejected; it neither improves hidden score
+  nor runtime.
+- v33 keeps v30's online-positive Q(W), but after Q(W) is fixed it sketches W
+  and Q(W) separately in a rank-2048 output subspace. Dynamic Q(A) minimizes
+  the joint approximation of `||A W.T - Q(A) Q(W).T||`, rather than v30's
+  incomplete `||(A-Q(A)) W.T||` objective.
+- The original rank-32 policy remains an independently recomputed fallback.
+  Exact calibration `A@W` selects baseline, rank-32, or joint Q(A), requiring
+  at least three improving layouts and at most 10% layout regression.
+- Independent donor groups 0-7 improve `2496.869 -> 2578.122` (`+81.253`);
+  disjoint groups 8-15 improve `2331.214 -> 2426.235` (`+95.021`). Every
+  selected donor group is non-regressing, unlike the v31/v32 mechanisms.
+- Three coordinate sweeps are used only up to 512 rows; 1024-row activations
+  use one sweep because each case has equal score weight while compute scales
+  with row count. Eight scale candidates are evaluated in a batched row
+  chunk, and repeated candidates are pre-stacked on bounded-width layouts.
+- For tall W, the final small SVD in randomized PCA is only an orthogonal
+  rotation of the same output subspace and is omitted. Full-column-rank cases
+  use direct QR. Wide W retains `pca_lowrank`, preserving the objective.
+- Transporting the mean 16-group donor delta across 50 Linear groups with the
+  historical v25 coefficient gives a center estimate of `19095`, versus the
+  v30 anchor `17521`. This is the first leakage-free local estimate above the
+  requested 19000 threshold. Runtime remains the main risk; local batch ratios
+  imply an online range near the 300-second boundary.
+- The official full random-suite format/state check passes `1100/1100` with
+  no invalid parameters, state nodes, dtypes, NaN/Inf values, or failed groups.

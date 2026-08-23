@@ -1,14 +1,13 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 32:
+Version 33:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
-- Compress W's dominant global row-space to rank 32 during unrestricted
-  calibration, then use exact held-in A@W loss to gate a sequential Q(A)
-  scale search that captures cross-block cancellation.
-- Preserve v30's single fast Q(W), then select baseline/global Q(A) separately
-  for each calibrated row layout using exact A@W loss.
-- Batch the calibration comparison across layouts and use a stricter margin
-  for tiny layouts; online selection is a constant-time row-count lookup.
+- Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
+  project W and Q(W) separately so the sequential Q(A) search approximates
+  the actual joint error ||A W.T - Q(A) Q(W).T||.
+- Force that global policy for strongly compressed Linear shapes where the
+  block-local v28 cost is structurally incomplete; reject it elsewhere unless
+  calibration output MSE improves by a margin.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -35,16 +34,21 @@ _LINEAR_HADAMARD = 64
 _LINEAR_BALANCE_EXPONENT = 0.44
 _LINEAR_POWER_ITERS = 3
 _LINEAR_OUTPUT_RANK = 4
-_LINEAR_GLOBAL_OUTPUT_RANK = 32
-_LINEAR_GLOBAL_SCALE_OFFSETS = (0, 1, 2, 3, 4)
+_LINEAR_GLOBAL_OUTPUT_RANK = 2048
+_LINEAR_GLOBAL_SCALE_OFFSETS = (0, 1, 2, 3, 4, 5, 6, 7)
+_LINEAR_GLOBAL_JOINT_SWEEPS = 3
+_LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS = 512
+_LINEAR_GLOBAL_ROW_CHUNK = 32
 _LINEAR_GLOBAL_MIN_COMPRESSION = 32
 _LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE = 16
+_LINEAR_GLOBAL_SELECT_MIN_GAIN = 0.003
+_LINEAR_GLOBAL_JOINT_MAX_LAYOUT_REGRESSION = 1.10
+_LINEAR_GLOBAL_JOINT_MIN_WIN_LAYOUTS = 3
+_LINEAR_ALTERNATING_MIN_GAIN = 0.005
+_LINEAR_ALTERNATING_MAX_LAYOUT_REGRESSION = 1.05
+_LINEAR_ALTERNATING_MIN_WIN_LAYOUTS = 3
 _LINEAR_FEEDBACK_ROWS = 32
 _LINEAR_FEEDBACK_WINDOW = 32
-_LINEAR_GLOBAL_SELECT_MIN_GAIN = 0.003
-_LINEAR_GLOBAL_LAYOUT_MIN_GAIN = 0.005
-_LINEAR_GLOBAL_TINY_LAYOUT_MIN_GAIN = 0.02
-_LINEAR_GLOBAL_TINY_LAYOUT_ROWS = 16
 _LINEAR_FEEDBACK_RIDGE = 0.1
 _LINEAR_FEEDBACK_STEP = 0.75
 _LINEAR_FEEDBACK_ENERGY_ORDER = True
@@ -396,21 +400,139 @@ def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
 
 def _global_output_cost_state(
     transformed_weight: torch.Tensor,
-) -> tuple[torch.Tensor, torch.Tensor]:
-    """Compress the dominant global W row-space into a legal online sketch."""
+    quantized_weight: torch.Tensor,
+) -> tuple[
+    torch.Tensor,
+    torch.Tensor,
+    torch.Tensor,
+    torch.Tensor,
+    torch.Tensor,
+    torch.Tensor,
+]:
+    """Build a joint low-rank sketch of W and its already fixed Q(W)."""
+    rank = min(
+        _LINEAR_GLOBAL_OUTPUT_RANK,
+        int(transformed_weight.shape[0]),
+        int(transformed_weight.shape[1]),
+    )
+    work = transformed_weight.to(torch.float32)
     with torch.random.fork_rng(devices=[]):
         torch.manual_seed(20260823)
-        _, singular, right = torch.pca_lowrank(
-            transformed_weight.to(torch.float32),
-            q=_LINEAR_GLOBAL_OUTPUT_RANK,
-            center=False,
-            niter=2,
-        )
-    projection = singular[:, None] * right.T
-    diagonal = (
-        transformed_weight.square().sum(0) - projection.square().sum(0)
+        if work.shape[0] >= work.shape[1]:
+            if rank == work.shape[1]:
+                basis = torch.linalg.qr(work).Q
+            else:
+                random = torch.randn(
+                    work.shape[1], rank, dtype=work.dtype, device=work.device
+                )
+                basis = torch.linalg.qr(work @ random).Q
+                basis = torch.linalg.qr(work.T @ basis).Q
+                basis = torch.linalg.qr(work @ basis).Q
+            target_projection = basis.T @ work
+            quantized_projection = (
+                basis.T @ quantized_weight.to(torch.float32)
+            )
+        else:
+            left, singular, right = torch.pca_lowrank(
+                work,
+                q=rank,
+                center=False,
+                niter=1,
+            )
+            target_projection = singular[:, None] * right.T
+            quantized_projection = (
+                left.T @ quantized_weight.to(torch.float32)
+            )
+    original_rank = min(32, rank)
+    if rank > original_rank:
+        with torch.random.fork_rng(devices=[]):
+            torch.manual_seed(20260823)
+            _, original_singular, original_right = torch.pca_lowrank(
+                transformed_weight.to(torch.float32),
+                q=original_rank,
+                center=False,
+                niter=2,
+            )
+        original_projection = original_singular[:, None] * original_right.T
+    else:
+        original_projection = target_projection
+    target_diagonal = (
+        transformed_weight.square().sum(0)
+        - original_projection.square().sum(0)
     ).clamp_min(0.0)
-    return diagonal, projection
+    cross_diagonal = (
+        (transformed_weight * quantized_weight).sum(0)
+        - (target_projection * quantized_projection).sum(0)
+    )
+    quantized_diagonal = (
+        quantized_weight.square().sum(0)
+        - quantized_projection.square().sum(0)
+    ).clamp_min(0.0)
+    return (
+        target_diagonal,
+        original_projection,
+        cross_diagonal,
+        quantized_diagonal,
+        target_projection,
+        quantized_projection,
+    )
+
+
+def _quantize_linear_original_global_output(
+    values: torch.Tensor,
+    diagonal: torch.Tensor,
+    projection: torch.Tensor,
+) -> dict[str, torch.Tensor]:
+    """Retain v30's ||(A-Q(A))W.T|| candidate as an exact fallback."""
+    candidates = [
+        _quantize_linear_values(
+            values,
+            diagonal.reshape(-1, 8, 2, 4),
+            offsets=(offset,),
+        )
+        for offset in _LINEAR_GLOBAL_SCALE_OFFSETS
+    ]
+    reconstructed = [_dequantize_linear_params(params) for params in candidates]
+    block_count = int(values.shape[-1]) // 64
+    prefix = values.shape[:-1]
+    initial_index = _LINEAR_GLOBAL_SCALE_OFFSETS.index(1)
+    choices = torch.full(
+        (*prefix, block_count),
+        fill_value=initial_index,
+        dtype=torch.int64,
+        device=values.device,
+    )
+    current = reconstructed[initial_index].clone()
+    values_float = values.to(torch.float32)
+    projected = (values_float - current) @ projection.T
+    order = values_float.reshape(
+        -1, block_count, 64
+    ).square().sum(dim=(0, 2)).argsort(descending=True).tolist()
+    for block in order:
+        start = block * 64
+        stop = start + 64
+        old = current[..., start:stop]
+        scores = []
+        for candidate in reconstructed:
+            new = candidate[..., start:stop]
+            candidate_projected = (
+                projected + (old - new) @ projection[:, start:stop].T
+            )
+            local = (
+                (values_float[..., start:stop] - new).square()
+                * diagonal[start:stop]
+            ).sum(dim=-1)
+            scores.append(candidate_projected.square().sum(dim=-1) + local)
+        best = torch.stack(scores, dim=-1).argmin(dim=-1)
+        choices[..., block] = best
+        stacked = torch.stack(
+            [candidate[..., start:stop] for candidate in reconstructed], dim=-2
+        )
+        gather_index = best[..., None, None].expand(*best.shape, 1, 64)
+        new = torch.gather(stacked, -2, gather_index).squeeze(-2)
+        projected.add_((old - new) @ projection[:, start:stop].T)
+        current[..., start:stop] = new
+    return _select_linear_candidate_params(candidates, choices, values.ndim - 1)
 
 
 def _select_linear_candidate_params(
@@ -434,14 +556,16 @@ def _select_linear_candidate_params(
 
 def _quantize_linear_global_output(
     values: torch.Tensor,
-    diagonal: torch.Tensor,
-    projection: torch.Tensor,
+    cross_diagonal: torch.Tensor,
+    quantized_diagonal: torch.Tensor,
+    target_projection: torch.Tensor,
+    quantized_projection: torch.Tensor,
 ) -> dict[str, torch.Tensor]:
-    """Choose scales sequentially using a low-rank approximation of ||e W.T||."""
+    """Approximately minimize ||A W.T - Q(A) Q(W).T|| sequentially."""
     candidates = [
         _quantize_linear_values(
             values,
-            diagonal.reshape(-1, 8, 2, 4),
+            quantized_diagonal.reshape(-1, 8, 2, 4),
             offsets=(offset,),
         )
         for offset in _LINEAR_GLOBAL_SCALE_OFFSETS
@@ -449,46 +573,95 @@ def _quantize_linear_global_output(
     reconstructed = [_dequantize_linear_params(params) for params in candidates]
     block_count = int(values.shape[-1]) // 64
     prefix = values.shape[:-1]
-    choices = torch.ones(
-        (*prefix, block_count), dtype=torch.int64, device=values.device
+    initial_index = _LINEAR_GLOBAL_SCALE_OFFSETS.index(1)
+    choices = torch.full(
+        (*prefix, block_count),
+        fill_value=initial_index,
+        dtype=torch.int64,
+        device=values.device,
     )
-    current = reconstructed[1].clone()
-    projected = (values.to(torch.float32) - current) @ projection.T
-    order = values.to(torch.float32).reshape(
+    current = reconstructed[initial_index].clone()
+    values_float = values.to(torch.float32)
+    projected = (
+        values_float @ target_projection.T
+        - current @ quantized_projection.T
+    )
+    order = values_float.reshape(
         -1, block_count, 64
     ).square().sum(dim=(0, 2)).argsort(descending=True).tolist()
-    for block in order:
-        start = block * 64
-        stop = start + 64
-        old = current[..., start:stop]
-        scores = []
-        for candidate in reconstructed:
-            new = candidate[..., start:stop]
-            candidate_projected = projected + (old - new) @ projection[:, start:stop].T
-            local = (
-                (values[..., start:stop].to(torch.float32) - new).square()
-                * diagonal[start:stop]
-            ).sum(dim=-1)
-            scores.append(candidate_projected.square().sum(dim=-1) + local)
-        best = torch.stack(scores, dim=-1).argmin(dim=-1)
-        choices[..., block] = best
-        stacked = torch.stack(
-            [candidate[..., start:stop] for candidate in reconstructed], dim=-2
-        )
-        gather_index = best[..., None, None].expand(*best.shape, 1, 64)
-        new = torch.gather(stacked, -2, gather_index).squeeze(-2)
-        projected.add_((old - new) @ projection[:, start:stop].T)
-        current[..., start:stop] = new
+    flat_values = values_float.reshape(-1, values_float.shape[-1])
+    flat_current = current.reshape_as(flat_values)
+    flat_projected = projected.reshape(-1, projected.shape[-1])
+    flat_choices = choices.reshape(-1, block_count)
+    flat_candidates = [
+        candidate.reshape_as(flat_values) for candidate in reconstructed
+    ]
+    sweep_count = (
+        _LINEAR_GLOBAL_JOINT_SWEEPS
+        if flat_values.shape[0] <= _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS
+        else 1
+    )
+    stacked_candidates = (
+        torch.stack(flat_candidates, dim=1)
+        if sweep_count > 1 and flat_values.shape[-1] <= 4096
+        else None
+    )
+    for _ in range(sweep_count):
+        for block in order:
+            start = block * 64
+            stop = start + 64
+            if stacked_candidates is None:
+                stacked = torch.stack(
+                    [
+                        candidate[:, start:stop]
+                        for candidate in flat_candidates
+                    ],
+                    dim=1,
+                )
+            else:
+                stacked = stacked_candidates[:, :, start:stop]
+            projection = quantized_projection[:, start:stop].T
+            for row_start in range(0, flat_values.shape[0], _LINEAR_GLOBAL_ROW_CHUNK):
+                row_stop = min(
+                    row_start + _LINEAR_GLOBAL_ROW_CHUNK,
+                    flat_values.shape[0],
+                )
+                old = flat_current[row_start:row_stop, start:stop]
+                new = stacked[row_start:row_stop]
+                candidate_projected = flat_projected[
+                    row_start:row_stop, None, :
+                ] + torch.matmul(old[:, None, :] - new, projection)
+                local = (
+                    new.square() * quantized_diagonal[start:stop]
+                    - 2.0 * flat_values[
+                        row_start:row_stop, None, start:stop
+                    ] * new
+                    * cross_diagonal[start:stop]
+                ).sum(dim=-1)
+                scores = candidate_projected.square().sum(dim=-1) + local
+                best = scores.argmin(dim=-1)
+                flat_choices[row_start:row_stop, block] = best
+                gather_value = best[:, None, None].expand(-1, 1, 64)
+                flat_current[row_start:row_stop, start:stop] = torch.gather(
+                    new, 1, gather_value
+                ).squeeze(1)
+                gather_projection = best[:, None, None].expand(
+                    -1, 1, candidate_projected.shape[-1]
+                )
+                flat_projected[row_start:row_stop] = torch.gather(
+                    candidate_projected, 1, gather_projection
+                ).squeeze(1)
     return _select_linear_candidate_params(candidates, choices, values.ndim - 1)
 
 
-def _select_global_activation_layouts(
+def _select_global_activation_policy(
     parts: list[torch.Tensor],
     transformed_weight: torch.Tensor,
     weight_params: dict[str, torch.Tensor],
     activation_state: dict[str, Any],
-) -> dict[str, bool]:
-    """Select a fixed Q(A) policy for each calibrated row-count layout."""
+    force_global: bool,
+) -> tuple[str, torch.Tensor, torch.Tensor]:
+    """Choose baseline, v30, or joint Q(A) with exact layout-wise A@W loss."""
     samples = [
         _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
         for part in parts
@@ -501,56 +674,110 @@ def _select_global_activation_layouts(
         projection=activation_state["projection"],
         projection_strength=activation_state["projection_strength"],
     ))
-    global_quantized = _dequantize_linear_params(_quantize_linear_global_output(
+    original = _dequantize_linear_params(_quantize_linear_original_global_output(
         sample,
-        activation_state["global_diagonal"],
-        activation_state["global_projection"],
+        activation_state["global_target_diagonal"],
+        activation_state["global_original_projection"],
+    ))
+    joint = _dequantize_linear_params(_quantize_linear_global_output(
+        sample,
+        activation_state["global_cross_diagonal"],
+        activation_state["global_quantized_diagonal"],
+        activation_state["global_target_projection"],
+        activation_state["global_quantized_projection"],
     ))
     quantized_weight = _dequantize_linear_params(weight_params)
     target = sample @ transformed_weight.T
-    baseline_error = (
-        target - baseline @ quantized_weight.T
-    ).square().mean()
-    global_error = (
-        target - global_quantized @ quantized_weight.T
-    ).square().mean()
-    aggregate_global = bool(
-        global_error
-        < (1.0 - _LINEAR_GLOBAL_SELECT_MIN_GAIN) * baseline_error
+    candidates = (baseline, original, joint)
+    aggregate_errors = [
+        (target - candidate @ quantized_weight.T).square().mean()
+        for candidate in candidates
+    ]
+    layout_errors = []
+    start = 0
+    for sampled in samples:
+        stop = start + int(sampled.shape[0])
+        layout_errors.append(torch.stack([
+            (
+                target[start:stop]
+                - candidate[start:stop] @ quantized_weight.T
+            ).square().mean()
+            for candidate in candidates
+        ]))
+        start = stop
+    layout_errors = torch.stack(layout_errors).T
+
+    selected = 1 if force_global else 0
+    if (
+        not force_global
+        and aggregate_errors[1]
+        < (1.0 - _LINEAR_GLOBAL_SELECT_MIN_GAIN) * aggregate_errors[0]
+    ):
+        selected = 1
+
+    joint_valid = force_global or bool(
+        aggregate_errors[2]
+        < (1.0 - _LINEAR_GLOBAL_SELECT_MIN_GAIN) * aggregate_errors[0]
+    )
+    if joint_valid and bool(aggregate_errors[2] < aggregate_errors[selected]):
+        ratios = layout_errors[2] / layout_errors[selected].clamp_min(
+            torch.finfo(torch.float32).tiny
+        )
+        wins = int((ratios < 1.0).sum())
+        if (
+            wins >= _LINEAR_GLOBAL_JOINT_MIN_WIN_LAYOUTS
+            and bool(ratios.max() <= _LINEAR_GLOBAL_JOINT_MAX_LAYOUT_REGRESSION)
+        ):
+            selected = 2
+    return (
+        ("baseline", "original", "joint")[selected],
+        aggregate_errors[selected],
+        layout_errors[selected],
     )
 
-    policies: dict[str, bool] = {}
-    layout_counts: dict[int, int] = {}
-    start = 0
-    for part, sampled in zip(parts, samples):
-        stop = start + int(sampled.shape[0])
-        baseline_layout_error = (
-            target[start:stop] - baseline[start:stop] @ quantized_weight.T
-        ).square().mean()
-        global_layout_error = (
-            target[start:stop] - global_quantized[start:stop] @ quantized_weight.T
-        ).square().mean()
-        rows = int(part.shape[0])
-        layout_counts[rows] = layout_counts.get(rows, 0) + 1
-        margin = (
-            _LINEAR_GLOBAL_TINY_LAYOUT_MIN_GAIN
-            if rows < _LINEAR_GLOBAL_TINY_LAYOUT_ROWS
-            else _LINEAR_GLOBAL_LAYOUT_MIN_GAIN
-        )
-        selected = aggregate_global and bool(
-            global_layout_error < (1.0 - margin) * baseline_layout_error
-        )
-        policies[str(rows)] = selected
-        start = stop
 
-    for rows, count in layout_counts.items():
-        if count > 1:
-            policies[str(rows)] = aggregate_global
+def _install_global_output_state(
+    activation_state: dict[str, Any],
+    transformed_weight: torch.Tensor,
+    weight_params: dict[str, torch.Tensor],
+) -> None:
+    quantized_weight = _dequantize_linear_params(weight_params)
+    (
+        target_diagonal,
+        original_projection,
+        cross_diagonal,
+        quantized_diagonal,
+        target_projection,
+        quantized_projection,
+    ) = _global_output_cost_state(transformed_weight, quantized_weight)
+    activation_state.update({
+        "global_target_diagonal": target_diagonal,
+        "global_original_projection": original_projection,
+        "global_cross_diagonal": cross_diagonal,
+        "global_quantized_diagonal": quantized_diagonal,
+        "global_target_projection": target_projection,
+        "global_quantized_projection": quantized_projection,
+    })
 
-    # The aggregate v30 decision remains a conservative fallback for row
-    # layouts not represented by calibration data.
-    policies["fallback"] = aggregate_global
-    return policies
+
+def _prune_global_output_state(
+    activation_state: dict[str, Any],
+    policy: str,
+) -> None:
+    activation_state["global_policy"] = policy
+    if policy == "baseline":
+        activation_state.pop("global_target_diagonal")
+        activation_state.pop("global_original_projection")
+        activation_state.pop("global_target_projection")
+    if policy != "joint":
+        activation_state.pop("global_cross_diagonal")
+        activation_state.pop("global_quantized_diagonal")
+        activation_state.pop("global_quantized_projection")
+    if policy == "original":
+        activation_state.pop("global_target_projection")
+    if policy == "joint":
+        activation_state.pop("global_target_diagonal")
+        activation_state.pop("global_original_projection")
 
 
 def _activation_output_cost_state(
@@ -606,16 +833,14 @@ def _residual_feedback_weight(
     weight_importance: torch.Tensor,
     weight_projection: torch.Tensor,
     weight_projection_strength: torch.Tensor,
-    feedback_rows: int = _LINEAR_FEEDBACK_ROWS,
-    feedback_window: int = _LINEAR_FEEDBACK_WINDOW,
 ) -> dict[str, torch.Tensor]:
     """Propagate each quantized block's output residual into nearby blocks."""
     rows = int(quantized_activation.shape[0])
-    if rows > feedback_rows:
+    if rows > _LINEAR_FEEDBACK_ROWS:
         indices = torch.linspace(
             0,
             rows - 1,
-            feedback_rows,
+            _LINEAR_FEEDBACK_ROWS,
             device=quantized_activation.device,
         ).round().to(torch.int64)
         activation = quantized_activation.index_select(0, indices)
@@ -655,7 +880,7 @@ def _residual_feedback_weight(
             pieces.setdefault(name, [None] * block_count)[block] = tensor
 
         future_blocks = order[
-            position + 1:position + 1 + feedback_window
+            position + 1:position + 1 + _LINEAR_FEEDBACK_WINDOW
         ]
         if not future_blocks:
             continue
@@ -706,8 +931,6 @@ def _feedback_quantize_weight(
     weight_importance: torch.Tensor,
     weight_projection: torch.Tensor,
     weight_projection_strength: torch.Tensor,
-    feedback_rows: int = _LINEAR_FEEDBACK_ROWS,
-    feedback_window: int = _LINEAR_FEEDBACK_WINDOW,
 ) -> dict[str, torch.Tensor]:
     """Fix Q(A), then build one bounded residual-feedback Q(W)."""
     activation_params = _quantize_linear_values(
@@ -724,8 +947,6 @@ def _feedback_quantize_weight(
         weight_importance,
         weight_projection,
         weight_projection_strength,
-        feedback_rows,
-        feedback_window,
     )
 
 
@@ -882,8 +1103,9 @@ def hif4_calibration_and_quantize_weight(
         activation_projection,
         projection_strength,
     ) = _activation_output_cost_state(transformed_weight)
-    global_diagonal, global_projection = _global_output_cost_state(
-        transformed_weight
+    force_global_output = (
+        int(transformed_weight.shape[-1])
+        >= _LINEAR_GLOBAL_MIN_COMPRESSION * int(transformed_weight.shape[0])
     )
     (
         weight_importance,
@@ -891,15 +1113,13 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 32,
+        "version": 33,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
         "projection": activation_projection,
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
-        "global_diagonal": global_diagonal,
-        "global_projection": global_projection,
     }
     weight_params = _feedback_quantize_weight(
         transformed_activation,
@@ -912,27 +1132,80 @@ def hif4_calibration_and_quantize_weight(
         weight_projection,
         weight_projection_strength,
     )
-    compressed = (
-        int(transformed_weight.shape[-1])
-        >= _LINEAR_GLOBAL_MIN_COMPRESSION
-        * int(transformed_weight.shape[0])
+    _install_global_output_state(
+        activation_state, transformed_weight, weight_params
     )
-    if compressed:
-        activation_state["global_layouts"] = {
-            **{str(int(part.shape[0])): True for part in transformed_parts},
-            "fallback": True,
-        }
-    else:
-        activation_state["global_layouts"] = _select_global_activation_layouts(
+    global_policy, aggregate_error, layout_errors = (
+        _select_global_activation_policy(
             transformed_parts,
             transformed_weight,
             weight_params,
             activation_state,
+            force_global_output,
         )
-    if not any(activation_state["global_layouts"].values()):
-        activation_state.pop("global_diagonal")
-        activation_state.pop("global_projection")
-        activation_state.pop("global_layouts")
+    )
+    if not force_global_output:
+        _prune_global_output_state(activation_state, global_policy)
+        return {"weight_params": weight_params, "activation_state": activation_state}
+
+    feedback_rows = min(_LINEAR_FEEDBACK_ROWS, int(transformed_activation.shape[0]))
+    feedback_indices = torch.linspace(
+        0,
+        int(transformed_activation.shape[0]) - 1,
+        feedback_rows,
+        device=transformed_activation.device,
+    ).round().to(torch.int64)
+    feedback_values = transformed_activation.index_select(0, feedback_indices)
+    alternating_activation = _dequantize_linear_params(
+        _quantize_linear_global_output(
+            feedback_values,
+            activation_state["global_cross_diagonal"],
+            activation_state["global_quantized_diagonal"],
+            activation_state["global_target_projection"],
+            activation_state["global_quantized_projection"],
+        )
+    )
+    alternating_weight_params = _residual_feedback_weight(
+        alternating_activation,
+        transformed_weight,
+        weight_importance,
+        weight_projection,
+        weight_projection_strength,
+    )
+    alternating_state = activation_state.copy()
+    _install_global_output_state(
+        alternating_state, transformed_weight, alternating_weight_params
+    )
+    (
+        alternating_policy,
+        alternating_error,
+        alternating_layout_errors,
+    ) = _select_global_activation_policy(
+        transformed_parts,
+        transformed_weight,
+        alternating_weight_params,
+        alternating_state,
+        force_global_output,
+    )
+    alternating_ratios = alternating_layout_errors / layout_errors.clamp_min(
+        torch.finfo(torch.float32).tiny
+    )
+    if (
+        bool(
+            alternating_error
+            < (1.0 - _LINEAR_ALTERNATING_MIN_GAIN) * aggregate_error
+        )
+        and int((alternating_ratios < 1.0).sum())
+        >= _LINEAR_ALTERNATING_MIN_WIN_LAYOUTS
+        and bool(
+            alternating_ratios.max()
+            <= _LINEAR_ALTERNATING_MAX_LAYOUT_REGRESSION
+        )
+    ):
+        weight_params = alternating_weight_params
+        activation_state = alternating_state
+        global_policy = alternating_policy
+    _prune_global_output_state(activation_state, global_policy)
     return {"weight_params": weight_params, "activation_state": activation_state}
 
 
@@ -944,16 +1217,19 @@ def hif4_dynamic_quantize_activation(
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
     transformed = _linear_transform(values, activation_state)
-    rows = int(values.numel()) // int(values.shape[-1])
-    global_layouts = activation_state.get("global_layouts", {})
-    use_global = global_layouts.get(
-        str(rows), global_layouts.get("fallback", False)
-    )
-    if use_global and activation_state.get("global_projection") is not None:
+    if activation_state.get("global_policy") == "joint":
         return _quantize_linear_global_output(
             transformed,
-            activation_state["global_diagonal"],
-            activation_state["global_projection"],
+            activation_state["global_cross_diagonal"],
+            activation_state["global_quantized_diagonal"],
+            activation_state["global_target_projection"],
+            activation_state["global_quantized_projection"],
+        )
+    if activation_state.get("global_policy") == "original":
+        return _quantize_linear_original_global_output(
+            transformed,
+            activation_state["global_target_diagonal"],
+            activation_state["global_original_projection"],
         )
     return _quantize_linear_values(
         transformed,
