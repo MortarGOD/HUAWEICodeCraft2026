@@ -669,3 +669,42 @@ Candidate DAG decision: select v34-b+c (shape gate plus short-row square
 refinement). Reject the global five-offset cut because it loses 7.5% gain for
 only a small measured time reduction. Hold rank reduction for a later online
 ablation because it falls below the 70% far-gain acceptance boundary.
+
+## v35 controlled tall-sweep restoration
+
+The confirmed v34 result is `17456 / 183s`. Its 66-second runtime recovery is
+useful, but the 226-point loss proves that local one-sweep retention is not an
+online score proxy.
+
+```text
+v33: joint search on all ordinary shapes, 3 short-row sweeps
+  └─ v34: ordinary wide -> baseline; ordinary tall -> 1 sweep
+      └─ v35: ordinary wide -> baseline; ordinary tall -> 3 sweeps
+```
+
+Acceptance criteria:
+
+1. v35 must be functionally identical to v33 for tall, square, and forced
+   strong-compression shapes.
+2. v35 must remain functionally identical to v30 for ordinary wide shapes.
+3. Attention must remain unchanged.
+4. Full output/state validation must pass `1100/1100` before push.
+5. Forecast conservatively between v34 and v33: `17580-17680 / 205-235s`.
+
+Humanize remains unavailable; the controlled one-variable restoration and
+acceptance criteria are refined manually.
+
+Outcome:
+
+1. Far-holdout groups 0-2 are case-for-case identical to v33 (`999.378937`
+   Linear points for both), covering the retained tall/square branches.
+2. Far-holdout ordinary-wide group 3 is case-for-case identical to v30
+   (`274.211533`), so the v34 efficiency gate remains intact.
+3. Random strong-compression group 8 is case-for-case identical to v33
+   (`-1323.261058`), confirming that forced global fitting bypasses the gate.
+4. Attention group 0 is identical in every comparison. Full validation passes
+   `1100/1100`; `py_compile` also passes.
+5. Candidate decision: submit v35 as the controlled tall-sweep restoration.
+   Keep the forecast at `17580-17680 / 205-235s`; this version tests whether
+   v34's lost online score came from the tall sweep cut rather than the wide
+   gate.

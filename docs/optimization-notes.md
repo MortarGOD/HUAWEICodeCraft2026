@@ -709,3 +709,25 @@ v13 (stable Attention)
 - Using the mechanism-specific v30-to-v33 online result predicts about `17663`
   for v34. Use a conservative `17620-17710 / 210-235s` forecast. v34 is a
   controlled efficiency/shape-contribution probe, not a claimed score jump.
+
+## v34 online result and v35 tall-sweep restoration
+
+- Confirmed v34 is `17456 / 183s`: `-226` points and `-66s` versus v33, and
+  `-65` points versus v30. The runtime direction is correct, but local retained
+  gain (about 88%) badly overstates hidden-test retention.
+- v34 changed two variables: ordinary wide matrices returned to v30, while
+  retained tall matrices reduced short-row joint search from three sweeps to
+  one. Since tall signatures cover twice as many provided shape families and
+  the one-sweep surrogate can choose a different hidden-test Q(A), restore the
+  tall sweeps first.
+- v35 is a controlled single-variable restoration: it is v33 on every tall,
+  square, and strong-compression shape, while preserving only v34's ordinary
+  wide-matrix baseline gate. This isolates the online score/time contribution
+  of the wide joint branch in the next result.
+- Equivalence checks confirm the intended decomposition exactly: far-holdout
+  groups 0-2 match v33 at `999.378937`, ordinary-wide group 3 matches v30 at
+  `274.211533`, and random strong-compression group 8 matches v33 at
+  `-1323.261058`. Attention is unchanged in all comparisons.
+- Full `rand_sample` interface/state validation passes `1100/1100`. Forecast
+  v35 conservatively at `17580-17680 / 205-235s`; the next online result is a
+  direct attribution test, not evidence yet for a new score ceiling.

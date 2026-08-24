@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 34:
+Version 35:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -10,6 +10,8 @@ Version 34:
   calibration output MSE improves by a margin.
 - Keep wide Linear matrices on the v30 baseline because their rank-2048 joint
   search contributes little holdout score for disproportionate runtime.
+- Restore three short-row coordinate sweeps for every retained joint shape;
+  v34's tall one-sweep approximation did not transfer to the hidden judge.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -1117,21 +1119,14 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 34,
+        "version": 35,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
         "projection": activation_projection,
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
-        "global_joint_sweeps": (
-            _LINEAR_GLOBAL_JOINT_SWEEPS
-            if (
-                transformed_weight.shape[0] == transformed_weight.shape[1]
-                or force_global_output
-            )
-            else 1
-        ),
+        "global_joint_sweeps": _LINEAR_GLOBAL_JOINT_SWEEPS,
     }
     weight_params = _feedback_quantize_weight(
         transformed_activation,
