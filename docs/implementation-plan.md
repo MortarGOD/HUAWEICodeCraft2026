@@ -1070,3 +1070,82 @@ Outcome:
    certainty.
 6. Attention remains byte-identical to v40. Select the bit-reversed hierarchy
    layout for v41 subject to `1100/1100` and final repository checks.
+
+## Permanent online-exploration rule after v41
+
+The confirmed v41 result is `17930 / 217s`, versus v40 `17808 / 243s`:
+`+122 / -26s`. The user explicitly clarified that local and online datasets
+are different, so a locally neutral or negative mechanism can still be useful
+online. From v42 onward:
+
+1. Local evidence ranks candidates and detects catastrophic risk; it is not a
+   universal veto.
+2. A mathematically sound, interface-legal mechanism with bounded runtime may
+   be submitted as a controlled online ablation even when local gains are weak
+   or mixed.
+3. Such exploration must change one attributable mechanism, preserve a known
+   fallback, and state the online hypothesis before feedback.
+4. Runtime safety, invalid output, numerical failure, or a broad catastrophic
+   local regression remain rejection conditions.
+5. Online feedback is the final generalization evidence and must update the
+   candidate DAG rather than being retrofitted to the local narrative.
+
+## v42 Q/K hierarchical orthogonal layout
+
+v41 shows that the order of an equivalent Hadamard basis relative to HiF4's
+nested 4/8/64 scale hierarchy matters. Attention Q and K currently use the
+same reciprocal balance and head-wise Hadamard but retain natural hierarchy
+order. v42 applies the same 64-lane bit reversal independently inside every
+Q/K head block while leaving V unchanged:
+
+```text
+Q' = ((Q * C) P) H
+K' = ((K / C) P) H
+Q' K'^T = (Q * C) P H H^T P^T (K / C)^T = Q K^T
+```
+
+Candidate DAG and acceptance criteria:
+
+```text
+v41 (Linear hierarchy aligned; Attention natural order)
+  └─ v42: shared Q/K bit-reversal inside each 64-lane block
+       ├─ preserve QK scores exactly before quantization
+       ├─ V and Linear remain v41
+       └─ one fixed index operation in Q and K dynamic paths
+```
+
+1. Verify full-precision QK equivalence numerically for every observed
+   head-dimension family.
+2. Measure local standard Attention on independent donor and random layouts.
+   Mixed or neutral local results do not automatically reject this controlled
+   online hypothesis; a broad catastrophic regression does.
+3. Require projected online runtime below 250 seconds from the 217-second v41
+   anchor, leaving at least 50 seconds to the contest limit.
+4. Do not change Attention balance, scale offsets, energy penalty, V, or any
+   Linear behavior in the same version.
+5. Pass complete random robustness and `1100/1100` before submission.
+
+Humanize remains unavailable; the online-exploration boundary and executable
+criteria were refined manually under the project edict.
+
+Outcome:
+
+1. QK full-precision equivalence passes on the observed `(16, 2, 256)` head
+   signature: relative L2 error `4.69e-8`, maximum absolute error `6.10e-5`.
+2. Unconditional Q/K hierarchy layout improves four donor panels: groups 0-4
+   nearest/farthest improve `0.588/0.308` MSE and groups 5-9 improve
+   `0.333/0.111`. Timings are flat in paired runs.
+3. The unconditional complete-random Attention score improves
+   `5412.720 -> 5547.791`, but one out-of-domain group regresses by 776 points.
+   Its calibration near-zero ratio is about 0.41, while online-like donors are
+   tightly concentrated at 0.26-0.29.
+4. Add a calibration-distribution trust gate using the existing near-zero
+   statistic: apply the fixed bit reversal at ratios `<=0.35`, otherwise store
+   identity and exactly reproduce v41. No test tensor or test error is used by
+   this decision.
+5. The gated complete-random score is `5457.780` (`+45.060` over v41), with
+   the catastrophic group restored exactly. Linear weight/activation and
+   Attention V outputs are parameter-for-parameter identical to v41.
+6. This is an Attention-only controlled online ablation. Forecast
+   `17940-18020 / 218-228s`; retain or widen the gate only from online
+   feedback, not by forcing the local aggregate higher.

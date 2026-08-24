@@ -872,3 +872,24 @@ v13 (stable Attention)
 - Forecast v41 at `18200-18900 / 240-255s`. The wide score interval reflects
   historical nonlinear transport even though this is the strongest ordinary
   donor signal since the holdout rebuild.
+
+## v41 online result and permanent exploration policy
+
+- Confirmed v41 is `17930 / 217s`, giving `+122 / -26s` over v40. Retain the
+  Linear bit-reversal hierarchy layout.
+- Local and online datasets are explicitly different. Local non-improvement
+  no longer vetoes a theoretically sound optimization by itself; local tests
+  rank ideas and catch catastrophic/runtime risk, while controlled online
+  ablations supply the final generalization evidence.
+- v42 isolates the same hierarchy insight in Attention Q/K. Apply a shared
+  64-lane bit reversal before the existing head-wise Hadamard, preserving
+  full-precision QK scores exactly. Keep Linear and V unchanged and require
+  runtime below 250 seconds from the 217-second anchor.
+- QK equivalence passes at `4.69e-8` relative L2. Four near/far donor panels
+  all improve by `0.588/0.308/0.333/0.111` MSE with flat timing.
+- Unconditional random Attention adds `135.070` points but creates one
+  `-776` tail. Gate on calibration near-zero ratio `<=0.35`; online-like
+  donors are 0.26-0.29, while the tail is about 0.41. The gated random result
+  adds `45.060` with exact fallback on the tail.
+- Linear and V are parameter-exact v41 outputs. Forecast this isolated v42
+  Attention experiment at `17940-18020 / 218-228s`.

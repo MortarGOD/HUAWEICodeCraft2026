@@ -67,6 +67,7 @@ _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
 _ATTENTION_ENERGY_PENALTY = 0.125
 _ATTENTION_NEAR_ZERO_RATIO = 0.01
 _ATTENTION_SPARSE_THRESHOLD = 0.25
+_ATTENTION_HIERARCHY_MAX_NEAR_ZERO = 0.35
 
 
 # =============================================================================
@@ -1030,6 +1031,20 @@ def _linear_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
     )
 
 
+def _bit_reversed_group_permutation(
+    channels: int,
+    device: torch.device,
+) -> torch.Tensor:
+    if channels % 64 != 0:
+        return torch.arange(channels, device=device)
+    positions = torch.arange(64, device=device)
+    bit_reversed = sum(
+        ((positions >> bit) & 1) << (5 - bit) for bit in range(6)
+    )
+    group_starts = torch.arange(0, channels, 64, device=device).unsqueeze(1)
+    return (group_starts + bit_reversed).reshape(-1)
+
+
 def _balanced_linear_permutation(
     activation: torch.Tensor,
     weight: torch.Tensor,
@@ -1040,10 +1055,7 @@ def _balanced_linear_permutation(
     group_count = int(activation.shape[-1]) // 64
     lanes = ordered.reshape(64, group_count).clone()
     lanes[1::2] = lanes[1::2].flip(1)
-    positions = torch.arange(64, device=ordered.device)
-    bit_reversed = sum(
-        ((positions >> bit) & 1) << (5 - bit) for bit in range(6)
-    )
+    bit_reversed = _bit_reversed_group_permutation(64, ordered.device)
     return lanes.transpose(0, 1).index_select(1, bit_reversed).reshape(-1)
 
 
@@ -1157,7 +1169,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 41,
+        "version": 42,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1334,6 +1346,7 @@ def hif4_calibration_attention(
         (q_rms > 0) & (k_rms > 0), balance, torch.ones_like(balance)
     )
     hadamard = 1
+    permutation = torch.arange(head_dim, device=balance.device)
     global_rms = k_values.square().mean().sqrt()
     if bool(global_rms > 0):
         near_zero = (
@@ -1341,14 +1354,20 @@ def hif4_calibration_attention(
         ).to(torch.float32).mean()
         if bool(near_zero <= _ATTENTION_SPARSE_THRESHOLD):
             hadamard = head_dim
+        if bool(near_zero <= _ATTENTION_HIERARCHY_MAX_NEAR_ZERO):
+            permutation = _bit_reversed_group_permutation(
+                head_dim, balance.device
+            )
     return {
         "q_state": {
             "coefficient": balance.repeat_interleave(replicas, dim=0),
             "hadamard": hadamard,
+            "permutation": permutation,
         },
         "k_state": {
             "coefficient": balance.reciprocal(),
             "hadamard": hadamard,
+            "permutation": permutation,
         },
         "v_state": None,
     }
@@ -1403,6 +1422,9 @@ def _transform_attention_qk(
     shaped = values.reshape(-1, heads, head_dim)
     coefficient = state["coefficient"].to(values.device, values.dtype)
     shaped = shaped * coefficient.unsqueeze(0)
+    shaped = shaped.index_select(
+        -1, state["permutation"].to(values.device)
+    )
     return _hadamard(shaped, int(state["hadamard"])).reshape_as(values)
 
 
