@@ -731,3 +731,26 @@ v13 (stable Attention)
 - Full `rand_sample` interface/state validation passes `1100/1100`. Forecast
   v35 conservatively at `17580-17680 / 205-235s`; the next online result is a
   direct attribution test, not evidence yet for a new score ceiling.
+
+## v35 online result and v36 direction
+
+- Confirmed v35 is `17501 / 212s`, versus v34 `17456 / 183s`: the two added
+  tall sweeps buy only 45 points for 29 seconds. Modify this direction back to
+  one tall sweep; do not spend further runtime increasing tall sweep count.
+- v33 is `17682 / 249s` and differs from v35 only by enabling ordinary-wide
+  joint fitting. Therefore the hidden wide branch is worth up to `+181 / 37s`,
+  despite its weak local donor score. This directly overturns the earlier
+  conclusion that ordinary-wide search is low value online.
+- A one-sweep ordinary-wide probe matches v30 exactly on near donor groups 3/7
+  (`602.159536`) but costs about 7.7 seconds more locally, so it is rejected.
+  v36 advances the reduced search to two wide sweeps while keeping v34's
+  one-sweep ordinary-tall schedule. Q(W), square/forced layouts, and Attention
+  remain unchanged.
+- Two wide sweeps retain `80.6%` of v33's near wide improvement and `88.4%`
+  of its far improvement, without regressing either wide group versus v30.
+  Non-wide far groups 0-2 and forced-compression random group 8 exactly match
+  v34, confirming that the candidate changes only its intended branch.
+- Full output/state validation passes `1100/1100`. Mapping the measured wide
+  retention onto the controlled v33-v35 online delta, then removing v35's
+  measured tall-sweep increment, gives a center near `17610`; forecast v36 at
+  `17570-17650 / 205-230s`.

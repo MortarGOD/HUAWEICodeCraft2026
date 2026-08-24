@@ -708,3 +708,56 @@ Outcome:
    Keep the forecast at `17580-17680 / 205-235s`; this version tests whether
    v34's lost online score came from the tall sweep cut rather than the wide
    gate.
+
+## v36 low-cost wide-joint restoration
+
+The confirmed v35 result is `17501 / 212s`, only `+45 / +29s` over v34. Since
+v35 and v34 differ only in ordinary-tall sweep count, the extra two tall
+sweeps are positive but too expensive. Conversely, v33 and v35 differ only in
+the ordinary-wide joint branch, whose observed upper-bound contribution is
+`+181 / +37s`. A one-sweep probe selected the baseline on both local wide
+groups and recovered none of v33's gain, so v36 tests two sweeps instead of
+discarding the branch.
+
+```text
+v33: tall=3, square=3, ordinary-wide=3
+  ├─ v34: tall=1, square=3, ordinary-wide=off
+  │   └─ v35: tall=3, square=3, ordinary-wide=off
+  └─ v36: tall=1, square=3, ordinary-wide=2
+```
+
+Risks and acceptance criteria:
+
+1. Reduced-sweep wide fitting can select a different Q(A) policy and may retain
+   less hidden score than its local calibration error suggests. Require
+   non-regression versus v30 on both nearest and far donor wide groups.
+2. v36 must be identical to v34 on ordinary-tall, square, and forced
+   strong-compression groups; only ordinary-wide behavior may change.
+3. The wide branch must recover a material fraction of v33's local wide gain
+   at lower measured quantization time than v33.
+4. Attention remains unchanged and full validation must pass `1100/1100`.
+5. Online forecast will use only the controlled v33/v35 wide delta and the
+   measured local one/full-sweep retention, not the obsolete cross-version
+   extrapolation coefficient.
+
+The one-sweep probe matched v30 exactly on near wide groups 3/7 while costing
+more, so that leaf is rejected before full validation. Humanize is unavailable,
+so the candidate isolation, risks, and executable acceptance criteria are
+refined manually as required by the project edict.
+
+Outcome:
+
+1. One wide sweep is rejected: it matches v30 exactly on near groups 3/7 and
+   pays projection overhead without score gain.
+2. Two wide sweeps retain `80.6%` of v33's near wide gain (`+2.476/+3.070`)
+   and `88.4%` of its far wide gain (`+2.971/+3.362`), with no group-level
+   regression versus v30.
+3. Far groups 0-2 are case-for-case identical to v34 (`995.400361`), and
+   forced-compression random group 8 is also identical (`-1323.261058`).
+   Attention remains unchanged.
+4. Local timing is order-sensitive: the far panel is about 2 seconds faster
+   than v33, while the near panel is noisy and slower. Algorithmically one
+   coordinate sweep is removed, but online runtime is forecast from the
+   v33/v34/v35 controlled observations rather than these absolute timings.
+5. Full validation passes `1100/1100`. Select the two-wide-sweep v36 leaf and
+   forecast `17570-17650 / 205-230s`, centered near `17610 / 215s`.

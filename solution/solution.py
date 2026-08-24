@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 35:
+Version 36:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -8,10 +8,10 @@ Version 35:
 - Force that global policy for strongly compressed Linear shapes where the
   block-local v28 cost is structurally incomplete; reject it elsewhere unless
   calibration output MSE improves by a margin.
-- Keep wide Linear matrices on the v30 baseline because their rank-2048 joint
-  search contributes little holdout score for disproportionate runtime.
-- Restore three short-row coordinate sweeps for every retained joint shape;
-  v34's tall one-sweep approximation did not transfer to the hidden judge.
+- Restore ordinary-wide joint fitting with two coordinate sweeps because the
+  v33/v35 online difference shows that this branch transfers to hidden data.
+- Use one sweep for ordinary tall matrices and retain three sweeps for square
+  and forced strong-compression shapes.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -1119,14 +1119,25 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 35,
+        "version": 36,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
         "projection": activation_projection,
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
-        "global_joint_sweeps": _LINEAR_GLOBAL_JOINT_SWEEPS,
+        "global_joint_sweeps": (
+            _LINEAR_GLOBAL_JOINT_SWEEPS
+            if (
+                transformed_weight.shape[0] == transformed_weight.shape[1]
+                or force_global_output
+            )
+            else (
+                2
+                if transformed_weight.shape[0] < transformed_weight.shape[1]
+                else 1
+            )
+        ),
     }
     weight_params = _feedback_quantize_weight(
         transformed_activation,
@@ -1139,15 +1150,6 @@ def hif4_calibration_and_quantize_weight(
         weight_projection,
         weight_projection_strength,
     )
-    if (
-        transformed_weight.shape[0] < transformed_weight.shape[1]
-        and not force_global_output
-    ):
-        activation_state["global_policy"] = "baseline"
-        return {
-            "weight_params": weight_params,
-            "activation_state": activation_state,
-        }
     _install_global_output_state(
         activation_state, transformed_weight, weight_params
     )
