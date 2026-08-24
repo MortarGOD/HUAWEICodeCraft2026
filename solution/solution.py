@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 36:
+Version 37:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -12,6 +12,8 @@ Version 36:
   v33/v35 online difference shows that this branch transfers to hidden data.
 - Use one sweep for ordinary tall matrices and retain three sweeps for square
   and forced strong-compression shapes.
+- Build wide output sketches directly from their randomized QR range basis;
+  skip the objective-invariant SVD rotation inside that fixed subspace.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -42,7 +44,7 @@ _LINEAR_GLOBAL_OUTPUT_RANK = 2048
 _LINEAR_GLOBAL_SCALE_OFFSETS = (0, 1, 2, 3, 4, 5, 6, 7)
 _LINEAR_GLOBAL_JOINT_SWEEPS = 3
 _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS = 512
-_LINEAR_GLOBAL_ROW_CHUNK = 32
+_LINEAR_GLOBAL_ROW_CHUNK = 64
 _LINEAR_GLOBAL_MIN_COMPRESSION = 32
 _LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE = 16
 _LINEAR_GLOBAL_SELECT_MIN_GAIN = 0.003
@@ -436,16 +438,19 @@ def _global_output_cost_state(
             quantized_projection = (
                 basis.T @ quantized_weight.to(torch.float32)
             )
+        elif rank == work.shape[0]:
+            target_projection = work
+            quantized_projection = quantized_weight.to(torch.float32)
         else:
-            left, singular, right = torch.pca_lowrank(
-                work,
-                q=rank,
-                center=False,
-                niter=1,
+            random = torch.randn(
+                work.shape[1], rank, dtype=work.dtype, device=work.device
             )
-            target_projection = singular[:, None] * right.T
+            basis = torch.linalg.qr(work @ random).Q
+            basis = torch.linalg.qr(work.T @ basis).Q
+            basis = torch.linalg.qr(work @ basis).Q
+            target_projection = basis.T @ work
             quantized_projection = (
-                left.T @ quantized_weight.to(torch.float32)
+                basis.T @ quantized_weight.to(torch.float32)
             )
     original_rank = min(32, rank)
     if rank > original_rank:
@@ -1119,7 +1124,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 36,
+        "version": 37,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,

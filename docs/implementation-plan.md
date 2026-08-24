@@ -761,3 +761,67 @@ Outcome:
    v33/v34/v35 controlled observations rather than these absolute timings.
 5. Full validation passes `1100/1100`. Select the two-wide-sweep v36 leaf and
    forecast `17570-17650 / 205-230s`, centered near `17610 / 215s`.
+
+## v37 QR range-basis projection
+
+The confirmed v36 result is `17638 / 236s`: the score forecast is accurate,
+while runtime is 6 seconds above the interval. Relative to v35 it gains 137
+points for 24 seconds. Two wide sweeps therefore recover most of the hidden
+wide benefit; adding a third sweep or restoring tall sweeps would mostly
+reconstruct v33 (`17682 / 249s`) rather than open a new score direction.
+
+The wide global sketch currently runs `pca_lowrank` even when its requested
+rank equals the number of output rows. In that full-row-rank case, an identity
+output basis preserves every squared output norm and cross product exactly:
+
+```text
+||AW.T - Q(A)Q(W).T||²
+  = ||(AW.T - Q(A)Q(W).T) U||²,  U U.T = I
+```
+
+Candidate DAG:
+
+```text
+v36 (wide=2, tall=1, square/forced=3)
+  ├─ v37-a: full-row-rank identity projection, same objective
+  └─ v37-b: independent Q(W) feedback parameter probe
+```
+
+Risks and acceptance criteria:
+
+1. Floating-point evaluation in a different orthogonal basis may change ties.
+   Require policy and case-score equivalence on near/far wide panels and the
+   forced-compression random panel; any material regression rejects v37-a.
+2. Measure calibration time in interleaved/repeated order because earlier
+   absolute local timing was thermally noisy. Require a clear median speedup.
+3. Probe one bounded Q(W) parameter family only. It must improve both near and
+   far non-wide panels without violating the v36 branch equivalence; otherwise
+   reject it and submit the exact acceleration alone.
+4. Do not increase sweep count, rank, dynamic state size, or online work.
+5. Attention remains unchanged and full validation must pass `1100/1100`.
+
+Humanize remains unavailable. The algebraic invariant, controlled probe, and
+acceptance criteria are refined manually under the project edict.
+
+Outcome:
+
+1. The full-row-rank identity branch preserves scores exactly on random wide
+   groups 2/4/5 and reduces their panel time from `6.77s` to `5.41s` before
+   Attention. The rank-truncated QR branch is not numerically equivalent to
+   `pca_lowrank`; its sequential block decisions are materially better, so
+   v37-a is modified from pure acceleration into a new precision direction.
+2. On near wide groups 3/7, QR improves v36 by `+53.299` points; on the far
+   donors it improves by `+58.380`. A second independent pair, groups 11/15,
+   improves by `+49.525` near and `+51.976` far. Every case family is positive.
+3. Forced-compression random groups 8/9 improve by `+59.621`. Non-wide far
+   groups 0-2 and Attention remain case-for-case identical to v36.
+4. Row chunk 64 is output-identical to chunk 32 and reduces the near wide
+   panel by about `1.19s`; select it. End-to-end QR timing is mixed across
+   thermal order, so forecast online runtime conservatively at `225-260s`.
+5. The Q(W) feedback trust/window/ridge family is not reopened: v25-v28 already
+   tested it across four raw/donor gates and fixed the current parameters.
+   Combining it now would confound the new subspace result.
+6. Full validation passes `1100/1100`. A direct per-case transport gives a
+   lower scenario near `17950-18200`; the v36 wide online sensitivity permits
+   a much higher but unreliable scenario. Use `17950-19500` as the official
+   v37 score interval and require online feedback before extrapolating further.

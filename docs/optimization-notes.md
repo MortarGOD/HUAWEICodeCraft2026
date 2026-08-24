@@ -754,3 +754,31 @@ v13 (stable Attention)
   retention onto the controlled v33-v35 online delta, then removing v35's
   measured tall-sweep increment, gives a center near `17610`; forecast v36 at
   `17570-17650 / 205-230s`.
+
+## v36 online result and v37 direction
+
+- Confirmed v36 is `17638 / 236s`, within the score forecast and 6 seconds
+  above its runtime range. Versus v35 it adds `+137 / +24s`; the reduced wide
+  search transfers strongly online.
+- v36 is only 44 points and 13 seconds below v33. Restoring the removed tall
+  and wide sweeps would reproduce the old tradeoff, not create enough score
+  headroom. Keep the v36 search schedule fixed.
+- For wide/full-row-rank W, the rank-2048 output sketch spans the complete
+  output space. Replacing `pca_lowrank` with the identity output basis is an
+  algebraically exact objective transformation and removes a large calibration
+  decomposition. v37 first validates this output-equivalent acceleration.
+- Full-row-rank random groups 2/4/5 do remain score-identical and run faster.
+  For the online-shaped `4096x8192` rank-truncated branch, however, direct QR
+  changes sequential decisions and strongly improves them: groups 3/7 gain
+  `+53.299` near and `+58.380` far versus v36.
+- Independent groups 11/15 confirm `+49.525` near and `+51.976` far, while
+  forced-compression random groups 8/9 gain `+59.621`. Non-wide groups 0-2 and
+  Attention are exactly unchanged. This is consistent across calibration
+  families, not a single-donor selection artifact.
+- Increasing the independent row chunk from 32 to 64 preserves every tested
+  case score and saves about 1.19 seconds on the near wide panel. Full
+  validation passes `1100/1100`.
+- Do not reuse v33's failed large local-to-online coefficient as a point
+  estimate. Forecast v37 at `17950-19500 / 225-260s`: the lower scenario uses
+  direct per-case transport, while the upper scenario allows part of v36's
+  observed hidden wide sensitivity.
