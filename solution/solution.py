@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 37:
+Version 38:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -10,8 +10,8 @@ Version 37:
   calibration output MSE improves by a margin.
 - Restore ordinary-wide joint fitting with two coordinate sweeps because the
   v33/v35 online difference shows that this branch transfers to hidden data.
-- Use one sweep for ordinary tall matrices and retain three sweeps for square
-  and forced strong-compression shapes.
+- Restore three coordinate sweeps for tall/square/forced shapes while keeping
+  ordinary wide at two; v37's QR/chunk acceleration funds the tall restoration.
 - Build wide output sketches directly from their randomized QR range basis;
   skip the objective-invariant SVD rotation inside that fixed subspace.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
@@ -1124,7 +1124,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 37,
+        "version": 38,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1132,16 +1132,12 @@ def hif4_calibration_and_quantize_weight(
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
         "global_joint_sweeps": (
-            _LINEAR_GLOBAL_JOINT_SWEEPS
+            2
             if (
-                transformed_weight.shape[0] == transformed_weight.shape[1]
-                or force_global_output
+                transformed_weight.shape[0] < transformed_weight.shape[1]
+                and not force_global_output
             )
-            else (
-                2
-                if transformed_weight.shape[0] < transformed_weight.shape[1]
-                else 1
-            )
+            else _LINEAR_GLOBAL_JOINT_SWEEPS
         ),
     }
     weight_params = _feedback_quantize_weight(

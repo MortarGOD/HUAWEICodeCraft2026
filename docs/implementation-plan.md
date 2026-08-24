@@ -825,3 +825,61 @@ Outcome:
    lower scenario near `17950-18200`; the v36 wide online sensitivity permits
    a much higher but unreliable scenario. Use `17950-19500` as the official
    v37 score interval and require online feedback before extrapolating further.
+
+## v38 robust fixed-Q(W) fallback selection
+
+The confirmed v37 result is exactly `17638`, equal to v36, while runtime falls
+from `236s` to `224s`. The QR/identity implementation is retained as a useful
+12-second acceleration, but its `+50`-scale local wide gains have zero hidden
+score value. This is direct evidence that further Q(A) subspace tuning on the
+current donors is not a valid next direction.
+
+v31 already tested a full second Q(W) feedback solve and scored `-28 / +28s`
+versus v30. v38 must not repeat that rejected branch. Instead it cheaply forms
+a direct quantization candidate alongside the existing sequential-feedback
+Q(W), then uses stratified calibration A@W evidence to replace an output row
+only when the direct candidate wins consistently across layouts.
+
+```text
+v37 (fast QR, fixed v28 feedback Q(W))
+  ├─ rejected: ordinary-shape second feedback Q(W) solve (v31 evidence)
+  └─ v38: existing feedback Q(W) vs direct Q(W)
+      ├─ stratified rows from all five calibration layouts
+      ├─ per-output-row exact A@W comparison
+      └─ conservative cross-layout win/margin gate
+```
+
+Risks and acceptance criteria:
+
+1. Per-row calibration selection can overfit. Require non-regression on both
+   nearest and far donor panels, not merely raw calibration output.
+2. The direct candidate is only a fallback; never replace a feedback row on a
+   single aggregate win. Require a majority of layouts and a bounded worst
+   ratio with a positive margin.
+3. Do not add another residual solve, global sweep, or dynamic test-time work.
+   The 224-second anchor leaves 76 seconds, but target `<=260s` forecast.
+4. If the selector chooses no rows or donor gain is negligible, reject it and
+   search a different fixed-Q(W) mechanism rather than submit a no-op version.
+5. Attention remains fixed and full validation must pass `1100/1100`.
+
+Humanize remains unavailable; the historical rejection, conservative gate,
+and executable criteria are refined manually under the project edict.
+
+Outcome:
+
+1. The direct/feedback Q(W) fallback is rejected. Near groups 0-3 change by
+   only `-0.006` points while quantization time rises by about 11 seconds; a
+   50-group projection would exceed the online budget for no accuracy value.
+2. A cheaper one-step, two-row-per-layout mantissa residual refinement is also
+   rejected. The same groups regress by `0.089` and cost about 2.5 seconds.
+   Current feedback Q(W) is locally stable; neither candidate is submitted.
+3. Final v38 uses the evidence-backed fallback leaf: retain v37 QR/chunk64,
+   restore three sweeps for ordinary tall shapes, keep ordinary wide at two,
+   and leave square/forced shapes at three. This changes one online-measured
+   variable without reopening v31's rejected second-Q(W) path.
+4. On far tall groups 0/1, v38 improves v37 from `634.546104` to `638.524680`
+   with no case-family regression. Wide, square, forced, and Attention paths
+   remain v37 behavior.
+5. Full validation passes `1100/1100`. The controlled v34-v35 anchor predicts
+   about `+45 / +29s` over v37, so forecast v38 at
+   `17665-17720 / 240-260s`, centered near `17683 / 253s`.

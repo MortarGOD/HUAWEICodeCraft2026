@@ -782,3 +782,25 @@ v13 (stable Attention)
   estimate. Forecast v37 at `17950-19500 / 225-260s`: the lower scenario uses
   direct per-case transport, while the upper scenario allows part of v36's
   observed hidden wide sensitivity.
+
+## v37 online result and v38 direction
+
+- Confirmed v37 is `17638 / 224s`, exactly equal in score to v36 and 12 seconds
+  faster. Retain QR/identity plus chunk64 as an equal-score acceleration.
+- The large near/far wide improvements produced zero hidden gain. Mark further
+  tuning of the current Q(A) subspace as locally overfit and abandon it until a
+  new online-correlated dataset signal exists.
+- Do not restore ordinary alternating Q(W): v31 already tested the second
+  feedback solve and regressed online. v38 instead screens a cheap direct Q(W)
+  fallback against the existing feedback Q(W), using stratified exact A@W and
+  conservative per-layout row gates.
+- The direct-Q(W) fallback is rejected: groups 0-3 change `-0.006` while local
+  quantization costs about 11 seconds more. A one-step low-row mantissa
+  refinement is also rejected at `-0.089 / +2.5s`. These results reinforce
+  that the current feedback Q(W) should remain fixed.
+- Final v38 spends the v37 acceleration only on the online-positive tall sweep
+  restoration. Tall uses three sweeps; ordinary wide stays at two; square and
+  forced compression stay at three. Far groups 0/1 improve `+3.979` with no
+  regression, and all other mechanisms are unchanged.
+- Full validation passes `1100/1100`. Using the controlled v34-v35 tall delta
+  gives `17665-17720 / 240-260s`, centered near `17683 / 253s`.
