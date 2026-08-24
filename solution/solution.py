@@ -1030,6 +1030,19 @@ def _linear_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
     )
 
 
+def _balanced_linear_permutation(
+    activation: torch.Tensor,
+    weight: torch.Tensor,
+) -> torch.Tensor:
+    """Spread high-range channels evenly across contiguous HiF4 groups."""
+    sensitivity = _rms(activation) * _rms(weight)
+    ordered = torch.argsort(sensitivity)
+    group_count = int(activation.shape[-1]) // 64
+    lanes = ordered.reshape(64, group_count).clone()
+    lanes[1::2] = lanes[1::2].flip(1)
+    return lanes.transpose(0, 1).reshape(-1)
+
+
 def _hadamard(values: torch.Tensor, block: int) -> torch.Tensor:
     result = values.to(torch.float32).reshape(
         -1, values.shape[-1] // block, block
@@ -1076,6 +1089,9 @@ def _select_linear_signs(
 
 
 def _linear_transform(values: torch.Tensor, state: dict[str, Any]) -> torch.Tensor:
+    permutation = state.get("permutation")
+    if permutation is not None:
+        values = values.index_select(-1, permutation)
     return _hadamard(
         values.to(torch.float32) * state["coefficient"],
         int(state["hadamard"]),
@@ -1098,6 +1114,15 @@ def hif4_calibration_and_quantize_weight(
         for quant, scale in calib_activation_list
     ]
     activation = torch.cat(activation_parts)
+    permutation = None
+    if int(weight.shape[-1]) <= 2 * int(weight.shape[0]):
+        permutation = _balanced_linear_permutation(activation, weight)
+        activation = activation.index_select(-1, permutation)
+        weight = weight.index_select(-1, permutation)
+        activation_parts = list(torch.split(
+            activation,
+            [int(part.shape[0]) for part in activation_parts],
+        ))
     multiplier = _linear_multiplier(_rms(activation), _rms(weight))
     transformed_activation = activation * multiplier
     transformed_weight = weight / multiplier
@@ -1128,7 +1153,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 39,
+        "version": 40,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1149,6 +1174,8 @@ def hif4_calibration_and_quantize_weight(
             else _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS
         ),
     }
+    if permutation is not None:
+        activation_state["permutation"] = permutation
     weight_params = _feedback_quantize_weight(
         transformed_activation,
         transformed_weight,

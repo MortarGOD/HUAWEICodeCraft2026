@@ -824,3 +824,27 @@ v13 (stable Attention)
   Square, wide, forced compression, and Attention remain exactly unchanged.
 - Full validation passes `1100/1100`. Forecast v39 at
   `17688-17708 / 235-250s`, centered near `17693 / 238s`.
+
+## v39 online result and v40 paper-driven direction
+
+- Confirmed v39 is `17697 / 234s`, only `+15 / +6s` over v38. The forecast is
+  accurate, but another sweep/threshold version cannot plausibly close the
+  remaining score gap.
+- Reviewed and locally archived sixteen primary papers spanning GPTQ,
+  SmoothQuant, AWQ, OmniQuant, RPTQ, QuaRot, SpinQuant, AffineQuant,
+  AdaRound/BRECQ, HQQ, QuIP/QuIP#, AQLM, SpQR, and Outlier Suppression+.
+  RPTQ's cross-group channel layout is the strongest missing legal mechanism.
+- Direct similar-range clustering is incompatible with the existing local
+  Hadamard and is rejected. v40 instead distributes ordered joint A/W RMS
+  sensitivity quantiles evenly across every 64-channel block, preserving
+  `A@W` with a paired permutation.
+- Near/far groups 0-3 gain `1.925/3.593` MSE; independent groups 4-7 gain
+  `17.964/15.424`. Random shapes at 4:1 compression regress, so they are
+  shape-gated to exact v39 fallback; the online shapes are all within 2:1.
+- Complete standard random Linear improves by `+7512.698` points, largely by
+  repairing catastrophic tail groups. Wins/ties/losses are `12/14/17`, so the
+  tail gain is not presented as a proportional online forecast. Attention is
+  unchanged and all `1100/1100` checks pass.
+- Forecast v40 at `17720-18150 / 240-265s`. The next branch after feedback is
+  a SpinQuant-inspired learned sparse/block-orthogonal basis, not more
+  coordinate sweeps.

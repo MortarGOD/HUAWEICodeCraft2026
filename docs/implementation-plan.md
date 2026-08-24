@@ -933,3 +933,72 @@ Outcome:
 5. The v37-v38 mechanism-specific score ratio maps the new tall gain to about
    11 online points. Select v39-a and forecast
    `17688-17708 / 235-250s`, centered near `17693 / 238s`.
+
+## v40 literature-driven layout optimization
+
+The confirmed v39 result is `17697 / 234s`, only `+15 / +6s` over v38. This
+matches the conservative forecast but confirms that additional coordinate
+sweeps are near their cost-benefit limit. v40 therefore starts a new mechanism
+rather than tuning another sweep count or lambda.
+
+A full-text review of sixteen primary low-precision papers is recorded in
+`docs/quantization-paper-synthesis-v40.md`. SmoothQuant/AWQ-style reciprocal
+scaling, GPTQ/AdaRound-style output-aware rounding, and QuaRot-style local
+Hadamard transforms already have close counterparts in v39. RPTQ's channel
+reordering across quantization-group boundaries is the strongest missing,
+interface-compatible mechanism.
+
+```text
+v39 (original contiguous channel groups)
+  └─ v40: paired A/W permutation before balance + signed Hadamard
+       ├─ spread sensitivity quantiles across each 64-channel group
+       ├─ preserve A@W exactly with the same permutation
+       ├─ store one permutation for dynamic A
+       └─ retain identity beyond the online 2:1 compression boundary
+```
+
+Risks and acceptance criteria:
+
+1. A layout that helps activation quantization can hurt weight quantization.
+   Rank candidate statistics using both A and W, then require nearest/far
+   donor agreement; do not choose parameters from donor tests.
+2. Validate `(A[:, p] @ W[:, p].T) == A @ W.T` to FP32 tolerance before
+   measuring quantized output.
+3. Keep the online delta to one `index_select`; no dense affine matrix, online
+   search, extra Q(W) solve, or additional coordinate sweep is allowed in the
+   same version.
+4. Attention stays identical to v39. Full state/output validation must pass
+   `1100/1100`, and projected online time must stay below 270 seconds.
+5. If the new layout is not positive on both donor panels, reject it and use
+   the SpinQuant-inspired learned block-orthogonal basis as the next branch;
+   do not submit a paper-inspired change without local evidence.
+
+Humanize remains unavailable; the review-derived steps and executable
+acceptance criteria were refined manually under the project edict.
+
+Outcome:
+
+1. Direct RPTQ clustering is rejected: grouping similar-range channels raises
+   the simple calibration-output proxy by 30%-57% on all four online shapes.
+   This is a real interaction with Hadamard-64, which needs large and small
+   channels mixed rather than concentrated.
+2. The retained method sorts channels by joint A/W RMS sensitivity, then uses
+   a snake round-robin layout so every block receives the full sensitivity
+   spectrum. Paired A/W permutation has FP32 relative error `1.05e-6`, caused
+   only by changed accumulation order.
+3. Nearest donor groups 0-3 improve `1707.044071 -> 1705.119469`; far donors
+   improve `1707.377129 -> 1703.783798`. Independent groups 4-7 improve
+   `1780.493763 -> 1762.529987` nearest and
+   `1766.604370 -> 1751.180107` farthest.
+4. Random 4:1 compression regresses before gating, so v40 applies the layout
+   only when `input <= 2 * output`; stronger compression becomes exactly v39.
+   Across the complete standard random suite, Linear score improves
+   `-29716.980 -> -22204.281` (`+7512.698`), dominated by recovery of severe
+   tail layouts. Attention remains exactly `5412.720`.
+5. The complete random run is `246.51s` versus v39 `190.61s`, but the delta is
+   concentrated in extreme distributions that select different joint
+   policies. Online-shaped donor panels are flat to slightly faster. Forecast
+   v40 conservatively at `17720-18150 / 240-265s`; do not map the random tail
+   gain linearly to the hidden score.
+6. Full validation passes `1100/1100`; `py_compile` and `git diff --check`
+   pass. Select the shape-gated balanced-permutation branch as v40.
