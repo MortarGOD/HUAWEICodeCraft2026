@@ -250,6 +250,48 @@ Execution:
 Humanize is not installed in this workspace. The executable steps and
 acceptance criteria above were therefore refined manually before code changes.
 
+## Post-v42 paper-list research plan
+
+The 2026-08-24 audit of `docs/paper_list.md` is recorded in
+`docs/quantization-strategy-library.md`. All 21 list entries have been resolved
+to 20 unique primary sources and studied from full text. Humanize remains
+unavailable, so the following steps and acceptance criteria were refined
+manually.
+
+Candidate order:
+
+1. Implement an isolated MR-GPTQ-inspired static act-order for the existing
+   residual-feedback Q(W). Compute the legal HiF4 grids in physical order,
+   change only the calibration feedback order, and restore original order in
+   the returned parameters. Compare group-, E1_8-, and leaf-unit granularity.
+2. If static act-order is numerically stable, add an offline hierarchical beam
+   over E6M2/E1_8/E1_16 using exact calibration `A@W`. Include an OAS-like
+   controlled-saturation candidate and separate top-1 from body error.
+3. Derive scale candidates from actual S1P2 hierarchy decision boundaries,
+   union them with current code offsets, and remove duplicates before output
+   scoring.
+4. Separately prototype a Q(A) risk controller using row-RMS variation,
+   top-1 energy, near-zero ratio, peak/RMS and shape. Calibration may fit the
+   controller with `A@W`; test execution chooses at most two fixed profiles and
+   always retains an exact v42 fallback.
+5. Keep structured activation residual importance and deterministic EDEN
+   shrinkage as diagnostic branches until one of the first four directions
+   establishes a transferable signal.
+
+Acceptance criteria:
+
+- Each submitted version changes one major mechanism and keeps a byte-exact
+  v42 fallback for signatures outside its gate.
+- Q(W)-only branches add no online tensor operation and no measurable online
+  runtime; Q(A) routing may add at most 5% to the v42 online anchor.
+- Every candidate passes legal HiF4 state checks, FP32 equivalence for paired
+  transforms, all 1100 interface checks, and catastrophic-tail tests.
+- Local negative evidence can lower priority but does not veto a theoretically
+  sound, bounded-risk online ablation, because local and online distributions
+  are known to differ.
+- Residual channels, extra GEMMs, LoRA, stochastic inference, new metadata bits,
+  or any format outside the six-function interface are not submission paths.
+
 ## v24 controlled Linear recovery plan
 
 Online anchors are v22 `16359 / 197s`, v23 `16477 / 193s`, and the external

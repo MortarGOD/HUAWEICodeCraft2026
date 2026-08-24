@@ -893,3 +893,34 @@ v13 (stable Attention)
   adds `45.060` with exact fallback on the tail.
 - Linear and V are parameter-exact v41 outputs. Forecast this isolated v42
   Attention experiment at `17940-18020 / 218-228s`.
+
+## 2026-08-24 complete paper-list audit
+
+- Resolved all 21 entries in `docs/paper_list.md` to 20 unique primary
+  sources: 18 arXiv papers, one ACL Findings paper, and one NVIDIA official
+  technical article. HiGPTQ is inside the HiFloat4 paper rather than a separate
+  source. The listed NVIDIA URL is 404; archive the current official NVFP4
+  article as a clearly labelled substitute instead of pretending the missing
+  page is a paper.
+- Downloaded and validated 335 PDF pages (33.29 MiB) and extracted approximately
+  **186 thousand words** of full text. The local
+  archive is intentionally excluded from Git; checksums and source links are in
+  `docs/quantization-strategy-library.md`.
+- The strongest missing zero-online-cost mechanism is MR-GPTQ static
+  act-order: fix scales/grids first, reorder only the calibration feedback
+  decisions by Hessian importance, then restore original storage order.
+- Four Over Six and OAS agree that absmax/no-saturation scaling is not always
+  optimal. Translate this into S1P2-boundary candidates and controlled peak
+  saturation, not literal NVFP4 constants.
+- M²XFP establishes an important W/A asymmetry: offline weights benefit from
+  adaptive subgroup-scale search; dynamic activations benefit from cheap top-1
+  preservation. This supports expanding Q(W) hierarchical search while keeping
+  Q(A) online profiles small.
+- InputBreakQuant reports mean 0.82 error correlation across quantizers and
+  shows that small residuals can become large after RMSNorm; MLP gate activation
+  precision matters more than restoring gate weights. Prioritize activation-risk
+  routing over another unconstrained fixed Q(W) solve.
+- ARCQuant, Rollout-ResQ, DecDEC, QAD, RILQ, QeRL, and FPE2M2 provide useful
+  principles but require residual GEMMs, model training/logits, LoRA, randomness,
+  or an incompatible intermediate format. Do not place their original forms in
+  submission code.
