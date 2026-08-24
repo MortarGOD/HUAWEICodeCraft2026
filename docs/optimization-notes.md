@@ -848,3 +848,27 @@ v13 (stable Attention)
 - Forecast v40 at `17720-18150 / 240-265s`. The next branch after feedback is
   a SpinQuant-inspired learned sparse/block-orthogonal basis, not more
   coordinate sweeps.
+
+## v40 online result and v41 direction
+
+- Confirmed v40 is `17808 / 243s`, giving `+111 / +9s` over v39. Channel
+  layout is therefore online-positive, but the random-tail gain overstates
+  hidden sensitivity by orders of magnitude.
+- Preserve v40's permutation and 2:1 shape gate. Calibrate future score from
+  ordinary near/far donors; use random extremes only to catch catastrophic
+  behavior.
+- v41 tests a larger deterministic signed-Hadamard bank as a zero-online-cost
+  discrete SpinQuant subset. Start at 16 bases, gate on both donor panels, and
+  do not test 32 unless 16 earns enough improvement to justify calibration
+  cost. Dense online rotation is rejected under the 57-second margin.
+- Reject 16 bases: near improves but far regresses by `5.945` MSE. A 1%
+  challenger trust gate is an exact v40 no-op with extra cost.
+- Retain the eight-base bank and bit-reverse the 64 sensitivity lanes before
+  Hadamard. This fuses into the existing permutation and aligns transform
+  ordering with HiF4's scale hierarchy at zero online-operation cost.
+- Four independent near/far panels improve by
+  `89.405/85.592/99.650/87.539` MSE. Complete random Linear adds `1164.523`
+  standard points with `21/14/8` wins/ties/losses and no new failed group.
+- Forecast v41 at `18200-18900 / 240-255s`. The wide score interval reflects
+  historical nonlinear transport even though this is the strongest ordinary
+  donor signal since the holdout rebuild.

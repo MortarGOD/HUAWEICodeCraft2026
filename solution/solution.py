@@ -1040,7 +1040,11 @@ def _balanced_linear_permutation(
     group_count = int(activation.shape[-1]) // 64
     lanes = ordered.reshape(64, group_count).clone()
     lanes[1::2] = lanes[1::2].flip(1)
-    return lanes.transpose(0, 1).reshape(-1)
+    positions = torch.arange(64, device=ordered.device)
+    bit_reversed = sum(
+        ((positions >> bit) & 1) << (5 - bit) for bit in range(6)
+    )
+    return lanes.transpose(0, 1).index_select(1, bit_reversed).reshape(-1)
 
 
 def _hadamard(values: torch.Tensor, block: int) -> torch.Tensor:
@@ -1153,7 +1157,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 40,
+        "version": 41,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,

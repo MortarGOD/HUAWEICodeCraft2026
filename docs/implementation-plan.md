@@ -1002,3 +1002,71 @@ Outcome:
    gain linearly to the hidden score.
 6. Full validation passes `1100/1100`; `py_compile` and `git diff --check`
    pass. Select the shape-gated balanced-permutation branch as v40.
+
+## v41 discrete learned orthogonal basis
+
+The confirmed v40 result is `17808 / 243s`, versus v39 `17697 / 234s`:
+`+111 / +9s`. This validates cross-group layout as an online-positive new
+mechanism, while the complete-random `+7512.698` tail gain clearly cannot be
+transported linearly to hidden score. Future forecasts use the ordinary
+near/far donor panels and the controlled v39-v40 online delta; random extremes
+are robustness gates only.
+
+SpinQuant shows that quantized accuracy varies substantially across equivalent
+rotations. A dense learned rotation is too expensive with only 57 seconds of
+online margin. v41 first tests its discrete signed-Hadamard subset: expand the
+fixed calibration candidate bank while leaving dynamic execution and state
+size unchanged.
+
+```text
+v40 (balanced channel layout + 8 signed-Hadamard bases)
+  ├─ v41-a: 16 deterministic signed-Hadamard bases
+  ├─ v41-b: 32 bases only if 16 has strong gain/cost evidence
+  ├─ held: sparse two-stage butterfly/Givens learning
+  └─ reject: dense 64x64 online rotation
+```
+
+Risks and acceptance criteria:
+
+1. More calibration candidates can overfit peak statistics. Require aggregate
+   improvement on both nearest and far donors and check the second group batch
+   without selecting candidate count from its test errors.
+2. Candidate generation remains deterministic and calibration-only. It may
+   use A/W statistics, but dynamic activation never observes W or test labels.
+3. Dynamic transform count, activation-state tensor count, and coordinate
+   sweep schedule must remain identical to v40. Only calibration candidate
+   scoring may grow.
+4. Require measured ordinary-panel calibration cost below 1.12x v40 and
+   forecast online below 275 seconds. Reject 32 bases unless 16 bases earns a
+   material cross-panel gain.
+5. Attention remains byte-identical. Any accepted version must pass the full
+   random robustness suite and `1100/1100` before push.
+
+Humanize remains unavailable; the one-variable candidate tree and executable
+acceptance criteria were refined manually under the project edict.
+
+Outcome:
+
+1. Unconditional 16-base selection improves the nearest panel but regresses
+   far donors `1703.783798 -> 1709.728313`; reject it as calibration overfit.
+   A 1% challenger trust gate returns exactly to v40 scores while retaining
+   its candidate-scoring cost, so that leaf is also rejected.
+2. Retain eight signed-Hadamard bases and apply a six-bit reversal to the 64
+   sensitivity lanes inside each balanced group. This is fused into v40's
+   stored channel permutation and changes neither dynamic operator count nor
+   state size. It aligns Walsh basis order with HiF4's nested 4/8/16 scales.
+3. Groups 0-3 improve `1705.119469 -> 1615.713978` nearest and
+   `1703.783798 -> 1618.191845` farthest. Independent groups 4-7 improve
+   `1762.529987 -> 1662.879684` and `1751.180107 -> 1663.641296`.
+   The four gains are `89.405/85.592/99.650/87.539`, unusually consistent.
+4. Complete standard random Linear improves `-22204.281 -> -21039.758`
+   (`+1164.523`), with wins/ties/losses `21/14/8`. The isolated linear run
+   falls from v40's `204.13s` to `169.66s`, although cross-run timing includes
+   policy and thermal noise. Strong-compression fallbacks remain exact.
+5. v40 converted `38.906` summed four-panel MSE improvement into 111 online
+   points. v41's corresponding `362.186` is 9.3x larger, but historical
+   transport is nonlinear. Forecast conservatively at
+   `18200-18900 / 240-255s`, rather than extrapolating a 1000-point center as
+   certainty.
+6. Attention remains byte-identical to v40. Select the bit-reversed hierarchy
+   layout for v41 subject to `1100/1100` and final repository checks.
