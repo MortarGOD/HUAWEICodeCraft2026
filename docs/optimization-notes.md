@@ -804,3 +804,23 @@ v13 (stable Attention)
   regression, and all other mechanisms are unchanged.
 - Full validation passes `1100/1100`. Using the controlled v34-v35 tall delta
   gives `17665-17720 / 240-260s`, centered near `17683 / 253s`.
+
+## v38 online result and v39 direction
+
+- Confirmed v38 is `17682 / 228s`, exactly recovering v33's score while
+  reducing runtime by 21 seconds. The prior score center was accurate; runtime
+  was conservatively overestimated by 25 seconds.
+- Versus v37, the tall short-row restoration gives `+44 / +4s`. This is the
+  strongest current evidence of a Q(A) search-capacity change that transfers
+  online, unlike v37's locally large wide-subspace delta.
+- v39 extends three sweeps only to the ordinary-tall 1024-row layout. All other
+  shapes retain v38 thresholds and sweep counts, providing a clean attribution
+  of the largest equal-weight activation layout.
+- Near tall groups 0/1 gain `+0.977005` and far donors gain `+0.980894`.
+  Only each group's 1024-row case changes, and both improve; all shorter cases
+  are exact v38 matches.
+- The local two-group cost is `+2.55s` near and `+2.94s` far. Using the observed
+  v37-v38 local/online tall timing ratio predicts roughly 238 seconds online.
+  Square, wide, forced compression, and Attention remain exactly unchanged.
+- Full validation passes `1100/1100`. Forecast v39 at
+  `17688-17708 / 235-250s`, centered near `17693 / 238s`.

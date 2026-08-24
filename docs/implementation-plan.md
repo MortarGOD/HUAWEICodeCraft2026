@@ -883,3 +883,53 @@ Outcome:
 5. Full validation passes `1100/1100`. The controlled v34-v35 anchor predicts
    about `+45 / +29s` over v37, so forecast v38 at
    `17665-17720 / 240-260s`, centered near `17683 / 253s`.
+
+## v39 tall-1024 multi-sweep extension
+
+The confirmed v38 result is `17682 / 228s`: score exactly matches v33 while
+runtime improves by 21 seconds. Relative to v37, restoring tall short-row
+sweeps adds exactly 44 points for only 4 seconds online. This independently
+confirms that the tall coordinate-search direction transfers, while v37's
+wide subspace score changes did not.
+
+The current quantizer still forces every 1024-row activation to one sweep,
+even on ordinary-tall shapes. v39 tests three sweeps for that single tall
+layout while preserving every other v38 branch.
+
+```text
+v38: tall rows<=512 -> 3; tall rows=1024 -> 1
+  ├─ v39-a: tall rows<=1024 -> 3
+  └─ held: tall rows<=512 -> 5 (do not mix variables yet)
+```
+
+Risks and acceptance criteria:
+
+1. The 1024-row case has equal score weight but higher compute. Require a
+   measurable tall donor gain and forecast below `285s`, leaving 15 seconds
+   of online safety margin.
+2. Store the row threshold in calibration state and pass it explicitly to the
+   dynamic quantizer. Ordinary wide, square, forced-compression, and Attention
+   must remain case-for-case identical to v38.
+3. Require the changed 1024-row cases to be non-regressing on both nearest and
+   far tall donor panels; aggregate-only improvement is insufficient.
+4. Do not increase rank, candidate offsets, or sweep count in the same version.
+5. Full state/output validation must pass `1100/1100` before push.
+
+Humanize remains unavailable; the single-variable extension and executable
+acceptance criteria are refined manually under the project edict.
+
+Outcome:
+
+1. Near tall groups 0/1 improve by `+0.977005`; far donors improve by
+   `+0.980894`. Both structural signatures are positive and only test case 3,
+   the 1024-row layout, changes; the other eight tall cases are exact matches.
+2. The two-group quantization cost rises by `2.55s` near and `2.94s` far.
+   Calibrating this cost with v37-v38's measured local/online tall ratio gives
+   an online center near 238 seconds, well below the 285-second gate.
+3. Far square group 2, ordinary-wide group 3, forced-compression random group
+   8, and Attention are case-for-case identical to v38.
+4. Full state/output validation passes `1100/1100`; `py_compile` and
+   `git diff --check` pass.
+5. The v37-v38 mechanism-specific score ratio maps the new tall gain to about
+   11 online points. Select v39-a and forecast
+   `17688-17708 / 235-250s`, centered near `17693 / 238s`.

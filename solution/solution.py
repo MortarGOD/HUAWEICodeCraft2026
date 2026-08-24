@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 38:
+Version 39:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -12,6 +12,8 @@ Version 38:
   v33/v35 online difference shows that this branch transfers to hidden data.
 - Restore three coordinate sweeps for tall/square/forced shapes while keeping
   ordinary wide at two; v37's QR/chunk acceleration funds the tall restoration.
+- Extend the three-sweep row limit from 512 to 1024 only for ordinary-tall
+  shapes, so the largest equal-weight layout participates in joint fitting.
 - Build wide output sketches directly from their randomized QR range basis;
   skip the objective-invariant SVD rotation inside that fixed subspace.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
@@ -570,6 +572,7 @@ def _quantize_linear_global_output(
     target_projection: torch.Tensor,
     quantized_projection: torch.Tensor,
     max_sweeps: int = _LINEAR_GLOBAL_JOINT_SWEEPS,
+    multi_sweep_max_rows: int = _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS,
 ) -> dict[str, torch.Tensor]:
     """Approximately minimize ||A W.T - Q(A) Q(W).T|| sequentially."""
     candidates = [
@@ -608,7 +611,7 @@ def _quantize_linear_global_output(
     ]
     sweep_count = (
         max_sweeps
-        if flat_values.shape[0] <= _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS
+        if flat_values.shape[0] <= multi_sweep_max_rows
         else 1
     )
     stacked_candidates = (
@@ -696,6 +699,7 @@ def _select_global_activation_policy(
         activation_state["global_target_projection"],
         activation_state["global_quantized_projection"],
         int(activation_state["global_joint_sweeps"]),
+        int(activation_state["global_multi_sweep_max_rows"]),
     ))
     quantized_weight = _dequantize_linear_params(weight_params)
     target = sample @ transformed_weight.T
@@ -1124,7 +1128,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 38,
+        "version": 39,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1138,6 +1142,11 @@ def hif4_calibration_and_quantize_weight(
                 and not force_global_output
             )
             else _LINEAR_GLOBAL_JOINT_SWEEPS
+        ),
+        "global_multi_sweep_max_rows": (
+            1024
+            if transformed_weight.shape[0] > transformed_weight.shape[1]
+            else _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS
         ),
     }
     weight_params = _feedback_quantize_weight(
@@ -1183,6 +1192,7 @@ def hif4_calibration_and_quantize_weight(
             activation_state["global_target_projection"],
             activation_state["global_quantized_projection"],
             int(activation_state["global_joint_sweeps"]),
+            int(activation_state["global_multi_sweep_max_rows"]),
         )
     )
     alternating_weight_params = _residual_feedback_weight(
@@ -1245,6 +1255,7 @@ def hif4_dynamic_quantize_activation(
             activation_state["global_target_projection"],
             activation_state["global_quantized_projection"],
             int(activation_state["global_joint_sweeps"]),
+            int(activation_state["global_multi_sweep_max_rows"]),
         )
     if activation_state.get("global_policy") == "original":
         return _quantize_linear_original_global_output(
