@@ -672,3 +672,40 @@ v13 (stable Attention)
   imply an online range near the 300-second boundary.
 - The official full random-suite format/state check passes `1100/1100` with
   no invalid parameters, state nodes, dtypes, NaN/Inf values, or failed groups.
+
+## v33 online correction
+
+- Confirmed v33 is `17682 / 249s`: `+161` points and `+75s` versus v30, or
+  `+175` points and `+61s` versus v32. Joint W/Q(W) output fitting is genuinely
+  positive, but its score-per-second ratio is poor.
+- The predicted `+1574` over v30 transported only `10.2%`. The effective
+  coefficient for this mechanism is `0.292` online points per extrapolated
+  donor unit, not the historical v25 coefficient `2.8568`.
+- Root cause: groups 0-15 are disjoint IDs but only repeat four structural
+  signatures, and nearest-feature donors remain inside the same 0818 source
+  distribution. Treating them as 16 independent distributions and expanding
+  their mean to 50 groups was invalid.
+- Modify: retain joint fitting as a positive direction, but optimize its cost
+  and require far-neighbor/leave-family-out evidence. Abandon: transporting a
+  coefficient across optimization families or increasing rank/sweeps solely
+  because the nearest-donor score rises.
+
+## v34 shape-aware joint-search budget
+
+- Added a deterministic farthest-calibration-feature donor mapping within each
+  exact signature. On groups 0-7, v33 improves far holdout `2469.477 ->
+  2553.326` (`+83.849`), essentially matching its nearest-donor `+81.253`.
+  This rejects pure nearest-neighbor overfit as the main v33 failure mode.
+- Ordinary wide matrices contribute only `+3.362` far points across groups 3
+  and 7, while their v33 quantization costs `37.01s`. Returning them to the
+  v30 baseline gives identical v30 outputs in `24.58s`. Strong-compression
+  wide shapes remain on v33 and match it exactly on random groups 8-9.
+- One sweep on every remaining shape retains 73%-75% of v33's near/far gain.
+  The final schedule restores three short-row sweeps only for square matrices,
+  which carry roughly half the gain: final retained gain is 88.2% nearest and
+  87.4% farthest.
+- Final far score is `2542.726` (`+73.248` over v30); the shape-composed nearest
+  score is `2568.566` (`+71.697`). Attention is unchanged.
+- Using the mechanism-specific v30-to-v33 online result predicts about `17663`
+  for v34. Use a conservative `17620-17710 / 210-235s` forecast. v34 is a
+  controlled efficiency/shape-contribution probe, not a claimed score jump.

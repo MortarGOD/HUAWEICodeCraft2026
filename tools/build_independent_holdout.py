@@ -89,8 +89,12 @@ def _standardize(features: torch.Tensor) -> torch.Tensor:
     return (features - mean) / std
 
 
-def _pair_nearest(indices: list[int], features: list[list[float]]) -> dict[int, int]:
-    """Greedily pair nearest groups; use a three-cycle for an odd remainder."""
+def _pair_groups(
+    indices: list[int],
+    features: list[list[float]],
+    pairing: str,
+) -> dict[int, int]:
+    """Greedily pair nearest/farthest groups within one exact signature."""
     matrix = _standardize(torch.tensor([features[i] for i in indices]))
     distances = torch.cdist(matrix, matrix).square()
     remaining = list(range(len(indices)))
@@ -101,7 +105,11 @@ def _pair_nearest(indices: list[int], features: list[list[float]]) -> dict[int, 
         for pos, left in enumerate(remaining):
             for right in remaining[pos + 1:]:
                 candidate = (float(distances[left, right].item()), left, right)
-                if best is None or candidate < best:
+                if (
+                    best is None
+                    or (pairing == "nearest" and candidate < best)
+                    or (pairing == "farthest" and candidate > best)
+                ):
                     best = candidate
         assert best is not None
         _, left, right = best
@@ -130,6 +138,7 @@ def _build_mapping(
     groups: list[dict[str, Any]],
     signature_fn,
     feature_fn,
+    pairing: str,
 ) -> dict[str, int]:
     signatures: dict[tuple[Any, ...], list[int]] = defaultdict(list)
     features: list[list[float]] = []
@@ -139,7 +148,7 @@ def _build_mapping(
 
     mapping: dict[int, int] = {}
     for indices in signatures.values():
-        mapping.update(_pair_nearest(indices, features))
+        mapping.update(_pair_groups(indices, features, pairing))
     if len(mapping) != len(groups) or any(index == donor for index, donor in mapping.items()):
         raise RuntimeError("failed to construct a complete non-self donor mapping")
     return {str(index): int(mapping[index]) for index in range(len(groups))}
@@ -148,30 +157,51 @@ def _build_mapping(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset-dir", type=Path, default=DEFAULT_DATASET_DIR)
+    parser.add_argument(
+        "--pairing",
+        choices=("nearest", "farthest"),
+        default="nearest",
+    )
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
     linear = torch.load(
         args.dataset_dir / "linear.pt", weights_only=True, map_location="cpu"
     )
-    linear_mapping = _build_mapping(linear, _linear_signature, _linear_features)
+    linear_mapping = _build_mapping(
+        linear,
+        _linear_signature,
+        _linear_features,
+        args.pairing,
+    )
     del linear
 
     attention = torch.load(
         args.dataset_dir / "attn.pt", weights_only=True, map_location="cpu"
     )
     attention_mapping = _build_mapping(
-        attention, _attention_signature, _attention_features
+        attention,
+        _attention_signature,
+        _attention_features,
+        args.pairing,
     )
 
     manifest = {
         "schema_version": 1,
         "source": "datasets_0818",
-        "method": "nearest calibration-feature donor within exact signature",
+        "method": (
+            f"{args.pairing} calibration-feature donor within exact signature"
+        ),
         "feature_sample_limit": FEATURE_SAMPLE_LIMIT,
         "linear_donors": linear_mapping,
         "attention_donors": attention_mapping,
     }
-    print(json.dumps(manifest, indent=2, sort_keys=True))
+    encoded = json.dumps(manifest, indent=2, sort_keys=True)
+    if args.output is None:
+        print(encoded)
+    else:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(encoded + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

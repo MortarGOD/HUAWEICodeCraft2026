@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 33:
+Version 34:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -8,6 +8,8 @@ Version 33:
 - Force that global policy for strongly compressed Linear shapes where the
   block-local v28 cost is structurally incomplete; reject it elsewhere unless
   calibration output MSE improves by a margin.
+- Keep wide Linear matrices on the v30 baseline because their rank-2048 joint
+  search contributes little holdout score for disproportionate runtime.
 - Average per-Q-head RMS within each KV group before reciprocal balancing.
 - Apply a full-head product-preserving Q/K transform only for dense layouts;
   sparse layouts retain reciprocal balancing without a rotation.
@@ -560,6 +562,7 @@ def _quantize_linear_global_output(
     quantized_diagonal: torch.Tensor,
     target_projection: torch.Tensor,
     quantized_projection: torch.Tensor,
+    max_sweeps: int = _LINEAR_GLOBAL_JOINT_SWEEPS,
 ) -> dict[str, torch.Tensor]:
     """Approximately minimize ||A W.T - Q(A) Q(W).T|| sequentially."""
     candidates = [
@@ -597,7 +600,7 @@ def _quantize_linear_global_output(
         candidate.reshape_as(flat_values) for candidate in reconstructed
     ]
     sweep_count = (
-        _LINEAR_GLOBAL_JOINT_SWEEPS
+        max_sweeps
         if flat_values.shape[0] <= _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS
         else 1
     )
@@ -685,6 +688,7 @@ def _select_global_activation_policy(
         activation_state["global_quantized_diagonal"],
         activation_state["global_target_projection"],
         activation_state["global_quantized_projection"],
+        int(activation_state["global_joint_sweeps"]),
     ))
     quantized_weight = _dequantize_linear_params(weight_params)
     target = sample @ transformed_weight.T
@@ -1113,13 +1117,21 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 33,
+        "version": 34,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
         "projection": activation_projection,
         "projection_strength": projection_strength,
         "activation_offsets": activation_offsets,
+        "global_joint_sweeps": (
+            _LINEAR_GLOBAL_JOINT_SWEEPS
+            if (
+                transformed_weight.shape[0] == transformed_weight.shape[1]
+                or force_global_output
+            )
+            else 1
+        ),
     }
     weight_params = _feedback_quantize_weight(
         transformed_activation,
@@ -1132,6 +1144,15 @@ def hif4_calibration_and_quantize_weight(
         weight_projection,
         weight_projection_strength,
     )
+    if (
+        transformed_weight.shape[0] < transformed_weight.shape[1]
+        and not force_global_output
+    ):
+        activation_state["global_policy"] = "baseline"
+        return {
+            "weight_params": weight_params,
+            "activation_state": activation_state,
+        }
     _install_global_output_state(
         activation_state, transformed_weight, weight_params
     )
@@ -1163,6 +1184,7 @@ def hif4_calibration_and_quantize_weight(
             activation_state["global_quantized_diagonal"],
             activation_state["global_target_projection"],
             activation_state["global_quantized_projection"],
+            int(activation_state["global_joint_sweeps"]),
         )
     )
     alternating_weight_params = _residual_feedback_weight(
@@ -1224,6 +1246,7 @@ def hif4_dynamic_quantize_activation(
             activation_state["global_quantized_diagonal"],
             activation_state["global_target_projection"],
             activation_state["global_quantized_projection"],
+            int(activation_state["global_joint_sweeps"]),
         )
     if activation_state.get("global_policy") == "original":
         return _quantize_linear_original_global_output(

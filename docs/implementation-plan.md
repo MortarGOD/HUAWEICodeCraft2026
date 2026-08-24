@@ -617,3 +617,55 @@ second Q(W). Retain the strong-compression alternating Q(W) branch only behind
 its existing exact robust calibration gate.
 
 Humanize remains unavailable; acceptance criteria were refined manually.
+
+## v34 distribution-shift and efficiency plan
+
+v33's confirmed result is `17682 / 249s`. Its joint output objective adds real
+score, but only 10.2% of the predicted increment transfers online. v34 will
+therefore preserve the mechanism while reducing capacity and selecting it
+only with evidence that survives distribution shift.
+
+Acceptance criteria:
+
+1. Add a far-neighbor holdout within each exact structural signature and use
+   it together with the existing nearest-neighbor donor panel.
+2. Measure score and quantization time by all four repeated Linear signatures;
+   do not count repeated group IDs as independent shape evidence.
+3. Prefer a candidate that retains at least 70% of v33's far-holdout gain while
+   recovering at least half of its runtime increase over v30.
+4. Keep v28 Attention unchanged and validate output/state constraints
+   `1100/1100` before push.
+5. Forecast with the v30-to-v33 mechanism-specific coefficient (`0.292`) and
+   report an interval; do not claim 19000 without a new controlled online
+   anchor.
+
+Candidate DAG:
+
+```text
+v30 (fast output-aware Q(A))
+  └─ v33 (rank-2048 joint W/Q(W), positive but expensive)
+      ├─ v34-a: lower rank / one-sweep joint search
+      ├─ v34-b: shape-gated rank-2048 search
+      └─ v34-c: short-row-only multi-sweep refinement
+```
+
+Humanize remains unavailable; these executable acceptance criteria are the
+manual refinement required by the project edict.
+
+Outcome:
+
+1. Far-neighbor holdout added and deterministic. Passed.
+2. All four repeated signatures measured independently. Passed; square
+   matrices provide the strongest gain and ordinary wide matrices the weakest.
+3. Final v34 retains 88.2%/87.4% of v33's nearest/farthest gain. It removes the
+   wide-matrix rank-2048 path and two tall-matrix sweeps; algorithmic work is
+   strictly lower, although absolute local timings show thermal-order noise.
+4. Strong-compression behavior is byte-for-byte score-equivalent to v33 on
+   random groups 8-9. Attention remains unchanged.
+5. Mechanism-specific forecast: `17620-17710 / 210-235s`, centered near
+   `17663 / 222s`. Full random-suite validation passes `1100/1100`.
+
+Candidate DAG decision: select v34-b+c (shape gate plus short-row square
+refinement). Reject the global five-offset cut because it loses 7.5% gain for
+only a small measured time reduction. Hold rank reduction for a later online
+ablation because it falls below the 70% far-gain acceptance boundary.
