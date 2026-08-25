@@ -953,3 +953,30 @@ v13 (stable Attention)
 - Complete format validation passes `1100/1100`. Forecast v43 at
   `17915-17955 / 225-235s`, centered near the v41 score because the measured
   v42 Attention regression is removed and the new Linear delta is small.
+
+## v44 RRS adaptation
+
+- The missing paper is Ke Yi et al., “Rotated Runtime Smooth,” ICLR 2025,
+  arXiv:2409.20361. Its indispensable order is Hadamard rotation followed by
+  current-input channel absmax smoothing. Offline SmoothQuant statistics are
+  not equivalent because the paper explicitly targets calibration/input scale
+  mismatch.
+- Original RRS restores every runtime scale on the corresponding GEMM partial
+  sum. The contest exposes a fixed Q(W) and ordinary matrix multiplication, so
+  direct `A/s` is not output-equivalent. A legal two-stage approximation
+  `A/s -> HiF4 -> *s -> HiF4` worsens output MSE by `1.296-1.907x` on seven
+  varied shapes and is rejected.
+- v44 instead computes runtime channel absmax after the existing paired
+  Hadamard, converts it to bounded inverse-square victim weights within each
+  HiF4-64 group, and uses the profile only in legal hierarchy candidate
+  selection. Calibration compares strengths 0.5 and 1.0 by exact `A@W` per
+  row-count layout; unknown layouts reproduce v43 exactly.
+- The first 9 valid Linear groups improve `+7.568`. All 43 non-degenerate
+  random Linear groups improve `+5.584`, with 5 wins, 23 ties, and 15 losses.
+  Maximum group gain/loss is `+25.527/-7.763`, so the branch is mixed but
+  bounded rather than a local overfit collapse.
+- Paired full-Linear quantization time is `200.16s` v43 versus `199.56s` v44;
+  treat this as flat. Complete state/format validation passes `1100/1100`.
+  Because local and online distributions differ and a reported RRS entrant
+  reached roughly 23000, retain this as a one-mechanism controlled online
+  experiment rather than suppressing it from mixed local group counts.

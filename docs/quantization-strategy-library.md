@@ -2,13 +2,14 @@
 
 ## 审计范围与结论
 
-本轮以 `docs/paper_list.md` 的 21 个编号条目为入口，逐项核验一手来源、
-下载全文并研读方法、实验、消融、限制和硬件约束。清单实际对应 **20 个唯一
-来源**：18 篇 arXiv 论文、1 篇 ACL Anthology 论文和 1 篇 NVIDIA 官方技术
+本轮先以 `docs/paper_list.md` 的 21 个编号条目为入口，逐项核验一手来源；
+2026-08-25 又补入此前遗漏的 RRS。当前共 **21 个唯一来源**：19 篇 arXiv
+论文、1 篇 ACL Anthology 论文和 1 篇 NVIDIA 官方技术
 文章。编号 8 的 HiGPTQ 是编号 1 的 HiFloat4 论文内方法，不是独立论文。
 
-截至 2026-08-24，20 个来源均有可离线阅读的 PDF，合计 335 页、33.29 MiB；
-全文均已提取为文本，合计约 18.6 万词。论文 PDF、官方网页快照和提取文本位于
+截至 2026-08-25，21 个来源均有可离线阅读的 PDF，合计 351 页、62.49 MiB；
+前 20 篇已提取文本约 18.6 万词，RRS 则交叉阅读官方 LaTeX 源码与 PDF。
+论文 PDF、官方网页快照和提取文本位于
 `docs/papers/quantization/{pdf,source,text}`。这些原文资料仅作为本地研究档案，
 不提交到远程仓库；本策略库和由其导出的决策证据提交到仓库。
 
@@ -55,6 +56,7 @@ Accuracy”的 HTML，并由 Chrome 打印为 PDF。该文章发表于 2026-02-2
 | 19 | QeRL, 2510.11696 | 量化噪声在 RL 中提高策略熵；AQN 用指数调度的通道噪声，并把噪声合并入 RMSNorm 权重。这个收益依赖探索目标，不代表推理重建精度提升；线上判题应避免随机噪声导致方差。 | **放弃实现** |
 | 20 | Why Do Some Inputs Break Quantization?, 2506.12044 | 不同方法的逐样本错误相关均值 0.82；大误差样本在上层残差幅值更小，经 RMSNorm 后发生幅值反转。激活 patch 显示 MLP gate 输出/输入最关键，恢复 gate 权重本身无效；累计激活误差比末层权重精度更关键。说明 Q(A) 风险门控比继续堆 Q(W) 容量更值得探索。 | **最高优先级 Q(A) 启示** |
 | 21 | RILQ, 2412.01129 | 局部 Linear/Layer loss 对低秩补偿高度敏感；最后 Transformer 输出的 Model-Loss 允许跨层误差互相抵消，rank16 可胜局部 SVD rank256。赛题只见单层 `A@W`，没有模型末端或 LoRA 返回通道，不能复制；它也警告单层校准最优不等于线上任务最优。 | **原形态不兼容** |
+| 22 | RRS, 2409.20361 | 把异常值分成跨 token 稳定的 channel-wise outlier 与单 token spike。RS 用当前输入 `s_j=max_i|X_ij|`，避免校准尺度失配；Hadamard 先摊平 spike，显著降低粗粒度 smoothing 的 victim 效应。原实现需要 GEMM 对每个 reduction block 的局部输出乘回动态 `s_j`，本题普通 MatMul 接口无法原样表达。迁移为旋转后 runtime channel profile、victim-aware HiF4 候选代价，并用校准 `A@W` 门控，禁止无补偿地返回 `A/s`。 | **最高优先级 Q(A) 动态分支** |
 
 ## 从论文导出的可执行优化方向
 
@@ -109,6 +111,12 @@ offset 并集后去重，再由输出目标选择。若它只复制现有 offset
 最多两个固定 Q(A) profile。任何阈值必须有 v42 精确 fallback，且额外时间预算不
 超过线上 v42 锚点的 5%。
 
+RRS 将这个方向具体化：profile 必须在既有 Hadamard 后从当前矩阵逐通道 absmax
+生成。由于不能在判题 GEMM 的局部累加后乘回动态尺度，profile 不直接改变 FP32
+张量坐标，而是改变合法 HiF4 层次候选对正常值/异常值的计价。对通道尺度大的
+元素降低绝对误差支配度，相当于在可表达接口内逼近 `Q(X/s)*s` 的相对误差目标；
+是否启用及平滑强度仍由相同行数布局的校准精确输出误差决定；未知布局精确回退。
+
 ### P1：确定性 EDEN 共线诊断
 
 对每组记录 `c = ||x||² / <x,Q(x)>`。不直接引入随机 MS-EDEN，而是检查当前
@@ -157,6 +165,11 @@ v42 (Linear bit-reverse hierarchy + gated Attention QK hierarchy)
   │    └─ exact v42 fallback
   ├─ research-e / P1: deterministic EDEN shrinkage diagnostic
   └─ research-f / P2: structured Q(A) residual importance
+
+v43 (controlled Q(W) saturation)
+  └─ v44 / RRS: rotated runtime channel profile
+      ├─ reject: direct unpaired runtime division
+      └─ retain candidate: victim-aware HiF4 scale cost + A@W gate
 ```
 
 执行顺序不是把所有机制一次堆入新版本。v43 先验证受控饱和；下一主分支做
@@ -190,6 +203,7 @@ static act-order 因校准成本降为 P2。每个分支保留稳定版本 fallb
 | `QeRL_2510.11696` | 21 | 1.89 | 10,673 | `3bbcf6a7bd75` |
 | `InputBreakQuant_2506.12044` | 20 | 4.01 | 10,457 | `77ffc08beaa5` |
 | `RILQ_2412.01129` | 14 | 1.72 | 8,941 | `c1d1c9f73148` |
+| `RRS_2409.20361` | 16 | 29.20 | LaTeX source reviewed | `426edb29aaeb` |
 
 ## 一手来源
 
@@ -213,3 +227,4 @@ static act-order 因校准成本降为 P2。每个分支保留稳定版本 fallb
 - QeRL: https://arxiv.org/abs/2510.11696
 - Why Do Some Inputs Break Quantization?: https://arxiv.org/abs/2506.12044
 - RILQ: https://arxiv.org/abs/2412.01129
+- RRS: https://arxiv.org/abs/2409.20361

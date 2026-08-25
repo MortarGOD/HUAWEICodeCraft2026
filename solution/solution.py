@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 43:
+Version 44:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -25,6 +25,14 @@ Version 43:
   translates OAS/Four-Over-Six controlled saturation to the HiF4 hierarchy;
   the existing output-aware objective retains it only where improved body
   resolution outweighs peak clipping.
+- Adapt Rotated Runtime Smooth to the fixed-Q(W) contest interface.  After the
+  existing paired Hadamard transform, derive channel maxima from each current
+  activation and use their bounded inverse-square profile to protect normal
+  channels from the victim effect during legal HiF4 hierarchy selection.
+- Never return the paper's unpaired A/s tensor: its per-block GEMM scale restore
+  is unavailable here.  Instead calibration chooses the runtime-profile
+  strength by exact A@W error and stores it only when it transfers across
+  multiple calibration layouts with bounded worst-layout regression.
 """
 
 from __future__ import annotations
@@ -66,6 +74,11 @@ _LINEAR_FEEDBACK_RIDGE = 0.1
 _LINEAR_FEEDBACK_STEP = 0.75
 _LINEAR_FEEDBACK_ENERGY_ORDER = True
 _LINEAR_FEEDBACK_DESCENDING = True
+_LINEAR_RRS_STRENGTHS = (0.5, 1.0)
+_LINEAR_RRS_MIN_GAIN = 0.003
+_LINEAR_RRS_WEIGHT_MIN = 0.25
+_LINEAR_RRS_WEIGHT_MAX = 4.0
+_LINEAR_RRS_FLOOR_RATIO = 0.125
 
 _ATTENTION_QK_OFFSETS = (0, 1, 2, 3, 4)
 _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
@@ -411,6 +424,42 @@ def _dequantize_linear_params(params: dict[str, torch.Tensor]) -> torch.Tensor:
     ).flatten(-4, -1)
 
 
+def _runtime_smooth_importance(
+    values: torch.Tensor,
+    strength: float,
+) -> torch.Tensor:
+    """Build RRS victim-aware weights from the current rotated activation.
+
+    The original Runtime Smooth normalizes every channel by its runtime absmax
+    and restores that scale on the corresponding GEMM partial sum.  The public
+    contest interface has no partial-sum hook, so returning the normalized
+    tensor would change the Linear output.  Instead, use the equivalent
+    normalized-domain error metric only while selecting legal HiF4 hierarchy
+    bits; the reconstructed tensor remains in the paired-transform domain.
+    """
+    flat = values.to(torch.float32).reshape(-1, values.shape[-1])
+    channel_peak = flat.abs().amax(dim=0).reshape(-1, 64)
+    group_rms = channel_peak.square().mean(dim=-1, keepdim=True).sqrt()
+    tiny = torch.finfo(torch.float32).tiny
+    floor = (group_rms * _LINEAR_RRS_FLOOR_RATIO).clamp_min(tiny)
+    relative = group_rms.clamp_min(tiny) / channel_peak.clamp_min(floor)
+    weights = relative.pow(2.0 * float(strength)).clamp(
+        _LINEAR_RRS_WEIGHT_MIN,
+        _LINEAR_RRS_WEIGHT_MAX,
+    )
+    weights = weights / weights.mean(dim=-1, keepdim=True).clamp_min(tiny)
+    return weights.reshape(-1)
+
+
+def _combine_runtime_importance(
+    importance: torch.Tensor,
+    runtime_importance: torch.Tensor | None,
+) -> torch.Tensor:
+    if runtime_importance is None:
+        return importance
+    return importance.to(torch.float32) * runtime_importance.reshape_as(importance)
+
+
 def _global_output_cost_state(
     transformed_weight: torch.Tensor,
     quantized_weight: torch.Tensor,
@@ -498,12 +547,17 @@ def _quantize_linear_original_global_output(
     values: torch.Tensor,
     diagonal: torch.Tensor,
     projection: torch.Tensor,
+    runtime_importance: torch.Tensor | None = None,
 ) -> dict[str, torch.Tensor]:
     """Retain v30's ||(A-Q(A))W.T|| candidate as an exact fallback."""
+    candidate_importance = _combine_runtime_importance(
+        diagonal.reshape(-1, 8, 2, 4),
+        runtime_importance,
+    )
     candidates = [
         _quantize_linear_values(
             values,
-            diagonal.reshape(-1, 8, 2, 4),
+            candidate_importance,
             offsets=(offset,),
         )
         for offset in _LINEAR_GLOBAL_SCALE_OFFSETS
@@ -578,12 +632,17 @@ def _quantize_linear_global_output(
     quantized_projection: torch.Tensor,
     max_sweeps: int = _LINEAR_GLOBAL_JOINT_SWEEPS,
     multi_sweep_max_rows: int = _LINEAR_GLOBAL_MULTI_SWEEP_MAX_ROWS,
+    runtime_importance: torch.Tensor | None = None,
 ) -> dict[str, torch.Tensor]:
     """Approximately minimize ||A W.T - Q(A) Q(W).T|| sequentially."""
+    candidate_importance = _combine_runtime_importance(
+        quantized_diagonal.reshape(-1, 8, 2, 4),
+        runtime_importance,
+    )
     candidates = [
         _quantize_linear_values(
             values,
-            quantized_diagonal.reshape(-1, 8, 2, 4),
+            candidate_importance,
             offsets=(offset,),
         )
         for offset in _LINEAR_GLOBAL_SCALE_OFFSETS
@@ -670,6 +729,117 @@ def _quantize_linear_global_output(
                     candidate_projected, 1, gather_projection
                 ).squeeze(1)
     return _select_linear_candidate_params(candidates, choices, values.ndim - 1)
+
+
+def _quantize_linear_activation(
+    values: torch.Tensor,
+    state: dict[str, Any],
+    runtime_smooth_strength: float | None = None,
+    profile_values: torch.Tensor | None = None,
+) -> dict[str, torch.Tensor]:
+    """Dispatch one Linear Q(A) policy with an optional current-input RRS profile."""
+    runtime_importance = None
+    if runtime_smooth_strength is not None:
+        runtime_importance = _runtime_smooth_importance(
+            values if profile_values is None else profile_values,
+            runtime_smooth_strength,
+        )
+    if state.get("global_policy") == "joint":
+        return _quantize_linear_global_output(
+            values,
+            state["global_cross_diagonal"],
+            state["global_quantized_diagonal"],
+            state["global_target_projection"],
+            state["global_quantized_projection"],
+            int(state["global_joint_sweeps"]),
+            int(state["global_multi_sweep_max_rows"]),
+            runtime_importance,
+        )
+    if state.get("global_policy") == "original":
+        return _quantize_linear_original_global_output(
+            values,
+            state["global_target_diagonal"],
+            state["global_original_projection"],
+            runtime_importance,
+        )
+    importance = _combine_runtime_importance(
+        state["importance"],
+        runtime_importance,
+    )
+    return _quantize_linear_values(
+        values,
+        importance,
+        offsets=state["activation_offsets"],
+        projection=state["projection"],
+        projection_strength=state["projection_strength"],
+    )
+
+
+def _install_runtime_smooth_policy(
+    state: dict[str, Any],
+    parts: list[torch.Tensor],
+    transformed_weight: torch.Tensor,
+    weight_params: dict[str, torch.Tensor],
+) -> None:
+    """Fit runtime-smooth strength per observed activation layout by A@W."""
+    samples = [
+        _sample_profile_rows(part)[:_LINEAR_GLOBAL_SELECT_ROWS_PER_SHAPE]
+        for part in parts
+    ]
+    quantized_weight = _dequantize_linear_params(weight_params)
+    targets = [sample @ transformed_weight.T for sample in samples]
+
+    baseline_errors = []
+    for sample, target in zip(samples, targets):
+        reconstructed = _dequantize_linear_params(
+            _quantize_linear_activation(sample, state)
+        )
+        baseline_errors.append(
+            (target - reconstructed @ quantized_weight.T).square().mean()
+        )
+    baseline = torch.stack(baseline_errors)
+
+    candidate_errors = []
+    for strength in _LINEAR_RRS_STRENGTHS:
+        errors = []
+        for part, sample, target in zip(parts, samples, targets):
+            reconstructed = _dequantize_linear_params(
+                _quantize_linear_activation(
+                    sample,
+                    state,
+                    strength,
+                    profile_values=part,
+                )
+            )
+            errors.append(
+                (target - reconstructed @ quantized_weight.T).square().mean()
+            )
+        candidate_errors.append(torch.stack(errors))
+
+    row_counts = [
+        int(part.reshape(-1, part.shape[-1]).shape[0]) for part in parts
+    ]
+    profiles: dict[str, float] = {}
+    for row_count in sorted(set(row_counts)):
+        indices = [
+            index for index, current in enumerate(row_counts)
+            if current == row_count
+        ]
+        reference = baseline[indices].mean()
+        best_error = reference
+        best_strength = None
+        for strength, errors in zip(_LINEAR_RRS_STRENGTHS, candidate_errors):
+            error = errors[indices].mean()
+            if bool(error < best_error):
+                best_error = error
+                best_strength = float(strength)
+        if (
+            best_strength is not None
+            and bool(best_error < (1.0 - _LINEAR_RRS_MIN_GAIN) * reference)
+        ):
+            profiles[str(row_count)] = best_strength
+    if profiles:
+        state["runtime_smooth_profiles"] = profiles
 
 
 def _select_global_activation_policy(
@@ -1170,7 +1340,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 43,
+        "version": 44,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1218,6 +1388,12 @@ def hif4_calibration_and_quantize_weight(
     )
     if not force_global_output:
         _prune_global_output_state(activation_state, global_policy)
+        _install_runtime_smooth_policy(
+            activation_state,
+            transformed_parts,
+            transformed_weight,
+            weight_params,
+        )
         return {"weight_params": weight_params, "activation_state": activation_state}
 
     feedback_rows = min(_LINEAR_FEEDBACK_ROWS, int(transformed_activation.shape[0]))
@@ -1280,6 +1456,12 @@ def hif4_calibration_and_quantize_weight(
         activation_state = alternating_state
         global_policy = alternating_policy
     _prune_global_output_state(activation_state, global_policy)
+    _install_runtime_smooth_policy(
+        activation_state,
+        transformed_parts,
+        transformed_weight,
+        weight_params,
+    )
     return {"weight_params": weight_params, "activation_state": activation_state}
 
 
@@ -1291,28 +1473,12 @@ def hif4_dynamic_quantize_activation(
 ) -> dict[str, torch.Tensor]:
     values = dequantize_nvfp4(activation_quant, activation_scale)
     transformed = _linear_transform(values, activation_state)
-    if activation_state.get("global_policy") == "joint":
-        return _quantize_linear_global_output(
-            transformed,
-            activation_state["global_cross_diagonal"],
-            activation_state["global_quantized_diagonal"],
-            activation_state["global_target_projection"],
-            activation_state["global_quantized_projection"],
-            int(activation_state["global_joint_sweeps"]),
-            int(activation_state["global_multi_sweep_max_rows"]),
-        )
-    if activation_state.get("global_policy") == "original":
-        return _quantize_linear_original_global_output(
-            transformed,
-            activation_state["global_target_diagonal"],
-            activation_state["global_original_projection"],
-        )
-    return _quantize_linear_values(
+    profiles = activation_state.get("runtime_smooth_profiles", {})
+    row_count = int(transformed.reshape(-1, transformed.shape[-1]).shape[0])
+    return _quantize_linear_activation(
         transformed,
-        activation_state["importance"],
-        offsets=activation_state["activation_offsets"],
-        projection=activation_state["projection"],
-        projection_strength=activation_state["projection_strength"],
+        activation_state,
+        profiles.get(str(row_count)),
     )
 
 

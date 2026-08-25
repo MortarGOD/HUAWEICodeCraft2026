@@ -250,6 +250,80 @@ Execution:
 Humanize is not installed in this workspace. The executable steps and
 acceptance criteria above were therefore refined manually before code changes.
 
+## v44 Rotated Runtime Smooth adaptation plan
+
+Anchor v43 has no true runtime channel smoother. It applies a calibration-fixed
+reciprocal multiplier and a paired Hadamard-64 transform, then chooses dynamic
+HiF4 scales mainly from each row/block and a fixed output sketch. RRS adds the
+missing current-input statistic, but its fused-GEMM formulation cannot be copied:
+the paper multiplies each partial block output by its runtime scale, while this
+contest exposes only one fixed `Q(W)` and ordinary dequantized matrix multiply.
+
+Humanize is still unavailable, so the plan and acceptance criteria below were
+refined manually.
+
+Candidate DAG:
+
+```text
+v43 (fixed SmoothQuant-like balance + Hadamard-64)
+  └─ v44 RRS adaptation
+      ├─ exact paper primitive: runtime absmax per rotated channel
+      ├─ reject: uncompensated A/s (changes A@W)
+      ├─ retain: victim-aware candidate cost derived from runtime profile
+      ├─ calibrate: compare v43 and RRS strengths by exact A@W per layout
+      └─ online: route known row layouts; exact v43 fallback otherwise
+```
+
+Execution steps:
+
+1. Compute `s_j=max_i |(A R)_ij|` on each current activation after the existing
+   paired transform. Aggregate it inside each physical HiF4-64 group and derive
+   bounded inverse-square victim weights. Rotation makes spike-driven scales
+   more uniform, matching RRS's required order of operations.
+2. Add those weights only to legal E6M2/E1_8/E1_16 candidate scoring. Returned
+   dequantized activation stays in the original transformed domain; never return
+   `A/s` without an inverse weight transform.
+3. During calibration, evaluate v43 and RRS candidates on sampled rows from
+   every calibration layout using exact `A@W` against the already fixed Q(W).
+   Select a strength independently for each observed row-count layout; aggregate
+   duplicate layouts before selection and fall back exactly on unseen layouts.
+4. Preserve Attention byte-for-byte and retain every v43 Linear path as fallback.
+
+Acceptance criteria:
+
+- RRS statistics must be computed from the current online activation after
+  rotation, not copied from calibration maxima.
+- The FP32 paired transform remains output-equivalent, and the implementation
+  never depends on unavailable partial-GEMM output scaling.
+- A row-layout profile is stored only with at least 0.3% aggregate exact-output
+  gain; duplicated row counts must agree in aggregate and unseen layouts fall
+  back exactly to v43.
+- On local raw and donor probes, catastrophic cases may not become worse than
+  v43; the intended RRS-enabled groups must show positive exact-output evidence.
+- State and all returned fields pass `self_check.py`; projected online runtime
+  remains below 250 seconds and under the 300-second hard limit.
+
+Selection outcome:
+
+1. A global per-shape gate selected no RRS profile and reproduced v43 exactly,
+   while adding about eight seconds of calibration search. Reject that empty
+   implementation. Per-row-count routing exposes the paper's genuinely dynamic
+   statistic while keeping exact fallback for unknown layouts.
+2. Direct `A/s -> HiF4 -> *s -> HiF4` was tested separately on seven varied
+   shapes. Its output MSE ratio versus v43 ranged from `1.296x` to `1.907x`;
+   the second legal HiF4 projection destroys the theoretical benefit. Reject it.
+3. On the first 9 valid Linear groups, v44 improves `-1661.416 -> -1653.848`
+   (`+7.568`). Across all 43 non-degenerate random Linear groups it improves
+   `-21040.128 -> -21034.544` (`+5.584`), with 5 wins, 23 ties, and 15 bounded
+   losses. The largest gain is `+25.527`; the largest loss is `-7.763`, so no
+   catastrophic tail is introduced.
+4. Full-Linear paired timing is `200.16s` for v43 and `199.56s` for v44. The
+   runtime absmax/profile cost is below run-to-run noise; use the v43 online
+   anchor rather than claiming a speedup. Attention remains exactly unchanged.
+5. The current random suite has mostly unique extreme signatures, so its stale
+   old donor manifest cannot be rebuilt without self-pairs. Treat the independent
+   test tensors and complete shape panel as the available transfer evidence.
+
 ## Post-v42 paper-list research plan
 
 The 2026-08-24 audit of `docs/paper_list.md` is recorded in
