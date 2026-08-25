@@ -88,11 +88,11 @@
 - **链接**：https://arxiv.org/abs/2509.09679
 
 ### 11. SmoothRot: Combining Channel-Wise Scaling and Rotation for Quantization-Friendly LLMs
-- **作者**：（Obuda University 等）
-- **发表**：arXiv, 2025-06
-- **核心内容**：将 QuaRot 的旋转框架与通道级缩放（channel-wise scaling，类似 SmoothQuant 的迁移思想）结合。在旋转之前先做通道级缩放，将极端异常值（>1000）压缩到量化友好范围（<10），再施加 Hadamard 旋转。LLaMA2 7B 上 W4A4KV4 RTN 量化，WikiText-2 困惑度仅比 FP16 高 0.82，缩小差距近 30%。
-- **与课题的关系**：**通道级缩放 + 旋转的组合策略**可直接用于 NVFP4→HiF4 转换——先对反量化后的激活做通道级平滑，再做旋转，最后量化到 HiF4。三步叠加的效果优于单独使用任何一种。
-- **链接**：https://arxiv.org/abs/2506.xxxxx（具体编号需确认）
+- **作者**：Patrik Czakó, Gábor Kertész, Sándor Szénási（Óbuda University）
+- **发表**：arXiv:2506.05413, 2025-06
+- **核心内容**：只针对 FFN down-projection，在 Hadamard 旋转前加入离线通道平滑，`s_j=max|X_j|^α/max|W_j|^(1-α)`；缩放被吸收到相邻权重中，因此不增加在线延迟。LLaMA2 7B 上 W4A4KV4 RTN 的 WikiText-2 困惑度相对 QuaRot 改善 0.82。
+- **与课题的关系**：当前方案已有成对通道平衡与 Hadamard，其核心机制基本覆盖。论文消融还显示，叠加 GPTQ 或 SpinQuant 后 SmoothRot 的额外收益消失或轻微转负，因此后续只审计平滑强度和变换顺序，不把它作为无条件新增模块。
+- **链接**：https://arxiv.org/abs/2506.05413
 
 ---
 
@@ -117,6 +117,7 @@
 - **发表**：arXiv, 2026-01
 - **核心内容**：提出 MS-EDEN——一种新型无偏量化原语，MSE 约为元素级随机舍入的一半。结合方形分组缩放 + 4/6 技术优化前向量化。在 NVFP4 全量化训练中比 NVIDIA SOT 方案损失降低 ≥20%。
 - **与课题的关系**：MS-EDEN 的无偏量化思想可用于转换过程中的随机舍入策略，减少转换引入的系统性偏差。其"事后范围对齐"（post-hoc range alignment）技巧也可用于 NVFP4→HiF4 的缩放因子映射。
+- **链接**：https://arxiv.org/abs/2601.22813
 
 ---
 
@@ -188,6 +189,7 @@
 - **发表**：arXiv, 2026-01
 - **核心内容**：在标准 MX 块上增加元数据增强——子组级共享缩放（2位/子组）+ 元素级精度修正（Top-1 元素扩展尾数）。额外仅 0.25 bit/元素开销，即可闭合 4-bit 到 8-bit MXFP 精度差距的 70-95%。
 - **与课题的关系**：M²XFP 的"子组级微调缩放"思想与 HiF4 的二级/三级微指数设计异曲同工。理解 M²XFP 有助于理解 HiF4 三级缩放的设计动机。
+- **链接**：https://arxiv.org/abs/2601.19213
 
 ### 23. MX+: Pushing the Limits of Microscaling Formats for Efficient LLM Serving
 - **作者**：Jungi Lee 等
@@ -243,11 +245,11 @@
 - **链接**：https://arxiv.org/abs/2506.12044
 
 ### 30. Improving Quantization with Post-Training Model Expansion
-- **作者**：（Meta 等）
-- **发表**：arXiv:2504.xxxxx, 2025-04
-- **核心内容**：证明适度的后训练模型扩展（增加模型宽度）可以拓宽量化可行域，在不改变量化格式的前提下提升量化模型精度。结合 Hadamard 旋转 + SpinQuant 使用效果更佳。
-- **与课题的关系**：如果 NVFP4→HiF4 转换后精度不达标，可以考虑对关键层做轻微的宽度扩展，为量化提供更多冗余自由度。
-- **链接**：具体编号需确认
+- **作者**：Giuseppe Franco, Pablo Monteagudo-Lago, Ian Colbert, Nicholas Fraser, Michaela Blott
+- **发表**：arXiv:2503.17513, 2025-03
+- **核心内容**：把在线 `N×N` Hadamard 换成截取自更大矩阵的 `N×M` 行正交投影（`M>N`），同时把激活和权重扩到 M 维。扩维保持原始乘积不变、增加校准激活的零空间，并把理想 GPTQ 重建误差上界缩小 `sqrt(N/M)`；实验收益随扩维率递减。
+- **与课题的关系**：这个机制必须同时把 A 的列数和 W 的行数扩为 M，会改变当前六函数接口的张量 shape，因此不能原样提交。可迁移的结论是：校准时应优先把 Q(W) 误差推入 A 的低能量/近零空间，而不是单纯降低权重 MSE。
+- **链接**：https://arxiv.org/abs/2503.17513
 
 ---
 
@@ -278,3 +280,24 @@
 | **残差补偿** | 用额外通道/LoRA 补偿量化误差 | ARCQuant, QDEC, RILQ | 补偿转换引入的不可逆误差 |
 
 > **关键洞察**：NVFP4 和 HiF4 的 4-bit 元素编码不同（E2M1 vs S1P2），转换不是简单的位操作，而是必须经过**反量化→重新量化**的过程。精度损失主要来自两步：(1) NVFP4 本身的量化误差（已丢失的信息无法恢复）；(2) 重新量化到 HiF4 时引入的新误差。课题核心在于**最小化第 (2) 步的误差**——旋转/平滑路线（#5-#11）用于事前预防，GPTQ 校准（#15, #1）用于事中优化，残差补偿（#18-#20）和蒸馏（#21）用于事后恢复。五条路线层层递进、正交互补，组合使用可达到最优精度。
+
+---
+
+## 十二、2026-08-25 原文补齐与深读审计
+
+本清单 30 个编号来源现已全部解析到一手原文。本地档案共 44 份 PDF（含清单外的
+GPTQ、AWQ、QuIP 等对照资料）；本轮新补齐 7 篇，PDF 与抽取文本存放在
+`docs/papers/quantization/{pdf,text}`，仅作本地研究档案，不提交远程仓库。
+
+| 本轮补齐原文 | 本地 stem | 深读后的赛题迁移结论 |
+|---|---|---|
+| DuQuant, 2406.01721 | `DuQuant_2406.01721` | 保留“最坏通道优先旋转→Zigzag 跨块均衡→第二次微旋转”；必须成对保持 `A@W` 等价，并由校准输出门控。 |
+| BASE-Q, 2506.15689 | `BASEQ_2506.15689` | 偏置校正和正负非对称尺度需要额外加法补偿，当前接口不能原样表达；迁移为候选的均值误差/能量漂移惩罚。 |
+| ButterflyQuant, 2509.09679 | `ButterflyQuant_2509.09679` | 可学习稀疏 Givens 角度是固定符号 Hadamard 之外的新容量；完整在线 butterfly 有超时风险，后续只做少量离散角、校准融合版本。 |
+| SmoothRot, 2506.05413 | `SmoothRot_2506.05413` | 核心已被现有平衡+旋转覆盖；与 GPTQ/SpinQuant 的负交互是禁止无条件叠加的新证据。 |
+| AFPQ, 2311.01792 | `AFPQ_2311.01792` | 单组正负两套尺度与 HiF4 返回格式不兼容；保留符号非对称度作为尺度候选和均值偏差诊断特征。 |
+| TetraJet, 2502.20853 | `TetraJet_2502.20853` | Q-EMA/Q-Ramping 属于训练期；可迁移为跨校准 shape 的候选翻转率/不稳定性惩罚，避免选择只在单一校准布局获胜的尺度。 |
+| Post-Training Model Expansion, 2503.17513 | `ModelExpansion_2503.17513` | 扩维改变矩阵 shape，不能提交；其“把误差藏入 A 的零空间”理论直接支持更强的 `A@W` 输出反馈。 |
+
+审计结论不是把七种机制一次堆入下一版本。用户要求等待 v44 线上反馈，因此这里只
+更新证据与候选优先级；v44 结果返回前不建立 v45 代码分支。

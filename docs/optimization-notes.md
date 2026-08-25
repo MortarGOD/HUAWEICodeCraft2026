@@ -894,9 +894,10 @@ v13 (stable Attention)
 - Linear and V are parameter-exact v41 outputs. Forecast this isolated v42
   Attention experiment at `17940-18020 / 218-228s`.
 
-## 2026-08-24 complete paper-list audit
+## 2026-08-24 paper-list audit snapshot
 
-- Resolved all 21 entries in `docs/paper_list.md` to 20 unique primary
+- At that revision, resolved all 21 then-listed entries in `docs/paper_list.md`
+  to 20 unique primary
   sources: 18 arXiv papers, one ACL Findings paper, and one NVIDIA official
   technical article. HiGPTQ is inside the HiFloat4 paper rather than a separate
   source. The listed NVIDIA URL is 404; archive the current official NVFP4
@@ -980,3 +981,20 @@ v13 (stable Attention)
   Because local and online distributions differ and a reported RRS entrant
   reached roughly 23000, retain this as a one-mechanism controlled online
   experiment rather than suppressing it from mixed local group counts.
+
+## v43 confirmed feedback and research-only wait period
+
+- Confirmed v43 is `17931 / 218s`, versus v42 `17881 / 220s` and v41
+  `17930 / 217s`. The forecast `17915-17955 / 225-235s` was accurate for score
+  (actual is 4 points from its midpoint) and conservative for runtime by 7-17s.
+- The `+50` recovery from v42 matches the rollback of v42's online-negative
+  Attention branch. The `+1 / +1s` comparison with v41 means controlled Q(W)
+  saturation is online-neutral within noise; retain it as a harmless anchor,
+  not as evidence for a major scale-search gain.
+- v44 is already submitted. User policy freezes submission development until
+  its online result arrives; no v45 branch, parameter search, or code mutation
+  is allowed during this interval.
+- The expanded 30-source paper audit added DuQuant, BASE-Q, ButterflyQuant,
+  SmoothRot, AFPQ, original TetraJet, and Post-Training Model Expansion. Their
+  transferable candidates are recorded in `quantization-strategy-library.md`;
+  they remain research nodes and are not silently merged into v44.

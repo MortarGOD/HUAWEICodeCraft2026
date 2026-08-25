@@ -2,13 +2,10 @@
 
 ## 审计范围与结论
 
-本轮先以 `docs/paper_list.md` 的 21 个编号条目为入口，逐项核验一手来源；
-2026-08-25 又补入此前遗漏的 RRS。当前共 **21 个唯一来源**：19 篇 arXiv
-论文、1 篇 ACL Anthology 论文和 1 篇 NVIDIA 官方技术
-文章。编号 8 的 HiGPTQ 是编号 1 的 HiFloat4 论文内方法，不是独立论文。
-
-截至 2026-08-25，21 个来源均有可离线阅读的 PDF，合计 351 页、62.49 MiB；
-前 20 篇已提取文本约 18.6 万词，RRS 则交叉阅读官方 LaTeX 源码与 PDF。
+本轮以 `docs/paper_list.md` 的 30 个编号条目为入口，逐项核验一手来源。
+截至 2026-08-25，清单中的 29 篇论文和 1 篇 NVIDIA 官方技术文章均已解析、
+下载并可离线阅读；本地档案另含 14 篇 GPTQ、AWQ、QuIP 等对照论文，共 44 份
+PDF、171.88 MiB。RRS 交叉阅读官方 LaTeX 源码与 PDF，其余来源均已抽取全文。
 论文 PDF、官方网页快照和提取文本位于
 `docs/papers/quantization/{pdf,source,text}`。这些原文资料仅作为本地研究档案，
 不提交到远程仓库；本策略库和由其导出的决策证据提交到仓库。
@@ -57,6 +54,18 @@ Accuracy”的 HTML，并由 Chrome 打印为 PDF。该文章发表于 2026-02-2
 | 20 | Why Do Some Inputs Break Quantization?, 2506.12044 | 不同方法的逐样本错误相关均值 0.82；大误差样本在上层残差幅值更小，经 RMSNorm 后发生幅值反转。激活 patch 显示 MLP gate 输出/输入最关键，恢复 gate 权重本身无效；累计激活误差比末层权重精度更关键。说明 Q(A) 风险门控比继续堆 Q(W) 容量更值得探索。 | **最高优先级 Q(A) 启示** |
 | 21 | RILQ, 2412.01129 | 局部 Linear/Layer loss 对低秩补偿高度敏感；最后 Transformer 输出的 Model-Loss 允许跨层误差互相抵消，rank16 可胜局部 SVD rank256。赛题只见单层 `A@W`，没有模型末端或 LoRA 返回通道，不能复制；它也警告单层校准最优不等于线上任务最优。 | **原形态不兼容** |
 | 22 | RRS, 2409.20361 | 把异常值分成跨 token 稳定的 channel-wise outlier 与单 token spike。RS 用当前输入 `s_j=max_i|X_ij|`，避免校准尺度失配；Hadamard 先摊平 spike，显著降低粗粒度 smoothing 的 victim 效应。原实现需要 GEMM 对每个 reduction block 的局部输出乘回动态 `s_j`，本题普通 MatMul 接口无法原样表达。迁移为旋转后 runtime channel profile、victim-aware HiF4 候选代价，并用校准 `A@W` 门控，禁止无补偿地返回 `A/s`。 | **最高优先级 Q(A) 动态分支** |
+
+### 2026-08-25 新补齐原文的增量结论
+
+| 来源 | 关键证据，不照搬的迁移结论 | 当前决策 |
+|---|---|---|
+| DuQuant, 2406.01721 | `G=ΛR1PR2` 成对作用于 A/W；先针对最坏通道构造块旋转，再以 Zigzag 使各块最大值均衡，第二次旋转收尾。W4A4 消融中 smoothing 单独出现 NaN，完整链路才从 8.48/6.79 改善到 6.28，证明顺序和互补性不能拆开。 | **P1，成对离散双旋转** |
+| BASE-Q, 2506.15689 | 旋转保持通道均值向量范数，无法消除 mean drift；bias correction 在 Qwen2.5-3B 是主收益，非对称 activation scale 也稳定增益。但两者都依赖输出偏置补偿或非成对尺度，当前接口无法精确表达。 | **只迁移均值/能量诊断** |
+| ButterflyQuant, 2509.09679 | `log2(n)` 层 Givens butterfly 以 `n log2(n)/2` 个角度表达可学习正交变换，Hadamard 是其特例；identity 初始化最好，约 86% 收益在前 200/500 步获得，分箱均匀正则可改善泛化。 | **P2，稀疏离散角原型** |
+| SmoothRot, 2506.05413 | 只平滑 FFN down-projection，`α` 约 0.45–0.6；随机 token 校准仍有效。但与 GPTQ 或 SpinQuant 叠加时优势消失或轻微转负。当前已有平衡+旋转+输出反馈，不能再无条件堆叠。 | **核心已覆盖，改为参数审计** |
+| AFPQ, 2311.01792 | 小组浮点分布常有正负不对称，正负独立尺度能改善 RTN/GPTQ/AWQ；直接实现需要每组两套尺度，HiF4 状态不支持。 | **只迁移符号不对称特征** |
+| TetraJet, 2502.20853 | truncation-free scale 用 `ceil(log2(2M/(Qp-Qn)))` 保证峰值不截断；随机舍入、Q-EMA、Q-Ramping解决训练梯度与权重振荡，不适用于确定性 PTQ。 | **迁移跨布局候选稳定性惩罚** |
+| Post-Training Model Expansion, 2503.17513 | `N×M (M>N)` 行正交 Hadamard 保持 A@W、扩大激活零空间，理想 GPTQ 误差上界可缩小 `sqrt(N/M)`；实验随扩维递减。它必须改变 A/W reduction shape，违反当前接口。 | **原形态拒绝，零空间目标继续** |
 
 ## 从论文导出的可执行优化方向
 
@@ -164,12 +173,19 @@ v42 (Linear bit-reverse hierarchy + gated Attention QK hierarchy)
   │    ├─ top-1 energy / near-zero / peak-RMS
   │    └─ exact v42 fallback
   ├─ research-e / P1: deterministic EDEN shrinkage diagnostic
-  └─ research-f / P2: structured Q(A) residual importance
+  ├─ research-f / P2: structured Q(A) residual importance
+  ├─ research-g / P1: DuQuant discrete R-P-R paired transform
+  ├─ research-h / P1: signed-mean and energy-drift candidate penalty
+  ├─ research-i / P2: sparse butterfly/Givens calibration search
+  └─ research-j / P1: cross-layout candidate-flip stability penalty
 
 v43 (controlled Q(W) saturation)
   └─ v44 / RRS: rotated runtime channel profile
       ├─ reject: direct unpaired runtime division
       └─ retain candidate: victim-aware HiF4 scale cost + A@W gate
+
+v44 (submitted; online result pending)
+  └─ WAIT: do not create v45 until online feedback arrives
 ```
 
 执行顺序不是把所有机制一次堆入新版本。v43 先验证受控饱和；下一主分支做
@@ -204,6 +220,13 @@ static act-order 因校准成本降为 P2。每个分支保留稳定版本 fallb
 | `InputBreakQuant_2506.12044` | 20 | 4.01 | 10,457 | `77ffc08beaa5` |
 | `RILQ_2412.01129` | 14 | 1.72 | 8,941 | `c1d1c9f73148` |
 | `RRS_2409.20361` | 16 | 29.20 | LaTeX source reviewed | `426edb29aaeb` |
+| `DuQuant_2406.01721` | 29 | 22.86 | 14,840 | `9ca78e7cb577` |
+| `BASEQ_2506.15689` | 19 | 30.10 | 7,313 | `5a1fd16252dc` |
+| `ButterflyQuant_2509.09679` | 16 | 0.76 | 8,436 | `ace8809ace99` |
+| `SmoothRot_2506.05413` | 6 | 1.24 | 3,888 | `62e8b0703479` |
+| `AFPQ_2311.01792` | 8 | 0.45 | 4,375 | `1f2a8454ff04` |
+| `TetraJet_2502.20853` | 15 | 1.16 | 8,155 | `1d08c54daa71` |
+| `ModelExpansion_2503.17513` | 9 | 0.29 | 5,215 | `a6dc23317c85` |
 
 ## 一手来源
 
@@ -228,3 +251,10 @@ static act-order 因校准成本降为 P2。每个分支保留稳定版本 fallb
 - Why Do Some Inputs Break Quantization?: https://arxiv.org/abs/2506.12044
 - RILQ: https://arxiv.org/abs/2412.01129
 - RRS: https://arxiv.org/abs/2409.20361
+- DuQuant: https://arxiv.org/abs/2406.01721
+- BASE-Q: https://arxiv.org/abs/2506.15689
+- ButterflyQuant: https://arxiv.org/abs/2509.09679
+- SmoothRot: https://arxiv.org/abs/2506.05413
+- AFPQ: https://arxiv.org/abs/2311.01792
+- TetraJet: https://arxiv.org/abs/2502.20853
+- Improving Quantization with Post-Training Model Expansion: https://arxiv.org/abs/2503.17513

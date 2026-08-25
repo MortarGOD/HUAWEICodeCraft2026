@@ -250,6 +250,21 @@ Execution:
 Humanize is not installed in this workspace. The executable steps and
 acceptance criteria above were therefore refined manually before code changes.
 
+## v43 online confirmation and v44 wait gate
+
+- Confirmed v43 online result: `17931 / 218s`.
+- The score forecast `17915-17955` contains the actual result, and its midpoint
+  differs by only 4 points. The runtime forecast `225-235s` was conservative by
+  7-17 seconds.
+- Relative to v42 (`17881 / 220s`), v43 gains 50 points and saves 2 seconds;
+  relative to v41 (`17930 / 217s`), it is effectively neutral (`+1 / +1s`).
+  This confirms that rolling back v42 Attention recovered its online loss, while
+  controlled Q(W) saturation contributed at most a very small transferable gain.
+- v44 remains the only submitted child of v43. Per the user's explicit gate,
+  do not create or implement v45 until the v44 online score and runtime arrive.
+- While waiting, research may update the candidate DAG and acceptance criteria,
+  but must not mutate submission code or tune against an assumed v44 result.
+
 ## v44 Rotated Runtime Smooth adaptation plan
 
 Anchor v43 has no true runtime channel smoother. It applies a calibration-fixed
@@ -326,9 +341,9 @@ Selection outcome:
 
 ## Post-v42 paper-list research plan
 
-The 2026-08-24 audit of `docs/paper_list.md` is recorded in
-`docs/quantization-strategy-library.md`. All 21 list entries have been resolved
-to 20 unique primary sources and studied from full text. Humanize remains
+The 2026-08-25 audit of `docs/paper_list.md` is recorded in
+`docs/quantization-strategy-library.md`. All 30 numbered sources have been
+resolved to primary sources and studied from full text. Humanize remains
 unavailable, so the following steps and acceptance criteria were refined
 manually.
 
