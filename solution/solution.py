@@ -1,6 +1,6 @@
 """NVFP4 -> HiF4 converter for the 2026 Huawei Algorithm Contest.
 
-Version 39:
+Version 43:
 - Retain v28's fast Linear weight feedback and v28 Attention path.
 - Compress W's dominant output space to rank 2048 after Q(W) is fixed, and
   project W and Q(W) separately so the sequential Q(A) search approximates
@@ -21,6 +21,10 @@ Version 39:
   sparse layouts retain reciprocal balancing without a rotation.
 - Select HiF4 scales by reconstruction error plus bounded energy drift; no
   calibration output is used to tune dynamic Q/K/V quantization.
+- Extend only fixed Q(W)'s E6M2 candidate set one code below peak/7.  This
+  translates OAS/Four-Over-Six controlled saturation to the HiF4 hierarchy;
+  the existing output-aware objective retains it only where improved body
+  resolution outweighs peak clipping.
 """
 
 from __future__ import annotations
@@ -36,6 +40,7 @@ E6M2_MAX = 49152.0  # 2^15 * 1.5
 _LINEAR_SCALE_OFFSETS = (0, 1, 2)
 _LINEAR_WIDE_SCALE_OFFSETS = (0, 1, 2, 3, 4)
 _LINEAR_WEIGHT_SCALE_OFFSETS = (0, 1, 2, 3)
+_LINEAR_WEIGHT_SATURATION_OFFSETS = (-1, 0, 1, 2, 3)
 _LINEAR_PROFILE_MIN_GAIN = 0.005
 _LINEAR_PROFILE_ROWS_PER_SHAPE = 64
 _LINEAR_HADAMARD = 64
@@ -67,7 +72,6 @@ _ATTENTION_V_OFFSETS = (-1, 0, 1, 2, 3)
 _ATTENTION_ENERGY_PENALTY = 0.125
 _ATTENTION_NEAR_ZERO_RATIO = 0.01
 _ATTENTION_SPARSE_THRESHOLD = 0.25
-_ATTENTION_HIERARCHY_MAX_NEAR_ZERO = 0.35
 
 
 # =============================================================================
@@ -865,6 +869,14 @@ def _residual_feedback_weight(
 
     channels = int(weight.shape[-1])
     block_count = channels // 64
+    weight_offsets = (
+        _LINEAR_WEIGHT_SATURATION_OFFSETS
+        if (
+            channels > int(weight.shape[0])
+            and channels <= 2 * int(weight.shape[0])
+        )
+        else _LINEAR_WEIGHT_SCALE_OFFSETS
+    )
     work = weight.to(torch.float32).clone()
     if _LINEAR_FEEDBACK_ENERGY_ORDER:
         block_energy = quantized_activation.reshape(
@@ -887,7 +899,7 @@ def _residual_feedback_weight(
         params = _quantize_linear_values(
             work_block,
             weight_importance[block:block + 1],
-            offsets=_LINEAR_WEIGHT_SCALE_OFFSETS,
+            offsets=weight_offsets,
             projection=weight_projection[:, block:block + 1],
             projection_strength=weight_projection_strength[:, block:block + 1],
         )
@@ -1031,20 +1043,6 @@ def _linear_multiplier(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
     )
 
 
-def _bit_reversed_group_permutation(
-    channels: int,
-    device: torch.device,
-) -> torch.Tensor:
-    if channels % 64 != 0:
-        return torch.arange(channels, device=device)
-    positions = torch.arange(64, device=device)
-    bit_reversed = sum(
-        ((positions >> bit) & 1) << (5 - bit) for bit in range(6)
-    )
-    group_starts = torch.arange(0, channels, 64, device=device).unsqueeze(1)
-    return (group_starts + bit_reversed).reshape(-1)
-
-
 def _balanced_linear_permutation(
     activation: torch.Tensor,
     weight: torch.Tensor,
@@ -1055,7 +1053,10 @@ def _balanced_linear_permutation(
     group_count = int(activation.shape[-1]) // 64
     lanes = ordered.reshape(64, group_count).clone()
     lanes[1::2] = lanes[1::2].flip(1)
-    bit_reversed = _bit_reversed_group_permutation(64, ordered.device)
+    positions = torch.arange(64, device=ordered.device)
+    bit_reversed = sum(
+        ((positions >> bit) & 1) << (5 - bit) for bit in range(6)
+    )
     return lanes.transpose(0, 1).index_select(1, bit_reversed).reshape(-1)
 
 
@@ -1169,7 +1170,7 @@ def hif4_calibration_and_quantize_weight(
         weight_projection_strength,
     ) = _activation_output_cost_state(transformed_activation)
     activation_state = {
-        "version": 42,
+        "version": 43,
         "coefficient": coefficient,
         "hadamard": _LINEAR_HADAMARD,
         "importance": activation_importance,
@@ -1346,7 +1347,6 @@ def hif4_calibration_attention(
         (q_rms > 0) & (k_rms > 0), balance, torch.ones_like(balance)
     )
     hadamard = 1
-    permutation = torch.arange(head_dim, device=balance.device)
     global_rms = k_values.square().mean().sqrt()
     if bool(global_rms > 0):
         near_zero = (
@@ -1354,20 +1354,14 @@ def hif4_calibration_attention(
         ).to(torch.float32).mean()
         if bool(near_zero <= _ATTENTION_SPARSE_THRESHOLD):
             hadamard = head_dim
-        if bool(near_zero <= _ATTENTION_HIERARCHY_MAX_NEAR_ZERO):
-            permutation = _bit_reversed_group_permutation(
-                head_dim, balance.device
-            )
     return {
         "q_state": {
             "coefficient": balance.repeat_interleave(replicas, dim=0),
             "hadamard": hadamard,
-            "permutation": permutation,
         },
         "k_state": {
             "coefficient": balance.reciprocal(),
             "hadamard": hadamard,
-            "permutation": permutation,
         },
         "v_state": None,
     }
@@ -1422,9 +1416,6 @@ def _transform_attention_qk(
     shaped = values.reshape(-1, heads, head_dim)
     coefficient = state["coefficient"].to(values.device, values.dtype)
     shaped = shaped * coefficient.unsqueeze(0)
-    shaped = shaped.index_select(
-        -1, state["permutation"].to(values.device)
-    )
     return _hadamard(shaped, int(state["hadamard"])).reshape_as(values)
 
 

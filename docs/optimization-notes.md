@@ -924,3 +924,32 @@ v13 (stable Attention)
   principles but require residual GEMMs, model training/logits, LoRA, randomness,
   or an incompatible intermediate format. Do not place their original forms in
   submission code.
+
+## v42 online result and v43 direction
+
+- Confirmed v42 is `17881 / 220s`, versus v41 `17930 / 217s`. The Attention
+  Q/K bit-reversal hierarchy loses 49 points and adds 3 seconds online, even
+  though every ordinary donor panel improved. Reject that Attention branch and
+  restore v41 exactly; this is new evidence that local Attention MSE is a weak
+  online selector.
+- The first MR-GPTQ audit found that v32-v42 already order 64-channel feedback
+  groups by quantized-activation Hessian energy. Group-level static act-order is
+  therefore not missing; the remaining leaf/E1_8 versions require a much more
+  expensive sequential inner-group quantizer. Modify that research direction
+  from immediate P0 to a later prototype.
+- v43 instead tests the cheaper Four Over Six/OAS deduction. Add one E6M2 code
+  below peak/7 to fixed Q(W)'s candidate set, permitting bounded saturation when
+  its output-aware group objective prefers better body resolution. Start from
+  v41 Attention so the online experiment has one new mechanism.
+- Unconditional controlled saturation is too broad: near/far ordinary panels
+  change `+0.064/+0.462`, while the random 128:1 compression case loses
+  `-4.413`. Gate the extra candidate to ordinary wide shapes with
+  `output < input <= 2*output`; reject offset `-2` without spending another
+  search pass.
+- Four repeated 2:1-wide groups change `+0.081` near and `+0.609` far. Group
+  wins are mixed (2/4 near, 3/4 far), so treat this as a bounded online
+  exploration, not evidence for a large score jump. Non-wide Linear is exact
+  v41 fallback and Attention is exact v41.
+- Complete format validation passes `1100/1100`. Forecast v43 at
+  `17915-17955 / 225-235s`, centered near the v41 score because the measured
+  v42 Attention regression is removed and the new Linear delta is small.

@@ -58,11 +58,11 @@ Accuracy”的 HTML，并由 Chrome 打印为 PDF。该文章发表于 2026-02-2
 
 ## 从论文导出的可执行优化方向
 
-### P0：MR-GPTQ static act-order 的 HiF4 化
+### P2：MR-GPTQ static act-order 的剩余 HiF4 化
 
-当前 residual-feedback Q(W) 按物理 64 通道块顺序传播误差。新候选先按校准
-Hessian 对角或 `||A[:,j]||²` 排序反馈决策，但 **在原始 HiF4 分组尺度计算完成后**
-再排序，完成后逆排序写回。这样不改变在线布局、状态或操作，只改变校准量化路径。
+代码审计纠正了最初判断：v32-v42 已按量化激活 Hessian 能量排序 64 通道组，
+因此 MR-GPTQ 的 group-level static act-order 已经覆盖。真正缺少的是固定层次网格
+后的组内顺序；它需要新的顺序量化器，不能被描述为一个简单零成本开关。
 
 不要照搬列级 GPTQ：HiF4 的不可分原子是 64 通道尺度组，候选应比较三种粒度：
 
@@ -70,8 +70,9 @@ Hessian 对角或 `||A[:,j]||²` 排序反馈决策，但 **在原始 HiF4 分�
 2. 组内仅改变四元素叶节点的量化/反馈顺序，不破坏 E1_16；
 3. 以 8 元素中层为单位排序，再恢复原位置。
 
-验收条件：固定 Q(A) 后校准 `A@W` 改善；近/远 donor 不出现灾难退化；在线
-输出图与 v42 等价，仅 Q(W) 参数不同；线上预计不增加运行时间。
+该方向降为 P2。验收条件仍是固定 Q(A) 后校准 `A@W` 改善、近/远 donor 不出现
+灾难退化、在线图不增加操作；但在原型前必须先估算 16 个叶单元顺序传播的校准
+成本，不得挤占 300 秒预算。
 
 ### P0：输出感知的层次尺度位联合选择
 
@@ -138,10 +139,13 @@ offset 并集后去重，再由输出目标选择。若它只复制现有 offset
 
 ```text
 v42 (Linear bit-reverse hierarchy + gated Attention QK hierarchy)
-  ├─ research-a / P0: static act-order residual feedback
-  │    ├─ group order
-  │    ├─ E1_8 unit order
-  │    └─ four-value leaf order
+  ├─ v43: rollback Attention to v41 + ordinary-wide Q(W) saturation
+  │    ├─ keep: one E6M2 code below peak/7 for input<=2*output
+  │    └─ reject: unconditional and -2 candidates
+  ├─ research-a / P2: inner-group static act-order residual feedback
+  │    ├─ covered: group order
+  │    ├─ held: E1_8 unit order
+  │    └─ held: four-value leaf order
   ├─ research-b / P0: output-aware hierarchical beam
   │    ├─ ordinary legal E6M2 neighbours
   │    ├─ OAS-like controlled saturation
@@ -155,9 +159,9 @@ v42 (Linear bit-reverse hierarchy + gated Attention QK hierarchy)
   └─ research-f / P2: structured Q(A) residual importance
 ```
 
-执行顺序不是把所有机制一次堆入新版本。先做 `research-a`，因为它是论文中明确
-缺失、零在线成本且可独立归因的机制；再做 `research-b/c` 的尺度分支；Q(A)
-风险控制器单独做线上消融。每个分支保留 v42 fallback 和单变量对照。
+执行顺序不是把所有机制一次堆入新版本。v43 先验证受控饱和；下一主分支做
+`research-b/c` 的层次尺度联合搜索，Q(A) 风险控制器再单独做线上消融。组内
+static act-order 因校准成本降为 P2。每个分支保留稳定版本 fallback 和单变量对照。
 
 ## 原文档案校验表
 

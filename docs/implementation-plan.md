@@ -292,6 +292,55 @@ Acceptance criteria:
 - Residual channels, extra GEMMs, LoRA, stochastic inference, new metadata bits,
   or any format outside the six-function interface are not submission paths.
 
+## v43 controlled-saturation Q(W) plan
+
+The confirmed v42 result is `17881 / 220s`, versus v41 `17930 / 217s`.
+Therefore the gated Attention Q/K hierarchy is online-negative (`-49 / +3s`)
+despite positive local donors. v43 restores v41 Attention exactly and changes
+only Linear Q(W).
+
+The existing feedback Q(W) searches E6M2 codes at offsets `0..3` from the
+peak/7 no-overflow scale. Four Over Six and OAS show that sacrificing a small
+peak error can improve the much larger body of a block. v43 adds offset `-1`
+as one controlled-saturation candidate for Q(W) on ordinary wide shapes only
+(`output < input <= 2*output`); the existing output-aware score chooses it
+independently per HiF4 group. Q(A), global Q(A) search, feedback order, channel
+layout, multiplier, and transform stay unchanged.
+
+Acceptance criteria:
+
+1. Attention output/state is byte-identical to v41, removing the measured v42
+   regression.
+2. Compare offset sets `0..3`, `-1..3`, and only if safe `-2..3` on nearest,
+   farthest, independent, and random extreme Linear panels. Reject any set that
+   creates a failed group or material catastrophic-tail regression.
+3. Report how often negative offsets are selected and whether they affect all
+   shape families, rather than inferring value from aggregate local score only.
+4. Keep projected online runtime below 250 seconds from the v41/v42 anchors.
+5. Pass `py_compile`, `git diff --check`, full HiF4 state checks, and all 1100
+   interface cases before committing. Humanize is unavailable, so these steps
+   and criteria were refined manually.
+
+Selection outcome:
+
+- Unconditional `-1` is nearly flat on ordinary groups (`+0.064` near and
+  `+0.462` far) and on random groups 0-10 (`+0.018` aggregate), but a 128:1
+  compression extreme regresses `-4.413`. Reject the unconditional form and
+  do not test offset `-2`.
+- The 2:1-wide gate changes only the online-relevant wide family. Across four
+  repeated wide groups it gives `+0.081` near and `+0.609` far, with 2/4 and
+  3/4 group wins respectively. The first near/far wide group improves on both
+  panels; independent groups remain mixed, so forecast conservatively.
+- The extra candidate costs about `+8s` on the four-wide near panel and
+  `+21s` in a noisy far run. Since one of four online Linear families is wide,
+  forecast total online time at `225-235s`, safely below 300 seconds.
+- Non-wide Linear weight and activation parameters are exact v41 fallbacks;
+  Attention code/constants are exact v41. Complete validation passes
+  `1100/1100`, `py_compile`, and `git diff --check`.
+- Forecast v43 at `17915-17955 / 225-235s`. Most of the expected recovery is
+  the controlled v42-to-v41 Attention rollback; the new Q(W) candidate earns
+  only a small positive allowance until online feedback proves transfer.
+
 ## v24 controlled Linear recovery plan
 
 Online anchors are v22 `16359 / 197s`, v23 `16477 / 193s`, and the external
