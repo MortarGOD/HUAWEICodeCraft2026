@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "format_returns": 6,
+  "temperature_weighted_gram": true,
+  "gain_retained": true,
+  "holdout_excluded": true,
+  "parent_immutable": true,
+  "calibration_immutable": true,
+  "global_rng_unchanged": true,
+  "mixed_routing_exact": true,
+  "fallback_exact": true,
+  "both_folds_required": true,
+  "nonfinite_rejected": true,
+  "original_T_query_subset_error": 0.0,
+  "unused_parent_call_removed": true,
+  "calibration_context_exact": true,
+  "context_cost_and_choice_exact": true,
+  "zero_gram_rejected": true,
+  "actual_standalone": true,
+  "linear_ast_frozen": true,
+  "prohibited_imports_absent": true
+}

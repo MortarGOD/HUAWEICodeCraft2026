@@ -1,0 +1,11 @@
+{
+  "version": 512,
+  "parent": 504,
+  "parent_sha256": "fee438362028e01aca4e572e2ac1149f11fbb0391a1638192c0e8aca40ec537e",
+  "patch_summary": "Full-key Gauss-Newton output metric for the Q/K GPTQ Hessian, retested on the fp32 Hessian of v504",
+  "source_sha256": "e1734730f36a0a131f64b4aa9420eedbad38b0813d61f160b443047f52ab6ab3",
+  "archive_sha256": "a060924c8395a1461f8625c606f88e08db465a1fde332512f90c68ad272607e6",
+  "archive_members": [
+    "solution.py"
+  ]
+}

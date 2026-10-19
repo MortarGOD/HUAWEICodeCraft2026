@@ -1,0 +1,11 @@
+{
+  "version": 637,
+  "parent": 636,
+  "parent_sha256": "9d23be89e9e9726dc8ceed41ebd2c76794ac6509600d13f2a9f2406307e3de06",
+  "patch_summary": "v636 plus _LINEAR_BALANCE_EXPONENT 0.44 -> 0.30, re-tuned after the transform block changed. Official wide group 0.573123 -> 0.577696, mirror 0.760204 -> 0.760705, both up. Adding the weight/wide scale-grid widenings made it worse when combined, so they are excluded.",
+  "source_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "archive_sha256": "fd417773ba182cc452b29c4339f8769d02a3b0ca658a7f9b72f0607f59ee5f04",
+  "archive_members": [
+    "solution.py"
+  ]
+}

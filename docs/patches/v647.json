@@ -1,0 +1,13 @@
+{
+  "version": 647,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "Widen the dynamic HiF4 scale grid from 6 to 20 candidates, all inside the legal E6M2 set (offsets -2..2 x multipliers 1.0/1.25/1.5/1.75). No caller passes a grid, so this reaches q, k and v without bypassing the rotation and smoothing in the parent pipeline. Structure-agnostic, no counterpart, no fitted state.",
+  "patches": [
+    [
+      "CAND_GRID = ((0, 1.0), (0, 1.25), (0, 1.5), (0, 1.75), (1, 1.0), (1, 1.25))\n",
+      "# v647: widen the dynamic scale grid from 6 legal candidates to 20. The old set used offsets\n# {0,1} and was even missing (1,1.5) and (1,1.75); the exponent field has room, so scanning\n# offsets -2..2 x the four E6M2-legal multipliers {1,1.25,1.5,1.75} stays inside the format.\n# No caller passes a grid, so this reaches q, k and v while keeping the rotation and\n# smoothing inside the parent pipeline intact.\nCAND_GRID = tuple((off, sig) for off in (-2, -1, 0, 1, 2)\n                  for sig in (1.0, 1.25, 1.5, 1.75))\n"
+    ]
+  ],
+  "append": []
+}

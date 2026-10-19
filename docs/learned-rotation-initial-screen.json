@@ -1,0 +1,69 @@
+{
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": "1",
+  "steps": 2,
+  "results": {
+    "0.0": {
+      "score": 4.002826777667783,
+      "seconds": 3.343646749999607,
+      "cases": [
+        0.7592007903232556,
+        0.7844364702400334,
+        0.7938943783674868,
+        0.8341577901850105,
+        0.8311373485519971
+      ],
+      "diagnostics": [
+        {}
+      ],
+      "checks": {
+        "states": 1,
+        "returns": 17
+      }
+    },
+    "0.03": {
+      "score": 4.002826777667783,
+      "seconds": 3.8644734999979846,
+      "cases": [
+        0.7592007903232556,
+        0.7844364702400334,
+        0.7938943783674868,
+        0.8341577901850105,
+        0.8311373485519971
+      ],
+      "diagnostics": [
+        {
+          "adopted": 0,
+          "error": false,
+          "training_rows": [
+            512,
+            1024
+          ],
+          "training_history": [
+            [
+              1.0
+            ],
+            [
+              0.9845559597015381
+            ],
+            [
+              0.9797848463058472
+            ]
+          ],
+          "accepted_trials": [
+            2
+          ],
+          "orthogonality_error": 1.3470649719238281e-05,
+          "hold_ratios": [
+            0.9993918538093567
+          ]
+        }
+      ],
+      "checks": {
+        "states": 1,
+        "returns": 36
+      }
+    }
+  },
+  "warning": "STE gives an approximate direction; every trial uses real GPTQ forward. Modeled inputs, no online guarantee."
+}

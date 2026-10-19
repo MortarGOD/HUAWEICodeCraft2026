@@ -1,0 +1,221 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.5280782909831032,
+      "versions": {
+        "387": {
+          "scores": [
+            0.3323315030825386,
+            0.23283496884969437,
+            0.8099346415979599,
+            0.5188598925818294,
+            0.5472409546131075
+          ],
+          "seconds": 4.527522791991942,
+          "checks": 35,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 32201,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.3348538109551145,
+            0.22991886248522936,
+            0.8313541661940004,
+            0.5331853102477481,
+            0.5365267324051662
+          ],
+          "seconds": 3.1688901250017807,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.4514370830147527,
+      "versions": {
+        "387": {
+          "scores": [
+            0.3323315030825386,
+            0.23283496884969437,
+            0.8099346415979599,
+            0.5188598925818294,
+            0.5472409546131075
+          ],
+          "seconds": 9.448932458995841,
+          "checks": 35,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 32201,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.3348538109551145,
+            0.22991886248522936,
+            0.8313541661940004,
+            0.5331853102477481,
+            0.5365267324051662
+          ],
+          "seconds": 7.0735757920192555,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.5164843749953434,
+      "versions": {
+        "387": {
+          "scores": [
+            0.338081953777114,
+            0.23596040590828307,
+            0.8311635304313892,
+            0.5330301430895656,
+            0.5371750653324303
+          ],
+          "seconds": 3.193591291026678,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 32201,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.3317235701087619,
+            0.22514605404494256,
+            0.8096186405588504,
+            0.5191402886869894,
+            0.5471054075629951
+          ],
+          "seconds": 7.183806916989852,
+          "checks": 35,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        }
+      }
+    }
+  ],
+  "timing": "Shared early v387 calibration recorded separately; local timings are not online predictions.",
+  "hashes": {
+    "387": "20d5f35ac5b0559415bc4cca50ca58705cdf242d152fbfe0fab7642a0d6a1dfa",
+    "400": "c7b0106870460e2c56d84a8bd35d8dd90753f3069fea08464407dd7123093f41"
+  }
+}

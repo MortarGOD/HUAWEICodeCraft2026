@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-03",
+  "candidate": "solution/solution_v308.py",
+  "sha256": "5abbfdf6436bebb6333c8c7c6ea8982dbd137eaad7550723a4f77a6c815d9420",
+  "reference": "solution/solution_v307.py",
+  "reference_sha256": "8ea7886a7e86ecbd6eaefb50a2d48158d457e9d2680b829e980f07adb432fd94",
+  "entry_equal_to_candidate": true,
+  "mini_self_check": {
+    "passed": 22,
+    "total": 22
+  },
+  "covariance_bank_self_check": {
+    "passed": 860,
+    "total": 860
+  },
+  "core_attention_parameter_equality": {
+    "normal_outputs": 750,
+    "forced_gptq_outputs": 500,
+    "passed": true
+  },
+  "covariance_bank_per_case_score_equality": {
+    "linear_cases": 50,
+    "attention_cases": 250,
+    "passed": true
+  },
+  "candidate_import_roots": [
+    "__future__",
+    "numpy",
+    "threading",
+    "torch",
+    "typing"
+  ],
+  "online_candidate_score": null,
+  "online_candidate_seconds": null,
+  "reference_online_score": 19576,
+  "reference_online_seconds": 237,
+  "limitations": [
+    "Equality checks are bounded test evidence, not exhaustive proof over all input tensors.",
+    "No measured local speedup is claimed for the cleanup.",
+    "Main bank activations are modeled rather than captured full-model activations.",
+    "RRS historical edge requires a separate diagnostic distribution; rotation recovery edge remains unresolved."
+  ],
+  "actual_online_score": 19576,
+  "actual_online_seconds": 235,
+  "feedback_source": "User report 2026-09-03; no per-case receipt supplied."
+}

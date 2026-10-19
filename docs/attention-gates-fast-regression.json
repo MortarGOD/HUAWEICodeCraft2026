@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "cases": 250,
+  "groups": 50,
+  "case_scores_exact": true,
+  "frame_choices_exact": true,
+  "calibration_cost_max_abs_delta": 0.0,
+  "delta_vs_v314": 2.462151711716276,
+  "up": 58,
+  "down": 7,
+  "same": 185,
+  "fast_checks": {
+    "states": 50,
+    "returns": 898
+  },
+  "reference_seconds": 207.4602712080232,
+  "fast_seconds": 134.7410552079964,
+  "warning": "Equal per-case scores/choices on this bank, not proof that every output tensor is bit-identical on arbitrary inputs. Times include scoring/validation, not online estimates."
+}

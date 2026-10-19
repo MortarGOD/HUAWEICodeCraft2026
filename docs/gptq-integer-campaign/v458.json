@@ -1,0 +1,186 @@
+{
+  "version": 458,
+  "source_sha256": "88540b8bfdc792add6f4a1718d6770f035ba5a27ae482a6607caf440feecaff7",
+  "parent_version": 441,
+  "parent_online_score": 21308,
+  "integer_weight_sha256": "d826fcf0dfacf3d9f0e399e513ec2bec14e2e27a6b56cd66bf6318bb7f2186f9",
+  "weighted_case_total": 250,
+  "raw_attention_score": 10728.600251657677,
+  "parent_raw_attention_score": 10671.353123468873,
+  "raw_delta": 57.24712818880471,
+  "conditional_online_estimate": 21365.247128188807,
+  "thresholds_reached": [],
+  "measurement_wall_seconds": 145.1948428361211,
+  "parent_measurement_wall_seconds": 218.45582891604863,
+  "cases": [
+    {
+      "label": "round001/m0-diffuse-block_resample/test2-tokens32",
+      "count": 3,
+      "quality": 0.9876279438141637,
+      "points": 296.2883831442491
+    },
+    {
+      "label": "round002/trace35-gain4-noise0.5/test1-tokens8",
+      "count": 1,
+      "quality": 0.4084401262096736,
+      "points": 40.84401262096736
+    },
+    {
+      "label": "round002/trace25-gain1-noise0.5/test4-tokens4",
+      "count": 1,
+      "quality": -0.14300874713135353,
+      "points": -14.300874713135354
+    },
+    {
+      "label": "round003/trace35-group1-row_permute/test2-tokens8",
+      "count": 5,
+      "quality": 0.2602669936010849,
+      "points": 130.13349680054245
+    },
+    {
+      "label": "round003/trace35-group3-correlated_noise/test0-tokens8",
+      "count": 7,
+      "quality": 0.3570544414611969,
+      "points": 249.93810902283784
+    },
+    {
+      "label": "round003/trace35-group5-row_permute/test0-tokens8",
+      "count": 10,
+      "quality": 0.46815746492882765,
+      "points": 468.15746492882766
+    },
+    {
+      "label": "round003/trace35-group7-row_permute/test1-tokens8",
+      "count": 2,
+      "quality": 0.5415587113307915,
+      "points": 108.31174226615829
+    },
+    {
+      "label": "round003/trace35-group7-row_permute/test3-tokens8",
+      "count": 1,
+      "quality": 0.38786959993510617,
+      "points": 38.786959993510614
+    },
+    {
+      "label": "round003/trace35-group9-row_permute/test0-tokens8",
+      "count": 1,
+      "quality": 0.3748917712442379,
+      "points": 37.48917712442379
+    },
+    {
+      "label": "round003/trace35-group9-row_permute/test2-tokens8",
+      "count": 5,
+      "quality": 0.2748883898510518,
+      "points": 137.4441949255259
+    },
+    {
+      "label": "round003/trace25-group16-row_permute/test3-tokens4",
+      "count": 1,
+      "quality": -0.10965685582205366,
+      "points": -10.965685582205365
+    },
+    {
+      "label": "round003/trace25-group24-correlated_noise/test0-tokens4",
+      "count": 1,
+      "quality": -0.4081926645672497,
+      "points": -40.81926645672497
+    },
+    {
+      "label": "round003/trace25-group32-row_permute/test2-tokens4",
+      "count": 1,
+      "quality": 0.6968441302603341,
+      "points": 69.68441302603341
+    },
+    {
+      "label": "round007/trace35-group7-gain0.75/test0-tokens8",
+      "count": 4,
+      "quality": 0.17157901967103978,
+      "points": 68.63160786841591
+    },
+    {
+      "label": "round007/trace35-group7-gain0.75/test1-tokens8",
+      "count": 24,
+      "quality": 0.5042485689290518,
+      "points": 1210.1965654297244
+    },
+    {
+      "label": "round007/trace35-group7-gain0.75/test2-tokens8",
+      "count": 9,
+      "quality": 0.266406962540646,
+      "points": 239.76626628658138
+    },
+    {
+      "label": "round016/true-qk-gain0.5/test0-tokens4",
+      "count": 27,
+      "quality": 0.1983150897254935,
+      "points": 535.4507422588324
+    },
+    {
+      "label": "round016/true-qk-gain0.5/test3-tokens128",
+      "count": 3,
+      "quality": 0.6982420504609169,
+      "points": 209.47261513827507
+    },
+    {
+      "label": "round021/trace35-group7-seedplus3/test1-tokens8",
+      "count": 9,
+      "quality": 0.5278719715488125,
+      "points": 475.08477439393124
+    },
+    {
+      "label": "round021/trace35-group7-seedplus3/test4-tokens8",
+      "count": 6,
+      "quality": 0.43165822783697216,
+      "points": 258.9949367021833
+    },
+    {
+      "label": "round024/trace35-gain125-seedplus1/test3-tokens8",
+      "count": 4,
+      "quality": 0.3844011533926972,
+      "points": 153.7604613570789
+    },
+    {
+      "label": "round025/calib-only-gain05/test1-tokens8",
+      "count": 40,
+      "quality": 0.21435572514335646,
+      "points": 857.4229005734259
+    },
+    {
+      "label": "round025/calib-only-gain05/test2-tokens32",
+      "count": 19,
+      "quality": 0.15664308492108153,
+      "points": 297.6218613500549
+    },
+    {
+      "label": "round025/calib-only-gain05/test4-tokens512",
+      "count": 16,
+      "quality": 0.6782008716823009,
+      "points": 1085.1213946916814
+    },
+    {
+      "label": "round022/true-qk-gain0.5-seedplus1/test4-tokens512",
+      "count": 47,
+      "quality": 0.7888034032258145,
+      "points": 3707.3759951613283
+    },
+    {
+      "label": "round041/round002-noise005-seed101/test1-tokens8",
+      "count": 1,
+      "quality": 0.39569334448384813,
+      "points": 39.569334448384815
+    },
+    {
+      "label": "round041/round002-noise005-seed202/test1-tokens8",
+      "count": 1,
+      "quality": 0.39569334448384813,
+      "points": 39.569334448384815
+    },
+    {
+      "label": "round041/round002-noise005-seed303/test1-tokens8",
+      "count": 1,
+      "quality": 0.39569334448384813,
+      "points": 39.569334448384815
+    }
+  ],
+  "limits": "Same frozen original integer profile. Parent-anchored local estimate, not guaranteed online score. Local timings cannot establish the 300-second online limit."
+}

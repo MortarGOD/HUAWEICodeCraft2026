@@ -1,0 +1,83 @@
+{
+  "certificate_columns": 470,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    343,
+    345,
+    365,
+    378,
+    381,
+    382,
+    387,
+    388,
+    392,
+    393,
+    399,
+    400,
+    401,
+    403,
+    404,
+    409,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438
+  ],
+  "cases": [
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 0,
+      "tokens": 8,
+      "price": 610.9435846690951,
+      "required_lower_bound": 305.056816691099,
+      "margin": 305.8867679779961
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 1,
+      "tokens": 8,
+      "price": 142.1882854070745,
+      "required_lower_bound": 305.056816691099,
+      "margin": -162.86853128402453
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 3,
+      "tokens": 8,
+      "price": 20.492930661101404,
+      "required_lower_bound": 305.056816691099,
+      "margin": -284.5638860299976
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 2,
+      "tokens": 8,
+      "price": -412.21523047465564,
+      "required_lower_bound": 305.056816691099,
+      "margin": -717.2720471657547
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 4,
+      "tokens": 8,
+      "price": -777.0397979647034,
+      "required_lower_bound": 305.056816691099,
+      "margin": -1082.0966146558026
+    }
+  ],
+  "action": "Promoted to full 102-version measurements after endpoint screen advanced to next atom.",
+  "limits": "Breaks one certificate only; does not establish joint feasibility."
+}

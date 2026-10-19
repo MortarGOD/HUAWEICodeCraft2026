@@ -1,0 +1,55 @@
+{
+  "complete": true,
+  "cells": 24,
+  "results": [
+    {
+      "atom": "rank8-strength4-length128-v-decoy-gain0.25",
+      "deltas": {
+        "343": 1973.0674384645708,
+        "344": 1977.7364557254207,
+        "360": 0.0
+      }
+    },
+    {
+      "atom": "rank8-strength4-length128-v-decoy-gain0.5",
+      "deltas": {
+        "343": 1136.2403098169077,
+        "344": 1137.8752125676738,
+        "360": 0.0
+      }
+    },
+    {
+      "atom": "rank8-strength4-length128-v-decoy-gain2.0",
+      "deltas": {
+        "343": 350.2327194428778,
+        "344": 350.73083240987626,
+        "360": 0.0
+      }
+    },
+    {
+      "atom": "trace25-group1-correlated_noise-v-decoy-gain0.25",
+      "deltas": {
+        "343": -2952.16257931815,
+        "344": -12370.841511053315,
+        "360": 0.0
+      }
+    },
+    {
+      "atom": "trace25-group1-correlated_noise-v-decoy-gain0.5",
+      "deltas": {
+        "343": -1314.7830096527275,
+        "344": -583.3828476046549,
+        "360": 0.0
+      }
+    },
+    {
+      "atom": "trace25-group1-correlated_noise-v-decoy-gain2.0",
+      "deltas": {
+        "343": 0.0,
+        "344": 0.0,
+        "360": 0.0
+      }
+    }
+  ],
+  "limits": "Four-version screen only; shared full-matrix fitting pending."
+}

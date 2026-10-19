@@ -1,0 +1,86 @@
+{
+  "certificate_columns": 470,
+  "verified_constraints": 24,
+  "gap": 0.8086155914832602,
+  "numerical_guard": 0.0003348558897692409,
+  "nearest_cases": [
+    {
+      "population": "round003/trace35-group7-row_permute",
+      "test": 1,
+      "tokens": 8,
+      "price": 304.24820109961416,
+      "required_lower_bound": 305.056816691099,
+      "margin": -0.8086155914848518
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 0,
+      "tokens": 4,
+      "price": 295.42093126026253,
+      "required_lower_bound": 305.056816691099,
+      "margin": -9.635885430836481
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 3,
+      "tokens": 128,
+      "price": 286.0952268423227,
+      "required_lower_bound": 305.056816691099,
+      "margin": -18.961589848776327
+    },
+    {
+      "population": "round003/trace25-group24-row_permute",
+      "test": 4,
+      "tokens": 4,
+      "price": 218.1904810169923,
+      "required_lower_bound": 305.056816691099,
+      "margin": -86.86633567410672
+    },
+    {
+      "population": "round003/trace35-group7-row_permute",
+      "test": 0,
+      "tokens": 8,
+      "price": 183.72403394743404,
+      "required_lower_bound": 305.056816691099,
+      "margin": -121.33278274366498
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    343,
+    345,
+    365,
+    378,
+    381,
+    382,
+    387,
+    388,
+    392,
+    393,
+    399,
+    400,
+    401,
+    403,
+    404,
+    409,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438
+  ],
+  "next_action": "Rescreen existing round007 true-scale and sink-scale variants against the new certificate endpoints; reuse valid cached cells.",
+  "limits": "Certificate excludes only existing complete support; new measurements do not imply feasibility until full joint fitting."
+}

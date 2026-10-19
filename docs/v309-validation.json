@@ -1,0 +1,30 @@
+{
+  "candidate": "solution/solution_v309.py",
+  "sha256": "898e67bd9ee0d6eb2df7ea63ea87900db69845562a4cac12797ab542ee74fe23",
+  "entry_equal_to_candidate": true,
+  "mini_self_check": {
+    "passed": 22,
+    "total": 22
+  },
+  "covariance_bank_self_check": {
+    "passed": 860,
+    "total": 860
+  },
+  "linear_per_case_equality_to_v308": {
+    "passed": 50,
+    "total": 50
+  },
+  "attention_delta_raw": 2.334219500845191,
+  "attention_case_wins_losses_ties": [
+    193,
+    6,
+    51
+  ],
+  "attention_group_wins": 50,
+  "predicted_online_center": 19772,
+  "actual_online_score": 19691,
+  "actual_online_seconds": 244,
+  "goal_21000_verified": false,
+  "prediction_warning": "Historical extrapolation superseded by actual online score; not validated for new algorithm families.",
+  "feedback_source": "User report 2026-09-03; no per-case receipt supplied."
+}

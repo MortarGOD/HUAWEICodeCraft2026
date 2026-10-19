@@ -1,0 +1,11 @@
+{
+  "version": 636,
+  "parent": 626,
+  "parent_sha256": "27558f7167945803066017027b5e0be78684804b43441c67ea9402c97f3b6b66",
+  "patch_summary": "Linear transform block size 64 -> 4 and the M>K joint ridge 1e-3 -> 1e-2. The Linear path permutes channels to group similar ones and then block-Hadamards them; a 64-wide block re-mixes that grouping. Swept on two banks the score rises monotonically 64>32>16>8>4 and collapses at 2. Official wide group 0.423636 -> 0.573123 (+747 of 50) and the 10-group mirror 0.753340 -> 0.760204 (+34), so both banks move the same way. Linear calibration data is real, so this is a legal, structure-agnostic change.",
+  "source_sha256": "9d23be89e9e9726dc8ceed41ebd2c76794ac6509600d13f2a9f2406307e3de06",
+  "archive_sha256": "0cc4e5025c5e22e8f4e976e3b8b31c7886b2e885127b0b68fbce817dd45233cf",
+  "archive_members": [
+    "solution.py"
+  ]
+}

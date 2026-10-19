@@ -1,0 +1,11 @@
+{
+  "version": 647,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "patch_summary": "Widen the dynamic HiF4 scale grid from 6 to 20 candidates, all inside the legal E6M2 set (offsets -2..2 x multipliers 1.0/1.25/1.5/1.75). No caller passes a grid, so this reaches q, k and v without bypassing the rotation and smoothing in the parent pipeline. Structure-agnostic, no counterpart, no fitted state.",
+  "source_sha256": "22c3a526c395d9bccaeca76cf09523add27119053f57188b15f7941142130734",
+  "archive_sha256": "1186ae67c3066f9314df36418519729fd5af37cb94a059bf4d41c7364b8be75f",
+  "archive_members": [
+    "solution.py"
+  ]
+}

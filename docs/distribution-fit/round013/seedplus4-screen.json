@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus4",
+      "test": 2,
+      "tokens": 32,
+      "price": 173.5926236675885,
+      "required_lower_bound": 106.09783153451227,
+      "margin": 67.49479213307623
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus4",
+      "test": 4,
+      "tokens": 512,
+      "price": 25.10728213329699,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -80.99054940121528
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus4",
+      "test": 0,
+      "tokens": 4,
+      "price": 3.7896989392181237,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -102.30813259529414
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus4",
+      "test": 3,
+      "tokens": 128,
+      "price": -16.874337612684766,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -122.97216914719704
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus4",
+      "test": 1,
+      "tokens": 8,
+      "price": -18.93730809204804,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -125.03513962656031
+    }
+  ],
+  "promote": true,
+  "limits": "Fixed 340-column certificate screening only."
+}

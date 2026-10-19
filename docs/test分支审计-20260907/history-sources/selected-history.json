@@ -1,0 +1,4137 @@
+[
+  {
+    "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+    "path": "solution/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/66b754d/solution/solution.py",
+    "sha256": "885c0f5e6f074b6893ca54add6f0665b62a5d47bf949d53f910fce67b0c7f3c9",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 79
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 82,
+        "end": 107
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 110,
+        "end": 134
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 137,
+        "end": 138
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 141,
+        "end": 168
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 171,
+        "end": 186
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 189,
+        "end": 195
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 198,
+        "end": 243
+      },
+      {
+        "name": "_expand_importance",
+        "line": 246,
+        "end": 269
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 272,
+        "end": 291
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 294,
+        "end": 306
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 309,
+        "end": 409
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 412,
+        "end": 423
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 426,
+        "end": 436
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 439,
+        "end": 448
+      },
+      {
+        "name": "_relative_gains",
+        "line": 451,
+        "end": 455
+      },
+      {
+        "name": "_select_candidate",
+        "line": 458,
+        "end": 472
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 475,
+        "end": 491
+      },
+      {
+        "name": "_mse",
+        "line": 494,
+        "end": 495
+      },
+      {
+        "name": "_linear_output",
+        "line": 498,
+        "end": 499
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 502,
+        "end": 515
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 518,
+        "end": 528
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 531,
+        "end": 539
+      },
+      {
+        "name": "_attention_output",
+        "line": 542,
+        "end": 558
+      },
+      {
+        "name": "_quantize_src",
+        "line": 561,
+        "end": 567
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 570,
+        "end": 707
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 710,
+        "end": 734
+      },
+      {
+        "name": "_attention_importance",
+        "line": 737,
+        "end": 814
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 817,
+        "end": 833
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 836,
+        "end": 855
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 858,
+        "end": 869
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 872,
+        "end": 1176
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1179,
+        "end": 1227
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1230,
+        "end": 1239
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1242,
+        "end": 1251
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1254,
+        "end": 1263
+      }
+    ]
+  },
+  {
+    "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+    "path": "solution/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/9f7745d/solution/solution.py",
+    "sha256": "c9bd68b97fd18ff7778745d4c532707b84f6907188af372d87750e42d4764fff",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 79
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 82,
+        "end": 107
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 110,
+        "end": 134
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 137,
+        "end": 138
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 141,
+        "end": 168
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 171,
+        "end": 186
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 189,
+        "end": 195
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 198,
+        "end": 243
+      },
+      {
+        "name": "_expand_importance",
+        "line": 246,
+        "end": 269
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 272,
+        "end": 284
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 287,
+        "end": 295
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 298,
+        "end": 317
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 320,
+        "end": 332
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 335,
+        "end": 450
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 453,
+        "end": 469
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 472,
+        "end": 482
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 485,
+        "end": 494
+      },
+      {
+        "name": "_relative_gains",
+        "line": 497,
+        "end": 501
+      },
+      {
+        "name": "_select_candidate",
+        "line": 504,
+        "end": 518
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 521,
+        "end": 537
+      },
+      {
+        "name": "_mse",
+        "line": 540,
+        "end": 541
+      },
+      {
+        "name": "_linear_output",
+        "line": 544,
+        "end": 545
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 548,
+        "end": 588
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 591,
+        "end": 604
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 607,
+        "end": 617
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 620,
+        "end": 628
+      },
+      {
+        "name": "_attention_output",
+        "line": 631,
+        "end": 647
+      },
+      {
+        "name": "_quantize_src",
+        "line": 650,
+        "end": 656
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 659,
+        "end": 819
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 822,
+        "end": 848
+      },
+      {
+        "name": "_attention_importance",
+        "line": 851,
+        "end": 928
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 931,
+        "end": 947
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 950,
+        "end": 969
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 972,
+        "end": 983
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 986,
+        "end": 1290
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1293,
+        "end": 1341
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1344,
+        "end": 1353
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1356,
+        "end": 1365
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1368,
+        "end": 1377
+      }
+    ]
+  },
+  {
+    "commit": "0cbdba4a79c63211b72c1116c887713bfcfe099e",
+    "path": "paper-solutions/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/0cbdba4/paper-solutions/README.md",
+    "sha256": "ac31f4378e47c438bd084dc8a7cf3f1ce352e96cc5be8a9ca33429403d329c6a"
+  },
+  {
+    "commit": "0cbdba4a79c63211b72c1116c887713bfcfe099e",
+    "path": "paper-solutions/let/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/0cbdba4/paper-solutions/let/solution.py",
+    "sha256": "99dab596ad1f28972a18d31b09ed59e538907579d1d7ef84aa949a393f0b5704",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 79
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 82,
+        "end": 108
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 111,
+        "end": 135
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 138,
+        "end": 139
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 142,
+        "end": 169
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 172,
+        "end": 187
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 190,
+        "end": 196
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 199,
+        "end": 244
+      },
+      {
+        "name": "_expand_importance",
+        "line": 247,
+        "end": 270
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 273,
+        "end": 285
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 288,
+        "end": 296
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 299,
+        "end": 318
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 321,
+        "end": 333
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 336,
+        "end": 451
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 454,
+        "end": 470
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 473,
+        "end": 483
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 486,
+        "end": 495
+      },
+      {
+        "name": "_relative_gains",
+        "line": 498,
+        "end": 502
+      },
+      {
+        "name": "_select_candidate",
+        "line": 505,
+        "end": 519
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 522,
+        "end": 538
+      },
+      {
+        "name": "_mse",
+        "line": 541,
+        "end": 542
+      },
+      {
+        "name": "_linear_output",
+        "line": 545,
+        "end": 546
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 549,
+        "end": 589
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 592,
+        "end": 605
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 608,
+        "end": 618
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 621,
+        "end": 629
+      },
+      {
+        "name": "_attention_output",
+        "line": 632,
+        "end": 648
+      },
+      {
+        "name": "_quantize_src",
+        "line": 651,
+        "end": 657
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 660,
+        "end": 828
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 831,
+        "end": 857
+      },
+      {
+        "name": "_attention_importance",
+        "line": 860,
+        "end": 937
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 940,
+        "end": 956
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 959,
+        "end": 978
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 981,
+        "end": 992
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 995,
+        "end": 1299
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1302,
+        "end": 1350
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1353,
+        "end": 1362
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1365,
+        "end": 1374
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1377,
+        "end": 1386
+      }
+    ]
+  },
+  {
+    "commit": "0cbdba4a79c63211b72c1116c887713bfcfe099e",
+    "path": "paper-solutions/rht/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/0cbdba4/paper-solutions/rht/solution.py",
+    "sha256": "d743fb98478725c51eb6c7dc9c59e0fcb134594c67cc0da3a60f9626db9fa539",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_rht_signs",
+        "line": 58,
+        "end": 68
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 71,
+        "end": 94
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 97,
+        "end": 122
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 125,
+        "end": 149
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 152,
+        "end": 153
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 156,
+        "end": 183
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 186,
+        "end": 201
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 204,
+        "end": 210
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 213,
+        "end": 258
+      },
+      {
+        "name": "_expand_importance",
+        "line": 261,
+        "end": 284
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 287,
+        "end": 299
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 302,
+        "end": 310
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 313,
+        "end": 332
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 335,
+        "end": 347
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 350,
+        "end": 465
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 468,
+        "end": 484
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 487,
+        "end": 497
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 500,
+        "end": 509
+      },
+      {
+        "name": "_relative_gains",
+        "line": 512,
+        "end": 516
+      },
+      {
+        "name": "_select_candidate",
+        "line": 519,
+        "end": 533
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 536,
+        "end": 552
+      },
+      {
+        "name": "_mse",
+        "line": 555,
+        "end": 556
+      },
+      {
+        "name": "_linear_output",
+        "line": 559,
+        "end": 560
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 563,
+        "end": 603
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 606,
+        "end": 619
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 622,
+        "end": 632
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 635,
+        "end": 643
+      },
+      {
+        "name": "_attention_output",
+        "line": 646,
+        "end": 662
+      },
+      {
+        "name": "_quantize_src",
+        "line": 665,
+        "end": 671
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 674,
+        "end": 836
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 839,
+        "end": 865
+      },
+      {
+        "name": "_attention_importance",
+        "line": 868,
+        "end": 945
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 948,
+        "end": 964
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 967,
+        "end": 986
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 989,
+        "end": 1000
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1003,
+        "end": 1307
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1310,
+        "end": 1358
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1361,
+        "end": 1370
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1373,
+        "end": 1382
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1385,
+        "end": 1394
+      }
+    ]
+  },
+  {
+    "commit": "0cbdba4a79c63211b72c1116c887713bfcfe099e",
+    "path": "paper-solutions/rrs-let/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/0cbdba4/paper-solutions/rrs-let/solution.py",
+    "sha256": "37d494a00da7ffd37a8a2a4db1cf0caca04480e990b25b340e52c9283fa37602",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 79
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 82,
+        "end": 108
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 111,
+        "end": 135
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 138,
+        "end": 139
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 142,
+        "end": 169
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 172,
+        "end": 187
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 190,
+        "end": 196
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 199,
+        "end": 244
+      },
+      {
+        "name": "_expand_importance",
+        "line": 247,
+        "end": 270
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 273,
+        "end": 285
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 288,
+        "end": 296
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 299,
+        "end": 318
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 321,
+        "end": 333
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 336,
+        "end": 451
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 454,
+        "end": 470
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 473,
+        "end": 483
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 486,
+        "end": 495
+      },
+      {
+        "name": "_relative_gains",
+        "line": 498,
+        "end": 502
+      },
+      {
+        "name": "_select_candidate",
+        "line": 505,
+        "end": 519
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 522,
+        "end": 538
+      },
+      {
+        "name": "_mse",
+        "line": 541,
+        "end": 542
+      },
+      {
+        "name": "_linear_output",
+        "line": 545,
+        "end": 546
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 549,
+        "end": 589
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 592,
+        "end": 605
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 608,
+        "end": 618
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 621,
+        "end": 629
+      },
+      {
+        "name": "_attention_output",
+        "line": 632,
+        "end": 648
+      },
+      {
+        "name": "_quantize_src",
+        "line": 651,
+        "end": 657
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 660,
+        "end": 828
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 831,
+        "end": 857
+      },
+      {
+        "name": "_attention_importance",
+        "line": 860,
+        "end": 937
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 940,
+        "end": 956
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 959,
+        "end": 978
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 981,
+        "end": 992
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 995,
+        "end": 1299
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1302,
+        "end": 1350
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1353,
+        "end": 1362
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1365,
+        "end": 1374
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1377,
+        "end": 1386
+      }
+    ]
+  },
+  {
+    "commit": "0cbdba4a79c63211b72c1116c887713bfcfe099e",
+    "path": "paper-solutions/rrs/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/0cbdba4/paper-solutions/rrs/solution.py",
+    "sha256": "171a739de85d1db81865037a414d5f30cf515720567f79ed7f3aa111ccd1a26a",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 86
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 89,
+        "end": 114
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 117,
+        "end": 141
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 144,
+        "end": 145
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 148,
+        "end": 175
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 178,
+        "end": 193
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 196,
+        "end": 202
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 205,
+        "end": 250
+      },
+      {
+        "name": "_expand_importance",
+        "line": 253,
+        "end": 276
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 279,
+        "end": 291
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 294,
+        "end": 302
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 305,
+        "end": 324
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 327,
+        "end": 339
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 342,
+        "end": 457
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 460,
+        "end": 476
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 479,
+        "end": 489
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 492,
+        "end": 501
+      },
+      {
+        "name": "_relative_gains",
+        "line": 504,
+        "end": 508
+      },
+      {
+        "name": "_select_candidate",
+        "line": 511,
+        "end": 525
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 528,
+        "end": 544
+      },
+      {
+        "name": "_mse",
+        "line": 547,
+        "end": 548
+      },
+      {
+        "name": "_linear_output",
+        "line": 551,
+        "end": 552
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 555,
+        "end": 595
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 598,
+        "end": 611
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 614,
+        "end": 624
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 627,
+        "end": 635
+      },
+      {
+        "name": "_attention_output",
+        "line": 638,
+        "end": 654
+      },
+      {
+        "name": "_quantize_src",
+        "line": 657,
+        "end": 663
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 666,
+        "end": 826
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 829,
+        "end": 855
+      },
+      {
+        "name": "_attention_importance",
+        "line": 858,
+        "end": 935
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 938,
+        "end": 954
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 957,
+        "end": 976
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 979,
+        "end": 990
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 993,
+        "end": 1297
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1300,
+        "end": 1348
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1351,
+        "end": 1360
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1363,
+        "end": 1372
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1375,
+        "end": 1384
+      }
+    ]
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/README.md",
+    "sha256": "32bd0b01eaf15feb61f3b9f8fe0303a04c586de46daecef63d50c99c7a5403c2"
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/rrs-fast-fp16/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/rrs-fast-fp16/solution.py",
+    "sha256": "3140ce9bc5d52a9e65d84601d82460ab50cde5c10ccb10b5a0cfc0201ec8723e",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 86
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 89,
+        "end": 114
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 117,
+        "end": 141
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 144,
+        "end": 145
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 148,
+        "end": 175
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 178,
+        "end": 193
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 196,
+        "end": 202
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 205,
+        "end": 250
+      },
+      {
+        "name": "_expand_importance",
+        "line": 253,
+        "end": 276
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 279,
+        "end": 291
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 294,
+        "end": 302
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 305,
+        "end": 324
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 327,
+        "end": 339
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 342,
+        "end": 457
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 460,
+        "end": 476
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 479,
+        "end": 489
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 492,
+        "end": 501
+      },
+      {
+        "name": "_relative_gains",
+        "line": 504,
+        "end": 508
+      },
+      {
+        "name": "_select_candidate",
+        "line": 511,
+        "end": 525
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 528,
+        "end": 544
+      },
+      {
+        "name": "_mse",
+        "line": 547,
+        "end": 548
+      },
+      {
+        "name": "_linear_output",
+        "line": 551,
+        "end": 552
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 555,
+        "end": 595
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 598,
+        "end": 611
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 614,
+        "end": 624
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 627,
+        "end": 635
+      },
+      {
+        "name": "_attention_output",
+        "line": 638,
+        "end": 654
+      },
+      {
+        "name": "_quantize_src",
+        "line": 657,
+        "end": 663
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 666,
+        "end": 871
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 874,
+        "end": 900
+      },
+      {
+        "name": "_attention_importance",
+        "line": 903,
+        "end": 980
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 983,
+        "end": 999
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1002,
+        "end": 1021
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1024,
+        "end": 1035
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1038,
+        "end": 1342
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1345,
+        "end": 1393
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1396,
+        "end": 1405
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1408,
+        "end": 1417
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1420,
+        "end": 1429
+      }
+    ]
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/rrs-fast/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/rrs-fast/README.md",
+    "sha256": "025ec473db26a6853bccc7f6c99a5f99fdfbe8f5546799f612958b91cd486f67"
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/rrs-fast/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/rrs-fast/solution.py",
+    "sha256": "50461d489431a1a3b039094827552133e656e2df3a2b1a6f08fb11bae9f470b0",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 86
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 89,
+        "end": 114
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 117,
+        "end": 141
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 144,
+        "end": 145
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 148,
+        "end": 175
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 178,
+        "end": 193
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 196,
+        "end": 202
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 205,
+        "end": 250
+      },
+      {
+        "name": "_expand_importance",
+        "line": 253,
+        "end": 276
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 279,
+        "end": 291
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 294,
+        "end": 302
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 305,
+        "end": 324
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 327,
+        "end": 339
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 342,
+        "end": 457
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 460,
+        "end": 476
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 479,
+        "end": 489
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 492,
+        "end": 501
+      },
+      {
+        "name": "_relative_gains",
+        "line": 504,
+        "end": 508
+      },
+      {
+        "name": "_select_candidate",
+        "line": 511,
+        "end": 525
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 528,
+        "end": 544
+      },
+      {
+        "name": "_mse",
+        "line": 547,
+        "end": 548
+      },
+      {
+        "name": "_linear_output",
+        "line": 551,
+        "end": 552
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 555,
+        "end": 595
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 598,
+        "end": 611
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 614,
+        "end": 624
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 627,
+        "end": 635
+      },
+      {
+        "name": "_attention_output",
+        "line": 638,
+        "end": 654
+      },
+      {
+        "name": "_quantize_src",
+        "line": 657,
+        "end": 663
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 666,
+        "end": 871
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 874,
+        "end": 900
+      },
+      {
+        "name": "_attention_importance",
+        "line": 903,
+        "end": 980
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 983,
+        "end": 999
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1002,
+        "end": 1021
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1024,
+        "end": 1035
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1038,
+        "end": 1342
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1345,
+        "end": 1393
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1396,
+        "end": 1405
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1408,
+        "end": 1417
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1420,
+        "end": 1429
+      }
+    ]
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/rrs-lite/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/rrs-lite/solution.py",
+    "sha256": "bbca0d6ff7c08db2faa0275ef432cfb6431e75a574264399fbd907aaa55f061f",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 34,
+        "end": 37
+      },
+      {
+        "name": "_fwht64",
+        "line": 40,
+        "end": 55
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 58,
+        "end": 86
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 89,
+        "end": 114
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 117,
+        "end": 141
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 144,
+        "end": 145
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 148,
+        "end": 175
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 178,
+        "end": 193
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 196,
+        "end": 202
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 205,
+        "end": 250
+      },
+      {
+        "name": "_expand_importance",
+        "line": 253,
+        "end": 276
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 279,
+        "end": 291
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 294,
+        "end": 302
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 305,
+        "end": 324
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 327,
+        "end": 339
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 342,
+        "end": 457
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 460,
+        "end": 476
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 479,
+        "end": 489
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 492,
+        "end": 501
+      },
+      {
+        "name": "_relative_gains",
+        "line": 504,
+        "end": 508
+      },
+      {
+        "name": "_select_candidate",
+        "line": 511,
+        "end": 525
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 528,
+        "end": 544
+      },
+      {
+        "name": "_mse",
+        "line": 547,
+        "end": 548
+      },
+      {
+        "name": "_linear_output",
+        "line": 551,
+        "end": 552
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 555,
+        "end": 595
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 598,
+        "end": 611
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 614,
+        "end": 624
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 627,
+        "end": 635
+      },
+      {
+        "name": "_attention_output",
+        "line": 638,
+        "end": 654
+      },
+      {
+        "name": "_quantize_src",
+        "line": 657,
+        "end": 663
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 666,
+        "end": 846
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 849,
+        "end": 875
+      },
+      {
+        "name": "_attention_importance",
+        "line": 878,
+        "end": 955
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 958,
+        "end": 974
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 977,
+        "end": 996
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 999,
+        "end": 1010
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1013,
+        "end": 1317
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1320,
+        "end": 1368
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1371,
+        "end": 1380
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1383,
+        "end": 1392
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1395,
+        "end": 1404
+      }
+    ]
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/spin-lwc/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/spin-lwc/README.md",
+    "sha256": "624e792c783bf23ff32bcdfcdd823e381849d2b53d70159cd6bc06309dd699fb"
+  },
+  {
+    "commit": "a3f64366eea98344c270aacb3e94f3c50cf04f79",
+    "path": "paper-solutions/spin-lwc/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/a3f6436/paper-solutions/spin-lwc/solution.py",
+    "sha256": "c6bdf144d072d18672ae74b08a02601ce64be8661d8675f1a6201706c4513dc3",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 38,
+        "end": 41
+      },
+      {
+        "name": "_fwht64",
+        "line": 44,
+        "end": 59
+      },
+      {
+        "name": "_block_rotate",
+        "line": 62,
+        "end": 69
+      },
+      {
+        "name": "_clip_block64",
+        "line": 72,
+        "end": 77
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 80,
+        "end": 118
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 121,
+        "end": 146
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 149,
+        "end": 173
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 176,
+        "end": 177
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 180,
+        "end": 207
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 210,
+        "end": 225
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 228,
+        "end": 234
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 237,
+        "end": 282
+      },
+      {
+        "name": "_expand_importance",
+        "line": 285,
+        "end": 308
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 311,
+        "end": 323
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 326,
+        "end": 334
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 337,
+        "end": 356
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 359,
+        "end": 371
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 374,
+        "end": 489
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 492,
+        "end": 508
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 511,
+        "end": 521
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 524,
+        "end": 533
+      },
+      {
+        "name": "_relative_gains",
+        "line": 536,
+        "end": 540
+      },
+      {
+        "name": "_select_candidate",
+        "line": 543,
+        "end": 557
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 560,
+        "end": 576
+      },
+      {
+        "name": "_mse",
+        "line": 579,
+        "end": 580
+      },
+      {
+        "name": "_linear_output",
+        "line": 583,
+        "end": 584
+      },
+      {
+        "name": "_ste_hif4",
+        "line": 587,
+        "end": 591
+      },
+      {
+        "name": "_learn_spin_lwc",
+        "line": 594,
+        "end": 689
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 692,
+        "end": 732
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 735,
+        "end": 748
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 751,
+        "end": 761
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 764,
+        "end": 772
+      },
+      {
+        "name": "_attention_output",
+        "line": 775,
+        "end": 791
+      },
+      {
+        "name": "_quantize_src",
+        "line": 794,
+        "end": 800
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 803,
+        "end": 1004
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1007,
+        "end": 1040
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1043,
+        "end": 1120
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1123,
+        "end": 1139
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1142,
+        "end": 1161
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1164,
+        "end": 1175
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1178,
+        "end": 1482
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1485,
+        "end": 1533
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1536,
+        "end": 1545
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1548,
+        "end": 1557
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1560,
+        "end": 1569
+      }
+    ]
+  },
+  {
+    "commit": "a75bca8dce33008098d0964ad4029aad03f00bfe",
+    "path": "paper-solutions/baseline-r2qk6-attention-headrot-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/a75bca8/paper-solutions/baseline-r2qk6-attention-headrot-safe/README.md",
+    "sha256": "5bf4b59941eccce9d4fbd041941718378e18b1024ae1c7e9bfd01c5059002e3f"
+  },
+  {
+    "commit": "a75bca8dce33008098d0964ad4029aad03f00bfe",
+    "path": "paper-solutions/baseline-r2qk6-attention-headrot-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/a75bca8/paper-solutions/baseline-r2qk6-attention-headrot-safe/solution.py",
+    "sha256": "3263ef89f6591a4319606fced78d774504e2abbb53f181d8cc4659f18e389e1a",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 46,
+        "end": 49
+      },
+      {
+        "name": "_fwht",
+        "line": 52,
+        "end": 69
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 72,
+        "end": 108
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 111,
+        "end": 143
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 146,
+        "end": 170
+      },
+      {
+        "name": "_peak_suppression_reflectors",
+        "line": 173,
+        "end": 219
+      },
+      {
+        "name": "_apply_reflectors",
+        "line": 222,
+        "end": 231
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 234,
+        "end": 235
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 238,
+        "end": 265
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 268,
+        "end": 283
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 286,
+        "end": 292
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 295,
+        "end": 340
+      },
+      {
+        "name": "_expand_importance",
+        "line": 343,
+        "end": 366
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 369,
+        "end": 381
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 384,
+        "end": 397
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 400,
+        "end": 419
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 422,
+        "end": 434
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 437,
+        "end": 596
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 599,
+        "end": 621
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 624,
+        "end": 634
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 637,
+        "end": 646
+      },
+      {
+        "name": "_normalize_importance_wide",
+        "line": 649,
+        "end": 659
+      },
+      {
+        "name": "_relative_gains",
+        "line": 662,
+        "end": 666
+      },
+      {
+        "name": "_select_candidate",
+        "line": 669,
+        "end": 683
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 686,
+        "end": 702
+      },
+      {
+        "name": "_mse",
+        "line": 705,
+        "end": 706
+      },
+      {
+        "name": "_linear_output",
+        "line": 709,
+        "end": 710
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 713,
+        "end": 753
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 756,
+        "end": 769
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 772,
+        "end": 782
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 785,
+        "end": 793
+      },
+      {
+        "name": "_attention_output",
+        "line": 796,
+        "end": 812
+      },
+      {
+        "name": "_quantize_src",
+        "line": 815,
+        "end": 821
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 824,
+        "end": 1178
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1181,
+        "end": 1230
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1233,
+        "end": 1318
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1321,
+        "end": 1337
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1340,
+        "end": 1359
+      },
+      {
+        "name": "_attention_head_rotations",
+        "line": 1362,
+        "end": 1395
+      },
+      {
+        "name": "_apply_attention_rotations",
+        "line": 1398,
+        "end": 1418
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1421,
+        "end": 1432
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1435,
+        "end": 1854
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1857,
+        "end": 1929
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1932,
+        "end": 1941
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1944,
+        "end": 1953
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1956,
+        "end": 1965
+      }
+    ]
+  },
+  {
+    "commit": "6a9eeba11e54191ec1cc4b3c796be9ce976f7a7b",
+    "path": "paper-solutions/baseline-r2qk6-linear-residual-fit-v2-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/6a9eeba/paper-solutions/baseline-r2qk6-linear-residual-fit-v2-safe/README.md",
+    "sha256": "ca1a90e3a4a1ef4be8c7d851c79776446c9c56ccc990b3e76bc085d46ebcc69e"
+  },
+  {
+    "commit": "6a9eeba11e54191ec1cc4b3c796be9ce976f7a7b",
+    "path": "paper-solutions/baseline-r2qk6-linear-residual-fit-v2-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/6a9eeba/paper-solutions/baseline-r2qk6-linear-residual-fit-v2-safe/solution.py",
+    "sha256": "ab1744fc652039a527071dfa2b3a9111152b2e182bc042a6a0fd9280879579d0",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 44,
+        "end": 47
+      },
+      {
+        "name": "_fwht",
+        "line": 50,
+        "end": 67
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 70,
+        "end": 106
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 109,
+        "end": 141
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 144,
+        "end": 168
+      },
+      {
+        "name": "_peak_suppression_reflectors",
+        "line": 171,
+        "end": 217
+      },
+      {
+        "name": "_apply_reflectors",
+        "line": 220,
+        "end": 229
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 232,
+        "end": 233
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 236,
+        "end": 263
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 266,
+        "end": 281
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 284,
+        "end": 290
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 293,
+        "end": 338
+      },
+      {
+        "name": "_expand_importance",
+        "line": 341,
+        "end": 364
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 367,
+        "end": 379
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 382,
+        "end": 395
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 398,
+        "end": 417
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 420,
+        "end": 432
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 435,
+        "end": 594
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 597,
+        "end": 619
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 622,
+        "end": 632
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 635,
+        "end": 644
+      },
+      {
+        "name": "_normalize_importance_wide",
+        "line": 647,
+        "end": 657
+      },
+      {
+        "name": "_relative_gains",
+        "line": 660,
+        "end": 664
+      },
+      {
+        "name": "_select_candidate",
+        "line": 667,
+        "end": 681
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 684,
+        "end": 700
+      },
+      {
+        "name": "_mse",
+        "line": 703,
+        "end": 704
+      },
+      {
+        "name": "_linear_output",
+        "line": 707,
+        "end": 708
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 711,
+        "end": 751
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 754,
+        "end": 767
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 770,
+        "end": 780
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 783,
+        "end": 791
+      },
+      {
+        "name": "_attention_output",
+        "line": 794,
+        "end": 810
+      },
+      {
+        "name": "_quantize_src",
+        "line": 813,
+        "end": 819
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 822,
+        "end": 1237
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1240,
+        "end": 1289
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1292,
+        "end": 1377
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1380,
+        "end": 1396
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1399,
+        "end": 1418
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1421,
+        "end": 1432
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1435,
+        "end": 1779
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1782,
+        "end": 1844
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1847,
+        "end": 1856
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1859,
+        "end": 1868
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1871,
+        "end": 1880
+      }
+    ]
+  },
+  {
+    "commit": "972abc69c227e0438ec2d6a9909843a1b0cf6754",
+    "path": "paper-solutions/combo-refine20-fixed-attn4-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/972abc6/paper-solutions/combo-refine20-fixed-attn4-safe/README.md",
+    "sha256": "391dd89e9f0e6e6dcab9e40b5c30a6e1485791e66952cc0e0eef41d21e3bd6f8"
+  },
+  {
+    "commit": "972abc69c227e0438ec2d6a9909843a1b0cf6754",
+    "path": "paper-solutions/rrs-fast-fp16-soar-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/972abc6/paper-solutions/rrs-fast-fp16-soar-safe/README.md",
+    "sha256": "7a7ebae9031fbf22ab52d41f344f799dc8a3ab4bca654c409d893d5ec0d12ae7"
+  },
+  {
+    "commit": "972abc69c227e0438ec2d6a9909843a1b0cf6754",
+    "path": "paper-solutions/rrs-fast-fp16-soar-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/972abc6/paper-solutions/rrs-fast-fp16-soar-safe/solution.py",
+    "sha256": "c59058606d1a93cfbe0179d55f5bc414bc050c75dbc0adbfa878435763df1d33",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 37,
+        "end": 40
+      },
+      {
+        "name": "_fwht64",
+        "line": 43,
+        "end": 58
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 61,
+        "end": 89
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 92,
+        "end": 117
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 120,
+        "end": 144
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 147,
+        "end": 148
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 151,
+        "end": 178
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 181,
+        "end": 196
+      },
+      {
+        "name": "_quantize_decoupled_multiplier",
+        "line": 199,
+        "end": 216
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 219,
+        "end": 225
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 228,
+        "end": 273
+      },
+      {
+        "name": "_expand_importance",
+        "line": 276,
+        "end": 299
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 302,
+        "end": 314
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 317,
+        "end": 325
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 328,
+        "end": 347
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 350,
+        "end": 362
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 365,
+        "end": 530
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 533,
+        "end": 549
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 552,
+        "end": 562
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 565,
+        "end": 574
+      },
+      {
+        "name": "_relative_gains",
+        "line": 577,
+        "end": 581
+      },
+      {
+        "name": "_select_candidate",
+        "line": 584,
+        "end": 598
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 601,
+        "end": 617
+      },
+      {
+        "name": "_mse",
+        "line": 620,
+        "end": 621
+      },
+      {
+        "name": "_linear_output",
+        "line": 624,
+        "end": 625
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 628,
+        "end": 668
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 671,
+        "end": 684
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 687,
+        "end": 697
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 700,
+        "end": 708
+      },
+      {
+        "name": "_attention_output",
+        "line": 711,
+        "end": 727
+      },
+      {
+        "name": "_quantize_src",
+        "line": 730,
+        "end": 736
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 739,
+        "end": 973
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 976,
+        "end": 1002
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1005,
+        "end": 1082
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1085,
+        "end": 1101
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1104,
+        "end": 1123
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1126,
+        "end": 1137
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1140,
+        "end": 1444
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1447,
+        "end": 1495
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1498,
+        "end": 1507
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1510,
+        "end": 1519
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1522,
+        "end": 1531
+      }
+    ]
+  },
+  {
+    "commit": "6fd55096359a28ce10aff09070b10cbfab5f7663",
+    "path": "paper-solutions/smoothrot-paper-n3-pure/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/6fd5509/paper-solutions/smoothrot-paper-n3-pure/README.md",
+    "sha256": "ddde9c93bf5b719d87fd514b184ee7bce123b4a3f1567591a241752875d3fbf1"
+  },
+  {
+    "commit": "6fd55096359a28ce10aff09070b10cbfab5f7663",
+    "path": "paper-solutions/smoothrot-paper-n3-pure/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/6fd5509/paper-solutions/smoothrot-paper-n3-pure/solution.py",
+    "sha256": "531045b2211d7e47c9ae7d2d144956d1c7813e06d0d65e58f270bb253e200626",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 36,
+        "end": 39
+      },
+      {
+        "name": "_fwht64",
+        "line": 42,
+        "end": 57
+      },
+      {
+        "name": "_rht_signs",
+        "line": 60,
+        "end": 70
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 73,
+        "end": 96
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 99,
+        "end": 124
+      },
+      {
+        "name": "_paper_smooth_scale",
+        "line": 127,
+        "end": 142
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 145,
+        "end": 169
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 172,
+        "end": 173
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 176,
+        "end": 203
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 206,
+        "end": 221
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 224,
+        "end": 230
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 233,
+        "end": 278
+      },
+      {
+        "name": "_expand_importance",
+        "line": 281,
+        "end": 304
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 307,
+        "end": 319
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 322,
+        "end": 330
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 333,
+        "end": 352
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 355,
+        "end": 367
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 370,
+        "end": 485
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 488,
+        "end": 504
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 507,
+        "end": 517
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 520,
+        "end": 529
+      },
+      {
+        "name": "_relative_gains",
+        "line": 532,
+        "end": 536
+      },
+      {
+        "name": "_select_candidate",
+        "line": 539,
+        "end": 553
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 556,
+        "end": 572
+      },
+      {
+        "name": "_mse",
+        "line": 575,
+        "end": 576
+      },
+      {
+        "name": "_linear_output",
+        "line": 579,
+        "end": 580
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 583,
+        "end": 623
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 626,
+        "end": 639
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 642,
+        "end": 652
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 655,
+        "end": 663
+      },
+      {
+        "name": "_attention_output",
+        "line": 666,
+        "end": 682
+      },
+      {
+        "name": "_quantize_src",
+        "line": 685,
+        "end": 691
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 694,
+        "end": 869
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 872,
+        "end": 907
+      },
+      {
+        "name": "_attention_importance",
+        "line": 910,
+        "end": 987
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 990,
+        "end": 1006
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1009,
+        "end": 1028
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1031,
+        "end": 1042
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1045,
+        "end": 1356
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1359,
+        "end": 1407
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1410,
+        "end": 1419
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1422,
+        "end": 1431
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1434,
+        "end": 1443
+      }
+    ]
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/README.md",
+    "sha256": "bbcb5f97c752dd216607dd5dad875201a780495c6c748d2fca1888be520685ec"
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/TUNING.md",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/TUNING.md",
+    "sha256": "e0a37e2d5bcfde4dc06a3a545374d6c9c3b73ac60eaa5b8f7a4215a007c6a3d9"
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-learned-scale-strong-manual-ste-safe/solution.py",
+    "sha256": "e1b4ae08834304a867f98b8a2c36827c58e8fd4c2e8091d86cc91a723c40053f",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 51,
+        "end": 54
+      },
+      {
+        "name": "_fwht",
+        "line": 57,
+        "end": 74
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 77,
+        "end": 113
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 116,
+        "end": 148
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 151,
+        "end": 175
+      },
+      {
+        "name": "_peak_suppression_reflectors",
+        "line": 178,
+        "end": 222
+      },
+      {
+        "name": "_apply_reflectors",
+        "line": 225,
+        "end": 234
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 237,
+        "end": 238
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 241,
+        "end": 268
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 271,
+        "end": 286
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 289,
+        "end": 295
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 298,
+        "end": 343
+      },
+      {
+        "name": "_expand_importance",
+        "line": 346,
+        "end": 369
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 372,
+        "end": 384
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 387,
+        "end": 400
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 403,
+        "end": 422
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 425,
+        "end": 437
+      },
+      {
+        "name": "_take_best_vectorized_candidate",
+        "line": 440,
+        "end": 465
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 468,
+        "end": 716
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 719,
+        "end": 741
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 744,
+        "end": 754
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 757,
+        "end": 766
+      },
+      {
+        "name": "_normalize_linear_importance",
+        "line": 769,
+        "end": 776
+      },
+      {
+        "name": "_normalize_importance_wide",
+        "line": 779,
+        "end": 789
+      },
+      {
+        "name": "_relative_gains",
+        "line": 792,
+        "end": 796
+      },
+      {
+        "name": "_select_candidate",
+        "line": 799,
+        "end": 813
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 816,
+        "end": 832
+      },
+      {
+        "name": "_mse",
+        "line": 835,
+        "end": 836
+      },
+      {
+        "name": "_linear_output",
+        "line": 839,
+        "end": 840
+      },
+      {
+        "name": "_probe_linear_losses",
+        "line": 843,
+        "end": 859
+      },
+      {
+        "name": "_learn_smooth_balance",
+        "line": 862,
+        "end": 929
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 932,
+        "end": 975
+      },
+      {
+        "name": "_global_weight_sketch",
+        "line": 978,
+        "end": 992
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 995,
+        "end": 1008
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 1011,
+        "end": 1021
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 1024,
+        "end": 1032
+      },
+      {
+        "name": "_attention_output",
+        "line": 1035,
+        "end": 1051
+      },
+      {
+        "name": "_quantize_src",
+        "line": 1054,
+        "end": 1060
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 1063,
+        "end": 1549
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1552,
+        "end": 1589
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1592,
+        "end": 1677
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1680,
+        "end": 1696
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1699,
+        "end": 1718
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1721,
+        "end": 1732
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1735,
+        "end": 2080
+      },
+      {
+        "name": "_prepare_dynamic_attention_value",
+        "line": 2081,
+        "end": 2125
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 2128,
+        "end": 2197
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 2200,
+        "end": 2209
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 2212,
+        "end": 2221
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 2224,
+        "end": 2233
+      }
+    ]
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-paper-n3-pure/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-paper-n3-pure/README.md",
+    "sha256": "a9682093d0d131d15f7470e94c6b30a3e0aa67c284f4b8220b0bba5a517f9ce6"
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-paper-n3-pure/TUNING.md",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-paper-n3-pure/TUNING.md",
+    "sha256": "2317b563b057a294f4e3fbf76c3f2a1e5dda7a2dbf3a91d3a8f5123a75ca2767"
+  },
+  {
+    "commit": "c5136118bd28c89772ee3a5e14819fd739f3a1cf",
+    "path": "paper-solutions/smoothrot-paper-n3-pure/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/c513611/paper-solutions/smoothrot-paper-n3-pure/solution.py",
+    "sha256": "5e6339a3d5b996fca1a19681789b7d86be7d5fecfa92e6fe12da7717f5977a82",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 36,
+        "end": 39
+      },
+      {
+        "name": "_fwht64",
+        "line": 42,
+        "end": 57
+      },
+      {
+        "name": "_rht_signs",
+        "line": 60,
+        "end": 70
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 73,
+        "end": 96
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 99,
+        "end": 124
+      },
+      {
+        "name": "_paper_smooth_scale",
+        "line": 127,
+        "end": 142
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 145,
+        "end": 169
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 172,
+        "end": 173
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 176,
+        "end": 203
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 206,
+        "end": 221
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 224,
+        "end": 230
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 233,
+        "end": 278
+      },
+      {
+        "name": "_expand_importance",
+        "line": 281,
+        "end": 304
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 307,
+        "end": 319
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 322,
+        "end": 330
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 333,
+        "end": 352
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 355,
+        "end": 367
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 370,
+        "end": 485
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 488,
+        "end": 504
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 507,
+        "end": 517
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 520,
+        "end": 529
+      },
+      {
+        "name": "_relative_gains",
+        "line": 532,
+        "end": 536
+      },
+      {
+        "name": "_select_candidate",
+        "line": 539,
+        "end": 553
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 556,
+        "end": 572
+      },
+      {
+        "name": "_mse",
+        "line": 575,
+        "end": 576
+      },
+      {
+        "name": "_linear_output",
+        "line": 579,
+        "end": 580
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 583,
+        "end": 623
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 626,
+        "end": 639
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 642,
+        "end": 652
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 655,
+        "end": 663
+      },
+      {
+        "name": "_attention_output",
+        "line": 666,
+        "end": 682
+      },
+      {
+        "name": "_quantize_src",
+        "line": 685,
+        "end": 691
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 694,
+        "end": 869
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 872,
+        "end": 907
+      },
+      {
+        "name": "_attention_importance",
+        "line": 910,
+        "end": 987
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 990,
+        "end": 1006
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1009,
+        "end": 1028
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1031,
+        "end": 1042
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1045,
+        "end": 1356
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1359,
+        "end": 1407
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1410,
+        "end": 1419
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1422,
+        "end": 1431
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1434,
+        "end": 1443
+      }
+    ]
+  },
+  {
+    "commit": "741c1451f3feba1c50be57e97e5691e56cde979d",
+    "path": "paper-solutions/smoothrot-19k-qwfit-final-safe/README.md",
+    "saved": "docs/test分支审计-20260907/history-sources/741c145/paper-solutions/smoothrot-19k-qwfit-final-safe/README.md",
+    "sha256": "4296f09ceea89d867761c4572cd41c7348399a2d4faf96856ed36300569fa48c"
+  },
+  {
+    "commit": "741c1451f3feba1c50be57e97e5691e56cde979d",
+    "path": "paper-solutions/smoothrot-19k-qwfit-final-safe/TUNING.md",
+    "saved": "docs/test分支审计-20260907/history-sources/741c145/paper-solutions/smoothrot-19k-qwfit-final-safe/TUNING.md",
+    "sha256": "340f907e2c1814c5c68f4b9c6a55584ffbb3aa62ad804afc8f133fd10e74ccfb"
+  },
+  {
+    "commit": "741c1451f3feba1c50be57e97e5691e56cde979d",
+    "path": "paper-solutions/smoothrot-19k-qwfit-final-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/741c145/paper-solutions/smoothrot-19k-qwfit-final-safe/solution.py",
+    "sha256": "710a31429b8c3328177daffae883e2fa5e2fdcb43ea2386077f84810637e8159",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 53,
+        "end": 56
+      },
+      {
+        "name": "_fwht",
+        "line": 59,
+        "end": 76
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 79,
+        "end": 115
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 118,
+        "end": 150
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 153,
+        "end": 177
+      },
+      {
+        "name": "_peak_suppression_reflectors",
+        "line": 180,
+        "end": 224
+      },
+      {
+        "name": "_apply_reflectors",
+        "line": 227,
+        "end": 236
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 239,
+        "end": 240
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 243,
+        "end": 270
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 273,
+        "end": 288
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 291,
+        "end": 297
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 300,
+        "end": 345
+      },
+      {
+        "name": "_expand_importance",
+        "line": 348,
+        "end": 371
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 374,
+        "end": 386
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 389,
+        "end": 402
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 405,
+        "end": 424
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 427,
+        "end": 439
+      },
+      {
+        "name": "_take_best_vectorized_candidate",
+        "line": 442,
+        "end": 467
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 470,
+        "end": 718
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 721,
+        "end": 743
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 746,
+        "end": 756
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 759,
+        "end": 768
+      },
+      {
+        "name": "_normalize_linear_importance",
+        "line": 771,
+        "end": 778
+      },
+      {
+        "name": "_normalize_importance_wide",
+        "line": 781,
+        "end": 791
+      },
+      {
+        "name": "_relative_gains",
+        "line": 794,
+        "end": 798
+      },
+      {
+        "name": "_select_candidate",
+        "line": 801,
+        "end": 815
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 818,
+        "end": 834
+      },
+      {
+        "name": "_mse",
+        "line": 837,
+        "end": 838
+      },
+      {
+        "name": "_linear_output",
+        "line": 841,
+        "end": 842
+      },
+      {
+        "name": "_probe_linear_losses",
+        "line": 845,
+        "end": 861
+      },
+      {
+        "name": "_learn_smooth_balance",
+        "line": 864,
+        "end": 966
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 969,
+        "end": 1012
+      },
+      {
+        "name": "_global_weight_sketch",
+        "line": 1015,
+        "end": 1029
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 1032,
+        "end": 1045
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 1048,
+        "end": 1058
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 1061,
+        "end": 1069
+      },
+      {
+        "name": "_attention_output",
+        "line": 1072,
+        "end": 1088
+      },
+      {
+        "name": "_quantize_src",
+        "line": 1091,
+        "end": 1097
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 1100,
+        "end": 1589
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1592,
+        "end": 1629
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1632,
+        "end": 1717
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1720,
+        "end": 1736
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1739,
+        "end": 1758
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1761,
+        "end": 1772
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1775,
+        "end": 2126
+      },
+      {
+        "name": "_prepare_dynamic_attention_value",
+        "line": 2127,
+        "end": 2171
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 2174,
+        "end": 2243
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 2246,
+        "end": 2255
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 2258,
+        "end": 2267
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 2270,
+        "end": 2279
+      }
+    ]
+  },
+  {
+    "commit": "8208886cc24a0f8ff9dee8a44dc99d06cd748682",
+    "path": "paper-solutions/rrs-fast-fp16-linear-qwhessian-actcd1-vector-fast-safe/TUNING.md",
+    "saved": "docs/test分支审计-20260907/history-sources/8208886/paper-solutions/rrs-fast-fp16-linear-qwhessian-actcd1-vector-fast-safe/TUNING.md",
+    "sha256": "69586edc3dce4211e4cc3777b02c84f99434efd1a5dfd965ddde024eeaa44fec"
+  },
+  {
+    "commit": "8208886cc24a0f8ff9dee8a44dc99d06cd748682",
+    "path": "paper-solutions/rrs-fast-fp16-linear-qwhessian-actcd1-vector-fast-safe/solution.py",
+    "saved": "docs/test分支审计-20260907/history-sources/8208886/paper-solutions/rrs-fast-fp16-linear-qwhessian-actcd1-vector-fast-safe/solution.py",
+    "sha256": "21d42a1cdd7841837816aa80fb3cf608b19e8b279f4224da157d841ba3f55bce",
+    "functions": [
+      {
+        "name": "_dequantize_src",
+        "line": 40,
+        "end": 43
+      },
+      {
+        "name": "_fwht64",
+        "line": 46,
+        "end": 61
+      },
+      {
+        "name": "_apply_linear_family",
+        "line": 64,
+        "end": 92
+      },
+      {
+        "name": "_linear_smooth_balance",
+        "line": 95,
+        "end": 120
+      },
+      {
+        "name": "_linear_quantile_smooth_balance",
+        "line": 123,
+        "end": 149
+      },
+      {
+        "name": "_learn_smooth_balance",
+        "line": 152,
+        "end": 210
+      },
+      {
+        "name": "_apply_exact_scale_gradient",
+        "line": 213,
+        "end": 239
+      },
+      {
+        "name": "_predicted_scale_descent",
+        "line": 242,
+        "end": 251
+      },
+      {
+        "name": "_probe_scale_pair",
+        "line": 254,
+        "end": 292
+      },
+      {
+        "name": "_linear_channel_stability",
+        "line": 295,
+        "end": 319
+      },
+      {
+        "name": "_stability_threshold",
+        "line": 322,
+        "end": 323
+      },
+      {
+        "name": "_e6m2_candidates",
+        "line": 326,
+        "end": 353
+      },
+      {
+        "name": "_quantize_multiplier",
+        "line": 356,
+        "end": 371
+      },
+      {
+        "name": "_reduce_quartet_error",
+        "line": 374,
+        "end": 380
+      },
+      {
+        "name": "_select_at_scale",
+        "line": 383,
+        "end": 428
+      },
+      {
+        "name": "_expand_importance",
+        "line": 431,
+        "end": 454
+      },
+      {
+        "name": "_prepare_block_quadratic",
+        "line": 457,
+        "end": 469
+      },
+      {
+        "name": "_quadratic_block_error",
+        "line": 472,
+        "end": 480
+      },
+      {
+        "name": "_update_best_candidate",
+        "line": 483,
+        "end": 502
+      },
+      {
+        "name": "_finalize_candidate",
+        "line": 505,
+        "end": 517
+      },
+      {
+        "name": "_refine_quadratic_groups",
+        "line": 520,
+        "end": 632
+      },
+      {
+        "name": "_quantize_hierarchical_multi",
+        "line": 635,
+        "end": 758
+      },
+      {
+        "name": "_quantize_hierarchical",
+        "line": 761,
+        "end": 779
+      },
+      {
+        "name": "_dequantize_tgt",
+        "line": 782,
+        "end": 792
+      },
+      {
+        "name": "_normalize_importance",
+        "line": 795,
+        "end": 804
+      },
+      {
+        "name": "_relative_gains",
+        "line": 807,
+        "end": 811
+      },
+      {
+        "name": "_select_candidate",
+        "line": 814,
+        "end": 828
+      },
+      {
+        "name": "_use_learned_scale",
+        "line": 831,
+        "end": 844
+      },
+      {
+        "name": "_select_attention_candidate",
+        "line": 847,
+        "end": 863
+      },
+      {
+        "name": "_mse",
+        "line": 866,
+        "end": 867
+      },
+      {
+        "name": "_linear_output",
+        "line": 870,
+        "end": 871
+      },
+      {
+        "name": "_block_second_moment",
+        "line": 874,
+        "end": 914
+      },
+      {
+        "name": "_attention_probabilities",
+        "line": 917,
+        "end": 930
+      },
+      {
+        "name": "_attention_value_heads",
+        "line": 933,
+        "end": 943
+      },
+      {
+        "name": "_attention_from_probabilities",
+        "line": 946,
+        "end": 954
+      },
+      {
+        "name": "_attention_output",
+        "line": 957,
+        "end": 973
+      },
+      {
+        "name": "_quantize_src",
+        "line": 976,
+        "end": 982
+      },
+      {
+        "name": "_calibrate_rrs_linear_route",
+        "line": 985,
+        "end": 1082
+      },
+      {
+        "name": "hif4_calibration_and_quantize_weight",
+        "line": 1085,
+        "end": 1260
+      },
+      {
+        "name": "hif4_dynamic_quantize_activation",
+        "line": 1263,
+        "end": 1290
+      },
+      {
+        "name": "_attention_importance",
+        "line": 1293,
+        "end": 1370
+      },
+      {
+        "name": "_apply_attention_permutation",
+        "line": 1373,
+        "end": 1389
+      },
+      {
+        "name": "_apply_attention_balance",
+        "line": 1392,
+        "end": 1411
+      },
+      {
+        "name": "_attention_scale_dispersion",
+        "line": 1414,
+        "end": 1425
+      },
+      {
+        "name": "hif4_calibration_attention",
+        "line": 1428,
+        "end": 1732
+      },
+      {
+        "name": "_dynamic_attention",
+        "line": 1735,
+        "end": 1783
+      },
+      {
+        "name": "hif4_dynamic_quantize_q",
+        "line": 1786,
+        "end": 1795
+      },
+      {
+        "name": "hif4_dynamic_quantize_k",
+        "line": 1798,
+        "end": 1807
+      },
+      {
+        "name": "hif4_dynamic_quantize_v",
+        "line": 1810,
+        "end": 1819
+      }
+    ]
+  }
+]

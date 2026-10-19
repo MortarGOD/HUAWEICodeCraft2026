@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "group": 6,
+      "query_max_error": 0.0,
+      "choices": [
+        0,
+        0
+      ],
+      "costs_exact": true
+    },
+    {
+      "group": 47,
+      "query_max_error": 0.0,
+      "choices": [
+        1,
+        0
+      ],
+      "costs_exact": true
+    }
+  ],
+  "warning": "Fixed-parent context audit; separate-run parent numerical variability is not corrected or attributed to online."
+}

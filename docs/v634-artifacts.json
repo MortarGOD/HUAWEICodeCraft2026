@@ -1,0 +1,11 @@
+{
+  "version": 634,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "v632 with lam lowered to 0.05. Full-bank sweeps with the real implementation show the online-profiled bank wants the low end (lam 0.05 +1508 vs 0.1222 at 0.1 and +248 at 0.2) while the mirror is flat over 0.05-0.2 (+1874/+2041/+2082), and the harm elsewhere is monotone in lam (public_quantizer -106 at 0.05 vs -208 at 0.1). Low lam is therefore both best where it matters and safest.",
+  "source_sha256": "f8f25f1bac84b489354b1a5f1064e5e225e4afb000ac58068aad90b2a4c89d26",
+  "archive_sha256": "e50257c3df99290d65669deecd9641a7cdd8e65eaab4873238a55841db534dd9",
+  "archive_members": [
+    "solution.py"
+  ]
+}

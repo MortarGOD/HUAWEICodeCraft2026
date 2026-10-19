@@ -1,0 +1,258 @@
+{
+  "version": 441,
+  "atom": "group11",
+  "source_sha256": "b570f46dc7d8b38eedffdc579eb849f647dced2f8c928df731083a9497170fd4",
+  "data_sha256": "4f9ea6ea8d3a1029bf3e8554ffd91a6ebaec24351e4fb4cfeb2b2299bfd5a978",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0016524834791198373,
+      "player_mse": 0.0013711716746911407,
+      "quality": 0.17023577420485428,
+      "perfect_qk_quality": 0.5079717993832216,
+      "perfect_v_quality": 0.6735389378800928,
+      "diagnostic_only": true
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.004438205622136593,
+      "player_mse": 0.0021756915375590324,
+      "quality": 0.5097812668463895,
+      "perfect_qk_quality": 0.6681746797336767,
+      "perfect_v_quality": 0.8520699327267077,
+      "diagnostic_only": true
+    },
+    {
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0013422737829387188,
+      "player_mse": 0.0009959423914551735,
+      "quality": 0.25801844294783266,
+      "perfect_qk_quality": 0.49727893492860914,
+      "perfect_v_quality": 0.767779810727522,
+      "diagnostic_only": true
+    }
+  ],
+  "format_checks": 9,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "kt_mode": 4
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00044065737165510654,
+          "j_cand": 0.0002893264463637024
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 1,
+          "error": false,
+          "hold_base": 0.0012610947014763951
+        },
+        "TEMP_DEBUG": {
+          "heads": 10,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "guard_rows": 8,
+          "minimum_gain": 0.01
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {
+          "v435_content_parent": null
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00046168395783752203,
+          "j_cand": 0.0003278928925283253
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false
+        },
+        "TEMP_DEBUG": {
+          "heads": 0,
+          "error": false
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross"
+        },
+        "KT_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {}
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {
+          "v435_content_parent": null
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00048164959298446774,
+          "j_cand": 0.00030880459235049784
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false
+        },
+        "TEMP_DEBUG": {
+          "heads": 0,
+          "error": false
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross"
+        },
+        "KT_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {}
+      }
+    }
+  },
+  "calibration_seconds": 2.565077041974291,
+  "mean_quality": 0.31267849466635883,
+  "wall_seconds": 2.8842200830113143
+}

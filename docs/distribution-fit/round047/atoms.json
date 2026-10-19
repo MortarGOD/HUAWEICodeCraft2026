@@ -1,0 +1,154 @@
+{
+  "round": 47,
+  "atoms": [
+    {
+      "id": "covs-s1-l192",
+      "path": "local_distribution_fit/round047/covs-s1-l192.pt",
+      "sha256": "3c624a972bdfcd9df66102756bfd0bb558fd92c3e667185c2c2706af4667343e",
+      "seed": 2026091700,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          192,
+          192,
+          192,
+          192,
+          192
+        ]
+      }
+    },
+    {
+      "id": "covs-s1-l224",
+      "path": "local_distribution_fit/round047/covs-s1-l224.pt",
+      "sha256": "541891a522a7f09dbb967c4f51b1733eb2371fd0fa99ec834cae48e4fac06520",
+      "seed": 2026091701,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          224,
+          224,
+          224,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "id": "covs-s1-l256",
+      "path": "local_distribution_fit/round047/covs-s1-l256.pt",
+      "sha256": "2fd3bc2d3a9ad606c0697ebec88c73a561e3be46a8db1d3e3d006b8b22794e50",
+      "seed": 2026091702,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ]
+      }
+    },
+    {
+      "id": "covs-s2-l192",
+      "path": "local_distribution_fit/round047/covs-s2-l192.pt",
+      "sha256": "30e43f5618bd2817ee23b165aac3b91e24cc372075397d74000e647c311cf560",
+      "seed": 2026091703,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 8,
+        "rows": [
+          192,
+          192,
+          192,
+          192,
+          192
+        ]
+      }
+    },
+    {
+      "id": "covs-s4-l160",
+      "path": "local_distribution_fit/round047/covs-s4-l160.pt",
+      "sha256": "774de438dcef20407d850168f6b63d1deb25b9aa96c5f8a8da8db5911fc941d1",
+      "seed": 2026091704,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          160,
+          160,
+          160,
+          160,
+          160
+        ]
+      }
+    },
+    {
+      "id": "covs-s4-l192",
+      "path": "local_distribution_fit/round047/covs-s4-l192.pt",
+      "sha256": "c7e361bb732302ea790e5dbca6cf99340f52812b2b1c8f2d073c79581934556c",
+      "seed": 2026091705,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          192,
+          192,
+          192,
+          192,
+          192
+        ]
+      }
+    },
+    {
+      "id": "covs-s4-l224",
+      "path": "local_distribution_fit/round047/covs-s4-l224.pt",
+      "sha256": "5e6574d09b257d80c3c68a127642ed53ac67efc2c9f6408fa5d70217e2557f27",
+      "seed": 2026091706,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          224,
+          224,
+          224,
+          224,
+          224
+        ]
+      }
+    }
+  ],
+  "mechanism": "v307 GPTQ length sweep 128..256; measure 306/307 first.",
+  "limits": "Synthetic checkpoint-projected covariance gradient; not online distribution evidence."
+}

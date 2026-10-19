@@ -1,0 +1,129 @@
+{
+  "complete": true,
+  "checks": 102,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.9565530839608982,
+        "359": 1.782138540991582
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 2.753324791963678,
+        "359": 2.5602865000255406
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 2,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 2.5188500829972327,
+        "359": 2.450613875000272
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 5,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.94311245897552,
+        "359": 2.0291599580086768
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 2.3027072090189904,
+        "359": 2.2092034590314142
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 2.478174542018678,
+        "359": 2.571072665974498
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.4176563330111094,
+        "359": 1.3762362499837764
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 1,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.3982018330134451,
+        "359": 1.3698787079774775
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 2,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.4847158340271562,
+        "359": 1.4810911670210771
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.9062099159928039,
+        "359": 1.7599649999756366
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 26,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.7085857919882983,
+        "359": 1.761106583988294
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 49,
+      "state_equal": true,
+      "v_outputs_equal": 5,
+      "calibration_seconds": {
+        "358": 1.847629833035171,
+        "359": 1.888116124959197
+      }
+    }
+  ],
+  "v358_seconds": 23.71572171000298,
+  "v359_seconds": 23.23886883293744,
+  "warning": "Paired local 4-thread calibration; not online runtime evidence."
+}

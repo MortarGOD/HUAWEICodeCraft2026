@@ -1,0 +1,68 @@
+{
+  "commit": "2b8fc7be13c846aeea31ec9fcc197185bf429fd4",
+  "packages": {
+    "attention-v419-v8": {
+      "git_source_sha256": "3872c193dcc743a6f8ebe81c40f295de91912956ac6afa133d7da88dcd4f803a",
+      "zip_source_sha256": "3872c193dcc743a6f8ebe81c40f295de91912956ac6afa133d7da88dcd4f803a",
+      "zip_sha256": "600ac32e844be4d336ea1e61828a304de25e8646c1c726634f11895fead9cfdb",
+      "normalized_equal": true
+    },
+    "attention-search-v9": {
+      "git_source_sha256": "92f122f2f97c750086fee190585cc17b856192b65fa5fc192fa1416fd3af9010",
+      "zip_source_sha256": "92f122f2f97c750086fee190585cc17b856192b65fa5fc192fa1416fd3af9010",
+      "zip_sha256": "a6b90907ff9813386fbab6edad838957831a34e5b02e2c1bc3bc4cc75a545488",
+      "normalized_equal": true
+    }
+  },
+  "risk_math": {
+    "cases": 8,
+    "max_error": 4.440892098500626e-16,
+    "scope": "Given nonnegative variance; not proof of fitted uncertainty transfer."
+  },
+  "holdout_coverage": [
+    {
+      "bank": "mini_sample",
+      "groups": 1,
+      "affected": [
+        {
+          "group": 0,
+          "before": [
+            10,
+            128,
+            512,
+            1024,
+            1
+          ],
+          "after": [
+            10,
+            128,
+            512,
+            1,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "bank": "local_fitted_models_attention_feedback_v2",
+      "groups": 50,
+      "affected": []
+    },
+    {
+      "bank": "local_fitted_models_covariance_v1",
+      "groups": 50,
+      "affected": []
+    },
+    {
+      "bank": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "groups": 10,
+      "affected": []
+    },
+    {
+      "bank": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1",
+      "groups": 50,
+      "affected": []
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "exhaustive_gain_error": 6.661338147750939e-16,
+  "exact_block_gain_error": 4.440892098500626e-16,
+  "multi_code_trap": {
+    "rows": 1,
+    "initial_stalled": 1,
+    "escaped_stalled": 1,
+    "changed_rows": 1,
+    "moves": 1,
+    "before_metric": 0.40000000000000036,
+    "after_metric": 0.0625
+  },
+  "trap": {
+    "rows": 1,
+    "initial_stalled": 1,
+    "escaped_stalled": 1,
+    "changed_rows": 1,
+    "moves": 1,
+    "before_metric": 0.136,
+    "after_metric": 0.056000000000000015
+  },
+  "random": {
+    "rows": 14,
+    "initial_stalled": 3,
+    "escaped_stalled": 1,
+    "changed_rows": 12,
+    "moves": 15,
+    "before_metric": 14.28479019885449,
+    "after_metric": 8.143685866628433
+  },
+  "row_monotone": true,
+  "legal_lattice": true,
+  "zero_rounds_exact": true,
+  "endpoint_gain_error": 8.881784197001252e-16
+}

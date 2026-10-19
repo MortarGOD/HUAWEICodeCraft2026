@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "t": 512,
+      "qh": 8,
+      "kh": 2,
+      "d": 256,
+      "features": 65,
+      "seconds": 0.04893154196906835,
+      "changed": 1670
+    },
+    {
+      "t": 1024,
+      "qh": 8,
+      "kh": 2,
+      "d": 256,
+      "features": 65,
+      "seconds": 0.10180062497965991,
+      "changed": 2416
+    },
+    {
+      "t": 4096,
+      "qh": 8,
+      "kh": 2,
+      "d": 256,
+      "features": 65,
+      "seconds": 0.5818884579930454,
+      "changed": 4412
+    }
+  ],
+  "limits": "Synthetic 65-feature models, four sigma points. Local extra refinement only, not total online runtime or worst-case proof."
+}

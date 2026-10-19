@@ -1,0 +1,439 @@
+{
+  "completed": true,
+  "parent": 435,
+  "candidate": 436,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": [
+    0,
+    24,
+    49
+  ],
+  "role_isolated": true,
+  "decoy_mode": "block_resample",
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "shape": [
+        1024,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.022114811399942393,
+      "baseline_mse": 2.355571268708445e-06,
+      "parent_mse": 1.5467056755369413e-06,
+      "child_mse": 1.494612661190331e-06,
+      "changed_values": 3376,
+      "changed_fields": {
+        "scale_factor": 33,
+        "scale_lv2": 86,
+        "scale_lv3": 200,
+        "sign": 52313,
+        "mant": 2982
+      },
+      "risk": [
+        0.007704601090121186,
+        0.006758744934776696
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "shape": [
+        512,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.002799227406067192,
+      "baseline_mse": 5.582264748227317e-06,
+      "parent_mse": 2.200009021180449e-06,
+      "child_mse": 2.1843829927092884e-06,
+      "changed_values": 2045,
+      "changed_fields": {
+        "scale_factor": 21,
+        "scale_lv2": 45,
+        "scale_lv3": 93,
+        "sign": 26228,
+        "mant": 1725
+      },
+      "risk": [
+        0.013255381114949463,
+        0.012082256425035106
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "shape": [
+        256,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.0163752288345571,
+      "baseline_mse": 1.0016146006819326e-05,
+      "parent_mse": 2.58891759585822e-06,
+      "child_mse": 2.7529342787602218e-06,
+      "changed_values": 1680,
+      "changed_fields": {
+        "scale_factor": 17,
+        "scale_lv2": 42,
+        "scale_lv3": 84,
+        "sign": 12985,
+        "mant": 1414
+      },
+      "risk": [
+        0.022115935886898738,
+        0.021076659655162137
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "shape": [
+        64,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.0008219895578326924,
+      "baseline_mse": 3.870159343932755e-05,
+      "parent_mse": 7.431711310346145e-06,
+      "child_mse": 7.463523616024759e-06,
+      "changed_values": 15,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 1,
+        "sign": 2371,
+        "mant": 18
+      },
+      "risk": [
+        0.06963657317552899,
+        0.06941949488658308
+      ],
+      "improved_blocks": 6
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "shape": [
+        128,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.005443463142296817,
+      "baseline_mse": 1.7698843294056132e-05,
+      "parent_mse": 3.621188625402283e-06,
+      "child_mse": 3.7175316265347647e-06,
+      "changed_values": 435,
+      "changed_fields": {
+        "scale_factor": 5,
+        "scale_lv2": 11,
+        "scale_lv3": 21,
+        "sign": 6388,
+        "mant": 356
+      },
+      "risk": [
+        0.040986118961368834,
+        0.03999982979834503
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 24,
+      "test": 0,
+      "shape": [
+        256,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.048623271157689614,
+      "baseline_mse": 1.4556201676896308e-05,
+      "parent_mse": 3.296513114037225e-06,
+      "child_mse": 4.0042832551989704e-06,
+      "changed_values": 3070,
+      "changed_fields": {
+        "scale_factor": 27,
+        "scale_lv2": 72,
+        "scale_lv3": 199,
+        "sign": 13280,
+        "mant": 2777
+      },
+      "risk": [
+        0.021050847961751162,
+        0.018449197594755176
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 24,
+      "test": 1,
+      "shape": [
+        1024,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.010722787054859321,
+      "baseline_mse": 7.805901987012476e-06,
+      "parent_mse": 2.354591970288311e-06,
+      "child_mse": 2.270890945510473e-06,
+      "changed_values": 3060,
+      "changed_fields": {
+        "scale_factor": 24,
+        "scale_lv2": 74,
+        "scale_lv3": 164,
+        "sign": 52603,
+        "mant": 2760
+      },
+      "risk": [
+        0.008070857669915377,
+        0.006615578521585832
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 24,
+      "test": 2,
+      "shape": [
+        512,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.001537362692744722,
+      "baseline_mse": 1.073758085112786e-05,
+      "parent_mse": 2.907793714257423e-06,
+      "child_mse": 2.924301270468277e-06,
+      "changed_values": 1905,
+      "changed_fields": {
+        "scale_factor": 18,
+        "scale_lv2": 55,
+        "scale_lv3": 113,
+        "sign": 26425,
+        "mant": 1655
+      },
+      "risk": [
+        0.015200703916285994,
+        0.013510301883860003
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 24,
+      "test": 3,
+      "shape": [
+        128,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.011190410956151146,
+      "baseline_mse": 2.7153637347510085e-05,
+      "parent_mse": 4.885404450760689e-06,
+      "child_mse": 5.18926481163362e-06,
+      "changed_values": 526,
+      "changed_fields": {
+        "scale_factor": 6,
+        "scale_lv2": 10,
+        "scale_lv3": 30,
+        "sign": 6545,
+        "mant": 403
+      },
+      "risk": [
+        0.04031388381171609,
+        0.039162325882398555
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 24,
+      "test": 4,
+      "shape": [
+        64,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.007007234339252676,
+      "baseline_mse": 4.704761158791371e-05,
+      "parent_mse": 7.3817918746499345e-06,
+      "child_mse": 7.711465514148585e-06,
+      "changed_values": 208,
+      "changed_fields": {
+        "scale_factor": 2,
+        "scale_lv2": 9,
+        "scale_lv3": 13,
+        "sign": 3215,
+        "mant": 190
+      },
+      "risk": [
+        0.06004572877278606,
+        0.05865143297989471
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 0,
+      "shape": [
+        128,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.008962303074395338,
+      "baseline_mse": 7.450744305970147e-05,
+      "parent_mse": 0.006679754704236984,
+      "child_mse": 0.0066804224625229836,
+      "changed_values": 318,
+      "changed_fields": {
+        "scale_factor": 3,
+        "scale_lv2": 8,
+        "scale_lv3": 6,
+        "sign": 6450,
+        "mant": 278
+      },
+      "risk": [
+        0.033550503391125405,
+        0.032892811628480935
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 1,
+      "shape": [
+        1024,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.009403758179401103,
+      "baseline_mse": 2.3422315280186012e-05,
+      "parent_mse": 0.0043946560472249985,
+      "child_mse": 0.004394876305013895,
+      "changed_values": 1225,
+      "changed_fields": {
+        "scale_factor": 9,
+        "scale_lv2": 28,
+        "scale_lv3": 82,
+        "sign": 51959,
+        "mant": 1168
+      },
+      "risk": [
+        0.010319259419723267,
+        0.009469726669677382
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 2,
+      "shape": [
+        256,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.005091425787055094,
+      "baseline_mse": 4.6095789002720267e-05,
+      "parent_mse": 0.005193299613893032,
+      "child_mse": 0.005193534307181835,
+      "changed_values": 115,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 5,
+        "sign": 12841,
+        "mant": 124
+      },
+      "risk": [
+        0.026519877887152314,
+        0.02599453158409723
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 3,
+      "shape": [
+        64,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.013906099635747985,
+      "baseline_mse": 0.00013193530321586877,
+      "parent_mse": 0.009382477961480618,
+      "child_mse": 0.00938431266695261,
+      "changed_values": 143,
+      "changed_fields": {
+        "scale_factor": 1,
+        "scale_lv2": 5,
+        "scale_lv3": 11,
+        "sign": 3283,
+        "mant": 151
+      },
+      "risk": [
+        0.05377545170186637,
+        0.0531948005546046
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 4,
+      "shape": [
+        512,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.008061743533570047,
+      "baseline_mse": 3.286649734945968e-05,
+      "parent_mse": 0.005001446232199669,
+      "child_mse": 0.005001711193472147,
+      "changed_values": 3856,
+      "changed_fields": {
+        "scale_factor": 43,
+        "scale_lv2": 120,
+        "scale_lv3": 208,
+        "sign": 25918,
+        "mant": 3281
+      },
+      "risk": [
+        0.01576341302907325,
+        0.013258679953518834
+      ],
+      "improved_blocks": 8
+    }
+  ],
+  "shared_parent_calibration": true,
+  "public_return_checks": 60,
+  "state_checks": 12,
+  "timing": {
+    "parent_v": 0.8921809997409582,
+    "child_v": 2.0127122921403497
+  },
+  "note": "One parent calibration, child wrapper copies the same state; V-only attribution. Local times are not online estimates.",
+  "source_sha256": "b4bf7d2c8161dd4ec05a6538934de6297f4dfaca16dcc18c40a611884ae76681",
+  "summary": {
+    "cases": 15,
+    "delta": -0.10078746502982543,
+    "better": 3,
+    "worse": 12,
+    "equal": 0,
+    "eligible": 15,
+    "changed_cases": 15,
+    "changed_values": 21977
+  }
+}

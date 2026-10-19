@@ -1,0 +1,135 @@
+{
+  "certificate_columns": 500,
+  "acceptance_relative_tolerance": 0.15,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    310,
+    314,
+    319,
+    320,
+    322,
+    330,
+    333,
+    335,
+    343,
+    344,
+    345,
+    365,
+    374,
+    378,
+    381,
+    382,
+    385,
+    386,
+    387,
+    389,
+    392,
+    393,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    408,
+    409,
+    412,
+    413,
+    414,
+    415,
+    416,
+    418,
+    419,
+    430,
+    435,
+    436,
+    438
+  ],
+  "cases": [
+    {
+      "population": "round023/half-scale-seedplus3",
+      "test": 0,
+      "tokens": 4,
+      "price": 36.18488648241883,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -95.94534699410254
+    },
+    {
+      "population": "round023/half-scale-seedplus3",
+      "test": 1,
+      "tokens": 8,
+      "price": 7.91303973764042,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -124.21719373888095
+    },
+    {
+      "population": "round023/half-scale-seedplus3",
+      "test": 2,
+      "tokens": 32,
+      "price": -1136.2596431575362,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -1268.3898766340576
+    },
+    {
+      "population": "round023/half-scale-seedplus3",
+      "test": 4,
+      "tokens": 512,
+      "price": -1587.4010281707874,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -1719.5312616473088
+    },
+    {
+      "population": "round023/half-scale-seedplus3",
+      "test": 3,
+      "tokens": 128,
+      "price": -2707.7457827716103,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -2839.8760162481317
+    },
+    {
+      "population": "round023/half-scale-seedplus4",
+      "test": 4,
+      "tokens": 512,
+      "price": -13090.455963974855,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -13222.586197451375
+    },
+    {
+      "population": "round023/half-scale-seedplus4",
+      "test": 0,
+      "tokens": 4,
+      "price": -18451.168425311465,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -18583.298658787986
+    },
+    {
+      "population": "round023/half-scale-seedplus4",
+      "test": 3,
+      "tokens": 128,
+      "price": -18656.745392948636,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -18788.875626425157
+    },
+    {
+      "population": "round023/half-scale-seedplus4",
+      "test": 1,
+      "tokens": 8,
+      "price": -26135.613701084934,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -26267.743934561455
+    },
+    {
+      "population": "round023/half-scale-seedplus4",
+      "test": 2,
+      "tokens": 32,
+      "price": -31845.71924083013,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -31977.84947430665
+    }
+  ],
+  "limits": "Two completed partial-version screens against the current fixed certificate. Negative margins reject these additions as a way to break this certificate alone; they do not prove general impossibility."
+}

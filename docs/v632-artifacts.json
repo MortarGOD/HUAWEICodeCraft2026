@@ -1,0 +1,11 @@
+{
+  "version": 632,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "v628's counterpart-free V objective with the per-call cost bounded: at most 256 token rows are visited, ranked by the gain their own best move would give. Small-T cases stay exact; large-T cases keep the most valuable rows. Capping the fraction instead (v631) lost most of the gain on the online-profiled bank.",
+  "source_sha256": "f0fa70508db5e8413739b165de0cc7988ee200eec1c61a3b0936cfe72265f010",
+  "archive_sha256": "4efc3051fa3ce3a3f76c3bfb635e92b3a4d517867b571bef7d9c26dac564879a",
+  "archive_members": [
+    "solution.py"
+  ]
+}

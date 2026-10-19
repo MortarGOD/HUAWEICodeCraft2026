@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "group": 4,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.5700199219513478,
+        "candidate": 0.5703770826085767
+      },
+      "key_seconds": {
+        "parent": 0.13947333401301876,
+        "candidate": 0.6726273749954998
+      },
+      "delta": 0.00035716065722890544
+    },
+    {
+      "group": 14,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.3212237371704262,
+        "candidate": 0.4570080243263275
+      },
+      "key_seconds": {
+        "parent": 0.13406791700981557,
+        "candidate": 0.3176503329887055
+      },
+      "delta": 0.1357842871559013
+    },
+    {
+      "group": 19,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.22684215713717898,
+        "candidate": 0.3573358632717198
+      },
+      "key_seconds": {
+        "parent": 0.34581837500445545,
+        "candidate": 1.131120792008005
+      },
+      "delta": 0.1304937061345408
+    },
+    {
+      "group": 48,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.5405470307858674,
+        "candidate": 0.6048920514530959
+      },
+      "key_seconds": {
+        "parent": 0.19406637497013435,
+        "candidate": 0.9468207909958437
+      },
+      "delta": 0.06434502066722847
+    },
+    {
+      "group": 49,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.547717868650858,
+        "candidate": 0.6148271585250159
+      },
+      "key_seconds": {
+        "parent": 0.14004650001879781,
+        "candidate": 0.6298899170360528
+      },
+      "delta": 0.06710928987415787
+    }
+  ],
+  "delta": 0.39808946448905735,
+  "sha256": "55db76ba3e274c7f80ce240fbf1ef1111d02e259ae9469326936543dd96f3c6a",
+  "score_prediction_allowed": false,
+  "warning": "Repeated existing projected token sequences, fixed 64 query evaluation, not independent samples or online length-frequency evidence."
+}

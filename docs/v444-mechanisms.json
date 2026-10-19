@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "cases": [
+    {
+      "t": 1,
+      "changed": 0
+    },
+    {
+      "t": 2,
+      "changed": 0
+    },
+    {
+      "t": 7,
+      "changed": 7
+    },
+    {
+      "t": 32,
+      "changed": 54
+    },
+    {
+      "t": 128,
+      "changed": 114
+    },
+    {
+      "t": 1024,
+      "changed": 344
+    },
+    {
+      "t": 4097,
+      "changed": 0
+    }
+  ],
+  "checks": [
+    "uniform_gradient",
+    "final_risk_sse",
+    "inactive_boundaries",
+    "public_calibration",
+    "state_fresh_immutable"
+  ]
+}

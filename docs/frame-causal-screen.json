@@ -1,0 +1,1666 @@
+{
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": "5,13,14,19,23,47",
+  "query_budget": 64,
+  "records": [
+    {
+      "group": 5,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.0038757705590202196,
+          "relative_frobenius_error": 0.0015410320304551574
+        },
+        "refit": {
+          "max_abs_identity_error": 0.0038757705590202196,
+          "relative_frobenius_error": 0.0015410320304551574
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 7.626639832440764e-07,
+          "relative_frobenius_error": 4.107142046143011e-07
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 7.626639832440764e-07,
+          "relative_frobenius_error": 4.107142046143011e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 1.6854762294876702e-07,
+          "relative_frobenius_error": 3.153084824110262e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0015410309841556464
+        },
+        "no_both": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.39783274484641945,
+            "geometry_output_over_baseline": 0.00017310055718133732,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.4057369853392914,
+            "geometry_output_over_baseline": 0.00017310055718133732,
+            "gain_vs_parent": -0.007904240492871972
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.37808440972855567,
+            "geometry_output_over_baseline": 4.844242182688235e-11,
+            "gain_vs_parent": 0.01974833511786378
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.3778971964025676,
+            "geometry_output_over_baseline": 4.844242182688235e-11,
+            "gain_vs_parent": 0.01993554844385187
+          },
+          "no_scale": {
+            "error_over_baseline": 0.4104587480528352,
+            "geometry_output_over_baseline": 4.322839647822773e-11,
+            "gain_vs_parent": -0.01262600320641577
+          },
+          "no_dense": {
+            "error_over_baseline": 0.4173422509618381,
+            "geometry_output_over_baseline": 0.00017309710867617926,
+            "gain_vs_parent": -0.01950950611541863
+          },
+          "no_both": {
+            "error_over_baseline": 0.4189593376330772,
+            "geometry_output_over_baseline": 2.687624340734571e-11,
+            "gain_vs_parent": -0.02112659278665774
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.5173190507875469,
+              "geometry_output_over_baseline": 6.43143385038117e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.5167855543814011,
+              "geometry_output_over_baseline": 6.43143385038117e-05,
+              "gain_vs_parent": 0.0005334964061458614
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.5096767795481837,
+              "geometry_output_over_baseline": 2.0015519469317584e-11,
+              "gain_vs_parent": 0.00764227123936323
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.5096477130911654,
+              "geometry_output_over_baseline": 2.0015519469317584e-11,
+              "gain_vs_parent": 0.007671337696381508
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5213568771127539,
+              "geometry_output_over_baseline": 2.1354826564689324e-11,
+              "gain_vs_parent": -0.004037826325206995
+            },
+            "no_dense": {
+              "error_over_baseline": 0.5226067775735558,
+              "geometry_output_over_baseline": 6.431254964019428e-05,
+              "gain_vs_parent": -0.005287726786008862
+            },
+            "no_both": {
+              "error_over_baseline": 0.5293761845626394,
+              "geometry_output_over_baseline": 1.5653633564017488e-11,
+              "gain_vs_parent": -0.012057133775092432
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.49024177408042346,
+              "geometry_output_over_baseline": 8.87264960223319e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.4900942544721104,
+              "geometry_output_over_baseline": 8.87264960223319e-05,
+              "gain_vs_parent": 0.00014751960831305144
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.4867064180631888,
+              "geometry_output_over_baseline": 2.1960174403721506e-11,
+              "gain_vs_parent": 0.0035353560172346477
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.4863896772252321,
+              "geometry_output_over_baseline": 2.1960174403721506e-11,
+              "gain_vs_parent": 0.0038520968551913892
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5095719739866782,
+              "geometry_output_over_baseline": 3.480991360771207e-11,
+              "gain_vs_parent": -0.01933019990625473
+            },
+            "no_dense": {
+              "error_over_baseline": 0.49918868344811096,
+              "geometry_output_over_baseline": 8.872670930336931e-05,
+              "gain_vs_parent": -0.008946909367687494
+            },
+            "no_both": {
+              "error_over_baseline": 0.5179612110134486,
+              "geometry_output_over_baseline": 2.7421988554845608e-11,
+              "gain_vs_parent": -0.027719436933025143
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.4631566660465145,
+              "geometry_output_over_baseline": 0.00010752971265777191,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.4623434176718379,
+              "geometry_output_over_baseline": 0.00010752971265777191,
+              "gain_vs_parent": 0.0008132483746766117
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.45409555384567357,
+              "geometry_output_over_baseline": 3.300709779798522e-11,
+              "gain_vs_parent": 0.009061112200840937
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.4540272017962317,
+              "geometry_output_over_baseline": 3.300709779798522e-11,
+              "gain_vs_parent": 0.009129464250282826
+            },
+            "no_scale": {
+              "error_over_baseline": 0.469810480582158,
+              "geometry_output_over_baseline": 3.244004421239191e-11,
+              "gain_vs_parent": -0.00665381453564351
+            },
+            "no_dense": {
+              "error_over_baseline": 0.46915766795747105,
+              "geometry_output_over_baseline": 0.00010752766020795714,
+              "gain_vs_parent": -0.006001001910956538
+            },
+            "no_both": {
+              "error_over_baseline": 0.47692540896174324,
+              "geometry_output_over_baseline": 2.2836407259245373e-11,
+              "gain_vs_parent": -0.013768742915228727
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.4546448576619313,
+              "geometry_output_over_baseline": 0.00010850701466942958,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.4516139565629364,
+              "geometry_output_over_baseline": 0.00010850701466942958,
+              "gain_vs_parent": 0.003030901098994898
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.462824320444969,
+              "geometry_output_over_baseline": 3.2781763181808966e-11,
+              "gain_vs_parent": -0.008179462783037716
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.46309162349876076,
+              "geometry_output_over_baseline": 3.2781763181808966e-11,
+              "gain_vs_parent": -0.008446765836829462
+            },
+            "no_scale": {
+              "error_over_baseline": 0.45478549756250275,
+              "geometry_output_over_baseline": 4.1522201779430326e-11,
+              "gain_vs_parent": -0.0001406399005714487
+            },
+            "no_dense": {
+              "error_over_baseline": 0.4572357649005949,
+              "geometry_output_over_baseline": 0.00010850692527631062,
+              "gain_vs_parent": -0.00259090723866362
+            },
+            "no_both": {
+              "error_over_baseline": 0.4618674071560195,
+              "geometry_output_over_baseline": 3.317322232359625e-11,
+              "gain_vs_parent": -0.007222549494088182
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.3779500080386538,
+              "geometry_output_over_baseline": 0.00018355752085426992,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.3754093805925579,
+              "geometry_output_over_baseline": 0.00018355752085426992,
+              "gain_vs_parent": 0.0025406274460959
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.36750315228810565,
+              "geometry_output_over_baseline": 4.663994987885945e-11,
+              "gain_vs_parent": 0.010446855750548156
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.36746297990818827,
+              "geometry_output_over_baseline": 4.663994987885945e-11,
+              "gain_vs_parent": 0.010487028130465537
+            },
+            "no_scale": {
+              "error_over_baseline": 0.4016630131122748,
+              "geometry_output_over_baseline": 4.278218236078254e-11,
+              "gain_vs_parent": -0.023713005073621007
+            },
+            "no_dense": {
+              "error_over_baseline": 0.38733621174712546,
+              "geometry_output_over_baseline": 0.00018355702194229785,
+              "gain_vs_parent": -0.009386203708471652
+            },
+            "no_both": {
+              "error_over_baseline": 0.4152595388811235,
+              "geometry_output_over_baseline": 2.5889895353508267e-11,
+              "gain_vs_parent": -0.037309530842469685
+            }
+          }
+        }
+      ],
+      "seconds": 4.769627000001492,
+      "parent": {
+        "scale": true,
+        "dense": true,
+        "rot": 1
+      }
+    },
+    {
+      "group": 13,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015243327759501915
+        },
+        "refit": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015243327759501915
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 9.01079004744787e-08,
+          "relative_frobenius_error": 3.720672073024447e-08
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 9.01079004744787e-08,
+          "relative_frobenius_error": 3.720672073024447e-08
+        },
+        "no_scale": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015243327759501915
+        },
+        "no_both": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.73814537707444,
+            "geometry_output_over_baseline": 0.0004121737508349229,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.7367525714425723,
+            "geometry_output_over_baseline": 0.0004121737508349229,
+            "gain_vs_parent": 0.0013928056318676107
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.7302197491715448,
+            "geometry_output_over_baseline": 1.4129453925085552e-10,
+            "gain_vs_parent": 0.007925627902895194
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.7302225608101981,
+            "geometry_output_over_baseline": 1.4129453925085552e-10,
+            "gain_vs_parent": 0.00792281626424185
+          },
+          "no_scale": {
+            "error_over_baseline": 0.6553994380281968,
+            "geometry_output_over_baseline": 1.1106938136706001e-10,
+            "gain_vs_parent": 0.08274593904624317
+          },
+          "no_dense": {
+            "error_over_baseline": 0.7367525714425723,
+            "geometry_output_over_baseline": 0.0004121737508349229,
+            "gain_vs_parent": 0.0013928056318676107
+          },
+          "no_both": {
+            "error_over_baseline": 0.6553994380281968,
+            "geometry_output_over_baseline": 1.1106938136706001e-10,
+            "gain_vs_parent": 0.08274593904624317
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.819715027858731,
+              "geometry_output_over_baseline": 1.630175287946967e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.819853965646168,
+              "geometry_output_over_baseline": 1.630175287946967e-05,
+              "gain_vs_parent": -0.00013893778743701013
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8188473752852314,
+              "geometry_output_over_baseline": 5.80750722965632e-12,
+              "gain_vs_parent": 0.0008676525734995222
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8188473752852314,
+              "geometry_output_over_baseline": 5.80750722965632e-12,
+              "gain_vs_parent": 0.0008676525734995222
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8238061500955474,
+              "geometry_output_over_baseline": 5.312906686960949e-12,
+              "gain_vs_parent": -0.004091122236816402
+            },
+            "no_dense": {
+              "error_over_baseline": 0.819853965646168,
+              "geometry_output_over_baseline": 1.630175287946967e-05,
+              "gain_vs_parent": -0.00013893778743701013
+            },
+            "no_both": {
+              "error_over_baseline": 0.8238061500955474,
+              "geometry_output_over_baseline": 5.312906686960949e-12,
+              "gain_vs_parent": -0.004091122236816402
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7482539131932928,
+              "geometry_output_over_baseline": 7.316850543335076e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7473175957093324,
+              "geometry_output_over_baseline": 7.316850543335076e-05,
+              "gain_vs_parent": 0.0009363174839603916
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7460400715596588,
+              "geometry_output_over_baseline": 2.0264327735117808e-11,
+              "gain_vs_parent": 0.0022138416336340283
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7460400715596588,
+              "geometry_output_over_baseline": 2.0264327735117808e-11,
+              "gain_vs_parent": 0.0022138416336340283
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7346003676585526,
+              "geometry_output_over_baseline": 1.7653696676266094e-11,
+              "gain_vs_parent": 0.013653545534740186
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7473175957093324,
+              "geometry_output_over_baseline": 7.316850543335076e-05,
+              "gain_vs_parent": 0.0009363174839603916
+            },
+            "no_both": {
+              "error_over_baseline": 0.7346003676585526,
+              "geometry_output_over_baseline": 1.7653696676266094e-11,
+              "gain_vs_parent": 0.013653545534740186
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.736522293672576,
+              "geometry_output_over_baseline": 0.00013411134679361655,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.737565079500619,
+              "geometry_output_over_baseline": 0.00013411134679361655,
+              "gain_vs_parent": -0.001042785828042958
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.740631984391635,
+              "geometry_output_over_baseline": 4.024796170432262e-11,
+              "gain_vs_parent": -0.004109690719058978
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.740631984391635,
+              "geometry_output_over_baseline": 4.024796170432262e-11,
+              "gain_vs_parent": -0.004109690719058978
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7182580448042752,
+              "geometry_output_over_baseline": 2.560396359972e-11,
+              "gain_vs_parent": 0.018264248868300803
+            },
+            "no_dense": {
+              "error_over_baseline": 0.737565079500619,
+              "geometry_output_over_baseline": 0.00013411134679361655,
+              "gain_vs_parent": -0.001042785828042958
+            },
+            "no_both": {
+              "error_over_baseline": 0.7182580448042752,
+              "geometry_output_over_baseline": 2.560396359972e-11,
+              "gain_vs_parent": 0.018264248868300803
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7912789190143047,
+              "geometry_output_over_baseline": 0.0002641923898331379,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.790069424942429,
+              "geometry_output_over_baseline": 0.0002641923898331379,
+              "gain_vs_parent": 0.0012094940718756497
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7817514569467275,
+              "geometry_output_over_baseline": 9.680943751606499e-11,
+              "gain_vs_parent": 0.009527462067577153
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7819255201950951,
+              "geometry_output_over_baseline": 9.680943751606499e-11,
+              "gain_vs_parent": 0.009353398819209602
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7277821109348037,
+              "geometry_output_over_baseline": 5.49803443139989e-11,
+              "gain_vs_parent": 0.06349680807950098
+            },
+            "no_dense": {
+              "error_over_baseline": 0.790069424942429,
+              "geometry_output_over_baseline": 0.0002641923898331379,
+              "gain_vs_parent": 0.0012094940718756497
+            },
+            "no_both": {
+              "error_over_baseline": 0.7277821109348037,
+              "geometry_output_over_baseline": 5.49803443139989e-11,
+              "gain_vs_parent": 0.06349680807950098
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8601693925164975,
+              "geometry_output_over_baseline": 0.0005031130253913812,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.860384748600604,
+              "geometry_output_over_baseline": 0.0005031130253913812,
+              "gain_vs_parent": -0.00021535608410649942
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8185960116358388,
+              "geometry_output_over_baseline": 1.524684015115999e-10,
+              "gain_vs_parent": 0.04157338088065865
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8186633245745649,
+              "geometry_output_over_baseline": 1.524684015115999e-10,
+              "gain_vs_parent": 0.04150606794193257
+            },
+            "no_scale": {
+              "error_over_baseline": 0.6873531545962238,
+              "geometry_output_over_baseline": 1.218961120697413e-10,
+              "gain_vs_parent": 0.17281623792027367
+            },
+            "no_dense": {
+              "error_over_baseline": 0.860384748600604,
+              "geometry_output_over_baseline": 0.0005031130253913812,
+              "gain_vs_parent": -0.00021535608410649942
+            },
+            "no_both": {
+              "error_over_baseline": 0.6873531545962238,
+              "geometry_output_over_baseline": 1.218961120697413e-10,
+              "gain_vs_parent": 0.17281623792027367
+            }
+          }
+        }
+      ],
+      "seconds": 5.025303542002803,
+      "parent": {
+        "scale": true,
+        "dense": false,
+        "rot": 1
+      }
+    },
+    {
+      "group": 14,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.0038757707384762252,
+          "relative_frobenius_error": 0.0015267847417840363
+        },
+        "refit": {
+          "max_abs_identity_error": 0.0038757707384762252,
+          "relative_frobenius_error": 0.0015267847417840363
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 7.805915450673341e-07,
+          "relative_frobenius_error": 9.61201696372133e-07
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 7.805915450673341e-07,
+          "relative_frobenius_error": 9.61201696372133e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 1.9465744328928114e-07,
+          "relative_frobenius_error": 9.122686356099697e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015267851870599829
+        },
+        "no_both": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.73116173761408,
+            "geometry_output_over_baseline": 0.00048291461063079195,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.7283179785471313,
+            "geometry_output_over_baseline": 0.00048291461063079195,
+            "gain_vs_parent": 0.00284375906694867
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.7332923883514212,
+            "geometry_output_over_baseline": 1.8688531829940982e-10,
+            "gain_vs_parent": -0.0021306507373412
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.7290159602999934,
+            "geometry_output_over_baseline": 1.8688531829940982e-10,
+            "gain_vs_parent": 0.0021457773140866054
+          },
+          "no_scale": {
+            "error_over_baseline": 0.638812711682067,
+            "geometry_output_over_baseline": 1.3771578498121598e-10,
+            "gain_vs_parent": 0.092349025932013
+          },
+          "no_dense": {
+            "error_over_baseline": 0.7674332710978784,
+            "geometry_output_over_baseline": 0.00048300834878137324,
+            "gain_vs_parent": -0.03627153348379841
+          },
+          "no_both": {
+            "error_over_baseline": 0.6574192028463391,
+            "geometry_output_over_baseline": 1.0283166372898377e-10,
+            "gain_vs_parent": 0.07374253476774084
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.916366696077183,
+              "geometry_output_over_baseline": 2.4196213896551543e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.9165737390784767,
+              "geometry_output_over_baseline": 2.4196213896551543e-05,
+              "gain_vs_parent": -0.00020704300129370523
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.9127737959450335,
+              "geometry_output_over_baseline": 7.776187404156184e-12,
+              "gain_vs_parent": 0.0035929001321495235
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.9127150222608067,
+              "geometry_output_over_baseline": 7.776187404156184e-12,
+              "gain_vs_parent": 0.003651673816376322
+            },
+            "no_scale": {
+              "error_over_baseline": 0.914294037081933,
+              "geometry_output_over_baseline": 5.379293589500957e-12,
+              "gain_vs_parent": 0.0020726589952499985
+            },
+            "no_dense": {
+              "error_over_baseline": 0.9115419058912386,
+              "geometry_output_over_baseline": 2.420380245634927e-05,
+              "gain_vs_parent": 0.004824790185944394
+            },
+            "no_both": {
+              "error_over_baseline": 0.9156027664570614,
+              "geometry_output_over_baseline": 6.387639429061981e-12,
+              "gain_vs_parent": 0.0007639296201216172
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8519092157060808,
+              "geometry_output_over_baseline": 6.26283767291246e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.852208399359559,
+              "geometry_output_over_baseline": 6.26283767291246e-05,
+              "gain_vs_parent": -0.00029918365347825215
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8480117095440465,
+              "geometry_output_over_baseline": 2.7006417090331165e-11,
+              "gain_vs_parent": 0.0038975061620343254
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8463800711125549,
+              "geometry_output_over_baseline": 2.7006417090331165e-11,
+              "gain_vs_parent": 0.0055291445935259365
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8429444507293926,
+              "geometry_output_over_baseline": 1.6533800054839677e-11,
+              "gain_vs_parent": 0.008964764976688189
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8534947698545152,
+              "geometry_output_over_baseline": 6.264896307472204e-05,
+              "gain_vs_parent": -0.0015855541484344204
+            },
+            "no_both": {
+              "error_over_baseline": 0.8431605271280027,
+              "geometry_output_over_baseline": 1.4430442307147623e-11,
+              "gain_vs_parent": 0.00874868857807809
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7814098648955807,
+              "geometry_output_over_baseline": 0.00014401738868774735,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7805505511429286,
+              "geometry_output_over_baseline": 0.00014401738868774735,
+              "gain_vs_parent": 0.0008593137526521355
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7867369623343645,
+              "geometry_output_over_baseline": 5.243358568400515e-11,
+              "gain_vs_parent": -0.00532709743878379
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7844647771137185,
+              "geometry_output_over_baseline": 5.243358568400515e-11,
+              "gain_vs_parent": -0.0030549122181378063
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7532395464047477,
+              "geometry_output_over_baseline": 3.0452174564060525e-11,
+              "gain_vs_parent": 0.02817031849083307
+            },
+            "no_dense": {
+              "error_over_baseline": 0.787057371715203,
+              "geometry_output_over_baseline": 0.00014402564413031087,
+              "gain_vs_parent": -0.005647506819622228
+            },
+            "no_both": {
+              "error_over_baseline": 0.7598924140336141,
+              "geometry_output_over_baseline": 3.421611836232324e-11,
+              "gain_vs_parent": 0.021517450861966658
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7944148715721456,
+              "geometry_output_over_baseline": 0.00029529294635784935,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7983158803699876,
+              "geometry_output_over_baseline": 0.00029529294635784935,
+              "gain_vs_parent": -0.0039010087978419428
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7913170241090396,
+              "geometry_output_over_baseline": 1.2014676713327022e-10,
+              "gain_vs_parent": 0.0030978474631060404
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7949709014940751,
+              "geometry_output_over_baseline": 1.2014676713327022e-10,
+              "gain_vs_parent": -0.0005560299219294906
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7332075673503595,
+              "geometry_output_over_baseline": 6.603058925426847e-11,
+              "gain_vs_parent": 0.06120730422178611
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7906995175927569,
+              "geometry_output_over_baseline": 0.00029533615622977683,
+              "gain_vs_parent": 0.0037153539793887136
+            },
+            "no_both": {
+              "error_over_baseline": 0.7415852854131572,
+              "geometry_output_over_baseline": 7.270937164830793e-11,
+              "gain_vs_parent": 0.05282958615898847
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.719271264063934,
+              "geometry_output_over_baseline": 0.0004575687283495382,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7143157826726496,
+              "geometry_output_over_baseline": 0.0004575687283495382,
+              "gain_vs_parent": 0.004955481391284433
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.70794272814486,
+              "geometry_output_over_baseline": 1.811765105094066e-10,
+              "gain_vs_parent": 0.011328535919074012
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7089825790274964,
+              "geometry_output_over_baseline": 1.811765105094066e-10,
+              "gain_vs_parent": 0.01028868503643765
+            },
+            "no_scale": {
+              "error_over_baseline": 0.6132921224488588,
+              "geometry_output_over_baseline": 1.0627629478081331e-10,
+              "gain_vs_parent": 0.10597914161507527
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7648610141919019,
+              "geometry_output_over_baseline": 0.00045769321835336497,
+              "gain_vs_parent": -0.04558975012796784
+            },
+            "no_both": {
+              "error_over_baseline": 0.6404195835411793,
+              "geometry_output_over_baseline": 1.0165646405915166e-10,
+              "gain_vs_parent": 0.07885168052275471
+            }
+          }
+        }
+      ],
+      "seconds": 4.97767108399421,
+      "parent": {
+        "scale": true,
+        "dense": true,
+        "rot": 1
+      }
+    },
+    {
+      "group": 19,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015628665699815587
+        },
+        "refit": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015628665699815587
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 9.01079004744787e-08,
+          "relative_frobenius_error": 3.881364245173922e-08
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 9.01079004744787e-08,
+          "relative_frobenius_error": 3.881364245173922e-08
+        },
+        "no_scale": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015628665699815587
+        },
+        "no_both": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.7130048481668464,
+            "geometry_output_over_baseline": 0.004307746970769341,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.7162690112488161,
+            "geometry_output_over_baseline": 0.004307746970769341,
+            "gain_vs_parent": -0.003264163081969751
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.7081998045264012,
+            "geometry_output_over_baseline": 1.446648106553807e-10,
+            "gain_vs_parent": 0.004805043640445206
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.7082003660397723,
+            "geometry_output_over_baseline": 1.446648106553807e-10,
+            "gain_vs_parent": 0.004804482127074072
+          },
+          "no_scale": {
+            "error_over_baseline": 0.6206949314799776,
+            "geometry_output_over_baseline": 1.1534146338840917e-10,
+            "gain_vs_parent": 0.09230991668686883
+          },
+          "no_dense": {
+            "error_over_baseline": 0.7162690112488161,
+            "geometry_output_over_baseline": 0.004307746970769341,
+            "gain_vs_parent": -0.003264163081969751
+          },
+          "no_both": {
+            "error_over_baseline": 0.6206949314799776,
+            "geometry_output_over_baseline": 1.1534146338840917e-10,
+            "gain_vs_parent": 0.09230991668686883
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7099808977910151,
+              "geometry_output_over_baseline": 0.000268191318969783,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7111202085602142,
+              "geometry_output_over_baseline": 0.000268191318969783,
+              "gain_vs_parent": -0.0011393107691990423
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7098021690467472,
+              "geometry_output_over_baseline": 7.917486061503353e-12,
+              "gain_vs_parent": 0.00017872874426794194
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7098021690467472,
+              "geometry_output_over_baseline": 7.917486061503353e-12,
+              "gain_vs_parent": 0.00017872874426794194
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7045931903193096,
+              "geometry_output_over_baseline": 6.032195913816637e-12,
+              "gain_vs_parent": 0.005387707471705583
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7111202085602142,
+              "geometry_output_over_baseline": 0.000268191318969783,
+              "gain_vs_parent": -0.0011393107691990423
+            },
+            "no_both": {
+              "error_over_baseline": 0.7045931903193096,
+              "geometry_output_over_baseline": 6.032195913816637e-12,
+              "gain_vs_parent": 0.005387707471705583
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8681920876544326,
+              "geometry_output_over_baseline": 0.0005518128649755608,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8686896546679636,
+              "geometry_output_over_baseline": 0.0005518128649755608,
+              "gain_vs_parent": -0.0004975670135309862
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8708033149980609,
+              "geometry_output_over_baseline": 2.180930556284456e-11,
+              "gain_vs_parent": -0.0026112273436282862
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8708019572040415,
+              "geometry_output_over_baseline": 2.180930556284456e-11,
+              "gain_vs_parent": -0.0026098695496089563
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8566633545681136,
+              "geometry_output_over_baseline": 1.5459744084119546e-11,
+              "gain_vs_parent": 0.011528733086318965
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8686896546679636,
+              "geometry_output_over_baseline": 0.0005518128649755608,
+              "gain_vs_parent": -0.0004975670135309862
+            },
+            "no_both": {
+              "error_over_baseline": 0.8566633545681136,
+              "geometry_output_over_baseline": 1.5459744084119546e-11,
+              "gain_vs_parent": 0.011528733086318965
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8046642131035115,
+              "geometry_output_over_baseline": 0.0012923210318113874,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8055596485160693,
+              "geometry_output_over_baseline": 0.0012923210318113874,
+              "gain_vs_parent": -0.0008954354125577657
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8051990173883021,
+              "geometry_output_over_baseline": 4.1478279930103494e-11,
+              "gain_vs_parent": -0.0005348042847905798
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8051990173883021,
+              "geometry_output_over_baseline": 4.1478279930103494e-11,
+              "gain_vs_parent": -0.0005348042847905798
+            },
+            "no_scale": {
+              "error_over_baseline": 0.7808859200694694,
+              "geometry_output_over_baseline": 3.92370920449279e-11,
+              "gain_vs_parent": 0.02377829303404211
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8055596485160693,
+              "geometry_output_over_baseline": 0.0012923210318113874,
+              "gain_vs_parent": -0.0008954354125577657
+            },
+            "no_both": {
+              "error_over_baseline": 0.7808859200694694,
+              "geometry_output_over_baseline": 3.92370920449279e-11,
+              "gain_vs_parent": 0.02377829303404211
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.71971167820081,
+              "geometry_output_over_baseline": 0.002211738632070302,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7191310883306165,
+              "geometry_output_over_baseline": 0.002211738632070302,
+              "gain_vs_parent": 0.0005805898701934931
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.714170793392573,
+              "geometry_output_over_baseline": 7.677722305297599e-11,
+              "gain_vs_parent": 0.005540884808237001
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.714170793392573,
+              "geometry_output_over_baseline": 7.677722305297599e-11,
+              "gain_vs_parent": 0.005540884808237001
+            },
+            "no_scale": {
+              "error_over_baseline": 0.6878363131632252,
+              "geometry_output_over_baseline": 5.386455149164206e-11,
+              "gain_vs_parent": 0.0318753650375847
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7191310883306165,
+              "geometry_output_over_baseline": 0.002211738632070302,
+              "gain_vs_parent": 0.0005805898701934931
+            },
+            "no_both": {
+              "error_over_baseline": 0.6878363131632252,
+              "geometry_output_over_baseline": 5.386455149164206e-11,
+              "gain_vs_parent": 0.0318753650375847
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8012973599680562,
+              "geometry_output_over_baseline": 0.0030386041206372782,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8027998811469418,
+              "geometry_output_over_baseline": 0.0030386041206372782,
+              "gain_vs_parent": -0.0015025211788856074
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7667830012524772,
+              "geometry_output_over_baseline": 1.2138852606008722e-10,
+              "gain_vs_parent": 0.03451435871557895
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7667830012524772,
+              "geometry_output_over_baseline": 1.2138852606008722e-10,
+              "gain_vs_parent": 0.03451435871557895
+            },
+            "no_scale": {
+              "error_over_baseline": 0.6963913164219242,
+              "geometry_output_over_baseline": 9.259438340060408e-11,
+              "gain_vs_parent": 0.10490604354613198
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8027998811469418,
+              "geometry_output_over_baseline": 0.0030386041206372782,
+              "gain_vs_parent": -0.0015025211788856074
+            },
+            "no_both": {
+              "error_over_baseline": 0.6963913164219242,
+              "geometry_output_over_baseline": 9.259438340060408e-11,
+              "gain_vs_parent": 0.10490604354613198
+            }
+          }
+        }
+      ],
+      "seconds": 4.942102625005646,
+      "parent": {
+        "scale": true,
+        "dense": false,
+        "rot": 1
+      }
+    },
+    {
+      "group": 23,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.0038757316741115933,
+          "relative_frobenius_error": 0.0014960237052505146
+        },
+        "refit": {
+          "max_abs_identity_error": 0.0038757316741115933,
+          "relative_frobenius_error": 0.0014960237052505146
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 7.639237508378548e-07,
+          "relative_frobenius_error": 9.476899065145077e-07
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 7.639237508378548e-07,
+          "relative_frobenius_error": 9.476899065145077e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 2.2116198437199808e-07,
+          "relative_frobenius_error": 9.084076601434907e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0014960286325725056
+        },
+        "no_both": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.7780223805588544,
+            "geometry_output_over_baseline": 0.0009417285871707692,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.7755694094761066,
+            "geometry_output_over_baseline": 0.0009417285871707692,
+            "gain_vs_parent": 0.002452971082747779
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.7796608868695991,
+            "geometry_output_over_baseline": 2.1219472855448205e-10,
+            "gain_vs_parent": -0.0016385063107446918
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.7760437384157879,
+            "geometry_output_over_baseline": 2.1219472855448205e-10,
+            "gain_vs_parent": 0.0019786421430665335
+          },
+          "no_scale": {
+            "error_over_baseline": 0.6487486796193631,
+            "geometry_output_over_baseline": 1.4110991131839366e-10,
+            "gain_vs_parent": 0.1292737009394913
+          },
+          "no_dense": {
+            "error_over_baseline": 0.8024815896000536,
+            "geometry_output_over_baseline": 0.0009418705727040651,
+            "gain_vs_parent": -0.024459209041199137
+          },
+          "no_both": {
+            "error_over_baseline": 0.6585825891692412,
+            "geometry_output_over_baseline": 1.6820354605774063e-10,
+            "gain_vs_parent": 0.11943979138961325
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.841682816225662,
+              "geometry_output_over_baseline": 3.6899546625729714e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8435398381469345,
+              "geometry_output_over_baseline": 3.6899546625729714e-05,
+              "gain_vs_parent": -0.0018570219212724615
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8432842619102157,
+              "geometry_output_over_baseline": 8.087750033773713e-12,
+              "gain_vs_parent": -0.0016014456845536706
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8434805329995252,
+              "geometry_output_over_baseline": 8.087750033773713e-12,
+              "gain_vs_parent": -0.0017977167738632005
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8389501052809386,
+              "geometry_output_over_baseline": 5.507241531257334e-12,
+              "gain_vs_parent": 0.002732710944723382
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8439826116904461,
+              "geometry_output_over_baseline": 3.6905535564447086e-05,
+              "gain_vs_parent": -0.0022997954647840935
+            },
+            "no_both": {
+              "error_over_baseline": 0.8393225036988897,
+              "geometry_output_over_baseline": 4.445883288441048e-12,
+              "gain_vs_parent": 0.002360312526772268
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8280652582647711,
+              "geometry_output_over_baseline": 0.00011460713356774331,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8270943857141235,
+              "geometry_output_over_baseline": 0.00011460713356774331,
+              "gain_vs_parent": 0.0009708725506475391
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8300413735495533,
+              "geometry_output_over_baseline": 2.11073691170825e-11,
+              "gain_vs_parent": -0.001976115284782254
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8287240204990147,
+              "geometry_output_over_baseline": 2.11073691170825e-11,
+              "gain_vs_parent": -0.0006587622342436594
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8158268414766833,
+              "geometry_output_over_baseline": 1.492752584956634e-11,
+              "gain_vs_parent": 0.012238416788087791
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8284246444440159,
+              "geometry_output_over_baseline": 0.00011462579815223168,
+              "gain_vs_parent": -0.00035938617924480276
+            },
+            "no_both": {
+              "error_over_baseline": 0.8178972789437192,
+              "geometry_output_over_baseline": 1.207485832573211e-11,
+              "gain_vs_parent": 0.010167979321051845
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8729406795551935,
+              "geometry_output_over_baseline": 0.0002539143660840526,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8709543090969735,
+              "geometry_output_over_baseline": 0.0002539143660840526,
+              "gain_vs_parent": 0.0019863704582200326
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8702034702839772,
+              "geometry_output_over_baseline": 5.104156958138841e-11,
+              "gain_vs_parent": 0.0027372092712163454
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8701604637441414,
+              "geometry_output_over_baseline": 5.104156958138841e-11,
+              "gain_vs_parent": 0.0027802158110521447
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8546231370651807,
+              "geometry_output_over_baseline": 4.161627699485264e-11,
+              "gain_vs_parent": 0.018317542490012828
+            },
+            "no_dense": {
+              "error_over_baseline": 0.88428782724065,
+              "geometry_output_over_baseline": 0.0002539144053018044,
+              "gain_vs_parent": -0.011347147685456527
+            },
+            "no_both": {
+              "error_over_baseline": 0.8601044194444224,
+              "geometry_output_over_baseline": 2.918033342374914e-11,
+              "gain_vs_parent": 0.012836260110771103
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.7070767321425654,
+              "geometry_output_over_baseline": 0.0004648922607066917,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.7094336101794135,
+              "geometry_output_over_baseline": 0.0004648922607066917,
+              "gain_vs_parent": -0.0023568780368481423
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.7100903027211004,
+              "geometry_output_over_baseline": 8.639246648301457e-11,
+              "gain_vs_parent": -0.0030135705785350186
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.7105174360463368,
+              "geometry_output_over_baseline": 8.639246648301457e-11,
+              "gain_vs_parent": -0.0034407039037713805
+            },
+            "no_scale": {
+              "error_over_baseline": 0.6657257261191443,
+              "geometry_output_over_baseline": 6.125661486790906e-11,
+              "gain_vs_parent": 0.04135100602342112
+            },
+            "no_dense": {
+              "error_over_baseline": 0.7156527741207637,
+              "geometry_output_over_baseline": 0.0004649012024968887,
+              "gain_vs_parent": -0.008576041978198279
+            },
+            "no_both": {
+              "error_over_baseline": 0.6768426674975326,
+              "geometry_output_over_baseline": 6.522756758099348e-11,
+              "gain_vs_parent": 0.030234064645032754
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.6627951260341055,
+              "geometry_output_over_baseline": 0.0006663323479263294,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.6636462681977959,
+              "geometry_output_over_baseline": 0.0006663323479263294,
+              "gain_vs_parent": -0.0008511421636904215
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.6471021893699226,
+              "geometry_output_over_baseline": 1.48619395379605e-10,
+              "gain_vs_parent": 0.01569293666418292
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.6498696854693813,
+              "geometry_output_over_baseline": 1.48619395379605e-10,
+              "gain_vs_parent": 0.012925440564724222
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5450433355266039,
+              "geometry_output_over_baseline": 8.875235570016344e-11,
+              "gain_vs_parent": 0.11775179050750162
+            },
+            "no_dense": {
+              "error_over_baseline": 0.6684346884531991,
+              "geometry_output_over_baseline": 0.0006663299483742286,
+              "gain_vs_parent": -0.00563956241909358
+            },
+            "no_both": {
+              "error_over_baseline": 0.5727483227091058,
+              "geometry_output_over_baseline": 1.1181361702989325e-10,
+              "gain_vs_parent": 0.0900468033249997
+            }
+          }
+        }
+      ],
+      "seconds": 4.846279833000153,
+      "parent": {
+        "scale": true,
+        "dense": true,
+        "rot": 1
+      }
+    },
+    {
+      "group": 47,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 1.592801130989585e-06,
+          "relative_frobenius_error": 2.559297698171548e-07
+        },
+        "refit": {
+          "max_abs_identity_error": 1.592801130989585e-06,
+          "relative_frobenius_error": 2.559297698171548e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 1.592801130989585e-06,
+          "relative_frobenius_error": 2.559297698171548e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        },
+        "no_both": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        }
+      },
+      "hold": {
+        "rows": 2048,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.5736559098513512,
+            "geometry_output_over_baseline": 2.678388047947418e-11,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.5810544678110965,
+            "geometry_output_over_baseline": 2.678388047947418e-11,
+            "gain_vs_parent": -0.007398557959745311
+          },
+          "no_scale": {
+            "error_over_baseline": 0.5810544678110965,
+            "geometry_output_over_baseline": 2.678388047947418e-11,
+            "gain_vs_parent": -0.007398557959745311
+          },
+          "no_dense": {
+            "error_over_baseline": 1.0151337282224082,
+            "geometry_output_over_baseline": 0.0,
+            "gain_vs_parent": -0.44147781837105704
+          },
+          "no_both": {
+            "error_over_baseline": 1.0151337282224082,
+            "geometry_output_over_baseline": 0.0,
+            "gain_vs_parent": -0.44147781837105704
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.40823033623998156,
+              "geometry_output_over_baseline": 1.800756185942536e-11,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.4360723725289966,
+              "geometry_output_over_baseline": 1.800756185942536e-11,
+              "gain_vs_parent": -0.02784203628901505
+            },
+            "no_scale": {
+              "error_over_baseline": 0.4360723725289966,
+              "geometry_output_over_baseline": 1.800756185942536e-11,
+              "gain_vs_parent": -0.02784203628901505
+            },
+            "no_dense": {
+              "error_over_baseline": 0.45738537873377766,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0491550424937961
+            },
+            "no_both": {
+              "error_over_baseline": 0.45738537873377766,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0491550424937961
+            }
+          }
+        },
+        {
+          "rows": 256,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 2.1752124992629955,
+              "geometry_output_over_baseline": 2.8896359137858945e-12,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 2.175993759175891,
+              "geometry_output_over_baseline": 2.8896359137858945e-12,
+              "gain_vs_parent": -0.0007812599128955711
+            },
+            "no_scale": {
+              "error_over_baseline": 2.175993759175891,
+              "geometry_output_over_baseline": 2.8896359137858945e-12,
+              "gain_vs_parent": -0.0007812599128955711
+            },
+            "no_dense": {
+              "error_over_baseline": 2.1886855049853393,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.013473005722343778
+            },
+            "no_both": {
+              "error_over_baseline": 2.1886855049853393,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.013473005722343778
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.24018662876381305,
+              "geometry_output_over_baseline": 5.609825489291977e-14,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.24008149361509437,
+              "geometry_output_over_baseline": 5.609825489291977e-14,
+              "gain_vs_parent": 0.00010513514871868246
+            },
+            "no_scale": {
+              "error_over_baseline": 0.24008149361509437,
+              "geometry_output_over_baseline": 5.609825489291977e-14,
+              "gain_vs_parent": 0.00010513514871868246
+            },
+            "no_dense": {
+              "error_over_baseline": 0.24425138483632308,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0040647560725100285
+            },
+            "no_both": {
+              "error_over_baseline": 0.24425138483632308,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0040647560725100285
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.5474326129619552,
+              "geometry_output_over_baseline": 2.6800352179686797e-13,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.5474817876091773,
+              "geometry_output_over_baseline": 2.6800352179686797e-13,
+              "gain_vs_parent": -4.9174647222094414e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5474817876091773,
+              "geometry_output_over_baseline": 2.6800352179686797e-13,
+              "gain_vs_parent": -4.9174647222094414e-05
+            },
+            "no_dense": {
+              "error_over_baseline": 0.548148800249562,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0007161872876068065
+            },
+            "no_both": {
+              "error_over_baseline": 0.548148800249562,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": -0.0007161872876068065
+            }
+          }
+        },
+        {
+          "rows": 2048,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.2563684373186941,
+              "geometry_output_over_baseline": 6.341109083552125e-13,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.2573581356279425,
+              "geometry_output_over_baseline": 6.341109083552125e-13,
+              "gain_vs_parent": -0.0009896983092484435
+            },
+            "no_scale": {
+              "error_over_baseline": 0.2573581356279425,
+              "geometry_output_over_baseline": 6.341109083552125e-13,
+              "gain_vs_parent": -0.0009896983092484435
+            },
+            "no_dense": {
+              "error_over_baseline": 0.1866406300431773,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.06972780727551678
+            },
+            "no_both": {
+              "error_over_baseline": 0.1866406300431773,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.06972780727551678
+            }
+          }
+        }
+      ],
+      "seconds": 3.0394309170078486,
+      "parent": {
+        "scale": false,
+        "dense": true,
+        "rot": 0
+      }
+    }
+  ],
+  "checks": {
+    "states": 40,
+    "returns": 480
+  },
+  "warning": "Forced calibration-fitted interventions scored on sampled queries/full keys. No test-label fitting or online score claim; no held-out guard in these interventions."
+}

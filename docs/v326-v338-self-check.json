@@ -1,0 +1,109 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "version": 326,
+      "mode": "q_sharp",
+      "sha256": "5f179878ee2fb0983edc723ef6774a61b1162370870930f5b46ec601c0571336",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 327,
+      "mode": "both_shrink",
+      "sha256": "02eab42419530053fe6997daf55c7d29e05248518bf9b0be9850b02cb5e9948d",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 328,
+      "mode": "q_flat",
+      "sha256": "2720a07d3514d84b4dc996c01727c17b7a4346b74a86bea627bda6f6b4a141da",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 329,
+      "mode": "both_flat",
+      "sha256": "312fdba14ef1f701049bdf0f2aebb7fde9f2f8118b53ad8aea41c20a72087a68",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 330,
+      "mode": "key_sorted",
+      "sha256": "efc0ceb33c084c10bc298f4116fa4a673df5b6733a16256f05ff955d4e9b9078",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 331,
+      "mode": "query_sorted",
+      "sha256": "c3fbdd7d1a85ec95f20e20b3ade336589014a0e89ad5a8fc511f16a8728489df",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 332,
+      "mode": "joint_sorted",
+      "sha256": "00f4c99aa79108fa13054e80af38fd81f741bf1ff290e1bc90f3c046c3c892fd",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 333,
+      "mode": "cross_pair_mix",
+      "sha256": "cea18f3b59c459786df3d5cb7f2204777950d8ee9d141783cbc5f6974da85df6",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 334,
+      "mode": "balance_0.5",
+      "sha256": "2024dbdba506a866f7e6d777b59bf36bac8ff99979f6754a5f3efcff52bbbcfc",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 335,
+      "mode": "balance_1.0",
+      "sha256": "3a36df040a469b7bfa749017babfa5472e46a75fd305c000844c6224a5500f92",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 336,
+      "mode": "balance_-1.0",
+      "sha256": "3849bd52f73869d93a575f004a404bbec15eb6e7e71eb37f1335f36cb70fb220",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 337,
+      "mode": "whiten_q",
+      "sha256": "d4217ec55c147779060a8f6e0f32788ec1be6a998049f43d53c5b7363bac324a",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    },
+    {
+      "version": 338,
+      "mode": "whiten_k",
+      "sha256": "0b87bf040d6bb5e127e838e2183b03f825ec186d7cbc3e1530e9312767edfb8b",
+      "passed": true,
+      "stdout": "Interface check: PASSED (6/6 functions found)\n\n======================== Linear ========================\n[Linear][Group 0] calibration: PASSED\n[Linear][Group 0][Test 0] activation: PASSED\n[Linear][Group 0][Test 1] activation: PASSED\n[Linear][Group 0][Test 2] activation: PASSED\n[Linear][Group 0][Test 3] activation: PASSED\n[Linear][Group 0][Test 4] activation: PASSED\n\n====================== Attention ======================\n[Attention][Group 0] calibration: PASSED\n[Attention][Group 0][Test 0] Q: PASSED\n[Attention][Group 0][Test 0] K: PASSED\n[Attention][Group 0][Test 0] V: PASSED\n[Attention][Group 0][Test 1] Q: PASSED\n[Attention][Group 0][Test 1] K: PASSED\n[Attention][Group 0][Test 1] V: PASSED\n[Attention][Group 0][Test 2] Q: PASSED\n[Attention][Group 0][Test 2] K: PASSED\n[Attention][Group 0][Test 2] V: PASSED\n[Attention][Group 0][Test 3] Q: PASSED\n[Attention][Group 0][Test 3] K: PASSED\n[Attention][Group 0][Test 3] V: PASSED\n[Attention][Group 0][Test 4] Q: PASSED\n[Attention][Group 0][Test 4] K: PASSED\n[Attention][Group 0][Test 4] V: PASSED\n\n======================== Summary ========================\nPassed checks: 22/22\nFailed checks: 0/22\nALL OUTPUT-FORMAT CHECKS PASSED\n",
+      "stderr": ""
+    }
+  ]
+}

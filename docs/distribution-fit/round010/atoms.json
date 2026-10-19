@@ -1,0 +1,145 @@
+{
+  "round": 10,
+  "atoms": [
+    {
+      "id": "rank8-strength4-length128-v-decoy-gain0.25",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "decoy_gains": {
+        "v": {
+          "q": 0.25,
+          "k": 0.25
+        }
+      }
+    },
+    {
+      "id": "rank8-strength4-length128-v-decoy-gain0.5",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "decoy_gains": {
+        "v": {
+          "q": 0.5,
+          "k": 0.5
+        }
+      }
+    },
+    {
+      "id": "rank8-strength4-length128-v-decoy-gain2.0",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "decoy_gains": {
+        "v": {
+          "q": 2.0,
+          "k": 2.0
+        }
+      }
+    },
+    {
+      "id": "trace25-group1-correlated_noise-v-decoy-gain0.25",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "decoy_gains": {
+        "v": {
+          "q": 0.25,
+          "k": 0.25
+        }
+      }
+    },
+    {
+      "id": "trace25-group1-correlated_noise-v-decoy-gain0.5",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "decoy_gains": {
+        "v": {
+          "q": 0.5,
+          "k": 0.5
+        }
+      }
+    },
+    {
+      "id": "trace25-group1-correlated_noise-v-decoy-gain2.0",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "decoy_gains": {
+        "v": {
+          "q": 2.0,
+          "k": 2.0
+        }
+      }
+    }
+  ],
+  "selection_evidence": "Mean-search acceptance depends on fake-Q/K probabilities during V calibration. Change their amplitude independently of true calibration roles and test inputs to investigate coupled Q/Value constraints.",
+  "limits": "Unverified fake-peer distribution hypothesis. Only non-target roles are rescaled; candidate code and score targets unchanged."
+}

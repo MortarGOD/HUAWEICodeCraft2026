@@ -1,0 +1,124 @@
+{
+  "certificate_columns": 480,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    337,
+    343,
+    345,
+    365,
+    374,
+    375,
+    378,
+    381,
+    382,
+    385,
+    387,
+    392,
+    393,
+    397,
+    399,
+    400,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 0,
+      "tokens": 4,
+      "price": -2204.038851979519,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -2485.912574136182
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 1,
+      "tokens": 8,
+      "price": -9414.712407283638,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -9696.5861294403
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 2,
+      "tokens": 8,
+      "price": -21005.23913281062,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -21287.112854967283
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 2,
+      "tokens": 32,
+      "price": -25106.776883991857,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -25388.65060614852
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": -29633.525132539213,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -29915.398854695875
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 3,
+      "tokens": 8,
+      "price": -33493.97643009784,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -33775.850152254505
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 4,
+      "tokens": 8,
+      "price": -33743.02306875904,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -34024.8967909157
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 0,
+      "tokens": 8,
+      "price": -39044.351662470894,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -39326.225384627556
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 3,
+      "tokens": 128,
+      "price": -64161.955475436655,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -64443.82919759332
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 4,
+      "tokens": 512,
+      "price": -330254.5375460069,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -330536.4112681636
+    }
+  ],
+  "limits": "Negative margins exclude these measured cases only from breaking this fixed certificate; not a rejection of the entire strategy family."
+}

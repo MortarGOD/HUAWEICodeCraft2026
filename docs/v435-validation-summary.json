@@ -1,0 +1,147 @@
+{
+  "source_commit": "97fe366",
+  "parent": 430,
+  "candidate": 435,
+  "online_score": null,
+  "note": "Local raw normalized quality differences only; do not convert to online points. Fixed-state pressure is a new attribution run, not replacement of the original negative run.",
+  "results": {
+    "paired": {
+      "summary": {
+        "cases": 30,
+        "parent_quality": 25.116302956032854,
+        "child_quality": 25.1391297002184,
+        "delta": 0.022826744185548975,
+        "better": 5,
+        "worse": 0,
+        "equal": 25,
+        "changed_role_cases": {
+          "q": 0,
+          "k": 0,
+          "v": 5
+        }
+      },
+      "validated_returns": 192,
+      "state_checks": 30,
+      "core": {
+        "calls": 5,
+        "eligible_calls": 5,
+        "changed_calls": 5,
+        "changed_values": 60,
+        "changed_channels": 25,
+        "enabled_heads": 10,
+        "seconds": 0.054768249043263495,
+        "cap_checks": 2560,
+        "exceptions": []
+      },
+      "unexpected_roles": []
+    },
+    "covariance": {
+      "summary": {
+        "cases": 30,
+        "parent_quality": 18.48411429727221,
+        "child_quality": 18.533554199391887,
+        "delta": 0.049439902119676415,
+        "better": 12,
+        "worse": 0,
+        "equal": 18,
+        "changed_role_cases": {
+          "q": 0,
+          "k": 0,
+          "v": 12
+        }
+      },
+      "validated_returns": 192,
+      "state_checks": 30,
+      "core": {
+        "calls": 15,
+        "eligible_calls": 12,
+        "changed_calls": 12,
+        "changed_values": 99,
+        "changed_channels": 43,
+        "enabled_heads": 20,
+        "seconds": 0.17181779083330184,
+        "cap_checks": 4096,
+        "exceptions": []
+      },
+      "unexpected_roles": []
+    },
+    "row_permute": {
+      "summary": {
+        "cases": 15,
+        "parent_quality": 11.217675435565054,
+        "child_quality": 11.24884963604567,
+        "delta": 0.031174200480615477,
+        "better": 10,
+        "worse": 0,
+        "equal": 5,
+        "changed_role_cases": {
+          "q": 0,
+          "k": 0,
+          "v": 10
+        }
+      },
+      "validated_returns": 96,
+      "state_checks": 15,
+      "core": {
+        "calls": 10,
+        "eligible_calls": 10,
+        "changed_calls": 10,
+        "changed_values": 108,
+        "changed_channels": 46,
+        "enabled_heads": 20,
+        "seconds": 0.15336687385570258,
+        "cap_checks": 5120,
+        "exceptions": []
+      },
+      "unexpected_roles": []
+    },
+    "block_resample": {
+      "summary": {
+        "cases": 15,
+        "parent_quality": -536.4845618397418,
+        "child_quality": -601.0726708083705,
+        "delta": -64.58810896862877,
+        "better": 10,
+        "worse": 5,
+        "equal": 0,
+        "changed_role_cases": {
+          "q": 5,
+          "k": 0,
+          "v": 15
+        }
+      },
+      "validated_returns": 96,
+      "state_checks": 15,
+      "core": {
+        "calls": 15,
+        "eligible_calls": 15,
+        "changed_calls": 15,
+        "changed_values": 165,
+        "changed_channels": 73,
+        "enabled_heads": 25,
+        "seconds": 0.25525479414500296,
+        "cap_checks": 7680,
+        "exceptions": []
+      },
+      "unexpected_roles": [
+        [
+          49,
+          [
+            "q"
+          ]
+        ]
+      ]
+    }
+  },
+  "fixed_state_block_resample": {
+    "cases": 15,
+    "delta": 0.02316725078102723,
+    "better": 12,
+    "worse": 3,
+    "equal": 0
+  },
+  "public_return_checks": 576,
+  "state_checks": 90,
+  "source_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "core_cap_channels_checked": 19456
+}

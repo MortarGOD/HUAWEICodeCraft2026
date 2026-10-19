@@ -1,0 +1,90 @@
+{
+  "certificate_columns": 495,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    318,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    364,
+    365,
+    374,
+    375,
+    378,
+    381,
+    382,
+    387,
+    389,
+    392,
+    399,
+    400,
+    401,
+    402,
+    403,
+    408,
+    412,
+    413,
+    417,
+    418,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 0,
+      "tokens": 4,
+      "price": -62263.215510751776,
+      "required_lower_bound": 368.4539278760397,
+      "margin": -62631.66943862782
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -77003.35358062318,
+      "required_lower_bound": 368.4539278760397,
+      "margin": -77371.80750849922
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 2,
+      "tokens": 32,
+      "price": -86047.56100415876,
+      "required_lower_bound": 368.4539278760397,
+      "margin": -86416.0149320348
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 3,
+      "tokens": 128,
+      "price": -163217.2769387222,
+      "required_lower_bound": 368.4539278760397,
+      "margin": -163585.73086659826
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 4,
+      "tokens": 512,
+      "price": -274617.85847630043,
+      "required_lower_bound": 368.4539278760397,
+      "margin": -274986.31240417645
+    }
+  ],
+  "limits": "Result applies only to the current fixed certificate, not all possible distributions."
+}

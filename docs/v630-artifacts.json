@@ -1,0 +1,11 @@
+{
+  "version": 630,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "v628's counterpart-free V objective (lam = 0.1 on ||1^T(V_hat-V)||^2) with a vectorised pre-screen: only token rows that have a beneficial move are visited by the exact sequential body, cutting the dynamic cost. The pre-screen is a filter, so the visited rows keep the monotone update.",
+  "source_sha256": "34ba024d55bedd55031d296ab4a705682cac68cb501527ca50f6a0719815c7d8",
+  "archive_sha256": "adb8535e5c9ec15e50d3dd097362a80db34f6804249655104dcbeb3d7d4f137a",
+  "archive_members": [
+    "solution.py"
+  ]
+}

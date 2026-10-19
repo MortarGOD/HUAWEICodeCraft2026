@@ -1,0 +1,61 @@
+{
+  "dataset": "/Users/ee/Code/2026-huawei-alogorithm/mini_sample/linear.pt",
+  "group": 0,
+  "weight_shape": [
+    8192,
+    2048
+  ],
+  "calibration_shapes": [
+    [
+      10,
+      2048
+    ],
+    [
+      128,
+      2048
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      1024,
+      2048
+    ],
+    [
+      1,
+      2048
+    ]
+  ],
+  "test_shapes": [
+    [
+      10,
+      2048
+    ],
+    [
+      128,
+      2048
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      1024,
+      2048
+    ],
+    [
+      1,
+      2048
+    ]
+  ],
+  "target_calls_during_calibration": [
+    0,
+    0
+  ],
+  "parent_calibration_changed_rng": true,
+  "candidate_calibration_rng_matches_parent": true,
+  "weight_state_and_activations_bitwise_equal": true,
+  "inputs_states_and_dynamic_rng_unchanged": true,
+  "fresh_module_accepts_frozen_state": true
+}

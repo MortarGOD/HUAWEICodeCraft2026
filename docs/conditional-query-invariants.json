@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "metadata": false,
+  "checks": [
+    {
+      "rows": 1,
+      "valid": true,
+      "changed_elements": 0
+    },
+    {
+      "rows": 129,
+      "valid": true,
+      "changed_elements": 207
+    },
+    {
+      "rows": 1024,
+      "valid": true,
+      "changed_elements": 930
+    },
+    {
+      "rows": 4097,
+      "valid": true,
+      "changed_elements": 0
+    }
+  ],
+  "row_delta_error": 2.5847379792054426e-15,
+  "proxy_monotone": true,
+  "holdout_all_roles_excluded": true,
+  "calibration_immutable": true,
+  "state_valid": true,
+  "inactive_exact": true,
+  "disabled_exact": true,
+  "mse_cap": true
+}

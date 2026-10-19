@@ -1,0 +1,79 @@
+{
+  "version": 422,
+  "parent": 421,
+  "parent_score": 21258.45,
+  "parent_seconds": 256,
+  "parent_sha256": "f5efee215846d4b9c79271bccd07611f4c5364d74a49a9f7b46a8b23786793fe",
+  "source": "solution/solution_v422.py",
+  "source_sha256": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+  "archive": "solution/submission_v422.zip",
+  "archive_sha256": "c8f20e88a22a23fa4146a9eb3a935208abd68824ccd9a74d1e2bc34b631e3f49",
+  "archive_members": [
+    "solution.py"
+  ],
+  "code_publish_commit": "c4ca25a6a380c75175f11bd1057c8ee0e912ec50",
+  "self_check": {
+    "interfaces": 6,
+    "format_passed": 22,
+    "format_failed": 0
+  },
+  "online_status": "user reported online result; v422 retained as current research baseline",
+  "local_validation": {
+    "quality_status": "regressed on both modeled activation banks, but online improved; local direction did not transfer",
+    "report": "docs/v422-report.md",
+    "results": {
+      "v422-linear-paired": {
+        "path": "docs/v422-linear-paired.json",
+        "score_comparison": {
+          "parent": 37.92895474235172,
+          "candidate": 37.66699625510222,
+          "delta": -0.2619584872495011
+        },
+        "case_outcomes": {
+          "improved": 3,
+          "worsened": 22,
+          "equal_within_tolerance": 25,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 160
+      },
+      "v422-linear-alternate": {
+        "path": "docs/v422-linear-alternate.json",
+        "score_comparison": {
+          "parent": 12.672371164031725,
+          "candidate": 12.420766248110315,
+          "delta": -0.2516049159214102
+        },
+        "case_outcomes": {
+          "improved": 4,
+          "worsened": 21,
+          "equal_within_tolerance": 0,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 80
+      },
+      "v422-identity-probe": {
+        "path": "docs/v422-identity-probe.json",
+        "score_comparison": {
+          "parent": 2.4515728931046095,
+          "candidate": 2.33730877526297,
+          "delta": -0.11426411784163948
+        },
+        "case_outcomes": {
+          "improved": 0,
+          "worsened": 5,
+          "equal_within_tolerance": 0,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 16
+      }
+    }
+  },
+  "online_result": {
+    "score": 21298,
+    "seconds": 257,
+    "reported_on": "2026-09-07",
+    "score_precision": "integer as reported",
+    "compared_to_v421_delta_approx": 39.55
+  }
+}

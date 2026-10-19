@@ -1,0 +1,11 @@
+{
+  "version": 649,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "patch_summary": "Widen the dynamic HiF4 scale grid to keep only the legal E6M2 multipliers: adds one more exponent step: 12 candidates, 2x the candidate cost.",
+  "source_sha256": "0eb28caa5010f6741db70db83c159f69c2237dd9980de9aa01934e9009090c4e",
+  "archive_sha256": "54cf4bc48dde01ced651833a5017519e4064fd34c19d1b15bd85070fc3238a95",
+  "archive_members": [
+    "solution.py"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "round": 17,
+  "atoms": [
+    {
+      "id": "trace35-group2-correlated_noise",
+      "path": "local_distribution_fit/round017/trace35-group2.pt",
+      "sha256": "0d5cdbed1aab88c5430088e4d99e47f90a12f7e76cd2805aefccbec9fb819fb3",
+      "seed": 2026091002,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 2,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group2-row_permute",
+      "path": "local_distribution_fit/round017/trace35-group2.pt",
+      "sha256": "0d5cdbed1aab88c5430088e4d99e47f90a12f7e76cd2805aefccbec9fb819fb3",
+      "seed": 2026091002,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 2,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group4-correlated_noise",
+      "path": "local_distribution_fit/round017/trace35-group4.pt",
+      "sha256": "aa671cd6724adef99595d049f7af0c567def5deaf31eb8fd65bb589556c0314f",
+      "seed": 2026091004,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 4,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group4-row_permute",
+      "path": "local_distribution_fit/round017/trace35-group4.pt",
+      "sha256": "aa671cd6724adef99595d049f7af0c567def5deaf31eb8fd65bb589556c0314f",
+      "seed": 2026091004,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 4,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group6-correlated_noise",
+      "path": "local_distribution_fit/round017/trace35-group6.pt",
+      "sha256": "a3cc659a37b3309f691518cf8b2529fda96c963b30a6952cf07fac43b4ac1874",
+      "seed": 2026091006,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 6,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group6-row_permute",
+      "path": "local_distribution_fit/round017/trace35-group6.pt",
+      "sha256": "a3cc659a37b3309f691518cf8b2529fda96c963b30a6952cf07fac43b4ac1874",
+      "seed": 2026091006,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 6,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group8-correlated_noise",
+      "path": "local_distribution_fit/round017/trace35-group8.pt",
+      "sha256": "016acd3f515bd8f78212f0098ca30ec9ea670268528ce1307e9c3fe240e71f95",
+      "seed": 2026091008,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 8,
+      "profile": {}
+    },
+    {
+      "id": "trace35-group8-row_permute",
+      "path": "local_distribution_fit/round017/trace35-group8.pt",
+      "sha256": "016acd3f515bd8f78212f0098ca30ec9ea670268528ce1307e9c3fe240e71f95",
+      "seed": 2026091008,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 8,
+      "profile": {}
+    }
+  ],
+  "selection_evidence": "Expand the four unused even-index trace35 groups after local seed and calibration-scale search; retain raw source inputs to broaden layer coverage.",
+  "limits": "Captured source groups reused for supervised fitting; not independent validation or reconstructed hidden data."
+}

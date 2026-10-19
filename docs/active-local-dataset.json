@@ -1,0 +1,187 @@
+{
+  "schema": "structural-v3",
+  "seed": 2026090601,
+  "attention_groups": 50,
+  "attention_cases": 250,
+  "linear_groups": 10,
+  "linear_cases": 50,
+  "linear_shapes": [
+    [
+      2048,
+      512
+    ],
+    [
+      1024,
+      2048
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      2048,
+      512
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      2048,
+      512
+    ],
+    [
+      2048,
+      512
+    ],
+    [
+      1024,
+      2048
+    ],
+    [
+      2048,
+      1024
+    ]
+  ],
+  "linear_sha256": "5dd3c0af95a472982f1688d99ef7451fbab73d0f84750f9f3d67efe0f2678a9c",
+  "attn_sha256": "94cfa5b375c88d53661d9d76f6bc4ea574dfad25e625c93f5671c4e8690a3e10",
+  "generator_sha256": "3888cf84a44ee6861910dbc97825cbda798e8b1ab2c8f02c393d8731d72717d4",
+  "status": "active structural diagnostic proxy; online prediction NOT qualified",
+  "score_prediction_allowed": false,
+  "profiles": [
+    {
+      "name": "broad",
+      "rank": 64,
+      "strength": 0.3,
+      "shared": 0.0,
+      "cluster": 0.0,
+      "drift": 0.0
+    },
+    {
+      "name": "persistent",
+      "rank": 32,
+      "strength": 2.0,
+      "shared": 0.3,
+      "cluster": 0.0,
+      "drift": 0.05
+    },
+    {
+      "name": "clustered",
+      "rank": 16,
+      "strength": 1.0,
+      "shared": 0.5,
+      "cluster": 1.5,
+      "drift": 0.1
+    },
+    {
+      "name": "common_context",
+      "rank": 16,
+      "strength": 0.7,
+      "shared": 2.0,
+      "cluster": 0.5,
+      "drift": 0.05
+    },
+    {
+      "name": "topic_shift",
+      "rank": 64,
+      "strength": 2.0,
+      "shared": 0.8,
+      "cluster": 0.8,
+      "drift": 0.5
+    }
+  ],
+  "mixture": "equal design coverage, NOT inferred online proportions",
+  "provenance": "cached checkpoint projections; modeled shared hidden states, NOT real forward captures",
+  "fixes": [
+    "correct Qwen GQA head selection",
+    "preserved DeepSeek K/V identity",
+    "no post-projection forced sinks or independent role perturbations",
+    "independent calibration/test length order"
+  ],
+  "limitations": [
+    "unknown online model/layer mixture",
+    "single source layer per model",
+    "modeled hidden states and partial RoPE inherited from generator",
+    "Linear unchanged and undersized for online; not a performance proxy",
+    "length distribution is a coverage prior, not a measured online histogram"
+  ],
+  "behavioral_audit": "docs/structural-bank-audit.json",
+  "behavioral_audit_sha256": "6b68ec2bd5d99946f1c036a76b516981c0b95e9d639cccbc5e87929c2a1d9671",
+  "retrospective_direction_checks": {
+    "old": {
+      "matching": 2,
+      "total": 4
+    },
+    "new": {
+      "matching": 2,
+      "total": 4
+    }
+  },
+  "old_bank_archive": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+  "evaluated_attention_groups": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "unevaluated_attention_groups": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "structural_check": {
+    "attention_cases": 250,
+    "linear_cases": 50,
+    "tensors": 3000,
+    "deepseek_kv_identity_samples": 250,
+    "distinct_length_orders": 50
+  },
+  "usage": "Mechanism diagnostics and counterexamples only; do not reject online-untested ideas solely by local scores."
+}

@@ -1,0 +1,116 @@
+{
+  "round": 35,
+  "atoms": [
+    {
+      "id": "aligned-test",
+      "path": "local_distribution_fit/round035/aligned-test.pt",
+      "sha256": "7f961fa39178ac8d2fc4119c52fd3b930258bc6c60936d3b47ea61cf12dc149a",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "v_energy_attention_leverage_order": "same",
+        "phases": [
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      }
+    },
+    {
+      "id": "aligned-both",
+      "path": "local_distribution_fit/round035/aligned-both.pt",
+      "sha256": "46f0ee47ff4ce83bf9b30fbc5b09801153fb7eb4af8346e6c53cadcd7f1553aa",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "v_energy_attention_leverage_order": "same",
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      }
+    },
+    {
+      "id": "anti-test",
+      "path": "local_distribution_fit/round035/anti-test.pt",
+      "sha256": "1f25867ee104eff849e8787a598d9c8701bbbb60e43a99ff1f0f1c5eecadff85",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "v_energy_attention_leverage_order": "opposite",
+        "phases": [
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      }
+    },
+    {
+      "id": "anti-both",
+      "path": "local_distribution_fit/round035/anti-both.pt",
+      "sha256": "2a43b46752a92103b317413f77b4036b894432592ca7172d5c48e08a611da030",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "v_energy_attention_leverage_order": "opposite",
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      }
+    }
+  ],
+  "certificate_sha256": "43b90ceda87319477b6b74bef8b558ab8f5b1b72e63807489ad84ff73fa8830e",
+  "required_versions": [
+    308,
+    309,
+    310,
+    311,
+    322,
+    326,
+    330,
+    337,
+    340,
+    341,
+    365,
+    367,
+    379,
+    381,
+    382,
+    386,
+    387,
+    392,
+    399,
+    402,
+    403,
+    404,
+    412,
+    418,
+    419,
+    429,
+    435,
+    436
+  ],
+  "selection_evidence": "The current independently verified 565-column separator is closest to trace25 group40. Probe exact V row ordering on this distinct source with calibration/test controls; prior sink-source test-only ordering broke an old separator but did not improve joint fit. No candidate outputs or errors select rows.",
+  "limits": "Adaptive synthetic training distributions; no evidence this correlation holds online. Shared identical inputs and protocol across versions."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 625,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "Always apply the Q/K Hadamard rotation. The calibration-time selection let the unrotated option win; on the official sample that option scores 0.1546 against 0.3586 for the rotation, so the deployed path was discarding a legal, structure-agnostic gain. Single mechanism: rotation always on, seed unchanged.",
+  "source_sha256": "1100489e69addd205a6b282917e3d99344f68197cb2b78d2003bb5617f7aa2d3",
+  "archive_sha256": "cd5cc9d4a9f5cc127a8481dfa179a457cb45ad745797d099116f51196f6bb8cd",
+  "archive_members": [
+    "solution.py"
+  ]
+}

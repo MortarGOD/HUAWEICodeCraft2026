@@ -1,0 +1,141 @@
+{
+  "complete": true,
+  "source_sha256": "477c2bc41251e9dd5102131d12d4e26107af032cdb34625f77ebfdce31156445",
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "labels": [
+        "parent",
+        "uniform1",
+        "uniform4",
+        "weighted1",
+        "weighted4",
+        "full1",
+        "full4"
+      ],
+      "methods": {
+        "uniform": {
+          "rank_agreement": 0.3828125,
+          "full_reference_cost": 8.876275387592614e-05,
+          "parent_full_reference_cost": 8.071769843809307e-05,
+          "held_loss_ratio": 1.0826609134674072,
+          "held_twofold_ratios": [
+            1.082504153251648,
+            1.0828166007995605
+          ]
+        },
+        "weighted": {
+          "rank_agreement": 0.5792410969734192,
+          "full_reference_cost": 8.360791980521753e-05,
+          "parent_full_reference_cost": 8.071769843809307e-05,
+          "held_loss_ratio": 1.0685986280441284,
+          "held_twofold_ratios": [
+            1.0679222345352173,
+            1.069270133972168
+          ]
+        },
+        "full": {
+          "rank_agreement": 1.0,
+          "full_reference_cost": 7.717478001723066e-05,
+          "parent_full_reference_cost": 8.071769843809307e-05,
+          "held_loss_ratio": 1.0398755073547363,
+          "held_twofold_ratios": [
+            1.0397354364395142,
+            1.040014624595642
+          ]
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "labels": [
+        "parent",
+        "uniform1",
+        "uniform4",
+        "weighted1",
+        "weighted4",
+        "full1",
+        "full4"
+      ],
+      "methods": {
+        "uniform": {
+          "rank_agreement": 0.492373526096344,
+          "full_reference_cost": 0.00019848816737066954,
+          "parent_full_reference_cost": 6.178269541123882e-05,
+          "held_loss_ratio": 2.683695077896118,
+          "held_twofold_ratios": [
+            2.6537318229675293,
+            2.7138419151306152
+          ]
+        },
+        "weighted": {
+          "rank_agreement": 0.9252232313156128,
+          "full_reference_cost": 6.30603390163742e-05,
+          "parent_full_reference_cost": 6.178269541123882e-05,
+          "held_loss_ratio": 1.04236900806427,
+          "held_twofold_ratios": [
+            1.0448821783065796,
+            1.0398401021957397
+          ]
+        },
+        "full": {
+          "rank_agreement": 1.0,
+          "full_reference_cost": 6.152361311251298e-05,
+          "parent_full_reference_cost": 6.178269541123882e-05,
+          "held_loss_ratio": 1.005857229232788,
+          "held_twofold_ratios": [
+            1.006746530532837,
+            1.0049623250961304
+          ]
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "labels": [
+        "parent",
+        "uniform1",
+        "uniform4",
+        "weighted1",
+        "weighted4",
+        "full1",
+        "full4"
+      ],
+      "methods": {
+        "uniform": {
+          "rank_agreement": 0.65234375,
+          "full_reference_cost": 0.00630312692373991,
+          "parent_full_reference_cost": 0.005301146302372217,
+          "held_loss_ratio": 1.1326442956924438,
+          "held_twofold_ratios": [
+            1.15094792842865,
+            1.1130428314208984
+          ]
+        },
+        "weighted": {
+          "rank_agreement": 0.8294270634651184,
+          "full_reference_cost": 0.00532942172139883,
+          "parent_full_reference_cost": 0.005301146302372217,
+          "held_loss_ratio": 1.0447757244110107,
+          "held_twofold_ratios": [
+            1.0299935340881348,
+            1.0606064796447754
+          ]
+        },
+        "full": {
+          "rank_agreement": 1.0,
+          "full_reference_cost": 0.004932237323373556,
+          "parent_full_reference_cost": 0.005301146302372217,
+          "held_loss_ratio": 1.01362943649292,
+          "held_twofold_ratios": [
+            1.0098137855529785,
+            1.0177154541015625
+          ]
+        }
+      }
+    }
+  ]
+}

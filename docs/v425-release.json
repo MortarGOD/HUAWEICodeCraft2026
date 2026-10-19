@@ -1,0 +1,99 @@
+{
+  "version": 425,
+  "parent": 422,
+  "parent_online_result": {
+    "score": 21298,
+    "seconds": 257
+  },
+  "preceding_feedback": {
+    "version": 424,
+    "score": 21284,
+    "seconds": 260,
+    "version_confirmed_by_user": true
+  },
+  "source": "solution/solution_v425.py",
+  "source_sha256": "a6e53f37abf2c7c51c99e6439df3e554fa57d75fbdc99f0c12f780a9e5691fcb",
+  "parent_sha256": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+  "archive": "solution/submission_v425.zip",
+  "archive_sha256": "95c432a32a255eb34ddc457cc527f4efe769f1aa516b8fd05d9e91399aa656d2",
+  "archive_members": [
+    "solution.py"
+  ],
+  "code_publish_commit": "d0967129b1de9b8b36320275770797f21e5aa6a5",
+  "self_check": {
+    "interfaces": 6,
+    "format_passed": 22,
+    "format_failed": 0
+  },
+  "mechanism_tests": 9,
+  "mechanism_results": "docs/v425-mechanisms.json",
+  "local_validation": {
+    "status": "complete after verified code push",
+    "report": "docs/v425-report.md",
+    "results": {
+      "paired": {
+        "score_comparison": {
+          "parent": 37.66699625510222,
+          "candidate": 37.66699625510222,
+          "delta": 0.0
+        },
+        "case_outcomes": {
+          "improved": 0,
+          "worsened": 0,
+          "equal_within_tolerance": 50,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 160,
+        "sparse_weight_coverage": {
+          "groups_probed": 10,
+          "groups_with_shortlisted_groups": 5,
+          "shortlisted_groups": 40960,
+          "proposed_rows": 9105,
+          "fixed_z_accepted_rows": 8966,
+          "encoder_guard_calls": 5,
+          "final_accepted_groups": 0,
+          "final_parent_fallback_groups": 10,
+          "interpretation": "Shortlisting, FP32 fixed-Z proposals, BF16 fixed-Z survival, refreshed-encoder guard, and final public results are counted separately."
+        },
+        "total_interface_seconds": {
+          "422": 35.87368245678954,
+          "425": 49.98579300008714
+        }
+      },
+      "alternate": {
+        "score_comparison": {
+          "parent": 12.420766248110315,
+          "candidate": 12.420766248110315,
+          "delta": 0.0
+        },
+        "case_outcomes": {
+          "improved": 0,
+          "worsened": 0,
+          "equal_within_tolerance": 25,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 80,
+        "sparse_weight_coverage": {
+          "groups_probed": 5,
+          "groups_with_shortlisted_groups": 5,
+          "shortlisted_groups": 40960,
+          "proposed_rows": 9010,
+          "fixed_z_accepted_rows": 8860,
+          "encoder_guard_calls": 5,
+          "final_accepted_groups": 0,
+          "final_parent_fallback_groups": 5,
+          "interpretation": "Shortlisting, FP32 fixed-Z proposals, BF16 fixed-Z survival, refreshed-encoder guard, and final public results are counted separately."
+        },
+        "total_interface_seconds": {
+          "422": 16.118541790056042,
+          "425": 23.06452712067403
+        }
+      }
+    },
+    "overhead": "docs/v425-overhead.json",
+    "same_weight_recompile_control": "docs/v425-initial-null-recompile.json"
+  },
+  "online_status": "Not submitted by agent; user may use archive for independent online comparison. Online score/time unknown.",
+  "default_source_sha256": "bd4848d2b9ce1340bef64bcbcf9e4d1b6a225b52b66b7044ff6adaa15b824d86",
+  "disposition": "Independent online comparison available; two local banks returned exact parent state for all groups, so no current evidence of score gain. Keep v422 as verified parent. Do not relax guards or change source after these negative results."
+}

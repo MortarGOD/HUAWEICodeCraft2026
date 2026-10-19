@@ -1,0 +1,26 @@
+{
+  "source_sha256": "a6e53f37abf2c7c51c99e6439df3e554fa57d75fbdc99f0c12f780a9e5691fcb",
+  "initial_code_publish_commit": "d0967129b1de9b8b36320275770797f21e5aa6a5",
+  "dataset": "/Users/ee/Code/2026-huawei-alogorithm/local_fitted_models_attention_feedback_v2/linear.pt",
+  "dataset_sha256": "5dd3c0af95a472982f1688d99ef7451fbab73d0f84750f9f3d67efe0f2678a9c",
+  "group": 0,
+  "parent_weight_bitexact": true,
+  "parent_unchanged": true,
+  "projection_bitexact": true,
+  "projection_max_abs_delta": 0.0,
+  "changed_state_fields": [],
+  "guard_before": [
+    0.0011571752838790417,
+    0.0011488220188766718
+  ],
+  "guard_after": [
+    0.0011571752838790417,
+    0.0011488220188766718
+  ],
+  "guard_ratios": [
+    1.0,
+    1.0
+  ],
+  "guard_accept": false,
+  "scope": "One model group, exact same W; tests whether treating learned encoder P as a stale cache is a neutral operation. No sparse-W candidate applied."
+}

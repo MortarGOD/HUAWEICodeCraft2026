@@ -1,0 +1,57 @@
+{
+  "complete": true,
+  "source_sha256": "bd4848d2b9ce1340bef64bcbcf9e4d1b6a225b52b66b7044ff6adaa15b824d86",
+  "change": {
+    "old": "torch.einsum('thd,hde->the',current-reference,h)[:,:,a:b]",
+    "new": "torch.einsum('thd,hde->the',current-reference,h[:,:,a:b])"
+  },
+  "rows": [
+    {
+      "group": 0,
+      "dim": 256,
+      "active": 7,
+      "exact": true,
+      "differing_elements": 0
+    },
+    {
+      "group": 1,
+      "dim": 512,
+      "active": 8,
+      "exact": true,
+      "differing_elements": 0
+    },
+    {
+      "group": 2,
+      "dim": 512,
+      "active": 8,
+      "exact": true,
+      "differing_elements": 0
+    },
+    {
+      "group": 14,
+      "dim": 512,
+      "active": 3,
+      "exact": true,
+      "differing_elements": 0
+    },
+    {
+      "group": 19,
+      "dim": 512,
+      "active": 3,
+      "exact": true,
+      "differing_elements": 0
+    },
+    {
+      "group": 49,
+      "dim": 512,
+      "active": 5,
+      "exact": true,
+      "differing_elements": 0
+    }
+  ],
+  "timing": {
+    "parent": 11.095363455999177,
+    "candidate": 10.40563662693603
+  },
+  "warning": "30 modeled activation cases; dynamic Q only, no online score prediction or full-shape equivalence proof."
+}

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "format_returns": 5,
+  "inactive_heads_exact": true,
+  "zero_parameters_exact": true,
+  "single_token_exact": true,
+  "active_branch_changes": true,
+  "holdout_excluded": true,
+  "calibration_immutable": true,
+  "global_rng_unchanged": true,
+  "inference_mode_supported": true,
+  "state_no_grad": true,
+  "training_monotone": true,
+  "training_history": [
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.997378408908844,
+      0.8471701145172119,
+      0.8186938762664795,
+      0.8432052135467529
+    ],
+    [
+      0.8941181302070618,
+      0.6962748169898987,
+      0.6809632778167725,
+      0.747270941734314
+    ]
+  ],
+  "ste_forward_exact": true,
+  "surrogate_gradient_error": 0.0,
+  "query_subset_error": 0.0,
+  "joint_transform_and_scales": true
+}

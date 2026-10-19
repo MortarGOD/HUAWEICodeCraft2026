@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "records": {
+    "risk": {
+      "before": [
+        75.24428729665837,
+        83.49823248192212
+      ],
+      "after": [
+        66.930402844241,
+        83.49823248192212
+      ],
+      "changed": {
+        "scale_factor": 1,
+        "scale_lv2": 4,
+        "scale_lv3": 5,
+        "sign": 10,
+        "mant": 50
+      },
+      "all_channel_caps": true
+    },
+    "enumeration": {
+      "sf_count": 255,
+      "dp_cost": 6.27066707611084,
+      "scalar_exhaustive_cost": 6.270667157581119,
+      "fixed_bounds_exact": true
+    },
+    "scope": {
+      "qk_calibration_equal": true,
+      "linear_qk_code_equal": true,
+      "input_rng_unchanged": true
+    }
+  }
+}

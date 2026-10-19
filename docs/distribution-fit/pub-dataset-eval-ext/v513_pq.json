@@ -1,0 +1,97 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/public_quantizer/attn.pt",
+  "versions": [
+    504,
+    513
+  ],
+  "groups_used": [
+    0
+  ],
+  "n_groups_total": 1,
+  "results": {
+    "504": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5764735969886342
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5662159923644061
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5695732856046722
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5557987032063816
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5792341074633448
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5694591371254878,
+      "wall_seconds": 24.858104791026562
+    },
+    "513": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5473430310357108
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5576436836780184
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5630859011903013
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5513470437487344
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5788731298241978
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5596585578953925,
+      "wall_seconds": 47.65681725007016
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "returns": 21,
+  "changed_ast_nodes": [
+    "header",
+    "_temp_fit",
+    "hif4_calibration_attention"
+  ],
+  "stationary_max_error": 1.7763568394002505e-15,
+  "risk_formula_error": 7.105427357601002e-15,
+  "output_map_commute_error": 3.608224830031759e-16,
+  "cache_equal": true,
+  "heldout_excluded_from_fit": true,
+  "qk_state_unchanged": true,
+  "independent_module_equal": true,
+  "boundary_rows": [
+    1,
+    17,
+    65,
+    129,
+    1025,
+    4097
+  ],
+  "groups": [
+    {
+      "group": 0,
+      "cache_entries": 2,
+      "adopted": 2
+    },
+    {
+      "group": 1,
+      "cache_entries": 2,
+      "adopted": 1
+    },
+    {
+      "group": 19,
+      "cache_entries": 2,
+      "adopted": 0
+    }
+  ]
+}

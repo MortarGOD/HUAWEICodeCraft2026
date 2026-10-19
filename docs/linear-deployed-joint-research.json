@@ -1,0 +1,179 @@
+{
+  "parent": 315,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "complete": true,
+  "groups": [
+    {
+      "index": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "candidates": [
+        {
+          "name": "parent",
+          "loss": 0.0011861857492476702,
+          "folds": [
+            0.0011909173335880041,
+            0.0011814539320766926
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend0.5",
+          "loss": 0.0011798798805102706,
+          "folds": [
+            0.0011860051890835166,
+            0.0011737544555217028
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend1.0",
+          "loss": 0.0012042071903124452,
+          "folds": [
+            0.0012111756950616837,
+            0.0011972386855632067
+          ]
+        },
+        {
+          "name": "inverse_encoder",
+          "loss": 0.0011780537897720933,
+          "folds": [
+            0.0011832312447950244,
+            0.001172876451164484
+          ]
+        }
+      ],
+      "selected": "inverse_encoder",
+      "solve_relative": 4.0959031366583076e-07,
+      "calibration_research_seconds": 3.8626400829816703,
+      "validated_returns": 22,
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "parent": 0.433542067574355,
+          "selected": 0.448678176263242,
+          "delta": 0.01513610868888704
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "parent": 0.4518763140863091,
+          "selected": 0.4585103449010124,
+          "delta": 0.006634030814703262
+        },
+        {
+          "test": 2,
+          "rows": 128,
+          "parent": 0.46159749161843533,
+          "selected": 0.46516181695528336,
+          "delta": 0.0035643253368480288
+        },
+        {
+          "test": 3,
+          "rows": 512,
+          "parent": 0.4646964128417681,
+          "selected": 0.4685108424209419,
+          "delta": 0.0038144295791737726
+        },
+        {
+          "test": 4,
+          "rows": 1024,
+          "parent": 0.46850651665404863,
+          "selected": 0.47236968929499645,
+          "delta": 0.0038631726409478206
+        }
+      ],
+      "delta": 0.033012067060559924
+    },
+    {
+      "index": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "candidates": [
+        {
+          "name": "parent",
+          "loss": 0.003066332545131445,
+          "folds": [
+            0.0030864535365253687,
+            0.00304621085524559
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend0.5",
+          "loss": 0.0030522658489644527,
+          "folds": [
+            0.003075552638620138,
+            0.003028979292139411
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend1.0",
+          "loss": 0.0031270082108676434,
+          "folds": [
+            0.00315057672560215,
+            0.003103438997641206
+          ]
+        },
+        {
+          "name": "inverse_encoder",
+          "loss": 0.0030496777035295963,
+          "folds": [
+            0.003071090904995799,
+            0.0030282647348940372
+          ]
+        }
+      ],
+      "selected": "inverse_encoder",
+      "solve_relative": 3.905869618847646e-07,
+      "calibration_research_seconds": 3.1629776659829076,
+      "validated_returns": 22,
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "parent": 0.48432100629694996,
+          "selected": 0.4766868415971979,
+          "delta": -0.0076341646997520884
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "parent": 0.4071506259116906,
+          "selected": 0.41270750333219697,
+          "delta": 0.005556877420506368
+        },
+        {
+          "test": 2,
+          "rows": 128,
+          "parent": 0.41362552026277455,
+          "selected": 0.41651597036228794,
+          "delta": 0.0028904500995133864
+        },
+        {
+          "test": 3,
+          "rows": 512,
+          "parent": 0.4091884435791129,
+          "selected": 0.4131493200245516,
+          "delta": 0.0039608764454387435
+        },
+        {
+          "test": 4,
+          "rows": 1024,
+          "parent": 0.4097832336628502,
+          "selected": 0.41282382327527223,
+          "delta": 0.00304058961242204
+        }
+      ],
+      "delta": 0.007814628878128449
+    }
+  ],
+  "source_sha256": "d85f87cc68ab4161056fb47b810be16d5465e12171ad86e3dda25db05c956fa6",
+  "score_prediction_allowed": false,
+  "provenance": "Real checkpoint projections, modeled activations, reduced dimensions",
+  "selection": "First four calibration sets fit; last set even/odd rows guard; test never selects",
+  "seconds": 11.082298958994215,
+  "delta": 0.04082669593868837
+}

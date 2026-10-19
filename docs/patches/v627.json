@@ -1,0 +1,16 @@
+{
+  "version": 627,
+  "parent": 625,
+  "parent_sha256": "1100489e69addd205a6b282917e3d99344f68197cb2b78d2003bb5617f7aa2d3",
+  "summary": "Combined delivery: v625 (attention Q/K rotation always on) + v626 (Linear refinement guards on the last non-degenerate calibration activation). Both come from the same root cause -- the official layout puts a degenerate sample last -- but live in different subsystems, so each is separately attributable from the v625 and v626 receipts and this version is only their sum.",
+  "patches": [
+    [
+      "    if not calibration or int(calibration[-1][0].shape[0]) < 2:\n        return parent\n",
+      "    # v626: the guard sample must not be a degenerate activation. The official\n    # sample's calibration list ends with a 1-row activation ([10,128,512,1024,1]),\n    # so the old test `calibration[-1][0].shape[0] < 2` returned the parent\n    # untouched and the whole refinement was skipped -- while our mirror bank,\n    # which puts the 1-row entry first, exercised it fully. Take the last entry\n    # with at least two rows instead, so the guard is informative wherever it is\n    # evaluated. On banks whose last entry is already informative this is a no-op.\n    if not calibration:\n        return parent\n    guard = next((c for c in reversed(calibration)\n                  if int(c[0].shape[0]) >= 2), None)\n    if guard is None:\n        return parent\n"
+    ],
+    [
+      "        packed = calibration[-1]\n",
+      "        packed = guard\n"
+    ]
+  ]
+}

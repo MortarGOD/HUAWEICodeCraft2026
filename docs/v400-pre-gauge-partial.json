@@ -1,0 +1,852 @@
+{
+  "complete": false,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 10,
+      "key": "structural-v3/10",
+      "shared_parent_seconds": 0.3363109159981832,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 3.8600794590311125,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 3.306742200948065e-06
+          },
+          "activity": {
+            "calls": 1,
+            "changed": 1,
+            "values": 65536,
+            "changed_values": 15,
+            "metadata": 25600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 3.060375125030987,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 3.306742200948065e-06
+          },
+          "activity": {
+            "calls": 1,
+            "changed": 1,
+            "values": 65536,
+            "changed_values": 15,
+            "metadata": 25600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.00516453105956316
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 11,
+      "key": "structural-v3/11",
+      "shared_parent_seconds": 0.13280808401759714,
+      "versions": {
+        "387": {
+          "scores": [
+            0.5071074667754081,
+            0.5199067903517314,
+            0.5147307675473505,
+            0.5116021336463602,
+            0.5135538812880331
+          ],
+          "seconds": 3.1099450000328943,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 5.996102117933333e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3211264,
+            "changed_values": 6176,
+            "metadata": 1254400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.5089691790265942,
+            0.5205713569492095,
+            0.5149178550897715,
+            0.511555352241537,
+            0.5143999334640426
+          ],
+          "seconds": 5.8593507499899715,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 5.996102117933333e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3211264,
+            "changed_values": 13101,
+            "metadata": 1254400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.2698764503002167
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 12,
+      "key": "structural-v3/12",
+      "shared_parent_seconds": 1.0623877909965813,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 6.6233450830332,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 2.5410902253497625e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 8093696,
+            "changed_values": 5218,
+            "metadata": 3161600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9309064997640207,
+            0.9255451399040205,
+            0.9526534376388691,
+            0.9560563219242809,
+            0.9531813588717548
+          ],
+          "seconds": 3.052464416017756,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 2.5410902253497625e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 8093696,
+            "changed_values": 6185,
+            "metadata": 3161600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.010984882712364197
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 13,
+      "key": "structural-v3/13",
+      "shared_parent_seconds": 0.25755379104521126,
+      "versions": {
+        "387": {
+          "scores": [
+            0.8180891683405568,
+            0.9138918004540028,
+            0.7742728826685803,
+            0.8610877336913172,
+            0.8885984125075786
+          ],
+          "seconds": 2.3477095830021426,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 1.4091689081396908e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3571712,
+            "changed_values": 51698,
+            "metadata": 1395200,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.8165991536444244,
+            0.91430376733668,
+            0.7754051259729826,
+            0.8616230924215251,
+            0.8890743182899212
+          ],
+          "seconds": 2.545594874944072,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 1.4091689081396908e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3571712,
+            "changed_values": 51226,
+            "metadata": 1395200,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.08034811168909073
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 14,
+      "key": "structural-v3/14",
+      "shared_parent_seconds": 0.12999649997800589,
+      "versions": {
+        "387": {
+          "scores": [
+            0.956393173850707,
+            0.9741254740751851,
+            0.9722766939931763,
+            0.9729003448616879,
+            0.9602245858826801
+          ],
+          "seconds": 9.236333500011824,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 3.7676629744964885e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3309568,
+            "changed_values": 2753,
+            "metadata": 1292800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.956994901172945,
+            0.9744790137773198,
+            0.9722395902796184,
+            0.9724322729206909,
+            0.9608029782022813
+          ],
+          "seconds": 4.866685000015423,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 3.7676629744964885e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 3309568,
+            "changed_values": 2765,
+            "metadata": 1292800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.004972358234226704
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 15,
+      "key": "structural-v3/15",
+      "shared_parent_seconds": 0.238741833018139,
+      "versions": {
+        "387": {
+          "scores": [
+            0.7283229530188025,
+            0.5242167977159821,
+            0.8175225451296024,
+            0.6002262488513233,
+            0.4966025257300138
+          ],
+          "seconds": 2.5345282499911264,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 9.030272485688329e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5341184,
+            "changed_values": 63537,
+            "metadata": 2086400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.7309691234399982,
+            0.5248484280165503,
+            0.8228567605630982,
+            0.6037893880946037,
+            0.49482235792198254
+          ],
+          "seconds": 2.53821541601792,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 9.030272485688329e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5341184,
+            "changed_values": 63739,
+            "metadata": 2086400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.08270822465419769
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 16,
+      "key": "structural-v3/16",
+      "shared_parent_seconds": 0.24632741598179564,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9820608106149371,
+            0.981143935200381,
+            0.9587540759129289,
+            0.9817289828251087,
+            0.9375957118902909
+          ],
+          "seconds": 3.1098591659683734,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 2.35704101214651e-06
+          },
+          "activity": {
+            "calls": 1,
+            "changed": 1,
+            "values": 262144,
+            "changed_values": 97,
+            "metadata": 102400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9820608106149371,
+            0.981143935200381,
+            0.9587540759129289,
+            0.9817289828251087,
+            0.9375957118902909
+          ],
+          "seconds": 2.6977878749603406,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 2.35704101214651e-06
+          },
+          "activity": {
+            "calls": 1,
+            "changed": 1,
+            "values": 262144,
+            "changed_values": 97,
+            "metadata": 102400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.012597920373082161
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 17,
+      "key": "structural-v3/17",
+      "shared_parent_seconds": 0.2485789170023054,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9509711538062112,
+            0.9384267216550704,
+            0.9527748149345985,
+            0.9063261233398482,
+            0.8715431092583891
+          ],
+          "seconds": 3.8391050419886597,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 7.480441126972437e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5177344,
+            "changed_values": 18141,
+            "metadata": 2022400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9474227571348496,
+            0.9386345411459629,
+            0.9527064434071831,
+            0.9065095744499033,
+            0.8714061780003991
+          ],
+          "seconds": 4.16360974998679,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 7.480441126972437e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5177344,
+            "changed_values": 17794,
+            "metadata": 2022400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.35376641154289246
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 18,
+      "key": "structural-v3/18",
+      "shared_parent_seconds": 0.5378345419885591,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9477473998875338,
+            0.9421300414890258,
+            0.958450280278001,
+            0.9272738889773786,
+            0.9469498612026174
+          ],
+          "seconds": 3.8936122919549234,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 2.360110102017643e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 9076736,
+            "changed_values": 2430,
+            "metadata": 3545600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9481691311563871,
+            0.943472105650325,
+            0.9606754692163155,
+            0.927008646697536,
+            0.9439126907330415
+          ],
+          "seconds": 3.4644039170234464,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 2.360110102017643e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 9076736,
+            "changed_values": 2825,
+            "metadata": 3545600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.0072571346536278725
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 19,
+      "key": "structural-v3/19",
+      "shared_parent_seconds": 0.4889037500252016,
+      "versions": {
+        "387": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 2.802971749973949,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 6.211704203451518e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5341184,
+            "changed_values": 56149,
+            "metadata": 2086400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.7798898772795831,
+            0.880123844661748,
+            0.8469568415012326,
+            0.8109802061440914,
+            0.7468285893246557
+          ],
+          "seconds": 3.9380585000035353,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 6.211704203451518e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 5341184,
+            "changed_values": 56114,
+            "metadata": 2086400,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.17608797550201416
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 0,
+      "key": "attention/qwen3.6-35b-a3b/202609143/feedback/base",
+      "shared_parent_seconds": 0.5655044999439269,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9458725429668555,
+            0.9523787290971174,
+            0.955432015955053,
+            0.9424514641839117,
+            0.921141888192291
+          ],
+          "seconds": 3.259724915958941,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 1.5068660559336422e-06
+          },
+          "activity": {
+            "calls": 1,
+            "changed": 1,
+            "values": 1048576,
+            "changed_values": 172,
+            "metadata": 409600,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.9447967671738916,
+            0.9533436499202624,
+            0.9558167151681981,
+            0.9384644857571527,
+            0.9163971738704813
+          ],
+          "seconds": 4.409913624986075,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 2,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 1.5068660559336422e-06
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 2361,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.007413377054035664
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 4,
+      "key": "attention/qwen3.6-35b-a3b/203009143/feedback/gain8",
+      "shared_parent_seconds": 0.5614911669981666,
+      "versions": {
+        "387": {
+          "scores": [
+            0.499661398965626,
+            0.4928489606859647,
+            0.5582841407313746,
+            0.6383444769568666,
+            0.6601349159189793
+          ],
+          "seconds": 3.8132242090068758,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 3.58358483936172e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 102806,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 0,
+            "mode_squared_norm": 0.0
+          }
+        },
+        "400": {
+          "scores": [
+            0.4991825480271191,
+            0.4943254031305108,
+            0.5589176405857994,
+            0.6391320240675864,
+            0.6612397120190422
+          ],
+          "seconds": 4.331228915951215,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 3.58358483936172e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 107578,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.483435720205307
+          }
+        }
+      }
+    }
+  ],
+  "timing": "Shared early v387 calibration recorded separately; local timings are not online predictions.",
+  "hashes": {
+    "387": "20d5f35ac5b0559415bc4cca50ca58705cdf242d152fbfe0fab7642a0d6a1dfa",
+    "400": "f6ad22297e128edccbe00ae5bf60024ce98015a30dee3f4cb1c9aba932976d97"
+  }
+}
+

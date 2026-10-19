@@ -1,0 +1,221 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.5259834160096943,
+      "versions": {
+        "400": {
+          "scores": [
+            0.3348538109551145,
+            0.22991886248522936,
+            0.8313541661940004,
+            0.5331853102477481,
+            0.5365267324051662
+          ],
+          "seconds": 3.204254874959588,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        },
+        "401": {
+          "scores": [
+            0.3377961982231957,
+            0.23592146731153404,
+            0.8311397647710103,
+            0.5333636934558021,
+            0.5372274747787339
+          ],
+          "seconds": 3.270181166997645,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 30959,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 23.74895477294922
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.48838454100769013,
+      "versions": {
+        "400": {
+          "scores": [
+            0.3348538109551145,
+            0.22991886248522936,
+            0.8313541661940004,
+            0.5331853102477481,
+            0.5365267324051662
+          ],
+          "seconds": 4.8706861669779755,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        },
+        "401": {
+          "scores": [
+            0.33234128495510534,
+            0.23229234435167923,
+            0.809926757524469,
+            0.5191906885014709,
+            0.5472773760586787
+          ],
+          "seconds": 11.801058000011835,
+          "checks": 35,
+          "debug": {
+            "balance_heads": 0,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 30959,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 23.74895477294922
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 0.6163613749668002,
+      "versions": {
+        "400": {
+          "scores": [
+            0.3348538109551145,
+            0.22991886248522936,
+            0.8313541661940004,
+            0.5331853102477481,
+            0.5365267324051662
+          ],
+          "seconds": 3.8267609169706702,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 2,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 36429,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 0.030039336532354355
+          }
+        },
+        "401": {
+          "scores": [
+            0.3377961982231957,
+            0.23592146731153404,
+            0.8311397647710103,
+            0.5333636934558021,
+            0.5372274747787339
+          ],
+          "seconds": 4.19322229095269,
+          "checks": 36,
+          "debug": {
+            "balance_heads": 1,
+            "kernel_heads": 1,
+            "error": false,
+            "hold_base": 4.6214350732043386e-05
+          },
+          "activity": {
+            "calls": 17,
+            "changed": 17,
+            "values": 10682368,
+            "changed_values": 30959,
+            "metadata": 4172800,
+            "changed_metadata": 0
+          },
+          "model_activity": {
+            "fits": 1,
+            "with_modes": 1,
+            "mode_squared_norm": 23.74895477294922
+          }
+        }
+      }
+    }
+  ],
+  "timing": "Shared early v400 calibration recorded separately; local timings are not online predictions.",
+  "hashes": {
+    "400": "c7b0106870460e2c56d84a8bd35d8dd90753f3069fea08464407dd7123093f41",
+    "401": "eed99b9a95f245d02b57b51be7f4d5b9a79a3964b203b1c6d2a7b711287dd4ea"
+  }
+}

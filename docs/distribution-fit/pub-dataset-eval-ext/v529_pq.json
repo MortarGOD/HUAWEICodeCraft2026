@@ -1,0 +1,183 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/public_quantizer/attn.pt",
+  "versions": [
+    525,
+    529,
+    530,
+    531
+  ],
+  "groups_used": [
+    0
+  ],
+  "n_groups_total": 1,
+  "results": {
+    "525": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5769993005441095
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.574770833199468
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5803721064656047
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5662276990432455
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5909857382420314
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5778711354988918,
+      "wall_seconds": 77.19953587499913
+    },
+    "529": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.573333389027503
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5694700859094385
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5817002869999056
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5720084862958967
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5954857951438198
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5783996086753127,
+      "wall_seconds": 62.17698295798618
+    },
+    "530": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5748283732510066
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5706542161165336
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5818469712184962
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5696073674733347
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5911625323199944
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.577619892075873,
+      "wall_seconds": 73.24301841703709
+    },
+    "531": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5769993005441095
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.574766206812355
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5805102233750068
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.566573479863694
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5912103010392437
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5780119023268818,
+      "wall_seconds": 41.17681045806967
+    }
+  }
+}

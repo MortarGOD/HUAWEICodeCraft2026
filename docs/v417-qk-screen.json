@@ -1,0 +1,803 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "paired",
+      "versions": {
+        "412": {
+          "scores": [
+            0.3015473463387201,
+            0.8131526809722736,
+            0.5840892053064101,
+            0.7528382351501713,
+            0.8406831397571359
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.001439794315956533,
+            0.0014691933756694198
+          ],
+          "conversion_seconds_including_copy": 2.0803418010473251e-07,
+          "role_dynamic_seconds": {
+            "q": 0.4788090840447694,
+            "k": 0.39083729195408523,
+            "v": 0.0403755831066519
+          },
+          "seconds_including_comparisons": 1.995170916954521,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.29509723999224535,
+            0.8083665835190134,
+            0.5787280513347435,
+            0.7489233673504259,
+            0.8361689065183882
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7919448,
+            "k": 989057,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.005199374980293214,
+          "role_dynamic_seconds": {
+            "q": 0.43899366701953113,
+            "k": 0.40728762501385063,
+            "v": 0.04225387505721301
+          },
+          "seconds_including_comparisons": 1.991135917021893,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "versions": {
+        "412": {
+          "scores": [
+            0.3012926521760304,
+            0.8129193449700185,
+            0.5840984721934497,
+            0.7530601473507316,
+            0.8398898760049252
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.007626489736139774,
+            0.00790899246931076
+          ],
+          "conversion_seconds_including_copy": 2.0797597244381905e-07,
+          "role_dynamic_seconds": {
+            "q": 0.4005278749973513,
+            "k": 0.08058833301765844,
+            "v": 0.03909299994120374
+          },
+          "seconds_including_comparisons": 1.2851292500272393,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.2947278401617802,
+            0.8081311687475691,
+            0.5785495988044157,
+            0.7490421584239314,
+            0.8356675475348434
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7919975,
+            "k": 989174,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.004494209017138928,
+          "role_dynamic_seconds": {
+            "q": 0.3985202080802992,
+            "k": 0.08199254109058529,
+            "v": 0.04182591708377004
+          },
+          "seconds_including_comparisons": 1.3103573329863138,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "versions": {
+        "412": {
+          "scores": [
+            0.2977434470363955,
+            0.8108022119785875,
+            0.5815767097319982,
+            0.7509435454331422,
+            0.8386072220814483
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.012659058906137943,
+            0.012511790730059147
+          ],
+          "conversion_seconds_including_copy": 2.0797597244381905e-07,
+          "role_dynamic_seconds": {
+            "q": 0.46207703999243677,
+            "k": 0.09319891803897917,
+            "v": 0.0534780818852596
+          },
+          "seconds_including_comparisons": 1.4894114159978926,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.2901311236453396,
+            0.8052235312187688,
+            0.5752515396889513,
+            0.7461068125371249,
+            0.8331502742177767
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7921068,
+            "k": 989279,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.004316499980632216,
+          "role_dynamic_seconds": {
+            "q": 1.1813698339974508,
+            "k": 0.21915562497451901,
+            "v": 0.16181670798687264
+          },
+          "seconds_including_comparisons": 3.849582792026922,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "paired",
+      "versions": {
+        "412": {
+          "scores": [
+            0.39429856483324505,
+            0.44199149158380957,
+            0.49099785239028254,
+            0.46627664900136373,
+            0.39410327602884715
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.0013016107259318233
+          ],
+          "conversion_seconds_including_copy": 5.409820005297661e-07,
+          "role_dynamic_seconds": {
+            "q": 1.604679457086604,
+            "k": 0.25852774997474626,
+            "v": 0.38771562499459833
+          },
+          "seconds_including_comparisons": 5.358964292041492,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.3742275413941689,
+            0.42781281845068514,
+            0.4880998752219926,
+            0.4551573477878092,
+            0.37956280387440633
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7303593,
+            "k": 842785,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.008289500023238361,
+          "role_dynamic_seconds": {
+            "q": 0.8768496250268072,
+            "k": 0.15022270899498835,
+            "v": 0.1361874570720829
+          },
+          "seconds_including_comparisons": 2.997146458015777,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "row_permute",
+      "versions": {
+        "412": {
+          "scores": [
+            0.3555289497605634,
+            0.40728985373222826,
+            0.4805035891710393,
+            0.43991023494277476,
+            0.3536527558757505
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.007200290914624929
+          ],
+          "conversion_seconds_including_copy": 2.500019036233425e-07,
+          "role_dynamic_seconds": {
+            "q": 0.570416999864392,
+            "k": 0.6170642920769751,
+            "v": 0.08365049998974428
+          },
+          "seconds_including_comparisons": 3.1032326669665053,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.32536972668289466,
+            0.3889145322069332,
+            0.47105592808013763,
+            0.42616392480450205,
+            0.33276602955513085
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7279485,
+            "k": 857818,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.01504141604527831,
+          "role_dynamic_seconds": {
+            "q": 1.4317597500048578,
+            "k": 2.3654179580044,
+            "v": 0.3022117080981843
+          },
+          "seconds_including_comparisons": 9.520790375012439,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "block_resample",
+      "versions": {
+        "412": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.011436638422310352
+          ],
+          "conversion_seconds_including_copy": 3.750319592654705e-07,
+          "role_dynamic_seconds": {
+            "q": 0.635409501963295,
+            "k": 0.5825271230423823,
+            "v": 0.07241750095272437
+          },
+          "seconds_including_comparisons": 3.205179875018075,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.22545952279337747,
+            0.3179453720846561,
+            0.4142814456839109,
+            0.3731988008309022,
+            0.2521897981958688
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7125134,
+            "k": 800204,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.014867874968331307,
+          "role_dynamic_seconds": {
+            "q": 0.5623992509790696,
+            "k": 0.5551709999563172,
+            "v": 0.07589612400624901
+          },
+          "seconds_including_comparisons": 2.9306797920144163,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "paired",
+      "versions": {
+        "412": {
+          "scores": [
+            0.8328817358783446,
+            0.7563456854824321,
+            0.636087182679908,
+            0.4055262322355889,
+            0.3391865530996339
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.0014895597705617547,
+            0.0015144654316827655
+          ],
+          "conversion_seconds_including_copy": 4.1601015254855156e-07,
+          "role_dynamic_seconds": {
+            "q": 1.162871207925491,
+            "k": 0.4330714169773273,
+            "v": 0.41278854000847787
+          },
+          "seconds_including_comparisons": 4.9118835420231335,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.8254793697619286,
+            0.7470815736583981,
+            0.6277997778078249,
+            0.39340926285290495,
+            0.31853293897175705
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7912572,
+            "k": 1978103,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.032132624997757375,
+          "role_dynamic_seconds": {
+            "q": 0.9531078740837984,
+            "k": 0.23246354097500443,
+            "v": 0.24433950014645234
+          },
+          "seconds_including_comparisons": 3.294182041019667,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "row_permute",
+      "versions": {
+        "412": {
+          "scores": [
+            0.7582756991561972,
+            0.634714465229547,
+            0.4709122492265654,
+            0.07772485159057711,
+            -0.3449434394267261
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.008096064440906048,
+            0.22161318361759186
+          ],
+          "conversion_seconds_including_copy": 1.2497184798121452e-07,
+          "role_dynamic_seconds": {
+            "q": 0.4195413750130683,
+            "k": 0.22467395797139034,
+            "v": 0.23983379104174674
+          },
+          "seconds_including_comparisons": 2.532576958008576,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.8251160682532117,
+            0.7453357955790213,
+            0.6208592238005961,
+            0.3893783563071035,
+            0.30816718567453866
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7912929,
+            "k": 1977410,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.036330040951725096,
+          "role_dynamic_seconds": {
+            "q": 1.157155083026737,
+            "k": 0.44376483402447775,
+            "v": 0.3216034169308841
+          },
+          "seconds_including_comparisons": 4.997600415954366,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "block_resample",
+      "versions": {
+        "412": {
+          "scores": [
+            0.8191761354127881,
+            0.7356458856318021,
+            0.6036379427951009,
+            0.35620166127445274,
+            0.252208467030385
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.012769839726388454,
+            0.013155057094991207
+          ],
+          "conversion_seconds_including_copy": 4.159519448876381e-07,
+          "role_dynamic_seconds": {
+            "q": 0.3982203329796903,
+            "k": 0.12958333501592278,
+            "v": 0.07601687405258417
+          },
+          "seconds_including_comparisons": 1.5599274589912966,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.8018949406284608,
+            0.7141639834378735,
+            0.5782373510898718,
+            0.31423688800564403,
+            0.1801996799527911
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 7912952,
+            "k": 1977371,
+            "v": 0
+          },
+          "compatibility": [
+            0.0,
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.005082792020402849,
+          "role_dynamic_seconds": {
+            "q": 0.42818495904793963,
+            "k": 0.14366504090139642,
+            "v": 0.09505983302369714
+          },
+          "seconds_including_comparisons": 1.727076459035743,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "paired",
+      "versions": {
+        "412": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            1.0054463928099722e-06
+          ],
+          "conversion_seconds_including_copy": 5.00003807246685e-07,
+          "role_dynamic_seconds": {
+            "q": 2.2152413329458795,
+            "k": 0.39656504103913903,
+            "v": 0.14862045896006748
+          },
+          "seconds_including_comparisons": 6.151061416021548,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.3443843972948219,
+            0.48847742535389665,
+            0.47262999846715303,
+            0.5150404311051435,
+            0.46323473040550794
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 15852224,
+            "k": 1981088,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.013152958010323346,
+          "role_dynamic_seconds": {
+            "q": 1.1096108339261264,
+            "k": 0.16084050008794293,
+            "v": 0.10859974898630753
+          },
+          "seconds_including_comparisons": 3.44729208300123,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "versions": {
+        "412": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            1.5254267454147339
+          ],
+          "conversion_seconds_including_copy": 3.750319592654705e-07,
+          "role_dynamic_seconds": {
+            "q": 1.0680050820228644,
+            "k": 0.14168604201404378,
+            "v": 0.08840066700940952
+          },
+          "seconds_including_comparisons": 3.150845416006632,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.35704248579265835,
+            0.5174873246605466,
+            0.4815836999664078,
+            0.5140871733421558,
+            0.46207686309183904
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 9435593,
+            "k": 1981118,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.007982457987964153,
+          "role_dynamic_seconds": {
+            "q": 0.7550326249329373,
+            "k": 0.12055141595192254,
+            "v": 0.06932720803888515
+          },
+          "seconds_including_comparisons": 2.4870498329983093,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "versions": {
+        "412": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          },
+          "compatibility": [
+            0.36704885959625244
+          ],
+          "conversion_seconds_including_copy": 6.249756552278996e-07,
+          "role_dynamic_seconds": {
+            "q": 0.808968331955839,
+            "k": 0.10325687500881031,
+            "v": 0.08183625095989555
+          },
+          "seconds_including_comparisons": 2.590781833976507,
+          "metric_fallback": {
+            "q": null,
+            "k": null
+          }
+        },
+        "417": {
+          "scores": [
+            0.19508610591297443,
+            0.19904286835271412,
+            0.22167037920024527,
+            0.24828256957542952,
+            0.16754664582505502
+          ],
+          "checks": 15,
+          "changed": {
+            "q": 15851706,
+            "k": 1981085,
+            "v": 0
+          },
+          "compatibility": [
+            0.0
+          ],
+          "conversion_seconds_including_copy": 0.014030749967787415,
+          "role_dynamic_seconds": {
+            "q": 0.8088152069831267,
+            "k": 0.11218420905061066,
+            "v": 0.08216512406943366
+          },
+          "seconds_including_comparisons": 2.6387370000011288,
+          "metric_fallback": {
+            "q": false,
+            "k": false
+          }
+        }
+      }
+    }
+  ],
+  "warning": "Unknown judge decoys. Paired and corruption modes are diagnostics, not online distribution. Top-level linear compatibility excludes temperature and K translation. Timings include comparisons.",
+  "hashes": {
+    "412": "6c6d384ab915194efb23cdb317aa83bce80f60aa3163822764cde6ecb9b723d3",
+    "417": "bf26df17b8b91170931d40bcd1074cde37b94b30bc3c240ae011580e8084ad35"
+  }
+}

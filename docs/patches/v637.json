@@ -1,0 +1,13 @@
+{
+  "version": 637,
+  "parent": 636,
+  "parent_sha256": "9d23be89e9e9726dc8ceed41ebd2c76794ac6509600d13f2a9f2406307e3de06",
+  "summary": "v636 plus _LINEAR_BALANCE_EXPONENT 0.44 -> 0.30, re-tuned after the transform block changed. Official wide group 0.573123 -> 0.577696, mirror 0.760204 -> 0.760705, both up. Adding the weight/wide scale-grid widenings made it worse when combined, so they are excluded.",
+  "patches": [
+    [
+      "_LINEAR_BALANCE_EXPONENT = 0.44\n",
+      "# v637: re-tuned after the block size change. The response is not monotone\n# (0.20 -> .5725, 0.25 -> .5741, 0.30 -> .5777, 0.44 -> .5731, 0.60 -> .5747 on the\n# official wide group), and 0.30 is the best on both banks.\n_LINEAR_BALANCE_EXPONENT = 0.30\n"
+    ]
+  ],
+  "append": []
+}

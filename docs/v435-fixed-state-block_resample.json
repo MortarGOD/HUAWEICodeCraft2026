@@ -1,0 +1,155 @@
+{
+  "completed": true,
+  "groups": [
+    0,
+    24,
+    49
+  ],
+  "decoy": "block_resample",
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "delta": 0.004944105702828364,
+      "parent_mse": 1.5583518688799813e-06,
+      "child_mse": 1.5467056755369413e-06,
+      "baseline_mse": 2.355571268708445e-06,
+      "changed_v": 6
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "delta": 0.0037788185112984938,
+      "parent_mse": 2.2211033865460195e-06,
+      "child_mse": 2.200009021180449e-06,
+      "baseline_mse": 5.582264748227317e-06,
+      "changed_v": 16
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "delta": 0.004572241801841101,
+      "parent_mse": 2.634713837323943e-06,
+      "child_mse": 2.58891759585822e-06,
+      "baseline_mse": 1.0016146006819326e-05,
+      "changed_v": 14
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "delta": 0.008149841519435642,
+      "parent_mse": 7.747123163426295e-06,
+      "child_mse": 7.431711310346145e-06,
+      "baseline_mse": 3.870159343932755e-05,
+      "changed_v": 16
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "delta": 0.001334796396562317,
+      "parent_mse": 3.64481297765451e-06,
+      "child_mse": 3.621188625402283e-06,
+      "baseline_mse": 1.7698843294056132e-05,
+      "changed_v": 8
+    },
+    {
+      "group": 24,
+      "test": 0,
+      "delta": 0.0004901368740570356,
+      "parent_mse": 3.3036476452252828e-06,
+      "child_mse": 3.296513114037225e-06,
+      "baseline_mse": 1.4556201676896308e-05,
+      "changed_v": 8
+    },
+    {
+      "group": 24,
+      "test": 1,
+      "delta": 0.0024250292449444696,
+      "parent_mse": 2.3735215108899865e-06,
+      "child_mse": 2.354591970288311e-06,
+      "baseline_mse": 7.805901987012476e-06,
+      "changed_v": 12
+    },
+    {
+      "group": 24,
+      "test": 2,
+      "delta": 0.001240460965289539,
+      "parent_mse": 2.9211132641648874e-06,
+      "child_mse": 2.907793714257423e-06,
+      "baseline_mse": 1.073758085112786e-05,
+      "changed_v": 8
+    },
+    {
+      "group": 24,
+      "test": 3,
+      "delta": 0.0008926256726512221,
+      "parent_mse": 4.909642484562937e-06,
+      "child_mse": 4.885404450760689e-06,
+      "baseline_mse": 2.7153637347510085e-05,
+      "changed_v": 12
+    },
+    {
+      "group": 24,
+      "test": 4,
+      "delta": 0.0034579758093444585,
+      "parent_mse": 7.544481377408374e-06,
+      "child_mse": 7.3817918746499345e-06,
+      "baseline_mse": 4.704761158791371e-05,
+      "changed_v": 8
+    },
+    {
+      "group": 49,
+      "test": 0,
+      "delta": -0.0014937171790658896,
+      "parent_mse": 0.006679643411189318,
+      "child_mse": 0.006679754704236984,
+      "baseline_mse": 7.450744305970147e-05,
+      "changed_v": 6
+    },
+    {
+      "group": 49,
+      "test": 1,
+      "delta": -0.00821089244839885,
+      "parent_mse": 0.00439446372911334,
+      "child_mse": 0.0043946560472249985,
+      "baseline_mse": 2.3422315280186012e-05,
+      "changed_v": 14
+    },
+    {
+      "group": 49,
+      "test": 2,
+      "delta": 0.004303467034296567,
+      "parent_mse": 0.005193497985601425,
+      "child_mse": 0.005193299613893032,
+      "baseline_mse": 4.6095789002720267e-05,
+      "changed_v": 12
+    },
+    {
+      "group": 49,
+      "test": 3,
+      "delta": -0.0027318073903728275,
+      "parent_mse": 0.009382117539644241,
+      "child_mse": 0.009382477961480618,
+      "baseline_mse": 0.00013193530321586877,
+      "changed_v": 15
+    },
+    {
+      "group": 49,
+      "test": 4,
+      "delta": 1.4168266315588835e-05,
+      "parent_mse": 0.005001446697860956,
+      "child_mse": 0.005001446232199669,
+      "baseline_mse": 3.286649734945968e-05,
+      "changed_v": 10
+    }
+  ],
+  "note": "One parent role-isolated calibration per group; V-only fixed-state attribution, not independent full calibration.",
+  "source_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "summary": {
+    "cases": 15,
+    "delta": 0.02316725078102723,
+    "better": 12,
+    "worse": 3,
+    "equal": 0
+  }
+}

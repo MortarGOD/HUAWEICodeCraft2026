@@ -1,0 +1,233 @@
+{
+  "saturated_joint_barrier": {
+    "parent_sse": 4.0,
+    "single_coordinate_sse": [
+      6.0625,
+      4.0625,
+      6.0625,
+      4.0625
+    ],
+    "joint_sse": 2.25,
+    "proposed_rows": 1,
+    "accepted_rows": 1,
+    "before_folds": [
+      8.0,
+      8.0
+    ],
+    "after_folds": [
+      4.5,
+      4.5
+    ],
+    "sf_lv2_fixed": true,
+    "maximum_changed_microgroups_per_output": 1,
+    "input_state_rng_unchanged": true
+  },
+  "memory_and_gemm_shape": {
+    "output_chunks": [
+      128,
+      128,
+      1
+    ],
+    "full_bf16_output_width": 257,
+    "sequence_rows_preserved": [
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "fallback_and_stale_state": {
+    "down_parent_exact": true,
+    "exception_parent_exact": true,
+    "stale_projection_and_full_gram_replaced": true,
+    "stale_super_state_removed": true,
+    "nonfinite_recompiled_micro_inverse_rejected": true
+  },
+  "real_synthetic_pipeline": {
+    "cases": [
+      {
+        "seed": 425,
+        "fp32_proposed_rows": 88,
+        "fixed_z_bf16_accepted_rows": 85,
+        "fixed_z_before_fold_sum": [
+          0.01286848820745945,
+          0.01397716999053955
+        ],
+        "fixed_z_after_fold_sum": [
+          0.011605007573962212,
+          0.012595616281032562
+        ],
+        "reencoded_guard_before": [
+          38.6553840637207,
+          30.59619140625
+        ],
+        "reencoded_guard_after": [
+          39.89308166503906,
+          31.805458068847656
+        ],
+        "accepted": false,
+        "maximum_changed_microgroups_per_output": 1
+      },
+      {
+        "seed": 4251,
+        "fp32_proposed_rows": 84,
+        "fixed_z_bf16_accepted_rows": 82,
+        "fixed_z_before_fold_sum": [
+          0.01574571430683136,
+          0.013732788152992725
+        ],
+        "fixed_z_after_fold_sum": [
+          0.014467116445302963,
+          0.012306854128837585
+        ],
+        "reencoded_guard_before": [
+          28.77415657043457,
+          39.8556022644043
+        ],
+        "reencoded_guard_after": [
+          32.21564865112305,
+          41.05865478515625
+        ],
+        "accepted": false,
+        "maximum_changed_microgroups_per_output": 1
+      },
+      {
+        "seed": 4252,
+        "fp32_proposed_rows": 77,
+        "fixed_z_bf16_accepted_rows": 77,
+        "fixed_z_before_fold_sum": [
+          0.014962784014642239,
+          0.015364071354269981
+        ],
+        "fixed_z_after_fold_sum": [
+          0.01379887480288744,
+          0.014113564975559711
+        ],
+        "reencoded_guard_before": [
+          30.740942001342773,
+          35.825870513916016
+        ],
+        "reencoded_guard_after": [
+          32.9397087097168,
+          37.893348693847656
+        ],
+        "accepted": false,
+        "maximum_changed_microgroups_per_output": 1
+      },
+      {
+        "seed": 4253,
+        "fp32_proposed_rows": 86,
+        "fixed_z_bf16_accepted_rows": 83,
+        "fixed_z_before_fold_sum": [
+          0.01402686070650816,
+          0.013872778974473476
+        ],
+        "fixed_z_after_fold_sum": [
+          0.012919876724481583,
+          0.012581507675349712
+        ],
+        "reencoded_guard_before": [
+          36.11676025390625,
+          32.984745025634766
+        ],
+        "reencoded_guard_after": [
+          35.9315299987793,
+          36.98579025268555
+        ],
+        "accepted": false,
+        "maximum_changed_microgroups_per_output": 1
+      },
+      {
+        "seed": 4254,
+        "fp32_proposed_rows": 78,
+        "fixed_z_bf16_accepted_rows": 78,
+        "fixed_z_before_fold_sum": [
+          0.01366348285228014,
+          0.012644018977880478
+        ],
+        "fixed_z_after_fold_sum": [
+          0.01250573992729187,
+          0.01169023010879755
+        ],
+        "reencoded_guard_before": [
+          36.242530822753906,
+          29.869836807250977
+        ],
+        "reencoded_guard_after": [
+          39.67192459106445,
+          33.7470703125
+        ],
+        "accepted": false,
+        "maximum_changed_microgroups_per_output": 1
+      },
+      {
+        "seed": 4255,
+        "fp32_proposed_rows": 74,
+        "fixed_z_bf16_accepted_rows": 70,
+        "fixed_z_before_fold_sum": [
+          0.014369119890034199,
+          0.014406508766114712
+        ],
+        "fixed_z_after_fold_sum": [
+          0.013359766453504562,
+          0.013110795989632607
+        ],
+        "reencoded_guard_before": [
+          38.57123565673828,
+          32.338897705078125
+        ],
+        "reencoded_guard_after": [
+          37.900753021240234,
+          31.105716705322266
+        ],
+        "accepted": true,
+        "maximum_changed_microgroups_per_output": 1
+      }
+    ],
+    "real_search_installer_public_dynamic_guard": true,
+    "no_algorithm_results_mocked": true,
+    "refreshed_state_valid": true,
+    "parent_input_state_and_extra_rng_unchanged": true,
+    "fresh_module_replay_equal": true,
+    "scope": "Six small synthetic draws retained, including five rejects; selected to cover both branches, not evidence of unseen quality."
+  },
+  "bf16_tie_rejection": {
+    "float_sse_before": 4.0,
+    "float_sse_after": 2.25,
+    "actual_bf16_outputs_equal": true,
+    "proposed_rows": 1,
+    "accepted_rows": 0
+  },
+  "budget_guards": {
+    "cases": 6,
+    "extra_dynamic_and_search_calls": 0,
+    "overbudget_final_sequence_not_truncated": true
+  },
+  "scope": {
+    "parent_byte_prefix": true,
+    "public_dynamic_and_attention_unchanged": true,
+    "new_imports": [],
+    "new_global_state": false
+  },
+  "quadratic_and_upper_bound": {
+    "direct_float64_identity": true,
+    "max_fp32_increment_error": 4.959944635629654e-05,
+    "minimum_upper_bound_margin": 14.494974887464195,
+    "nonzero_within_group_cross_terms": true,
+    "shortlist_count": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "summary": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "source_sha256": "a6e53f37abf2c7c51c99e6439df3e554fa57d75fbdc99f0c12f780a9e5691fcb",
+    "scope": "Synthetic mechanisms, legal parameters, complete small API paths; no official self-check or local model bank."
+  }
+}

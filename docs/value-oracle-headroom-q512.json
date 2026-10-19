@@ -1,0 +1,356 @@
+{
+  "complete": true,
+  "deployable": false,
+  "queries": 512,
+  "data": "checkpoint-derived modeled activations",
+  "rows": [
+    {
+      "group": 0,
+      "tokens": 2048,
+      "baseline": 0.21013143658638,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                0.010747949592769146,
+                0.007330503314733505
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                0.009320187382400036,
+                0.007006416562944651
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                0.007729132194072008,
+                0.006797009147703648
+              ]
+            }
+          ],
+          "final_output_ratio": 0.6102632880210876,
+          "heldout_ratio": 0.6127684712409973
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                0.034177493304014206,
+                0.032136593014001846
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                0.03292490169405937,
+                0.03168141841888428
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                0.03151145204901695,
+                0.03140462934970856
+              ]
+            }
+          ],
+          "final_output_ratio": 0.6070034503936768,
+          "heldout_ratio": 0.6131340265274048
+        }
+      },
+      "seconds": 2.3841989999637008
+    },
+    {
+      "group": 1,
+      "tokens": 2048,
+      "baseline": 5.598997116088867,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                0.9652619957923889
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                0.6063235998153687
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                0.38378608226776123
+              ]
+            }
+          ],
+          "final_output_ratio": 0.718793511390686,
+          "heldout_ratio": 0.7265217900276184
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                2.486997365951538
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                2.115783214569092
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                1.8000668287277222
+              ]
+            }
+          ],
+          "final_output_ratio": 0.6804380416870117,
+          "heldout_ratio": 0.7137824296951294
+        }
+      },
+      "seconds": 3.0081824579974636
+    },
+    {
+      "group": 5,
+      "tokens": 2048,
+      "baseline": 38.26006317138672,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                10.914350509643555,
+                0.6984637975692749
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                9.693765640258789,
+                0.47145554423332214
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                8.0723876953125,
+                0.29582321643829346
+              ]
+            }
+          ],
+          "final_output_ratio": 1.8049073219299316,
+          "heldout_ratio": 2.817786693572998
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                15.351910591125488,
+                2.8836498260498047
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                13.320454597473145,
+                2.518333911895752
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                10.921051025390625,
+                2.095219612121582
+              ]
+            }
+          ],
+          "final_output_ratio": 1.6782376766204834,
+          "heldout_ratio": 2.6864192485809326
+        }
+      },
+      "seconds": 2.1892756660236046
+    },
+    {
+      "group": 14,
+      "tokens": 2048,
+      "baseline": 6792.611328125,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                3136.15234375
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                2724.863037109375
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                1928.424560546875
+              ]
+            }
+          ],
+          "final_output_ratio": 0.614272952079773,
+          "heldout_ratio": 0.6126223206520081
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                3293.8310546875
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                2878.32861328125
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                2073.88134765625
+              ]
+            }
+          ],
+          "final_output_ratio": 0.6106999516487122,
+          "heldout_ratio": 0.6088883280754089
+        }
+      },
+      "seconds": 2.4810457919957116
+    },
+    {
+      "group": 19,
+      "tokens": 2048,
+      "baseline": 9393.05078125,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                4156.07421875
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                3704.9716796875
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                2836.631591796875
+              ]
+            }
+          ],
+          "final_output_ratio": 0.688221275806427,
+          "heldout_ratio": 0.6952632069587708
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                4386.259765625
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                3923.679443359375
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                3041.005859375
+              ]
+            }
+          ],
+          "final_output_ratio": 0.6760096549987793,
+          "heldout_ratio": 0.6836503148078918
+        }
+      },
+      "seconds": 2.6959095419733785
+    },
+    {
+      "group": 49,
+      "tokens": 2048,
+      "baseline": 539082.0,
+      "modes": {
+        "curvature_only": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                88836.2890625
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                88572.875
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                88245.203125
+              ]
+            }
+          ],
+          "final_output_ratio": 0.9950319528579712,
+          "heldout_ratio": 0.9953064918518066
+        },
+        "full_output": {
+          "history": [
+            {
+              "rounds": 1,
+              "loss": [
+                263715.5625
+              ]
+            },
+            {
+              "rounds": 8,
+              "loss": [
+                263069.75
+              ]
+            },
+            {
+              "rounds": 32,
+              "loss": [
+                262585.5625
+              ]
+            }
+          ],
+          "final_output_ratio": 0.9925011396408081,
+          "heldout_ratio": 0.9971546530723572
+        }
+      },
+      "seconds": 2.5028435419662856
+    }
+  ]
+}

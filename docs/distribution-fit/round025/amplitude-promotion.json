@@ -1,0 +1,90 @@
+{
+  "stage": "amplitude_after_all_directions",
+  "certificate_sha256": "dac082612e781cddfc4165f94da0267d9cbeb5f7dcf40025649564777912029d",
+  "current_verified_directions": 98,
+  "current_verified_amplitude_matches": 61,
+  "candidates": [
+    {
+      "population": "round025/test-only-gain05",
+      "test": 3,
+      "tokens": 128,
+      "price": 167.45327767198393,
+      "required_lower_bound": 132.13023347652137,
+      "margin": 35.32304419546256
+    },
+    {
+      "population": "round025/calib-only-gain05",
+      "test": 1,
+      "tokens": 8,
+      "price": 149.0230113709023,
+      "required_lower_bound": 132.13023347652137,
+      "margin": 16.89277789438094
+    },
+    {
+      "population": "round025/calib-only-gain05",
+      "test": 4,
+      "tokens": 512,
+      "price": 143.21286646434928,
+      "required_lower_bound": 132.13023347652137,
+      "margin": 11.082632987827907
+    },
+    {
+      "population": "round025/test-only-gain05",
+      "test": 4,
+      "tokens": 512,
+      "price": 83.78336245251538,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -48.34687102400599
+    },
+    {
+      "population": "round025/test-only-gain05",
+      "test": 1,
+      "tokens": 8,
+      "price": 33.225400159628556,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -98.90483331689282
+    },
+    {
+      "population": "round025/calib-only-gain05",
+      "test": 3,
+      "tokens": 128,
+      "price": 6.712491646186582,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -125.41774183033479
+    },
+    {
+      "population": "round025/calib-only-gain05",
+      "test": 0,
+      "tokens": 4,
+      "price": -3.561645640250436,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -135.69187911677182
+    },
+    {
+      "population": "round025/calib-only-gain05",
+      "test": 2,
+      "tokens": 32,
+      "price": -24.21123044695116,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -156.34146392347253
+    },
+    {
+      "population": "round025/test-only-gain05",
+      "test": 0,
+      "tokens": 4,
+      "price": -56.80445015318473,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -188.93468362970611
+    },
+    {
+      "population": "round025/test-only-gain05",
+      "test": 2,
+      "tokens": 32,
+      "price": -100.7544114034616,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -232.88464487998297
+    }
+  ],
+  "action": "Complete all 102 version cells for both drift populations, then jointly optimize with directions hard constrained.",
+  "limits": "Positive fixed-certificate pricing does not prove final feasibility or improvement."
+}

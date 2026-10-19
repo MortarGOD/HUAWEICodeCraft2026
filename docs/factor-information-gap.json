@@ -1,0 +1,426 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "group": 0,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 0.6752385497093201,
+          "heldout_query_ratio": 0.6791785359382629,
+          "mean_probability_l1": 0.02021591179072857,
+          "normalized_concentration": 1.0111405849456787,
+          "search_objective_ratio": 0.9575112462043762
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.6750209331512451,
+          "heldout_query_ratio": 0.6795148849487305,
+          "mean_probability_l1": 0.025489797815680504,
+          "normalized_concentration": 1.0165586471557617,
+          "search_objective_ratio": 0.9559141993522644
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.6750209331512451,
+          "heldout_query_ratio": 0.6795148849487305,
+          "mean_probability_l1": 0.025489797815680504,
+          "normalized_concentration": 1.0165586471557617,
+          "search_objective_ratio": 0.9559141993522644
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.6616243124008179,
+          "heldout_query_ratio": 0.6673023700714111,
+          "mean_probability_l1": 0.003912675194442272,
+          "normalized_concentration": 1.017565131187439,
+          "search_objective_ratio": 0.9594793915748596
+        }
+      }
+    },
+    {
+      "group": 0,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 0.6492152810096741,
+          "heldout_query_ratio": 0.6487424969673157,
+          "mean_probability_l1": 0.019470620900392532,
+          "normalized_concentration": 1.011054515838623,
+          "search_objective_ratio": 0.9555361270904541
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.6503713726997375,
+          "heldout_query_ratio": 0.650589644908905,
+          "mean_probability_l1": 0.024698901921510696,
+          "normalized_concentration": 1.016466498374939,
+          "search_objective_ratio": 0.9544531106948853
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.6503713726997375,
+          "heldout_query_ratio": 0.650589644908905,
+          "mean_probability_l1": 0.024698901921510696,
+          "normalized_concentration": 1.016466498374939,
+          "search_objective_ratio": 0.9544531106948853
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.6378346085548401,
+          "heldout_query_ratio": 0.6384214162826538,
+          "mean_probability_l1": 0.00488932803273201,
+          "normalized_concentration": 1.017719030380249,
+          "search_objective_ratio": 0.9566546082496643
+        }
+      }
+    },
+    {
+      "group": 1,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 0.9285507202148438,
+          "heldout_query_ratio": 0.9318788051605225,
+          "mean_probability_l1": 0.1486441195011139,
+          "normalized_concentration": 1.6062736511230469,
+          "search_objective_ratio": 0.6387736797332764
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.9324780702590942,
+          "heldout_query_ratio": 0.9354507923126221,
+          "mean_probability_l1": 0.15770217776298523,
+          "normalized_concentration": 1.6797926425933838,
+          "search_objective_ratio": 0.6149592399597168
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.9324780702590942,
+          "heldout_query_ratio": 0.9354507923126221,
+          "mean_probability_l1": 0.15770217776298523,
+          "normalized_concentration": 1.6797926425933838,
+          "search_objective_ratio": 0.6149592399597168
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.8281599879264832,
+          "heldout_query_ratio": 0.8416290879249573,
+          "mean_probability_l1": 0.015565291047096252,
+          "normalized_concentration": 1.6967073678970337,
+          "search_objective_ratio": 0.7865092158317566
+        }
+      }
+    },
+    {
+      "group": 1,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 0.9162818193435669,
+          "heldout_query_ratio": 0.9158147573471069,
+          "mean_probability_l1": 0.14283689856529236,
+          "normalized_concentration": 1.6085820198059082,
+          "search_objective_ratio": 0.6111906170845032
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.9198369979858398,
+          "heldout_query_ratio": 0.9196671843528748,
+          "mean_probability_l1": 0.1507597267627716,
+          "normalized_concentration": 1.679274559020996,
+          "search_objective_ratio": 0.5875189900398254
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.9198369979858398,
+          "heldout_query_ratio": 0.9196671843528748,
+          "mean_probability_l1": 0.1507597267627716,
+          "normalized_concentration": 1.679274559020996,
+          "search_objective_ratio": 0.5875189900398254
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.803955078125,
+          "heldout_query_ratio": 0.8194431662559509,
+          "mean_probability_l1": 0.015138445422053337,
+          "normalized_concentration": 1.7570176124572754,
+          "search_objective_ratio": 0.7443529963493347
+        }
+      }
+    },
+    {
+      "group": 5,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.1485421657562256,
+          "heldout_query_ratio": 1.1757864952087402,
+          "mean_probability_l1": 0.21245937049388885,
+          "normalized_concentration": 2.104996681213379,
+          "search_objective_ratio": 0.4632842242717743
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 1.165874719619751,
+          "heldout_query_ratio": 1.1592096090316772,
+          "mean_probability_l1": 0.2679283618927002,
+          "normalized_concentration": 3.2317910194396973,
+          "search_objective_ratio": 0.3459923565387726
+        },
+        "prototype_exact": {
+          "final_output_ratio": 1.165874719619751,
+          "heldout_query_ratio": 1.1592096090316772,
+          "mean_probability_l1": 0.2679283618927002,
+          "normalized_concentration": 3.2317910194396973,
+          "search_objective_ratio": 0.3459923565387726
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.995232105255127,
+          "heldout_query_ratio": 1.1342813968658447,
+          "mean_probability_l1": 0.06946496665477753,
+          "normalized_concentration": 17.89540672302246,
+          "search_objective_ratio": 0.8044437766075134
+        }
+      }
+    },
+    {
+      "group": 5,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.1038060188293457,
+          "heldout_query_ratio": 1.1275373697280884,
+          "mean_probability_l1": 0.20353269577026367,
+          "normalized_concentration": 2.088773727416992,
+          "search_objective_ratio": 0.4789467751979828
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 1.1932108402252197,
+          "heldout_query_ratio": 1.2034062147140503,
+          "mean_probability_l1": 0.26214540004730225,
+          "normalized_concentration": 3.141662120819092,
+          "search_objective_ratio": 0.36449697613716125
+        },
+        "prototype_exact": {
+          "final_output_ratio": 1.1932108402252197,
+          "heldout_query_ratio": 1.2034062147140503,
+          "mean_probability_l1": 0.26214540004730225,
+          "normalized_concentration": 3.141662120819092,
+          "search_objective_ratio": 0.36449697613716125
+        },
+        "actual_queries": {
+          "final_output_ratio": 1.2410247325897217,
+          "heldout_query_ratio": 1.6022610664367676,
+          "mean_probability_l1": 0.06369970738887787,
+          "normalized_concentration": 18.46857452392578,
+          "search_objective_ratio": 0.8285595178604126
+        }
+      }
+    },
+    {
+      "group": 14,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.0878913402557373,
+          "heldout_query_ratio": 1.0878782272338867,
+          "mean_probability_l1": 1.1218516826629639,
+          "normalized_concentration": 2.0613441467285156,
+          "search_objective_ratio": 0.3251635730266571
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.8766014575958252,
+          "heldout_query_ratio": 0.8771700263023376,
+          "mean_probability_l1": 0.13751691579818726,
+          "normalized_concentration": 605.2392578125,
+          "search_objective_ratio": 0.8204523921012878
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.8766014575958252,
+          "heldout_query_ratio": 0.8771700263023376,
+          "mean_probability_l1": 0.13751691579818726,
+          "normalized_concentration": 605.2392578125,
+          "search_objective_ratio": 0.8204523921012878
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.8576498627662659,
+          "heldout_query_ratio": 0.8588277697563171,
+          "mean_probability_l1": 0.00805292371660471,
+          "normalized_concentration": 707.6314697265625,
+          "search_objective_ratio": 0.8589513897895813
+        }
+      }
+    },
+    {
+      "group": 14,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.193678617477417,
+          "heldout_query_ratio": 1.1948267221450806,
+          "mean_probability_l1": 1.1332764625549316,
+          "normalized_concentration": 1.8025188446044922,
+          "search_objective_ratio": 0.388630211353302
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.8713397979736328,
+          "heldout_query_ratio": 0.8709584474563599,
+          "mean_probability_l1": 0.10726311802864075,
+          "normalized_concentration": 736.6351318359375,
+          "search_objective_ratio": 0.8324306607246399
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.8713397979736328,
+          "heldout_query_ratio": 0.8709584474563599,
+          "mean_probability_l1": 0.10726311802864075,
+          "normalized_concentration": 736.6351318359375,
+          "search_objective_ratio": 0.8324306607246399
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.8549445867538452,
+          "heldout_query_ratio": 0.8558375239372253,
+          "mean_probability_l1": 0.009858831763267517,
+          "normalized_concentration": 704.0709838867188,
+          "search_objective_ratio": 0.8539907336235046
+        }
+      }
+    },
+    {
+      "group": 19,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.1341898441314697,
+          "heldout_query_ratio": 1.1349173784255981,
+          "mean_probability_l1": 1.1311066150665283,
+          "normalized_concentration": 2.181492567062378,
+          "search_objective_ratio": 0.29614126682281494
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.8635239005088806,
+          "heldout_query_ratio": 0.8624840378761292,
+          "mean_probability_l1": 0.12177897989749908,
+          "normalized_concentration": 767.4033813476562,
+          "search_objective_ratio": 0.8208563327789307
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.8635239005088806,
+          "heldout_query_ratio": 0.8624840378761292,
+          "mean_probability_l1": 0.12177897989749908,
+          "normalized_concentration": 767.4033813476562,
+          "search_objective_ratio": 0.8208563327789307
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.8442264795303345,
+          "heldout_query_ratio": 0.8445705771446228,
+          "mean_probability_l1": 0.008302813395857811,
+          "normalized_concentration": 708.0675048828125,
+          "search_objective_ratio": 0.8458347916603088
+        }
+      }
+    },
+    {
+      "group": 19,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 1.071103572845459,
+          "heldout_query_ratio": 1.070928931236267,
+          "mean_probability_l1": 1.1168289184570312,
+          "normalized_concentration": 2.141957998275757,
+          "search_objective_ratio": 0.27904993295669556
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 0.8844375014305115,
+          "heldout_query_ratio": 0.8826972246170044,
+          "mean_probability_l1": 0.2411847710609436,
+          "normalized_concentration": 1014.029541015625,
+          "search_objective_ratio": 0.9066213965415955
+        },
+        "prototype_exact": {
+          "final_output_ratio": 0.8844375014305115,
+          "heldout_query_ratio": 0.8826972246170044,
+          "mean_probability_l1": 0.2411847710609436,
+          "normalized_concentration": 1014.029541015625,
+          "search_objective_ratio": 0.9066213965415955
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.8762100338935852,
+          "heldout_query_ratio": 0.8745365142822266,
+          "mean_probability_l1": 0.011190610006451607,
+          "normalized_concentration": 746.2518310546875,
+          "search_objective_ratio": 0.8816254734992981
+        }
+      }
+    },
+    {
+      "group": 49,
+      "split": "calibration_hold",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 21.10441017150879,
+          "heldout_query_ratio": 20.217697143554688,
+          "mean_probability_l1": 0.6133872270584106,
+          "normalized_concentration": 1028.11328125,
+          "search_objective_ratio": 0.7356377840042114
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 21.501508712768555,
+          "heldout_query_ratio": 21.383228302001953,
+          "mean_probability_l1": 0.8306019306182861,
+          "normalized_concentration": 1314.951416015625,
+          "search_objective_ratio": 0.7356327772140503
+        },
+        "prototype_exact": {
+          "final_output_ratio": 21.501508712768555,
+          "heldout_query_ratio": 21.383228302001953,
+          "mean_probability_l1": 0.8306019306182861,
+          "normalized_concentration": 1314.951416015625,
+          "search_objective_ratio": 0.7356327772140503
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.99601149559021,
+          "heldout_query_ratio": 0.996120810508728,
+          "mean_probability_l1": 0.08055064082145691,
+          "normalized_concentration": 1077.97509765625,
+          "search_objective_ratio": 0.9831753969192505
+        }
+      }
+    },
+    {
+      "group": 49,
+      "split": "test_last",
+      "tokens": 2048,
+      "modes": {
+        "student": {
+          "final_output_ratio": 15.37006950378418,
+          "heldout_query_ratio": 16.788204193115234,
+          "mean_probability_l1": 0.7110786437988281,
+          "normalized_concentration": 885.2896728515625,
+          "search_objective_ratio": 0.6646963953971863
+        },
+        "prototype_exact_clipped": {
+          "final_output_ratio": 8.362473487854004,
+          "heldout_query_ratio": 8.754854202270508,
+          "mean_probability_l1": 0.6565232276916504,
+          "normalized_concentration": 1037.106201171875,
+          "search_objective_ratio": 0.7084265351295471
+        },
+        "prototype_exact": {
+          "final_output_ratio": 8.362473487854004,
+          "heldout_query_ratio": 8.754854202270508,
+          "mean_probability_l1": 0.6565232276916504,
+          "normalized_concentration": 1037.106201171875,
+          "search_objective_ratio": 0.7084265351295471
+        },
+        "actual_queries": {
+          "final_output_ratio": 0.9955117106437683,
+          "heldout_query_ratio": 0.995695173740387,
+          "mean_probability_l1": 0.06301663815975189,
+          "normalized_concentration": 1120.602783203125,
+          "search_objective_ratio": 0.9839361906051636
+        }
+      }
+    }
+  ],
+  "warning": "Offline oracle modes use current Q/K. Only student is deployable. Six groups, one hold and one test each; modeled activations, no online score inference."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 639,
+  "parent": 637,
+  "parent_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "patch_summary": "v637 plus a bounded Q/K bet: force only the QKS smoothing acceptance. q <- q*s, k <- k/s is exactly logits-preserving ((q*s).(k/s) = q.k), so it cannot corrupt the logits - it only redistributes quantization difficulty. Official sample 0.154586 -> 0.247073 and online_profiled_v2 0.610325 -> 0.631833, both up, with the gq and refinement guards left honest.",
+  "source_sha256": "ede5feab7c2d3b1cb3f7e343c4320238144c264c12652942d60fe787246e4ee1",
+  "archive_sha256": "979b0d6c7fa448778247b36a20fee4080bdc127b250dfb2ff2c23cd632d54351",
+  "archive_members": [
+    "solution.py"
+  ]
+}

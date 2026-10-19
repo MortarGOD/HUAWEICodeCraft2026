@@ -1,0 +1,134 @@
+{
+  "round": 25,
+  "atoms": [
+    {
+      "id": "qk-gain045",
+      "path": "local_distribution_fit/round025/qk-gain045.pt",
+      "sha256": "691f9ce740ff23eca7fa3f1148888aed42607e5486f65b6baf127997cb35d465",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.45,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "qk-gain055",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "calib-only-gain05",
+      "path": "local_distribution_fit/round025/calib-only-gain05.pt",
+      "sha256": "1c6f9d47b416f04d92d3a51545a0737e2525c5be7904baa78df2d215d53edf54",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "phases": [
+          "calib"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "test-only-gain05",
+      "path": "local_distribution_fit/round025/test-only-gain05.pt",
+      "sha256": "67e735b988cc119950b6bee7948ba26480167529459e5380bcb1624e23f62d68",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "phases": [
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    310,
+    314,
+    319,
+    320,
+    322,
+    330,
+    333,
+    335,
+    343,
+    344,
+    345,
+    365,
+    374,
+    378,
+    381,
+    382,
+    385,
+    386,
+    387,
+    389,
+    392,
+    393,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    408,
+    409,
+    412,
+    413,
+    414,
+    415,
+    416,
+    418,
+    419,
+    430,
+    435,
+    436,
+    438
+  ],
+  "acceptance_relative_tolerance": 0.15,
+  "selection_evidence": "The 500-column certificate is closest to the shared half-QK-scale population. Probe neighboring scales and calibration/test scale drift without changing V, decoy seed, targets, or per-version inputs.",
+  "limits": "Adaptive support search; screen against current fixed certificate before full 102-version evaluation. Positive screening does not prove joint feasibility."
+}

@@ -1,0 +1,15 @@
+{
+  "atoms": [
+    "round002-noise005-seed101",
+    "round002-noise005-seed202",
+    "round002-noise005-seed303",
+    "round025-noise005-seed101",
+    "round025-noise005-seed202",
+    "round025-noise005-seed303"
+  ],
+  "versions": 102,
+  "reused_verified_cells": 12,
+  "selection": "Both sources, all three predefined seed offsets at0.005. Stable observed rotation choice across seeds, not sorted by quality. Higher noise conditions preserved as future contrast.",
+  "acceptance": "Full raw source/data hash audit, then seed-group-shared weighting diagnostic before any accepted fit update. No per-seed cherry picking or predicted cells.",
+  "current_fit_unchanged": true
+}

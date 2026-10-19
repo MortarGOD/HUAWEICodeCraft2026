@@ -1,0 +1,352 @@
+{
+  "complete": true,
+  "group": 10,
+  "bank": "local_fitted_models_attention_feedback_v2",
+  "warning": "Role-separated calibration confirmed by user; decoy sources UNKNOWN. Both corruption types below are only sensitivity hypotheses.",
+  "rows": [
+    {
+      "version": 402,
+      "mode": "paired",
+      "scores": [
+        0.9439839547808706,
+        0.9357302258365504,
+        0.946407524521742,
+        0.9534042443488163,
+        0.9111314721238626
+      ],
+      "sum": 4.690657421611842,
+      "calibration_seconds": 2.2991625419817865,
+      "evaluate_seconds": 2.7955900829983875,
+      "format_checks": 15,
+      "debug": {
+        "paired": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "temperature_gain",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_probe",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "vr"
+        ]
+      }
+    },
+    {
+      "version": 402,
+      "mode": "row_permute",
+      "scores": [
+        0.9167901983890268,
+        0.9362788924392502,
+        0.9453802586985757,
+        0.9455392299041309,
+        0.9183824960261723
+      ],
+      "sum": 4.6623710754571555,
+      "calibration_seconds": 10.55357524997089,
+      "evaluate_seconds": 1.3551719579845667,
+      "format_checks": 15,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "v": [
+          "vr"
+        ]
+      }
+    },
+    {
+      "version": 402,
+      "mode": "block_resample",
+      "scores": [
+        0.9153992522254019,
+        0.9333450367260123,
+        0.9378943190344977,
+        0.9496316618094126,
+        0.9119734644150372
+      ],
+      "sum": 4.648243734210362,
+      "calibration_seconds": 4.562382709002122,
+      "evaluate_seconds": 1.1700166250229813,
+      "format_checks": 15,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "v": [
+          "vr"
+        ]
+      }
+    },
+    {
+      "version": 406,
+      "mode": "paired",
+      "scores": [
+        0.9474112180930255,
+        0.9448111071487331,
+        0.9547466267448596,
+        0.9582276953552905,
+        0.9247588238817034
+      ],
+      "sum": 4.729955471223612,
+      "calibration_seconds": 3.5257115840213373,
+      "evaluate_seconds": 4.251875291985925,
+      "format_checks": 15,
+      "debug": {
+        "paired": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.9464120268821716,
+            0.8741340637207031
+          ],
+          "changed_values": 218
+        }
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "temperature_gain",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_probe",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "dual_operator",
+          "fallback"
+        ]
+      }
+    },
+    {
+      "version": 406,
+      "mode": "row_permute",
+      "scores": [
+        0.9347828657627418,
+        0.9434127611576418,
+        0.9518813750986447,
+        0.9531221101828207,
+        0.9256753937056608
+      ],
+      "sum": 4.7088745059075094,
+      "calibration_seconds": 8.894499458023347,
+      "evaluate_seconds": 1.1048686249996535,
+      "format_checks": 15,
+      "debug": {
+        "q": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.8650444746017456,
+            0.8525531888008118
+          ],
+          "changed_values": 241
+        },
+        "k": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.8878768086433411,
+            0.8856160640716553
+          ],
+          "changed_values": 206
+        },
+        "v": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.9186450839042664,
+            0.8727344274520874
+          ],
+          "changed_values": 182
+        }
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "v": [
+          "dual_operator",
+          "fallback"
+        ]
+      }
+    },
+    {
+      "version": 406,
+      "mode": "block_resample",
+      "scores": [
+        0.9296707900687562,
+        0.9421684542991703,
+        0.9486560545509596,
+        0.953712593476597,
+        0.921254999595882
+      ],
+      "sum": 4.695462891991365,
+      "calibration_seconds": 7.285752666008193,
+      "evaluate_seconds": 3.1172152499784715,
+      "format_checks": 15,
+      "debug": {
+        "q": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.7904906868934631,
+            0.8561383485794067
+          ],
+          "changed_values": 248
+        },
+        "k": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.9225732088088989,
+            0.9392086267471313
+          ],
+          "changed_values": 169
+        },
+        "v": {
+          "accepted": 2,
+          "eligible": true,
+          "error": false,
+          "ratios": [
+            0.8554361462593079,
+            0.8597129583358765
+          ],
+          "changed_values": 208
+        }
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "v": [
+          "dual_operator",
+          "fallback"
+        ]
+      }
+    }
+  ]
+}

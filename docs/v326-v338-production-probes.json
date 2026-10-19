@@ -1,0 +1,409 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "version": 326,
+      "mode": "q_sharp",
+      "group": 14,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 0.6321763339801691,
+      "debug": {
+        "mode": "q_sharp",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9933763146400452
+          ],
+          [
+            0.9851874113082886
+          ]
+        ],
+        "hold_ratios": [
+          0.9892160296440125
+        ]
+      }
+    },
+    {
+      "version": 327,
+      "mode": "both_shrink",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.3471904170000926,
+      "debug": {
+        "mode": "both_shrink",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9563133120536804
+          ],
+          [
+            0.9307048320770264
+          ]
+        ],
+        "hold_ratios": [
+          0.9427472352981567
+        ]
+      }
+    },
+    {
+      "version": 328,
+      "mode": "q_flat",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.1535017089918256,
+      "debug": {
+        "mode": "q_flat",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9324356317520142
+          ],
+          [
+            0.9971327781677246
+          ]
+        ],
+        "hold_ratios": [
+          0.9667094349861145
+        ]
+      }
+    },
+    {
+      "version": 329,
+      "mode": "both_flat",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.2845004579867236,
+      "debug": {
+        "mode": "both_flat",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9017533659934998
+          ],
+          [
+            0.9217645525932312
+          ]
+        ],
+        "hold_ratios": [
+          0.9123544692993164
+        ]
+      }
+    },
+    {
+      "version": 330,
+      "mode": "key_sorted",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.3356575419893488,
+      "debug": {
+        "mode": "key_sorted",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            1.0524659156799316
+          ],
+          [
+            0.9135432839393616
+          ]
+        ],
+        "hold_ratios": [
+          0.9788711071014404
+        ]
+      }
+    },
+    {
+      "version": 331,
+      "mode": "query_sorted",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.1809305000351742,
+      "debug": {
+        "mode": "query_sorted",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9053751230239868
+          ],
+          [
+            1.007785677909851
+          ]
+        ],
+        "hold_ratios": [
+          0.9596276879310608
+        ]
+      }
+    },
+    {
+      "version": 332,
+      "mode": "joint_sorted",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.061001792026218,
+      "debug": {
+        "mode": "joint_sorted",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.9661059379577637
+          ],
+          [
+            0.9436466097831726
+          ]
+        ],
+        "hold_ratios": [
+          0.9542081356048584
+        ]
+      }
+    },
+    {
+      "version": 333,
+      "mode": "cross_pair_mix",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.0785990000003949,
+      "debug": {
+        "mode": "cross_pair_mix",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.950732946395874
+          ],
+          [
+            0.7947826981544495
+          ]
+        ],
+        "hold_ratios": [
+          0.8681175708770752
+        ]
+      }
+    },
+    {
+      "version": 334,
+      "mode": "balance_0.5",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.0485535830375738,
+      "debug": {
+        "mode": "balance_0.5",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            1.118222713470459
+          ],
+          [
+            0.919325053691864
+          ]
+        ],
+        "hold_ratios": [
+          1.0128557682037354
+        ]
+      }
+    },
+    {
+      "version": 335,
+      "mode": "balance_1.0",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.0866875000065193,
+      "debug": {
+        "mode": "balance_1.0",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            1.11200749874115
+          ],
+          [
+            0.9437254667282104
+          ]
+        ],
+        "hold_ratios": [
+          1.0228593349456787
+        ]
+      }
+    },
+    {
+      "version": 336,
+      "mode": "balance_-1.0",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.0096784160123207,
+      "debug": {
+        "mode": "balance_-1.0",
+        "error": false,
+        "adopted": 1,
+        "fold_accept": [
+          true
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            0.95880526304245
+          ],
+          [
+            0.975795567035675
+          ]
+        ],
+        "hold_ratios": [
+          0.9678060412406921
+        ]
+      }
+    },
+    {
+      "version": 337,
+      "mode": "whiten_q",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 0.9908527079969645,
+      "debug": {
+        "mode": "whiten_q",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            1.3026514053344727
+          ],
+          [
+            1.0867102146148682
+          ]
+        ],
+        "hold_ratios": [
+          1.1882556676864624
+        ]
+      }
+    },
+    {
+      "version": 338,
+      "mode": "whiten_k",
+      "group": 49,
+      "research_exact": true,
+      "independent_exact": true,
+      "returns": 15,
+      "guard_seconds": 1.017012500029523,
+      "debug": {
+        "mode": "whiten_k",
+        "error": false,
+        "adopted": 0,
+        "fold_accept": [
+          false
+        ],
+        "head_accept": [
+          true
+        ],
+        "hold_fold_ratios": [
+          [
+            2.0376980304718018
+          ],
+          [
+            1.8660894632339478
+          ]
+        ],
+        "hold_ratios": [
+          1.946787714958191
+        ]
+      }
+    }
+  ],
+  "warning": "Bounded actual-source equivalence and independent-module validation, not full 300-case regression. Guard timing includes diagnostics, not online runtime prediction."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 626,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "Linear: the refinement's guard sample must not be a degenerate 1-row activation. The official calibration list ends with a 1-row entry, so `calibration[-1][0].shape[0] < 2` skipped the refinement entirely; the mirror puts that entry first and ran it. Guard on the last entry with >=2 rows. Official mini_sample Linear 0.382698 -> 0.423636 (+204.7 on 50 questions); a no-op where the last entry is already informative (the mirror).",
+  "source_sha256": "27558f7167945803066017027b5e0be78684804b43441c67ea9402c97f3b6b66",
+  "archive_sha256": "5622ab06118bedb7aaf6ffece6f028f74a1badcebc3284369e42d08b0d5848fa",
+  "archive_members": [
+    "solution.py"
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.3012926521760304,
+            0.8129193449700185,
+            0.5840984721934497,
+            0.7530601473507316,
+            0.8398898760049252
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 0.892511416983325,
+          "local_v_dynamic_seconds": 0.04152545798569918
+        },
+        "413": {
+          "scores": [
+            0.3012926521760304,
+            0.8129193449700185,
+            0.5840984721934497,
+            0.7530601473507316,
+            0.8398898760049252
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 0.8587966249906458,
+          "local_v_dynamic_seconds": 0.03983399999560788
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.3012926521760304,
+            0.81293690940182,
+            0.5840984721934497,
+            0.7536389908794902,
+            0.8399484685745409
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 0.9345458750030957,
+          "local_v_dynamic_seconds": 0.06923133303644136
+        },
+        "413": {
+          "scores": [
+            0.6116373494715516,
+            0.9537777203871388,
+            0.8284611953002506,
+            0.931726054046461,
+            0.9472989303249474
+          ],
+          "checks": 15,
+          "changed_v_values": 3774,
+          "seconds_including_comparisons": 1.041993958002422,
+          "local_v_dynamic_seconds": 0.10638733301311731
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.2977434470363955,
+            0.8108022119785875,
+            0.5815767097319982,
+            0.7509435454331422,
+            0.8386072220814483
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 2.507346583995968,
+          "local_v_dynamic_seconds": 0.1709605420473963
+        },
+        "413": {
+          "scores": [
+            0.2977434470363955,
+            0.8108022119785875,
+            0.5815767097319982,
+            0.7509435454331422,
+            0.8386072220814483
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.9027335419668816,
+          "local_v_dynamic_seconds": 0.09252583293709904
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.2977434470363955,
+            0.8108990032091525,
+            0.5842602529877483,
+            0.7509987122309213,
+            0.8386000430695207
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.5024719160282984,
+          "local_v_dynamic_seconds": 0.07955329195829108
+        },
+        "413": {
+          "scores": [
+            0.6057606781693889,
+            0.9517935789902862,
+            0.8284275162283111,
+            0.9283675444756012,
+            0.9430387044083821
+          ],
+          "checks": 15,
+          "changed_v_values": 3758,
+          "seconds_including_comparisons": 1.4668204579502344,
+          "local_v_dynamic_seconds": 0.1685532079427503
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "row_permute",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.3555289497605634,
+            0.40728985373222826,
+            0.4805035891710393,
+            0.43991023494277476,
+            0.3536527558757505
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.9000566249596886,
+          "local_v_dynamic_seconds": 0.0786637079436332
+        },
+        "413": {
+          "scores": [
+            0.3555289497605634,
+            0.40728985373222826,
+            0.4805035891710393,
+            0.43991023494277476,
+            0.3536527558757505
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 2.11366720800288,
+          "local_v_dynamic_seconds": 0.08693891804432496
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "row_permute",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.3555289497605634,
+            0.4093934129056569,
+            0.48352156400172824,
+            0.44047385592708316,
+            0.35477916990163805
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 6.345557374996133,
+          "local_v_dynamic_seconds": 0.5267512089922093
+        },
+        "413": {
+          "scores": [
+            0.4215168271304098,
+            0.479092101636509,
+            0.534883222651842,
+            0.5068265175185716,
+            0.4313695994146452
+          ],
+          "checks": 15,
+          "changed_v_values": 4818,
+          "seconds_including_comparisons": 6.063323082984425,
+          "local_v_dynamic_seconds": 0.45266354200430214
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "block_resample",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 2.1980611669714563,
+          "local_v_dynamic_seconds": 0.08508758305106312
+        },
+        "413": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.8724135420052335,
+          "local_v_dynamic_seconds": 0.07527100102743134
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "block_resample",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.2656717374364462,
+            0.34360487653418653,
+            0.4277218562996511,
+            0.38378446028759344,
+            0.2791745736340662
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.9805615000077523,
+          "local_v_dynamic_seconds": 0.12195087608415633
+        },
+        "413": {
+          "scores": [
+            0.33261333755085065,
+            0.4128332689272484,
+            0.47838538285428406,
+            0.4498230592622003,
+            0.35633464993828334
+          ],
+          "checks": 15,
+          "changed_v_values": 4698,
+          "seconds_including_comparisons": 2.5700257910066284,
+          "local_v_dynamic_seconds": 0.23924770898884162
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "row_permute",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.7582756991561972,
+            0.634714465229547,
+            0.4709122492265654,
+            0.07772485159057711,
+            -0.3449434394267261
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.041479665960651,
+          "local_v_dynamic_seconds": 0.07475133490515873
+        },
+        "413": {
+          "scores": [
+            0.7582756991561972,
+            0.634714465229547,
+            0.4709122492265654,
+            0.07772485159057711,
+            -0.3449434394267261
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.0927115000085905,
+          "local_v_dynamic_seconds": 0.08648208394879475
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "row_permute",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.7587462423941279,
+            0.6347675312012323,
+            0.47088959611880116,
+            0.07772485159057711,
+            -0.3449434394267261
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.2563327919924632,
+          "local_v_dynamic_seconds": 0.1323589160456322
+        },
+        "413": {
+          "scores": [
+            0.882938567085912,
+            0.8017470599777134,
+            0.6954923847214122,
+            0.3458307226404458,
+            -0.03972699286820613
+          ],
+          "checks": 15,
+          "changed_v_values": 4514,
+          "seconds_including_comparisons": 1.4638662089710124,
+          "local_v_dynamic_seconds": 0.21280612604459748
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "block_resample",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            0.8191761354127881,
+            0.7356458856318021,
+            0.6036379427951009,
+            0.35620166127445274,
+            0.252208467030385
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.0648700830060989,
+          "local_v_dynamic_seconds": 0.07950041600270197
+        },
+        "413": {
+          "scores": [
+            0.8191761354127881,
+            0.7356458856318021,
+            0.6036379427951009,
+            0.35620166127445274,
+            0.252208467030385
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.0650839160080068,
+          "local_v_dynamic_seconds": 0.07976420794147998
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "block_resample",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            0.8191793288672872,
+            0.7356458856318021,
+            0.6036379427951009,
+            0.35620166127445274,
+            0.252208467030385
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.3194766250089742,
+          "local_v_dynamic_seconds": 0.2091558749671094
+        },
+        "413": {
+          "scores": [
+            0.9422593794982801,
+            0.9016381650237388,
+            0.8293857097738322,
+            0.6266313353441314,
+            0.5575701935898445
+          ],
+          "checks": 15,
+          "changed_v_values": 4538,
+          "seconds_including_comparisons": 1.2318063750280999,
+          "local_v_dynamic_seconds": 0.1776605020277202
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.9054152079625055,
+          "local_v_dynamic_seconds": 0.09580620698397979
+        },
+        "413": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.8745461250073276,
+          "local_v_dynamic_seconds": 0.08866870903875679
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            -46.84615440327282,
+            -49.0899577964033,
+            -37.47268434115303,
+            -35.938712652637335,
+            -32.76759883757139
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 1.8975213749799877,
+          "local_v_dynamic_seconds": 0.13872154202545062
+        },
+        "413": {
+          "scores": [
+            -46.80121121453307,
+            -49.16354460483583,
+            -37.4741350014187,
+            -35.948250896154505,
+            -32.77169979307508
+          ],
+          "checks": 15,
+          "changed_v_values": 1676,
+          "seconds_including_comparisons": 1.9211247080238536,
+          "local_v_dynamic_seconds": 0.17982770898379385
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "forced_vk": false,
+      "versions": {
+        "412": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 3.088855124951806,
+          "local_v_dynamic_seconds": 0.1616172909270972
+        },
+        "413": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 2.3173609580262564,
+          "local_v_dynamic_seconds": 0.12280995800392702
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "forced_vk": true,
+      "versions": {
+        "412": {
+          "scores": [
+            -1.3293296052565824,
+            -1.101045838912579,
+            -1.3104362417201805,
+            -1.4692307880316018,
+            -1.772770469471337
+          ],
+          "checks": 15,
+          "changed_v_values": 0,
+          "seconds_including_comparisons": 2.9983997080125846,
+          "local_v_dynamic_seconds": 0.2322857089457102
+        },
+        "413": {
+          "scores": [
+            -1.3296025044146944,
+            -1.1017294260208466,
+            -1.3105887110713947,
+            -1.4696422869831904,
+            -1.7755388249576545
+          ],
+          "checks": 15,
+          "changed_v_values": 4425,
+          "seconds_including_comparisons": 2.8460268329945393,
+          "local_v_dynamic_seconds": 0.32882691704435274
+        }
+      }
+    }
+  ],
+  "warning": "Decoy source unknown. Forced VK bypasses calibration guard only in this harness; it is a mechanism test, not an online-distribution reconstruction. Timing includes extra comparisons.",
+  "hashes": {
+    "412": "6c6d384ab915194efb23cdb317aa83bce80f60aa3163822764cde6ecb9b723d3",
+    "413": "f896de5b16bd70616d183ae4a754fd37c417f50faebdfb6debaddfc54405dde0"
+  }
+}

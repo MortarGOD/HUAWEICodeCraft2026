@@ -1,0 +1,47 @@
+{
+  "population": "round013/sink-input-seed2026091600-seedplus1",
+  "cases": [
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus1",
+      "test": 0,
+      "tokens": 4,
+      "price": -394.0725641682691,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -500.1703957027813
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -1036.8054637846963,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -1142.9032953192086
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus1",
+      "test": 4,
+      "tokens": 512,
+      "price": -1714.0653146652605,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -1820.1631461997729
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus1",
+      "test": 2,
+      "tokens": 32,
+      "price": -3037.272928288797,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -3143.3707598233095
+    },
+    {
+      "population": "round013/sink-input-seed2026091600-seedplus1",
+      "test": 3,
+      "tokens": 128,
+      "price": -3580.6485265502265,
+      "required_lower_bound": 106.09783153451227,
+      "margin": -3686.746358084739
+    }
+  ],
+  "promote": false,
+  "reason": "All case prices remain below the fixed 340-column certificate lower bound; no demonstrated support expansion against this certificate. Other certificates and unseen seeds are not excluded."
+}

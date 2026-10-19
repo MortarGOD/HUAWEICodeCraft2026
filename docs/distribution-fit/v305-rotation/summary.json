@@ -1,0 +1,30 @@
+[
+  {
+    "round": "round025",
+    "atom": "qk-gain055",
+    "quality": {
+      "parent303": -62.29857162382541,
+      "native305": -38.066029333019735,
+      "guard128": -63.373254185777114,
+      "premix": -38.74101174985339,
+      "forceoff303": -37.97610372533115,
+      "forceon303": -38.74101174985339
+    },
+    "guard128_vs_native_mse_equal": false,
+    "premix_vs_parent_mse_equal": false
+  },
+  {
+    "round": "round002",
+    "atom": "trace35-gain1-noise0.05",
+    "quality": {
+      "parent303": -56.530817760355966,
+      "native305": 0.3084688865224673,
+      "guard128": 0.3084688865224673,
+      "premix": -56.530817760355966,
+      "forceoff303": -0.9774688649134564,
+      "forceon303": -0.9252221557265287
+    },
+    "guard128_vs_native_mse_equal": true,
+    "premix_vs_parent_mse_equal": true
+  }
+]

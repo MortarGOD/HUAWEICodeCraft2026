@@ -1,0 +1,428 @@
+{
+  "parent_sha256": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "blocks": [
+        {
+          "label": "up_W_effective_inverse_P_teacher",
+          "blocks": 256,
+          "sse_before": 0.5345951414397647,
+          "sse_exact": 0.5332601513096749,
+          "median_relative_reduction": 0.0,
+          "positive_blocks": 74,
+          "max_relative_reduction": 0.04430175747933107,
+          "reference_seconds": 0.08835275005549192,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        },
+        {
+          "label": "up_A_final_output_search_vs_continuous_center",
+          "blocks": 256,
+          "sse_before": 3.8777504399007965,
+          "sse_exact": 2.9698002584652157,
+          "median_relative_reduction": 0.21775665431904478,
+          "positive_blocks": 255,
+          "max_relative_reduction": 0.618207960515197,
+          "reference_seconds": 0.07716308301314712,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        }
+      ],
+      "propagation": {
+        "mse_before": 0.001154029043391347,
+        "mse_after": 0.001154029043391347,
+        "changed_output_values": 0,
+        "candidate_dynamic_seconds": 1.0425541660515592,
+        "rows": 128
+      }
+    },
+    {
+      "group": 1,
+      "shape": [
+        1024,
+        2048
+      ],
+      "blocks": [
+        {
+          "label": "down_carrier_stage_0",
+          "blocks": 256,
+          "sse_before": 100.88625537531763,
+          "sse_exact": 100.88625537531763,
+          "median_relative_reduction": 0.0,
+          "positive_blocks": 0,
+          "max_relative_reduction": 0.0,
+          "reference_seconds": 0.15941216703504324,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        },
+        {
+          "label": "down_carrier_stage_1",
+          "blocks": 256,
+          "sse_before": 519.1963234585274,
+          "sse_exact": 519.1963234520082,
+          "median_relative_reduction": 0.0,
+          "positive_blocks": 1,
+          "max_relative_reduction": 5.794671409375951e-09,
+          "reference_seconds": 0.11388249997980893,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        }
+      ],
+      "propagation": {
+        "mse_before": 1.6439762475783937e-05,
+        "mse_after": 1.6440286344732158e-05,
+        "changed_output_values": 7,
+        "candidate_dynamic_seconds": 1.7616486670449376,
+        "rows": 128
+      }
+    },
+    {
+      "group": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "blocks": [
+        {
+          "label": "up_W_effective_inverse_P_teacher",
+          "blocks": 256,
+          "sse_before": 0.42529577747948655,
+          "sse_exact": 0.42518574866583525,
+          "median_relative_reduction": 0.0,
+          "positive_blocks": 14,
+          "max_relative_reduction": 0.015979799796177807,
+          "reference_seconds": 0.20709195802919567,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        },
+        {
+          "label": "up_A_final_output_search_vs_continuous_center",
+          "blocks": 256,
+          "sse_before": 4.964151145607693,
+          "sse_exact": 3.1044890025742324,
+          "median_relative_reduction": 0.3766276800545757,
+          "positive_blocks": 255,
+          "max_relative_reduction": 0.7086490507095627,
+          "reference_seconds": 0.30069237505085766,
+          "note": "Element SSE of this specified representation; not an AW upper bound."
+        }
+      ],
+      "propagation": {
+        "mse_before": 0.002109804656356573,
+        "mse_after": 0.002109804656356573,
+        "changed_output_values": 0,
+        "candidate_dynamic_seconds": 3.677379749948159,
+        "rows": 128
+      }
+    }
+  ],
+  "timing_note": "4-thread local diagnostic wall time, no online extrapolation.",
+  "raw_source_ratio_census": {
+    "up_W": {
+      "blocks": 98304,
+      "distinct_modes": 2525,
+      "top_modes": [
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 6356
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.6666666865348816,
+            0.6666666865348816,
+            0.6666666865348816
+          ],
+          "count": 1352
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            0.6666666865348816,
+            1.0
+          ],
+          "count": 1299
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            0.6666666865348816
+          ],
+          "count": 1262
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.6666666865348816,
+            1.0,
+            1.0
+          ],
+          "count": 1252
+        },
+        {
+          "relative_scales": [
+            0.75,
+            1.0,
+            0.75,
+            0.75
+          ],
+          "count": 1232
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 1200
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            0.6666666865348816,
+            1.0,
+            0.6666666865348816
+          ],
+          "count": 1196
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "count": 1194
+        },
+        {
+          "relative_scales": [
+            0.75,
+            0.75,
+            0.75,
+            1.0
+          ],
+          "count": 1187
+        }
+      ]
+    },
+    "down_W": {
+      "blocks": 114688,
+      "distinct_modes": 2042,
+      "top_modes": [
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 15137
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            1.0,
+            0.6666666865348816,
+            0.6666666865348816
+          ],
+          "count": 3467
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ],
+          "count": 3334
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            0.6666666865348816,
+            1.0,
+            0.6666666865348816
+          ],
+          "count": 3312
+        },
+        {
+          "relative_scales": [
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 3251
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            0.6666666865348816,
+            0.6666666865348816,
+            1.0
+          ],
+          "count": 3229
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.6666666865348816,
+            0.6666666865348816,
+            0.6666666865348816
+          ],
+          "count": 3182
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            0.5,
+            1.0
+          ],
+          "count": 3148
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "count": 3011
+        },
+        {
+          "relative_scales": [
+            0.6666666865348816,
+            1.0,
+            1.0,
+            0.6666666865348816
+          ],
+          "count": 1526
+        }
+      ]
+    },
+    "A": {
+      "blocks": 696800,
+      "distinct_modes": 66559,
+      "top_modes": [
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 1100
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            0.9090909361839294,
+            1.0
+          ],
+          "count": 349
+        },
+        {
+          "relative_scales": [
+            0.9090909361839294,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "count": 335
+        },
+        {
+          "relative_scales": [
+            0.9166666865348816,
+            0.9166666865348816,
+            0.9166666865348816,
+            1.0
+          ],
+          "count": 331
+        },
+        {
+          "relative_scales": [
+            0.9090909361839294,
+            0.9090909361839294,
+            1.0,
+            1.0
+          ],
+          "count": 316
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.9166666865348816,
+            0.9166666865348816,
+            0.8333333134651184
+          ],
+          "count": 316
+        },
+        {
+          "relative_scales": [
+            1.0,
+            0.9090909361839294,
+            1.0,
+            1.0
+          ],
+          "count": 313
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            0.9090909361839294,
+            0.9090909361839294
+          ],
+          "count": 312
+        },
+        {
+          "relative_scales": [
+            1.0,
+            1.0,
+            1.0,
+            0.9090909361839294
+          ],
+          "count": 309
+        },
+        {
+          "relative_scales": [
+            0.8333333134651184,
+            0.9166666865348816,
+            0.8333333134651184,
+            1.0
+          ],
+          "count": 305
+        }
+      ]
+    }
+  },
+  "L4": {
+    "blocks": 2048,
+    "unique_source_scales": 13,
+    "seconds": {
+      "general": [
+        1.1284682089462876,
+        1.170745125040412,
+        0.9690660410560668
+      ],
+      "table": [
+        0.6122317080153152,
+        0.5198129580821842,
+        0.568724500015378
+      ]
+    },
+    "params_identical": true,
+    "production_applicability": "Up W/A are transformed or projected; down carrier is AW residual. None retains raw E2M1 per16 structure. Raw table is not wired into these production paths."
+  }
+}

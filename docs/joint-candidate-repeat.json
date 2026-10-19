@@ -1,0 +1,156 @@
+{
+  "group": 6,
+  "rows": [
+    {
+      "repeat": 0,
+      "success": false,
+      "same_as_first": true,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": false,
+          "symmetry_error": 0.0
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "success": true,
+      "same_as_first": false,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "success": true,
+      "same_as_first": false,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "success": true,
+      "same_as_first": false,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "success": true,
+      "same_as_first": false,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        }
+      ]
+    },
+    {
+      "repeat": 5,
+      "success": false,
+      "same_as_first": true,
+      "cholesky": [
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": true,
+          "symmetry_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            256,
+            256
+          ],
+          "success": false,
+          "symmetry_error": 0.0
+        }
+      ]
+    }
+  ],
+  "warning": "One captured state, six repeated constructions. Does not prove cross-environment determinism."
+}

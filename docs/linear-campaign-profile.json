@@ -1,0 +1,43 @@
+{
+  "natural_group_4_rotation_trials": [
+    {
+      "changed_W": 23137,
+      "changed_P": 65536,
+      "selected_final": false
+    },
+    {
+      "changed_W": 10,
+      "changed_P": 65536,
+      "selected_final": false
+    },
+    {
+      "changed_W": 0,
+      "changed_P": 65536,
+      "selected_final": false
+    },
+    {
+      "changed_W": 0,
+      "changed_P": 65536,
+      "selected_final": true
+    }
+  ],
+  "large_helpers": [
+    {
+      "input_width": 1024,
+      "output_width": 2048,
+      "compile_seconds": 0.023622583015821874,
+      "joint_proposal_seconds": 0.22840649995487183,
+      "projection_solve_seconds": 0.020444458001293242,
+      "finite": true
+    },
+    {
+      "input_width": 2048,
+      "output_width": 4096,
+      "compile_seconds": 0.13613354100380093,
+      "joint_proposal_seconds": 1.0055169999832287,
+      "projection_solve_seconds": 0.13178954203613102,
+      "finite": true
+    }
+  ],
+  "timing_note": "4 threads local isolated helper wall time, not full API or Kunpeng estimate."
+}

@@ -1,0 +1,161 @@
+{
+  "kind": "checkpoint weights + architecture/statistics activation proxy",
+  "preset": "correlation",
+  "seed": 20262903,
+  "weight_source": "checkpoint",
+  "attention_source": "checkpoint-projection",
+  "attention_context_drift": 0.05,
+  "attention_covariance_rank": 128,
+  "attention_structured_strength": 4.0,
+  "stored_rows": [
+    1,
+    10,
+    128,
+    512,
+    1024
+  ],
+  "logical_strides": [
+    1,
+    10,
+    128,
+    512,
+    1024
+  ],
+  "linear_weight_groups": 10,
+  "linear_test_activations": 50,
+  "attention_groups": 50,
+  "attention_test_datasets": 250,
+  "models": [
+    {
+      "name": "qwen3.6-35b-a3b",
+      "repo_id": "Qwen/Qwen3.6-35B-A3B",
+      "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+      "hidden_size": 2048,
+      "initializer_range": 0.02,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "head_dim": 256,
+      "tp_size": 1,
+      "rotary_dim": 64,
+      "attention_noise": 0.11,
+      "linear_layers": [
+        {
+          "name": "full_attn.q_proj_gated",
+          "out_features": 8192,
+          "in_features": 2048,
+          "channel_spread": 0.52,
+          "low_rank_strength": 0.18,
+          "tensor_name": "model.language_model.layers.3.self_attn.q_proj.weight",
+          "shard": "model-00003-of-00026.safetensors",
+          "scale_name": null
+        },
+        {
+          "name": "full_attn.o_proj",
+          "out_features": 2048,
+          "in_features": 4096,
+          "channel_spread": 0.58,
+          "low_rank_strength": 0.2,
+          "tensor_name": "model.language_model.layers.3.self_attn.o_proj.weight",
+          "shard": "model-00003-of-00026.safetensors",
+          "scale_name": null
+        },
+        {
+          "name": "shared_expert.gate_proj",
+          "out_features": 512,
+          "in_features": 2048,
+          "channel_spread": 0.7,
+          "low_rank_strength": 0.26,
+          "tensor_name": "model.language_model.layers.3.mlp.shared_expert.gate_proj.weight",
+          "shard": "model-00003-of-00026.safetensors",
+          "scale_name": null
+        },
+        {
+          "name": "shared_expert.up_proj",
+          "out_features": 512,
+          "in_features": 2048,
+          "channel_spread": 0.65,
+          "low_rank_strength": 0.24,
+          "tensor_name": "model.language_model.layers.3.mlp.shared_expert.up_proj.weight",
+          "shard": "model-00003-of-00026.safetensors",
+          "scale_name": null
+        },
+        {
+          "name": "shared_expert.down_proj",
+          "out_features": 2048,
+          "in_features": 512,
+          "channel_spread": 0.78,
+          "low_rank_strength": 0.3,
+          "tensor_name": "model.language_model.layers.3.mlp.shared_expert.down_proj.weight",
+          "shard": "model-00003-of-00026.safetensors",
+          "scale_name": null
+        }
+      ]
+    },
+    {
+      "name": "deepseek-v4-flash-0731",
+      "repo_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+      "hidden_size": 4096,
+      "initializer_range": 0.02,
+      "q_heads": 64,
+      "kv_heads": 1,
+      "head_dim": 512,
+      "tp_size": 8,
+      "rotary_dim": 64,
+      "attention_noise": 0.08,
+      "linear_layers": [
+        {
+          "name": "attn.wq_a",
+          "out_features": 1024,
+          "in_features": 4096,
+          "channel_spread": 0.62,
+          "low_rank_strength": 0.22,
+          "tensor_name": "layers.0.attn.wq_a.weight",
+          "shard": "model-00002-of-00048.safetensors",
+          "scale_name": "layers.0.attn.wq_a.scale"
+        },
+        {
+          "name": "attn.wq_b.tp8",
+          "out_features": 4096,
+          "in_features": 1024,
+          "channel_spread": 0.72,
+          "low_rank_strength": 0.28,
+          "tensor_name": "layers.0.attn.wq_b.weight",
+          "shard": "model-00002-of-00048.safetensors",
+          "scale_name": "layers.0.attn.wq_b.scale"
+        },
+        {
+          "name": "attn.wo_b.tp8",
+          "out_features": 4096,
+          "in_features": 1024,
+          "channel_spread": 0.66,
+          "low_rank_strength": 0.24,
+          "tensor_name": "layers.0.attn.wo_b.weight",
+          "shard": "model-00002-of-00048.safetensors",
+          "scale_name": "layers.0.attn.wo_b.scale"
+        },
+        {
+          "name": "shared_expert.w1",
+          "out_features": 2048,
+          "in_features": 4096,
+          "channel_spread": 0.82,
+          "low_rank_strength": 0.34,
+          "tensor_name": "layers.0.ffn.shared_experts.w1.weight",
+          "shard": "model-00002-of-00048.safetensors",
+          "scale_name": "layers.0.ffn.shared_experts.w1.scale"
+        },
+        {
+          "name": "shared_expert.w2",
+          "out_features": 4096,
+          "in_features": 2048,
+          "channel_spread": 0.88,
+          "low_rank_strength": 0.38,
+          "tensor_name": "layers.0.ffn.shared_experts.w2.weight",
+          "shard": "model-00002-of-00048.safetensors",
+          "scale_name": "layers.0.ffn.shared_experts.w2.scale"
+        }
+      ]
+    }
+  ],
+  "deepseek_attention_assumption": "8-way tensor-parallel local Q heads; KV head replicated"
+}

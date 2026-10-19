@@ -1,0 +1,140 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/public_quantizer/attn.pt",
+  "versions": [
+    504,
+    517,
+    518
+  ],
+  "groups_used": [
+    0
+  ],
+  "n_groups_total": 1,
+  "results": {
+    "504": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5764735969886342
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5662159923644061
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5695732856046722
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5557987032063816
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5792341074633448
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5694591371254878,
+      "wall_seconds": 28.645010750042275
+    },
+    "517": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5769733960180196
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5660754016185413
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.569710659683798
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5559325237432903
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5792533699364604
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5695890702000219,
+      "wall_seconds": 63.36067579209339
+    },
+    "518": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 10,
+          "weight": 1.0,
+          "quality": 0.5793578587999191
+        },
+        {
+          "group": 0,
+          "test": 1,
+          "tokens": 128,
+          "weight": 1.0,
+          "quality": 0.5671420086048219
+        },
+        {
+          "group": 0,
+          "test": 2,
+          "tokens": 512,
+          "weight": 1.0,
+          "quality": 0.5641285872883516
+        },
+        {
+          "group": 0,
+          "test": 3,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5485956312677805
+        },
+        {
+          "group": 0,
+          "test": 4,
+          "tokens": 1024,
+          "weight": 1.0,
+          "quality": 0.5774738882785415
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.5673395948478829,
+      "wall_seconds": 43.22508174995892
+    }
+  }
+}

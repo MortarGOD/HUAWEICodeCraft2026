@@ -1,0 +1,339 @@
+{
+  "completed": true,
+  "optimizer": "discrete",
+  "seed": 440,
+  "features": 8,
+  "hidden": 12,
+  "parameters": 121,
+  "train_samples": 20,
+  "validation_samples": 10,
+  "best_epoch": 1,
+  "best_validation_ratio": 0.9945817172527314,
+  "history": [
+    {
+      "epoch": 1,
+      "step_size": 0.25,
+      "accepted": 3,
+      "train_ratio": 0.9940245270729064,
+      "validation_ratio": 0.9945817172527314
+    },
+    {
+      "epoch": 2,
+      "step_size": 0.125,
+      "accepted": 0,
+      "train_ratio": 0.9940245270729064,
+      "validation_ratio": 0.9945817172527314
+    },
+    {
+      "epoch": 3,
+      "step_size": 0.0625,
+      "accepted": 0,
+      "train_ratio": 0.9940245270729064,
+      "validation_ratio": 0.9945817172527314
+    }
+  ],
+  "test": [
+    {
+      "group": 0,
+      "test": 0,
+      "output_ratio": 1.0010247230529785,
+      "changed_values": 194
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "output_ratio": 1.007686972618103,
+      "changed_values": 176
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "output_ratio": 1.001563549041748,
+      "changed_values": 319
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "output_ratio": 0.9975371956825256,
+      "changed_values": 148
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "output_ratio": 1.000570297241211,
+      "changed_values": 385
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "output_ratio": 0.9312167167663574,
+      "changed_values": 259
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "output_ratio": 1.0023471117019653,
+      "changed_values": 257
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "output_ratio": 0.9945477247238159,
+      "changed_values": 372
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "output_ratio": 0.9913522005081177,
+      "changed_values": 356
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "output_ratio": 1.0016053915023804,
+      "changed_values": 329
+    },
+    {
+      "group": 2,
+      "test": 0,
+      "output_ratio": 0.994482159614563,
+      "changed_values": 220
+    },
+    {
+      "group": 2,
+      "test": 1,
+      "output_ratio": 1.0037353038787842,
+      "changed_values": 301
+    },
+    {
+      "group": 2,
+      "test": 2,
+      "output_ratio": 0.9948118925094604,
+      "changed_values": 241
+    },
+    {
+      "group": 2,
+      "test": 3,
+      "output_ratio": 0.9972938299179077,
+      "changed_values": 121
+    },
+    {
+      "group": 2,
+      "test": 4,
+      "output_ratio": 0.991675078868866,
+      "changed_values": 164
+    },
+    {
+      "group": 3,
+      "test": 0,
+      "output_ratio": 0.9875565767288208,
+      "changed_values": 217
+    },
+    {
+      "group": 3,
+      "test": 1,
+      "output_ratio": 1.0016371011734009,
+      "changed_values": 233
+    },
+    {
+      "group": 3,
+      "test": 2,
+      "output_ratio": 1.0013478994369507,
+      "changed_values": 173
+    },
+    {
+      "group": 3,
+      "test": 3,
+      "output_ratio": 1.001364827156067,
+      "changed_values": 179
+    },
+    {
+      "group": 3,
+      "test": 4,
+      "output_ratio": 0.993481457233429,
+      "changed_values": 91
+    },
+    {
+      "group": 4,
+      "test": 0,
+      "output_ratio": 0.9939702153205872,
+      "changed_values": 38
+    },
+    {
+      "group": 4,
+      "test": 1,
+      "output_ratio": 0.9870169162750244,
+      "changed_values": 273
+    },
+    {
+      "group": 4,
+      "test": 2,
+      "output_ratio": 1.001842737197876,
+      "changed_values": 25
+    },
+    {
+      "group": 4,
+      "test": 3,
+      "output_ratio": 0.9981488585472107,
+      "changed_values": 240
+    },
+    {
+      "group": 4,
+      "test": 4,
+      "output_ratio": 0.941383957862854,
+      "changed_values": 315
+    },
+    {
+      "group": 5,
+      "test": 0,
+      "output_ratio": 1.00187349319458,
+      "changed_values": 121
+    },
+    {
+      "group": 5,
+      "test": 1,
+      "output_ratio": 0.9874240159988403,
+      "changed_values": 160
+    },
+    {
+      "group": 5,
+      "test": 2,
+      "output_ratio": 0.9879250526428223,
+      "changed_values": 174
+    },
+    {
+      "group": 5,
+      "test": 3,
+      "output_ratio": 1.0040489435195923,
+      "changed_values": 180
+    },
+    {
+      "group": 5,
+      "test": 4,
+      "output_ratio": 0.9957239627838135,
+      "changed_values": 101
+    },
+    {
+      "group": 6,
+      "test": 0,
+      "output_ratio": 0.9980522394180298,
+      "changed_values": 315
+    },
+    {
+      "group": 6,
+      "test": 1,
+      "output_ratio": 1.0059185028076172,
+      "changed_values": 224
+    },
+    {
+      "group": 6,
+      "test": 2,
+      "output_ratio": 1.0003602504730225,
+      "changed_values": 201
+    },
+    {
+      "group": 6,
+      "test": 3,
+      "output_ratio": 1.0051383972167969,
+      "changed_values": 305
+    },
+    {
+      "group": 6,
+      "test": 4,
+      "output_ratio": 1.0014097690582275,
+      "changed_values": 30
+    },
+    {
+      "group": 7,
+      "test": 0,
+      "output_ratio": 0.9909287095069885,
+      "changed_values": 207
+    },
+    {
+      "group": 7,
+      "test": 1,
+      "output_ratio": 1.0009421110153198,
+      "changed_values": 185
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "output_ratio": 0.9925997853279114,
+      "changed_values": 84
+    },
+    {
+      "group": 7,
+      "test": 3,
+      "output_ratio": 1.0212310552597046,
+      "changed_values": 212
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "output_ratio": 0.9931255578994751,
+      "changed_values": 165
+    },
+    {
+      "group": 8,
+      "test": 0,
+      "output_ratio": 0.9978727698326111,
+      "changed_values": 248
+    },
+    {
+      "group": 8,
+      "test": 1,
+      "output_ratio": 0.9951764345169067,
+      "changed_values": 218
+    },
+    {
+      "group": 8,
+      "test": 2,
+      "output_ratio": 0.9939882755279541,
+      "changed_values": 270
+    },
+    {
+      "group": 8,
+      "test": 3,
+      "output_ratio": 0.988315761089325,
+      "changed_values": 219
+    },
+    {
+      "group": 8,
+      "test": 4,
+      "output_ratio": 0.9997864365577698,
+      "changed_values": 97
+    },
+    {
+      "group": 9,
+      "test": 0,
+      "output_ratio": 0.9934042692184448,
+      "changed_values": 201
+    },
+    {
+      "group": 9,
+      "test": 1,
+      "output_ratio": 0.9814565181732178,
+      "changed_values": 327
+    },
+    {
+      "group": 9,
+      "test": 2,
+      "output_ratio": 0.9918586015701294,
+      "changed_values": 80
+    },
+    {
+      "group": 9,
+      "test": 3,
+      "output_ratio": 0.9776723384857178,
+      "changed_values": 213
+    },
+    {
+      "group": 9,
+      "test": 4,
+      "output_ratio": 0.9630380272865295,
+      "changed_values": 286
+    }
+  ],
+  "mean_test_ratio": 0.993769439458847,
+  "warning": "Research serial hook only, not submission. Exact legal forward; STE mode uses approximate identity gradients, discrete mode searches 13 output-layer parameters with frozen random features. Parent calibration uses all calibration samples, including policy validation; test untouched until selection. One short-trace model source, not online or cross-source evidence."
+}

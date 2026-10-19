@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "trial": 0,
+      "brute": 2.0223653082319624,
+      "sphere": 2.0223653082319624,
+      "difference": 0.0
+    },
+    {
+      "trial": 1,
+      "brute": 0.0632826163719308,
+      "sphere": 0.0632826163719308,
+      "difference": 0.0
+    },
+    {
+      "trial": 2,
+      "brute": 0.00806514352274252,
+      "sphere": 0.00806514352274252,
+      "difference": 0.0
+    },
+    {
+      "trial": 3,
+      "brute": 0.06571636207057044,
+      "sphere": 0.06571636207057044,
+      "difference": 0.0
+    },
+    {
+      "trial": 4,
+      "brute": 0.0842922546797237,
+      "sphere": 0.0842922546797237,
+      "difference": 0.0
+    }
+  ],
+  "candidates_per_case": 50625,
+  "correction": "Original diagnostic subtracted float32 before casting. Use double subtraction consistently."
+}

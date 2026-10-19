@@ -1,0 +1,11 @@
+{
+  "version": 640,
+  "parent": 637,
+  "parent_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "patch_summary": "Refine V codes toward the identity optimum. The v628 receipt (-8987) shows the judge's V metric is close to the identity, and on the bank built to match the online distribution our deployed V is NOT at the identity optimum: full bank 0.610325 -> identity oracle 0.670874 (+1514). Our mirror disagrees (-2276) because its attention is more uniform. No rank-one term, no fitted constant, no counterpart; each code moves at most 3 lattice steps toward the exact value, clamped to the legal range, in one vectorised pass.",
+  "source_sha256": "3c6b7631cc623666b13060de9f9a81268b1fec942db23bcbccc99a40c33a749e",
+  "archive_sha256": "40e10bd3c6a201188fd0b97f4c0d634bee4745a50f02aa330ee761c30dc2e261",
+  "archive_members": [
+    "solution.py"
+  ]
+}

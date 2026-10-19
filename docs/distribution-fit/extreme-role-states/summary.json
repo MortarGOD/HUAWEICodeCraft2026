@@ -1,0 +1,80 @@
+{
+  "rows": [
+    {
+      "round": "round003",
+      "atom": "trace35-group3-correlated_noise",
+      "version": 283,
+      "original_mse_equal": true,
+      "fields": {
+        "permutation": {
+          "q_present": false,
+          "k_present": false
+        },
+        "joint_transform": {
+          "q_present": false,
+          "k_present": false
+        }
+      }
+    },
+    {
+      "round": "round003",
+      "atom": "trace35-group3-correlated_noise",
+      "version": 284,
+      "original_mse_equal": true,
+      "fields": {
+        "permutation": {
+          "q_present": true,
+          "k_present": true,
+          "q_shape": [
+            16,
+            256
+          ],
+          "k_shape": [
+            2,
+            256
+          ],
+          "equal": false,
+          "different_elements": 3808,
+          "max_abs_difference": 252.0
+        },
+        "joint_transform": {
+          "q_present": false,
+          "k_present": false
+        }
+      }
+    },
+    {
+      "round": "round021",
+      "atom": "trace35-group7-seedplus3",
+      "version": 322,
+      "original_mse_equal": true,
+      "fields": {
+        "permutation": {
+          "q_present": false,
+          "k_present": false
+        },
+        "joint_transform": {
+          "q_present": false,
+          "k_present": false
+        }
+      }
+    },
+    {
+      "round": "round021",
+      "atom": "trace35-group7-seedplus3",
+      "version": 333,
+      "original_mse_equal": true,
+      "fields": {
+        "permutation": {
+          "q_present": false,
+          "k_present": false
+        },
+        "joint_transform": {
+          "q_present": true,
+          "k_present": false
+        }
+      }
+    }
+  ],
+  "limits": "Actual states and exact rerun checks. Transform inequality alone is not proof of final-error causation or online prevalence."
+}

@@ -1,0 +1,418 @@
+{
+  "versions": {
+    "429": {
+      "main": {
+        "paired": {
+          "cases": 250,
+          "delta": 0.03725391179522508,
+          "better": 154,
+          "worse": 96,
+          "equal": 0
+        },
+        "covariance": {
+          "cases": 250,
+          "delta": 0.18265704739553767,
+          "better": 131,
+          "worse": 69,
+          "equal": 50
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.16393190308064,
+          "delta": 0.0027018441145350014,
+          "better": 12,
+          "worse": 3,
+          "equal": 0,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 15,
+            "v": 0
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -601.0958380591516,
+          "child_quality": -536.5292650214495,
+          "delta": 64.56657303770201,
+          "better": 13,
+          "worse": 2,
+          "equal": 0,
+          "changed_role_cases": {
+            "q": 5,
+            "k": 15,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.093525761195549,
+          "delta": -0.0004501620137279394,
+          "better": 5,
+          "worse": 10,
+          "equal": 0,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 15,
+            "v": 0
+          }
+        }
+      }
+    },
+    "430": {
+      "main": {
+        "paired": {
+          "cases": 250,
+          "delta": 0.43147829693093054,
+          "better": 83,
+          "worse": 32,
+          "equal": 135
+        },
+        "covariance": {
+          "cases": 250,
+          "delta": 0.1315665780701777,
+          "better": 47,
+          "worse": 13,
+          "equal": 190
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.217675435565054,
+          "delta": 0.05644537659894955,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -536.4845618397418,
+          "child_quality": -601.0958380591516,
+          "delta": -64.61127621940982,
+          "better": 0,
+          "worse": 5,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 5,
+            "k": 0,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.093975923209277,
+          "delta": 0.0,
+          "better": 0,
+          "worse": 0,
+          "equal": 15,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          }
+        }
+      }
+    },
+    "431": {
+      "main": {
+        "paired": {
+          "cases": 250,
+          "delta": 3.61940026105054,
+          "better": 180,
+          "worse": 0,
+          "equal": 70
+        },
+        "covariance": {
+          "cases": 250,
+          "delta": 2.487382886724511,
+          "better": 177,
+          "worse": 3,
+          "equal": 70
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.222011247936061,
+          "delta": 0.06078118896995732,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -601.0958380591516,
+          "child_quality": -536.4845618397418,
+          "delta": 64.61127621940982,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 5,
+            "k": 0,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.104183724715307,
+          "delta": 0.010207801506030734,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        }
+      }
+    },
+    "432": {
+      "main": {
+        "paired": {
+          "cases": 250,
+          "delta": 3.8140623401273817,
+          "better": 180,
+          "worse": 0,
+          "equal": 70
+        },
+        "covariance": {
+          "cases": 250,
+          "delta": 2.2665448920386906,
+          "better": 168,
+          "worse": 20,
+          "equal": 62
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.259661167660289,
+          "delta": 0.09843110869418492,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -536.4845618397418,
+          "child_quality": -601.0958380591516,
+          "delta": -64.61127621940982,
+          "better": 0,
+          "worse": 5,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 5,
+            "k": 0,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.093975923209277,
+          "delta": 0.0,
+          "better": 0,
+          "worse": 0,
+          "equal": 15,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          }
+        }
+      }
+    },
+    "433": {
+      "main": {
+        "paired": {
+          "cases": 250,
+          "delta": 2.3498961613014835,
+          "better": 170,
+          "worse": 0,
+          "equal": 80
+        },
+        "covariance": {
+          "cases": 250,
+          "delta": 1.6612676934080763,
+          "better": 179,
+          "worse": 0,
+          "equal": 71
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.208601655223545,
+          "delta": 0.04737159625743992,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -536.4845618397418,
+          "child_quality": -601.0958380591516,
+          "delta": -64.61127621940982,
+          "better": 0,
+          "worse": 5,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 5,
+            "k": 0,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.143918421343201,
+          "delta": 0.04994249813392504,
+          "better": 10,
+          "worse": 0,
+          "equal": 5,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 10
+          }
+        }
+      }
+    },
+    "434": {
+      "main": {
+        "paired": {
+          "cases": 55,
+          "delta": 0.9413989693173145,
+          "better": 30,
+          "worse": 0,
+          "equal": 25,
+          "matched_comparators": {
+            "431": {
+              "delta": 0.6729708278007889,
+              "v434_extra": 0.2684281415165256,
+              "parent_quality_difference": -7.105427357601002e-15
+            },
+            "432": {
+              "delta": 0.6904709706538505,
+              "v434_extra": 0.25092799866346394,
+              "parent_quality_difference": -7.105427357601002e-15
+            },
+            "433": {
+              "delta": 0.4408062996029555,
+              "v434_extra": 0.500592669714359,
+              "parent_quality_difference": -7.105427357601002e-15
+            }
+          }
+        },
+        "covariance": {
+          "cases": 55,
+          "delta": 0.7195516888507308,
+          "better": 40,
+          "worse": 0,
+          "equal": 15,
+          "matched_comparators": {
+            "431": {
+              "delta": 0.4906406126728339,
+              "v434_extra": 0.22891107617789697,
+              "parent_quality_difference": 7.105427357601002e-15
+            },
+            "432": {
+              "delta": 0.5037710147980626,
+              "v434_extra": 0.2157806740526682,
+              "parent_quality_difference": 7.105427357601002e-15
+            },
+            "433": {
+              "delta": 0.34652045210627,
+              "v434_extra": 0.3730312367444608,
+              "parent_quality_difference": 7.105427357601002e-15
+            }
+          }
+        }
+      },
+      "other": {
+        "row_permute": {
+          "cases": 15,
+          "parent_quality": 11.161230058966105,
+          "child_quality": 11.250247474567717,
+          "delta": 0.08901741560161136,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        },
+        "block_resample": {
+          "cases": 15,
+          "parent_quality": -536.4845618397418,
+          "child_quality": -536.4845618397418,
+          "delta": 0.0,
+          "better": 0,
+          "worse": 0,
+          "equal": 15,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 0
+          }
+        },
+        "mha": {
+          "cases": 15,
+          "parent_quality": 12.093975923209277,
+          "child_quality": 12.110588958291228,
+          "delta": 0.016613035081951222,
+          "better": 5,
+          "worse": 0,
+          "equal": 10,
+          "changed_role_cases": {
+            "q": 0,
+            "k": 0,
+            "v": 5
+          }
+        }
+      }
+    }
+  },
+  "total_cases": 2880,
+  "validated_returns": 18432,
+  "state_checks": 2880,
+  "warnings": [
+    "Local normalized quality, not online points.",
+    "v434 uses 30 preregistered plus 25 coverage-completion tests per bank; other versions use 250 each.",
+    "Block-resample scores with unrelated Q calibration changes are confounded."
+  ]
+}

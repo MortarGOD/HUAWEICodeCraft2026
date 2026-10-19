@@ -1,0 +1,41 @@
+{
+  "round": 18,
+  "atoms": [
+    {
+      "id": "v-token-random",
+      "path": "local_distribution_fit/round018/v-token-random.pt",
+      "sha256": "420f519a4184c51d6872c033e7b397d6e6fa2ef96c398a5aeb7dffc458ae7add",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "test_v_token_permutation": "random",
+        "calibration_unchanged": true,
+        "permutation_seed": 2026091500
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "source_sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a"
+    },
+    {
+      "id": "v-token-reverse",
+      "path": "local_distribution_fit/round018/v-token-reverse.pt",
+      "sha256": "3339e2e9be927d53a698541574c4115c983bf6c68b23d63e6de6e5b65c4d8649",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "test_v_token_permutation": "reverse",
+        "calibration_unchanged": true,
+        "permutation_seed": 2026091500
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "source_sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a"
+    }
+  ],
+  "selection_evidence": "Nearest current certificate population is true-qk-gain0.5. Change test V/token correspondence while preserving calibration and Q/K to probe attention/value correlation.",
+  "limits": "Synthetic distribution shift; no claim about hidden correlations. Uses valid NVFP4 row permutations and unchanged scoring."
+}

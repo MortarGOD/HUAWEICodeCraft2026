@@ -1,0 +1,119 @@
+{
+  "round": 11,
+  "atoms": [
+    {
+      "id": "m0-sink-row_permute-seedplus1",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090805,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true
+    },
+    {
+      "id": "m0-sink-row_permute-seedplus2",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090806,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true
+    },
+    {
+      "id": "m0-sink-row_permute-seedplus3",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090807,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true
+    },
+    {
+      "id": "m0-sink-row_permute-seedplus4",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090808,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true
+    }
+  ],
+  "selection_evidence": {
+    "population": "round001/m0-sink-row_permute",
+    "test": 0,
+    "tokens": 4,
+    "price": 11.748494888261126,
+    "required_lower_bound": 18.453854092219178,
+    "margin": -6.705359203958052
+  },
+  "required_versions": [
+    283,
+    284,
+    310,
+    314,
+    318,
+    319,
+    320,
+    322,
+    333,
+    343,
+    345,
+    364,
+    387,
+    388,
+    400,
+    412,
+    415,
+    416,
+    419,
+    429,
+    435,
+    436,
+    440
+  ],
+  "limits": "Adaptive supervised support search using certificate prices. True tensors unchanged; all versions share each fixed decoy seed. Breaking one certificate is not final feasibility."
+}

@@ -1,0 +1,9 @@
+{
+  "version": 320,
+  "sha256": "f951084936da2ff26df3d509cafd8342e614f89d4c488df7297ad11466f0e9ec",
+  "command": "OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 /opt/miniconda3/envs/codecraft/bin/python self_check.py --solution_dir solution",
+  "interfaces_passed": 6,
+  "format_checks_passed": 22,
+  "format_checks_failed": 0,
+  "mini_sample_for_correctness_only": true
+}

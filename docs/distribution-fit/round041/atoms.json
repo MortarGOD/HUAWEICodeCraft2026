@@ -1,0 +1,330 @@
+{
+  "round": 41,
+  "atoms": [
+    {
+      "id": "round002-noise005-seed101",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091102,
+      "mode": "correlated_noise",
+      "noise": 0.005,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise005-seed202",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091203,
+      "mode": "correlated_noise",
+      "noise": 0.005,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise005-seed303",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091304,
+      "mode": "correlated_noise",
+      "noise": 0.005,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise05-seed101",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091102,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise05-seed202",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091203,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise05-seed303",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091304,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise20-seed101",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091102,
+      "mode": "correlated_noise",
+      "noise": 0.2,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise20-seed202",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091203,
+      "mode": "correlated_noise",
+      "noise": 0.2,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round002-noise20-seed303",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091304,
+      "mode": "correlated_noise",
+      "noise": 0.2,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "round025-noise005-seed101",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026090909,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.005
+    },
+    {
+      "id": "round025-noise005-seed202",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091010,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.005
+    },
+    {
+      "id": "round025-noise005-seed303",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091111,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.005
+    },
+    {
+      "id": "round025-noise05-seed101",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026090909,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.05
+    },
+    {
+      "id": "round025-noise05-seed202",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091010,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.05
+    },
+    {
+      "id": "round025-noise05-seed303",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091111,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.05
+    },
+    {
+      "id": "round025-noise20-seed101",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026090909,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.2
+    },
+    {
+      "id": "round025-noise20-seed202",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091010,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.2
+    },
+    {
+      "id": "round025-noise20-seed303",
+      "path": "local_distribution_fit/round025/qk-gain055.pt",
+      "sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+      "seed": 2026091111,
+      "input_seed": 2026091600,
+      "mode": "correlated_noise",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.55,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "noise": 0.2
+    }
+  ],
+  "limits": "Same immutable source bytes per family, all test tensors fixed. Three predeclared seed offsets101/202/303; all strengths retained. Prior seed used for hypothesis discovery only. Original round025 row_permute not part of continuous noise axis. Not an online distribution claim."
+}

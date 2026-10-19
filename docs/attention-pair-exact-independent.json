@@ -1,0 +1,428 @@
+{
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "exact": true,
+  "rounds": 2,
+  "records": [
+    {
+      "group": 7,
+      "test": 0,
+      "original_rows": 128,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 512,
+        "escaped_stalled": 68,
+        "changed_rows": 68,
+        "moves": 97,
+        "before_metric": 44025.1796875,
+        "after_metric": 43912.45703125
+      },
+      "seconds": 0.025074042001506314,
+      "query_sample_gain": 4.4907362839508475e-06
+    },
+    {
+      "group": 7,
+      "test": 0,
+      "original_rows": 128,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 128,
+        "escaped_stalled": 126,
+        "changed_rows": 126,
+        "moves": 240,
+        "before_metric": 15697.81640625,
+        "after_metric": 14945.1875
+      },
+      "seconds": 0.00638704199809581
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "original_rows": 512,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 280,
+        "escaped_stalled": 48,
+        "changed_rows": 214,
+        "moves": 327,
+        "before_metric": 44884.234375,
+        "after_metric": 44406.296875
+      },
+      "seconds": 0.024994917010189965,
+      "query_sample_gain": -8.9117023641262e-06
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "original_rows": 512,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 128,
+        "escaped_stalled": 124,
+        "changed_rows": 124,
+        "moves": 229,
+        "before_metric": 16063.8564453125,
+        "after_metric": 15278.9833984375
+      },
+      "seconds": 0.006490583007689565
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 1,
+        "escaped_stalled": 1,
+        "changed_rows": 486,
+        "moves": 917,
+        "before_metric": 54481.19921875,
+        "after_metric": 50693.87109375
+      },
+      "seconds": 0.0250773330044467,
+      "query_sample_gain": 0.00010435746714861722
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 57,
+        "escaped_stalled": 53,
+        "changed_rows": 124,
+        "moves": 241,
+        "before_metric": 16638.484375,
+        "after_metric": 14959.7294921875
+      },
+      "seconds": 0.0064232499862555414
+    },
+    {
+      "group": 19,
+      "test": 0,
+      "original_rows": 128,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 205,
+        "escaped_stalled": 16,
+        "changed_rows": 177,
+        "moves": 257,
+        "before_metric": 222134.09375,
+        "after_metric": 221519.59375
+      },
+      "seconds": 0.029726209002546966,
+      "query_sample_gain": -8.385036720167195e-06
+    },
+    {
+      "group": 19,
+      "test": 0,
+      "original_rows": 128,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 14,
+        "escaped_stalled": 1,
+        "changed_rows": 25,
+        "moves": 34,
+        "before_metric": 745838.5625,
+        "after_metric": 745247.8125
+      },
+      "seconds": 0.005534791009267792
+    },
+    {
+      "group": 19,
+      "test": 2,
+      "original_rows": 512,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 489,
+        "moves": 941,
+        "before_metric": 284559.5,
+        "after_metric": 277919.0625
+      },
+      "seconds": 0.030673708009999245,
+      "query_sample_gain": -6.453375216917522e-05
+    },
+    {
+      "group": 19,
+      "test": 2,
+      "original_rows": 512,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 64,
+        "moves": 118,
+        "before_metric": 736033.6875,
+        "after_metric": 730888.375
+      },
+      "seconds": 0.005748666997533292
+    },
+    {
+      "group": 19,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 512,
+        "moves": 1022,
+        "before_metric": 354970.1875,
+        "after_metric": 335667.03125
+      },
+      "seconds": 0.02965974999824539,
+      "query_sample_gain": 0.01528213365020343
+    },
+    {
+      "group": 19,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 64,
+        "moves": 127,
+        "before_metric": 805022.375,
+        "after_metric": 791414.0
+      },
+      "seconds": 0.005538458994124085
+    },
+    {
+      "group": 27,
+      "test": 0,
+      "original_rows": 128,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 512,
+        "escaped_stalled": 250,
+        "changed_rows": 250,
+        "moves": 424,
+        "before_metric": 8762.771484375,
+        "after_metric": 8656.767578125
+      },
+      "seconds": 0.02493241601041518,
+      "query_sample_gain": -6.10933032250114e-10
+    },
+    {
+      "group": 27,
+      "test": 0,
+      "original_rows": 128,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 128,
+        "escaped_stalled": 55,
+        "changed_rows": 55,
+        "moves": 94,
+        "before_metric": 21591.728515625,
+        "after_metric": 21533.974609375
+      },
+      "seconds": 0.006430834007915109
+    },
+    {
+      "group": 27,
+      "test": 2,
+      "original_rows": 512,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 229,
+        "escaped_stalled": 137,
+        "changed_rows": 405,
+        "moves": 728,
+        "before_metric": 8869.86328125,
+        "after_metric": 8669.912109375
+      },
+      "seconds": 0.02874154198798351,
+      "query_sample_gain": -1.20998491047849e-08
+    },
+    {
+      "group": 27,
+      "test": 2,
+      "original_rows": 512,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 77,
+        "escaped_stalled": 40,
+        "changed_rows": 91,
+        "moves": 159,
+        "before_metric": 9997.3056640625,
+        "after_metric": 9884.80859375
+      },
+      "seconds": 0.006482458993559703
+    },
+    {
+      "group": 27,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 1,
+        "escaped_stalled": 1,
+        "changed_rows": 510,
+        "moves": 1014,
+        "before_metric": 10991.9384765625,
+        "after_metric": 10154.9755859375
+      },
+      "seconds": 0.025400665996130556,
+      "query_sample_gain": -3.8545096451450714e-07
+    },
+    {
+      "group": 27,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 128,
+        "initial_stalled": 1,
+        "escaped_stalled": 1,
+        "changed_rows": 128,
+        "moves": 253,
+        "before_metric": 11632.0888671875,
+        "after_metric": 11116.513671875
+      },
+      "seconds": 0.006476333015598357
+    },
+    {
+      "group": 36,
+      "test": 0,
+      "original_rows": 128,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 191,
+        "escaped_stalled": 11,
+        "changed_rows": 176,
+        "moves": 268,
+        "before_metric": 231074.71875,
+        "after_metric": 230459.109375
+      },
+      "seconds": 0.029808666004100814,
+      "query_sample_gain": -1.7734662485748285e-09
+    },
+    {
+      "group": 36,
+      "test": 0,
+      "original_rows": 128,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 17,
+        "escaped_stalled": 2,
+        "changed_rows": 26,
+        "moves": 41,
+        "before_metric": 817541.3125,
+        "after_metric": 816841.625
+      },
+      "seconds": 0.005641875002766028
+    },
+    {
+      "group": 36,
+      "test": 2,
+      "original_rows": 512,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 492,
+        "moves": 949,
+        "before_metric": 297589.1875,
+        "after_metric": 290477.375
+      },
+      "seconds": 0.031042916991282254,
+      "query_sample_gain": 4.813633587512011e-09
+    },
+    {
+      "group": 36,
+      "test": 2,
+      "original_rows": 512,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 60,
+        "moves": 110,
+        "before_metric": 884511.5625,
+        "after_metric": 877807.6875
+      },
+      "seconds": 0.005553790979320183
+    },
+    {
+      "group": 36,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "q",
+      "pairs": 128,
+      "stats": {
+        "rows": 512,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 512,
+        "moves": 1023,
+        "before_metric": 378096.8125,
+        "after_metric": 356601.25
+      },
+      "seconds": 0.030342583981109783,
+      "query_sample_gain": 3.9180412001932423e-07
+    },
+    {
+      "group": 36,
+      "test": 4,
+      "original_rows": 2048,
+      "role": "k",
+      "pairs": 128,
+      "stats": {
+        "rows": 64,
+        "initial_stalled": 0,
+        "escaped_stalled": 0,
+        "changed_rows": 64,
+        "moves": 128,
+        "before_metric": 810397.625,
+        "after_metric": 795376.0625
+      },
+      "seconds": 0.0054319170012604445
+    }
+  ],
+  "warning": "Sampled rows. H improvement is not online gain; Q diagnostic uses full keys, K has no partial-key score claim."
+}

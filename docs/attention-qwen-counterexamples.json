@@ -1,0 +1,87 @@
+{
+  "equal_nvfp4_scale_not_lossless": {
+    "nvfp4_values_in_one_microgroup": [
+      0.5,
+      1.0,
+      4.0,
+      6.0
+    ],
+    "all_nvfp4_scales": 1.0,
+    "enumerated_legal_sf": 255,
+    "enumerated_microproducts": [
+      1,
+      2,
+      4
+    ],
+    "best_decoded": [
+      0.0,
+      1.0,
+      4.0,
+      6.0
+    ],
+    "minimum_sse": 0.25,
+    "explanation": "Equal scales meet the claimed ratio condition, but max/min=12 exceeds the HiF4 positive code ratio 7."
+  },
+  "api_contract": {
+    "legal_signs_observed": [
+      -1.0,
+      1.0
+    ],
+    "legal_mants_observed": [
+      0.25,
+      0.5,
+      1.25,
+      1.75
+    ],
+    "continuous_lv2_rejected": [
+      "bad.scale_lv2: values must be exactly {1.0, 2.0}; examples=[1.100000023841858]"
+    ],
+    "rank16_tensor_state_errors": []
+  },
+  "rounding_rule_reversed": {
+    "input": 0.01,
+    "grid": [
+      0.0,
+      0.25
+    ],
+    "document_output": 0.25,
+    "nearest_output": 0.0,
+    "document_sq_error": 0.0576,
+    "nearest_sq_error": 0.0001
+  },
+  "rotation_order": {
+    "correct_max_abs_error": 1.4210854715202004e-14,
+    "document_order_failure": "mat1 and mat2 shapes cannot be multiplied (3x3 and 2x2)"
+  },
+  "lower_tensor_mse_not_output_guarantee": {
+    "raw": [
+      1.0,
+      -1.0
+    ],
+    "parent": [
+      1.0,
+      0.0
+    ],
+    "candidate": [
+      1.25,
+      -1.0
+    ],
+    "p": [
+      0.9,
+      0.1
+    ],
+    "tensor_mse": [
+      0.5,
+      0.03125
+    ],
+    "output_mse": [
+      0.010000000000000002,
+      0.050625
+    ]
+  },
+  "nvfp4_decode_semantics": {
+    "dtype": "torch.bfloat16",
+    "fp32_product": 1.0010000467300415,
+    "api_value": 1.0
+  }
+}

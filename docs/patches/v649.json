@@ -1,0 +1,13 @@
+{
+  "version": 649,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "Widen the dynamic HiF4 scale grid to keep only the legal E6M2 multipliers: adds one more exponent step: 12 candidates, 2x the candidate cost.",
+  "patches": [
+    [
+      "CAND_GRID = ((0, 1.0), (0, 1.25), (0, 1.5), (0, 1.75), (1, 1.0), (1, 1.25))\n",
+      "# v649: adds one more exponent step: 12 candidates, 2x the candidate cost\nCAND_GRID = tuple((off, sig) for off in (0, 1, 2)\n                  for sig in (1.0, 1.25, 1.5, 1.75))\n"
+    ]
+  ],
+  "append": []
+}

@@ -1,0 +1,229 @@
+{
+  "complete": true,
+  "group": 6,
+  "same_parent": true,
+  "rows": [
+    {
+      "repeat": 0,
+      "float": {
+        "success": false,
+        "seconds": 0.033405959024094045,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 20 is not positive-definite).",
+            "dtype": "torch.float32",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -5147187.444342344,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      },
+      "double": {
+        "success": false,
+        "seconds": 0.04274908400839195,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 5 is not positive-definite).",
+            "dtype": "torch.float64",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -7529186.97742535,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 1,
+      "float": {
+        "success": true,
+        "seconds": 0.027249916980508715,
+        "exceptions": [],
+        "inverse_pair_error": 2.3831695700193833e-07
+      },
+      "double": {
+        "success": true,
+        "seconds": 0.03438754199305549,
+        "exceptions": [],
+        "inverse_pair_error": 1.8153546499366513e-08,
+        "same_as_first_success": true
+      }
+    },
+    {
+      "repeat": 2,
+      "float": {
+        "success": false,
+        "seconds": 0.029863375006243587,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 1): The factorization could not be completed because the input is not positive-definite (the leading minor of order 6 is not positive-definite).",
+            "dtype": "torch.float32",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -2961866.306489788,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      },
+      "double": {
+        "success": false,
+        "seconds": 0.039653832965996116,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 7 is not positive-definite).",
+            "dtype": "torch.float64",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -5875092.282310797,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 3,
+      "float": {
+        "success": true,
+        "seconds": 0.024946834018919617,
+        "exceptions": [],
+        "inverse_pair_error": 2.3831695700193833e-07
+      },
+      "double": {
+        "success": false,
+        "seconds": 0.03823883301811293,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 35 is not positive-definite).",
+            "dtype": "torch.float64",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -1495317.1048383797,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 4,
+      "float": {
+        "success": true,
+        "seconds": 0.02399383398005739,
+        "exceptions": [],
+        "inverse_pair_error": 2.3831695700193833e-07
+      },
+      "double": {
+        "success": false,
+        "seconds": 0.0378035829635337,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 5 is not positive-definite).",
+            "dtype": "torch.float64",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -6881565.2487830855,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repeat": 5,
+      "float": {
+        "success": true,
+        "seconds": 0.02462375001050532,
+        "exceptions": [],
+        "inverse_pair_error": 2.3831695700193833e-07
+      },
+      "double": {
+        "success": true,
+        "seconds": 0.03405641601420939,
+        "exceptions": [],
+        "inverse_pair_error": 1.8153546499366513e-08,
+        "same_as_first_success": true
+      }
+    },
+    {
+      "repeat": 6,
+      "float": {
+        "success": false,
+        "seconds": 0.028601625002920628,
+        "exceptions": [
+          {
+            "stage": "first_cholesky",
+            "type": "_LinAlgError",
+            "message": "linalg.cholesky: (Batch element 0): The factorization could not be completed because the input is not positive-definite (the leading minor of order 5 is not positive-definite).",
+            "dtype": "torch.float32",
+            "finite": true,
+            "input_modified": false,
+            "damped_min_eigenvalue": -7529183.89339913,
+            "input_stride": [
+              65536,
+              256,
+              1
+            ]
+          }
+        ]
+      },
+      "double": {
+        "success": true,
+        "seconds": 0.03499291598564014,
+        "exceptions": [],
+        "inverse_pair_error": 1.8153546499366513e-08,
+        "same_as_first_success": true
+      }
+    },
+    {
+      "repeat": 7,
+      "float": {
+        "success": true,
+        "seconds": 0.022859040996991098,
+        "exceptions": [],
+        "inverse_pair_error": 2.3831695700193833e-07
+      },
+      "double": {
+        "success": true,
+        "seconds": 0.035922582959756255,
+        "exceptions": [],
+        "inverse_pair_error": 1.8153546499366513e-08,
+        "same_as_first_success": true
+      }
+    }
+  ]
+}

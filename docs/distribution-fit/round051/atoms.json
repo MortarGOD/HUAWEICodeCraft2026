@@ -1,0 +1,85 @@
+{
+  "round": 51,
+  "atoms": [
+    {
+      "id": "vstr8-g1",
+      "path": "local_distribution_fit/round051/vstr8-g1.pt",
+      "sha256": "a48cedad7df0bedcfc9bb39569322980f1e4464b2f10fa5fd83de450578ea94c",
+      "seed": 2026092100,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 8
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    },
+    {
+      "id": "vstr12-g1",
+      "path": "local_distribution_fit/round051/vstr12-g1.pt",
+      "sha256": "8257ffabfdeb3d1b161a2943dd3d8e69246441e4707641ddcf1f67de181deabb",
+      "seed": 2026092101,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 12
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    },
+    {
+      "id": "vstr16-g1",
+      "path": "local_distribution_fit/round051/vstr16-g1.pt",
+      "sha256": "8efa25892dc0c6243319d44f77863b04b7ade7a04f521055d3c7f9ce9f3b9952",
+      "seed": 2026092102,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 16
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    },
+    {
+      "id": "vstr8-g3",
+      "path": "local_distribution_fit/round051/vstr8-g3.pt",
+      "sha256": "b73ae5501fc485a73d94ed394b92cc4672df559feb944ad40cd048b75e85396b",
+      "seed": 2026092103,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 8
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    },
+    {
+      "id": "vstr12-g3",
+      "path": "local_distribution_fit/round051/vstr12-g3.pt",
+      "sha256": "6697fdf60fdc86b63eade72fa9ddc505d8d417dcd54f22ff9c39346203b85c5b",
+      "seed": 2026092104,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 12
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    },
+    {
+      "id": "vstr16-g3",
+      "path": "local_distribution_fit/round051/vstr16-g3.pt",
+      "sha256": "2d2b8f9643c92786462b8da749786203bf364341b83439d5afb11d5a26d27800",
+      "seed": 2026092105,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 16
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    }
+  ],
+  "mechanism": "stronger-clean vmean gradient on clean trace sources; measure 306/307,283/302,303/306 first.",
+  "limits": "Controlled mechanism gradient on clean sources; not online distribution evidence; no target tuning."
+}

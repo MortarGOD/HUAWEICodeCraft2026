@@ -1,0 +1,244 @@
+{
+  "certificate_columns": 480,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    337,
+    343,
+    345,
+    365,
+    374,
+    375,
+    378,
+    381,
+    382,
+    385,
+    387,
+    392,
+    393,
+    397,
+    399,
+    400,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 0,
+      "tokens": 8,
+      "price": 264.6929160080311,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -17.180806148631348
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 1,
+      "tokens": 8,
+      "price": 238.66836262509293,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -43.20535953156951
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 0,
+      "tokens": 8,
+      "price": 203.75643854278005,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -78.11728361388239
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 2,
+      "tokens": 8,
+      "price": 104.31525400163514,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -177.5584681550273
+    },
+    {
+      "population": "round007/sink-drift-gain2.0",
+      "test": 0,
+      "tokens": 4,
+      "price": 0.03020087197892986,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -281.8435212846835
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 4,
+      "tokens": 8,
+      "price": -12.756772073070943,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -294.63049422973336
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 3,
+      "tokens": 8,
+      "price": -96.77987137219802,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -378.6535935288605
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 2,
+      "tokens": 8,
+      "price": -236.4506957991452,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -518.3244179558076
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 3,
+      "tokens": 8,
+      "price": -267.6802121210259,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -549.5539342776883
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 1,
+      "tokens": 8,
+      "price": -389.23467890868653,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -671.108401065349
+    },
+    {
+      "population": "round007/sink-drift-gain2.0",
+      "test": 3,
+      "tokens": 128,
+      "price": -533.4625862591141,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -815.3363084157766
+    },
+    {
+      "population": "round007/trace35-group7-gain0.75",
+      "test": 4,
+      "tokens": 8,
+      "price": -599.2272899683096,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -881.101012124972
+    },
+    {
+      "population": "round007/sink-drift-gain2.0",
+      "test": 2,
+      "tokens": 32,
+      "price": -1624.6266875604038,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -1906.5004097170663
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 0,
+      "tokens": 4,
+      "price": -2204.038851979519,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -2485.912574136182
+    },
+    {
+      "population": "round007/sink-drift-gain2.0",
+      "test": 4,
+      "tokens": 512,
+      "price": -2375.9781410662417,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -2657.8518632229043
+    },
+    {
+      "population": "round007/sink-drift-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": -5625.877077815245,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -5907.750799971907
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 1,
+      "tokens": 8,
+      "price": -9414.712407283638,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -9696.5861294403
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 2,
+      "tokens": 8,
+      "price": -21005.23913281062,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -21287.112854967283
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 2,
+      "tokens": 32,
+      "price": -25106.776883991857,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -25388.65060614852
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": -29633.525132539213,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -29915.398854695875
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 3,
+      "tokens": 8,
+      "price": -33493.97643009784,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -33775.850152254505
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 4,
+      "tokens": 8,
+      "price": -33743.02306875904,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -34024.8967909157
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 0,
+      "tokens": 8,
+      "price": -39044.351662470894,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -39326.225384627556
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 3,
+      "tokens": 128,
+      "price": -64161.955475436655,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -64443.82919759332
+    },
+    {
+      "population": "round007/sink-drift-gain0.5",
+      "test": 4,
+      "tokens": 512,
+      "price": -330254.5375460069,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -330536.4112681636
+    }
+  ],
+  "limits": "All five existing round007 populations screened on current certificate endpoints; none breaks this certificate. This does not exclude unmeasured distributions."
+}

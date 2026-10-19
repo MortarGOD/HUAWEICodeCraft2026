@@ -1,0 +1,52 @@
+{
+  "round": 49,
+  "atoms": [
+    {
+      "id": "vmeanclean-1",
+      "path": "local_distribution_fit/round049/vmeanclean-1.pt",
+      "sha256": "b72e86b6cef0132e8a0214295c5b85c45e252b8ecb9584d20de54ab0503dd101",
+      "seed": 2026091900,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "model": "trace",
+      "profile": {
+        "vmean": 1,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    },
+    {
+      "id": "vmeanclean-2",
+      "path": "local_distribution_fit/round049/vmeanclean-2.pt",
+      "sha256": "3a7bf1ba9db3063eea4f1889b95e6fc26cf7d978963cf3444131f041387c3e78",
+      "seed": 2026091901,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "model": "trace",
+      "profile": {
+        "vmean": 2,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    },
+    {
+      "id": "vmeanclean-4",
+      "path": "local_distribution_fit/round049/vmeanclean-4.pt",
+      "sha256": "8d73f8b1de48d8a4c1b38c0e6d319a537a173eaaeb2d4d65feb51ce3258f67f2",
+      "seed": 2026091902,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "model": "trace",
+      "profile": {
+        "vmean": 4,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_sha256": "1ce85f059ce4ec3983cb0da3c282195e169ea1bd3179abe233c219fd8e9ebc4c"
+    }
+  ],
+  "mechanism": "mild vmean differential atom on clean trace35-group1 source; measure 306/307 and 303/306 first.",
+  "limits": "Controlled mechanism gradient on clean source; not online distribution evidence; no target tuning."
+}

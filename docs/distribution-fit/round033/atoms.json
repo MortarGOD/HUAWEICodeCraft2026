@@ -1,0 +1,114 @@
+{
+  "round": 33,
+  "atoms": [
+    {
+      "id": "test-sharp2",
+      "path": "local_distribution_fit/round033/test-sharp2.pt",
+      "sha256": "7cc6a59b8d35ca0b5358b727032344cf58930dadb746144cc2e7fb0748bfedb3",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 2.0,
+        "phases": [
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "test-sharp4",
+      "path": "local_distribution_fit/round033/test-sharp4.pt",
+      "sha256": "00880d1dcc4fe0cc7ca3b9cff760040695c38d99e1f1ac0895ce40179f6eab1e",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 4.0,
+        "phases": [
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "both-sharp2",
+      "path": "local_distribution_fit/round033/both-sharp2.pt",
+      "sha256": "684ea09ec7cd6c807bf3ab09f7875809010733019247aeb01610b60161467b41",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 2.0,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "both-sharp4",
+      "path": "local_distribution_fit/round033/both-sharp4.pt",
+      "sha256": "2067b3f7528842264e86900d74ef3d48ca325f260be31fdbfc6ba4847af9eed8",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 4.0,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    }
+  ],
+  "required_versions": [
+    308,
+    309,
+    310,
+    311,
+    314,
+    322,
+    330,
+    337,
+    341,
+    365,
+    367,
+    374,
+    379,
+    381,
+    382,
+    387,
+    388,
+    392,
+    399,
+    402,
+    403,
+    412,
+    414,
+    418,
+    435,
+    436
+  ],
+  "certificate_sha256": "04cce108087aa8e3ab711d7f71caa57722a67b5e30eba4d9d7f6d24aff216ca2",
+  "selection_evidence": "The verified 555-column v311 direction-only certificate is closest to round014 seedplus3. Test sharper true Q/K with V and decoy seed fixed: historical v311 token polish is sensitive to concentrated attention. Separate test-only drift from matched calibration/test sharpening. This is a mechanism hypothesis, not an inferred online distribution.",
+  "limits": "Adaptive support search; screen against current fixed certificate before full 102-version evaluation. Positive screening does not prove joint feasibility."
+}

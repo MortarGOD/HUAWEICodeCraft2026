@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "rows": 1,
+      "valid": true
+    },
+    {
+      "rows": 129,
+      "valid": true
+    },
+    {
+      "rows": 1024,
+      "valid": true
+    },
+    {
+      "rows": 4097,
+      "valid": true
+    }
+  ],
+  "holdout_query_excluded": true,
+  "nonidentity_rejected": true,
+  "inactive_head_exact": true,
+  "query_layout": true,
+  "mse_cap": true,
+  "warning": "Prototype invariants, not an online score guarantee."
+}

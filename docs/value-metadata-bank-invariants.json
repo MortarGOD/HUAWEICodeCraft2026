@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "bank": true,
+  "cap": 1.1,
+  "checks": [
+    {
+      "rows": 1,
+      "valid": true,
+      "changed_elements": 0
+    },
+    {
+      "rows": 17,
+      "valid": true,
+      "changed_elements": 0
+    },
+    {
+      "rows": 129,
+      "valid": true,
+      "changed_elements": 0
+    },
+    {
+      "rows": 1024,
+      "valid": true,
+      "changed_elements": 0
+    },
+    {
+      "rows": 4097,
+      "valid": true,
+      "changed_elements": 0
+    }
+  ],
+  "adoption_exercised": true,
+  "objective_monotone": true,
+  "per_channel_mse_cap": true,
+  "parent_immutable": true,
+  "inactive_head_exact": true,
+  "disabled_exact": true,
+  "state_valid": true
+}

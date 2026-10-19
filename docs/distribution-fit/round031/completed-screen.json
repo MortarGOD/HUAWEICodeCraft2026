@@ -1,0 +1,71 @@
+{
+  "certificate_sha256": "2c754a5777125aacd7eaf0423d50eddc2259d37351b352335246ef037f0b0872",
+  "cases": [
+    {
+      "population": "round031/v-permutation-seed2026091501",
+      "test": 4,
+      "margin": 3100.015610495271,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091502",
+      "test": 4,
+      "margin": 2838.2613144933816,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091501",
+      "test": 0,
+      "margin": -0.7369294922689846,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091502",
+      "test": 0,
+      "margin": -0.7617664571883336,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091501",
+      "test": 3,
+      "margin": -14.501316336134972,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091502",
+      "test": 3,
+      "margin": -19.050310901338722,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091501",
+      "test": 2,
+      "margin": -32.61700745308141,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091502",
+      "test": 2,
+      "margin": -36.08369254010741,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091502",
+      "test": 1,
+      "margin": -44.51021248240057,
+      "in_complete_support": false
+    },
+    {
+      "population": "round031/v-permutation-seed2026091501",
+      "test": 1,
+      "margin": -62.78714053265007,
+      "in_complete_support": false
+    }
+  ],
+  "screened_versions": 61,
+  "promoted": [
+    "v-permutation-seed2026091501",
+    "v-permutation-seed2026091502"
+  ],
+  "limits": "Both positive screens need full102 measurements and joint fit."
+}

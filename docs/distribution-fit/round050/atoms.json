@@ -1,0 +1,105 @@
+{
+  "round": 50,
+  "atoms": [
+    {
+      "id": "qkclean-g125",
+      "path": "local_distribution_fit/round050/qkclean-g125.pt",
+      "sha256": "2ddd2eb0746776a7ad98e3fe117eeb931615316e37e03d6efeb7e0a020d4ef40",
+      "seed": 2026092000,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 1.25,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    },
+    {
+      "id": "qkclean-g050",
+      "path": "local_distribution_fit/round050/qkclean-g050.pt",
+      "sha256": "1b23020649722037dee434ac5063e33d03bf88bfffa797bcf67a7ae54812dcc6",
+      "seed": 2026092001,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 0.5,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    },
+    {
+      "id": "vmeancl3-4",
+      "path": "local_distribution_fit/round050/vmeancl3-4.pt",
+      "sha256": "7ed96c146054a52a85b84124f0ffcb17393aed831dd7817517bc76b96656d607",
+      "seed": 2026092002,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 4,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee"
+    },
+    {
+      "id": "vmeancl7-4",
+      "path": "local_distribution_fit/round050/vmeancl7-4.pt",
+      "sha256": "dda82768df8bc968560ceec48865ca9e873cf2911b488431fa04fc824716fb70",
+      "seed": 2026092003,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 4,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42"
+    },
+    {
+      "id": "vmeancl9-4",
+      "path": "local_distribution_fit/round050/vmeancl9-4.pt",
+      "sha256": "f73179871035690511ed11696ae78d53392cb7f4592b8a58adffa8191ea9c79b",
+      "seed": 2026092004,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 4,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_sha256": "523ac633d72e6d30ecdd300190bec396e74a12d7011af780c2aee235c8f0a224"
+    },
+    {
+      "id": "vmeancl25-4",
+      "path": "local_distribution_fit/round050/vmeancl25-4.pt",
+      "sha256": "dc47982268ebe460531248e4e44c54e6dc6387fd042908b19d107b6b2819607a",
+      "seed": 2026092005,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "vmean": 4,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f"
+    },
+    {
+      "id": "qkclean-g200",
+      "path": "local_distribution_fit/round050/qkclean-g200.pt",
+      "sha256": "f5bf6f6e178529b4c9ee14220063b15905ff59a21686b36b8dc33751c1814ed1",
+      "seed": 2026092006,
+      "mode": "row_permute",
+      "fit_eligible": false,
+      "profile": {
+        "gain": 2.0,
+        "qk_encoding_preserved": true
+      },
+      "source_path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f"
+    }
+  ],
+  "mechanism": "clean differential atom family: (vmean|qk-gain) x clean trace sources; measure 306/307,303/305,303/306,283/302 first.",
+  "limits": "Controlled mechanism gradient on clean sources; not online distribution evidence; no target tuning."
+}

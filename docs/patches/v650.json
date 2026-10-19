@@ -1,0 +1,13 @@
+{
+  "version": 650,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "Add the single omitted legal candidate (1, 1.5) to CAND_GRID (7 candidates).",
+  "patches": [
+    [
+      "CAND_GRID = ((0, 1.0), (0, 1.25), (0, 1.5), (0, 1.75), (1, 1.0), (1, 1.25))\n",
+      "# v650: CAND_GRID omitted two legal candidates; this adds only (1, 1.5), so the search costs\n# 7/6 of the old one instead of 8/6.\nCAND_GRID = ((0, 1.0), (0, 1.25), (0, 1.5), (0, 1.75), (1, 1.0), (1, 1.25), (1, 1.5))\n"
+    ]
+  ],
+  "append": []
+}

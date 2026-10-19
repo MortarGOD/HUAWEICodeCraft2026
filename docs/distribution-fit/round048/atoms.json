@@ -1,0 +1,112 @@
+{
+  "round": 48,
+  "atoms": [
+    {
+      "id": "fast-ch-l128-d05",
+      "path": "local_distribution_fit/round048/fast-ch-l128-d05.pt",
+      "sha256": "41f6d98d55d84ef5cd51cdd04057a86a286119c35322c0fdbd8aa30668bffd01",
+      "seed": 2026091800,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "source": "random",
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "context_drift": 0.05
+      }
+    },
+    {
+      "id": "fast-ch-l128-d15",
+      "path": "local_distribution_fit/round048/fast-ch-l128-d15.pt",
+      "sha256": "620b3d929afe25db1245212f2993d6f9b6b03af7d0474df5cc141f846ad5d085",
+      "seed": 2026091801,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "source": "random",
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "context_drift": 0.15
+      }
+    },
+    {
+      "id": "fast-ch-l256-d05",
+      "path": "local_distribution_fit/round048/fast-ch-l256-d05.pt",
+      "sha256": "055cd640cb4681ff91d2eb078233475c581d60037d49a091e1bbefb9daad2961",
+      "seed": 2026091802,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "source": "random",
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "context_drift": 0.05
+      }
+    },
+    {
+      "id": "fast-ch-l256-d15",
+      "path": "local_distribution_fit/round048/fast-ch-l256-d15.pt",
+      "sha256": "a18bcf58f9baf58509d31ab46773542270e4989f07f195f5630fce17ddb362f7",
+      "seed": 2026091803,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "source": "random",
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "context_drift": 0.15
+      }
+    },
+    {
+      "id": "fast-ch-l512-d05",
+      "path": "local_distribution_fit/round048/fast-ch-l512-d05.pt",
+      "sha256": "f51764b339dcdbe321b243fd6f97caba9b0f615f7434f45a3c4f3dabf724f75e",
+      "seed": 2026091804,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "source": "random",
+        "rows": [
+          512,
+          512,
+          512,
+          512,
+          512
+        ],
+        "context_drift": 0.05
+      }
+    }
+  ],
+  "mechanism": "v307 GPTQ-enable gain gradient on fast random-source channel covariance; measure 306/307 first.",
+  "limits": "Synthetic fast-channel-covariance gradient; not online distribution evidence."
+}

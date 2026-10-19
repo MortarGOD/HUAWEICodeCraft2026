@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "qh": 16,
+      "kh": 2,
+      "d": 256,
+      "t": 32,
+      "extra_fit_seconds": 0.16562537499703467
+    },
+    {
+      "qh": 40,
+      "kh": 8,
+      "d": 128,
+      "t": 32,
+      "extra_fit_seconds": 0.1890043340390548
+    },
+    {
+      "qh": 32,
+      "kh": 8,
+      "d": 512,
+      "t": 32,
+      "extra_fit_seconds": 0.6024638749659061
+    }
+  ],
+  "limits": "Synthetic identity QK metrics and base V; no KT/TS or active VK. Local timing, not online budget guarantee."
+}

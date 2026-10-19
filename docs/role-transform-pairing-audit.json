@@ -1,0 +1,62 @@
+{
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "paired",
+      "relative_identity_error": [
+        0.001439794315956533,
+        0.0014691933756694198
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "relative_identity_error": [
+        0.007626489736139774,
+        0.00790899246931076
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "relative_identity_error": [
+        0.012659058906137943,
+        0.012511790730059147
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "paired",
+      "relative_identity_error": [
+        1.0054463928099722e-06
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "relative_identity_error": [
+        1.5254268646240234
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "relative_identity_error": [
+        0.36704885959625244
+      ],
+      "note": "Top-level pre-translation linear maps, temperature removed. Does not include quantization, routing or prove causality of score loss."
+    }
+  ],
+  "decoy_source": "unknown; sensitivity hypotheses only"
+}

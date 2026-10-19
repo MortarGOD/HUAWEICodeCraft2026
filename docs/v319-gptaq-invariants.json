@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    "all original nodes unchanged except two Q/K dispatch branches",
+    "blocked recurrence exact codes (1, 3, 64, 16)",
+    "blocked recurrence exact codes (1, 3, 64, 32)",
+    "blocked recurrence exact codes (1, 3, 64, 64)",
+    "asymmetric objective identity (1, 3, 64)",
+    "blocked recurrence exact codes (2, 9, 128, 16)",
+    "blocked recurrence exact codes (2, 9, 128, 32)",
+    "blocked recurrence exact codes (2, 9, 128, 128)",
+    "asymmetric objective identity (2, 9, 128)",
+    "blocked recurrence exact codes (4, 17, 64, 16)",
+    "blocked recurrence exact codes (4, 17, 64, 32)",
+    "blocked recurrence exact codes (4, 17, 64, 64)",
+    "asymmetric objective identity (4, 17, 64)",
+    "q legal and parent unchanged",
+    "q zero compensation params exactly equal",
+    "k legal and parent unchanged",
+    "k zero compensation params exactly equal",
+    "missing H with disabled refinement"
+  ],
+  "total": 18,
+  "actual_group": 1
+}

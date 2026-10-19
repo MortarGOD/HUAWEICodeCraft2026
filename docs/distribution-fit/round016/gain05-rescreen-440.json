@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 3,
+      "tokens": 128,
+      "price": 424.64696289577466,
+      "required_lower_bound": 311.485195281889,
+      "margin": 113.16176761388567
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 0,
+      "tokens": 4,
+      "price": 223.0977099848376,
+      "required_lower_bound": 311.485195281889,
+      "margin": -88.3874852970514
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 4,
+      "tokens": 512,
+      "price": 212.53141927737613,
+      "required_lower_bound": 311.485195281889,
+      "margin": -98.95377600451286
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 2,
+      "tokens": 32,
+      "price": -233.85975255198073,
+      "required_lower_bound": 311.485195281889,
+      "margin": -545.3449478338697
+    },
+    {
+      "population": "round016/true-qk-gain0.5",
+      "test": 1,
+      "tokens": 8,
+      "price": -401.9114470204454,
+      "required_lower_bound": 311.485195281889,
+      "margin": -713.3966423023344
+    }
+  ],
+  "promote": true,
+  "certificate_columns": 440,
+  "limits": "New certificate endpoints measured; previous negative 390-column screen retained. Breaking this certificate is not joint feasibility."
+}

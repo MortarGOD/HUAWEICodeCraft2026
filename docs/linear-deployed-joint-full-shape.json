@@ -1,0 +1,236 @@
+{
+  "parent": 315,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "complete": true,
+  "groups": [
+    {
+      "index": 0,
+      "shape": [
+        8192,
+        2048
+      ],
+      "candidates": [
+        {
+          "name": "parent",
+          "loss": 0.004210920073091984,
+          "folds": [
+            0.004225053358823061,
+            0.004196786321699619
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend0.5",
+          "loss": 0.0041759321466088295,
+          "folds": [
+            0.004191683605313301,
+            0.004160180687904358
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend1.0",
+          "loss": 0.004176820628345013,
+          "folds": [
+            0.004190645646303892,
+            0.0041629960760474205
+          ]
+        },
+        {
+          "name": "inverse_encoder",
+          "loss": 0.00417584553360939,
+          "folds": [
+            0.004192551597952843,
+            0.004159138537943363
+          ]
+        },
+        {
+          "name": "inverse_encoder_2",
+          "loss": 0.004034814424812794,
+          "folds": [
+            0.0040480089373886585,
+            0.004021620377898216
+          ]
+        },
+        {
+          "name": "inverse_encoder_3",
+          "loss": 0.003968965727835894,
+          "folds": [
+            0.003980342764407396,
+            0.003957588225603104
+          ]
+        },
+        {
+          "name": "inverse_encoder_4",
+          "loss": 0.003931647632271051,
+          "folds": [
+            0.003942820709198713,
+            0.003920475021004677
+          ]
+        }
+      ],
+      "selected": "inverse_encoder_4",
+      "source_model": "Qwen/Qwen3.6-35B-A3B",
+      "source_tensor": "model.language_model.layers.3.self_attn.q_proj.weight",
+      "parent_calibration_seconds": 11.951900583022507,
+      "solve_relative": 3.934726180432335e-07,
+      "calibration_research_seconds": 46.06647375001921,
+      "validated_returns": 28,
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "parent": 0.507917204176535,
+          "selected": 0.5371385582741786,
+          "delta": 0.029221354097643593
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "parent": 0.5271336249830667,
+          "selected": 0.5584224883725255,
+          "delta": 0.0312888633894588
+        },
+        {
+          "test": 2,
+          "rows": 128,
+          "parent": 0.5320085366057057,
+          "selected": 0.5638429194151912,
+          "delta": 0.03183438280948547
+        },
+        {
+          "test": 3,
+          "rows": 512,
+          "parent": 0.5320614790170435,
+          "selected": 0.5641549091365681,
+          "delta": 0.03209343011952459
+        },
+        {
+          "test": 4,
+          "rows": 1024,
+          "parent": 0.5235286349795827,
+          "selected": 0.5555043803622046,
+          "delta": 0.031975745382621934
+        }
+      ],
+      "delta": 0.1564137757987344,
+      "parent_and_calibration_unchanged": true
+    },
+    {
+      "index": 9,
+      "shape": [
+        4096,
+        2048
+      ],
+      "candidates": [
+        {
+          "name": "parent",
+          "loss": 0.003843562211841345,
+          "folds": [
+            0.0038561872206628323,
+            0.0038309372030198574
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend0.5",
+          "loss": 0.0037876891437917948,
+          "folds": [
+            0.003798380494117737,
+            0.00377699825912714
+          ]
+        },
+        {
+          "name": "als_ridge.1_blend1.0",
+          "loss": 0.0037885194178670645,
+          "folds": [
+            0.0038005360402166843,
+            0.0037765027955174446
+          ]
+        },
+        {
+          "name": "inverse_encoder",
+          "loss": 0.0037874761037528515,
+          "folds": [
+            0.0037985763046890497,
+            0.0037763756699860096
+          ]
+        },
+        {
+          "name": "inverse_encoder_2",
+          "loss": 0.0037012905813753605,
+          "folds": [
+            0.00371044734492898,
+            0.0036921335849910975
+          ]
+        },
+        {
+          "name": "inverse_encoder_3",
+          "loss": 0.0036755618639290333,
+          "folds": [
+            0.003683306509628892,
+            0.0036678167525678873
+          ]
+        },
+        {
+          "name": "inverse_encoder_4",
+          "loss": 0.0036680269986391068,
+          "folds": [
+            0.0036784859839826822,
+            0.0036575677804648876
+          ]
+        }
+      ],
+      "selected": "inverse_encoder_4",
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.ffn.shared_experts.w2.weight",
+      "parent_calibration_seconds": 9.346661167015554,
+      "solve_relative": 4.0262136735691456e-07,
+      "calibration_research_seconds": 31.790330292016733,
+      "validated_returns": 28,
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "parent": 0.617344712093128,
+          "selected": 0.645818206565806,
+          "delta": 0.028473494472677996
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "parent": 0.6361555256592925,
+          "selected": 0.6559381145598837,
+          "delta": 0.019782588900591258
+        },
+        {
+          "test": 2,
+          "rows": 128,
+          "parent": 0.6455087550111038,
+          "selected": 0.6624815434017413,
+          "delta": 0.016972788390637428
+        },
+        {
+          "test": 3,
+          "rows": 512,
+          "parent": 0.6374582647233731,
+          "selected": 0.6547401590697381,
+          "delta": 0.017281894346365068
+        },
+        {
+          "test": 4,
+          "rows": 1024,
+          "parent": 0.6356339191590634,
+          "selected": 0.6524633524612878,
+          "delta": 0.016829433302224417
+        }
+      ],
+      "delta": 0.09934019941249617,
+      "parent_and_calibration_unchanged": true
+    }
+  ],
+  "source_sha256": "d85f87cc68ab4161056fb47b810be16d5465e12171ad86e3dda25db05c956fa6",
+  "score_prediction_allowed": false,
+  "provenance": "Unreduced model/TP-local cached checkpoint projections; modeled activations, NOT actual online data",
+  "selection": "First four calibration sets fit; last set even/odd rows guard; test never selects",
+  "full_shape_seed_base": 2026090317,
+  "seconds": 105.21856549999211,
+  "delta": 0.25575397521123056
+}

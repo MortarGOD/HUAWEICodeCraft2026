@@ -1,0 +1,1061 @@
+{
+  "complete": true,
+  "dataset": "qwen2_5_14b_online_v1",
+  "data_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+  "source_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 16,
+        "oracle_output": 19
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00015568186063319445,
+          "heldout_mse": 0.00021599284082185477,
+          "tensor_mse": 0.00037887546932324767,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0001628127647563815,
+          "heldout_mse": 0.00021443163859657943,
+          "tensor_mse": 0.0003623402735684067,
+          "changed": 433
+        },
+        "mean": {
+          "fit_mse": 0.00016289122868329287,
+          "heldout_mse": 0.00024260487407445908,
+          "tensor_mse": 0.00041112577309831977,
+          "changed": 243
+        },
+        "oracle_value": {
+          "fit_mse": 0.00014970723714213818,
+          "heldout_mse": 0.0002150482323486358,
+          "tensor_mse": 0.00037811193033121526,
+          "changed": 383
+        },
+        "oracle_output": {
+          "fit_mse": 0.0001476904290029779,
+          "heldout_mse": 0.0002185487246606499,
+          "tensor_mse": 0.00038178550312295556,
+          "changed": 359
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 16,
+        "oracle_output": 15
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0002305995876668021,
+          "heldout_mse": 0.0002538416883908212,
+          "tensor_mse": 0.0004267558688297868,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00023877275816630572,
+          "heldout_mse": 0.0002670330286491662,
+          "tensor_mse": 0.00040282856207340956,
+          "changed": 322
+        },
+        "mean": {
+          "fit_mse": 0.00024087978817988187,
+          "heldout_mse": 0.00026180120767094195,
+          "tensor_mse": 0.0004402081249281764,
+          "changed": 181
+        },
+        "oracle_value": {
+          "fit_mse": 0.0002237179287476465,
+          "heldout_mse": 0.00026500268722884357,
+          "tensor_mse": 0.00043758226092904806,
+          "changed": 345
+        },
+        "oracle_output": {
+          "fit_mse": 0.0002235525316791609,
+          "heldout_mse": 0.00026519710081629455,
+          "tensor_mse": 0.0004373022820800543,
+          "changed": 343
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 45,
+        "oracle_output": 38
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00024333936744369566,
+          "heldout_mse": 0.0001692438527243212,
+          "tensor_mse": 0.0005080837290734053,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0002513418148737401,
+          "heldout_mse": 0.00016818931908346713,
+          "tensor_mse": 0.0004812093684449792,
+          "changed": 559
+        },
+        "mean": {
+          "fit_mse": 0.0002542143047321588,
+          "heldout_mse": 0.0001943358947755769,
+          "tensor_mse": 0.0005276583833619952,
+          "changed": 338
+        },
+        "oracle_value": {
+          "fit_mse": 0.0002326957619516179,
+          "heldout_mse": 0.0001945771073224023,
+          "tensor_mse": 0.0005201908643357456,
+          "changed": 712
+        },
+        "oracle_output": {
+          "fit_mse": 0.00022900020121596754,
+          "heldout_mse": 0.0002083849103655666,
+          "tensor_mse": 0.0005295896553434432,
+          "changed": 657
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 11,
+        "oracle_output": 9
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00041724881157279015,
+          "heldout_mse": 0.0004352312535047531,
+          "tensor_mse": 0.0007001206977292895,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00042710787965916097,
+          "heldout_mse": 0.0004578479565680027,
+          "tensor_mse": 0.0006476318230852485,
+          "changed": 246
+        },
+        "mean": {
+          "fit_mse": 0.00042003922862932086,
+          "heldout_mse": 0.0004380631144158542,
+          "tensor_mse": 0.0007070217980071902,
+          "changed": 34
+        },
+        "oracle_value": {
+          "fit_mse": 0.0004102872626390308,
+          "heldout_mse": 0.0004348408547230065,
+          "tensor_mse": 0.0006888032658025622,
+          "changed": 107
+        },
+        "oracle_output": {
+          "fit_mse": 0.00040699998498894274,
+          "heldout_mse": 0.0004374979471322149,
+          "tensor_mse": 0.0006892032688483596,
+          "changed": 159
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 13,
+        "oracle_output": 15
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00027435855008661747,
+          "heldout_mse": 0.00033133768010884523,
+          "tensor_mse": 0.0006252812454476953,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0002999845310114324,
+          "heldout_mse": 0.0003488480579108,
+          "tensor_mse": 0.0005798964994028211,
+          "changed": 258
+        },
+        "mean": {
+          "fit_mse": 0.00029111848562024534,
+          "heldout_mse": 0.0003420011489652097,
+          "tensor_mse": 0.0006464543985202909,
+          "changed": 90
+        },
+        "oracle_value": {
+          "fit_mse": 0.00026611360954120755,
+          "heldout_mse": 0.00033067961339838803,
+          "tensor_mse": 0.000633139512501657,
+          "changed": 117
+        },
+        "oracle_output": {
+          "fit_mse": 0.00026430017896927893,
+          "heldout_mse": 0.00033211446134373546,
+          "tensor_mse": 0.000642455299384892,
+          "changed": 119
+        }
+      }
+    },
+    {
+      "group": 10,
+      "test": 0,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 9,
+        "oracle_output": 10
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00012046626943629235,
+          "heldout_mse": 4.757704300573096e-05,
+          "tensor_mse": 0.0011876877397298813,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00012045083713019267,
+          "heldout_mse": 4.6883222239557654e-05,
+          "tensor_mse": 0.0011743237264454365,
+          "changed": 277
+        },
+        "mean": {
+          "fit_mse": 0.00026880373479798436,
+          "heldout_mse": 0.00019850139506161213,
+          "tensor_mse": 0.0013047032989561558,
+          "changed": 832
+        },
+        "oracle_value": {
+          "fit_mse": 0.00011758810433093458,
+          "heldout_mse": 4.69318765681237e-05,
+          "tensor_mse": 0.0011873430339619517,
+          "changed": 282
+        },
+        "oracle_output": {
+          "fit_mse": 0.00011636233830358833,
+          "heldout_mse": 4.808962330571376e-05,
+          "tensor_mse": 0.001187591697089374,
+          "changed": 345
+        }
+      }
+    },
+    {
+      "group": 10,
+      "test": 1,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 13,
+        "oracle_output": 15
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 8.160623110597953e-05,
+          "heldout_mse": 7.466052920790389e-05,
+          "tensor_mse": 0.0010683464352041483,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 6.836416287114844e-05,
+          "heldout_mse": 6.733178452122957e-05,
+          "tensor_mse": 0.0010477368487045169,
+          "changed": 444
+        },
+        "mean": {
+          "fit_mse": 0.00020903712720610201,
+          "heldout_mse": 0.00019763833552133292,
+          "tensor_mse": 0.0011701745679602027,
+          "changed": 798
+        },
+        "oracle_value": {
+          "fit_mse": 7.594139606226236e-05,
+          "heldout_mse": 6.928074435563758e-05,
+          "tensor_mse": 0.001066517666913569,
+          "changed": 326
+        },
+        "oracle_output": {
+          "fit_mse": 7.361060124821961e-05,
+          "heldout_mse": 7.137892680475488e-05,
+          "tensor_mse": 0.0010670427000150084,
+          "changed": 430
+        }
+      }
+    },
+    {
+      "group": 10,
+      "test": 2,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 23,
+        "oracle_output": 22
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 8.307061216328293e-05,
+          "heldout_mse": 8.604676986578852e-05,
+          "tensor_mse": 0.0011098856339231133,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 3.579550684662536e-05,
+          "heldout_mse": 3.937047586077824e-05,
+          "tensor_mse": 0.0010829427046701312,
+          "changed": 658
+        },
+        "mean": {
+          "fit_mse": 0.000175931811099872,
+          "heldout_mse": 0.0001850738626671955,
+          "tensor_mse": 0.0012060051085427403,
+          "changed": 725
+        },
+        "oracle_value": {
+          "fit_mse": 3.5277123970445246e-05,
+          "heldout_mse": 4.107653512619436e-05,
+          "tensor_mse": 0.001096151303499937,
+          "changed": 651
+        },
+        "oracle_output": {
+          "fit_mse": 3.4569478884804994e-05,
+          "heldout_mse": 4.202718992019072e-05,
+          "tensor_mse": 0.001096352469176054,
+          "changed": 717
+        }
+      }
+    },
+    {
+      "group": 10,
+      "test": 3,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 8,
+        "oracle_output": 14
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0001139616797445342,
+          "heldout_mse": 9.778557432582602e-05,
+          "tensor_mse": 0.0012911000521853566,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00011560441635083407,
+          "heldout_mse": 9.515265264781192e-05,
+          "tensor_mse": 0.0012764509301632643,
+          "changed": 354
+        },
+        "mean": {
+          "fit_mse": 0.00030492531368508935,
+          "heldout_mse": 0.0002740314812399447,
+          "tensor_mse": 0.001419090200215578,
+          "changed": 803
+        },
+        "oracle_value": {
+          "fit_mse": 0.0001120182714657858,
+          "heldout_mse": 9.63965430855751e-05,
+          "tensor_mse": 0.0012903268216177821,
+          "changed": 157
+        },
+        "oracle_output": {
+          "fit_mse": 0.00011021709360647947,
+          "heldout_mse": 9.78644093265757e-05,
+          "tensor_mse": 0.001290903310291469,
+          "changed": 311
+        }
+      }
+    },
+    {
+      "group": 10,
+      "test": 4,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 9,
+        "oracle_output": 10
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 7.814729906385764e-05,
+          "heldout_mse": 5.287842213874683e-05,
+          "tensor_mse": 0.0010704295709729195,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 8.019347296794876e-05,
+          "heldout_mse": 5.24502647749614e-05,
+          "tensor_mse": 0.0010626023868098855,
+          "changed": 226
+        },
+        "mean": {
+          "fit_mse": 0.00021557955187745392,
+          "heldout_mse": 0.0001840561453718692,
+          "tensor_mse": 0.0011655731359496713,
+          "changed": 835
+        },
+        "oracle_value": {
+          "fit_mse": 7.768002251395956e-05,
+          "heldout_mse": 5.295327719068155e-05,
+          "tensor_mse": 0.0010705464519560337,
+          "changed": 173
+        },
+        "oracle_output": {
+          "fit_mse": 7.556284253951162e-05,
+          "heldout_mse": 5.853684706380591e-05,
+          "tensor_mse": 0.0010716475080698729,
+          "changed": 235
+        }
+      }
+    },
+    {
+      "group": 20,
+      "test": 0,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 5,
+        "oracle_output": 7
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00010225029109278694,
+          "heldout_mse": 0.0002578218118287623,
+          "tensor_mse": 0.0021729867439717054,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00010474280134076253,
+          "heldout_mse": 0.000261041393969208,
+          "tensor_mse": 0.0021502405870705843,
+          "changed": 118
+        },
+        "mean": {
+          "fit_mse": 0.00040200521470978856,
+          "heldout_mse": 0.0005359394708648324,
+          "tensor_mse": 0.0023579378612339497,
+          "changed": 624
+        },
+        "oracle_value": {
+          "fit_mse": 0.00010203226702287793,
+          "heldout_mse": 0.0002579715510364622,
+          "tensor_mse": 0.002173020737245679,
+          "changed": 28
+        },
+        "oracle_output": {
+          "fit_mse": 9.957516886061057e-05,
+          "heldout_mse": 0.0002563626621849835,
+          "tensor_mse": 0.0021732845343649387,
+          "changed": 130
+        }
+      }
+    },
+    {
+      "group": 20,
+      "test": 1,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 6,
+        "oracle_output": 7
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00011679883027682081,
+          "heldout_mse": 0.00022156517661642283,
+          "tensor_mse": 0.002081290353089571,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00011835325130959973,
+          "heldout_mse": 0.00022274543880484998,
+          "tensor_mse": 0.0020645051263272762,
+          "changed": 159
+        },
+        "mean": {
+          "fit_mse": 0.0004418664611876011,
+          "heldout_mse": 0.0005657539004459977,
+          "tensor_mse": 0.0022863890044391155,
+          "changed": 669
+        },
+        "oracle_value": {
+          "fit_mse": 0.00011624742910498753,
+          "heldout_mse": 0.00022057299793232232,
+          "tensor_mse": 0.002081243321299553,
+          "changed": 34
+        },
+        "oracle_output": {
+          "fit_mse": 0.00011349350825184956,
+          "heldout_mse": 0.00021816608204972,
+          "tensor_mse": 0.0020815161988139153,
+          "changed": 120
+        }
+      }
+    },
+    {
+      "group": 20,
+      "test": 2,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 11,
+        "oracle_output": 12
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00017568367184139788,
+          "heldout_mse": 0.00017680245218798518,
+          "tensor_mse": 0.001878778450191021,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00017861805099528283,
+          "heldout_mse": 0.00017606848268769681,
+          "tensor_mse": 0.0018683610251173377,
+          "changed": 123
+        },
+        "mean": {
+          "fit_mse": 0.0004793238767888397,
+          "heldout_mse": 0.00049545185174793,
+          "tensor_mse": 0.00207852222956717,
+          "changed": 675
+        },
+        "oracle_value": {
+          "fit_mse": 0.00017345297965221107,
+          "heldout_mse": 0.00017924232815857977,
+          "tensor_mse": 0.0018793290946632624,
+          "changed": 154
+        },
+        "oracle_output": {
+          "fit_mse": 0.0001679476408753544,
+          "heldout_mse": 0.00018645953969098628,
+          "tensor_mse": 0.0018809568136930466,
+          "changed": 247
+        }
+      }
+    },
+    {
+      "group": 20,
+      "test": 3,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 6,
+        "oracle_output": 10
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00010366192873334512,
+          "heldout_mse": 0.0001701630826573819,
+          "tensor_mse": 0.0018925745971500874,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00010613703489070758,
+          "heldout_mse": 0.0001724095782265067,
+          "tensor_mse": 0.0018820010591298342,
+          "changed": 165
+        },
+        "mean": {
+          "fit_mse": 0.0003758116508834064,
+          "heldout_mse": 0.0004352351534180343,
+          "tensor_mse": 0.00210144417360425,
+          "changed": 623
+        },
+        "oracle_value": {
+          "fit_mse": 0.0001032062791637145,
+          "heldout_mse": 0.00017007981659844518,
+          "tensor_mse": 0.0018925232579931617,
+          "changed": 27
+        },
+        "oracle_output": {
+          "fit_mse": 0.00010166368156205863,
+          "heldout_mse": 0.00017082298290915787,
+          "tensor_mse": 0.0018932896200567484,
+          "changed": 128
+        }
+      }
+    },
+    {
+      "group": 20,
+      "test": 4,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 6,
+        "oracle_output": 7
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0001546026614960283,
+          "heldout_mse": 0.000364417617674917,
+          "tensor_mse": 0.0017408343264833093,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00015851335774641484,
+          "heldout_mse": 0.00037066146614961326,
+          "tensor_mse": 0.0017285658977925777,
+          "changed": 109
+        },
+        "mean": {
+          "fit_mse": 0.00042548784404061735,
+          "heldout_mse": 0.0005551290232688189,
+          "tensor_mse": 0.001925965305417776,
+          "changed": 659
+        },
+        "oracle_value": {
+          "fit_mse": 0.0001534933689981699,
+          "heldout_mse": 0.0003640548384282738,
+          "tensor_mse": 0.00174143526237458,
+          "changed": 39
+        },
+        "oracle_output": {
+          "fit_mse": 0.00015209242701530457,
+          "heldout_mse": 0.00036326373810879886,
+          "tensor_mse": 0.0017414749599993229,
+          "changed": 62
+        }
+      }
+    },
+    {
+      "group": 30,
+      "test": 0,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 7,
+        "oracle_output": 7
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0001614006032468751,
+          "heldout_mse": 0.00029304606141522527,
+          "tensor_mse": 0.0021052472293376923,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00016154407057911158,
+          "heldout_mse": 0.0002957642136607319,
+          "tensor_mse": 0.002098719123750925,
+          "changed": 150
+        },
+        "mean": {
+          "fit_mse": 0.00046990386908873916,
+          "heldout_mse": 0.0005652564577758312,
+          "tensor_mse": 0.002306416630744934,
+          "changed": 641
+        },
+        "oracle_value": {
+          "fit_mse": 0.00016063053044490516,
+          "heldout_mse": 0.0002942117862403393,
+          "tensor_mse": 0.0021050304640084505,
+          "changed": 40
+        },
+        "oracle_output": {
+          "fit_mse": 0.00015985642676241696,
+          "heldout_mse": 0.0002944513689726591,
+          "tensor_mse": 0.0021051305811852217,
+          "changed": 68
+        }
+      }
+    },
+    {
+      "group": 30,
+      "test": 1,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 8,
+        "oracle_output": 8
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00030338219949044287,
+          "heldout_mse": 0.0005153556121513247,
+          "tensor_mse": 0.0026890046428889036,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0002685172948986292,
+          "heldout_mse": 0.0004782381874974817,
+          "tensor_mse": 0.0026267976500093937,
+          "changed": 374
+        },
+        "mean": {
+          "fit_mse": 0.0006304968846961856,
+          "heldout_mse": 0.0007892554858699441,
+          "tensor_mse": 0.002892191056162119,
+          "changed": 602
+        },
+        "oracle_value": {
+          "fit_mse": 0.00026605173479765654,
+          "heldout_mse": 0.00047800265019759536,
+          "tensor_mse": 0.00267444527707994,
+          "changed": 257
+        },
+        "oracle_output": {
+          "fit_mse": 0.00026466388953849673,
+          "heldout_mse": 0.00048190547386184335,
+          "tensor_mse": 0.002676090458407998,
+          "changed": 288
+        }
+      }
+    },
+    {
+      "group": 30,
+      "test": 2,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 7,
+        "oracle_output": 12
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00025980561622418463,
+          "heldout_mse": 0.0002016260550590232,
+          "tensor_mse": 0.0023285821080207825,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.000253335980232805,
+          "heldout_mse": 0.00019765086472034454,
+          "tensor_mse": 0.0023064010310918093,
+          "changed": 269
+        },
+        "mean": {
+          "fit_mse": 0.000583870627451688,
+          "heldout_mse": 0.0005363052478060126,
+          "tensor_mse": 0.002550133503973484,
+          "changed": 655
+        },
+        "oracle_value": {
+          "fit_mse": 0.0002512325008865446,
+          "heldout_mse": 0.00020024599507451057,
+          "tensor_mse": 0.002327213529497385,
+          "changed": 257
+        },
+        "oracle_output": {
+          "fit_mse": 0.00024543312611058354,
+          "heldout_mse": 0.00020790714188478887,
+          "tensor_mse": 0.002328854985535145,
+          "changed": 325
+        }
+      }
+    },
+    {
+      "group": 30,
+      "test": 3,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 9,
+        "oracle_output": 9
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0002475494984537363,
+          "heldout_mse": 0.0004252256767358631,
+          "tensor_mse": 0.002240546513348818,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0002568894997239113,
+          "heldout_mse": 0.0004179788229521364,
+          "tensor_mse": 0.002222459763288498,
+          "changed": 193
+        },
+        "mean": {
+          "fit_mse": 0.0005709658144041896,
+          "heldout_mse": 0.0007010283879935741,
+          "tensor_mse": 0.002458389848470688,
+          "changed": 658
+        },
+        "oracle_value": {
+          "fit_mse": 0.00024194465368054807,
+          "heldout_mse": 0.000429604813689366,
+          "tensor_mse": 0.0022412806283682585,
+          "changed": 133
+        },
+        "oracle_output": {
+          "fit_mse": 0.0002349024871364236,
+          "heldout_mse": 0.00043124068179167807,
+          "tensor_mse": 0.0022429311648011208,
+          "changed": 241
+        }
+      }
+    },
+    {
+      "group": 30,
+      "test": 4,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 7,
+        "oracle_output": 11
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0003548500535544008,
+          "heldout_mse": 0.00043150168494321406,
+          "tensor_mse": 0.0020343305077403784,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0003636786714196205,
+          "heldout_mse": 0.00046252895845100284,
+          "tensor_mse": 0.0020259362645447254,
+          "changed": 109
+        },
+        "mean": {
+          "fit_mse": 0.0005871534231118858,
+          "heldout_mse": 0.0006527475197799504,
+          "tensor_mse": 0.0022081597708165646,
+          "changed": 645
+        },
+        "oracle_value": {
+          "fit_mse": 0.00035195882082916796,
+          "heldout_mse": 0.00043093381100334227,
+          "tensor_mse": 0.002034734468907118,
+          "changed": 115
+        },
+        "oracle_output": {
+          "fit_mse": 0.00034564215457066894,
+          "heldout_mse": 0.0004335722769610584,
+          "tensor_mse": 0.002037350321188569,
+          "changed": 169
+        }
+      }
+    },
+    {
+      "group": 40,
+      "test": 0,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 36,
+        "oracle_output": 34
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.00115237757563591,
+          "heldout_mse": 0.0014372050063684583,
+          "tensor_mse": 0.0066068051382899284,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00033659356995485723,
+          "heldout_mse": 0.0007171083707362413,
+          "tensor_mse": 0.005953569896519184,
+          "changed": 937
+        },
+        "mean": {
+          "fit_mse": 0.001153454533778131,
+          "heldout_mse": 0.0014382274821400642,
+          "tensor_mse": 0.00660707987844944,
+          "changed": 2
+        },
+        "oracle_value": {
+          "fit_mse": 0.00033730766153894365,
+          "heldout_mse": 0.0007381769828498363,
+          "tensor_mse": 0.006378090009093285,
+          "changed": 830
+        },
+        "oracle_output": {
+          "fit_mse": 0.00032747999648563564,
+          "heldout_mse": 0.0007478992338292301,
+          "tensor_mse": 0.0063812024891376495,
+          "changed": 807
+        }
+      }
+    },
+    {
+      "group": 40,
+      "test": 1,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 28,
+        "oracle_output": 32
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0014269212260842323,
+          "heldout_mse": 0.0024793283082544804,
+          "tensor_mse": 0.008250653743743896,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0005797847406938672,
+          "heldout_mse": 0.0016905389493331313,
+          "tensor_mse": 0.0074014486744999886,
+          "changed": 920
+        },
+        "mean": {
+          "fit_mse": 0.0014273922424763441,
+          "heldout_mse": 0.002479712013155222,
+          "tensor_mse": 0.008257335983216763,
+          "changed": 4
+        },
+        "oracle_value": {
+          "fit_mse": 0.0005932167987339199,
+          "heldout_mse": 0.0017396335024386644,
+          "tensor_mse": 0.008010724559426308,
+          "changed": 795
+        },
+        "oracle_output": {
+          "fit_mse": 0.0005730359698645771,
+          "heldout_mse": 0.0017519465181976557,
+          "tensor_mse": 0.008018610067665577,
+          "changed": 839
+        }
+      }
+    },
+    {
+      "group": 40,
+      "test": 2,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 41,
+        "oracle_output": 28
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.001420555985532701,
+          "heldout_mse": 0.002503790659829974,
+          "tensor_mse": 0.009079174138605595,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0006414885865524411,
+          "heldout_mse": 0.0017137288814410567,
+          "tensor_mse": 0.008284684270620346,
+          "changed": 929
+        },
+        "mean": {
+          "fit_mse": 0.0014213911490514874,
+          "heldout_mse": 0.0025049212854355574,
+          "tensor_mse": 0.009083941578865051,
+          "changed": 3
+        },
+        "oracle_value": {
+          "fit_mse": 0.0006396995158866048,
+          "heldout_mse": 0.0017511112382635474,
+          "tensor_mse": 0.008849740028381348,
+          "changed": 778
+        },
+        "oracle_output": {
+          "fit_mse": 0.0005858269287273288,
+          "heldout_mse": 0.0017967920284718275,
+          "tensor_mse": 0.008864684030413628,
+          "changed": 824
+        }
+      }
+    },
+    {
+      "group": 40,
+      "test": 3,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 36,
+        "oracle_output": 24
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.0009786870796233416,
+          "heldout_mse": 0.003019940108060837,
+          "tensor_mse": 0.0058549540117383,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.0003660134389065206,
+          "heldout_mse": 0.002494462300091982,
+          "tensor_mse": 0.00527048809453845,
+          "changed": 911
+        },
+        "mean": {
+          "fit_mse": 0.0009838615078479052,
+          "heldout_mse": 0.003031852887943387,
+          "tensor_mse": 0.0058710332959890366,
+          "changed": 6
+        },
+        "oracle_value": {
+          "fit_mse": 0.0003677128697745502,
+          "heldout_mse": 0.0025657429359853268,
+          "tensor_mse": 0.005672718398272991,
+          "changed": 724
+        },
+        "oracle_output": {
+          "fit_mse": 0.00035665190080180764,
+          "heldout_mse": 0.002524461131542921,
+          "tensor_mse": 0.005674795713275671,
+          "changed": 761
+        }
+      }
+    },
+    {
+      "group": 40,
+      "test": 4,
+      "tokens": 4,
+      "accepted_heads_rounds": {
+        "oracle_value": 30,
+        "oracle_output": 33
+      },
+      "variants": {
+        "parent": {
+          "fit_mse": 0.001610741950571537,
+          "heldout_mse": 0.002680444158613682,
+          "tensor_mse": 0.009298592805862427,
+          "changed": 0
+        },
+        "rtn": {
+          "fit_mse": 0.00084966782014817,
+          "heldout_mse": 0.0019243505084887147,
+          "tensor_mse": 0.008357415907084942,
+          "changed": 967
+        },
+        "mean": {
+          "fit_mse": 0.0016180670354515314,
+          "heldout_mse": 0.002681455807760358,
+          "tensor_mse": 0.009308106265962124,
+          "changed": 4
+        },
+        "oracle_value": {
+          "fit_mse": 0.0007867150125093758,
+          "heldout_mse": 0.0019169151782989502,
+          "tensor_mse": 0.009044772945344448,
+          "changed": 813
+        },
+        "oracle_output": {
+          "fit_mse": 0.0007293858798220754,
+          "heldout_mse": 0.0018819384276866913,
+          "tensor_mse": 0.009060319513082504,
+          "changed": 821
+        }
+      }
+    }
+  ],
+  "summary": {
+    "parent": {
+      "mean_heldout_ratio": 1.0,
+      "better": 0,
+      "worse": 0
+    },
+    "rtn": {
+      "mean_heldout_ratio": 0.9151474921850539,
+      "better": 16,
+      "worse": 9
+    },
+    "mean": {
+      "mean_heldout_ratio": 1.8559056657056434,
+      "better": 0,
+      "worse": 25
+    },
+    "oracle_value": {
+      "mean_heldout_ratio": 0.9194730642391684,
+      "better": 18,
+      "worse": 7
+    },
+    "oracle_output": {
+      "mean_heldout_ratio": 0.9346171398695792,
+      "better": 11,
+      "worse": 14
+    }
+  },
+  "limits": "Offline real-test-QK oracle; not deployable, not global optimum, not online estimate. Query split does not test sequence transfer. Captured traces not independently recaptured."
+}

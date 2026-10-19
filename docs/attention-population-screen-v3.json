@@ -1,0 +1,500 @@
+{
+  "provenance": "real checkpoint projections plus explicitly modeled input transformations",
+  "scorer": "unchanged unmasked scaled-dot-product attention and official HiF4 baseline",
+  "seed": 202609041,
+  "source_group_indices": "0,25",
+  "profiles": {
+    "v_tail1_sink8": {
+      "config": {
+        "tail": 1,
+        "roles": "v",
+        "sink": 8
+      },
+      "scores": {
+        "309": [
+          0.21236691000375105,
+          0.11994114697364261,
+          0.14269012369759715,
+          0.48056732773202987,
+          0.7546741904697701,
+          0.12437852869301425,
+          0.11388067992601973,
+          0.2126357541631624,
+          0.31722359500382613,
+          0.3609573067431101
+        ],
+        "310": [
+          0.21236691000375105,
+          0.07238544070819229,
+          0.1423078125349205,
+          0.4808605148150651,
+          0.7546350008412145,
+          0.12437852869301425,
+          0.03942018111450987,
+          0.21058322312507882,
+          0.3177417032763557,
+          0.3608275104198878
+        ],
+        "311": [
+          0.21236691000375105,
+          0.032124667143703094,
+          0.13815391896414095,
+          0.4806256969897195,
+          0.7543847127747354,
+          0.12437852869301425,
+          0.011876968219193441,
+          0.2077365673593894,
+          0.3192373672209256,
+          0.35817924755027913
+        ]
+      },
+      "features": [
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9980886578559875,
+          "effective_attention_tokens": 1.0038331747055054,
+          "leverage_quant_error_correlation": 0.04161210358142853,
+          "value_token_rms_ratio": 1.1051101684570312
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9746761322021484,
+          "effective_attention_tokens": 1.052621603012085,
+          "leverage_quant_error_correlation": -0.09276358783245087,
+          "value_token_rms_ratio": 1.1341323852539062
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.9049825668334961,
+          "effective_attention_tokens": 1.220851182937622,
+          "leverage_quant_error_correlation": -0.0013666516169905663,
+          "value_token_rms_ratio": 1.1713658571243286
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.827134370803833,
+          "effective_attention_tokens": 1.4609733819961548,
+          "leverage_quant_error_correlation": -0.025402866303920746,
+          "value_token_rms_ratio": 1.1346244812011719
+        },
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9935010075569153,
+          "effective_attention_tokens": 1.0128748416900635,
+          "leverage_quant_error_correlation": -0.26522213220596313,
+          "value_token_rms_ratio": 1.027212381362915
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9458465576171875,
+          "effective_attention_tokens": 1.1156048774719238,
+          "leverage_quant_error_correlation": -0.12817658483982086,
+          "value_token_rms_ratio": 1.0449600219726562
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.8235630989074707,
+          "effective_attention_tokens": 1.449891209602356,
+          "leverage_quant_error_correlation": 0.05634036287665367,
+          "value_token_rms_ratio": 1.0798066854476929
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.7185842394828796,
+          "effective_attention_tokens": 1.872435450553894,
+          "leverage_quant_error_correlation": 0.035789068788290024,
+          "value_token_rms_ratio": 1.1004968881607056
+        }
+      ],
+      "gptq_groups": 2,
+      "seconds": 3.5579723749833647,
+      "mean_edges": {
+        "309->310": -0.012380873787393356,
+        "310->311": -0.007644224061313804
+      }
+    },
+    "v_tail1_sink16": {
+      "config": {
+        "tail": 1,
+        "roles": "v",
+        "sink": 16
+      },
+      "scores": {
+        "309": [
+          0.21236691000375105,
+          0.12330084846461828,
+          0.10130056204462164,
+          0.1521267830450668,
+          0.2213884077829931,
+          0.12437852869301425,
+          0.11308400075696137,
+          0.20316451089881063,
+          0.25338891704769356,
+          0.1802148410161404
+        ],
+        "310": [
+          0.21236691000375105,
+          0.07558191348091817,
+          0.1005445562594182,
+          0.15212403180150472,
+          0.22139422360856373,
+          0.12437852869301425,
+          0.0372937654890434,
+          0.20122070930112623,
+          0.2533871509902578,
+          0.18021388026802213
+        ],
+        "311": [
+          0.21236691000375105,
+          0.03541006402034719,
+          0.09600246049282146,
+          0.1521267830450668,
+          0.22139237956630964,
+          0.12437852869301425,
+          0.009502357140093965,
+          0.1983050543491102,
+          0.2533905359336763,
+          0.17296222737478828
+        ]
+      },
+      "features": [
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9999996423721313,
+          "effective_attention_tokens": 1.0000008344650269,
+          "leverage_quant_error_correlation": 0.041612088680267334,
+          "value_token_rms_ratio": 1.1051101684570312
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9999960064888,
+          "effective_attention_tokens": 1.0000081062316895,
+          "leverage_quant_error_correlation": -0.09276358783245087,
+          "value_token_rms_ratio": 1.1341323852539062
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.9999837875366211,
+          "effective_attention_tokens": 1.0000323057174683,
+          "leverage_quant_error_correlation": -0.0013666609302163124,
+          "value_token_rms_ratio": 1.1713658571243286
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.9999677538871765,
+          "effective_attention_tokens": 1.000064492225647,
+          "leverage_quant_error_correlation": -0.025402870029211044,
+          "value_token_rms_ratio": 1.1346244812011719
+        },
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9999982714653015,
+          "effective_attention_tokens": 1.000003457069397,
+          "leverage_quant_error_correlation": -0.2652305066585541,
+          "value_token_rms_ratio": 1.027212381362915
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9999838471412659,
+          "effective_attention_tokens": 1.0000323057174683,
+          "leverage_quant_error_correlation": -0.128177672624588,
+          "value_token_rms_ratio": 1.0449600219726562
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.9999344348907471,
+          "effective_attention_tokens": 1.0001311302185059,
+          "leverage_quant_error_correlation": 0.056339338421821594,
+          "value_token_rms_ratio": 1.0798066854476929
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.9998759031295776,
+          "effective_attention_tokens": 1.0002484321594238,
+          "leverage_quant_error_correlation": 0.03578789904713631,
+          "value_token_rms_ratio": 1.1004968881607056
+        }
+      ],
+      "gptq_groups": 0,
+      "seconds": 1.9981205420044716,
+      "mean_edges": {
+        "309->310": -0.012620863985805138,
+        "310->311": -0.00826683692766406
+      }
+    },
+    "v_tail1_sink32": {
+      "config": {
+        "tail": 1,
+        "roles": "v",
+        "sink": 32
+      },
+      "scores": {
+        "309": [
+          0.21236691000375105,
+          0.12330198537095088,
+          0.10130941568271269,
+          0.15212781431097705,
+          0.2213790348934316,
+          0.12437852869301425,
+          0.11308382031493955,
+          0.20316750874465606,
+          0.2533810510453946,
+          0.1801846107286071
+        ],
+        "310": [
+          0.21236691000375105,
+          0.07558342041100662,
+          0.10055252800484409,
+          0.15212781431097705,
+          0.2213790348934316,
+          0.12437852869301425,
+          0.037293125752776914,
+          0.20122425184609405,
+          0.2533810510453946,
+          0.1801846107286071
+        ],
+        "311": [
+          0.21236691000375105,
+          0.035411587135725064,
+          0.09601120193763246,
+          0.15212781431097705,
+          0.2213790348934316,
+          0.12437852869301425,
+          0.00950171744658072,
+          0.19830936649825107,
+          0.2533810510453946,
+          0.17292123779980328
+        ]
+      },
+      "features": [
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.04161210358142853,
+          "value_token_rms_ratio": 1.1051101684570312
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": -0.09276358783245087,
+          "value_token_rms_ratio": 1.1341323852539062
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": -0.0013666749000549316,
+          "value_token_rms_ratio": 1.1713658571243286
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": -0.02540288120508194,
+          "value_token_rms_ratio": 1.1346244812011719
+        },
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": -0.2652305066585541,
+          "value_token_rms_ratio": 1.027212381362915
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": -0.1281776875257492,
+          "value_token_rms_ratio": 1.0449600219726562
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.05633937940001488,
+          "value_token_rms_ratio": 1.0798066854476929
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0357879176735878,
+          "value_token_rms_ratio": 1.1004968881607056
+        }
+      ],
+      "gptq_groups": 0,
+      "seconds": 1.9202378339832649,
+      "mean_edges": {
+        "309->310": -0.012620940409853754,
+        "310->311": -0.008268282592533616
+      }
+    },
+    "v_tail2_sink32": {
+      "config": {
+        "tail": 2,
+        "roles": "v",
+        "sink": 32
+      },
+      "scores": {
+        "309": [
+          0.21236691000375105,
+          0.17484692708162797,
+          0.11563238136139145,
+          0.19982435151825292,
+          0.17864164934554239,
+          0.12437852869301425,
+          0.19944636050099837,
+          0.18112055625039747,
+          0.13265706106643543,
+          0.2160224438902743
+        ],
+        "310": [
+          0.21236691000375105,
+          0.16725058118594677,
+          0.11563238136139145,
+          0.19982435151825292,
+          0.17864164934554239,
+          0.12437852869301425,
+          0.18138500635324015,
+          0.18112055625039747,
+          0.13265706106643543,
+          0.2160224438902743
+        ],
+        "311": [
+          0.21236691000375105,
+          0.1662028093382666,
+          0.11563238136139145,
+          -0.045806911145380234,
+          -0.6094039660693219,
+          0.12437852869301425,
+          0.19155019059720457,
+          0.15262968223348103,
+          -0.2740565645527219,
+          -0.1701995012468828
+        ]
+      },
+      "features": [
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.9808419942855835,
+          "value_token_rms_ratio": 1.7223104238510132
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.8755738735198975,
+          "value_token_rms_ratio": 2.006493091583252
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.40861883759498596,
+          "value_token_rms_ratio": 2.055246114730835
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.30283844470977783,
+          "value_token_rms_ratio": 2.086395263671875
+        },
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.9926907420158386,
+          "value_token_rms_ratio": 1.7391443252563477
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.9461374282836914,
+          "value_token_rms_ratio": 1.942851185798645
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.3627302646636963,
+          "value_token_rms_ratio": 1.9931334257125854
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.34007036685943604,
+          "value_token_rms_ratio": 1.9840718507766724
+        }
+      ],
+      "gptq_groups": 1,
+      "seconds": 2.121367209008895,
+      "mean_edges": {
+        "309->310": -0.0025657700043439425,
+        "310->311": -0.1845985910455444
+      }
+    }
+  }
+}

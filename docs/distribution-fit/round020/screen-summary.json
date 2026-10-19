@@ -1,0 +1,166 @@
+{
+  "certificate_columns": 465,
+  "cases": [
+    {
+      "population": "round020/true-qk-gain1.25",
+      "test": 0,
+      "tokens": 4,
+      "price": 116076.1981135678,
+      "required_lower_bound": 201.06011246648364,
+      "margin": 115875.13800110132
+    },
+    {
+      "population": "round020/true-qk-gain1.25",
+      "test": 1,
+      "tokens": 8,
+      "price": 58264.406319686204,
+      "required_lower_bound": 201.06011246648364,
+      "margin": 58063.34620721972
+    },
+    {
+      "population": "round020/true-qk-gain0.625",
+      "test": 0,
+      "tokens": 4,
+      "price": -12.45189798495403,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -213.51201045143767
+    },
+    {
+      "population": "round020/true-qk-gain0.625",
+      "test": 1,
+      "tokens": 8,
+      "price": -155.31673725052522,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -356.3768497170089
+    },
+    {
+      "population": "round020/true-qk-gain0.625",
+      "test": 2,
+      "tokens": 32,
+      "price": -198.6512202319271,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -399.71133269841073
+    },
+    {
+      "population": "round020/true-qk-gain0.625",
+      "test": 4,
+      "tokens": 512,
+      "price": -996.4791583616679,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -1197.5392708281515
+    },
+    {
+      "population": "round020/true-qk-gain0.625",
+      "test": 3,
+      "tokens": 128,
+      "price": -1439.9413719926474,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -1641.001484459131
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 4,
+      "tokens": 512,
+      "price": -3352.535292776428,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -3553.5954052429115
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 3,
+      "tokens": 128,
+      "price": -3807.2065389229283,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -4008.266651389412
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 2,
+      "tokens": 32,
+      "price": -3910.7208378072587,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -4111.780950273743
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 1,
+      "tokens": 8,
+      "price": -7380.391349490789,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -7581.451461957273
+    },
+    {
+      "population": "round020/true-qk-gain1.25",
+      "test": 2,
+      "tokens": 32,
+      "price": -12885.264579061162,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -13086.324691527647
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 0,
+      "tokens": 4,
+      "price": -14545.641033479837,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -14746.701145946321
+    },
+    {
+      "population": "round020/true-qk-gain1.25",
+      "test": 4,
+      "tokens": 512,
+      "price": -21602.11601496607,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -21803.176127432554
+    },
+    {
+      "population": "round020/true-qk-gain1.25",
+      "test": 3,
+      "tokens": 128,
+      "price": -38234.40690873643,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -38435.467021202916
+    },
+    {
+      "population": "round020/true-qk-gain0.75",
+      "test": 0,
+      "tokens": 4,
+      "price": -125575.88311172886,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -125776.94322419535
+    },
+    {
+      "population": "round020/true-qk-gain0.75",
+      "test": 4,
+      "tokens": 512,
+      "price": -149169.6561524273,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -149370.7162648938
+    },
+    {
+      "population": "round020/true-qk-gain0.75",
+      "test": 1,
+      "tokens": 8,
+      "price": -161137.68838113235,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -161338.74849359883
+    },
+    {
+      "population": "round020/true-qk-gain0.75",
+      "test": 3,
+      "tokens": 128,
+      "price": -215672.04434453178,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -215873.10445699826
+    },
+    {
+      "population": "round020/true-qk-gain0.75",
+      "test": 2,
+      "tokens": 32,
+      "price": -225064.8674831493,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -225265.9275956158
+    }
+  ],
+  "limits": "All four scales screened against fixed certificate endpoints; positive margin does not establish joint feasibility."
+}

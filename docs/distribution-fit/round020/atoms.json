@@ -1,0 +1,104 @@
+{
+  "round": 20,
+  "atoms": [
+    {
+      "id": "true-qk-gain0.375",
+      "path": "local_distribution_fit/round020/true-qk-gain0.375.pt",
+      "sha256": "be6d4fb23f5094b659e8b86421d605498317dad0baa489b6e4b4af8e674faebe",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.375,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "true-qk-gain0.625",
+      "path": "local_distribution_fit/round020/true-qk-gain0.625.pt",
+      "sha256": "363362876eec987cbc51be12fbe8e7d5e7e45fba2dd7971ffcf29dc13494ff77",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.625,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "true-qk-gain0.75",
+      "path": "local_distribution_fit/round020/true-qk-gain0.75.pt",
+      "sha256": "044b93a5e07e8eb160c8b520d75ab42936f4cdaeeb9e969c8a33a1f1f00abc1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.75,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "true-qk-gain1.25",
+      "path": "local_distribution_fit/round020/true-qk-gain1.25.pt",
+      "sha256": "721523d9c048c2eeb9d1cc060bcd8efe35ae4384d285c511bdde077a9405cc97",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 1.25,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    314,
+    315,
+    319,
+    320,
+    322,
+    330,
+    333,
+    343,
+    345,
+    364,
+    374,
+    378,
+    381,
+    382,
+    385,
+    387,
+    392,
+    400,
+    403,
+    404,
+    412,
+    413,
+    418,
+    435,
+    436,
+    438
+  ],
+  "selection_evidence": "Current support remains infeasible after broader layer coverage. Half-logit scale is nearest the current certificate boundary; sample adjacent previously unmeasured scales with fixed V encoding and calibration protocol.",
+  "limits": "Adaptive synthetic support search; shared inputs across all versions; no changes to score targets or acceptance."
+}

@@ -1,0 +1,72 @@
+{
+  "delivery_gate": "Deliver each tier independently after complete fixed original integer-bank evaluation and format checks",
+  "targets": [
+    21500,
+    21800,
+    22100,
+    22400,
+    22700,
+    23000
+  ],
+  "best_complete": {
+    "version": 577,
+    "conditional_estimate": 21804.71101751351
+  },
+  "running": [],
+  "failure_preserved": "v459-before-none-fix",
+  "unchanged_weights_and_data": true,
+  "calibration_isolation_correction": "Earlier ungated V dynamic wrappers can affect parent calibration; see strict-v-calibration-mechanism.json",
+  "last_completed": [
+    579
+  ],
+  "milestones_full_bank": {
+    "21500": 491,
+    "21800": 577
+  },
+  "format_checked_milestones": {
+    "21500": {
+      "version": 491,
+      "checks": "22/22",
+      "source_sha256": "7ec7aad137122d66be7bebd8d937314a74d3ff491821a1b5e1a14570b7d600f6"
+    },
+    "21800": {
+      "version": 577,
+      "checks": "22/22",
+      "source_sha256": "def01d3a94cac2ea2b610677f5fe533296e25c4a7999ca40edb3a98d26d24241"
+    }
+  },
+  "delivery_prepared": [
+    491,
+    554,
+    577
+  ],
+  "delivered_milestones": {
+    "21500": {
+      "version": 491,
+      "commit": "f42d6128",
+      "conditional_estimate": 21512.20256747672
+    },
+    "21800": {
+      "version": 577,
+      "commit": "9ca0f58b",
+      "conditional_estimate": 21804.71101751351
+    }
+  },
+  "online_feedback": {
+    "491": {
+      "score": 21274,
+      "seconds": 266,
+      "prediction_direction_match": false
+    }
+  },
+  "reconnaissance_delivery": {
+    "version": 554,
+    "commit": "413a818b",
+    "online_feedback_pending": true
+  },
+  "snapshot_warning": "Running list is a snapshot; verify actual process handle before resuming.",
+  "last_completed_version": 581,
+  "v554_online_status": "timeout",
+  "v577_delivery_status": "hold_pending_runtime_fix",
+  "v581_status": "validated_performance_fix"
+}

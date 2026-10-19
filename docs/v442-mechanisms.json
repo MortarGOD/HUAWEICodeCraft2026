@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "t": 1,
+      "seconds": 9.082956239581108e-06,
+      "changed": 0
+    },
+    {
+      "t": 2,
+      "seconds": 0.014982416993007064,
+      "changed": 0
+    },
+    {
+      "t": 7,
+      "seconds": 0.00773808395024389,
+      "changed": 11
+    },
+    {
+      "t": 32,
+      "seconds": 0.002881999942474067,
+      "changed": 53
+    },
+    {
+      "t": 128,
+      "seconds": 0.005190082942135632,
+      "changed": 137
+    },
+    {
+      "t": 4097,
+      "seconds": 7.2909751906991005e-06,
+      "changed": 0
+    }
+  ],
+  "checks": [
+    "prefix_four_apis_no_new_import",
+    "zero_variance_exact_gradient_curvature_codes_temperature_gqa_boundaries_rng",
+    "fit_model_fields_parent_calibration_qk_preserved_fresh_state"
+  ],
+  "complete": true
+}

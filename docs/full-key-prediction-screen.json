@@ -1,0 +1,522 @@
+{
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "records": [
+    {
+      "group": 1,
+      "ridge": 0.0001,
+      "identity": true,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 1,
+      "ridge": 0.01,
+      "identity": true,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.3309657946708807,
+        "key_over_hif4": 43.609300278042355,
+        "output_over_hif4": 18.132670836658157
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.2632405538465992,
+          "key_over_hif4": 34.12913871496512,
+          "output_over_hif4": 11.176509651160245
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.2737788868772339,
+          "key_over_hif4": 35.69417357285575,
+          "output_over_hif4": 10.386233376089468
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.2684486553556739,
+          "key_over_hif4": 34.82776629632662,
+          "output_over_hif4": 9.762771436811883
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.2844022594226559,
+          "key_over_hif4": 37.00485669398179,
+          "output_over_hif4": 14.831957173918239
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.33061657558801133,
+          "key_over_hif4": 43.526771555093056,
+          "output_over_hif4": 25.386180923184323
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.2901358819434046,
+        "key_over_hif4": 38.229397118474466,
+        "output_over_hif4": 16.95439678973231
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.22316592650650807,
+          "key_over_hif4": 28.933463141977512,
+          "output_over_hif4": 10.07739040102399
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.2301278355244932,
+          "key_over_hif4": 30.003127702247642,
+          "output_over_hif4": 8.993995078645627
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.22803005199186965,
+          "key_over_hif4": 29.58397146295927,
+          "output_over_hif4": 9.332032469956278
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.24361477318304986,
+          "key_over_hif4": 31.697813471932974,
+          "output_over_hif4": 12.910894372128078
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.2884157954198766,
+          "key_over_hif4": 37.970898518303585,
+          "output_over_hif4": 23.475571435154688
+        }
+      ]
+    },
+    {
+      "group": 14,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.01517749297680625,
+        "key_over_hif4": 2.0809145554944872,
+        "output_over_hif4": 90.7160218272988
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.014814321941378095,
+          "key_over_hif4": 2.0184435382051453,
+          "output_over_hif4": 140.72233638401588
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.013393482008439752,
+          "key_over_hif4": 1.8196937350667113,
+          "output_over_hif4": 154.33131599959586
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.015200608540109201,
+          "key_over_hif4": 2.065403492791905,
+          "output_over_hif4": 120.98706670613657
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.014804438138095531,
+          "key_over_hif4": 2.0164883324572296,
+          "output_over_hif4": 106.54200001969801
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.015185405755249246,
+          "key_over_hif4": 2.0726173308198494,
+          "output_over_hif4": 87.79652979381838
+        }
+      ]
+    },
+    {
+      "group": 14,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.016330494325683436,
+        "key_over_hif4": 2.2389971382405207,
+        "output_over_hif4": 90.31108128448145
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.01607684393008307,
+          "key_over_hif4": 2.1904614921842396,
+          "output_over_hif4": 141.93609613210936
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.014536910495386817,
+          "key_over_hif4": 1.9750446477631454,
+          "output_over_hif4": 153.6527640864039
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.016243177574290144,
+          "key_over_hif4": 2.2070639874354,
+          "output_over_hif4": 121.39366445002993
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.01582165389284315,
+          "key_over_hif4": 2.155041628563888,
+          "output_over_hif4": 106.90358858658892
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.016347084264813676,
+          "key_over_hif4": 2.2311718699984895,
+          "output_over_hif4": 87.9309264975028
+        }
+      ]
+    },
+    {
+      "group": 26,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.3401739964451718,
+        "key_over_hif4": 45.599089306288455,
+        "output_over_hif4": 118.04410770636534
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.3018261593844958,
+          "key_over_hif4": 39.44225631897965,
+          "output_over_hif4": 102.09952440603863
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.2920512684415253,
+          "key_over_hif4": 38.37444666731239,
+          "output_over_hif4": 125.82369933083865
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.28188872659992004,
+          "key_over_hif4": 36.99787338205216,
+          "output_over_hif4": 140.83176263618276
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.29709595981938763,
+          "key_over_hif4": 39.06913921769693,
+          "output_over_hif4": 113.7590322285368
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.34202254156509887,
+          "key_over_hif4": 45.779972345555336,
+          "output_over_hif4": 138.2353657721195
+        }
+      ]
+    },
+    {
+      "group": 26,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.2967599097186323,
+        "key_over_hif4": 39.77958858465261,
+        "output_over_hif4": 117.71455921490646
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.26535561130274365,
+          "key_over_hif4": 34.67633176006274,
+          "output_over_hif4": 105.7244414681261
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.25085900680214407,
+          "key_over_hif4": 32.96193722737168,
+          "output_over_hif4": 125.7348621231936
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.24193786168111805,
+          "key_over_hif4": 31.754325477182793,
+          "output_over_hif4": 141.31267140504391
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.25362472373001144,
+          "key_over_hif4": 33.3525223516389,
+          "output_over_hif4": 114.15017889817484
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.2977127052629382,
+          "key_over_hif4": 39.84906770030433,
+          "output_over_hif4": 138.10227539432398
+        }
+      ]
+    },
+    {
+      "group": 37,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.017123353850597996,
+        "key_over_hif4": 2.3281977862103194,
+        "output_over_hif4": 137.4401303774422
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.023378962797479336,
+          "key_over_hif4": 3.1520069517257925,
+          "output_over_hif4": 139.91512386696047
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.019690842854427838,
+          "key_over_hif4": 2.6679496531272666,
+          "output_over_hif4": 128.97144547204954
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.018391872335719137,
+          "key_over_hif4": 2.5058382409454585,
+          "output_over_hif4": 132.17377740918658
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.01716715466344727,
+          "key_over_hif4": 2.342744356111384,
+          "output_over_hif4": 130.7949277857885
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.017680287344427684,
+          "key_over_hif4": 2.403971282192359,
+          "output_over_hif4": 155.67298863503726
+        }
+      ]
+    },
+    {
+      "group": 37,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.017886669482399316,
+        "key_over_hif4": 2.4319829313194647,
+        "output_over_hif4": 137.3368160526356
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.024104098423117868,
+          "key_over_hif4": 3.2497714484982123,
+          "output_over_hif4": 139.78003116521964
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.020540490405294317,
+          "key_over_hif4": 2.7830700116295906,
+          "output_over_hif4": 128.86997341257486
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.01904581769821139,
+          "key_over_hif4": 2.594936363578657,
+          "output_over_hif4": 132.65722596997733
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.017776762826260884,
+          "key_over_hif4": 2.4259355494610833,
+          "output_over_hif4": 130.64993465207436
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.018397805537415497,
+          "key_over_hif4": 2.5015315252354053,
+          "output_over_hif4": 155.63589614082775
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "ridge": 0.0001,
+      "identity": true,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "ridge": 0.01,
+      "identity": true,
+      "hold": {
+        "rows": 2048,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 256,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 2048,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    }
+  ],
+  "warning": "Modeled hidden states; current Q/V used only by the diagnostic scorer. No full-output teacher claim."
+}

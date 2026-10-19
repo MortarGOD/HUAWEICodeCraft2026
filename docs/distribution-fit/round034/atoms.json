@@ -1,0 +1,115 @@
+{
+  "round": 34,
+  "atoms": [
+    {
+      "id": "aligned-test",
+      "path": "local_distribution_fit/round034/aligned-test.pt",
+      "sha256": "d5137ffb772fb8fdb99dada64690487ffefec18296a69e42ea0ca21d55ea0489",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "v_energy_attention_leverage_order": "same",
+        "phases": [
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "aligned-both",
+      "path": "local_distribution_fit/round034/aligned-both.pt",
+      "sha256": "58c94bcdee50adfa687ea9b12417a7b491826b80b768d471f821e3aa9bbdf750",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "v_energy_attention_leverage_order": "same",
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "anti-test",
+      "path": "local_distribution_fit/round034/anti-test.pt",
+      "sha256": "38d3a47faeb22f067215ad09728cd30ef50dd921de9be69e071cf3cac12cb9e3",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "v_energy_attention_leverage_order": "opposite",
+        "phases": [
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "anti-both",
+      "path": "local_distribution_fit/round034/anti-both.pt",
+      "sha256": "b6cd5fc5674eabd3a95d415d672e8499a4c72325d6dd8f2d39f41dea9ac1a090",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "v_energy_attention_leverage_order": "opposite",
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "exact_nvfp4_row_permutation": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    }
+  ],
+  "certificate_sha256": "e1aa9d9ed8eb9a24ba0cb0d5fdc5e2162cc7ec6e6a1f43e1574acccb52a682ea",
+  "required_versions": [
+    308,
+    309,
+    310,
+    311,
+    314,
+    322,
+    330,
+    337,
+    341,
+    365,
+    367,
+    374,
+    379,
+    381,
+    382,
+    387,
+    388,
+    392,
+    399,
+    402,
+    403,
+    404,
+    412,
+    414,
+    418,
+    435,
+    436
+  ],
+  "selection_evidence": "v311 token polish has large online regression; saturated QK sharpening first screen failed. Change correlation of V energy with attention leverage, preserving Q/K and exact V row multiset. No candidate output/error used to select permutations.",
+  "limits": "Adaptive synthetic training distributions; no evidence this correlation holds online. Shared identical inputs and protocol across versions."
+}

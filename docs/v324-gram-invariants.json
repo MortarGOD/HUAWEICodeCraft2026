@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 136,
+  "sha256": "2892edb7ce7356866d556421d3c9fc8349efe16a8ebf23c9eec4f04541849d8b",
+  "fp64_gradient_max_abs_error": 7.389644451905042e-13,
+  "unchanged_functions": 104,
+  "attention_unchanged": true,
+  "parent_calibration_rng_changes": 4,
+  "warning": "Synthetic tensors are correctness-only. The new Gram wrapper adds no RNG changes to the existing parent calibration; parent itself can change RNG. >8192 bound tests fallback, not 8192 cost."
+}

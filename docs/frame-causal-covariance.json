@@ -1,0 +1,1160 @@
+{
+  "dataset": "local_fitted_models_covariance_v1",
+  "groups": "1,7,16,49",
+  "query_budget": 64,
+  "records": [
+    {
+      "group": 1,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0014834277266963908
+        },
+        "refit": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0014834277266963908
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 5.9138983488082886e-08,
+          "relative_frobenius_error": 2.3137309089305304e-08
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 5.9138983488082886e-08,
+          "relative_frobenius_error": 2.3137309089305304e-08
+        },
+        "no_scale": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0014834277266963908
+        },
+        "no_both": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        }
+      },
+      "hold": {
+        "rows": 1024,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.5416069421124882,
+            "geometry_output_over_baseline": 3.337677487946367e-05,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.5416289329886237,
+            "geometry_output_over_baseline": 3.337677487946367e-05,
+            "gain_vs_parent": -2.199087613552475e-05
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.5417058954494179,
+            "geometry_output_over_baseline": 9.013738026523646e-12,
+            "gain_vs_parent": -9.89533369297746e-05
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.5417058954494179,
+            "geometry_output_over_baseline": 9.013738026523646e-12,
+            "gain_vs_parent": -9.89533369297746e-05
+          },
+          "no_scale": {
+            "error_over_baseline": 0.545871866293231,
+            "geometry_output_over_baseline": 7.298093107962165e-12,
+            "gain_vs_parent": -0.004264924180742868
+          },
+          "no_dense": {
+            "error_over_baseline": 0.5416289329886237,
+            "geometry_output_over_baseline": 3.337677487946367e-05,
+            "gain_vs_parent": -2.199087613552475e-05
+          },
+          "no_both": {
+            "error_over_baseline": 0.545871866293231,
+            "geometry_output_over_baseline": 7.298093107962165e-12,
+            "gain_vs_parent": -0.004264924180742868
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "query_rows": 1,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_both": {
+              "error_over_baseline": 0.8943061921314097,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            }
+          }
+        },
+        {
+          "rows": 10,
+          "query_rows": 10,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.27521507002362156,
+              "geometry_output_over_baseline": 5.288697497995988e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.2754374372851149,
+              "geometry_output_over_baseline": 5.288697497995988e-06,
+              "gain_vs_parent": -0.00022236726149332808
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.27609474888704694,
+              "geometry_output_over_baseline": 1.7145198698275948e-12,
+              "gain_vs_parent": -0.0008796788634253816
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.27609474888704694,
+              "geometry_output_over_baseline": 1.7145198698275948e-12,
+              "gain_vs_parent": -0.0008796788634253816
+            },
+            "no_scale": {
+              "error_over_baseline": 0.27753350996492143,
+              "geometry_output_over_baseline": 1.5855351571707616e-12,
+              "gain_vs_parent": -0.002318439941299877
+            },
+            "no_dense": {
+              "error_over_baseline": 0.2754374372851149,
+              "geometry_output_over_baseline": 5.288697497995988e-06,
+              "gain_vs_parent": -0.00022236726149332808
+            },
+            "no_both": {
+              "error_over_baseline": 0.27753350996492143,
+              "geometry_output_over_baseline": 1.5855351571707616e-12,
+              "gain_vs_parent": -0.002318439941299877
+            }
+          }
+        },
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.16363965166745023,
+              "geometry_output_over_baseline": 7.195310373649783e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.1636840206734605,
+              "geometry_output_over_baseline": 7.195310373649783e-06,
+              "gain_vs_parent": -4.436900601026417e-05
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.163616282284049,
+              "geometry_output_over_baseline": 3.2098486301923106e-12,
+              "gain_vs_parent": 2.3369383401222743e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.1636213545607501,
+              "geometry_output_over_baseline": 3.2098486301923106e-12,
+              "gain_vs_parent": 1.8297106700121413e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.16590479391596302,
+              "geometry_output_over_baseline": 2.7258240499963784e-12,
+              "gain_vs_parent": -0.0022651422485127914
+            },
+            "no_dense": {
+              "error_over_baseline": 0.1636840206734605,
+              "geometry_output_over_baseline": 7.195310373649783e-06,
+              "gain_vs_parent": -4.436900601026417e-05
+            },
+            "no_both": {
+              "error_over_baseline": 0.16590479391596302,
+              "geometry_output_over_baseline": 2.7258240499963784e-12,
+              "gain_vs_parent": -0.0022651422485127914
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.3927822443322489,
+              "geometry_output_over_baseline": 2.0552336729794082e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.392823420143778,
+              "geometry_output_over_baseline": 2.0552336729794082e-05,
+              "gain_vs_parent": -4.117581152912608e-05
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.392697606263924,
+              "geometry_output_over_baseline": 7.104893958553238e-12,
+              "gain_vs_parent": 8.463806832487153e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.392697606263924,
+              "geometry_output_over_baseline": 7.104893958553238e-12,
+              "gain_vs_parent": 8.463806832487153e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.3964905037441672,
+              "geometry_output_over_baseline": 6.27718965822615e-12,
+              "gain_vs_parent": -0.0037082594119183243
+            },
+            "no_dense": {
+              "error_over_baseline": 0.392823420143778,
+              "geometry_output_over_baseline": 2.0552336729794082e-05,
+              "gain_vs_parent": -4.117581152912608e-05
+            },
+            "no_both": {
+              "error_over_baseline": 0.3964905037441672,
+              "geometry_output_over_baseline": 6.27718965822615e-12,
+              "gain_vs_parent": -0.0037082594119183243
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.5681701720782363,
+              "geometry_output_over_baseline": 3.620625218561344e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.5685133903635246,
+              "geometry_output_over_baseline": 3.620625218561344e-05,
+              "gain_vs_parent": -0.0003432182852882715
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.5681462122612801,
+              "geometry_output_over_baseline": 9.984811924490562e-12,
+              "gain_vs_parent": 2.3959816956131696e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.5681462122612801,
+              "geometry_output_over_baseline": 9.984811924490562e-12,
+              "gain_vs_parent": 2.3959816956131696e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5745821960440858,
+              "geometry_output_over_baseline": 8.645658650460202e-12,
+              "gain_vs_parent": -0.0064120239658495
+            },
+            "no_dense": {
+              "error_over_baseline": 0.5685133903635246,
+              "geometry_output_over_baseline": 3.620625218561344e-05,
+              "gain_vs_parent": -0.0003432182852882715
+            },
+            "no_both": {
+              "error_over_baseline": 0.5745821960440858,
+              "geometry_output_over_baseline": 8.645658650460202e-12,
+              "gain_vs_parent": -0.0064120239658495
+            }
+          }
+        }
+      ],
+      "seconds": 4.3690139160025865,
+      "parent": {
+        "scale": true,
+        "dense": false,
+        "rot": 1
+      }
+    },
+    {
+      "group": 7,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0015086840128319457
+        },
+        "refit": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0015086840128319457
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 5.9138983488082886e-08,
+          "relative_frobenius_error": 2.3987329724238694e-08
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 5.9138983488082886e-08,
+          "relative_frobenius_error": 2.3987329724238694e-08
+        },
+        "no_scale": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.0015086840128319457
+        },
+        "no_both": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        }
+      },
+      "hold": {
+        "rows": 1024,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.5005091169964332,
+            "geometry_output_over_baseline": 3.200372131851422e-05,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.5006943542691253,
+            "geometry_output_over_baseline": 3.200372131851422e-05,
+            "gain_vs_parent": -0.0001852372726921514
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.5005777098171817,
+            "geometry_output_over_baseline": 9.77623358898969e-12,
+            "gain_vs_parent": -6.859282074855866e-05
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.5005777098171817,
+            "geometry_output_over_baseline": 9.77623358898969e-12,
+            "gain_vs_parent": -6.859282074855866e-05
+          },
+          "no_scale": {
+            "error_over_baseline": 0.5046475969477888,
+            "geometry_output_over_baseline": 8.381691144321363e-12,
+            "gain_vs_parent": -0.004138479951355634
+          },
+          "no_dense": {
+            "error_over_baseline": 0.5006943542691253,
+            "geometry_output_over_baseline": 3.200372131851422e-05,
+            "gain_vs_parent": -0.0001852372726921514
+          },
+          "no_both": {
+            "error_over_baseline": 0.5046475969477888,
+            "geometry_output_over_baseline": 8.381691144321363e-12,
+            "gain_vs_parent": -0.004138479951355634
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "query_rows": 1,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_both": {
+              "error_over_baseline": 0.8558839787988164,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            }
+          }
+        },
+        {
+          "rows": 10,
+          "query_rows": 10,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.2466392787588428,
+              "geometry_output_over_baseline": 3.2688937309631655e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.2468042106691237,
+              "geometry_output_over_baseline": 3.2688937309631655e-06,
+              "gain_vs_parent": -0.0001649319102808855
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.24670845901555372,
+              "geometry_output_over_baseline": 1.6095697416013416e-12,
+              "gain_vs_parent": -6.918025671090455e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.24670845901555372,
+              "geometry_output_over_baseline": 1.6095697416013416e-12,
+              "gain_vs_parent": -6.918025671090455e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.24726751491485924,
+              "geometry_output_over_baseline": 1.1275759377109935e-12,
+              "gain_vs_parent": -0.0006282361560164262
+            },
+            "no_dense": {
+              "error_over_baseline": 0.2468042106691237,
+              "geometry_output_over_baseline": 3.2688937309631655e-06,
+              "gain_vs_parent": -0.0001649319102808855
+            },
+            "no_both": {
+              "error_over_baseline": 0.24726751491485924,
+              "geometry_output_over_baseline": 1.1275759377109935e-12,
+              "gain_vs_parent": -0.0006282361560164262
+            }
+          }
+        },
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.18149329137104037,
+              "geometry_output_over_baseline": 7.95516207661291e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.18159986694955715,
+              "geometry_output_over_baseline": 7.95516207661291e-06,
+              "gain_vs_parent": -0.00010657557851678767
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.18174186258153407,
+              "geometry_output_over_baseline": 4.170195579457259e-12,
+              "gain_vs_parent": -0.0002485712104937088
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.18174186258153407,
+              "geometry_output_over_baseline": 4.170195579457259e-12,
+              "gain_vs_parent": -0.0002485712104937088
+            },
+            "no_scale": {
+              "error_over_baseline": 0.18404205876781596,
+              "geometry_output_over_baseline": 3.525173971299755e-12,
+              "gain_vs_parent": -0.002548767396775592
+            },
+            "no_dense": {
+              "error_over_baseline": 0.18159986694955715,
+              "geometry_output_over_baseline": 7.95516207661291e-06,
+              "gain_vs_parent": -0.00010657557851678767
+            },
+            "no_both": {
+              "error_over_baseline": 0.18404205876781596,
+              "geometry_output_over_baseline": 3.525173971299755e-12,
+              "gain_vs_parent": -0.002548767396775592
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.4334251839597645,
+              "geometry_output_over_baseline": 2.232123836883297e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.43372457482449783,
+              "geometry_output_over_baseline": 2.232123836883297e-05,
+              "gain_vs_parent": -0.00029939086473335097
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.43322949246555026,
+              "geometry_output_over_baseline": 7.589706384004099e-12,
+              "gain_vs_parent": 0.00019569149421422294
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.43322949246555026,
+              "geometry_output_over_baseline": 7.589706384004099e-12,
+              "gain_vs_parent": 0.00019569149421422294
+            },
+            "no_scale": {
+              "error_over_baseline": 0.43922440546071984,
+              "geometry_output_over_baseline": 6.61072039256444e-12,
+              "gain_vs_parent": -0.005799221500955354
+            },
+            "no_dense": {
+              "error_over_baseline": 0.43372457482449783,
+              "geometry_output_over_baseline": 2.232123836883297e-05,
+              "gain_vs_parent": -0.00029939086473335097
+            },
+            "no_both": {
+              "error_over_baseline": 0.43922440546071984,
+              "geometry_output_over_baseline": 6.61072039256444e-12,
+              "gain_vs_parent": -0.005799221500955354
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.5125710193878334,
+              "geometry_output_over_baseline": 3.2111166366061957e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.5124975561078908,
+              "geometry_output_over_baseline": 3.2111166366061957e-05,
+              "gain_vs_parent": 7.346327994262047e-05
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.5125345705236249,
+              "geometry_output_over_baseline": 1.0286756048063773e-11,
+              "gain_vs_parent": 3.6448864208504794e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.5125345705236249,
+              "geometry_output_over_baseline": 1.0286756048063773e-11,
+              "gain_vs_parent": 3.6448864208504794e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5164684381270759,
+              "geometry_output_over_baseline": 8.617016715542006e-12,
+              "gain_vs_parent": -0.003897418739242431
+            },
+            "no_dense": {
+              "error_over_baseline": 0.5124975561078908,
+              "geometry_output_over_baseline": 3.2111166366061957e-05,
+              "gain_vs_parent": 7.346327994262047e-05
+            },
+            "no_both": {
+              "error_over_baseline": 0.5164684381270759,
+              "geometry_output_over_baseline": 8.617016715542006e-12,
+              "gain_vs_parent": -0.003897418739242431
+            }
+          }
+        }
+      ],
+      "seconds": 4.584178584016627,
+      "parent": {
+        "scale": true,
+        "dense": false,
+        "rot": 1
+      }
+    },
+    {
+      "group": 16,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.003875734901282568,
+          "relative_frobenius_error": 0.0014861397381908071
+        },
+        "refit": {
+          "max_abs_identity_error": 0.003875734901282568,
+          "relative_frobenius_error": 0.0014861397381908071
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 7.047642199234172e-07,
+          "relative_frobenius_error": 3.729990417915344e-07
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 7.047642199234172e-07,
+          "relative_frobenius_error": 3.729990417915344e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 1.6663344077488818e-07,
+          "relative_frobenius_error": 3.218938449860785e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.003875732421875,
+          "relative_frobenius_error": 0.001486138975070874
+        },
+        "no_both": {
+          "max_abs_identity_error": 0.0,
+          "relative_frobenius_error": 0.0
+        }
+      },
+      "hold": {
+        "rows": 1024,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.5895634144931775,
+            "geometry_output_over_baseline": 3.7502689324918436e-05,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.58943290525333,
+            "geometry_output_over_baseline": 3.7502689324918436e-05,
+            "gain_vs_parent": 0.0001305092398474761
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.5891325071987394,
+            "geometry_output_over_baseline": 1.372412526028035e-11,
+            "gain_vs_parent": 0.0004309072944380654
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.5889991154583986,
+            "geometry_output_over_baseline": 1.372412526028035e-11,
+            "gain_vs_parent": 0.0005642990347789478
+          },
+          "no_scale": {
+            "error_over_baseline": 0.5945909981204819,
+            "geometry_output_over_baseline": 1.3756067285889405e-11,
+            "gain_vs_parent": -0.005027583627304377
+          },
+          "no_dense": {
+            "error_over_baseline": 0.5925991795525757,
+            "geometry_output_over_baseline": 3.7503004359317225e-05,
+            "gain_vs_parent": -0.0030357650593981766
+          },
+          "no_both": {
+            "error_over_baseline": 0.5962730759122836,
+            "geometry_output_over_baseline": 9.12513915835857e-12,
+            "gain_vs_parent": -0.006709661419106117
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "query_rows": 1,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_both": {
+              "error_over_baseline": 0.8377588953797133,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            }
+          }
+        },
+        {
+          "rows": 10,
+          "query_rows": 10,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.2159441127859917,
+              "geometry_output_over_baseline": 3.452003114681205e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.21564475717689235,
+              "geometry_output_over_baseline": 3.452003114681205e-06,
+              "gain_vs_parent": 0.00029935560909935544
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.2160541820435951,
+              "geometry_output_over_baseline": 1.7419191355790633e-12,
+              "gain_vs_parent": -0.00011006925760340125
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.21602649640459037,
+              "geometry_output_over_baseline": 1.7419191355790633e-12,
+              "gain_vs_parent": -8.238361859866372e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.2183643524897632,
+              "geometry_output_over_baseline": 1.485323090251303e-12,
+              "gain_vs_parent": -0.002420239703771504
+            },
+            "no_dense": {
+              "error_over_baseline": 0.21688814417135685,
+              "geometry_output_over_baseline": 3.4522707273982823e-06,
+              "gain_vs_parent": -0.0009440313853651405
+            },
+            "no_both": {
+              "error_over_baseline": 0.21679717435397375,
+              "geometry_output_over_baseline": 1.1447997892883594e-12,
+              "gain_vs_parent": -0.0008530615679820386
+            }
+          }
+        },
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.17958249255618036,
+              "geometry_output_over_baseline": 9.45527380772406e-06,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.17966234561634165,
+              "geometry_output_over_baseline": 9.45527380772406e-06,
+              "gain_vs_parent": -7.985306016128346e-05
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.17975185894440882,
+              "geometry_output_over_baseline": 4.820817619449558e-12,
+              "gain_vs_parent": -0.0001693663882284535
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.1797170967620687,
+              "geometry_output_over_baseline": 4.820817619449558e-12,
+              "gain_vs_parent": -0.00013460420588834454
+            },
+            "no_scale": {
+              "error_over_baseline": 0.18148479331196726,
+              "geometry_output_over_baseline": 4.656543512689265e-12,
+              "gain_vs_parent": -0.001902300755786901
+            },
+            "no_dense": {
+              "error_over_baseline": 0.1802851979048655,
+              "geometry_output_over_baseline": 9.455246492874655e-06,
+              "gain_vs_parent": -0.0007027053486851342
+            },
+            "no_both": {
+              "error_over_baseline": 0.18212123058668644,
+              "geometry_output_over_baseline": 3.3075480755890234e-12,
+              "gain_vs_parent": -0.0025387380305060825
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.3431543352879937,
+              "geometry_output_over_baseline": 1.9874932940537666e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.34298092612024167,
+              "geometry_output_over_baseline": 1.9874932940537666e-05,
+              "gain_vs_parent": 0.00017340916775204773
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.3432263565764415,
+              "geometry_output_over_baseline": 9.398848611477815e-12,
+              "gain_vs_parent": -7.202128844779887e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.34308858865740316,
+              "geometry_output_over_baseline": 9.398848611477815e-12,
+              "gain_vs_parent": 6.574663059055741e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.3460813119296606,
+              "geometry_output_over_baseline": 9.420651985080553e-12,
+              "gain_vs_parent": -0.0029269766416668563
+            },
+            "no_dense": {
+              "error_over_baseline": 0.3432937694783291,
+              "geometry_output_over_baseline": 1.9874922703356497e-05,
+              "gain_vs_parent": -0.00013943419033540794
+            },
+            "no_both": {
+              "error_over_baseline": 0.3476347695656855,
+              "geometry_output_over_baseline": 6.47966450794593e-12,
+              "gain_vs_parent": -0.004480434277691792
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.5390303585250155,
+              "geometry_output_over_baseline": 3.8724881907725644e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.5394801575925531,
+              "geometry_output_over_baseline": 3.8724881907725644e-05,
+              "gain_vs_parent": -0.0004497990675376151
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.5389997081349596,
+              "geometry_output_over_baseline": 1.1894507990239762e-11,
+              "gain_vs_parent": 3.0650390055897425e-05
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.5397010705857667,
+              "geometry_output_over_baseline": 1.1894507990239762e-11,
+              "gain_vs_parent": -0.0006707120607511996
+            },
+            "no_scale": {
+              "error_over_baseline": 0.5445047591668495,
+              "geometry_output_over_baseline": 1.1710058531789094e-11,
+              "gain_vs_parent": -0.005474400641834021
+            },
+            "no_dense": {
+              "error_over_baseline": 0.5401586740164309,
+              "geometry_output_over_baseline": 3.872495653566287e-05,
+              "gain_vs_parent": -0.0011283154914154547
+            },
+            "no_both": {
+              "error_over_baseline": 0.5447993017850106,
+              "geometry_output_over_baseline": 7.776152334151287e-12,
+              "gain_vs_parent": -0.005768943259995107
+            }
+          }
+        }
+      ],
+      "seconds": 4.625508917000843,
+      "parent": {
+        "scale": true,
+        "dense": true,
+        "rot": 1
+      }
+    },
+    {
+      "group": 49,
+      "geometry": {
+        "parent": {
+          "max_abs_identity_error": 0.003875732603066284,
+          "relative_frobenius_error": 0.0015901493383362656
+        },
+        "refit": {
+          "max_abs_identity_error": 0.003875732603066284,
+          "relative_frobenius_error": 0.0015901493383362656
+        },
+        "reciprocal_only": {
+          "max_abs_identity_error": 3.8109740932874536e-07,
+          "relative_frobenius_error": 9.247002713706737e-07
+        },
+        "reciprocal_refit": {
+          "max_abs_identity_error": 3.8109740932874536e-07,
+          "relative_frobenius_error": 9.247002713706737e-07
+        },
+        "no_scale": {
+          "max_abs_identity_error": 2.103358521104992e-07,
+          "relative_frobenius_error": 9.054912830119763e-07
+        },
+        "no_dense": {
+          "max_abs_identity_error": 0.0038756980606651226,
+          "relative_frobenius_error": 0.0015901497982756933
+        },
+        "no_both": {
+          "max_abs_identity_error": 3.422854799595143e-08,
+          "relative_frobenius_error": 3.422854799595143e-08
+        }
+      },
+      "hold": {
+        "rows": 1024,
+        "query_rows": 64,
+        "results": {
+          "parent": {
+            "error_over_baseline": 0.21436345023888662,
+            "geometry_output_over_baseline": 0.0001810431957835778,
+            "gain_vs_parent": 0.0
+          },
+          "refit": {
+            "error_over_baseline": 0.21476119739859412,
+            "geometry_output_over_baseline": 0.0001810431957835778,
+            "gain_vs_parent": -0.0003977471597075011
+          },
+          "reciprocal_only": {
+            "error_over_baseline": 0.2156911043479787,
+            "geometry_output_over_baseline": 7.510262268260408e-11,
+            "gain_vs_parent": -0.0013276541090920801
+          },
+          "reciprocal_refit": {
+            "error_over_baseline": 0.21545885977282467,
+            "geometry_output_over_baseline": 7.510262268260408e-11,
+            "gain_vs_parent": -0.001095409533938052
+          },
+          "no_scale": {
+            "error_over_baseline": 0.22236567601258683,
+            "geometry_output_over_baseline": 7.878647809982076e-11,
+            "gain_vs_parent": -0.008002225773700217
+          },
+          "no_dense": {
+            "error_over_baseline": 0.24475440482948657,
+            "geometry_output_over_baseline": 0.00018104652881655096,
+            "gain_vs_parent": -0.030390954590599956
+          },
+          "no_both": {
+            "error_over_baseline": 0.24698558254527084,
+            "geometry_output_over_baseline": 3.5101757017225073e-11,
+            "gain_vs_parent": -0.03262213230638422
+          }
+        }
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "query_rows": 1,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_scale": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_dense": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            },
+            "no_both": {
+              "error_over_baseline": 0.8321269058986601,
+              "geometry_output_over_baseline": 0.0,
+              "gain_vs_parent": 0.0
+            }
+          }
+        },
+        {
+          "rows": 10,
+          "query_rows": 10,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.4448033711140204,
+              "geometry_output_over_baseline": 5.246441022684348e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.448559881181576,
+              "geometry_output_over_baseline": 5.246441022684348e-05,
+              "gain_vs_parent": -0.0037565100675556184
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.4396887892995663,
+              "geometry_output_over_baseline": 2.5198948700915736e-11,
+              "gain_vs_parent": 0.005114581814454122
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.4440720384165253,
+              "geometry_output_over_baseline": 2.5198948700915736e-11,
+              "gain_vs_parent": 0.0007313326974950907
+            },
+            "no_scale": {
+              "error_over_baseline": 0.43546844769125886,
+              "geometry_output_over_baseline": 2.2904006056477804e-11,
+              "gain_vs_parent": 0.009334923422761543
+            },
+            "no_dense": {
+              "error_over_baseline": 0.4679618886968241,
+              "geometry_output_over_baseline": 5.245395345017616e-05,
+              "gain_vs_parent": -0.023158517582803684
+            },
+            "no_both": {
+              "error_over_baseline": 0.45325546985482257,
+              "geometry_output_over_baseline": 1.4659628565758946e-11,
+              "gain_vs_parent": -0.00845209874080216
+            }
+          }
+        },
+        {
+          "rows": 128,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.27542001065971844,
+              "geometry_output_over_baseline": 9.605445238342479e-05,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.27654663844298566,
+              "geometry_output_over_baseline": 9.605445238342479e-05,
+              "gain_vs_parent": -0.00112662778326722
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.27491455695651745,
+              "geometry_output_over_baseline": 4.614034374724541e-11,
+              "gain_vs_parent": 0.0005054537032009865
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.2753491100162243,
+              "geometry_output_over_baseline": 4.614034374724541e-11,
+              "gain_vs_parent": 7.090064349413172e-05
+            },
+            "no_scale": {
+              "error_over_baseline": 0.2782708764588066,
+              "geometry_output_over_baseline": 5.066332680634794e-11,
+              "gain_vs_parent": -0.0028508657990881647
+            },
+            "no_dense": {
+              "error_over_baseline": 0.30138135840052277,
+              "geometry_output_over_baseline": 9.605564504820506e-05,
+              "gain_vs_parent": -0.02596134774080433
+            },
+            "no_both": {
+              "error_over_baseline": 0.30790357462994467,
+              "geometry_output_over_baseline": 2.5948082525439597e-11,
+              "gain_vs_parent": -0.032483563970226226
+            }
+          }
+        },
+        {
+          "rows": 512,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.22637126418066827,
+              "geometry_output_over_baseline": 0.00014540851638203295,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.22507530024333297,
+              "geometry_output_over_baseline": 0.00014540851638203295,
+              "gain_vs_parent": 0.0012959639373353038
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.22665710670923583,
+              "geometry_output_over_baseline": 6.15299779061334e-11,
+              "gain_vs_parent": -0.0002858425285675592
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.2260132564486604,
+              "geometry_output_over_baseline": 6.15299779061334e-11,
+              "gain_vs_parent": 0.0003580077320078645
+            },
+            "no_scale": {
+              "error_over_baseline": 0.2288524000194809,
+              "geometry_output_over_baseline": 6.422513648019506e-11,
+              "gain_vs_parent": -0.002481135838812626
+            },
+            "no_dense": {
+              "error_over_baseline": 0.2549722576556978,
+              "geometry_output_over_baseline": 0.00014540618657583366,
+              "gain_vs_parent": -0.028600993475029535
+            },
+            "no_both": {
+              "error_over_baseline": 0.2566837190894762,
+              "geometry_output_over_baseline": 3.013522506903658e-11,
+              "gain_vs_parent": -0.030312454908807906
+            }
+          }
+        },
+        {
+          "rows": 1024,
+          "query_rows": 64,
+          "results": {
+            "parent": {
+              "error_over_baseline": 0.20205134386862403,
+              "geometry_output_over_baseline": 0.000173468874240108,
+              "gain_vs_parent": 0.0
+            },
+            "refit": {
+              "error_over_baseline": 0.2024306906750057,
+              "geometry_output_over_baseline": 0.000173468874240108,
+              "gain_vs_parent": -0.0003793468063816585
+            },
+            "reciprocal_only": {
+              "error_over_baseline": 0.20216796074661827,
+              "geometry_output_over_baseline": 6.796953496718497e-11,
+              "gain_vs_parent": -0.00011661687799424669
+            },
+            "reciprocal_refit": {
+              "error_over_baseline": 0.20286492292324607,
+              "geometry_output_over_baseline": 6.796953496718497e-11,
+              "gain_vs_parent": -0.0008135790546220378
+            },
+            "no_scale": {
+              "error_over_baseline": 0.20728626943378176,
+              "geometry_output_over_baseline": 7.37657528253132e-11,
+              "gain_vs_parent": -0.0052349255651577276
+            },
+            "no_dense": {
+              "error_over_baseline": 0.22928355182291332,
+              "geometry_output_over_baseline": 0.00017346320635073617,
+              "gain_vs_parent": -0.027232207954289295
+            },
+            "no_both": {
+              "error_over_baseline": 0.23324242192834244,
+              "geometry_output_over_baseline": 3.301822195448016e-11,
+              "gain_vs_parent": -0.031191078059718408
+            }
+          }
+        }
+      ],
+      "seconds": 6.259057666989975,
+      "parent": {
+        "scale": true,
+        "dense": true,
+        "rot": 1
+      }
+    }
+  ],
+  "checks": {
+    "states": 28,
+    "returns": 336
+  },
+  "warning": "Forced calibration-fitted interventions scored on sampled queries/full keys. No test-label fitting or online score claim; no held-out guard in these interventions."
+}

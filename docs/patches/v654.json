@@ -1,0 +1,13 @@
+{
+  "version": 654,
+  "parent": 635,
+  "parent_sha256": "1834d739029be4712531a8779e0be86b20fe41ccbde881c5b9bdeab2342c1f56",
+  "summary": "v635 with the JOINT (GL(d)) acceptance bar relaxed from 1% to 0.1%. The bar was only ever tested on T<=4 banks and the uniform mirror; the official sample has a realistic T and an 86% Q/K share, so it is the bank that should decide.",
+  "patches": [
+    [
+      "                    if bool((candidate < best * 0.99).all()):\n",
+      "                    # v654: v635 (whole Q/K stack forced) plus a relaxed JOINT bar; the old\n                    # 1% bar was never re-tested on a bank with a realistic Q/K share.\n                    if bool((candidate < best * 0.999).all()):\n"
+    ]
+  ],
+  "append": []
+}

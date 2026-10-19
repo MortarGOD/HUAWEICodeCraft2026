@@ -1,0 +1,281 @@
+{
+  "version": 441,
+  "atom": "group12",
+  "source_sha256": "b570f46dc7d8b38eedffdc579eb849f647dced2f8c928df731083a9497170fd4",
+  "data_sha256": "480b859cdce67f07fd1fecaea45c9ca245fc824df03bf494c9751357036a91a2",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 4,
+      "baseline_mse": 0.23548272252082825,
+      "player_mse": 0.18678586184978485,
+      "quality": 0.20679589631776998,
+      "perfect_qk_quality": 0.22227905398590064,
+      "perfect_v_quality": 0.988537339489114,
+      "diagnostic_only": true
+    },
+    {
+      "test": 1,
+      "tokens": 128,
+      "baseline_mse": 0.1376197338104248,
+      "player_mse": 0.04147341102361679,
+      "quality": 0.6986376163120064,
+      "perfect_qk_quality": 0.7202142135394018,
+      "perfect_v_quality": 0.9780588483584653,
+      "diagnostic_only": true
+    }
+  ],
+  "format_checks": 6,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1
+        },
+        "v": {
+          "v435_content_parent": null
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.0002755590248852968,
+          "j_cand": 0.0001511258742539212
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 8.932730997912586e-05
+        },
+        "TEMP_DEBUG": {
+          "heads": 4,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 2,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1
+        },
+        "v": {
+          "v435_content_parent": null
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 1.2622775102499872e-05,
+          "j_cand": 7.931257641757838e-06
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 0.00011037870717700571
+        },
+        "TEMP_DEBUG": {
+          "heads": 2,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 1,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1
+        },
+        "v": {
+          "v435_content_parent": null
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00032518652733415365,
+          "j_cand": 0.00017674191622063518
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 1,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 0.00020436031627468765
+        },
+        "TEMP_DEBUG": {
+          "heads": 0,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 2,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    }
+  },
+  "calibration_seconds": 50.4192707920447,
+  "mean_quality": 0.45271675631488817,
+  "wall_seconds": 51.868943082983606
+}

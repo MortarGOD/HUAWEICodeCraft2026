@@ -1,0 +1,29 @@
+{
+  "reverse_residual_equivalence": [
+    {
+      "d": 64,
+      "max_difference": 2.384185791015625e-07,
+      "codes_differ": 0
+    },
+    {
+      "d": 128,
+      "max_difference": 2.384185791015625e-07,
+      "codes_differ": 0
+    },
+    {
+      "d": 256,
+      "max_difference": 2.384185791015625e-07,
+      "codes_differ": 0
+    }
+  ],
+  "calibration_checks": [
+    {
+      "version": 447,
+      "parent_calibration_exact_except_marker": true
+    },
+    {
+      "version": 448,
+      "parent_calibration_exact_except_marker": true
+    }
+  ]
+}

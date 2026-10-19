@@ -1,0 +1,55 @@
+{
+  "expanded_rows": {
+    "rows": 129,
+    "accepted_rows": 129,
+    "decode_row_shapes": [
+      129,
+      129,
+      129
+    ]
+  },
+  "enumeration": {
+    "legal_combinations": 225,
+    "distinct_retained": 2,
+    "metadata_validated": true,
+    "best_changes": [
+      -1.07421875,
+      -1.07421875
+    ]
+  },
+  "arithmetic_stress_only": {
+    "metadata_legal": false,
+    "scope": "BF16 rounding-order stress; not legal HiF4 coverage",
+    "bf16_decode_differs_from_naive_step": true
+  },
+  "actual_bf16_tie_rejected": true,
+  "synthetic_calibration": {
+    "complete_parent_bitexact": true,
+    "new_refine_calls_during_calibration": 0,
+    "rows": 129,
+    "improved_rows": 123,
+    "degraded_rows": 0,
+    "maximum_signed_code_changes_per_row": 2,
+    "parent_mse": 38.46685791015625,
+    "candidate_mse": 34.768585205078125,
+    "fresh_module_equal": true,
+    "input_state_rng_unchanged": true
+  },
+  "pair_trap": {
+    "single_coordinate_improvement": false,
+    "cross_block_channels": [
+      0,
+      64
+    ],
+    "before_sse": 0.0390625,
+    "after_sse": 0.0078125
+  },
+  "summary": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "scope": "synthetic mechanism and contracts; no official or local bank evaluation"
+  },
+  "source_sha256": "d847b80494a04373065b0cb63805888c81be655da57ea1d9c4fd9241c9498f82"
+}

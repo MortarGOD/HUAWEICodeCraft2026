@@ -1,0 +1,34 @@
+{
+  "threads": 4,
+  "synthetic_only": true,
+  "rows": [
+    {
+      "t": 128,
+      "kh": 2,
+      "d": 64,
+      "core_seconds": 0.043146332958713174,
+      "changed": 6
+    },
+    {
+      "t": 512,
+      "kh": 4,
+      "d": 128,
+      "core_seconds": 0.1825025420403108,
+      "changed": 51
+    },
+    {
+      "t": 2048,
+      "kh": 2,
+      "d": 128,
+      "core_seconds": 0.20225708303041756,
+      "changed": 26
+    },
+    {
+      "t": 4096,
+      "kh": 4,
+      "d": 128,
+      "core_seconds": 1.316407874925062,
+      "changed": 30
+    }
+  ]
+}

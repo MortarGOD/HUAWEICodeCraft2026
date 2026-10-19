@@ -1,0 +1,84 @@
+{
+  "certificate_columns": 480,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    337,
+    343,
+    345,
+    365,
+    374,
+    375,
+    378,
+    381,
+    382,
+    385,
+    387,
+    392,
+    393,
+    397,
+    399,
+    400,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round021/trace35-group7-seedplus1",
+      "test": 0,
+      "tokens": 8,
+      "price": -385.28628345072474,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -667.1600056073871
+    },
+    {
+      "population": "round021/trace35-group7-seedplus1",
+      "test": 4,
+      "tokens": 8,
+      "price": -465.44092115282257,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -747.3146433094851
+    },
+    {
+      "population": "round021/trace35-group7-seedplus1",
+      "test": 3,
+      "tokens": 8,
+      "price": -818.9000563467594,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -1100.773778503422
+    },
+    {
+      "population": "round021/trace35-group7-seedplus1",
+      "test": 2,
+      "tokens": 8,
+      "price": -1396.3525473031343,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -1678.2262694597966
+    },
+    {
+      "population": "round021/trace35-group7-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -1659.6197270565,
+      "required_lower_bound": 281.87372215666244,
+      "margin": -1941.4934492131624
+    }
+  ],
+  "limits": "Fixed-certificate screen only; negative result does not exclude other calibration seeds."
+}

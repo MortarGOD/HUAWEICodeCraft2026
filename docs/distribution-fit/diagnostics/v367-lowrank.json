@@ -1,0 +1,248 @@
+{
+  "version": 367,
+  "atom": "rank8-strength16-length128",
+  "source_sha256": "3a425c61950ab7bf202f4b570f22d97e82ffb752705ea370ca454a77aaf208eb",
+  "data_sha256": "90a1fdbcb8dd315c00eaae247c1565c030803053b90e7acb8feb601567ecf3f6",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 128,
+      "baseline_mse": 5.166020127944648e-05,
+      "player_mse": 2.8945103167643538e-06,
+      "quality": 0.9439702083019959
+    },
+    {
+      "test": 1,
+      "tokens": 128,
+      "baseline_mse": 5.056212830822915e-05,
+      "player_mse": 3.032974746020045e-06,
+      "quality": 0.9400148916293458
+    },
+    {
+      "test": 2,
+      "tokens": 128,
+      "baseline_mse": 5.014830458094366e-05,
+      "player_mse": 3.285726052126847e-06,
+      "quality": 0.9344798178206921
+    },
+    {
+      "test": 3,
+      "tokens": 128,
+      "baseline_mse": 4.926102701574564e-05,
+      "player_mse": 2.6958566650137072e-06,
+      "quality": 0.9452740466788885
+    },
+    {
+      "test": 4,
+      "tokens": 128,
+      "baseline_mse": 5.184594920137897e-05,
+      "player_mse": 2.5354872832394904e-06,
+      "quality": 0.9510957495755126
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.9842941761016846,
+          "j_base": 1.0442511666042265e-05,
+          "j_cand": 5.098004749015672e-06
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 2,
+          "error": false,
+          "hold_base": 6.8173180807207245e-06
+        },
+        "TEMP_DEBUG": {
+          "heads": 6,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "guard_rows": 32,
+          "minimum_gain": 0.01
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "qk"
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.9844116568565369,
+          "j_base": 1.0771080269478261e-05,
+          "j_cand": 4.844275281357113e-06
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 2,
+          "error": false,
+          "hold_base": 7.1053445935831405e-06
+        },
+        "TEMP_DEBUG": {
+          "heads": 7,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "guard_rows": 32,
+          "minimum_gain": 0.01
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "qk"
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.9841445088386536,
+          "j_base": 1.0070865755551495e-05,
+          "j_cand": 4.928242560708895e-06
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 1,
+          "kernel_heads": 2,
+          "error": false,
+          "hold_base": 6.755945832992438e-06
+        },
+        "TEMP_DEBUG": {
+          "heads": 5,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "guard_rows": 32,
+          "minimum_gain": 0.01
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "qk"
+        }
+      }
+    }
+  },
+  "calibration_seconds": 10.120832000044174,
+  "mean_quality": 0.942966942801287,
+  "wall_seconds": 11.60773154196795
+}

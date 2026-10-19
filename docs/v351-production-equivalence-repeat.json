@@ -1,0 +1,176 @@
+{
+  "complete": true,
+  "cache_checks": 8,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": 1.8460125839919783,
+        "old": 2.008060999971349
+      },
+      "stats": {
+        "hits": 5,
+        "calls": 10,
+        "peak_bytes": 51991552
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "equal": true,
+      "timing": {
+        "old": 2.7547422089846805,
+        "new": 2.6718697920441628
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 43143168
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 5,
+      "equal": true,
+      "timing": {
+        "old": 1.950450791977346,
+        "new": 1.7242123340256512
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 38424576
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "equal": true,
+      "timing": {
+        "new": 2.049788125033956,
+        "old": 2.1698597079957835
+      },
+      "stats": {
+        "hits": 1,
+        "calls": 8,
+        "peak_bytes": 60200966
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 19,
+      "equal": true,
+      "timing": {
+        "old": 2.0703619580017403,
+        "new": 1.9801710000028834
+      },
+      "stats": {
+        "hits": 1,
+        "calls": 8,
+        "peak_bytes": 54958086
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "equal": true,
+      "timing": {
+        "old": 2.322275666985661,
+        "new": 2.231693957990501
+      },
+      "stats": {
+        "hits": 1,
+        "calls": 8,
+        "peak_bytes": 64913416
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": 1.2228085829992779,
+        "old": 1.3696707090130076
+      },
+      "stats": {
+        "hits": 5,
+        "calls": 10,
+        "peak_bytes": 28247040
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 1,
+      "equal": true,
+      "timing": {
+        "old": 1.4528521669562906,
+        "new": 1.3086659589898773
+      },
+      "stats": {
+        "hits": 3,
+        "calls": 10,
+        "peak_bytes": 25950220
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 24,
+      "equal": true,
+      "timing": {
+        "new": 1.4842071249731816,
+        "old": 1.636908584041521
+      },
+      "stats": {
+        "hits": 3,
+        "calls": 10,
+        "peak_bytes": 28312588
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "equal": true,
+      "timing": {
+        "old": 1.8502907500369474,
+        "new": 1.6104402500204742
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 25526272
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 26,
+      "equal": true,
+      "timing": {
+        "new": 1.607454708951991,
+        "old": 1.8386226249858737
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 25526272
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 49,
+      "equal": true,
+      "timing": {
+        "old": 1.7843984580249526,
+        "new": 1.612739000003785
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 25526272
+      }
+    }
+  ],
+  "exception_cleanup": true,
+  "warning": "See rows for scope; 5 K+V test pairs per group. Whole calibration single paired timings, not a speed guarantee."
+}

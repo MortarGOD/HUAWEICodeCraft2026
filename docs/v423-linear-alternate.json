@@ -1,0 +1,4239 @@
+{
+  "complete": true,
+  "passed": true,
+  "parent": 422,
+  "candidate": 423,
+  "versions": [
+    422,
+    423
+  ],
+  "dataset": "/Users/ee/Code/2026-huawei-alogorithm/local_fitted_models_realw_v41",
+  "sha256": {
+    "422": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+    "423": "d847b80494a04373065b0cb63805888c81be655da57ea1d9c4fd9241c9498f82"
+  },
+  "linear_sha256": "35a3a238c8874491a62f773de84050012a003eea664d297977a5f248c990b366",
+  "harness_sha256": "6c5bd5e99c141e6d6766a982611aaa1698b9e50ea38d6e3d3a5e52bf41c4dd20",
+  "torch_version": "2.13.0",
+  "python": "/opt/miniconda3/envs/codecraft/bin/python",
+  "threads": 4,
+  "seed": 20260907423,
+  "selected_groups": [
+    0,
+    4,
+    6,
+    7,
+    9
+  ],
+  "score_prediction_allowed": false,
+  "candidate_search": "Correlated channel pairs; 15 signed codes per channel yield 225 pair candidates; actual decoded BF16 output is the final acceptance target.",
+  "scoring": "FP32 NVFP4 teacher and Algorithm1 baseline GEMM; actual decoded BF16 player GEMM, then FP32 MSE.",
+  "timing": "Serial public API wall time, excluding input/state cloning, checks, scoring and replay. Includes lightweight call counters and v423 search timers; search time is a subset of dynamic time. No online-time conversion.",
+  "validation_policy": "Independent calibrations with identical starting RNG must be fully bitexact. Down is bitexact. Every actual BF16 output row is checked for exact nonincrease; any positive row MSE delta is retained and makes passed false. Tolerance is diagnostic only. Dynamic input/state/RNG must remain unchanged.",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "Qwen/Qwen3.6-35B-A3B",
+      "source_tensor": "model.language_model.layers.3.self_attn.q_proj.weight",
+      "calibration_order": [
+        422,
+        423
+      ],
+      "timing": {
+        "422": {
+          "calibration": 1.5834553750464693,
+          "dynamic": 0.6401788340881467,
+          "isolation": 0.08866170793771744,
+          "v423_search_seconds": 0.0
+        },
+        "423": {
+          "calibration": 1.5672746250638738,
+          "dynamic": 0.7313967080553994,
+          "isolation": 0.09013145812787116,
+          "v423_search_seconds": 0.04843762598466128
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "423": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0
+        },
+        "423": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "v423_refine_linear_pairs_calls": 0,
+          "v423_refine_linear_pairs_seconds": 0.0,
+          "v423_refine_linear_pairs_same_object": 0,
+          "v423_pair_code_proposals_calls": 0,
+          "v423_pair_code_proposals_seconds": 0.0,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "search_symbols": {
+        "422": [],
+        "423": [
+          "_v423_refine_linear_pairs",
+          "_v423_pair_code_proposals"
+        ]
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0021683541126549244,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0010283112060278654,
+              "score": 0.525764172915094,
+              "dynamic_seconds": 0.049807416973635554,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0010261073475703597,
+              "score": 0.5267805467834782,
+              "dynamic_seconds": 0.04491129203233868,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.002482042065821588,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0015242910012602806,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.525764172915094,
+            "candidate": 0.5267805467834782,
+            "delta": 0.0010163738683841572
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 512,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              2
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 512
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 512,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1872,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 2.203858457505703e-06,
+            "max_tolerance": 9.81673964339791e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.0023401505313813686,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0011813384480774403,
+              "score": 0.4951869838133416,
+              "dynamic_seconds": 0.07431454211473465,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.0037915409775450826,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0016864580102264881,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0011813384480774403,
+              "score": 0.4951869838133416,
+              "dynamic_seconds": 0.06247137498576194,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4951869838133416,
+            "candidate": 0.4951869838133416,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 5120,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 5120
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 5120,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 20480,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 10,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 1.3733444381713866e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.002239119028672576,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0011437510838732123,
+              "score": 0.4891959430351204,
+              "dynamic_seconds": 0.09979033295530826,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0011436276836320758,
+              "score": 0.4892510541031594,
+              "dynamic_seconds": 0.10352745791897178,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.006783209042623639,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.003140958957374096,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4891959430351204,
+            "candidate": 0.4892510541031594,
+            "delta": 5.511106803901544e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 16384,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 16384
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 16384,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1889,
+            "values": 65536,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 31,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 3.948924131691456e-06,
+            "max_tolerance": 1.75975745086987e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.0022540013305842876,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0011639356380328536,
+              "score": 0.48361359763211165,
+              "dynamic_seconds": 0.15791149996221066,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.010867291945032775,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.004269500030204654,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0011640136362984776,
+              "score": 0.48357899327559883,
+              "dynamic_seconds": 0.16102137509733438,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.48357899327559883,
+            "candidate": 0.48361359763211165,
+            "delta": 3.4604356512812906e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 32768,
+            "changed_rows": 2,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 32768
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 32768,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 3478,
+            "values": 131072,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 2,
+            "worsened": 0,
+            "equal_within_tolerance": 62,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 3.477325662970543e-06,
+            "max_tolerance": 1.878487587703148e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.0022271398920565844,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0011597230331972241,
+              "score": 0.4792769698331283,
+              "dynamic_seconds": 0.26708833407610655,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0011596131371334195,
+              "score": 0.47932631386589275,
+              "dynamic_seconds": 0.3507319160271436,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.024513541953638196,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 2,
+                "v423_pair_code_proposals_seconds": 0.009858167031779885,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4792769698331283,
+            "candidate": 0.47932631386589275,
+            "delta": 4.934403276446453e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 5,
+            "codes": 65536,
+            "changed_rows": 4,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "changed_signed_codes": 5,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 5,
+                "values": 65536
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 5,
+            "values": 65536,
+            "changed_rows": 4,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 7144,
+            "values": 262144,
+            "changed_rows": 4,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 4,
+            "worsened": 0,
+            "equal_within_tolerance": 124,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 4.5478809624910355e-06,
+            "max_tolerance": 1.8336627771731173e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 0,
+        "values": 1048576,
+        "changed_rows": 0,
+        "any_changed": false
+      },
+      "calibration_bitexact": true,
+      "isolation_replays": {
+        "422": true,
+        "423": true
+      },
+      "dynamic_counts": {
+        "422": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1
+        },
+        "423": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1,
+          "v423_refine_linear_pairs_calls": 5,
+          "v423_refine_linear_pairs_seconds": 0.04843762598466128,
+          "v423_refine_linear_pairs_same_object": 1,
+          "v423_pair_code_proposals_calls": 6,
+          "v423_pair_code_proposals_seconds": 0.020479375030845404,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "score_sums": {
+        "422": 2.473003062872283,
+        "423": 2.4741584961979837
+      },
+      "score_comparison": {
+        "parent": 2.473003062872283,
+        "candidate": 2.4741584961979837,
+        "delta": 0.00115543332570045
+      }
+    },
+    {
+      "group": 4,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "Qwen/Qwen3.6-35B-A3B",
+      "source_tensor": "model.language_model.layers.3.mlp.shared_expert.down_proj.weight",
+      "calibration_order": [
+        423,
+        422
+      ],
+      "timing": {
+        "422": {
+          "calibration": 1.5175670000026003,
+          "dynamic": 0.7369945819955319,
+          "isolation": 0.10286895895842463,
+          "v423_search_seconds": 0.0
+        },
+        "423": {
+          "calibration": 1.4978298339992762,
+          "dynamic": 0.8174124171491712,
+          "isolation": 0.09095325088128448,
+          "v423_search_seconds": 0.045839581871405244
+        }
+      },
+      "calibration_rng_unchanged": {
+        "423": false,
+        "422": false
+      },
+      "calibration_counts": {
+        "423": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "v423_refine_linear_pairs_calls": 0,
+          "v423_refine_linear_pairs_seconds": 0.0,
+          "v423_refine_linear_pairs_same_object": 0,
+          "v423_pair_code_proposals_calls": 0,
+          "v423_pair_code_proposals_seconds": 0.0,
+          "v423_pair_code_proposals_same_object": 0
+        },
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0
+        }
+      },
+      "search_symbols": {
+        "422": [],
+        "423": [
+          "_v423_refine_linear_pairs",
+          "_v423_pair_code_proposals"
+        ]
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0010937852784991264,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0005187238566577435,
+              "score": 0.5257534848434535,
+              "dynamic_seconds": 0.05108683300204575,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.001158874947577715,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0004794580163434148,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0005187238566577435,
+              "score": 0.5257534848434535,
+              "dynamic_seconds": 0.05228000006172806,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5257534848434535,
+            "candidate": 0.5257534848434535,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 512,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 512
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 512,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 2048,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 1,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 4.95693597279967e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.0009714054176583886,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.00046074073179624975,
+              "score": 0.5256967653043529,
+              "dynamic_seconds": 0.08091187500394881,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.00046074073179624975,
+              "score": 0.5256967653043529,
+              "dynamic_seconds": 0.08300920901820064,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.005225457949563861,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0020660420414060354,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5256967653043529,
+            "candidate": 0.5256967653043529,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 5120,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 5120
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 5120,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 20480,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 10,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 5.601746844163813e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.0010301298461854458,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0004742724122479558,
+              "score": 0.5395993873935612,
+              "dynamic_seconds": 0.12974900007247925,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.007421124959364533,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.00341933302115649,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0004743085883092135,
+              "score": 0.5395642694311105,
+              "dynamic_seconds": 0.11119933298323303,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5395642694311105,
+            "candidate": 0.5395993873935612,
+            "delta": 3.5117962450703644e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 16384,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 16384
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 16384,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1863,
+            "values": 65536,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 31,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 1.1574302334338427e-06,
+            "max_tolerance": 5.884711606896076e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.001046565710566938,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0004766477213706821,
+              "score": 0.5445601584706268,
+              "dynamic_seconds": 0.1545287079643458,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.00047662280849181116,
+              "score": 0.544583962880249,
+              "dynamic_seconds": 0.17171450005844235,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.009110707906074822,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.004100791993550956,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5445601584706268,
+            "candidate": 0.544583962880249,
+            "delta": 2.3804409622241174e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 3,
+            "codes": 32768,
+            "changed_rows": 2,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 3,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 3,
+                "values": 32768
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 3,
+            "values": 32768,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 3647,
+            "values": 131072,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 2,
+            "worsened": 0,
+            "equal_within_tolerance": 62,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 1.0903459042310715e-06,
+            "max_tolerance": 8.266748396934531e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.0010278187692165375,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0004740217118524015,
+              "score": 0.5388080797417933,
+              "dynamic_seconds": 0.38185287499800324,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.022923416108824313,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 2,
+                "v423_pair_code_proposals_seconds": 0.008534040884114802,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.000474034808576107,
+              "score": 0.5387953374917996,
+              "dynamic_seconds": 0.3380746659822762,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5387953374917996,
+            "candidate": 0.5388080797417933,
+            "delta": 1.2742249993702437e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 65536,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 65536
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 65536,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1885,
+            "values": 262144,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 127,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 1.6757985576987267e-06,
+            "max_tolerance": 7.461448681134186e-10,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 0,
+        "values": 1048576,
+        "changed_rows": 0,
+        "any_changed": false
+      },
+      "calibration_bitexact": true,
+      "isolation_replays": {
+        "422": true,
+        "423": true
+      },
+      "dynamic_counts": {
+        "422": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1
+        },
+        "423": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1,
+          "v423_refine_linear_pairs_calls": 5,
+          "v423_refine_linear_pairs_seconds": 0.045839581871405244,
+          "v423_refine_linear_pairs_same_object": 2,
+          "v423_pair_code_proposals_calls": 6,
+          "v423_pair_code_proposals_seconds": 0.018599665956571698,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "score_sums": {
+        "422": 2.6743700155413435,
+        "423": 2.67444168016341
+      },
+      "score_comparison": {
+        "parent": 2.6743700155413435,
+        "candidate": 2.67444168016341,
+        "delta": 7.166462206642521e-05
+      }
+    },
+    {
+      "group": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.attn.wq_b.weight",
+      "calibration_order": [
+        422,
+        423
+      ],
+      "timing": {
+        "422": {
+          "calibration": 1.4612214580411091,
+          "dynamic": 0.6616549158934504,
+          "isolation": 0.09380904189310968,
+          "v423_search_seconds": 0.0
+        },
+        "423": {
+          "calibration": 1.4418273749761283,
+          "dynamic": 0.700415417086333,
+          "isolation": 0.08862433396279812,
+          "v423_search_seconds": 0.03694854199420661
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "423": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0
+        },
+        "423": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "v423_refine_linear_pairs_calls": 0,
+          "v423_refine_linear_pairs_seconds": 0.0,
+          "v423_refine_linear_pairs_same_object": 0,
+          "v423_pair_code_proposals_calls": 0,
+          "v423_pair_code_proposals_seconds": 0.0,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "search_symbols": {
+        "422": [],
+        "423": [
+          "_v423_refine_linear_pairs",
+          "_v423_pair_code_proposals"
+        ]
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.004913214594125748,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0028464840725064278,
+              "score": 0.4206473138971598,
+              "dynamic_seconds": 0.043730333098210394,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0028464840725064278,
+              "score": 0.4206473138971598,
+              "dynamic_seconds": 0.044291791040450335,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.0013955410104244947,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.00043179199565202,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4206473138971598,
+            "candidate": 0.4206473138971598,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 512,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 512
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 512,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 2048,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 1,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 2.7156188409094284e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.005476970691233873,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.002943882253021002,
+              "score": 0.4624980816981892,
+              "dynamic_seconds": 0.06838574993889779,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.0033797919750213623,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0014987500617280602,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002943882253021002,
+              "score": 0.4624980816981892,
+              "dynamic_seconds": 0.06774691690225154,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4624980816981892,
+            "candidate": 0.4624980816981892,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 5120,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 5120
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 5120,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 20480,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 10,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 3.174411178363812e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.0054969158954918385,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0029640216380357742,
+              "score": 0.46078461188270237,
+              "dynamic_seconds": 0.10781087493523955,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0029640216380357742,
+              "score": 0.46078461188270237,
+              "dynamic_seconds": 0.10376575007103384,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.004030584008432925,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.002724457997828722,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.46078461188270237,
+            "candidate": 0.46078461188270237,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 16384,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 16384
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 16384,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 65536,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 32,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 4.686954824251188e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.005329258739948273,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.002927720546722412,
+              "score": 0.4506326884119668,
+              "dynamic_seconds": 0.15278591704554856,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.009361625066958368,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.003931083017960191,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002927748952060938,
+              "score": 0.45062735833889056,
+              "dynamic_seconds": 0.14801737491507083,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.45062735833889056,
+            "candidate": 0.4506326884119668,
+            "delta": 5.3300730762373405e-06
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 32768,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 32768
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 32768,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1892,
+            "values": 131072,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 63,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 1.8076971173286438e-06,
+            "max_tolerance": 4.339077541715142e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.005229185800999403,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0029243077151477337,
+              "score": 0.4407718856367966,
+              "dynamic_seconds": 0.29434941604267806,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0029243077151477337,
+              "score": 0.4407718856367966,
+              "dynamic_seconds": 0.3311862089904025,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.018780999933369458,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 2,
+                "v423_pair_code_proposals_seconds": 0.008443374885246158,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4407718856367966,
+            "candidate": 0.4407718856367966,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 65536,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 65536
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 65536,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 262144,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 128,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 4.4161803103293096e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 0,
+        "values": 1048576,
+        "changed_rows": 0,
+        "any_changed": false
+      },
+      "calibration_bitexact": true,
+      "isolation_replays": {
+        "422": true,
+        "423": true
+      },
+      "dynamic_counts": {
+        "422": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1
+        },
+        "423": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1,
+          "v423_refine_linear_pairs_calls": 5,
+          "v423_refine_linear_pairs_seconds": 0.03694854199420661,
+          "v423_refine_linear_pairs_same_object": 4,
+          "v423_pair_code_proposals_calls": 6,
+          "v423_pair_code_proposals_seconds": 0.01702945795841515,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "score_sums": {
+        "422": 2.2353292514537384,
+        "423": 2.2353345815268146
+      },
+      "score_comparison": {
+        "parent": 2.2353292514537384,
+        "candidate": 2.2353345815268146,
+        "delta": 5.3300730762373405e-06
+      }
+    },
+    {
+      "group": 7,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.attn.wo_b.weight",
+      "calibration_order": [
+        423,
+        422
+      ],
+      "timing": {
+        "422": {
+          "calibration": 3.8654678339371458,
+          "dynamic": 1.8735176239861175,
+          "isolation": 0.22175879101268947,
+          "v423_search_seconds": 0.0
+        },
+        "423": {
+          "calibration": 1.459002292016521,
+          "dynamic": 1.8275094989221543,
+          "isolation": 0.2208889580797404,
+          "v423_search_seconds": 0.11728399887215346
+        }
+      },
+      "calibration_rng_unchanged": {
+        "423": false,
+        "422": false
+      },
+      "calibration_counts": {
+        "423": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "v423_refine_linear_pairs_calls": 0,
+          "v423_refine_linear_pairs_seconds": 0.0,
+          "v423_refine_linear_pairs_same_object": 0,
+          "v423_pair_code_proposals_calls": 0,
+          "v423_pair_code_proposals_seconds": 0.0,
+          "v423_pair_code_proposals_same_object": 0
+        },
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0
+        }
+      },
+      "search_symbols": {
+        "422": [],
+        "423": [
+          "_v423_refine_linear_pairs",
+          "_v423_pair_code_proposals"
+        ]
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.004277434200048447,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0026128520257771015,
+              "score": 0.38915436133476744,
+              "dynamic_seconds": 0.09998791594989598,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.0038303330074995756,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0010002499911934137,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0026128520257771015,
+              "score": 0.38915436133476744,
+              "dynamic_seconds": 0.10790612502023578,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.38915436133476744,
+            "candidate": 0.38915436133476744,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 512,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 512
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 512,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 2048,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 1,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 2.492809958454245e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.004474572371691465,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.002640628255903721,
+              "score": 0.40985908002969274,
+              "dynamic_seconds": 0.15841554198414087,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.002640628255903721,
+              "score": 0.40985908002969274,
+              "dynamic_seconds": 0.16719612502492964,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.006650791969150305,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0024216669844463468,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.40985908002969274,
+            "candidate": 0.40985908002969274,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 5120,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 5120
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 5120,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 20480,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 10,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 2.7631381627202245e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.004551691468805075,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0027271441649645567,
+              "score": 0.4008503907492448,
+              "dynamic_seconds": 0.31661183293908834,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.04606283293105662,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.03521279199048877,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0027274545282125473,
+              "score": 0.4007822043947614,
+              "dynamic_seconds": 0.25332741590682417,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4007822043947614,
+            "candidate": 0.4008503907492448,
+            "delta": 6.818635448335719e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 16384,
+            "changed_rows": 2,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 16384
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 16384,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 3490,
+            "values": 65536,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 2,
+            "worsened": 0,
+            "equal_within_tolerance": 30,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 6.915302947163582e-06,
+            "max_tolerance": 3.46834894138226e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.004675779491662979,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0027845462318509817,
+              "score": 0.40447443323281373,
+              "dynamic_seconds": 0.362203250057064,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0027844978030771017,
+              "score": 0.4044847906018827,
+              "dynamic_seconds": 0.48763358395081013,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.01779083302244544,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0068898750469088554,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.40447443323281373,
+            "candidate": 0.4044847906018827,
+            "delta": 1.0357369068958455e-05
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 1,
+            "codes": 32768,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 1,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 1,
+                "values": 32768
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 1,
+            "values": 32768,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1789,
+            "values": 131072,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 63,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 3.100372850894928e-06,
+            "max_tolerance": 3.645069579505389e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.004572543315589428,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0027204600628465414,
+              "score": 0.4050444413349733,
+              "dynamic_seconds": 0.7560800410574302,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.04294920794200152,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 2,
+                "v423_pair_code_proposals_seconds": 0.01862175005953759,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002720498014241457,
+              "score": 0.4050361414912548,
+              "dynamic_seconds": 0.9916652910178527,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4050361414912548,
+            "candidate": 0.4050444413349733,
+            "delta": 8.299843718528876e-06
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 65536,
+            "changed_rows": 2,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 1,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 65536
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 65536,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 3489,
+            "values": 262144,
+            "changed_rows": 2,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 2,
+            "worsened": 0,
+            "equal_within_tolerance": 126,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 2.441229298710823e-06,
+            "max_tolerance": 3.754965227642515e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 0,
+        "values": 1048576,
+        "changed_rows": 0,
+        "any_changed": false
+      },
+      "calibration_bitexact": true,
+      "isolation_replays": {
+        "422": true,
+        "423": true
+      },
+      "dynamic_counts": {
+        "422": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1
+        },
+        "423": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1,
+          "v423_refine_linear_pairs_calls": 5,
+          "v423_refine_linear_pairs_seconds": 0.11728399887215346,
+          "v423_refine_linear_pairs_same_object": 2,
+          "v423_pair_code_proposals_calls": 6,
+          "v423_pair_code_proposals_seconds": 0.06414633407257497,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "score_sums": {
+        "422": 2.00930622048329,
+        "423": 2.009393064050561
+      },
+      "score_comparison": {
+        "parent": 2.00930622048329,
+        "candidate": 2.009393064050561,
+        "delta": 8.684356727117759e-05
+      }
+    },
+    {
+      "group": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.ffn.shared_experts.w2.weight",
+      "calibration_order": [
+        422,
+        423
+      ],
+      "timing": {
+        "422": {
+          "calibration": 5.830932250013575,
+          "dynamic": 1.983793001039885,
+          "isolation": 0.18674095894675702,
+          "v423_search_seconds": 0.0
+        },
+        "423": {
+          "calibration": 3.131481416989118,
+          "dynamic": 1.8087613750249147,
+          "isolation": 0.18229887494817376,
+          "v423_search_seconds": 0.07772295898757875
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "423": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0
+        },
+        "423": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "v423_refine_linear_pairs_calls": 0,
+          "v423_refine_linear_pairs_seconds": 0.0,
+          "v423_refine_linear_pairs_same_object": 0,
+          "v423_pair_code_proposals_calls": 0,
+          "v423_pair_code_proposals_seconds": 0.0,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "search_symbols": {
+        "422": [],
+        "423": [
+          "_v423_refine_linear_pairs",
+          "_v423_pair_code_proposals"
+        ]
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0045280857011675835,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0018876193789765239,
+              "score": 0.5831308187277033,
+              "dynamic_seconds": 0.11321808397769928,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0018876193789765239,
+              "score": 0.5831308187277033,
+              "dynamic_seconds": 0.11103666701819748,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.003324416931718588,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0006504589691758156,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5831308187277033,
+            "candidate": 0.5831308187277033,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 1024,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 16
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 128
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 256
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 1024
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 1024,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 2048,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 1,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 1.8011740987589064e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.005506165325641632,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.002111899433657527,
+              "score": 0.6164482341598728,
+              "dynamic_seconds": 0.1772013750160113,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.006358333979733288,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0034953750437125564,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002111899433657527,
+              "score": 0.6164482341598728,
+              "dynamic_seconds": 0.18313787505030632,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6164482341598728,
+            "candidate": 0.6164482341598728,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 10240,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 160
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 1280
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 2560
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 10240
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 10240
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 10240,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 20480,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 10,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 2.331689286094729e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.005477576982229948,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0021054588723927736,
+              "score": 0.6156222214268852,
+              "dynamic_seconds": 0.2830492079956457,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.0021054588723927736,
+              "score": 0.6156222214268852,
+              "dynamic_seconds": 0.24971037509385496,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.006730374996550381,
+                "v423_refine_linear_pairs_same_object": 1,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.0037277089431881905,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6156222214268852,
+            "candidate": 0.6156222214268852,
+            "delta": 0.0
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 0,
+            "codes": 32768,
+            "changed_rows": 0,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 0,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 0,
+                "values": 32768
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 0,
+            "values": 32768,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "output_changes": {
+            "changed_values": 0,
+            "values": 65536,
+            "changed_rows": 0,
+            "any_changed": false
+          },
+          "row_loss_summary": {
+            "improved": 0,
+            "worsened": 0,
+            "equal_within_tolerance": 32,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 0.0,
+            "max_tolerance": 2.978257862551459e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.005288080777972937,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            423,
+            422
+          ],
+          "versions": {
+            "423": {
+              "mse": 0.0020797252655029297,
+              "score": 0.6067145429839398,
+              "dynamic_seconds": 0.45960783294867724,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.020941916038282216,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 1,
+                "v423_pair_code_proposals_seconds": 0.006677250028587878,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0020797678735107183,
+              "score": 0.6067064856168953,
+              "dynamic_seconds": 0.4840148340445012,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6067064856168953,
+            "candidate": 0.6067145429839398,
+            "delta": 8.057367044456143e-06
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 1,
+            "codes": 65536,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 1,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 1,
+                "values": 65536
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 1,
+            "values": 65536,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1637,
+            "values": 131072,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 63,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 2.7226051315665245e-06,
+            "max_tolerance": 2.7242876843303065e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.005410346668213606,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            423
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.00212707812897861,
+              "score": 0.6068499378283035,
+              "dynamic_seconds": 0.9203729999717325,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "423": {
+              "mse": 0.00212703924626112,
+              "score": 0.606857124561405,
+              "dynamic_seconds": 0.8112051249481738,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "v423_refine_linear_pairs_calls": 1,
+                "v423_refine_linear_pairs_seconds": 0.04036791704129428,
+                "v423_refine_linear_pairs_same_object": 0,
+                "v423_pair_code_proposals_calls": 2,
+                "v423_pair_code_proposals_seconds": 0.011524625006131828,
+                "v423_pair_code_proposals_same_object": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6068499378283035,
+            "candidate": 0.606857124561405,
+            "delta": 7.186733101405274e-06
+          },
+          "activation_parameter_changes": {
+            "changed_codes": 2,
+            "codes": 131072,
+            "changed_rows": 1,
+            "changed_codes_per_row": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "changed_signed_codes": 2,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 0,
+                "values": 2048
+              },
+              "scale_lv2": {
+                "changed_values": 0,
+                "values": 16384
+              },
+              "scale_lv3": {
+                "changed_values": 0,
+                "values": 32768
+              },
+              "sign": {
+                "changed_values": 0,
+                "values": 131072
+              },
+              "mant": {
+                "changed_values": 2,
+                "values": 131072
+              }
+            }
+          },
+          "activation_decoded_changes": {
+            "changed_values": 2,
+            "values": 131072,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "output_changes": {
+            "changed_values": 1803,
+            "values": 262144,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 127,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 4.9925874918699265e-06,
+            "max_tolerance": 2.8037707711092708e-09,
+            "nonincrease": true,
+            "strict_worsened": 0
+          },
+          "negative_rows": []
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 0,
+        "values": 2097152,
+        "changed_rows": 0,
+        "any_changed": false
+      },
+      "calibration_bitexact": true,
+      "isolation_replays": {
+        "422": true,
+        "423": true
+      },
+      "dynamic_counts": {
+        "422": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1
+        },
+        "423": {
+          "refine_calls": 5,
+          "prefix_calls": 5,
+          "refine_same_object": 1,
+          "v423_refine_linear_pairs_calls": 5,
+          "v423_refine_linear_pairs_seconds": 0.07772295898757875,
+          "v423_refine_linear_pairs_same_object": 3,
+          "v423_pair_code_proposals_calls": 6,
+          "v423_pair_code_proposals_seconds": 0.026075417990796268,
+          "v423_pair_code_proposals_same_object": 0
+        }
+      },
+      "score_sums": {
+        "422": 3.0287576977596604,
+        "423": 3.028772941859806
+      },
+      "score_comparison": {
+        "parent": 3.0287576977596604,
+        "candidate": 3.028772941859806,
+        "delta": 1.5244100145750394e-05
+      }
+    }
+  ],
+  "validation_checks": 110,
+  "row_nonincrease_failures": [],
+  "graph_evidence": "Source-read fallback for this new harness; no graph verification claimed for unindexed new code.",
+  "sha256_after": {
+    "422": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+    "423": "d847b80494a04373065b0cb63805888c81be655da57ea1d9c4fd9241c9498f82"
+  },
+  "score_sums": {
+    "422": 12.420766248110315,
+    "423": 12.422100763798575
+  },
+  "score_comparison": {
+    "parent": 12.420766248110315,
+    "candidate": 12.422100763798575,
+    "delta": 0.0013345156882600406
+  },
+  "total_interface_seconds": {
+    "422": 20.15478287404403,
+    "423": 14.98291095928289
+  },
+  "case_outcomes": {
+    "improved": 13,
+    "worsened": 0,
+    "equal_within_tolerance": 12,
+    "score_tolerance": 1e-12
+  },
+  "row_outcomes": {
+    "improved": 20,
+    "worsened": 0,
+    "equal_within_tolerance": 1155,
+    "strict_worsened": 0
+  },
+  "contract_checks_passed": true,
+  "source_unchanged": true
+}

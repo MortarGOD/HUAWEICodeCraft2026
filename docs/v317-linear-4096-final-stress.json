@@ -1,0 +1,75 @@
+{
+  "complete": true,
+  "source_unchanged_functions": 78,
+  "full_shape": false,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        8192,
+        4096
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 36.88499087499804,
+          "dynamic": 18.561692415969446
+        },
+        "cleanup": {
+          "calibration": 13.558434582984773,
+          "dynamic": 17.689209917996777
+        },
+        "joint": {
+          "calibration": 43.67252629098948,
+          "dynamic": 17.22420112497639
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.6266577217487194,
+          "candidate": 0.6436637302239893,
+          "delta": 0.017006008475269896
+        },
+        {
+          "test": 1,
+          "parent": 0.6354874932583217,
+          "candidate": 0.6505043582279835,
+          "delta": 0.015016864969661814
+        },
+        {
+          "test": 2,
+          "parent": 0.6321381393684229,
+          "candidate": 0.6476897603530569,
+          "delta": 0.01555162098463403
+        },
+        {
+          "test": 3,
+          "parent": 0.6261230588857987,
+          "candidate": 0.6425978708259256,
+          "delta": 0.0164748119401269
+        },
+        {
+          "test": 4,
+          "parent": 0.625906735461363,
+          "candidate": 0.6422369501904961,
+          "delta": 0.016330214729133097
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.08037952109882573,
+      "adopted": true
+    }
+  ],
+  "validation_checks": 18,
+  "timing": "Serial algorithm calls only; scoring and checks excluded; not a 96-core forecast",
+  "sha256": "82362d0f7329d754795c0a7c7315fc131eb8f08404715c669adb35236c7eb9bf",
+  "wide_stress": true,
+  "warning": "Transposed real checkpoint W and modeled activations: runtime stress only, NOT an actual model layer or online quality proxy",
+  "delta": 0.08037952109882573,
+  "total_seconds": {
+    "parent": 55.446683290967485,
+    "cleanup": 31.24764450098155,
+    "joint": 60.89672741596587
+  }
+}

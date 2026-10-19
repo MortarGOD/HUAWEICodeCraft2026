@@ -1,0 +1,10 @@
+{
+  "version": 631,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "summary": "v628's counterpart-free V objective with a 50% token-row budget: the rows whose own best move helps most are refined, the rest are left alone. On the mirror that retains 2008.6 of 2010 points and on the online-profiled bank 1114 of 1222, for about half the added dynamic time.",
+  "patches": [],
+  "append": [
+    "solution/v631_rank1_core.py"
+  ]
+}

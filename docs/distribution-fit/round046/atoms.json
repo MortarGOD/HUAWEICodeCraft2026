@@ -1,0 +1,154 @@
+{
+  "round": 46,
+  "atoms": [
+    {
+      "id": "covs-sr8-l256",
+      "path": "local_distribution_fit/round046/covs-sr8-l256.pt",
+      "sha256": "2fb5e850f2bd8d7d1b44ddfdd1ae55c768ac2ccdf4623a64b0af4d33da60b709",
+      "seed": 2026091600,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 8,
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ]
+      }
+    },
+    {
+      "id": "covs-sr16-l256",
+      "path": "local_distribution_fit/round046/covs-sr16-l256.pt",
+      "sha256": "35ecd3387f98fd9f8fc533d696c8288ac80086c453b186c8365a1eba8a0ec741",
+      "seed": 2026091601,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ]
+      }
+    },
+    {
+      "id": "covs-sr32-l256",
+      "path": "local_distribution_fit/round046/covs-sr32-l256.pt",
+      "sha256": "184666842eb6b26566029b6bd82d2f221a6cfd8308fd8072047ea092fcfe527c",
+      "seed": 2026091602,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 32,
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ]
+      }
+    },
+    {
+      "id": "covs-sr32-l384",
+      "path": "local_distribution_fit/round046/covs-sr32-l384.pt",
+      "sha256": "baaf9c05974e488b98b91ad4b878d7f32875fb633b60de11c2802c12c23da2c1",
+      "seed": 2026091603,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 32,
+        "rows": [
+          384,
+          384,
+          384,
+          384,
+          384
+        ]
+      }
+    },
+    {
+      "id": "covs-sr16-l384",
+      "path": "local_distribution_fit/round046/covs-sr16-l384.pt",
+      "sha256": "bc52e850ef0f66e6260dc58a01b2eb7a9b1cd497a532d611d8434e3302541e89",
+      "seed": 2026091604,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          384,
+          384,
+          384,
+          384,
+          384
+        ]
+      }
+    },
+    {
+      "id": "covs-sr64-l128",
+      "path": "local_distribution_fit/round046/covs-sr64-l128.pt",
+      "sha256": "87151aeb48ce7bb8ff16cb83ef9a74141f9bfa23af81c43f833dd53679f60009",
+      "seed": 2026091605,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 64,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "covs-sr64-l256",
+      "path": "local_distribution_fit/round046/covs-sr64-l256.pt",
+      "sha256": "09cc6b98739325a38e530a0c686d0b0795868e11c569d02774dea3a561d3ffe9",
+      "seed": 2026091606,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 64,
+        "rows": [
+          256,
+          256,
+          256,
+          256,
+          256
+        ]
+      }
+    }
+  ],
+  "mechanism": "v307 GPTQ length/strength gradient; measure 306/307 first.",
+  "limits": "Synthetic checkpoint-projected covariance gradient; not online distribution evidence."
+}

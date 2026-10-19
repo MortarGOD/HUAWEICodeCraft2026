@@ -1,0 +1,100 @@
+{
+  "round": 28,
+  "atoms": [
+    {
+      "id": "m0-diffuse-block-seedplus1",
+      "path": "local_distribution_fit/round001/m0-diffuse.pt",
+      "sha256": "19d9151a96b65f02a3e175fd111f19f8f446f3380e5e04ca65ba096638b0a00b",
+      "seed": 2026090802,
+      "profile": {
+        "gain": 0.25
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round001/m0-diffuse-block_resample"
+    },
+    {
+      "id": "m0-diffuse-block-seedplus2",
+      "path": "local_distribution_fit/round001/m0-diffuse.pt",
+      "sha256": "19d9151a96b65f02a3e175fd111f19f8f446f3380e5e04ca65ba096638b0a00b",
+      "seed": 2026090803,
+      "profile": {
+        "gain": 0.25
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round001/m0-diffuse-block_resample"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    310,
+    314,
+    315,
+    316,
+    318,
+    319,
+    320,
+    321,
+    322,
+    325,
+    330,
+    333,
+    337,
+    341,
+    344,
+    360,
+    365,
+    374,
+    378,
+    381,
+    382,
+    387,
+    389,
+    392,
+    394,
+    400,
+    401,
+    402,
+    403,
+    404,
+    407,
+    409,
+    412,
+    413,
+    414,
+    418,
+    419,
+    430,
+    434,
+    435,
+    436,
+    438,
+    439,
+    440
+  ],
+  "selection_evidence": "This measured source has the highest price under the independently verified 515-column separator, margin -0.006736. Explore two immutable calibration-resampling seeds with real inputs unchanged.",
+  "certificate_sha256": "aa1dcfbf5125bedb453ad7f57d0e2d2ac740ac5044b7b08738174b7804485eeb",
+  "limits": "Adaptive candidate generation shared by all versions. Certificate screening does not establish joint fit."
+}

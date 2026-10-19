@@ -1,3 +1,33 @@
+# Local environments and editor metadata
+.DS_Store
 __pycache__/
 *.py[cod]
-.DS_Store
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated submissions, profiles and temporary outputs
+*.zip
+*.log
+*.pstats
+*.bak
+.*_self_check/
+.pytest_cache/
+
+# Private/local model banks and tensor caches
+local_fitted*/
+local_model_tensor_cache/
+local_distribution_fit/
+fitted_profile_bank/
+
+# Downloaded papers and reference repository mirrors
+# Existing tracked references are retained; new downloads stay local.
+docs/papers/
+
+# Fine-grained generated experiment output
+**/cells/
+**/logs/

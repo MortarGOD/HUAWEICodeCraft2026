@@ -1,0 +1,79 @@
+{
+  "queries": 8,
+  "rounds": 8,
+  "groups": [
+    {
+      "group": 1,
+      "accepted_heads": 1,
+      "tests": [
+        {
+          "test": 0,
+          "rows": 128,
+          "ungated_gain": -0.01659371148575368,
+          "guarded_gain": -0.01659371148575368,
+          "oracle_disjoint_query_gain": -0.018641647629674987,
+          "surrogate_initial": [
+            1.8615255612530746e-05
+          ],
+          "surrogate_final": [
+            1.3232130186224822e-05
+          ],
+          "assumption_holds": true,
+          "seconds": 0.3666615410184022
+        },
+        {
+          "test": 4,
+          "rows": 2048,
+          "ungated_gain": 0.005145569306292605,
+          "guarded_gain": 0.005145569306292605,
+          "oracle_disjoint_query_gain": 0.005153237942629454,
+          "surrogate_initial": [
+            2.7802620934380684e-06
+          ],
+          "surrogate_final": [
+            2.0246111489541363e-06
+          ],
+          "assumption_holds": true,
+          "seconds": 1.8701122910133563
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "accepted_heads": 0,
+      "tests": [
+        {
+          "test": 0,
+          "rows": 128,
+          "ungated_gain": -0.03586991386317735,
+          "guarded_gain": 0.0,
+          "oracle_disjoint_query_gain": -0.018295926138573476,
+          "surrogate_initial": [
+            0.038237981498241425
+          ],
+          "surrogate_final": [
+            0.025901982560753822
+          ],
+          "assumption_holds": true,
+          "seconds": 0.33634187499410473
+        },
+        {
+          "test": 4,
+          "rows": 2048,
+          "ungated_gain": -0.030827033165917644,
+          "guarded_gain": 0.0,
+          "oracle_disjoint_query_gain": -0.0602183796062799,
+          "surrogate_initial": [
+            0.18570783734321594
+          ],
+          "surrogate_final": [
+            0.08480483293533325
+          ],
+          "assumption_holds": true,
+          "seconds": 1.800364166003419
+        }
+      ]
+    }
+  ],
+  "warning": "Query-sampled diagnostic. Oracle reads even-row test queries and is NOT deployable; evaluation uses disjoint odd queries. No 22000+ claim."
+}

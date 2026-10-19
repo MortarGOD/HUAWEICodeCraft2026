@@ -1,0 +1,154 @@
+{
+  "group": 6,
+  "rows": [
+    {
+      "repeat": 0,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 1,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 2,
+      "success": false,
+      "differences": [
+        {
+          "name": "hq",
+          "max_abs_delta": 1623670.125
+        },
+        {
+          "name": "a",
+          "max_abs_delta": 405917.53125
+        },
+        {
+          "name": "ar",
+          "max_abs_delta": 271.33428955078125
+        },
+        {
+          "name": "ai",
+          "max_abs_delta": 0.029304422438144684
+        },
+        {
+          "name": "mm",
+          "max_abs_delta": 0.5817668437957764
+        },
+        {
+          "name": "t",
+          "max_abs_delta": 0.2707864046096802
+        },
+        {
+          "name": "t",
+          "max_abs_delta": 0.2707861065864563
+        },
+        {
+          "name": "ti",
+          "max_abs_delta": 0.5835561752319336
+        },
+        {
+          "name": "gq",
+          "max_abs_delta": 416.0537109375
+        },
+        {
+          "name": "gk",
+          "max_abs_delta": 880382.875
+        },
+        {
+          "name": "gq",
+          "max_abs_delta": 416.0537109375
+        },
+        {
+          "name": "gk",
+          "max_abs_delta": 880382.875
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 4,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 5,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 6,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 7,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 8,
+      "success": true,
+      "differences": []
+    },
+    {
+      "repeat": 9,
+      "success": false,
+      "differences": [
+        {
+          "name": "hq",
+          "max_abs_delta": 1608971.875
+        },
+        {
+          "name": "a",
+          "max_abs_delta": 402242.96875
+        },
+        {
+          "name": "ar",
+          "max_abs_delta": 269.7575988769531
+        },
+        {
+          "name": "ai",
+          "max_abs_delta": 0.028329569846391678
+        },
+        {
+          "name": "mm",
+          "max_abs_delta": 0.5658733248710632
+        },
+        {
+          "name": "t",
+          "max_abs_delta": 0.27001887559890747
+        },
+        {
+          "name": "t",
+          "max_abs_delta": 0.27001839876174927
+        },
+        {
+          "name": "ti",
+          "max_abs_delta": 0.5816739797592163
+        },
+        {
+          "name": "gq",
+          "max_abs_delta": 413.8939208984375
+        },
+        {
+          "name": "gk",
+          "max_abs_delta": 872889.75
+        },
+        {
+          "name": "gq",
+          "max_abs_delta": 413.8939208984375
+        },
+        {
+          "name": "gk",
+          "max_abs_delta": 872889.75
+        }
+      ]
+    }
+  ],
+  "warning": "Instrumented local CPU execution, not a universal backend diagnosis."
+}

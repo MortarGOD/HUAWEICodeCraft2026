@@ -1,0 +1,396 @@
+{
+  "synthetic": [
+    {
+      "rows": 64,
+      "gq": 1,
+      "rf": 0,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 64,
+      "gq": 1,
+      "rf": 1,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 64,
+      "gq": 0,
+      "rf": 0,
+      "helper_vs_internal_changed": 131,
+      "helper_vs_deployed_changed": 131,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 64,
+      "gq": 0,
+      "rf": 1,
+      "helper_vs_internal_changed": 200,
+      "helper_vs_deployed_changed": 200,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 256,
+      "gq": 1,
+      "rf": 0,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 256,
+      "gq": 1,
+      "rf": 1,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 256,
+      "gq": 0,
+      "rf": 0,
+      "helper_vs_internal_changed": 169,
+      "helper_vs_deployed_changed": 169,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 256,
+      "gq": 0,
+      "rf": 1,
+      "helper_vs_internal_changed": 232,
+      "helper_vs_deployed_changed": 232,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 1152,
+      "gq": 1,
+      "rf": 0,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 1152,
+      "gq": 1,
+      "rf": 1,
+      "helper_vs_internal_changed": 0,
+      "helper_vs_deployed_changed": 0,
+      "helper_max_error": 0.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 1152,
+      "gq": 0,
+      "rf": 0,
+      "helper_vs_internal_changed": 149,
+      "helper_vs_deployed_changed": 149,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    },
+    {
+      "rows": 1152,
+      "gq": 0,
+      "rf": 1,
+      "helper_vs_internal_changed": 216,
+      "helper_vs_deployed_changed": 216,
+      "helper_max_error": 1.0,
+      "deploy_dtype": "torch.float32",
+      "helper_dtype": "torch.float32"
+    }
+  ],
+  "observed_calibration_calls": [
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 512,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 512,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 512,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 16,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 128,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 128,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 1024,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 128,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    },
+    {
+      "gq": 1,
+      "rf": 1,
+      "rows": 2048,
+      "qh": 8,
+      "kh": 2,
+      "d": 256
+    }
+  ],
+  "synthetic_calibration_call_count": 0,
+  "bank_groups": [
+    0,
+    24
+  ],
+  "scope": "Synthetic forward checks and two paired calibration groups; not exhaustive or online coverage."
+}

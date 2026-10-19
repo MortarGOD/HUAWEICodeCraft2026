@@ -1,0 +1,29 @@
+{
+  "groups": "all",
+  "runs": [
+    {
+      "mode": "parent",
+      "times": {
+        "calibration": 65.97444912203355,
+        "q": 34.660864367790055,
+        "k": 7.752816758293193,
+        "v": 5.532056539086625
+      },
+      "total": 113.92018678720342
+    },
+    {
+      "mode": "candidate",
+      "times": {
+        "calibration": 69.36804687496624,
+        "q": 33.9412701750698,
+        "k": 7.668790530762635,
+        "v": 6.189808826922672
+      },
+      "total": 117.16791640772135
+    }
+  ],
+  "complete": true,
+  "note": "Local 4-thread serial interfaces, not 96-core online timing.",
+  "ratio": 1.0285088157956106,
+  "naive_online_seconds": 256.098695133107
+}

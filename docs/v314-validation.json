@@ -1,0 +1,51 @@
+{
+  "candidate": "solution/solution_v314.py",
+  "parent_version": 310,
+  "parent_online_score": 19974,
+  "parent_online_seconds": 244,
+  "sha256": "38ec689ffbf734a4a8be1179050fe054b3f2122dc7099b878a67451d295e0af4",
+  "entry_equal_to_candidate": true,
+  "allowed_imports": [
+    "__future__",
+    "numpy",
+    "threading",
+    "torch",
+    "typing"
+  ],
+  "static_forbidden_calls_absent": true,
+  "mini_self_check": {
+    "passed": 22,
+    "total": 22
+  },
+  "covariance_bank_self_check": {
+    "passed": 860,
+    "total": 860
+  },
+  "linear_per_case_equality_to_v310": {
+    "passed": 50,
+    "total": 50
+  },
+  "attention_delta_raw_vs_v310": 5.526475986213121,
+  "attention_case_wins_losses_ties": [
+    179,
+    7,
+    64
+  ],
+  "attention_group_wins_losses": [
+    48,
+    2
+  ],
+  "attention_seconds_v310": 53.01027208301821,
+  "attention_seconds_v314": 60.622572167019825,
+  "online_time_working_reference_seconds": 271.01376152734065,
+  "reliably_calibrated_online_prediction": null,
+  "historical_slope_sensitivity_only": [
+    20002.649736634572,
+    20246.272969423397
+  ],
+  "actual_online_score": null,
+  "actual_online_seconds": null,
+  "goal_21200_verified": false,
+  "prediction_warning": "New algorithm not online-calibrated; sensitivity endpoints are not a confidence interval, lower bound, or evidence for 21200. Timing depends on hardware and shapes; 300 seconds not guaranteed.",
+  "previous_v311_v312_all_cases_passed": true
+}

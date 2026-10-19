@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "forced_v_cases": 20,
+  "zero_boundary_cases": 12,
+  "details": [
+    {
+      "group": 5,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 6.556510925292969e-07
+    },
+    {
+      "group": 5,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 6.556510925292969e-07
+    },
+    {
+      "group": 7,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 7.152557373046875e-07
+    },
+    {
+      "group": 7,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 7.152557373046875e-07
+    },
+    {
+      "group": 25,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 8.344650268554688e-07
+    },
+    {
+      "group": 25,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 8.344650268554688e-07
+    },
+    {
+      "group": 30,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 1.0132789611816406e-06
+    },
+    {
+      "group": 30,
+      "query_subset_relative_rms": 0.0,
+      "transform_inverse_error": 1.0132789611816406e-06
+    }
+  ],
+  "warning": "Numerical boundary checks did not reproduce the online v311 loss; no per-case receipt available."
+}

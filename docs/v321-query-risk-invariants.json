@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "kl_gradient_max_error": 1.3322676295501878e-15,
+  "pv_gradient_max_error": 6.217248937900877e-15,
+  "input_state_rng_unchanged": true,
+  "inactive_heads_equal": true,
+  "actual_decoded_descent": [
+    {
+      "output": false,
+      "sum_delta": -0.09206891059875488,
+      "worst_delta": 0.0
+    },
+    {
+      "output": true,
+      "sum_delta": -0.07448217272758484,
+      "worst_delta": 0.0
+    }
+  ]
+}

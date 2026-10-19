@@ -1,0 +1,396 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "head_dim": 256,
+      "shared_parent_seconds": 3.59972675004974,
+      "versions": {
+        "400": {
+          "scores": [
+            0.9167901983890268,
+            0.9362788924392502,
+            0.9453802586985757,
+            0.9455392299041309,
+            0.9183824960261723
+          ],
+          "seconds_including_instrumentation": 1.0131063340231776,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808
+        },
+        "407": {
+          "scores": [
+            0.3012926521760304,
+            0.8129193449700185,
+            0.5840984721934497,
+            0.7530601473507316,
+            0.8398898760049252
+          ],
+          "seconds_including_instrumentation": 0.9762287500197999,
+          "checks": 15,
+          "changed_v_values": 32649,
+          "v_values": 1015808
+        },
+        "408": {
+          "scores": [
+            0.07607192189976096,
+            0.15039320503138753,
+            0.24868280294406403,
+            0.17448532597524166,
+            0.08611856241731053
+          ],
+          "seconds_including_instrumentation": 0.9695416660397314,
+          "checks": 15,
+          "changed_v_values": 37719,
+          "v_values": 1015808
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "head_dim": 256,
+      "shared_parent_seconds": 3.711432459007483,
+      "versions": {
+        "400": {
+          "scores": [
+            0.9153992522254019,
+            0.9333450367260123,
+            0.9378943190344977,
+            0.9496316618094126,
+            0.9119734644150372
+          ],
+          "seconds_including_instrumentation": 1.1987963749561459,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808
+        },
+        "407": {
+          "scores": [
+            0.2977434470363955,
+            0.8108022119785875,
+            0.5815767097319982,
+            0.7509435454331422,
+            0.8386072220814483
+          ],
+          "seconds_including_instrumentation": 1.5303257090272382,
+          "checks": 15,
+          "changed_v_values": 32061,
+          "v_values": 1015808
+        },
+        "408": {
+          "scores": [
+            0.07239425014400017,
+            0.14837376251337303,
+            0.24611890645882972,
+            0.17223889962459102,
+            0.08422148291672765
+          ],
+          "seconds_including_instrumentation": 2.9047174169681966,
+          "checks": 15,
+          "changed_v_values": 37117,
+          "v_values": 1015808
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "row_permute",
+      "head_dim": 512,
+      "shared_parent_seconds": 8.489243832998909,
+      "versions": {
+        "400": {
+          "scores": [
+            0.48091458527653025,
+            0.5096605620652401,
+            0.5203594403744269,
+            0.5012346147870669,
+            0.4925585205379681
+          ],
+          "seconds_including_instrumentation": 2.5794616250204854,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            0.3555289497605634,
+            0.40728985373222826,
+            0.4805035891710393,
+            0.43991023494277476,
+            0.3536527558757505
+          ],
+          "seconds_including_instrumentation": 1.9905203750240617,
+          "checks": 15,
+          "changed_v_values": 82311,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            0.34732031479122205,
+            0.30363289393254606,
+            0.24373683112765038,
+            0.2687580774166077,
+            0.29119465126327826
+          ],
+          "seconds_including_instrumentation": 1.911061291990336,
+          "checks": 15,
+          "changed_v_values": 84679,
+          "v_values": 2031616
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "block_resample",
+      "head_dim": 512,
+      "shared_parent_seconds": 2.4378872079541907,
+      "versions": {
+        "400": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 5.504022457986139,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 5.222903750021942,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            0.25725166774184793,
+            0.23791854896246756,
+            0.19128996692392503,
+            0.2126155005840483,
+            0.2156873672006183
+          ],
+          "seconds_including_instrumentation": 3.7418295420357026,
+          "checks": 15,
+          "changed_v_values": 6838,
+          "v_values": 2031616
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "row_permute",
+      "head_dim": 256,
+      "shared_parent_seconds": 10.672528708993923,
+      "versions": {
+        "400": {
+          "scores": [
+            0.8621054064754782,
+            0.8141215653064262,
+            0.7675013168064869,
+            0.5211681131754266,
+            0.12280238194979248
+          ],
+          "seconds_including_instrumentation": 3.7821397910011,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            0.7582756991561972,
+            0.634714465229547,
+            0.4709122492265654,
+            0.07772485159057711,
+            -0.3449434394267261
+          ],
+          "seconds_including_instrumentation": 3.403909625019878,
+          "checks": 15,
+          "changed_v_values": 53997,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            0.11451144414337948,
+            0.08560511318065192,
+            0.06687490035659725,
+            -0.030550948322123798,
+            -0.36550769282147066
+          ],
+          "seconds_including_instrumentation": 2.6402904170099646,
+          "checks": 15,
+          "changed_v_values": 58625,
+          "v_values": 2031616
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "block_resample",
+      "head_dim": 256,
+      "shared_parent_seconds": 9.481730750005227,
+      "versions": {
+        "400": {
+          "scores": [
+            0.9281489012029314,
+            0.9183115554011632,
+            0.9133033465552141,
+            0.8479559624625724,
+            0.7949978081848926
+          ],
+          "seconds_including_instrumentation": 3.5867707920260727,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            0.8191761354127881,
+            0.7356458856318021,
+            0.6036379427951009,
+            0.35620166127445274,
+            0.252208467030385
+          ],
+          "seconds_including_instrumentation": 3.8027552500134334,
+          "checks": 15,
+          "changed_v_values": 60303,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            0.17415080364203658,
+            0.1857850639904017,
+            0.19736487345540113,
+            0.2467382129056948,
+            0.23088900534531318
+          ],
+          "seconds_including_instrumentation": 3.3896729580010287,
+          "checks": 15,
+          "changed_v_values": 64815,
+          "v_values": 2031616
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "head_dim": 512,
+      "shared_parent_seconds": 10.679278999974485,
+      "versions": {
+        "400": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 1.8472113749594428,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 3.274000207951758,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            -46.73077426155356,
+            -49.051871445401886,
+            -37.4465098379422,
+            -35.94681109420726,
+            -32.73104672082328
+          ],
+          "seconds_including_instrumentation": 4.174433291016612,
+          "checks": 15,
+          "changed_v_values": 10019,
+          "v_values": 2031616
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "head_dim": 512,
+      "shared_parent_seconds": 13.461715458019171,
+      "versions": {
+        "400": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 1.6692904580268078,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "407": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 1.8557809159974568,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616
+        },
+        "408": {
+          "scores": [
+            -1.3222498710464567,
+            -1.0991572444144773,
+            -1.30918827600377,
+            -1.468385570962572,
+            -1.7705073651764387
+          ],
+          "seconds_including_instrumentation": 3.6169732909766026,
+          "checks": 15,
+          "changed_v_values": 10019,
+          "v_values": 2031616
+        }
+      }
+    }
+  ],
+  "warning": "Unknown judge decoy source; modes are sensitivity hypotheses. Shared parent avoids repeated numerical baseline drift. Timings are local, not online forecasts.",
+  "hashes": {
+    "400": "c7b0106870460e2c56d84a8bd35d8dd90753f3069fea08464407dd7123093f41",
+    "407": "fa33986c7bde4c4eb8624dd20979d540dc16a4951dbdb5e4b8625cb8f45c5f7e",
+    "408": "2224a6343c5616b79a89d39e6bb60b6841cba71c22942289af0a232b8429526b"
+  }
+}

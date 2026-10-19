@@ -1,0 +1,286 @@
+{
+  "round": 9,
+  "atoms": [
+    {
+      "id": "m0-base-block_resample-qk-close-v-block",
+      "path": "local_distribution_fit/round001/m0-base.pt",
+      "sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "seed": 2026090800,
+      "profile": {},
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "correlated_noise",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "m0-base-block_resample-qk-block-v-close",
+      "path": "local_distribution_fit/round001/m0-base.pt",
+      "sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "seed": 2026090800,
+      "profile": {},
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "block_resample",
+        "k": "block_resample",
+        "v": "correlated_noise"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "m0-base-block_resample-q-row-k-close-v-block",
+      "path": "local_distribution_fit/round001/m0-base.pt",
+      "sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "seed": 2026090800,
+      "profile": {},
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "row_permute",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "m0-sink-block_resample-qk-close-v-block",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090804,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "correlated_noise",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "m0-sink-block_resample-qk-block-v-close",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090804,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "block_resample",
+        "k": "block_resample",
+        "v": "correlated_noise"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "m0-sink-block_resample-q-row-k-close-v-block",
+      "path": "local_distribution_fit/round001/m0-sink.pt",
+      "sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "seed": 2026090804,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "role_modes": {
+        "q": "row_permute",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      },
+      "noise": 0.05
+    },
+    {
+      "id": "trace25-group1-correlated_noise-qk-close-v-block",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "role_modes": {
+        "q": "correlated_noise",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      }
+    },
+    {
+      "id": "trace25-group1-correlated_noise-qk-block-v-close",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "role_modes": {
+        "q": "block_resample",
+        "k": "block_resample",
+        "v": "correlated_noise"
+      }
+    },
+    {
+      "id": "trace25-group1-correlated_noise-q-row-k-close-v-block",
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "sha256": "64a8d9d67a146fd6ed93673ac908f10eec502b77a0706684c29c6b50641f425f",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 1,
+      "profile": {},
+      "role_modes": {
+        "q": "row_permute",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      }
+    },
+    {
+      "id": "rank8-strength4-length128-qk-close-v-block",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "role_modes": {
+        "q": "correlated_noise",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      }
+    },
+    {
+      "id": "rank8-strength4-length128-qk-block-v-close",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "role_modes": {
+        "q": "block_resample",
+        "k": "block_resample",
+        "v": "correlated_noise"
+      }
+    },
+    {
+      "id": "rank8-strength4-length128-q-row-k-close-v-block",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      },
+      "role_modes": {
+        "q": "row_permute",
+        "k": "correlated_noise",
+        "v": "block_resample"
+      }
+    }
+  ],
+  "selection_evidence": "90-column separation couples Query and Value variants. Prior banks applied one common decoy protocol to all three independent calibration roles; relax this unsupported equality while preserving own-role-only state.",
+  "limits": "Role-specific fake-peer distributions are hypotheses. No candidate code, target receipt, tolerance, or dynamic information boundary changes."
+}

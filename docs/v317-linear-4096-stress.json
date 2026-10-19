@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "source_unchanged_functions": 79,
+  "full_shape": false,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        8192,
+        4096
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 33.8609651660081,
+          "dynamic": 13.696697418985423
+        },
+        "cleanup": {
+          "calibration": 15.577526290988317,
+          "dynamic": 13.850027458975092
+        },
+        "joint": {
+          "calibration": 41.31698733300436,
+          "dynamic": 13.649469666008372
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.6266577217487194,
+          "candidate": 0.6392977332246952,
+          "delta": 0.01264001147597582
+        },
+        {
+          "test": 1,
+          "parent": 0.6354874932583217,
+          "candidate": 0.65084387199091,
+          "delta": 0.015356378732588327
+        },
+        {
+          "test": 2,
+          "parent": 0.6321381393684229,
+          "candidate": 0.6494684829670512,
+          "delta": 0.017330343598628284
+        },
+        {
+          "test": 3,
+          "parent": 0.6261230588857987,
+          "candidate": 0.6439260850885775,
+          "delta": 0.01780302620277885
+        },
+        {
+          "test": 4,
+          "parent": 0.625906735461363,
+          "candidate": 0.6431722003720763,
+          "delta": 0.017265464910713346
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.08039522492068463,
+      "adopted": true
+    }
+  ],
+  "validation_checks": 18,
+  "timing": "Serial algorithm calls only; scoring and checks excluded; not a 96-core forecast",
+  "wide_stress": true,
+  "warning": "Transposed real checkpoint W and modeled activations: runtime stress only, NOT an actual model layer or online quality proxy",
+  "delta": 0.08039522492068463,
+  "total_seconds": {
+    "parent": 47.55766258499352,
+    "cleanup": 29.42755374996341,
+    "joint": 54.966456999012735
+  }
+}

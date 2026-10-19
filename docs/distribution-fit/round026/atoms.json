@@ -1,0 +1,282 @@
+{
+  "round": 26,
+  "atoms": [
+    {
+      "id": "gp-scale-1",
+      "path": "local_distribution_fit/round026/gp-scale-1.pt",
+      "sha256": "d3913e984b0defdcf77122b82e25ae53ceb4205fb73a3d5547b5f0e1b97f85ec",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "calib_gain": 0.514443334875081,
+        "test_gain": 0.6323542315155892,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "gp-scale-2",
+      "path": "local_distribution_fit/round026/gp-scale-2.pt",
+      "sha256": "c6c3bd09da5b7934158e609b23965c1f6907c5f000d728f42530de4309eda42b",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "calib_gain": 0.47727455902582316,
+        "test_gain": 0.39639603641345483,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "gp-scale-3",
+      "path": "local_distribution_fit/round026/gp-scale-3.pt",
+      "sha256": "f34216b50c955ca7676a3cbfdc6f66f7900fcfddaed164e93012d3b94190d244",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "calib_gain": 0.39720354090710536,
+        "test_gain": 0.538041332792019,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    },
+    {
+      "id": "gp-scale-4",
+      "path": "local_distribution_fit/round026/gp-scale-4.pt",
+      "sha256": "427a2659374c924f3ef0bb7884b4994ba39bdf1267f3759f7ca59608751b0401",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "calib_gain": 0.8267985924856768,
+        "test_gain": 1.1550094388665348,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    310,
+    314,
+    319,
+    320,
+    322,
+    330,
+    333,
+    335,
+    343,
+    344,
+    345,
+    365,
+    374,
+    378,
+    381,
+    382,
+    385,
+    386,
+    387,
+    389,
+    392,
+    393,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    408,
+    409,
+    412,
+    413,
+    414,
+    415,
+    416,
+    418,
+    419,
+    430,
+    435,
+    436,
+    438
+  ],
+  "proposal_model": {
+    "method": "RBF Gaussian process with multi-output measured certificate margins and UCB acquisition",
+    "certificate_sha256": "dac082612e781cddfc4165f94da0267d9cbeb5f7dcf40025649564777912029d",
+    "training": [
+      {
+        "population": "round013/sink-input-seed2026091600-seedplus4",
+        "gains": [
+          1.0,
+          1.0
+        ],
+        "margins": [
+          -135.85811699448712,
+          -100.46833926203378,
+          -74.95462665922534,
+          -137.69873220932848,
+          -72.86290935681237
+        ]
+      },
+      {
+        "population": "round016/true-qk-gain0.5",
+        "gains": [
+          0.5,
+          0.5
+        ],
+        "margins": [
+          -137.4369713243525,
+          -329.19692522072773,
+          -195.87234557180943,
+          -1.4011750493288844,
+          -18.760641023912783
+        ]
+      },
+      {
+        "population": "round016/true-qk-gain2.0",
+        "gains": [
+          2.0,
+          2.0
+        ],
+        "margins": [
+          -15656.202728847575,
+          -63291.608812269274,
+          -15349.798245505053,
+          -31178.25639575647,
+          -120927.1806349202
+        ]
+      },
+      {
+        "population": "round016/true-qk-gain4.0",
+        "gains": [
+          4.0,
+          4.0
+        ],
+        "margins": [
+          -2836.1129746947563,
+          -6267.1853724610855,
+          -1699.9267572972435,
+          -2603.1941176276127,
+          -32256.721786093236
+        ]
+      },
+      {
+        "population": "round020/true-qk-gain1.25",
+        "gains": [
+          1.25,
+          1.25
+        ],
+        "margins": [
+          -12018.32097030864,
+          -25296.711704465994,
+          -44649.15391146315,
+          -41873.27056930974,
+          -32439.297174558807
+        ]
+      }
+    ],
+    "length_scale_log2": 0.25,
+    "noise": 0.1,
+    "loo_margin_mae": 18901.494630769368,
+    "constant_baseline_loo_mae": 22756.448742673634,
+    "surrogate_beats_constant_loo": true,
+    "proposals": [
+      {
+        "calib_gain": 0.514443334875081,
+        "test_gain": 0.6323542315155892,
+        "predicted_case_margins": [
+          -4001.5186130863704,
+          -12351.442122940796,
+          -8026.2762458946545,
+          -9731.535513772444,
+          -23850.527678298546
+        ],
+        "case_standard_deviation": [
+          5979.341463401386,
+          22202.2531476309,
+          15859.414353682136,
+          16492.723056369534,
+          41070.05373453108
+        ],
+        "acquisition": 58289.579790763615
+      },
+      {
+        "calib_gain": 0.47727455902582316,
+        "test_gain": 0.39639603641345483,
+        "predicted_case_margins": [
+          -4005.8189281097884,
+          -12364.787969252056,
+          -8035.056817971623,
+          -9742.399139312145,
+          -23876.920411827592
+        ],
+        "case_standard_deviation": [
+          5981.23981345196,
+          22209.302025612473,
+          15864.44947673451,
+          16497.95924531104,
+          41083.09285247763
+        ],
+        "acquisition": 58289.26529312767
+      },
+      {
+        "calib_gain": 0.39720354090710536,
+        "test_gain": 0.538041332792019,
+        "predicted_case_margins": [
+          -4085.6799156510797,
+          -12613.257282769842,
+          -8196.893207353318,
+          -9943.497609426646,
+          -24369.461300832907
+        ],
+        "case_standard_deviation": [
+          6016.750859713738,
+          22341.160231648548,
+          15958.63784183215,
+          16595.908802970906,
+          41327.00609728352
+        ],
+        "acquisition": 58284.55089373414
+      },
+      {
+        "calib_gain": 0.8267985924856768,
+        "test_gain": 1.1550094388665348,
+        "predicted_case_margins": [
+          -3940.960772850114,
+          -12248.942208328766,
+          -7581.157843820666,
+          -9464.147920038606,
+          -24062.314202446636
+        ],
+        "case_standard_deviation": [
+          5994.369213377111,
+          22258.053591750475,
+          15899.273477822704,
+          16534.17386161741,
+          41173.27421504551
+        ],
+        "acquisition": 58284.23422764438
+      }
+    ],
+    "limits": "Small adaptive training set; UCB is an exploration heuristic, not calibrated certainty. Predictions do not count as matches. Real measured cells and full joint refit remain mandatory. This first learned generator covers only QK gain and calibration drift, not the whole distribution family."
+  },
+  "limits": "Learned proposals require actual evaluation. No predicted cells enter fitting."
+}

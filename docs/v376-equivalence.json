@@ -1,0 +1,146 @@
+{
+  "complete": true,
+  "safety": true,
+  "rows": [
+    {
+      "group": 0,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "new": 3.5489528750185855,
+        "old": 3.3332322919741273
+      },
+      "cache": {
+        "hits": {
+          "k": 3,
+          "v": 1
+        },
+        "calls": {
+          "k": 8,
+          "v": 5
+        },
+        "peak_bytes": 61182976
+      }
+    },
+    {
+      "group": 4,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "new": 7.471720625006128,
+        "old": 3.725088708975818
+      },
+      "cache": {
+        "hits": {
+          "k": 2,
+          "v": 1
+        },
+        "calls": {
+          "k": 8,
+          "v": 5
+        },
+        "peak_bytes": 61451300
+      }
+    },
+    {
+      "group": 14,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "new": 2.145073916995898,
+        "old": 3.2692759999772534
+      },
+      "cache": {
+        "hits": {
+          "k": 1,
+          "v": 2
+        },
+        "calls": {
+          "k": 6,
+          "v": 5
+        },
+        "peak_bytes": 66162690
+      }
+    },
+    {
+      "group": 24,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "new": 2.0725266670342535,
+        "old": 1.673436583019793
+      },
+      "cache": {
+        "hits": {
+          "k": 2,
+          "v": 2
+        },
+        "calls": {
+          "k": 6,
+          "v": 5
+        },
+        "peak_bytes": 58818560
+      }
+    },
+    {
+      "group": 34,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "new": 2.0721439159824513,
+        "old": 2.281862791045569
+      },
+      "cache": {
+        "hits": {
+          "k": 2,
+          "v": 2
+        },
+        "calls": {
+          "k": 6,
+          "v": 5
+        },
+        "peak_bytes": 62492672
+      }
+    },
+    {
+      "group": 47,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "old": 5.965933499974199,
+        "new": 2.5028348339837976
+      },
+      "cache": {
+        "hits": {
+          "k": 3,
+          "v": 1
+        },
+        "calls": {
+          "k": 7,
+          "v": 5
+        },
+        "peak_bytes": 58837082
+      }
+    },
+    {
+      "group": 49,
+      "state_equal": true,
+      "checks": 17,
+      "timing": {
+        "old": 2.5826770420535468,
+        "new": 6.970021417015232
+      },
+      "cache": {
+        "hits": {
+          "k": 1,
+          "v": 2
+        },
+        "calls": {
+          "k": 6,
+          "v": 5
+        },
+        "peak_bytes": 64585728
+      }
+    }
+  ]
+}

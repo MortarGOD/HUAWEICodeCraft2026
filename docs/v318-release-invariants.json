@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "linear_ast_equal": true,
+  "other_functions_ast_equal": true,
+  "security_static": true,
+  "tiling": [
+    {
+      "rows": 1,
+      "heads": 4,
+      "d": 64,
+      "max_abs": 0.0,
+      "equal": true
+    },
+    {
+      "rows": 128,
+      "heads": 4,
+      "d": 64,
+      "max_abs": 0.0,
+      "equal": true
+    },
+    {
+      "rows": 513,
+      "heads": 4,
+      "d": 64,
+      "max_abs": 1.6391277313232422e-07,
+      "equal": false
+    },
+    {
+      "rows": 1024,
+      "heads": 8,
+      "d": 128,
+      "max_abs": 0.0,
+      "equal": true
+    },
+    {
+      "rows": 2048,
+      "heads": 4,
+      "d": 128,
+      "max_abs": 0.0,
+      "equal": true
+    }
+  ],
+  "paired": [
+    {
+      "group": 1,
+      "calibration_state_equal": true,
+      "all_returns_equal": true
+    },
+    {
+      "group": 5,
+      "calibration_state_equal": true,
+      "all_returns_equal": true
+    },
+    {
+      "group": 19,
+      "calibration_state_equal": true,
+      "all_returns_equal": true
+    },
+    {
+      "group": 47,
+      "calibration_state_equal": true,
+      "all_returns_equal": true
+    },
+    {
+      "group": 49,
+      "calibration_state_equal": true,
+      "all_returns_equal": true
+    }
+  ],
+  "format_checks": 75,
+  "warning": "If independently recomputed states differ, retain that evidence; fixed-state dynamics must match. Tiling is mathematically exact, floating-point equality checked only for these shapes."
+}

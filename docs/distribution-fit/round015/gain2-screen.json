@@ -1,0 +1,48 @@
+{
+  "cases": [
+    {
+      "population": "round015/sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "test": 2,
+      "tokens": 32,
+      "price": 446.6001600244519,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -0.6847388062927848
+    },
+    {
+      "population": "round015/sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": 67.3378517353004,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -379.9470470954443
+    },
+    {
+      "population": "round015/sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "test": 0,
+      "tokens": 4,
+      "price": -13.90874807432875,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -461.1936469050734
+    },
+    {
+      "population": "round015/sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "test": 3,
+      "tokens": 128,
+      "price": -492.14875730519077,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -939.4336561359355
+    },
+    {
+      "population": "round015/sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "test": 4,
+      "tokens": 512,
+      "price": -1094.8833236529556,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -1542.1682224837002
+    }
+  ],
+  "promote": false,
+  "identical_quality_cases_to_unscaled": 305,
+  "compared_cases": 305,
+  "limits": "Exact equality of measured quality scalars only, not proof of identical reconstructed outputs or states."
+}

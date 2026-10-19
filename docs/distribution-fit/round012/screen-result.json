@@ -1,0 +1,38 @@
+{
+  "best_case_per_atom": [
+    {
+      "population": "round012/sink-input-seed2026091602",
+      "test": 2,
+      "tokens": 32,
+      "price": 786387.4468108868,
+      "required_lower_bound": 18.453854092219178,
+      "margin": 786368.9929567947
+    },
+    {
+      "population": "round012/sink-input-seed2026091600",
+      "test": 2,
+      "tokens": 32,
+      "price": 207.86508035968785,
+      "required_lower_bound": 18.453854092219178,
+      "margin": 189.41122626746866
+    },
+    {
+      "population": "round012/sink-input-seed2026091603",
+      "test": 3,
+      "tokens": 128,
+      "price": 46.42926124798711,
+      "required_lower_bound": 18.453854092219178,
+      "margin": 27.97540715576793
+    },
+    {
+      "population": "round012/sink-input-seed2026091601",
+      "test": 0,
+      "tokens": 4,
+      "price": 4.088849598674307,
+      "required_lower_bound": 18.453854092219178,
+      "margin": -14.36500449354487
+    }
+  ],
+  "decision": "Complete three certificate-breaking atoms; original 1600 already running, 1602/1603 scheduled separately.",
+  "limits": "Large certificate prices may reflect catastrophic errors. Breaking a fixed certificate does not imply global feasibility."
+}

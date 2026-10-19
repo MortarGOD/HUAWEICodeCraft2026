@@ -1,0 +1,81 @@
+{
+  "certificate_columns": 485,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    314,
+    315,
+    316,
+    319,
+    320,
+    322,
+    333,
+    337,
+    343,
+    345,
+    367,
+    378,
+    387,
+    389,
+    392,
+    396,
+    402,
+    403,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 2,
+      "tokens": 8,
+      "price": 2719.9269529116877,
+      "required_lower_bound": 224.39390601372276,
+      "margin": 2495.533046897965
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 0,
+      "tokens": 8,
+      "price": 949.246662211383,
+      "required_lower_bound": 224.39390601372276,
+      "margin": 724.8527561976603
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": 341.4960872822798,
+      "required_lower_bound": 224.39390601372276,
+      "margin": 117.10218126855705
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 3,
+      "tokens": 8,
+      "price": 86.64175119866145,
+      "required_lower_bound": 224.39390601372276,
+      "margin": -137.75215481506132
+    },
+    {
+      "population": "round007/trace35-group7-gain2.0",
+      "test": 4,
+      "tokens": 8,
+      "price": -755.9200469524988,
+      "required_lower_bound": 224.39390601372276,
+      "margin": -980.3139529662214
+    }
+  ],
+  "action": "Promoted to full 102-version measurement. Earlier negative result applied to the different 480-column certificate; both results retained.",
+  "limits": "A positive price breaks only the fixed certificate, not proof of joint feasibility."
+}

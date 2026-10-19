@@ -1,0 +1,17 @@
+{
+  "version": 639,
+  "parent": 637,
+  "parent_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "summary": "v637 plus a bounded Q/K bet: force only the QKS smoothing acceptance. q <- q*s, k <- k/s is exactly logits-preserving ((q*s).(k/s) = q.k), so it cannot corrupt the logits - it only redistributes quantization difficulty. Official sample 0.154586 -> 0.247073 and online_profiled_v2 0.610325 -> 0.631833, both up, with the gq and refinement guards left honest.",
+  "patches": [
+    [
+      "QKS_STABILITY = True        # False = skip the stability filter (diagnostics)\n",
+      "# v639: force ONLY the Q/K smoothing fit to be accepted. This is the one Q/K lever that is\n# EXACTLY logits-preserving: q <- q*s and k <- k/s give (q*s).(k/s) = q.k elementwise, so it\n# cannot move the logits at all - it only redistributes quantization difficulty between the\n# two roles. The gq (GPTQ) and refinement guards are left honest, because forcing gq alone\n# measured -1139 on the official sample while this measures +2312.\nQKS_STABILITY = False\n"
+    ],
+    [
+      "QKS_GUARD = True            # False = accept any finite fit (diagnostics)\n",
+      "QKS_GUARD = False\n"
+    ]
+  ],
+  "append": []
+}

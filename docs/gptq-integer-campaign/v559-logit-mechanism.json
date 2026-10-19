@@ -1,0 +1,31 @@
+{
+  "training_centered_logit_mse_sum": [
+    0.07363602332770824,
+    3.9008865314826835e-05
+  ],
+  "kernel_changed": true,
+  "note": "aligned calibration only; no claim of true pairing or held-out benefit",
+  "heldout_diagnostic_only": [
+    {
+      "tokens": 8,
+      "true_test_logit_mse": [
+        13.556509017944336,
+        13.64218521118164
+      ]
+    },
+    {
+      "tokens": 32,
+      "true_test_logit_mse": [
+        4.210604190826416,
+        4.241219520568848
+      ]
+    },
+    {
+      "tokens": 512,
+      "true_test_logit_mse": [
+        0.21412698924541473,
+        0.21558518707752228
+      ]
+    }
+  ]
+}

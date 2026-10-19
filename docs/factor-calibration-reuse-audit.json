@@ -1,0 +1,600 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.06475549994502217
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.09221470903139561
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.020889292005449533
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.03322454198496416
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 2,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.05093312502140179
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 3,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.05191474995808676
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 4,
+          "state_matches": 2,
+          "parent_matches": 2,
+          "equal": true,
+          "compute_seconds": 0.049502332985866815
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.019645290973130614
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.039098958019167185
+        },
+        {
+          "phase": "factor",
+          "tokens": 2048,
+          "input_matches": 5,
+          "state_matches": 3,
+          "parent_matches": 3,
+          "equal": true,
+          "compute_seconds": 0.0918062919517979
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 3,
+      "factor_any_hits": 3,
+      "state_equal": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.046036999963689595
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.0425205830251798
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.016472582996357232
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.026919334020931274
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 2,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.04650737496558577
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 3,
+          "state_matches": 2,
+          "parent_matches": 2,
+          "equal": true,
+          "compute_seconds": 0.044388166978023946
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 4,
+          "state_matches": 3,
+          "parent_matches": 3,
+          "equal": true,
+          "compute_seconds": 0.04158458404708654
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.016636540996842086
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.026551042043138295
+        },
+        {
+          "phase": "factor",
+          "tokens": 2048,
+          "input_matches": 5,
+          "state_matches": 4,
+          "parent_matches": 4,
+          "equal": true,
+          "compute_seconds": 0.04131162498379126
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 3,
+      "factor_any_hits": 3,
+      "state_equal": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.18114999996032566
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.182008792005945
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.05870729201706126
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.05518783302977681
+        },
+        {
+          "phase": "parent",
+          "tokens": 2048,
+          "input_matches": 2,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.04904712503775954
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.08028483303496614
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.2728342500049621
+        },
+        {
+          "phase": "factor",
+          "tokens": 2048,
+          "input_matches": 3,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.4975452910293825
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 0,
+      "factor_any_hits": 0,
+      "state_equal": true
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.03440558398142457
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.03170408395817503
+        },
+        {
+          "phase": "parent",
+          "tokens": 128,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.015625333006028086
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.018076166976243258
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 2,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.030531374970450997
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 3,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.030190291989129037
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 4,
+          "state_matches": 2,
+          "parent_matches": 2,
+          "equal": true,
+          "compute_seconds": 0.029112708987668157
+        },
+        {
+          "phase": "factor",
+          "tokens": 128,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.0153896669507958
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.017416541988495737
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 5,
+          "state_matches": 3,
+          "parent_matches": 3,
+          "equal": true,
+          "compute_seconds": 0.03011425002478063
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 3,
+      "factor_any_hits": 3,
+      "state_equal": true
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 24,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.030032250040676445
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.031198790995404124
+        },
+        {
+          "phase": "parent",
+          "tokens": 128,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.015182333008851856
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.016519707976840436
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 2,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.03086283296579495
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 3,
+          "state_matches": 2,
+          "parent_matches": 2,
+          "equal": true,
+          "compute_seconds": 0.032270166964735836
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 4,
+          "state_matches": 3,
+          "parent_matches": 3,
+          "equal": true,
+          "compute_seconds": 0.029512333043385297
+        },
+        {
+          "phase": "factor",
+          "tokens": 128,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.061634625017177314
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.0897257499746047
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 5,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.1710939579643309
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 0,
+      "factor_any_hits": 0,
+      "state_equal": true
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "events": [
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.03380666597513482
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 1,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.03320658300071955
+        },
+        {
+          "phase": "parent",
+          "tokens": 128,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.016344500007107854
+        },
+        {
+          "phase": "parent",
+          "tokens": 512,
+          "input_matches": 0,
+          "state_matches": 0,
+          "parent_matches": 0,
+          "equal": true,
+          "compute_seconds": 0.018026292033027858
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 2,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.03076112497365102
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 3,
+          "state_matches": 2,
+          "parent_matches": 2,
+          "equal": true,
+          "compute_seconds": 0.029625000024680048
+        },
+        {
+          "phase": "parent",
+          "tokens": 1024,
+          "input_matches": 4,
+          "state_matches": 3,
+          "parent_matches": 3,
+          "equal": true,
+          "compute_seconds": 0.028853250027168542
+        },
+        {
+          "phase": "factor",
+          "tokens": 128,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.016414958983659744
+        },
+        {
+          "phase": "factor",
+          "tokens": 512,
+          "input_matches": 1,
+          "state_matches": 1,
+          "parent_matches": 1,
+          "equal": true,
+          "compute_seconds": 0.01672770897857845
+        },
+        {
+          "phase": "factor",
+          "tokens": 1024,
+          "input_matches": 5,
+          "state_matches": 4,
+          "parent_matches": 4,
+          "equal": true,
+          "compute_seconds": 0.02987720799865201
+        }
+      ],
+      "record_cap": 64,
+      "cap_reached": false,
+      "factor_calls": 3,
+      "factor_parent_hits": 3,
+      "factor_any_hits": 3,
+      "state_equal": true
+    }
+  ],
+  "warning": "Public K entry instrumentation only; no claims about private aliases or all cases. All calls execute normally; snapshots/copies are audit overhead, not a cache benchmark."
+}

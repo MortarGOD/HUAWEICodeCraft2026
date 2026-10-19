@@ -1,0 +1,817 @@
+{
+  "completed": true,
+  "parent": 435,
+  "candidate": 436,
+  "dataset": "local_fitted_models_covariance_v1",
+  "groups": [
+    0,
+    8,
+    17,
+    25,
+    34,
+    49
+  ],
+  "role_isolated": false,
+  "decoy_mode": "row_permute",
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "shape": [
+        1,
+        2,
+        256
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.004131436347961426,
+      "parent_mse": 0.0032540559768676758,
+      "child_mse": 0.0032540559768676758,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "shape": [
+        10,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.001984418284726517,
+      "baseline_mse": 0.00043492548866197467,
+      "parent_mse": 9.45122737903148e-05,
+      "child_mse": 9.537534788250923e-05,
+      "changed_values": 24,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 508,
+        "mant": 24
+      },
+      "risk": [
+        0.4116858658000593,
+        0.40826815604896255
+      ],
+      "improved_blocks": 7
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "shape": [
+        128,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.0023599430700025825,
+      "baseline_mse": 3.348755490151234e-05,
+      "parent_mse": 4.513457497523632e-06,
+      "child_mse": 4.592486220644787e-06,
+      "changed_values": 80,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 3,
+        "sign": 6822,
+        "mant": 84
+      },
+      "risk": [
+        0.07446680440857084,
+        0.07297566392809493
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "shape": [
+        512,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.016698211443393094,
+      "baseline_mse": 8.605830771557521e-06,
+      "parent_mse": 2.681364549061982e-06,
+      "child_mse": 2.825066530931508e-06,
+      "changed_values": 1866,
+      "changed_fields": {
+        "scale_factor": 15,
+        "scale_lv2": 47,
+        "scale_lv3": 102,
+        "sign": 28079,
+        "mant": 1723
+      },
+      "risk": [
+        0.020023013701715414,
+        0.017779057538369548
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "shape": [
+        1024,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.015944584968788394,
+      "baseline_mse": 4.926564997731475e-06,
+      "parent_mse": 1.703672865005501e-06,
+      "child_mse": 1.7822248992160894e-06,
+      "changed_values": 2941,
+      "changed_fields": {
+        "scale_factor": 24,
+        "scale_lv2": 69,
+        "scale_lv3": 157,
+        "sign": 56873,
+        "mant": 2624
+      },
+      "risk": [
+        0.011377368709291765,
+        0.009595091496829133
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 8,
+      "test": 0,
+      "shape": [
+        1,
+        2,
+        256
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.003749370574951172,
+      "parent_mse": 0.0028252601623535156,
+      "child_mse": 0.0028252601623535156,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 8,
+      "test": 1,
+      "shape": [
+        10,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.011829648117615475,
+      "baseline_mse": 0.00041866785613819957,
+      "parent_mse": 0.00010600445239106193,
+      "child_mse": 0.00010105175897479057,
+      "changed_values": 30,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 1,
+        "scale_lv3": 2,
+        "sign": 412,
+        "mant": 32
+      },
+      "risk": [
+        0.3905430923840968,
+        0.3838150497588584
+      ],
+      "improved_blocks": 6
+    },
+    {
+      "group": 8,
+      "test": 2,
+      "shape": [
+        128,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.0004056087318439819,
+      "baseline_mse": 3.269939770689234e-05,
+      "parent_mse": 5.3903795560472645e-06,
+      "child_mse": 5.37711639481131e-06,
+      "changed_values": 67,
+      "changed_fields": {
+        "scale_factor": 1,
+        "scale_lv2": 7,
+        "scale_lv3": 8,
+        "sign": 6940,
+        "mant": 85
+      },
+      "risk": [
+        0.0775358971682289,
+        0.07600436215601344
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 8,
+      "test": 3,
+      "shape": [
+        512,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.01647820641948102,
+      "baseline_mse": 9.48237629927462e-06,
+      "parent_mse": 3.2986017686198466e-06,
+      "child_mse": 3.4548543226264883e-06,
+      "changed_values": 3879,
+      "changed_fields": {
+        "scale_factor": 38,
+        "scale_lv2": 91,
+        "scale_lv3": 182,
+        "sign": 28273,
+        "mant": 3362
+      },
+      "risk": [
+        0.019834023179228243,
+        0.017317249137825202
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 8,
+      "test": 4,
+      "shape": [
+        1024,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.008780173713990418,
+      "baseline_mse": 4.604070454661269e-06,
+      "parent_mse": 2.3271927602763753e-06,
+      "child_mse": 2.2867682218929986e-06,
+      "changed_values": 3508,
+      "changed_fields": {
+        "scale_factor": 33,
+        "scale_lv2": 65,
+        "scale_lv3": 171,
+        "sign": 56958,
+        "mant": 2981
+      },
+      "risk": [
+        0.011258922748029157,
+        0.009180192100499574
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 17,
+      "test": 0,
+      "shape": [
+        1,
+        2,
+        256
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.004372596740722656,
+      "parent_mse": 0.004059791564941406,
+      "child_mse": 0.004059791564941406,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 17,
+      "test": 1,
+      "shape": [
+        10,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.003045650606286295,
+      "baseline_mse": 0.000432899862062186,
+      "parent_mse": 8.826029079500586e-05,
+      "child_mse": 8.957875252235681e-05,
+      "changed_values": 11,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 338,
+        "mant": 11
+      },
+      "risk": [
+        0.36246234205668737,
+        0.3611863511052288
+      ],
+      "improved_blocks": 5
+    },
+    {
+      "group": 17,
+      "test": 2,
+      "shape": [
+        128,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.006745943229248778,
+      "baseline_mse": 3.253695467719808e-05,
+      "parent_mse": 4.500691829889547e-06,
+      "child_mse": 4.720184278994566e-06,
+      "changed_values": 118,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 1,
+        "scale_lv3": 11,
+        "sign": 6907,
+        "mant": 135
+      },
+      "risk": [
+        0.06388599863064735,
+        0.06182661081866407
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 17,
+      "test": 3,
+      "shape": [
+        512,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": -0.007075648669085027,
+      "baseline_mse": 8.169437933247536e-06,
+      "parent_mse": 2.6751063160190824e-06,
+      "child_mse": 2.732910388658638e-06,
+      "changed_values": 3995,
+      "changed_fields": {
+        "scale_factor": 40,
+        "scale_lv2": 71,
+        "scale_lv3": 215,
+        "sign": 28243,
+        "mant": 3461
+      },
+      "risk": [
+        0.017488033264973418,
+        0.014022656580280606
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 17,
+      "test": 4,
+      "shape": [
+        1024,
+        2,
+        256
+      ],
+      "eligible": true,
+      "delta": 0.017355201589457435,
+      "baseline_mse": 4.58770682598697e-06,
+      "parent_mse": 2.0069314814463723e-06,
+      "child_mse": 1.9273109046480386e-06,
+      "changed_values": 1657,
+      "changed_fields": {
+        "scale_factor": 9,
+        "scale_lv2": 34,
+        "scale_lv3": 81,
+        "sign": 56097,
+        "mant": 1620
+      },
+      "risk": [
+        0.012261185243459675,
+        0.010506057265856152
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 25,
+      "test": 0,
+      "shape": [
+        1,
+        1,
+        512
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.002829313278198242,
+      "parent_mse": 0.002477407455444336,
+      "child_mse": 0.002477407455444336,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 25,
+      "test": 1,
+      "shape": [
+        10,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0036650035415110435,
+      "baseline_mse": 0.0007522677769884467,
+      "parent_mse": 0.0002852879115380347,
+      "child_mse": 0.000288044975604862,
+      "changed_values": 11,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 189,
+        "mant": 11
+      },
+      "risk": [
+        0.27026942851230373,
+        0.27007984347517067
+      ],
+      "improved_blocks": 3
+    },
+    {
+      "group": 25,
+      "test": 2,
+      "shape": [
+        128,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.01905351332203042,
+      "baseline_mse": 8.141822763718665e-05,
+      "parent_mse": 2.0577859686454758e-05,
+      "child_mse": 2.2129162971396e-05,
+      "changed_values": 953,
+      "changed_fields": {
+        "scale_factor": 10,
+        "scale_lv2": 17,
+        "scale_lv3": 57,
+        "sign": 6426,
+        "mant": 837
+      },
+      "risk": [
+        0.034575942511220495,
+        0.03271971948375818
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 25,
+      "test": 3,
+      "shape": [
+        512,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0021597520738574267,
+      "baseline_mse": 3.495260898489505e-05,
+      "parent_mse": 6.286045390879735e-06,
+      "child_mse": 6.36153436062159e-06,
+      "changed_values": 1245,
+      "changed_fields": {
+        "scale_factor": 12,
+        "scale_lv2": 41,
+        "scale_lv3": 87,
+        "sign": 25873,
+        "mant": 1143
+      },
+      "risk": [
+        0.016330419365869812,
+        0.015246324856295183
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 25,
+      "test": 4,
+      "shape": [
+        1024,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.002635254832798134,
+      "baseline_mse": 2.5860801542876288e-05,
+      "parent_mse": 4.203879598208005e-06,
+      "child_mse": 4.272029400453903e-06,
+      "changed_values": 3145,
+      "changed_fields": {
+        "scale_factor": 19,
+        "scale_lv2": 62,
+        "scale_lv3": 174,
+        "sign": 52237,
+        "mant": 3009
+      },
+      "risk": [
+        0.0062354540574461135,
+        0.004500439799894834
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 34,
+      "test": 0,
+      "shape": [
+        1,
+        1,
+        512
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.002635955810546875,
+      "parent_mse": 0.0022150278091430664,
+      "child_mse": 0.0022150278091430664,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 34,
+      "test": 1,
+      "shape": [
+        10,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": 0.0006741680296995501,
+      "baseline_mse": 0.0008950866758823395,
+      "parent_mse": 0.0003979401080869138,
+      "child_mse": 0.0003973366692662239,
+      "changed_values": 21,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 2,
+        "sign": 488,
+        "mant": 21
+      },
+      "risk": [
+        0.30956765463736324,
+        0.3073249783640235
+      ],
+      "improved_blocks": 7
+    },
+    {
+      "group": 34,
+      "test": 2,
+      "shape": [
+        128,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.001532562346520117,
+      "baseline_mse": 9.068584040505812e-05,
+      "parent_mse": 2.287194729433395e-05,
+      "child_mse": 2.3010928998701274e-05,
+      "changed_values": 91,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 1,
+        "scale_lv3": 6,
+        "sign": 6525,
+        "mant": 102
+      },
+      "risk": [
+        0.042311886325619094,
+        0.04126835413669511
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 34,
+      "test": 3,
+      "shape": [
+        512,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0027373740403771663,
+      "baseline_mse": 3.892982567776926e-05,
+      "parent_mse": 6.902312634338159e-06,
+      "child_mse": 7.008878128544893e-06,
+      "changed_values": 1342,
+      "changed_fields": {
+        "scale_factor": 15,
+        "scale_lv2": 26,
+        "scale_lv3": 67,
+        "sign": 25950,
+        "mant": 1080
+      },
+      "risk": [
+        0.014625112792728963,
+        0.013358451537427887
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 34,
+      "test": 4,
+      "shape": [
+        1024,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0006533278719944775,
+      "baseline_mse": 2.6307818188797683e-05,
+      "parent_mse": 4.482642907532863e-06,
+      "child_mse": 4.499830538406968e-06,
+      "changed_values": 3842,
+      "changed_fields": {
+        "scale_factor": 43,
+        "scale_lv2": 105,
+        "scale_lv3": 206,
+        "sign": 51811,
+        "mant": 3262
+      },
+      "risk": [
+        0.00842134913159398,
+        0.007257833467846803
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 0,
+      "shape": [
+        1,
+        1,
+        512
+      ],
+      "eligible": false,
+      "delta": 0.0,
+      "baseline_mse": 0.0030961036682128906,
+      "parent_mse": 0.0025763511657714844,
+      "child_mse": 0.0025763511657714844,
+      "changed_values": 0,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      }
+    },
+    {
+      "group": 49,
+      "test": 1,
+      "shape": [
+        10,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": 0.004412778962218567,
+      "baseline_mse": 0.0007272430812008679,
+      "parent_mse": 0.0003202140796929598,
+      "child_mse": 0.0003170049167238176,
+      "changed_values": 16,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 345,
+        "mant": 16
+      },
+      "risk": [
+        0.2872996357021761,
+        0.28388105080027354
+      ],
+      "improved_blocks": 6
+    },
+    {
+      "group": 49,
+      "test": 2,
+      "shape": [
+        128,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.00665210867215947,
+      "baseline_mse": 8.456467185169458e-05,
+      "parent_mse": 2.1191915948293172e-05,
+      "child_mse": 2.175444933527615e-05,
+      "changed_values": 454,
+      "changed_fields": {
+        "scale_factor": 5,
+        "scale_lv2": 13,
+        "scale_lv3": 26,
+        "sign": 6461,
+        "mant": 408
+      },
+      "risk": [
+        0.037352024372649326,
+        0.036295195982337214
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 3,
+      "shape": [
+        512,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0007179701695584217,
+      "baseline_mse": 3.4657241485547274e-05,
+      "parent_mse": 6.560752353834687e-06,
+      "child_mse": 6.585635219380492e-06,
+      "changed_values": 227,
+      "changed_fields": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 10,
+        "sign": 25678,
+        "mant": 245
+      },
+      "risk": [
+        0.019441276732407475,
+        0.018169178718679752
+      ],
+      "improved_blocks": 8
+    },
+    {
+      "group": 49,
+      "test": 4,
+      "shape": [
+        1024,
+        1,
+        512
+      ],
+      "eligible": true,
+      "delta": -0.0023762399056930453,
+      "baseline_mse": 2.557121479185298e-05,
+      "parent_mse": 4.1350604078616016e-06,
+      "child_mse": 4.195823748887051e-06,
+      "changed_values": 3767,
+      "changed_fields": {
+        "scale_factor": 34,
+        "scale_lv2": 94,
+        "scale_lv3": 169,
+        "sign": 51769,
+        "mant": 3304
+      },
+      "risk": [
+        0.0062643189469935925,
+        0.004335548936804167
+      ],
+      "improved_blocks": 8
+    }
+  ],
+  "shared_parent_calibration": true,
+  "public_return_checks": 120,
+  "state_checks": 24,
+  "timing": {
+    "parent_v": 1.425923953182064,
+    "child_v": 2.731762539828196
+  },
+  "note": "One parent calibration, child wrapper copies the same state; V-only attribution. Local times are not online estimates.",
+  "source_sha256": "b4bf7d2c8161dd4ec05a6538934de6297f4dfaca16dcc18c40a611884ae76681",
+  "summary": {
+    "cases": 30,
+    "delta": -0.06905813432268601,
+    "better": 6,
+    "worse": 18,
+    "equal": 6,
+    "eligible": 24,
+    "changed_cases": 24,
+    "changed_values": 33290
+  }
+}

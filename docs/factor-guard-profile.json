@@ -1,0 +1,1074 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": {
+          "total": 0.2620562080410309,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.07460316602373496,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.019314999983180314,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0006402090075425804,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.024969499034341425,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.11121825000736862,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.09546375001082197,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.016668667027261108,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.002692250011023134,
+              "calls": 2
+            }
+          }
+        },
+        "old": {
+          "total": 0.3974419590085745,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.08350166701711714,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.08448474999750033,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.04525633400771767,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.003828874963801354,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.029009290970861912,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.1271442919387482,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.17227529198862612,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.03765970905078575,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.004843791073653847,
+              "calls": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.34090150002157316,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.11690583295421675,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0835237079882063,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.019400875025894493,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0011704579228535295,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.06258124898886308,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.11921804206212983,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.11122737498953938,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.01687804196262732,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.007261667982675135,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 1.0977149999816902,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.3043904170044698,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.08694679196923971,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0025390000082552433,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.21481654100352898,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.2984023329336196,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.45564249996095896,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.07466333301272243,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.013620375015307218,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 5,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.2427648750017397,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06655870901886374,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.06698933301959187,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.02045591699425131,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0013738329871557653,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.022859040938783437,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.09996737504843622,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.0821747500449419,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.017409041989594698,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.004110748996026814,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.23498274997109547,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06479999999282882,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.02019150002161041,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0006168329855427146,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.023356166027951986,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.09819204092491418,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.08358237496577203,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.01756762497825548,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0023423759848810732,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "equal": true,
+      "timing": {
+        "new": {
+          "total": 0.31483433296671137,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.1285912079620175,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.019558582978788763,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0005288340034894645,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03890408395091072,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.20710829203017056,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.03251400002045557,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.016875041997991502,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.004526207980234176,
+              "calls": 2
+            }
+          }
+        },
+        "old": {
+          "total": 0.33078225003555417,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.13192012498620898,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.13905487500596792,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.019321959000080824,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0010765829938463867,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03922654193593189,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.21353183302562684,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.03202729200711474,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.01705804100492969,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.006826123979408294,
+              "calls": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 19,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.319308916979935,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.12338325002929196,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.13595708401408046,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.01893125002970919,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0011029160232283175,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03736658301204443,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.20556300005409867,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.03192283300450072,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.016760791011620313,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.007020832970738411,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.30708916595904157,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.12274666700977832,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.0195462079718709,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0009516669670119882,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03689304203726351,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.2036981249693781,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.03051637497264892,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.016614041000138968,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.004594542027916759,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.54041454102844,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.22934787505073473,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.2521989169763401,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.019191875006072223,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.001144584035500884,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03893537406111136,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.42551795806502923,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.030827999988105148,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.01709287497214973,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.007080208044499159,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.5326842079521157,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.23051604197826236,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.019751292013097554,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0009467090130783617,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.03834266704507172,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.424176208965946,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.03267258300911635,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.016728125046938658,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.005278708005789667,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": {
+          "total": 0.16243349999422207,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.05130975000793114,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.009796499973163009,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0005995830288156867,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.026934625988360494,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.06418358301743865,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.0560220840270631,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.007869000022765249,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0011283329804427922,
+              "calls": 2
+            }
+          }
+        },
+        "old": {
+          "total": 0.16611691698199138,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.049878416990395635,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0446956250234507,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.010771457978989929,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0006449170177802444,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.02693845797330141,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.06337304296903312,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.05811850004829466,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.00896354200085625,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.001817376003600657,
+              "calls": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 1,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.2519536670297384,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.08942266699159518,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.09409212501486763,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.01117370801512152,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0011091670603491366,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.026010415982455015,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.1521580420085229,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.05336750001879409,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.00945554202189669,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0016755840624682605,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.24291200004518032,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.0897648329846561,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.01141895801993087,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.00031687499722465873,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.025153833033982664,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.14887175103649497,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.05098595796152949,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.009657083952333778,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0016004169592633843,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 24,
+      "equal": true,
+      "timing": {
+        "new": {
+          "total": 0.45456983300391585,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.1777649589930661,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.010363458015490323,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.000276917009614408,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.026732832950074226,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.3581698740599677,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.05338533298345283,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.008878207998350263,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.001071999955456704,
+              "calls": 2
+            }
+          }
+        },
+        "old": {
+          "total": 0.44622704200446606,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.17178704199614003,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.2048516669892706,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.01298083399888128,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0008551669889129698,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.02591749996645376,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.34546212607529014,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.05306787503650412,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.01069833303336054,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0018564999336376786,
+              "calls": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.20849599997745827,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06931604200508446,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.05545733403414488,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.010852125007659197,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0007201249827630818,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04920058394782245,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.06634933297755197,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.06658641598187387,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.009433416998945177,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0032830419950187206,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.20523779100039974,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.07360725000035018,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.012592000013682991,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0003802080173045397,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04898862499976531,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.07073625002522022,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.061699457990471274,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.009609209024347365,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.00281558302231133,
+              "calls": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 26,
+      "equal": true,
+      "timing": {
+        "new": {
+          "total": 0.1875345419975929,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06693370902212337,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.011929083033464849,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.00033787498250603676,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04647045797901228,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.05865049903513864,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.06217766698682681,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.010446708009112626,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.002335375000257045,
+              "calls": 2
+            }
+          }
+        },
+        "old": {
+          "total": 0.1779770830180496,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06603633402846754,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.04624200001126155,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.008866708958521485,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0005908739985898137,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04443070897832513,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.059391498973127455,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.052451209048740566,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.0076945420005358756,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0033059600391425192,
+              "calls": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 49,
+      "equal": true,
+      "timing": {
+        "old": {
+          "total": 0.188381833024323,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.07032387499930337,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.047504750022199005,
+              "calls": 1
+            },
+            "_am_quant": {
+              "seconds": 0.009485291026066989,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0006263329996727407,
+              "calls": 2
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04631078999955207,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.062375832931138575,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.055555166967678815,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.008216749993152916,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.003430749988183379,
+              "calls": 3
+            }
+          }
+        },
+        "new": {
+          "total": 0.17833770904690027,
+          "inclusive": {
+            "_am_fit": {
+              "seconds": 0.06753558298805729,
+              "calls": 1
+            },
+            "_am_cal_data": {
+              "seconds": 0.0,
+              "calls": 0
+            },
+            "_am_quant": {
+              "seconds": 0.010849291982594877,
+              "calls": 1
+            },
+            "_af_probability": {
+              "seconds": 0.0002662500482983887,
+              "calls": 1
+            },
+            "_joint_quant_queries": {
+              "seconds": 0.04642849997617304,
+              "calls": 3
+            },
+            "hif4_dynamic_quantize_k": {
+              "seconds": 0.058912667096592486,
+              "calls": 3
+            },
+            "_am_parent_v": {
+              "seconds": 0.054289416992105544,
+              "calls": 1
+            },
+            "_af_search": {
+              "seconds": 0.009710666025057435,
+              "calls": 1
+            },
+            "_vr_probs": {
+              "seconds": 0.0022274170187301934,
+              "calls": 2
+            }
+          }
+        }
+      }
+    }
+  ],
+  "warning": "Inclusive nested timers cannot be summed. 12 groups/60 tests; paired offline timings, not online prediction."
+}

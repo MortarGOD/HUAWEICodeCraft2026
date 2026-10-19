@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "sha256": "2892edb7ce7356866d556421d3c9fc8349efe16a8ebf23c9eec4f04541849d8b",
+  "shape": "wide",
+  "rows": [
+    {
+      "group": 0,
+      "shape": [
+        8192,
+        4096
+      ],
+      "parent": {
+        "calibration": 32.8810654580011,
+        "dynamic": 13.138218208041508
+      },
+      "candidate": {
+        "calibration": 33.13179508398753,
+        "dynamic": 8.50576141604688
+      }
+    }
+  ],
+  "totals": {
+    "parent": {
+      "calibration": 32.8810654580011,
+      "dynamic": 13.138218208041508
+    },
+    "candidate": {
+      "calibration": 33.13179508398753,
+      "dynamic": 8.50576141604688
+    }
+  },
+  "ratio": 0.9047849767109378,
+  "score_prediction_allowed": false,
+  "warning": "Linear-only Mac 4-thread timing; do not multiply whole online runtime by this ratio. wide=transposed checkpoint runtime stress, not actual layer quality."
+}

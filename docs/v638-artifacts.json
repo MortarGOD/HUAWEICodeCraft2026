@@ -1,0 +1,11 @@
+{
+  "version": 638,
+  "parent": 637,
+  "parent_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "patch_summary": "Max-shot combination: v637 (Linear block 4 + ridge 1e-2 + exponent 0.30) plus v635's forced Q/K fitted stack. The Linear part is verified to improve two banks and is legally grounded (real calibration data); the attention part is the high-variance probe. Bundling means a Q/K loss can erase the Linear gain.",
+  "source_sha256": "ff24dbf3cf3f17bdd66155091d5a7596510a735bf2e9b2294c5b127039eb8bef",
+  "archive_sha256": "63e7a226c22e3938dcdd2d1df900a0e479d1776a2d0401ddfb98d23ac4e655f6",
+  "archive_members": [
+    "solution.py"
+  ]
+}

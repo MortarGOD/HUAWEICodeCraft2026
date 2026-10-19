@@ -1,0 +1,2653 @@
+{
+  "started_at": "2026-09-07T12:55:47+00:00",
+  "source_manifest": "docs/reference-repo-refresh-20260907/additional-tree-scope.json",
+  "source_manifest_sha256": "68f6d5d0ccff5e1fc1d43a712a984e5a144d7e5eb6eb5e6dd5aae7beb04d7003",
+  "scope": "Only the supplied 47 supplemental ZIP paths; Git object availability, no worktree mutation or archive execution/extraction.",
+  "repositories": [
+    {
+      "repo": "jansenin-quantization-contest-work",
+      "path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/jansenin-quantization-contest-work",
+      "commands": [
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.012,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "eda6a310b13c0a5a0d806b1b7d1008098fa3f847 blob 37727934\n",
+          "stderr_preview": "",
+          "stdin_lines": 1
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "eda6a310b13c0a5a0d806b1b7d1008098fa3f847 blob 37727934\n",
+          "stderr_preview": "",
+          "stdin_lines": 1
+        },
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2:contest_archive.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "eda6a310b13c0a5a0d806b1b7d1008098fa3f847\n",
+          "stderr_preview": ""
+        }
+      ],
+      "errors": [],
+      "initial_missing_ids": [],
+      "head_before": "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2",
+      "head_after": "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2",
+      "working_state_before": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "working_state_after": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head_and_worktree_preserved": true,
+      "all_requested_blobs_local": true,
+      "requested_path_count": 1,
+      "unique_blob_count": 1,
+      "remaining_missing_ids": []
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "commands": [
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "e32ee8c82f9ca61dea341a97410ddd48731b7072\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.017,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "39aad371dd25ae4d758694dbe8e641d95c102e15 blob 6917\n61242fee055649eaaa99cb4a07a4548f484c92ad blob 9621\n7c896df888e83f6be18496bef1898cac489d8587 blob 9797\n89ea2fbfc99025f97cb15040630736a48512e797 blob 12601\na14ac2f014f11242f95869a8ebd173e39e1db3df blob 14444\nc65af42f0fe88a08d3a58b6aadeff9ea5b42a321 blob 1422\ne55de4f9224a59274f527799534ec76881da098d blob 9533\ne5f1fa528208e5525480e0692605dd57e85c7f81 blob 6857\ne782ad0ea1b0f7a7572f59718468f3c082be5ddc blob 12565\n",
+          "stderr_preview": "",
+          "stdin_lines": 9
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "39aad371dd25ae4d758694dbe8e641d95c102e15 blob 6917\n61242fee055649eaaa99cb4a07a4548f484c92ad blob 9621\n7c896df888e83f6be18496bef1898cac489d8587 blob 9797\n89ea2fbfc99025f97cb15040630736a48512e797 blob 12601\na14ac2f014f11242f95869a8ebd173e39e1db3df blob 14444\nc65af42f0fe88a08d3a58b6aadeff9ea5b42a321 blob 1422\ne55de4f9224a59274f527799534ec76881da098d blob 9533\ne5f1fa528208e5525480e0692605dd57e85c7f81 blob 6857\ne782ad0ea1b0f7a7572f59718468f3c082be5ddc blob 12565\n",
+          "stderr_preview": "",
+          "stdin_lines": 9
+        },
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "e32ee8c82f9ca61dea341a97410ddd48731b7072\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.011,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_ablation.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "7c896df888e83f6be18496bef1898cac489d8587\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_alg1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "c65af42f0fe88a08d3a58b6aadeff9ea5b42a321\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_c4096.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "a14ac2f014f11242f95869a8ebd173e39e1db3df\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_carry.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "e55de4f9224a59274f527799534ec76881da098d\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_carry2.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "61242fee055649eaaa99cb4a07a4548f484c92ad\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_carry3.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "e782ad0ea1b0f7a7572f59718468f3c082be5ddc\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_cband.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "89ea2fbfc99025f97cb15040630736a48512e797\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_linear.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "e5f1fa528208e5525480e0692605dd57e85c7f81\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e32ee8c82f9ca61dea341a97410ddd48731b7072:dist/probe_v9_linear.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "39aad371dd25ae4d758694dbe8e641d95c102e15\n",
+          "stderr_preview": ""
+        }
+      ],
+      "errors": [],
+      "initial_missing_ids": [],
+      "head_before": "e32ee8c82f9ca61dea341a97410ddd48731b7072",
+      "head_after": "e32ee8c82f9ca61dea341a97410ddd48731b7072",
+      "working_state_before": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "working_state_after": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head_and_worktree_preserved": true,
+      "all_requested_blobs_local": true,
+      "requested_path_count": 9,
+      "unique_blob_count": 9,
+      "remaining_missing_ids": []
+    },
+    {
+      "repo": "test",
+      "path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "commands": [
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.017,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.011,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.01,
+          "timeout": false,
+          "stdout_preview": "02cab6b4c9e1e36e1294f3522894a03ea0b3b0e1 blob 18193\n1daace369906a55c2916c596ac3ee840b0bb4736 blob 10202\n1e89276d7c76a523f25b5f0963f436100e6f0e5f blob 14744\n2a1683e78096fa5bec7cfc2f50c89bf1c4a4ff3f blob 11199\n2e3ea138d47982535dccb3ae97820c856ca51a97 blob 13597\n33c1082da58a20cc36426982e4c4376c8a00a85b blob 12670\n38be68af2aa56243cfc7a912809f321eed3a9e50 blob 10737\n3c106092f63b08e91367d49a599c6b4813136694 blob 4571\n46444fec00245299e715daf605db6341a6d4b6e3 blob 12038\n5205dca93455286bbd2ae76a0125f3d8a25364b8 blob 15837\n54c063299c968689fe3c8c588776af5225545770 blob 18031\n5837fcb5574e1fff4bd8f292bd98c8cf8481485c blob 9926\n5c892d67e6b9b7a412b65383a642c3b876a9aa6d blob 4572\n61b32d3b136b8d0923cfd43e1d6ba8d19ed43295 blob 11980\n64fd7b705262c212c2cfe65c8555ded79db35038 blob 9863\n6ee159bbcbcb3efae7f8d5123c6a63102e1eab52 blob 4571\n8f3f726047250f19aa1051d0a1b3688a74a2322f blob 11369\n972de5a495d1df162b09e571cfc4cbee6210957a blob 10001\n973736a198abeec793d1dd2e9bee29be62f57825 blob 9628\n98654f300cee410378dec7bec83831d419041883 blob 12668\nab1fec75824e3b7d6b933eae72eee18e82ffe916 blob 12669\nae442943ac47e3dd96d03e220218a2813f00c0b5 blob 13590\nb211c2c3d28b10ad2867902a72002fe110f6f8c4 blob 4339\nbf3cc8dc3e3",
+          "stderr_preview": "",
+          "stdin_lines": 37
+        },
+        {
+          "args": [
+            "cat-file",
+            "--batch-check=%(objectname) %(objecttype) %(objectsize)"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "02cab6b4c9e1e36e1294f3522894a03ea0b3b0e1 blob 18193\n1daace369906a55c2916c596ac3ee840b0bb4736 blob 10202\n1e89276d7c76a523f25b5f0963f436100e6f0e5f blob 14744\n2a1683e78096fa5bec7cfc2f50c89bf1c4a4ff3f blob 11199\n2e3ea138d47982535dccb3ae97820c856ca51a97 blob 13597\n33c1082da58a20cc36426982e4c4376c8a00a85b blob 12670\n38be68af2aa56243cfc7a912809f321eed3a9e50 blob 10737\n3c106092f63b08e91367d49a599c6b4813136694 blob 4571\n46444fec00245299e715daf605db6341a6d4b6e3 blob 12038\n5205dca93455286bbd2ae76a0125f3d8a25364b8 blob 15837\n54c063299c968689fe3c8c588776af5225545770 blob 18031\n5837fcb5574e1fff4bd8f292bd98c8cf8481485c blob 9926\n5c892d67e6b9b7a412b65383a642c3b876a9aa6d blob 4572\n61b32d3b136b8d0923cfd43e1d6ba8d19ed43295 blob 11980\n64fd7b705262c212c2cfe65c8555ded79db35038 blob 9863\n6ee159bbcbcb3efae7f8d5123c6a63102e1eab52 blob 4571\n8f3f726047250f19aa1051d0a1b3688a74a2322f blob 11369\n972de5a495d1df162b09e571cfc4cbee6210957a blob 10001\n973736a198abeec793d1dd2e9bee29be62f57825 blob 9628\n98654f300cee410378dec7bec83831d419041883 blob 12668\nab1fec75824e3b7d6b933eae72eee18e82ffe916 blob 12669\nae442943ac47e3dd96d03e220218a2813f00c0b5 blob 13590\nb211c2c3d28b10ad2867902a72002fe110f6f8c4 blob 4339\nbf3cc8dc3e3",
+          "stderr_preview": "",
+          "stdin_lines": 37
+        },
+        {
+          "args": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "status",
+            "--porcelain=v1",
+            "-z",
+            "--untracked-files=all"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.011,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "HEAD",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.011,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "diff",
+            "--cached",
+            "--no-ext-diff",
+            "--no-textconv",
+            "--no-renames",
+            "--binary",
+            "--"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "cbc6d10a119aa31afe5a662170b49c1fedc94f5a:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "532b022f91657077d6d62e5e00e0911f35afeb98:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "850f9e6b3f78ebf0eb29033d65d96ddca8378409:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.009,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "51dbfe5fb46e1496e6d620d0e815424df29ce97c:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "bd9735c76c69dd74ff1cc0600024a701c7aaa8bb:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "307f1e6beda692e07663ead1206dd473a8d0eb86:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "39ca2a0496ec5a2dce6508663c5d1e8a4e6ace19:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "d1aa97f53fd4963855d446e7d0968fab3f10d58e:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "2d0d18ee48cc2f836c65929e7bbbb9c0214d6b7c:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "4c42e3598ae00860f5f00be31f7a109edc4e1e33:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "d03e612e32718fbc43b437b8c62d0dfa35ac03ee:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5f04c8f176675805861061c2de42215006c2b7c1:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "fbedb77fb124c81dbddd20579ae398876eb80ff2:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "b512632f931a9429db372604a11b0a4939c43ff8:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "e0ee0d5d2d966c0beb04365f47cb63583f8da27b:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "98e66ceb078515bd001bddeae2a0f7835df3f9b1:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "c24a35be3588a7dbfea6355c8487ce987b1e07dc:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.007,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "3893075499933bf7433f1b3177fbcccb244942ba:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "a407b665db3213e6048af49cf5d8e1bdba0d575f:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "849fd2408cfce5c0bdd8a27f1ea2b25e38ecf106:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "92a44857432eb0b2cc043152f40a58f3176ffd33:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "2ffcfe109f5b0d5be373aa252b65c7a52b8cef10:legal-solutions/zips/legal-rht-adaptive-v1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "d1aa97f53fd4963855d446e7d0968fab3f10d58e:legal-solutions/zips/legal-aonly-smooth-rht-v2-1024.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.007,
+          "timeout": false,
+          "stdout_preview": "b211c2c3d28b10ad2867902a72002fe110f6f8c4\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_001_score_8972.133354277346.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "f019fcfdfd5762170a94215d79c5f7f84c61c3a3\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_002_score_9545.285635925295.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "f392e3bd42b141056daaff8a2cff9ef27dc7ff4a\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_003_score_9545.285635925295.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "6ee159bbcbcb3efae7f8d5123c6a63102e1eab52\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_004_score_9545.285635925295.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "5c892d67e6b9b7a412b65383a642c3b876a9aa6d\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_005_score_9731.699839527024.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "fd83380eebd7f0cc97255f295be9d25655168cf8\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:auto-commit/data/archive/trial_006_score_9731.699839527024.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "3c106092f63b08e91367d49a599c6b4813136694\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/awq-fast.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "fbce2bc77edca0a3f6b075964ce93275473e6ccb\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-cross-adaptive.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "46444fec00245299e715daf605db6341a6d4b6e3\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-cross-refine20.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "33c1082da58a20cc36426982e4c4376c8a00a85b\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-cross-refine4.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ab1fec75824e3b7d6b933eae72eee18e82ffe916\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-100.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "61b32d3b136b8d0923cfd43e1d6ba8d19ed43295\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-refine4.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "98654f300cee410378dec7bec83831d419041883\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-target-group128.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "2e3ea138d47982535dccb3ae97820c856ca51a97\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-target-refine20.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "e92408d6bf39399b50172b638f34010973ca78e9\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-target0-group96-batch8-scalar1024.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "bf3cc8dc3e302ced4a97c11aad513c27348e09fb\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-target8-group132-fast.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "ae442943ac47e3dd96d03e220218a2813f00c0b5\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-projection-target8-group136-batch4-scalar512.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "1e89276d7c76a523f25b5f0963f436100e6f0e5f\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-runtime-khessian-efficient.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "54c063299c968689fe3c8c588776af5225545770\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-runtime160-fixed-attn4.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.007,
+          "timeout": false,
+          "stdout_preview": "5205dca93455286bbd2ae76a0125f3d8a25364b8\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-runtime160-online-state-factor-fp16.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "f615587e213b7beea5d5462fa2b6cc301a0022df\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/combo-runtime170-ood-guard.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "02cab6b4c9e1e36e1294f3522894a03ea0b3b0e1\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/focus-dgs.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "973736a198abeec793d1dd2e9bee29be62f57825\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/infoquant-fit-weight-fast.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.007,
+          "timeout": false,
+          "stdout_preview": "2a1683e78096fa5bec7cfc2f50c89bf1c4a4ff3f\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/infoquant-per-layer-alpha.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "fb88325cad53c0c4d9e047ecad5468d767ac46c3\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/infoquant-rank1.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.007,
+          "timeout": false,
+          "stdout_preview": "38be68af2aa56243cfc7a912809f321eed3a9e50\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/infoquant-rank2.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "df73e44ef9ac7175d0f7903617c645e3101fbfe8\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/let.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "5837fcb5574e1fff4bd8f292bd98c8cf8481485c\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/qqq-fast.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "1daace369906a55c2916c596ac3ee840b0bb4736\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rht.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "972de5a495d1df162b09e571cfc4cbee6210957a\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rrs-fast-fp16.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "c529f614d3a4cdb433ef2c36ef0f3f387f1c85f4\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rrs-fast.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "e1974659de0b62ed70ede4b30fb84427769f56d8\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rrs-let.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "c889607dbec27d16ae621de992b63fd1619a3ed2\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rrs-lite.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "f275e0226d0bdced3a8971d3d9ce3e7cfc40d492\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/rrs.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "64fd7b705262c212c2cfe65c8555ded79db35038\n",
+          "stderr_preview": ""
+        },
+        {
+          "args": [
+            "rev-parse",
+            "--verify",
+            "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1:paper-solutions/zips/spin-lwc.zip"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.008,
+          "timeout": false,
+          "stdout_preview": "8f3f726047250f19aa1051d0a1b3688a74a2322f\n",
+          "stderr_preview": ""
+        }
+      ],
+      "errors": [],
+      "initial_missing_ids": [],
+      "head_before": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b",
+      "head_after": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b",
+      "working_state_before": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "working_state_after": {
+        "porcelain_z": "",
+        "status_entries": [],
+        "clean": true,
+        "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "diff_bytes": 0,
+        "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head_and_worktree_preserved": true,
+      "all_requested_blobs_local": true,
+      "requested_path_count": 37,
+      "unique_blob_count": 37,
+      "remaining_missing_ids": []
+    }
+  ],
+  "archives": [
+    {
+      "repo": "jansenin-quantization-contest-work",
+      "path": "contest_archive.zip",
+      "sha": "eda6a310b13c0a5a0d806b1b7d1008098fa3f847",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 37727934,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/jansenin-quantization-contest-work",
+      "paths": [
+        "contest_archive.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "a81b34c2f0b6cc9fab7f6d3e520cc901a19d52b2"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_ablation.zip",
+      "sha": "7c896df888e83f6be18496bef1898cac489d8587",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9797,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_ablation.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_alg1.zip",
+      "sha": "c65af42f0fe88a08d3a58b6aadeff9ea5b42a321",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 1422,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_alg1.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_c4096.zip",
+      "sha": "a14ac2f014f11242f95869a8ebd173e39e1db3df",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 14444,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_c4096.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_carry.zip",
+      "sha": "e55de4f9224a59274f527799534ec76881da098d",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9533,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_carry.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_carry2.zip",
+      "sha": "61242fee055649eaaa99cb4a07a4548f484c92ad",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9621,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_carry2.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_carry3.zip",
+      "sha": "e782ad0ea1b0f7a7572f59718468f3c082be5ddc",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12565,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_carry3.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_cband.zip",
+      "sha": "89ea2fbfc99025f97cb15040630736a48512e797",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12601,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_cband.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_linear.zip",
+      "sha": "e5f1fa528208e5525480e0692605dd57e85c7f81",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 6857,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_linear.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "openaddr-hif4-contest",
+      "path": "dist/probe_v9_linear.zip",
+      "sha": "39aad371dd25ae4d758694dbe8e641d95c102e15",
+      "branches": [
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 6917,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/openaddr-hif4-contest",
+      "paths": [
+        "dist/probe_v9_linear.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "main": "e32ee8c82f9ca61dea341a97410ddd48731b7072"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "main": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "legal-solutions/zips/legal-rht-adaptive-v1.zip",
+      "sha": "ceba4208f55f8cb607321db832ab0d52fbc7c0c0",
+      "branches": [
+        "base3.07",
+        "base_1.7",
+        "experiment/attention-fisher-objective",
+        "experiment/attention-learned-rotation",
+        "experiment/block-hessian-objective",
+        "experiment/joint-output-optimization",
+        "experiment/legal-inputisolated-v4",
+        "experiment/legal-inputisolated-v5",
+        "experiment/legal-tensor-recon-v2",
+        "experiment/linear-residual-fit-v2",
+        "experiment/new-paper-implementation",
+        "experiment/non-rrs-paper-baselines",
+        "experiment/output-aware-rounding",
+        "experiment/paper-solution-suite",
+        "experiment/pca-hadamard-attention",
+        "experiment/qwen-channel-balance",
+        "experiment/smoothrot-19k",
+        "experiment/smoothrot-32k",
+        "experiment/smoothrot-32k-v2",
+        "experiment/soar-hif4",
+        "experiment/unrestricted-headadaptive-v2",
+        "feature/hif4-solution",
+        "main"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 3744,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "legal-solutions/zips/legal-rht-adaptive-v1.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "base3.07": "cbc6d10a119aa31afe5a662170b49c1fedc94f5a",
+        "base_1.7": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b",
+        "experiment/attention-fisher-objective": "532b022f91657077d6d62e5e00e0911f35afeb98",
+        "experiment/attention-learned-rotation": "850f9e6b3f78ebf0eb29033d65d96ddca8378409",
+        "experiment/block-hessian-objective": "51dbfe5fb46e1496e6d620d0e815424df29ce97c",
+        "experiment/joint-output-optimization": "bd9735c76c69dd74ff1cc0600024a701c7aaa8bb",
+        "experiment/legal-inputisolated-v4": "307f1e6beda692e07663ead1206dd473a8d0eb86",
+        "experiment/legal-inputisolated-v5": "39ca2a0496ec5a2dce6508663c5d1e8a4e6ace19",
+        "experiment/legal-tensor-recon-v2": "d1aa97f53fd4963855d446e7d0968fab3f10d58e",
+        "experiment/linear-residual-fit-v2": "2d0d18ee48cc2f836c65929e7bbbb9c0214d6b7c",
+        "experiment/new-paper-implementation": "4c42e3598ae00860f5f00be31f7a109edc4e1e33",
+        "experiment/non-rrs-paper-baselines": "d03e612e32718fbc43b437b8c62d0dfa35ac03ee",
+        "experiment/output-aware-rounding": "5f04c8f176675805861061c2de42215006c2b7c1",
+        "experiment/paper-solution-suite": "fbedb77fb124c81dbddd20579ae398876eb80ff2",
+        "experiment/pca-hadamard-attention": "b512632f931a9429db372604a11b0a4939c43ff8",
+        "experiment/qwen-channel-balance": "e0ee0d5d2d966c0beb04365f47cb63583f8da27b",
+        "experiment/smoothrot-19k": "98e66ceb078515bd001bddeae2a0f7835df3f9b1",
+        "experiment/smoothrot-32k": "c24a35be3588a7dbfea6355c8487ce987b1e07dc",
+        "experiment/smoothrot-32k-v2": "3893075499933bf7433f1b3177fbcccb244942ba",
+        "experiment/soar-hif4": "a407b665db3213e6048af49cf5d8e1bdba0d575f",
+        "experiment/unrestricted-headadaptive-v2": "849fd2408cfce5c0bdd8a27f1ea2b25e38ecf106",
+        "feature/hif4-solution": "92a44857432eb0b2cc043152f40a58f3176ffd33",
+        "main": "2ffcfe109f5b0d5be373aa252b65c7a52b8cef10"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "base3.07": true,
+        "base_1.7": true,
+        "experiment/attention-fisher-objective": true,
+        "experiment/attention-learned-rotation": true,
+        "experiment/block-hessian-objective": true,
+        "experiment/joint-output-optimization": true,
+        "experiment/legal-inputisolated-v4": true,
+        "experiment/legal-inputisolated-v5": true,
+        "experiment/legal-tensor-recon-v2": true,
+        "experiment/linear-residual-fit-v2": true,
+        "experiment/new-paper-implementation": true,
+        "experiment/non-rrs-paper-baselines": true,
+        "experiment/output-aware-rounding": true,
+        "experiment/paper-solution-suite": true,
+        "experiment/pca-hadamard-attention": true,
+        "experiment/qwen-channel-balance": true,
+        "experiment/smoothrot-19k": true,
+        "experiment/smoothrot-32k": true,
+        "experiment/smoothrot-32k-v2": true,
+        "experiment/soar-hif4": true,
+        "experiment/unrestricted-headadaptive-v2": true,
+        "feature/hif4-solution": true,
+        "main": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "legal-solutions/zips/legal-aonly-smooth-rht-v2-1024.zip",
+      "sha": "b211c2c3d28b10ad2867902a72002fe110f6f8c4",
+      "branches": [
+        "experiment/legal-tensor-recon-v2"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4339,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "legal-solutions/zips/legal-aonly-smooth-rht-v2-1024.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/legal-tensor-recon-v2": "d1aa97f53fd4963855d446e7d0968fab3f10d58e"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/legal-tensor-recon-v2": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_001_score_8972.133354277346.zip",
+      "sha": "f019fcfdfd5762170a94215d79c5f7f84c61c3a3",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4569,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_001_score_8972.133354277346.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_002_score_9545.285635925295.zip",
+      "sha": "f392e3bd42b141056daaff8a2cff9ef27dc7ff4a",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4571,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_002_score_9545.285635925295.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_003_score_9545.285635925295.zip",
+      "sha": "6ee159bbcbcb3efae7f8d5123c6a63102e1eab52",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4571,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_003_score_9545.285635925295.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_004_score_9545.285635925295.zip",
+      "sha": "5c892d67e6b9b7a412b65383a642c3b876a9aa6d",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4572,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_004_score_9545.285635925295.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_005_score_9731.699839527024.zip",
+      "sha": "fd83380eebd7f0cc97255f295be9d25655168cf8",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4571,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_005_score_9731.699839527024.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "auto-commit/data/archive/trial_006_score_9731.699839527024.zip",
+      "sha": "3c106092f63b08e91367d49a599c6b4813136694",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 4571,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "auto-commit/data/archive/trial_006_score_9731.699839527024.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/awq-fast.zip",
+      "sha": "fbce2bc77edca0a3f6b075964ce93275473e6ccb",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10129,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/awq-fast.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-cross-adaptive.zip",
+      "sha": "46444fec00245299e715daf605db6341a6d4b6e3",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12038,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-cross-adaptive.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-cross-refine20.zip",
+      "sha": "33c1082da58a20cc36426982e4c4376c8a00a85b",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12670,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-cross-refine20.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-cross-refine4.zip",
+      "sha": "ab1fec75824e3b7d6b933eae72eee18e82ffe916",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12669,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-cross-refine4.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-100.zip",
+      "sha": "61b32d3b136b8d0923cfd43e1d6ba8d19ed43295",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 11980,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-100.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-refine4.zip",
+      "sha": "98654f300cee410378dec7bec83831d419041883",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12668,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-refine4.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-target-group128.zip",
+      "sha": "2e3ea138d47982535dccb3ae97820c856ca51a97",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 13597,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-target-group128.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-target-refine20.zip",
+      "sha": "e92408d6bf39399b50172b638f34010973ca78e9",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 12681,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-target-refine20.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-target0-group96-batch8-scalar1024.zip",
+      "sha": "bf3cc8dc3e302ced4a97c11aad513c27348e09fb",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 14844,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-target0-group96-batch8-scalar1024.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-target8-group132-fast.zip",
+      "sha": "ae442943ac47e3dd96d03e220218a2813f00c0b5",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 13590,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-target8-group132-fast.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-projection-target8-group136-batch4-scalar512.zip",
+      "sha": "1e89276d7c76a523f25b5f0963f436100e6f0e5f",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 14744,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-projection-target8-group136-batch4-scalar512.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-runtime-khessian-efficient.zip",
+      "sha": "54c063299c968689fe3c8c588776af5225545770",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 18031,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-runtime-khessian-efficient.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-runtime160-fixed-attn4.zip",
+      "sha": "5205dca93455286bbd2ae76a0125f3d8a25364b8",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 15837,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-runtime160-fixed-attn4.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-runtime160-online-state-factor-fp16.zip",
+      "sha": "f615587e213b7beea5d5462fa2b6cc301a0022df",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 15918,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-runtime160-online-state-factor-fp16.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/combo-runtime170-ood-guard.zip",
+      "sha": "02cab6b4c9e1e36e1294f3522894a03ea0b3b0e1",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 18193,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/combo-runtime170-ood-guard.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/focus-dgs.zip",
+      "sha": "973736a198abeec793d1dd2e9bee29be62f57825",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9628,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/focus-dgs.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/infoquant-fit-weight-fast.zip",
+      "sha": "2a1683e78096fa5bec7cfc2f50c89bf1c4a4ff3f",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 11199,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/infoquant-fit-weight-fast.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/infoquant-per-layer-alpha.zip",
+      "sha": "fb88325cad53c0c4d9e047ecad5468d767ac46c3",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 11223,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/infoquant-per-layer-alpha.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/infoquant-rank1.zip",
+      "sha": "38be68af2aa56243cfc7a912809f321eed3a9e50",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10737,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/infoquant-rank1.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/infoquant-rank2.zip",
+      "sha": "df73e44ef9ac7175d0f7903617c645e3101fbfe8",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10841,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/infoquant-rank2.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/let.zip",
+      "sha": "5837fcb5574e1fff4bd8f292bd98c8cf8481485c",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9926,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/let.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/qqq-fast.zip",
+      "sha": "1daace369906a55c2916c596ac3ee840b0bb4736",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10202,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/qqq-fast.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rht.zip",
+      "sha": "972de5a495d1df162b09e571cfc4cbee6210957a",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10001,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rht.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rrs-fast-fp16.zip",
+      "sha": "c529f614d3a4cdb433ef2c36ef0f3f387f1c85f4",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10086,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rrs-fast-fp16.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rrs-fast.zip",
+      "sha": "e1974659de0b62ed70ede4b30fb84427769f56d8",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 10081,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rrs-fast.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rrs-let.zip",
+      "sha": "c889607dbec27d16ae621de992b63fd1619a3ed2",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9926,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rrs-let.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rrs-lite.zip",
+      "sha": "f275e0226d0bdced3a8971d3d9ce3e7cfc40d492",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9974,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rrs-lite.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/rrs.zip",
+      "sha": "64fd7b705262c212c2cfe65c8555ded79db35038",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 9863,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/rrs.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    },
+    {
+      "repo": "test",
+      "path": "paper-solutions/zips/spin-lwc.zip",
+      "sha": "8f3f726047250f19aa1051d0a1b3688a74a2322f",
+      "branches": [
+        "experiment/unrestricted-highscore-v1"
+      ],
+      "format": "zip",
+      "local_before": true,
+      "local": true,
+      "downloaded_now": false,
+      "size": 11369,
+      "object_type": "blob",
+      "review_status": "pending_static_archive_audit",
+      "repo_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test",
+      "paths": [
+        "paper-solutions/zips/spin-lwc.zip"
+      ],
+      "available_locally": true,
+      "branch_commits": {
+        "experiment/unrestricted-highscore-v1": "5d6c1b7b92148ac3685979cfd37ab2c3b62dc9c1"
+      },
+      "path_verified_at_captured_branch_commits": {
+        "experiment/unrestricted-highscore-v1": true
+      }
+    }
+  ],
+  "completed": true,
+  "summary": {
+    "archive_paths": 47,
+    "repo_count": 3,
+    "unique_repo_blob_pairs": 47,
+    "global_unique_git_blob_ids": 47,
+    "already_local_paths": 47,
+    "downloaded_now_paths": 0,
+    "all_local": true,
+    "all_worktrees_preserved": true,
+    "total_path_bytes": 38201844,
+    "errors": 0,
+    "all_paths_verified_at_captured_branch_commits": true
+  },
+  "tool_sha256": "66b0880528139c7580e5b6569abf2f1a3626f2f1ed4e37d761b52271e29cd40e",
+  "tool_change": {
+    "archive_candidates": "All ZIP/tar/tgz/7z entries, independent of source-like filenames, with format and review metadata.",
+    "source_archive_candidates": "Backward-compatible source-name-hint subset for callers which automatically fetch known submissions; arbitrary archive candidates require selection before bulk download.",
+    "old_manifests_unchanged": [
+      "existing-refresh.json",
+      "new-repos-refresh.json"
+    ],
+    "classification_checks": 7,
+    "checks_passed": true
+  },
+  "finished_at": "2026-09-07T12:55:47+00:00"
+}

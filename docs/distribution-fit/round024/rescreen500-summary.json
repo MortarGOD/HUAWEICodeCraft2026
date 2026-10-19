@@ -1,0 +1,135 @@
+{
+  "certificate_columns": 500,
+  "acceptance_relative_tolerance": 0.15,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    310,
+    314,
+    319,
+    320,
+    322,
+    330,
+    333,
+    335,
+    343,
+    344,
+    345,
+    365,
+    374,
+    378,
+    381,
+    382,
+    385,
+    386,
+    387,
+    389,
+    392,
+    393,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    408,
+    409,
+    412,
+    413,
+    414,
+    415,
+    416,
+    418,
+    419,
+    430,
+    435,
+    436,
+    438
+  ],
+  "cases": [
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 2,
+      "tokens": 8,
+      "price": 94.30855069371735,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -37.82168278280402
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 4,
+      "tokens": 8,
+      "price": -19.46212987014748,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -151.59236334666883
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 0,
+      "tokens": 8,
+      "price": -35.145901853094166,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -167.27613532961553
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 3,
+      "tokens": 8,
+      "price": -113.18344094867122,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -245.31367442519257
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -319.2550885892864,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -451.38532206580777
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 2,
+      "tokens": 8,
+      "price": -12661.759377793976,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -12793.889611270497
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 4,
+      "tokens": 8,
+      "price": -14623.15177139356,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -14755.28200487008
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 1,
+      "tokens": 8,
+      "price": -17171.7941621597,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -17303.92439563622
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 3,
+      "tokens": 8,
+      "price": -17309.875635442233,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -17442.005868918754
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 0,
+      "tokens": 8,
+      "price": -20544.91065620175,
+      "required_lower_bound": 132.13023347652137,
+      "margin": -20677.040889678272
+    }
+  ],
+  "limits": "All configured variants screened against the current fixed certificate only. No claim of general infeasibility."
+}

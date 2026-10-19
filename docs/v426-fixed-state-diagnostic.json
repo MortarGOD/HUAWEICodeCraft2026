@@ -1,0 +1,132 @@
+{
+  "completed": true,
+  "selection": "Groups 3 and 7 selected after observing negative covariance results; diagnostic only, never a deployment route.",
+  "scope": "All Q/K/V use the same parent coordinate system and frozen states. Only the child K quantizer is substituted; no mismatched learned transforms are mixed.",
+  "cases": [
+    {
+      "group": 3,
+      "test": 0,
+      "tokens": 1,
+      "parent_mse": 0.0025327205657958984,
+      "fixed_parent_state_child_k_mse": 0.0025327205657958984,
+      "full_child_mse": 0.0025327205657958984,
+      "fixed_state_delta": 0.0,
+      "full_child_delta": 0.0,
+      "parent_reproduced": true,
+      "key_values_changed": false
+    },
+    {
+      "group": 3,
+      "test": 1,
+      "tokens": 10,
+      "parent_mse": 8.898738451534882e-05,
+      "fixed_parent_state_child_k_mse": 8.870126475812867e-05,
+      "full_child_mse": 9.54800343606621e-05,
+      "fixed_state_delta": 0.0006773573513735967,
+      "full_child_delta": -0.015370641109672678,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 3,
+      "test": 2,
+      "tokens": 128,
+      "parent_mse": 4.7914159040374216e-06,
+      "fixed_parent_state_child_k_mse": 4.789270406035939e-06,
+      "full_child_mse": 6.002108420943841e-06,
+      "fixed_state_delta": 7.351914551991343e-05,
+      "full_child_delta": -0.04148644243379229,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 3,
+      "test": 3,
+      "tokens": 512,
+      "parent_mse": 2.1886937702220166e-06,
+      "fixed_parent_state_child_k_mse": 2.188193320762366e-06,
+      "full_child_mse": 3.090961627094657e-06,
+      "fixed_state_delta": 6.270953989603151e-05,
+      "full_child_delta": -0.11305997254342137,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 3,
+      "test": 4,
+      "tokens": 1024,
+      "parent_mse": 1.5096653669388616e-06,
+      "fixed_parent_state_child_k_mse": 1.509574076408171e-06,
+      "full_child_mse": 2.388691427768208e-06,
+      "fixed_state_delta": 2.157254214597739e-05,
+      "full_child_delta": -0.2077195367496718,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 7,
+      "test": 0,
+      "tokens": 1,
+      "parent_mse": 0.0031377077102661133,
+      "fixed_parent_state_child_k_mse": 0.0031377077102661133,
+      "full_child_mse": 0.0031377077102661133,
+      "fixed_state_delta": 0.0,
+      "full_child_delta": 0.0,
+      "parent_reproduced": true,
+      "key_values_changed": false
+    },
+    {
+      "group": 7,
+      "test": 1,
+      "tokens": 10,
+      "parent_mse": 9.545544162392616e-05,
+      "fixed_parent_state_child_k_mse": 9.519069135421887e-05,
+      "full_child_mse": 0.00010371871758252382,
+      "fixed_state_delta": 0.0006284816331437312,
+      "full_child_delta": -0.019615908891494338,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "tokens": 128,
+      "parent_mse": 4.799625457962975e-06,
+      "fixed_parent_state_child_k_mse": 4.798672307515517e-06,
+      "full_child_mse": 5.7434886002738494e-06,
+      "fixed_state_delta": 3.0030591085705588e-05,
+      "full_child_delta": -0.02973797908105702,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 7,
+      "test": 3,
+      "tokens": 512,
+      "parent_mse": 2.6150864869123325e-06,
+      "fixed_parent_state_child_k_mse": 2.6156501462537562e-06,
+      "full_child_mse": 3.401712547201896e-06,
+      "fixed_state_delta": -7.180497132551456e-05,
+      "full_child_delta": -0.10020886296378939,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "tokens": 1024,
+      "parent_mse": 1.7120285065175267e-06,
+      "fixed_parent_state_child_k_mse": 1.7118477444455493e-06,
+      "full_child_mse": 2.3369379960058723e-06,
+      "fixed_state_delta": 3.9847994187305425e-05,
+      "full_child_delta": -0.13775782404088133,
+      "parent_reproduced": true,
+      "key_values_changed": true
+    }
+  ],
+  "summary": {
+    "cases": 10,
+    "fixed_state_delta": 0.0014617138260267467,
+    "full_child_delta": -0.6649571678137802
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "diagnostic_only": true,
+  "rows": [
+    {
+      "tokens": 8,
+      "sweeps": [
+        {
+          "sweep": 1,
+          "proxy_before": 53.557044982910156,
+          "proxy_after": 53.55457305908203,
+          "true_metric_error": 103.47587585449219
+        }
+      ]
+    },
+    {
+      "tokens": 32,
+      "sweeps": [
+        {
+          "sweep": 1,
+          "proxy_before": 30.294696807861328,
+          "proxy_after": 30.078819274902344,
+          "true_metric_error": 80.09785461425781
+        },
+        {
+          "sweep": 2,
+          "proxy_before": 30.078819274902344,
+          "proxy_after": 30.065444946289062,
+          "true_metric_error": 80.10105895996094
+        },
+        {
+          "sweep": 3,
+          "proxy_before": 30.065444946289062,
+          "proxy_after": 30.06324005126953,
+          "true_metric_error": 80.0996322631836
+        }
+      ]
+    },
+    {
+      "tokens": 512,
+      "sweeps": [
+        {
+          "sweep": 1,
+          "proxy_before": 5.183937072753906,
+          "proxy_after": 4.474209308624268,
+          "true_metric_error": 90.32534790039062
+        },
+        {
+          "sweep": 2,
+          "proxy_before": 4.474209308624268,
+          "proxy_after": 4.335775375366211,
+          "true_metric_error": 90.32144165039062
+        },
+        {
+          "sweep": 3,
+          "proxy_before": 4.335775375366211,
+          "proxy_after": 4.246821403503418,
+          "true_metric_error": 90.31915283203125
+        },
+        {
+          "sweep": 4,
+          "proxy_before": 4.246821403503418,
+          "proxy_after": 4.1810078620910645,
+          "true_metric_error": 90.31671142578125
+        },
+        {
+          "sweep": 5,
+          "proxy_before": 4.1810078620910645,
+          "proxy_after": 4.127521514892578,
+          "true_metric_error": 90.31802368164062
+        },
+        {
+          "sweep": 6,
+          "proxy_before": 4.127521514892578,
+          "proxy_after": 4.0832839012146,
+          "true_metric_error": 90.31771087646484
+        },
+        {
+          "sweep": 7,
+          "proxy_before": 4.0832839012146,
+          "proxy_after": 4.046967506408691,
+          "true_metric_error": 90.31713104248047
+        },
+        {
+          "sweep": 8,
+          "proxy_before": 4.046967506408691,
+          "proxy_after": 4.017560958862305,
+          "true_metric_error": 90.31745910644531
+        }
+      ]
+    }
+  ]
+}

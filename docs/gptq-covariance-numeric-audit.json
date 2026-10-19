@@ -1,0 +1,158 @@
+{
+  "records": [
+    {
+      "group": 1,
+      "calibration_coverage": {
+        "included": [
+          {
+            "rows": 128,
+            "used": 128
+          },
+          {
+            "rows": 256,
+            "used": 256
+          },
+          {
+            "rows": 512,
+            "used": 512
+          },
+          {
+            "rows": 1024,
+            "used": 1024
+          }
+        ],
+        "skipped": [],
+        "key_mean_trace_fraction": 0.002118196320222166
+      },
+      "roles": {
+        "q": {
+          "fresh_vs_U_implied_relative": 0.003986194374699998,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.0016761056074329434,
+          "H_min_eigen_over_mean_diag": [
+            0.004192645839253031
+          ],
+          "negative_eigenvalues": [
+            0
+          ]
+        },
+        "k": {
+          "fresh_vs_U_implied_relative": 0.002433665038935259,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.00172757923801129,
+          "H_min_eigen_over_mean_diag": [
+            0.08480244710007696
+          ],
+          "negative_eigenvalues": [
+            0
+          ]
+        }
+      },
+      "reciprocal_max_error": 0.003875732421875
+    },
+    {
+      "group": 5,
+      "calibration_coverage": {
+        "included": [
+          {
+            "rows": 128,
+            "used": 128
+          },
+          {
+            "rows": 256,
+            "used": 256
+          },
+          {
+            "rows": 512,
+            "used": 512
+          },
+          {
+            "rows": 1024,
+            "used": 1024
+          }
+        ],
+        "skipped": [],
+        "key_mean_trace_fraction": 0.002241012903999624
+      },
+      "roles": {
+        "q": {
+          "fresh_vs_U_implied_relative": 0.0033480820018164876,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.0016427741742425135,
+          "H_min_eigen_over_mean_diag": [
+            0.011007527698608317,
+            0.0089610813625104
+          ],
+          "negative_eigenvalues": [
+            0,
+            0
+          ]
+        },
+        "k": {
+          "fresh_vs_U_implied_relative": 0.0012776862112967183,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.0016477131537286306,
+          "H_min_eigen_over_mean_diag": [
+            0.04430921597025063,
+            0.10410969737154072
+          ],
+          "negative_eigenvalues": [
+            0,
+            0
+          ]
+        }
+      },
+      "reciprocal_max_error": 0.003875732421875
+    },
+    {
+      "group": 49,
+      "calibration_coverage": {
+        "included": [
+          {
+            "rows": 128,
+            "used": 128
+          },
+          {
+            "rows": 256,
+            "used": 256
+          },
+          {
+            "rows": 512,
+            "used": 512
+          },
+          {
+            "rows": 1024,
+            "used": 1024
+          }
+        ],
+        "skipped": [],
+        "key_mean_trace_fraction": 0.0019222972848175752
+      },
+      "roles": {
+        "q": {
+          "fresh_vs_U_implied_relative": 0.003003712193301196,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.0016727223785032287,
+          "H_min_eigen_over_mean_diag": [
+            -0.0002558308062682319
+          ],
+          "negative_eigenvalues": [
+            2
+          ]
+        },
+        "k": {
+          "fresh_vs_U_implied_relative": 0.002976027851313959,
+          "H_dtype": "torch.bfloat16",
+          "carried_vs_U_implied_relative": 0.0015936957823272661,
+          "H_min_eigen_over_mean_diag": [
+            0.17592010236037914
+          ],
+          "negative_eigenvalues": [
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "warning": "Local diagnostic, not an attribution of online score loss; indefinite BF16 H does not prove every refinement hurts."
+}

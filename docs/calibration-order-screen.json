@@ -1,0 +1,316 @@
+{
+  "complete": true,
+  "orders": {
+    "identity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "swap_last": [
+      0,
+      1,
+      2,
+      4,
+      3
+    ],
+    "reverse": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  "rows": [
+    {
+      "group": 0,
+      "results": {
+        "identity": {
+          "scores": [
+            0.9447490534324507,
+            0.9534791623094634,
+            0.950413671478476,
+            0.9333121941660414,
+            0.9187357483851305
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.943483347700808,
+            0.9493922235600672,
+            0.9531877122782871,
+            0.9435460775595214,
+            0.9220396298337138
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.9349852582156684,
+            0.9502158648950755,
+            0.9421154193498911,
+            0.9354990339863616,
+            0.9246085559507368
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        }
+      }
+    },
+    {
+      "group": 1,
+      "results": {
+        "identity": {
+          "scores": [
+            0.758496030472983,
+            0.7947227253337542,
+            0.8190608502600769,
+            0.8653966778442344,
+            0.892436845866836
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.7539756689740348,
+            0.7950254236340182,
+            0.8177143259424555,
+            0.8636098021083253,
+            0.8960955594147475
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.7628573945358614,
+            0.7945904903908972,
+            0.8082440076731202,
+            0.8504725369026906,
+            0.8700669416572276
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        }
+      }
+    },
+    {
+      "group": 5,
+      "results": {
+        "identity": {
+          "scores": [
+            0.4846487074370382,
+            0.4961579703195615,
+            0.5611269191197454,
+            0.6176119637747954,
+            0.661201795725303
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.490127779533734,
+            0.4901027174925872,
+            0.5584547630606504,
+            0.6137704749019037,
+            0.6834445307526653
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.47967716858802156,
+            0.4905851433777689,
+            0.5382253796116004,
+            0.5929296480726632,
+            0.6508700470408826
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": false
+          }
+        }
+      }
+    },
+    {
+      "group": 14,
+      "results": {
+        "identity": {
+          "scores": [
+            0.09619425528475818,
+            0.16475316221739233,
+            0.2495638428676172,
+            0.3150466562071148,
+            0.4596664199924689
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.0964858098647772,
+            0.16374201317420217,
+            0.24228588570702084,
+            0.30211851677942364,
+            0.4562935417820144
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.07774677507639437,
+            0.12163601471503478,
+            0.1794067653446327,
+            0.13660107616082331,
+            0.1324501062290497
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        }
+      }
+    },
+    {
+      "group": 19,
+      "results": {
+        "identity": {
+          "scores": [
+            0.2940666519581836,
+            0.14592973448652705,
+            0.233100026479974,
+            0.3540648201354127,
+            0.35706091025836995
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.29465593002352164,
+            0.1435921507801259,
+            0.22633890474345386,
+            0.34375844832293234,
+            0.3383260912965837
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.2910106348926798,
+            0.1366524825589899,
+            0.2101126371989967,
+            0.2892690802081423,
+            0.2823986897961474
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        }
+      }
+    },
+    {
+      "group": 49,
+      "results": {
+        "identity": {
+          "scores": [
+            0.6891787589432776,
+            0.6607089935491609,
+            0.6574633747419436,
+            0.6382693136210819,
+            0.6148557885032547
+          ],
+          "same_state_as_identity": {
+            "q_state": true,
+            "k_state": true,
+            "v_state": true
+          }
+        },
+        "swap_last": {
+          "scores": [
+            0.507888074842739,
+            0.3974815418682935,
+            0.502126050570904,
+            0.5072343382099218,
+            0.4966653421366336
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        },
+        "reverse": {
+          "scores": [
+            0.6976821967629003,
+            0.6716606248706505,
+            0.6651242665979603,
+            0.6112379208282238,
+            0.6250287054604847
+          ],
+          "same_state_as_identity": {
+            "q_state": false,
+            "k_state": false,
+            "v_state": true
+          }
+        }
+      }
+    }
+  ],
+  "deltas": {
+    "identity": 0.0,
+    "swap_last": -0.88851034832236,
+    "reverse": -0.9275121582228497
+  },
+  "warning": "All five calibration samples retained. Modeled activations, no online inference; diagnostic only, no test-selected deployment."
+}

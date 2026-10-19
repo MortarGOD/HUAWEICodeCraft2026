@@ -1,0 +1,53 @@
+{
+  "round": 8,
+  "atoms": [
+    {
+      "id": "v-token-random",
+      "path": "local_distribution_fit/round008/v-token-random.pt",
+      "sha256": "57c0a82a358c311234ce76b8a7291882fe645dc0a77104b782659384c512be8b",
+      "seed": 2026090804,
+      "profile": {
+        "test_v_token_permutation": "random",
+        "calibration_unchanged": true,
+        "permutation_seed": 2026091500
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-sink.pt",
+      "source_sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659"
+    },
+    {
+      "id": "v-token-reverse",
+      "path": "local_distribution_fit/round008/v-token-reverse.pt",
+      "sha256": "c185d4cf7638ddc6e893ddacd7342966cb24f9a124a3146ca908755fa0cef4a3",
+      "seed": 2026090804,
+      "profile": {
+        "test_v_token_permutation": "reverse",
+        "calibration_unchanged": true,
+        "permutation_seed": 2026091500
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-sink.pt",
+      "source_sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659"
+    }
+  ],
+  "selection_evidence": "v396 uses calibration K/V bank; original sink population has positive delta only. Preserve accepted calibration and test transfer under changed V/token correspondence.",
+  "limits": "Synthetic distribution shift; no claim about hidden correlations. Uses valid NVFP4 row permutations and unchanged scoring."
+}

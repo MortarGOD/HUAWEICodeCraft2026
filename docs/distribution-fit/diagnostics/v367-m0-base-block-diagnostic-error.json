@@ -1,0 +1,11 @@
+{
+  "version": 367,
+  "atom": "m0-base-block_resample",
+  "source_sha256": "3a425c61950ab7bf202f4b570f22d97e82ffb752705ea370ca454a77aaf208eb",
+  "data_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+  "complete": false,
+  "cases": [],
+  "format_checks": 0,
+  "error": "Traceback (most recent call last):\n  File \"/Users/ee/Code/2026-huawei-alogorithm/tools/distribution_fit/evaluate_cell.py\", line 43, in main\n    flags={r:{k:v for k,v in calibrated[r+'_state'].items() if isinstance(v,(str,int,float,bool,type(None)))} for r in 'qkv'}\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'items'\n",
+  "wall_seconds": 1.2824686670210212
+}

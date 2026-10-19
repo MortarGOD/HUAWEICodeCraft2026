@@ -1,0 +1,145 @@
+{
+  "down": {
+    "calibration_parent_exact": true,
+    "dynamic_parent_exact": true,
+    "learner_calls": 0
+  },
+  "paired_inverse": {
+    "continuous_mse": 8.518430405501931e-11,
+    "incorrect_orthogonal_shortcut_mse": 0.0014887466095387936,
+    "frozen_matrix_is_actual_bf16": true
+  },
+  "cross_block_cancellation": {
+    "whole_output_parent_folds": [
+      0.19311904907226562,
+      0.19311904907226562
+    ],
+    "whole_output_candidate_folds": [
+      0.0,
+      0.0
+    ],
+    "sum_independent_block_errors": [
+      0.09655952453613281,
+      1.544952392578125
+    ]
+  },
+  "sampling_and_purity": {
+    "rows": 137,
+    "outputs": 271,
+    "sample_rows": 128,
+    "sample_outputs": 256,
+    "fresh_module_exact": true,
+    "inputs_and_rng_unchanged": true
+  },
+  "natural_isotropic": {
+    "seed": 424,
+    "parent_spectral_map_identity": true,
+    "parent_aw_folds": [
+      1.7111369371414185,
+      1.7089413404464722
+    ],
+    "learned_aw_folds": [
+      1.3699307441711426,
+      1.5619653463363647
+    ],
+    "learned_blocks": 2,
+    "changed_matrix_entries": 8064,
+    "changed_sign_mantissa_entries_a_w": [
+      2845,
+      4498
+    ],
+    "changed_decoded_entries_a_w": [
+      2668,
+      4054
+    ],
+    "proxy_calls": 5,
+    "step_calls": 2,
+    "accepted_proposals": 4,
+    "rejected_proposals": 0,
+    "proposal_trace": [
+      {
+        "before": [
+          1.7111369371414185,
+          1.7089413404464722
+        ],
+        "candidate": [
+          1.4820269346237183,
+          1.6002973318099976
+        ],
+        "accepted": true
+      },
+      {
+        "before": [
+          1.7111369371414185,
+          1.7089413404464722
+        ],
+        "candidate": [
+          1.5727704763412476,
+          1.6477503776550293
+        ],
+        "accepted": true
+      },
+      {
+        "before": [
+          1.4820269346237183,
+          1.6002973318099976
+        ],
+        "candidate": [
+          1.3699307441711426,
+          1.5619653463363647
+        ],
+        "accepted": true
+      },
+      {
+        "before": [
+          1.4820269346237183,
+          1.6002973318099976
+        ],
+        "candidate": [
+          1.424997329711914,
+          1.5806808471679688
+        ],
+        "accepted": true
+      }
+    ],
+    "learn_seconds": 0.012369125033728778
+  },
+  "scope": {
+    "v422_byte_prefix": true,
+    "new_imports": [],
+    "public_entrypoints_unchanged": true
+  },
+  "fixed_code_frobenius": {
+    "before_per_block": [
+      0.013388989493250847,
+      0.013621838763356209
+    ],
+    "after_per_block": [
+      0.008958570659160614,
+      0.008766237646341324
+    ],
+    "orthogonality_max_error": 1.0728836059570312e-06
+  },
+  "synthetic_up_contract": {
+    "learner_calls": 1,
+    "weight_and_activation_legal": true,
+    "frozen_state_valid": true,
+    "fresh_dynamic_exact": true,
+    "input_state_unchanged": true,
+    "dynamic_rng_unchanged": true,
+    "inherited_calibration_rng_effect_matches_parent": true
+  },
+  "degenerate_guards": {
+    "zero_parent_exact": true,
+    "rank_deficient_finite": true,
+    "unsupported_or_nonfinite_proxy_calls": 0
+  },
+  "summary": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "scope": "synthetic mechanisms and contracts; no official or local bank evaluation",
+    "source_sha256": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8"
+  }
+}

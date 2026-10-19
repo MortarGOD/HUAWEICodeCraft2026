@@ -1,0 +1,829 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+  "groups": [
+    0,
+    2,
+    4,
+    6,
+    9
+  ],
+  "role_isolated": false,
+  "source_sha256": "ee06ceb4d0db896d42753eb697d284956b17f8439bf14afdf6896a1779e02046",
+  "candidate": 443,
+  "decoy_mode": "row_permute",
+  "completed": true,
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0016099587082862854,
+      "mse": [
+        0.000938231241889298,
+        0.000938231241889298
+      ],
+      "quality": [
+        0.4172327295971493,
+        0.4172327295971493
+      ],
+      "delta": 0.0,
+      "output_parameters_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.0016064606606960297,
+      "mse": [
+        0.001193392788991332,
+        0.001193392788991332
+      ],
+      "quality": [
+        0.2571291546758002,
+        0.2571291546758002
+      ],
+      "delta": 0.0,
+      "output_parameters_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0017386183608323336,
+      "mse": [
+        0.0011336992029100657,
+        0.0011336992029100657
+      ],
+      "quality": [
+        0.3479309614748767,
+        0.3479309614748767
+      ],
+      "delta": 0.0,
+      "output_parameters_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0014211536617949605,
+      "mse": [
+        0.00102087645791471,
+        0.00102087645791471
+      ],
+      "quality": [
+        0.28165652641297645,
+        0.28165652641297645
+      ],
+      "delta": 0.0,
+      "output_parameters_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0016939977649599314,
+      "mse": [
+        0.0011300076730549335,
+        0.0011300076730549335
+      ],
+      "quality": [
+        0.33293437781975943,
+        0.33293437781975943
+      ],
+      "delta": 0.0,
+      "output_parameters_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0020650364458560944,
+      "mse": [
+        0.0016060782363638282,
+        0.0015772547340020537
+      ],
+      "quality": [
+        0.2222518689262153,
+        0.2362097351031608
+      ],
+      "delta": 0.0139578661769455,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.0021737697534263134,
+      "mse": [
+        0.0018041087314486504,
+        0.0018032544758170843
+      ],
+      "quality": [
+        0.17005527903541784,
+        0.17044826252882572
+      ],
+      "delta": 0.0003929834934078835,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.002019111765548587,
+      "mse": [
+        0.0016021394403651357,
+        0.00161069817841053
+      ],
+      "quality": [
+        0.2065127509522292,
+        0.20227388800693358
+      ],
+      "delta": -0.0042388629452956295,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0021431681234389544,
+      "mse": [
+        0.0015197889879345894,
+        0.0015196285676211119
+      ],
+      "quality": [
+        0.29086805122133075,
+        0.2909429031714521
+      ],
+      "delta": 7.485195012135737e-05,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0015252798330038786,
+      "mse": [
+        0.0012305902782827616,
+        0.0012310281163081527
+      ],
+      "quality": [
+        0.19320359998516268,
+        0.19291654575687145
+      ],
+      "delta": -0.00028705422829122806,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 4,
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0013263315195217729,
+      "mse": [
+        0.0009014655370265245,
+        0.0009024176397360861
+      ],
+      "quality": [
+        0.3203316638727244,
+        0.31961381716882875
+      ],
+      "delta": -0.0007178467038956304,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 4,
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.0014900581445544958,
+      "mse": [
+        0.0011802492663264275,
+        0.001187845948152244
+      ],
+      "quality": [
+        0.20791730803276565,
+        0.20281906280416218
+      ],
+      "delta": -0.005098245228603471,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 4,
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0015976756112650037,
+      "mse": [
+        0.0010223968420177698,
+        0.001026555197313428
+      ],
+      "quality": [
+        0.3600723233120777,
+        0.35746957012091796
+      ],
+      "delta": -0.002602753191159768,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 4,
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0011959279654547572,
+      "mse": [
+        0.000673605187330395,
+        0.0006779541145078838
+      ],
+      "quality": [
+        0.4367510361928417,
+        0.4331145904343089
+      ],
+      "delta": -0.003636445758532836,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 4,
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0012936110142618418,
+      "mse": [
+        0.001090408070012927,
+        0.0010796724818646908
+      ],
+      "quality": [
+        0.15708195277300263,
+        0.16538088346381952
+      ],
+      "delta": 0.008298930690816886,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 6,
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0016635206993669271,
+      "mse": [
+        0.0009061954915523529,
+        0.0009695377666503191
+      ],
+      "quality": [
+        0.4552544540640724,
+        0.41717721515621153
+      ],
+      "delta": -0.038077238907860855,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 6,
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.001200354192405939,
+      "mse": [
+        0.0010130167938768864,
+        0.0010368484072387218
+      ],
+      "quality": [
+        0.15606843356256506,
+        0.13621461582059635
+      ],
+      "delta": -0.019853817741968705,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 6,
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0015094520058482885,
+      "mse": [
+        0.0010135285556316376,
+        0.0009812512435019016
+      ],
+      "quality": [
+        0.3285453583785526,
+        0.3499288220492617
+      ],
+      "delta": 0.02138346367070909,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 6,
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0012037643464282155,
+      "mse": [
+        0.0007715956307947636,
+        0.000773464038502425
+      ],
+      "quality": [
+        0.3590143842653041,
+        0.3574622468281011
+      ],
+      "delta": -0.0015521374372029495,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 6,
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0010966587578877807,
+      "mse": [
+        0.0007571419700980186,
+        0.0007582207326777279
+      ],
+      "quality": [
+        0.30959200877006465,
+        0.30860832759125656
+      ],
+      "delta": -0.0009836811788080935,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 9,
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.011937467381358147,
+      "mse": [
+        0.008495630696415901,
+        0.008355828002095222
+      ],
+      "quality": [
+        0.2883221855179353,
+        0.30003343798502047
+      ],
+      "delta": 0.011711252467085154,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 9,
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.013590816408395767,
+      "mse": [
+        0.011193668469786644,
+        0.010986922308802605
+      ],
+      "quality": [
+        0.17637998090595042,
+        0.19159217675728435
+      ],
+      "delta": 0.015212195851333932,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 9,
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.015490591526031494,
+      "mse": [
+        0.011912435293197632,
+        0.011849075555801392
+      ],
+      "quality": [
+        0.230988999149637,
+        0.2350792068921732
+      ],
+      "delta": 0.0040902077425362116,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 9,
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.015937939286231995,
+      "mse": [
+        0.013390427455306053,
+        0.013214930891990662
+      ],
+      "quality": [
+        0.15983947392286857,
+        0.17085071949004138
+      ],
+      "delta": 0.011011245567172812,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    },
+    {
+      "group": 9,
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.015437674708664417,
+      "mse": [
+        0.011643081903457642,
+        0.011446831747889519
+      ],
+      "quality": [
+        0.24580080075641542,
+        0.25851321757252943
+      ],
+      "delta": 0.012712416816114014,
+      "output_parameters_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      }
+    }
+  ],
+  "calibrations": [
+    {
+      "group": 0,
+      "qh": 16,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": true,
+        "k": true,
+        "v": true
+      },
+      "rf_k": [
+        0,
+        0
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {},
+      "kt_mode": [
+        4,
+        4
+      ]
+    },
+    {
+      "group": 2,
+      "qh": 16,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {
+        "q": [
+          {
+            "path": "/temperature_gain",
+            "parent": "None",
+            "child": "tensor([1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000,\n        1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 0.9686])"
+          }
+        ]
+      },
+      "kt_mode": [
+        0,
+        0
+      ]
+    },
+    {
+      "group": 4,
+      "qh": 16,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {
+        "q": [
+          {
+            "path": "/temperature_gain",
+            "parent": "None",
+            "child": "tensor([1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 0.9724, 1.0000, 0.9952,\n        1.0108, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000])"
+          }
+        ]
+      },
+      "kt_mode": [
+        0,
+        0
+      ]
+    },
+    {
+      "group": 6,
+      "qh": 16,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {
+        "q": [
+          {
+            "path": "/temperature_gain",
+            "parent": "None",
+            "child": "tensor([1.0000, 0.9866, 1.0000, 1.0000, 1.0000, 1.0000, 0.9880, 0.9868, 1.0000,\n        1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 0.9981])"
+          }
+        ]
+      },
+      "kt_mode": [
+        0,
+        0
+      ]
+    },
+    {
+      "group": 9,
+      "qh": 16,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": false,
+        "k": true,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {
+        "q": [
+          {
+            "path": "/temperature_gain",
+            "parent": "None",
+            "child": "tensor([0.9563, 0.9613, 0.9233, 1.0000, 1.0000, 0.9404, 1.0000, 1.0000, 1.0000,\n        0.9013, 0.9269, 0.9366, 0.9325, 1.0000, 0.9574, 1.0000])"
+          }
+        ]
+      },
+      "kt_mode": [
+        0,
+        0
+      ]
+    }
+  ],
+  "timing": {
+    "435": {
+      "calibration": 1.5093245420139283,
+      "dynamic": 0.8467689575627446
+    },
+    "443": {
+      "calibration": 1.625126708066091,
+      "dynamic": 0.9551462907111272
+    }
+  },
+  "quotient": {
+    "_a430_fit": {
+      "calls": 0,
+      "seconds": 0.0,
+      "exceptions": [],
+      "accepted_heads": [],
+      "temperatures": [],
+      "changed_lv3": 0
+    },
+    "_ac_guard": {
+      "calls": 0,
+      "seconds": 0.0,
+      "exceptions": [],
+      "accepted_heads": [],
+      "temperatures": [],
+      "changed_lv3": 0
+    }
+  },
+  "validated_returns": 160,
+  "state_checks": 25,
+  "warnings": [
+    "Instrumented local timings, not Kunpeng online estimates.",
+    "Modeled paired bank or row-permuted dummy peers; online dummy generation is unknown."
+  ],
+  "summary": {
+    "cases": 25,
+    "parent_quality": 6.911735663577695,
+    "child_quality": 6.933532994682319,
+    "delta": 0.021797331104623674,
+    "better": 10,
+    "worse": 10,
+    "equal": 5,
+    "changed_role_cases": {
+      "q": 20,
+      "k": 0,
+      "v": 0
+    }
+  }
+}

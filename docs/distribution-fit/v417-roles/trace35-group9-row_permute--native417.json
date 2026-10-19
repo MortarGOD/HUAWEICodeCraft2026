@@ -1,0 +1,293 @@
+{
+  "version": 417,
+  "atom": "trace35-group9-row_permute",
+  "source_sha256": "bf26df17b8b91170931d40bcd1074cde37b94b30bc3c240ae011580e8084ad35",
+  "data_sha256": "523ac633d72e6d30ecdd300190bec396e74a12d7011af780c2aee235c8f0a224",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.011937467381358147,
+      "player_mse": 0.007830480113625526,
+      "quality": 0.34404175831686007
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.013590816408395767,
+      "player_mse": 0.010608791373670101,
+      "quality": 0.21941470954485937
+    },
+    {
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.015490591526031494,
+      "player_mse": 0.011446689255535603,
+      "quality": 0.26105538085490343
+    },
+    {
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.015937939286231995,
+      "player_mse": 0.012285687029361725,
+      "quality": 0.22915460971954332
+    },
+    {
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.015437674708664417,
+      "player_mse": 0.011457582004368305,
+      "quality": 0.2578168525640898
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "k": {
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "v": {
+          "heads": 16
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": false,
+          "accepted": false
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 1,
+          "error": false,
+          "hold_base": 0.009762889705598354
+        },
+        "TEMP_DEBUG": {
+          "heads": 6,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 8,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 1,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "k": {
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "v": {
+          "heads": 16
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": false,
+          "accepted": false
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 1,
+          "error": false,
+          "hold_base": 0.009618151932954788
+        },
+        "TEMP_DEBUG": {
+          "heads": 8,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 8,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 0,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "kvh": 2,
+          "gq": 1,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "k": {
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1,
+          "rot": 0,
+          "canonical_coordinates": true,
+          "canonical_metric_fallback": false
+        },
+        "v": {
+          "heads": 16
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": false,
+          "accepted": false
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 2,
+          "error": false,
+          "hold_base": 0.009824284352362156
+        },
+        "TEMP_DEBUG": {
+          "heads": 9,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "eligible_heads": 2
+        },
+        "VR_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 2
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 8,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 1,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    }
+  },
+  "calibration_seconds": 0.9835374159738421,
+  "mean_quality": 0.2622966622000512,
+  "wall_seconds": 1.0886567080160603,
+  "experimental_override": "native417",
+  "limits": "Single-role canonicalization can break continuous coordinate compatibility; diagnostic only, never a candidate or fitting label."
+}

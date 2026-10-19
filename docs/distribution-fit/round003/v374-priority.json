@@ -1,0 +1,22 @@
+{
+  "atom": "trace25-group40-correlated_noise",
+  "decision": "priority full-matrix fill",
+  "evidence_from_complete_matrix": {
+    "from": 322,
+    "research_parent": 324,
+    "to": 374,
+    "parent_attention_proxy": true,
+    "online_total_delta": 226.0,
+    "linear_delta": 0.0,
+    "target": 226.0,
+    "tolerance": 11.3,
+    "direction_required": true,
+    "predicted": -6.4041536759707635e-06,
+    "residual": -226.00000640415368,
+    "passed": false,
+    "support_min": -126.7849748179051,
+    "support_max": 206.58908456335848
+  },
+  "scheduling": "Main round003 driver was at trace25-group16-row_permute; intervening group24/32 atoms remain. Priority job fills the later group40 atom and main driver will reuse completed cells.",
+  "limits": "Necessary interval coverage only; joint feasibility still unproven."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 504,
+  "parent": 501,
+  "parent_sha256": "0cae5cf67ff1526d2367e890bc5d0ef62e5bb610b97e88f2a59619ee8b5e137f",
+  "patch_summary": "Double the Q/K lattice refinement sweeps now that the guiding Hessian is fp32",
+  "source_sha256": "fee438362028e01aca4e572e2ac1149f11fbb0391a1638192c0e8aca40ec537e",
+  "archive_sha256": "91fdd2b790c7e182c93a9c72f81a10495a79bebcaff75e438abe2cd84e0d03f0",
+  "archive_members": [
+    "solution.py"
+  ]
+}

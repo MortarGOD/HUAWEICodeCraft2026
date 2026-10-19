@@ -1,0 +1,372 @@
+{
+  "round": 39,
+  "atoms": [
+    {
+      "id": "trace35-group9-anisotropy1",
+      "path": "local_distribution_fit/round039/trace35-group9-anisotropy1.pt",
+      "sha256": "ec102732277a01b849779ff1b01296313c536811d9f6b4dacd9b3bf2978432f9",
+      "seed": 2026091009,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 9,
+      "profile": {},
+      "mechanism_strength": 1,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        }
+      ]
+    },
+    {
+      "id": "trace35-group9-anisotropy4",
+      "path": "local_distribution_fit/round039/trace35-group9-anisotropy4.pt",
+      "sha256": "c9432d90bf41cf53d424c9e1e6a506c05b8305ce418d36af98795646c174f696",
+      "seed": 2026091009,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 9,
+      "profile": {},
+      "mechanism_strength": 4,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0004837343585677445
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007470048731192946
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0004718442214652896
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0004222778952680528
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003414453531149775
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0005472478223964572
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0011985356686636806
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0004321150772739202
+        }
+      ]
+    },
+    {
+      "id": "trace35-group9-anisotropy16",
+      "path": "local_distribution_fit/round039/trace35-group9-anisotropy16.pt",
+      "sha256": "42c7622ca0f57d2266149e78d62bb15ac663795c0c9db9ff511a8598a338e42c",
+      "seed": 2026091009,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 9,
+      "profile": {},
+      "mechanism_strength": 16,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00042713413131423295
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007783995242789388
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00048555241664871573
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00040780348354019225
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.000351748603861779
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0005306099192239344
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0012922463938593864
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003610447165556252
+        }
+      ]
+    },
+    {
+      "id": "trace25-group40-anisotropy1",
+      "path": "local_distribution_fit/round039/trace25-group40-anisotropy1.pt",
+      "sha256": "2399e18591b3f7a20849adba3fe72d63e8c18172ac5e90e6ef6203ac375af58e",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 40,
+      "profile": {},
+      "mechanism_strength": 1,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0
+        }
+      ]
+    },
+    {
+      "id": "trace25-group40-anisotropy4",
+      "path": "local_distribution_fit/round039/trace25-group40-anisotropy4.pt",
+      "sha256": "7bd00465610420d0f1ec83375e3523e77db7960d2f7d7f716adacd5808b601c2",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 40,
+      "profile": {},
+      "mechanism_strength": 4,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00034147052792832255
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007827762747183442
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003212714509572834
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003537209704518318
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0006106711807660758
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00028856282006017864
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0006036533741280437
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003860291908495128
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0005959655973128974
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007951419102028012
+        }
+      ]
+    },
+    {
+      "id": "trace25-group40-anisotropy16",
+      "path": "local_distribution_fit/round039/trace25-group40-anisotropy16.pt",
+      "sha256": "eb87719248680e32461a17104f07d55294126922dc225ed89d8f7ab39be5695b",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 40,
+      "profile": {},
+      "mechanism_strength": 16,
+      "reference_checks": [
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00033948459895327687
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007846804219298065
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00031795469112694263
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00035479830694384873
+        },
+        {
+          "phase": "calib",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0006088732625357807
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.00032021664083004
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0006050652009434998
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0003821577993221581
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0006015670951455832
+        },
+        {
+          "phase": "test",
+          "continuous_mse": 0.0,
+          "encoding_mse": 0.0007922660443000495
+        }
+      ]
+    }
+  ],
+  "limits": "Reciprocal QK scaling preserves pre-encoding product; NVFP4 re-encoding can change inputs, explicitly measured. Fixed V, fixed source, no outcome-guided strengths. Mechanism only, no fitting promotion."
+}

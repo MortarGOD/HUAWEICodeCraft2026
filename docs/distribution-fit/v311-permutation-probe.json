@@ -1,0 +1,752 @@
+{
+  "summary": {
+    "0": {
+      "cases": 24,
+      "parent_non_equivariant": 0,
+      "child_non_equivariant": 24,
+      "first_hurt": 24,
+      "first_hurt_after_reverse": 0
+    },
+    "0.03": {
+      "cases": 24,
+      "parent_non_equivariant": 0,
+      "child_non_equivariant": 24,
+      "first_hurt": 24,
+      "first_hurt_after_reverse": 5
+    },
+    "1": {
+      "cases": 24,
+      "parent_non_equivariant": 0,
+      "child_non_equivariant": 20,
+      "first_hurt": 7,
+      "first_hurt_after_reverse": 4
+    }
+  },
+  "cases": [
+    {
+      "seed": 0,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 78,
+      "original_first_delta": 0.01468658447265625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 62,
+      "original_first_delta": 0.01030731201171875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 0,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.00030517578125
+    },
+    {
+      "seed": 0,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 422,
+      "original_first_delta": 0.033618927001953125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 200,
+      "original_first_delta": 0.01853179931640625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 8,
+      "original_first_delta": 0.0001068115234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0008544921875
+    },
+    {
+      "seed": 0,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 904,
+      "original_first_delta": 0.033618927001953125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 452,
+      "original_first_delta": 0.0247802734375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 27,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 928,
+      "original_first_delta": 0.033618927001953125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 594,
+      "original_first_delta": 0.0289459228515625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 0,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 116,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.001220703125
+    },
+    {
+      "seed": 1,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 54,
+      "original_first_delta": 0.011989593505859375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 20,
+      "original_first_delta": 0.0067291259765625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 4,
+      "original_first_delta": 0.00042724609375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 294,
+      "original_first_delta": 0.032283782958984375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 176,
+      "original_first_delta": 0.02734375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 10,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 656,
+      "original_first_delta": 0.032283782958984375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 380,
+      "original_first_delta": 0.03076171875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 52,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 672,
+      "original_first_delta": 0.032283782958984375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 524,
+      "original_first_delta": 0.02606201171875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 1,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 105,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 7.62939453125e-05
+    },
+    {
+      "seed": 2,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 32,
+      "original_first_delta": 0.0009918212890625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 12,
+      "original_first_delta": 0.0003814697265625,
+      "reversed_original_first_delta": 0.0003814697265625,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 2,
+      "original_first_delta": 0.0006103515625,
+      "reversed_original_first_delta": 0.00030517578125,
+      "original_last_delta": 0.001068115234375
+    },
+    {
+      "seed": 2,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 300,
+      "original_first_delta": 0.010833740234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 90,
+      "original_first_delta": 0.0020599365234375,
+      "reversed_original_first_delta": 0.000152587890625,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 8,
+      "original_first_delta": -0.00030517578125,
+      "reversed_original_first_delta": -0.00030517578125,
+      "original_last_delta": 0.0005340576171875
+    },
+    {
+      "seed": 2,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 560,
+      "original_first_delta": 0.010833740234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 302,
+      "original_first_delta": 0.0049591064453125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 24,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 7.62939453125e-05
+    },
+    {
+      "seed": 2,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 560,
+      "original_first_delta": 0.010833740234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 587,
+      "original_first_delta": 0.006866455078125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 2,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 110,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 38,
+      "original_first_delta": 0.01007080078125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 34,
+      "original_first_delta": 0.00946044921875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 0,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.001495361328125
+    },
+    {
+      "seed": 3,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 244,
+      "original_first_delta": 0.023651123046875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 90,
+      "original_first_delta": 0.0070953369140625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 16,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0003814697265625
+    },
+    {
+      "seed": 3,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 434,
+      "original_first_delta": 0.040130615234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 336,
+      "original_first_delta": 0.011749267578125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 42,
+      "original_first_delta": 0.0006103515625,
+      "reversed_original_first_delta": 0.00030517578125,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 480,
+      "original_first_delta": 0.040130615234375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 626,
+      "original_first_delta": 0.01922607421875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 3,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 117,
+      "original_first_delta": 0.040283203125,
+      "reversed_original_first_delta": 0.0390625,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 112,
+      "original_first_delta": 0.013858795166015625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 26,
+      "original_first_delta": 0.001682281494140625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.000732421875
+    },
+    {
+      "seed": 4,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 0,
+      "original_first_delta": -0.000640869140625,
+      "reversed_original_first_delta": -0.000640869140625,
+      "original_last_delta": 0.0003662109375
+    },
+    {
+      "seed": 4,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 502,
+      "original_first_delta": 0.035915374755859375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 226,
+      "original_first_delta": 0.011669158935546875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 2,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 936,
+      "original_first_delta": 0.035915374755859375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 432,
+      "original_first_delta": 0.017009735107421875,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0009765625
+    },
+    {
+      "seed": 4,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 42,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 1008,
+      "original_first_delta": 0.035915374755859375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 568,
+      "original_first_delta": 0.016021728515625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 4,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 122,
+      "original_first_delta": -0.00042724609375,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 4,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 68,
+      "original_first_delta": 0.00644683837890625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 4,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 24,
+      "original_first_delta": 0.00229644775390625,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 4,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 0,
+      "original_first_delta": 0.0003814697265625,
+      "reversed_original_first_delta": 0.0003814697265625,
+      "original_last_delta": 7.62939453125e-05
+    },
+    {
+      "seed": 5,
+      "tokens": 16,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 408,
+      "original_first_delta": 0.01239776611328125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 16,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 154,
+      "original_first_delta": 0.00315093994140625,
+      "reversed_original_first_delta": 2.6702880859375e-05,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 16,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 10,
+      "original_first_delta": -0.00030517578125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0003662109375
+    },
+    {
+      "seed": 5,
+      "tokens": 64,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 644,
+      "original_first_delta": 0.01239776611328125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 64,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 333,
+      "original_first_delta": 0.02387237548828125,
+      "reversed_original_first_delta": 0.003978729248046875,
+      "original_last_delta": 0.003814697265625
+    },
+    {
+      "seed": 5,
+      "tokens": 64,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 24,
+      "original_first_delta": 0.0,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 256,
+      "noise": 0,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 656,
+      "original_first_delta": 0.01239776611328125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 256,
+      "noise": 0.03,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 392,
+      "original_first_delta": 0.022724151611328125,
+      "reversed_original_first_delta": 0.0005340576171875,
+      "original_last_delta": 0.0
+    },
+    {
+      "seed": 5,
+      "tokens": 256,
+      "noise": 1,
+      "parent_permutation_changes": 0,
+      "child_permutation_changes": 94,
+      "original_first_delta": 0.001220703125,
+      "reversed_original_first_delta": 0.0,
+      "original_last_delta": 0.0
+    }
+  ],
+  "source_hashes": {
+    "310": "522c6f178cf3bb4ac7f818d2999b83680c467f94a7a40557ffdd4449ad396570",
+    "311": "daf8a55b1b3583574cde02f75662bb6e24391c311e9b3a18b19049c0916b49d8"
+  },
+  "limits": "Reversal fixed before measurements. V-only diagnostic; no QK quantization, score fitting, or claim about online token order."
+}

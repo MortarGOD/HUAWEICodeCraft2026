@@ -1,0 +1,124 @@
+{
+  "round": 12,
+  "atoms": [
+    {
+      "id": "sink-input-seed2026091600",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090804,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091601",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091601.pt",
+      "sha256": "3ceee5528d779d61822461ca5cf046c25993f0383dd10568c9fd9bc64aab27a2",
+      "seed": 2026090804,
+      "input_seed": 2026091601,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091602",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091602.pt",
+      "sha256": "df032e4aad1662af523107d0edc8dcb3401ba8bf5d7d2d4f8cc83f7d206de927",
+      "seed": 2026090804,
+      "input_seed": 2026091602,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091603",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091603.pt",
+      "sha256": "6dfd285a12125da5cb99d45020ed88d64f848c5db86bdbbd1a3caa20d4d65c4a",
+      "seed": 2026090804,
+      "input_seed": 2026091603,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    310,
+    314,
+    318,
+    319,
+    320,
+    322,
+    333,
+    343,
+    345,
+    364,
+    387,
+    388,
+    400,
+    412,
+    415,
+    416,
+    419,
+    429,
+    435,
+    436,
+    440
+  ],
+  "selection_evidence": "Closest fixed-certificate support is a sink population; first decoy seed mutation changes gap only from 6.705 to 6.614. Broaden true input seeds while keeping generator statistics and decoy seed fixed.",
+  "limits": "Adaptive supervised synthetic input search. Every version sees the same population; no individual-version target offsets."
+}

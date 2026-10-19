@@ -1,0 +1,40 @@
+{
+  "method": "AST Constant extraction, base64 decode and optional gzip decompress only. No candidate imports or exec.",
+  "payloads": [
+    {
+      "source_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/solution.py",
+      "source_variable": "_CORRECTED_R2QK6_SOURCE",
+      "source_line": 3964,
+      "decoding": "base64",
+      "decoded_bytes": 71468,
+      "decoded_sha256": "6ce14e81a49e8d9e5cbd70bb5e57383c360a96df0999fff2aaa43c146443d87b",
+      "decoded_ast_sha256": "31f92fe8ce86f55f34526f2ceb442ca290914dae3dac7ee07066536e6c78c1e5",
+      "executed": false,
+      "saved_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/test分支审计-20260907/decoded-backends/corrected_r2qk6_linear.py"
+    },
+    {
+      "source_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/solution.py",
+      "source_variable": "_RUNTIME_BACKEND_PAYLOAD",
+      "source_line": 4004,
+      "decoding": "base64+gzip",
+      "decoded_bytes": 107099,
+      "decoded_sha256": "96a9ea8af3789387db7b1b275f851a3af0ad1c5623f25f1bd4176d7e5be2b558",
+      "decoded_ast_sha256": "d529e269ee9918ee0660f0b69522e0d7131b43eb75c37f02e44f39f56f5890b9",
+      "executed": false,
+      "ast_equal_external_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/runtime_backend.py",
+      "external_sha256": "8b0086c1c1c4233f5fb4885bfd8ee9494a92d352f76779e444fa678c5e3b3bc8"
+    },
+    {
+      "source_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/solution.py",
+      "source_variable": "_STRONG_ATTENTION_BACKEND_PAYLOAD",
+      "source_line": 4012,
+      "decoding": "base64+gzip",
+      "decoded_bytes": 139363,
+      "decoded_sha256": "f7bfcbf2cbfb191b3f297bb9709dc3b07a749157e1e12cdc05a5a9a301846494",
+      "decoded_ast_sha256": "83d176219a1c9384f5b8b11fe0559fc2b69f57859e6a17e7cab48dc73c062be3",
+      "executed": false,
+      "ast_equal_external_path": "/Users/ee/Code/2026-huawei-alogorithm/docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/strong_attention_backend.py",
+      "external_sha256": "d879fb6f757e13473463b2a2b5bdcc73c7501457b8d0bcf38e1a8aa3cd702789"
+    }
+  ]
+}

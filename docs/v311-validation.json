@@ -1,0 +1,36 @@
+{
+  "candidate": "solution/solution_v311.py",
+  "sha256": "daf8a55b1b3583574cde02f75662bb6e24391c311e9b3a18b19049c0916b49d8",
+  "entry_equal_to_candidate": true,
+  "mini_self_check": {
+    "passed": 22,
+    "total": 22
+  },
+  "covariance_bank_self_check": {
+    "passed": 860,
+    "total": 860
+  },
+  "linear_per_case_equality_to_v310": {
+    "passed": 50,
+    "total": 50
+  },
+  "prototype_parameter_equality_cases": 50,
+  "attention_delta_raw_vs_v310": 34.4627453476853,
+  "attention_case_wins_losses_ties": [
+    200,
+    0,
+    50
+  ],
+  "attention_group_wins": 50,
+  "attention_seconds_v310": 50.63,
+  "attention_seconds_v311": 52.54,
+  "sharp_attention_stress_regression_observed": true,
+  "conditional_cross_algorithm_mapping": 27233,
+  "reliably_calibrated_online_prediction": null,
+  "actual_online_score": 14979,
+  "actual_online_seconds": 244,
+  "goal_21000_verified": false,
+  "actual_online_all_cases_passed": true,
+  "online_pass_confirmation": "User explicitly confirmed all cases PASS on 2026-09-03",
+  "online_loss_vs_v310_is_accuracy_only": true
+}

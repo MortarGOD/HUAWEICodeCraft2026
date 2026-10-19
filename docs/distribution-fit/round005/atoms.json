@@ -1,0 +1,91 @@
+{
+  "round": 5,
+  "atoms": [
+    {
+      "id": "rank8-strength4-length128",
+      "path": "local_distribution_fit/round005/rank8-strength4-length128.pt",
+      "sha256": "6c00038841c1b9aa617cad50130973afdfd05bf0eb75765f96c161e2bc35302f",
+      "seed": 2026091200,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 4,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "rank8-strength16-length128",
+      "path": "local_distribution_fit/round005/rank8-strength16-length128.pt",
+      "sha256": "90a1fdbcb8dd315c00eaae247c1565c030803053b90e7acb8feb601567ecf3f6",
+      "seed": 2026091201,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "rank32-strength16-length128",
+      "path": "local_distribution_fit/round005/rank32-strength16-length128.pt",
+      "sha256": "51fa0fb0d45738dbcc75253e90134c1cbe916705fcdbf149e2bb0a7886809438",
+      "seed": 2026091202,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 32,
+        "structured_strength": 16,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "rank8-strength16-length32",
+      "path": "local_distribution_fit/round005/rank8-strength16-length32.pt",
+      "sha256": "ec0461b78d7188c04f3e72e3e7e09e0eb5a67d012cc2638e96193b0d2215fc7e",
+      "seed": 2026091203,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          32,
+          32,
+          32,
+          32,
+          32
+        ]
+      }
+    }
+  ],
+  "selection_evidence": "v367 isolated diagnostics found missing GPTQ states or zero accepted heads in first projected population. Test stronger persistent channel covariance and fixed lengths without forcing algorithm gates.",
+  "limits": "Synthetic checkpoint-projected training hypotheses; candidate outputs are not used in generation; no assertion that GPTQ gates activate until measured."
+}

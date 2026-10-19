@@ -1,0 +1,130 @@
+{
+  "complete": true,
+  "checks": 36,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 2.076023291971069,
+        "fast": 1.775622084038332
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 2.4182712500332855,
+        "fast": 2.3654122500447556
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 2,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 2.599421249993611,
+        "fast": 2.522960917034652
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 5,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.8589682080200873,
+        "fast": 1.7835803750203922
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 2.159163709031418,
+        "fast": 2.064159750007093
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 2.35017562500434,
+        "fast": 2.26048337505199
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.3373775410000235,
+        "fast": 1.3366465840372257
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 1,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.4502450000145473,
+        "fast": 1.4114473329973407
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 2,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.4189777090214193,
+        "fast": 1.339146875019651
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.6808805000036955,
+        "fast": 1.6221180410357192
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 26,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.7381398750003427,
+        "fast": 1.7247495829942636
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 49,
+      "state_equal": true,
+      "max_score_delta": 0.0,
+      "calibration_seconds": {
+        "slow": 1.7574437499861233,
+        "fast": 1.7869392079883255
+      }
+    }
+  ],
+  "state_equal_groups": 12,
+  "slow_seconds": 22.845087709079962,
+  "fast_seconds": 21.99326637526974,
+  "warning": "Paired local 4-thread calibration; not online runtime evidence."
+}

@@ -1,0 +1,104 @@
+{
+  "version": 284,
+  "atom": "trace35-group3-correlated_noise",
+  "source_sha256": "1769a0a7c98443ba50e70d20d6699d4f91bcf6236cb005998ba0a04b04573840",
+  "data_sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0011848255526274443,
+      "player_mse": 0.07236965745687485,
+      "quality": -60.08043272394777
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.001357733504846692,
+      "player_mse": 0.06248658150434494,
+      "quality": -45.022714532186924
+    },
+    {
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0011894386261701584,
+      "player_mse": 0.07117080688476562,
+      "quality": -58.835627764945386
+    },
+    {
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0009587557287886739,
+      "player_mse": 0.06826820969581604,
+      "quality": -70.20500837274633
+    },
+    {
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0010705672902986407,
+      "player_mse": 0.0672476515173912,
+      "quality": -61.81496934081752
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "hadamard": 256,
+          "metric_blend": 0.05,
+          "predictor_enabled": false,
+          "predictor_nmse": 1.0206817388534546,
+          "predicted_k_heads": 2
+        },
+        "k": {
+          "hadamard": 256,
+          "predictor_enabled": false,
+          "predictor_nmse": 0.9713996052742004
+        },
+        "v": {}
+      },
+      "debug": {}
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "hadamard": 256,
+          "metric_blend": 0.05,
+          "predictor_enabled": false,
+          "predictor_nmse": 1.0212702751159668,
+          "predicted_k_heads": 2
+        },
+        "k": {
+          "hadamard": 256,
+          "predictor_enabled": false,
+          "predictor_nmse": 0.9711090326309204
+        },
+        "v": {}
+      },
+      "debug": {}
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "hadamard": 256,
+          "metric_blend": 0.05,
+          "predictor_enabled": false,
+          "predictor_nmse": 1.0235333442687988,
+          "predicted_k_heads": 2
+        },
+        "k": {
+          "hadamard": 256,
+          "predictor_enabled": false,
+          "predictor_nmse": 0.9726300239562988
+        },
+        "v": {}
+      },
+      "debug": {}
+    }
+  },
+  "calibration_seconds": 0.1100777080282569,
+  "mean_quality": -59.19175054692879,
+  "wall_seconds": 0.42277220799587667
+}

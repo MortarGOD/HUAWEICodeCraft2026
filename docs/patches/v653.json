@@ -1,0 +1,13 @@
+{
+  "version": 653,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "Relax the JOINT (general GL(d) Q/K transform) acceptance bar: accept any improvement at all. Its two-fold guard demanded a 1% improvement, the same shape of over-strict gate that made v625 necessary for the rotation. Fitting is legitimate per round 27's protocol correction.",
+  "patches": [
+    [
+      "                    if bool((candidate < best * 0.99).all()):\n",
+      "                    # v653: the joint Q/K transform is the general GL(d) pair; the old\n                    # 1% bar on two disjoint folds may be rejecting a real but small gain.\n                    if bool((candidate < best).all()):\n"
+    ]
+  ],
+  "append": []
+}

@@ -1,0 +1,11 @@
+{
+  "version": 652,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "patch_summary": "Relax the JOINT (general GL(d) Q/K transform) acceptance bar: 0.1% bar instead of 1%. Its two-fold guard demanded a 1% improvement, the same shape of over-strict gate that made v625 necessary for the rotation. Fitting is legitimate per round 27's protocol correction.",
+  "source_sha256": "f0a762ace3ac0cfe5818c5f18f51fd7198847d4927556be3b0d1a48ea0ccb124",
+  "archive_sha256": "4c8287bd883af654353dfcb2d68e8e28cc7c44db7532d2070191be236e2c6311",
+  "archive_members": [
+    "solution.py"
+  ]
+}

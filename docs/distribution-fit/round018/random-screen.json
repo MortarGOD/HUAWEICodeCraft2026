@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round018/v-token-random",
+      "test": 3,
+      "tokens": 128,
+      "price": 105.3301814809351,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -140.46907198165806
+    },
+    {
+      "population": "round018/v-token-random",
+      "test": 4,
+      "tokens": 512,
+      "price": 76.62573239457174,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -169.17352106802142
+    },
+    {
+      "population": "round018/v-token-random",
+      "test": 2,
+      "tokens": 32,
+      "price": -906.7956488754478,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -1152.594902338041
+    },
+    {
+      "population": "round018/v-token-random",
+      "test": 1,
+      "tokens": 8,
+      "price": -16496.670301338254,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -16742.469554800846
+    },
+    {
+      "population": "round018/v-token-random",
+      "test": 0,
+      "tokens": 4,
+      "price": -119955.25606473604,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -120201.05531819863
+    }
+  ],
+  "promote": false,
+  "limits": "Fixed 460-column certificate only."
+}

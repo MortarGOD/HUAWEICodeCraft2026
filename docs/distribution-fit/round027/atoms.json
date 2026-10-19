@@ -1,0 +1,104 @@
+{
+  "round": 27,
+  "atoms": [
+    {
+      "id": "m1-sink-block_resample-direction-seedplus1",
+      "path": "local_distribution_fit/round001/m1-sink.pt",
+      "sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0",
+      "seed": 2026090905,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round001/m1-sink-block_resample"
+    },
+    {
+      "id": "m1-sink-block_resample-direction-seedplus2",
+      "path": "local_distribution_fit/round001/m1-sink.pt",
+      "sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0",
+      "seed": 2026090906,
+      "profile": {
+        "tail": 8,
+        "sink": 8
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round001/m1-sink-block_resample"
+    },
+    {
+      "id": "sink-input-seed2026091602-direction-seedplus1",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091602.pt",
+      "sha256": "df032e4aad1662af523107d0edc8dcb3401ba8bf5d7d2d4f8cc83f7d206de927",
+      "seed": 2026090805,
+      "input_seed": 2026091602,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_atom": "round012/sink-input-seed2026091602"
+    },
+    {
+      "id": "sink-input-seed2026091602-direction-seedplus2",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091602.pt",
+      "sha256": "df032e4aad1662af523107d0edc8dcb3401ba8bf5d7d2d4f8cc83f7d206de927",
+      "seed": 2026090806,
+      "input_seed": 2026091602,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_atom": "round012/sink-input-seed2026091602"
+    }
+  ],
+  "required_versions": [
+    322,
+    363,
+    412,
+    413,
+    414
+  ],
+  "selection_evidence": "Only two measured source populations produced positive v363 minus parent responses; perturb their calibration decoy seeds while keeping shared real inputs fixed. Screen remaining directions plus fragile v413 before full evaluation.",
+  "limits": "Adaptive support search; no claim that a small subset proves all directions. One immutable input/seed configuration per atom shared by all versions."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 642,
+  "parent": 641,
+  "parent_sha256": "046e60c8285bbd6beb2f55cdb32caaa558b86428100002635efffaac6860b61d",
+  "patch_summary": "v641 with sign released. v641 clamped each code to its deployed sign's side of the range, so it could not cross zero; sign is a returned parameter, so the legal set is the whole +-1.75*unit interval. Rewriting sign with mant reaches the remainder of the identity optimum that the probe's symmetric-clamp oracle already counted (the gap between v641's 92% capture and 100%).",
+  "source_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "archive_sha256": "ccefa565d1e46283b7463a1657f11950aa3ec77e0f41c93345012c71d4f9acc7",
+  "archive_members": [
+    "solution.py"
+  ]
+}

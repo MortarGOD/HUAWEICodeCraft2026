@@ -1,0 +1,87 @@
+{
+  "cases": [
+    {
+      "population": "round019/trace25-group4-row_permute",
+      "test": 4,
+      "tokens": 4,
+      "price": 21332.64070612957,
+      "required_lower_bound": 245.79925346259316,
+      "margin": 21086.841452666977
+    },
+    {
+      "population": "round019/trace25-group4-row_permute",
+      "test": 3,
+      "tokens": 4,
+      "price": -4253.287934112522,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -4499.0871875751145
+    },
+    {
+      "population": "round019/trace25-group4-row_permute",
+      "test": 1,
+      "tokens": 4,
+      "price": -20904.146035404206,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -21149.9452888668
+    },
+    {
+      "population": "round019/trace25-group4-row_permute",
+      "test": 2,
+      "tokens": 4,
+      "price": -33847.55491862877,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -34093.35417209136
+    },
+    {
+      "population": "round019/trace25-group4-row_permute",
+      "test": 0,
+      "tokens": 4,
+      "price": -42270.69311565952,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -42516.49236912211
+    },
+    {
+      "population": "round019/trace25-group4-correlated_noise",
+      "test": 3,
+      "tokens": 4,
+      "price": -97983.3207626613,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -98229.1200161239
+    },
+    {
+      "population": "round019/trace25-group4-correlated_noise",
+      "test": 0,
+      "tokens": 4,
+      "price": -159265.11247450803,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -159510.9117279706
+    },
+    {
+      "population": "round019/trace25-group4-correlated_noise",
+      "test": 1,
+      "tokens": 4,
+      "price": -173295.4809734935,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -173541.2802269561
+    },
+    {
+      "population": "round019/trace25-group4-correlated_noise",
+      "test": 4,
+      "tokens": 4,
+      "price": -187038.19327404108,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -187283.99252750367
+    },
+    {
+      "population": "round019/trace25-group4-correlated_noise",
+      "test": 2,
+      "tokens": 4,
+      "price": -216473.12905008424,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -216718.92830354683
+    }
+  ],
+  "promoted_population": "round019/trace25-group4-row_permute",
+  "certificate_columns": 460,
+  "limits": "Fixed certificate screen, not joint feasibility; both protocol outcomes retained."
+}

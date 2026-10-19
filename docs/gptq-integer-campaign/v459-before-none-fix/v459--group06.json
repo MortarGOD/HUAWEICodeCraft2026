@@ -1,0 +1,27 @@
+{
+  "version": 459,
+  "atom": "group06",
+  "source_sha256": "5557a464b3cfb5760a674a8a1116855fc27ee196d92f347eced0ef4ab6280edf",
+  "data_sha256": "b21f59363ef7f773274d24db524f6b4926919062494ea14edea073b0decd6b7e",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.004920582287013531,
+      "player_mse": 0.002265967195853591,
+      "quality": 0.5394920634019346
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.00154421990737319,
+      "player_mse": 0.0009505976922810078,
+      "quality": 0.3844155953810807
+    }
+  ],
+  "format_checks": 6,
+  "calibration_seconds": 4.5175834589172155,
+  "mean_quality": 0.46195382939150764,
+  "wall_seconds": 4.741350666969083
+}

@@ -1,0 +1,178 @@
+{
+  "torch_version": "2.13.0",
+  "dtype": "torch.float32",
+  "shape": [
+    2,
+    256,
+    256
+  ],
+  "fixed_u_trials": [
+    {
+      "index": 0,
+      "original_relative_error": 0.4504098260326237,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 1,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 2,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 3,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 4,
+      "original_relative_error": 0.1312768687635814,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 5,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 6,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 7,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 8,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 9,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 10,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 11,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 12,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 13,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 14,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 15,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 16,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 17,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 18,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    },
+    {
+      "index": 19,
+      "original_relative_error": 2.6052377590807235e-07,
+      "safe_relative_error": 2.439758345820204e-07
+    }
+  ],
+  "parent_repeats": {
+    "original": [
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 0,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      }
+    ],
+    "triangular_solve": [
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      },
+      {
+        "balance_heads": 1,
+        "kernel_heads": 2,
+        "error": false,
+        "hold_base": 5.150140350451693e-05
+      }
+    ]
+  },
+  "warning": "Local diagnostic; safe recovery patched only this isolated module. No claim about Linux online runtime and no submission changes."
+}

@@ -1,0 +1,90 @@
+{
+  "version": 424,
+  "parent": 422,
+  "parent_online_result": {
+    "score": 21298,
+    "seconds": 257
+  },
+  "source": "solution/solution_v424.py",
+  "source_sha256": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8",
+  "parent_sha256": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+  "archive": "solution/submission_v424.zip",
+  "archive_sha256": "966c83e9def6f4bc6f660c8b94f3df75c914176a3d4d3b0048c33ba48dfb24eb",
+  "archive_members": [
+    "solution.py"
+  ],
+  "code_publish_commit": "0ea98fecc3562d26b9a8610e60f009ae4ca0deb7",
+  "self_check": {
+    "interfaces": 6,
+    "format_passed": 22,
+    "format_failed": 0
+  },
+  "mechanism_tests": 11,
+  "online_status": "user confirmed v424=21284/260 after correcting initial version label; -14 points/+3 seconds vs v422; do not inherit",
+  "local_validation": {
+    "status": "complete after code push",
+    "report": "docs/v424-report.md",
+    "results": {
+      "v424-linear-paired": {
+        "score_comparison": {
+          "parent": 37.66699625510222,
+          "candidate": 37.652674410588006,
+          "delta": -0.014321844514213922
+        },
+        "case_outcomes": {
+          "improved": 16,
+          "worsened": 9,
+          "equal_within_tolerance": 25,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 160,
+        "transform_coverage": {
+          "groups_with_changed_transform": 5,
+          "changed_blocks": 48,
+          "compared_blocks": 48,
+          "interpretation": "Relative to each independently calibrated parent transform, not relative to identity."
+        },
+        "total_interface_seconds": {
+          "422": 24.208719958201982,
+          "424": 30.262885252479464
+        },
+        "learner_seconds": 0.5176714580738917
+      },
+      "v424-linear-alternate": {
+        "score_comparison": {
+          "parent": 12.420766248110315,
+          "candidate": 12.483960640057184,
+          "delta": 0.06319439194686893
+        },
+        "case_outcomes": {
+          "improved": 16,
+          "worsened": 9,
+          "equal_within_tolerance": 0,
+          "score_tolerance": 1e-12
+        },
+        "validation_checks": 80,
+        "transform_coverage": {
+          "groups_with_changed_transform": 5,
+          "changed_blocks": 48,
+          "compared_blocks": 48,
+          "interpretation": "Relative to each independently calibrated parent transform, not relative to identity."
+        },
+        "total_interface_seconds": {
+          "422": 16.847215667483397,
+          "424": 16.951362917665392
+        },
+        "learner_seconds": 0.38296704180538654
+      }
+    },
+    "overhead_report": "docs/v424-learning-overhead.json",
+    "disposition": "Local results were mixed; latest user-confirmed v424 online result is 21284/260, below v422=21298/257. Keep v422 as parent; do not inherit this learned rotation."
+  },
+  "online_result": {
+    "score": 21284,
+    "seconds": 260,
+    "reported_on": "2026-09-07",
+    "comparison_to_v422": "-14 points, +3 seconds",
+    "version_confirmed_by_user": true,
+    "note": "The initial message named v423; user explicitly corrected it to v424."
+  }
+}

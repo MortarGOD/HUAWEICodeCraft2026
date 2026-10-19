@@ -1,0 +1,15 @@
+{
+  "version": 500,
+  "parent": 441,
+  "parent_sha256": "b570f46dc7d8b38eedffdc579eb849f647dced2f8c928df731083a9497170fd4",
+  "cores": [
+    "tools/gptq_covariance_core.py",
+    "tools/pv_full_metric_core.py",
+    "tools/learned_rotation_core.py"
+  ],
+  "source_sha256": "7b2c3f342059545e122e4e781f05d1ea82ffa3c0c1b691bdfc510bdf080972c6",
+  "archive_sha256": "a366597a524e50485ca12825d96dba26f23a5328f1f8d4a18455be4abe39d4da",
+  "archive_members": [
+    "solution.py"
+  ]
+}

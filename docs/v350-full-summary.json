@@ -1,0 +1,552 @@
+{
+  "complete": true,
+  "buckets": {
+    "all": {
+      "cases": 250,
+      "delta": 0.36832463671169224,
+      "up": 30,
+      "down": 0,
+      "same": 220
+    },
+    "source:Qwen/Qwen3.6-35B-A3B": {
+      "cases": 110,
+      "delta": 0.20488271808850744,
+      "up": 20,
+      "down": 0,
+      "same": 90
+    },
+    "length:128": {
+      "cases": 50,
+      "delta": 0.08637184541417631,
+      "up": 6,
+      "down": 0,
+      "same": 44
+    },
+    "screen": {
+      "cases": 30,
+      "delta": 0.22080898344102068,
+      "up": 15,
+      "down": 0,
+      "same": 15
+    },
+    "length:256": {
+      "cases": 50,
+      "delta": 0.08233061134922282,
+      "up": 6,
+      "down": 0,
+      "same": 44
+    },
+    "length:512": {
+      "cases": 50,
+      "delta": 0.06785582821135949,
+      "up": 6,
+      "down": 0,
+      "same": 44
+    },
+    "length:1024": {
+      "cases": 50,
+      "delta": 0.07372599329354468,
+      "up": 6,
+      "down": 0,
+      "same": 44
+    },
+    "length:2048": {
+      "cases": 50,
+      "delta": 0.05804035844338895,
+      "up": 6,
+      "down": 0,
+      "same": 44
+    },
+    "source:deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "cases": 140,
+      "delta": 0.1634419186231848,
+      "up": 10,
+      "down": 0,
+      "same": 130
+    },
+    "outside_screen": {
+      "cases": 220,
+      "delta": 0.14751565327067157,
+      "up": 15,
+      "down": 0,
+      "same": 205
+    }
+  },
+  "groups": [
+    {
+      "group": 6,
+      "key": "attention/qwen3.6-35b-a3b/203209143/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1531486511230469,
+        1.1577479839324951
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 7,
+      "key": "attention/qwen3.6-35b-a3b/203209180/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.007788896560669,
+        0.9981924891471863
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 8,
+      "key": "attention/qwen3.6-35b-a3b/203209217/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.063761830329895,
+        2.383464813232422
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 9,
+      "key": "attention/qwen3.6-35b-a3b/203209254/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.018778920173645,
+        1.102258324623108
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 10,
+      "key": "attention/qwen3.6-35b-a3b/203209291/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9979903697967529,
+        1.0040743350982666
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 11,
+      "key": "attention/qwen3.6-35b-a3b/203209328/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.026776909828186,
+        1.0006744861602783
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 12,
+      "key": "attention/qwen3.6-35b-a3b/203209365/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.025650143623352,
+        1.0023353099822998
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 13,
+      "key": "attention/deepseek-v4-flash-0731/203309143/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.6114596128463745
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 14,
+      "key": "attention/deepseek-v4-flash-0731/203309180/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0884103775024414
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 15,
+      "key": "attention/deepseek-v4-flash-0731/203309217/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        2.373523712158203
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 16,
+      "key": "attention/deepseek-v4-flash-0731/203309254/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.7269229888916016
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 17,
+      "key": "attention/deepseek-v4-flash-0731/203309291/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        2.2188491821289062
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 18,
+      "key": "attention/deepseek-v4-flash-0731/203309328/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.2165364027023315
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 19,
+      "key": "attention/deepseek-v4-flash-0731/203309365/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1348954439163208
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 20,
+      "key": "attention/deepseek-v4-flash-0731/203309402/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.7185405492782593
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 21,
+      "key": "attention/deepseek-v4-flash-0731/203309439/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0192124843597412
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 22,
+      "key": "attention/deepseek-v4-flash-0731/203309476/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.3474421501159668
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 23,
+      "key": "attention/deepseek-v4-flash-0731/203309513/feedback/v_tail2_sink8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.2991528511047363
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 24,
+      "key": "attention/qwen3.6-35b-a3b/203409143/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.000044822692871,
+        1.0
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 25,
+      "key": "attention/qwen3.6-35b-a3b/203409180/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1123589277267456,
+        0.9999999403953552
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 26,
+      "key": "attention/qwen3.6-35b-a3b/203409217/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0202635526657104,
+        1.0590955018997192
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 27,
+      "key": "attention/qwen3.6-35b-a3b/203409254/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.01138436794281,
+        1.000002384185791
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 28,
+      "key": "attention/qwen3.6-35b-a3b/203409291/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0000001192092896,
+        1.0
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 29,
+      "key": "attention/qwen3.6-35b-a3b/203409328/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9999999403953552,
+        1.007585048675537
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 30,
+      "key": "attention/qwen3.6-35b-a3b/203409365/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.3888497352600098,
+        1.0478001832962036
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 31,
+      "key": "attention/qwen3.6-35b-a3b/203409402/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9999995231628418,
+        1.0000001192092896
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 32,
+      "key": "attention/qwen3.6-35b-a3b/203409439/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9999998807907104,
+        0.9999998807907104
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 33,
+      "key": "attention/qwen3.6-35b-a3b/203409476/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9999998211860657,
+        1.0
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 34,
+      "key": "attention/deepseek-v4-flash-0731/203509143/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.056657314300537
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 35,
+      "key": "attention/deepseek-v4-flash-0731/203509180/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1851351261138916
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 36,
+      "key": "attention/deepseek-v4-flash-0731/203509217/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.645308494567871
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 37,
+      "key": "attention/deepseek-v4-flash-0731/203509254/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.8936618566513062
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 38,
+      "key": "attention/deepseek-v4-flash-0731/203509291/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.387480616569519
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 39,
+      "key": "attention/deepseek-v4-flash-0731/203509328/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 40,
+      "key": "attention/deepseek-v4-flash-0731/203509365/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1932916641235352
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 41,
+      "key": "attention/deepseek-v4-flash-0731/203509402/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        2.554213523864746
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 42,
+      "key": "attention/deepseek-v4-flash-0731/203509439/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.3666592836380005
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 43,
+      "key": "attention/deepseek-v4-flash-0731/203509476/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.3311249017715454
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 44,
+      "key": "attention/deepseek-v4-flash-0731/203509513/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        0.9999982714653015
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 45,
+      "key": "attention/deepseek-v4-flash-0731/203509550/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.1913775205612183
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 46,
+      "key": "attention/deepseek-v4-flash-0731/203509587/feedback/v_tail2_sink16",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0000003576278687
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "delta": 0.0,
+      "hold_ratio": [
+        1.0936062335968018,
+        0.9992044568061829
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 48,
+      "key": "attention/deepseek-v4-flash-0731/203709143/feedback/tail8",
+      "delta": 0.0,
+      "hold_ratio": [
+        21.453357696533203
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 49,
+      "key": "attention/deepseek-v4-flash-0731/203709180/feedback/tail8",
+      "delta": 0.0,
+      "hold_ratio": [
+        26.25286102294922
+      ],
+      "adopted": 0
+    },
+    {
+      "group": 5,
+      "key": "attention/qwen3.6-35b-a3b/203009180/feedback/gain8",
+      "delta": 0.0034989539821492777,
+      "hold_ratio": [
+        1.0811046361923218,
+        0.9886230826377869
+      ],
+      "adopted": 1
+    },
+    {
+      "group": 4,
+      "key": "attention/qwen3.6-35b-a3b/203009143/feedback/gain8",
+      "delta": 0.0067750876309053965,
+      "hold_ratio": [
+        1.262619972229004,
+        0.9884701371192932
+      ],
+      "adopted": 1
+    },
+    {
+      "group": 3,
+      "key": "attention/qwen3.6-35b-a3b/202809143/feedback/gain4",
+      "delta": 0.05666456927657881,
+      "hold_ratio": [
+        0.9349479079246521,
+        0.9482746124267578
+      ],
+      "adopted": 2
+    },
+    {
+      "group": 1,
+      "key": "attention/deepseek-v4-flash-0731/202709143/feedback/base",
+      "delta": 0.07936592225999739,
+      "hold_ratio": [
+        0.9268234968185425
+      ],
+      "adopted": 1
+    },
+    {
+      "group": 2,
+      "key": "attention/deepseek-v4-flash-0731/202709180/feedback/base",
+      "delta": 0.08407599636318697,
+      "hold_ratio": [
+        0.9434584975242615
+      ],
+      "adopted": 1
+    },
+    {
+      "group": 0,
+      "key": "attention/qwen3.6-35b-a3b/202609143/feedback/base",
+      "delta": 0.13794410719887296,
+      "hold_ratio": [
+        0.6972554326057434,
+        0.6636745929718018
+      ],
+      "adopted": 2
+    }
+  ],
+  "timing_ratio": 1.1013468099570243,
+  "conditional_seconds_246": 270.931315249428,
+  "warning": "Descriptive proxy statistics only; not real-forward or online score evidence."
+}

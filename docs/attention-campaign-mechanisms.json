@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "records": {
+    "frozen_reference": {
+      "full_token_quadratic_descent": true
+    },
+    "scope": {
+      "linear_code_unchanged": true,
+      "independent_parent": 422
+    },
+    "parent_calibration": {
+      "qv_exact_for429": true,
+      "qk_exact_for430_431": true,
+      "429_unmarked_k_exact": true,
+      "state_inputs_rng_unchanged": true
+    },
+    "tree": {
+      "lv3_nodes_changed": 16,
+      "risk_before": [
+        75.24428729665837,
+        83.49823248192212
+      ],
+      "risk_after": [
+        64.33368348347224,
+        83.49823248192212
+      ],
+      "inactive_head_same": true,
+      "all_channel_mse_caps": true,
+      "scale_factor_lv2_fixed": true
+    },
+    "temperature": {
+      "normalized": true,
+      "monotone": true,
+      "key_permutation_equivariant": true,
+      "identity_beta": true
+    }
+  }
+}

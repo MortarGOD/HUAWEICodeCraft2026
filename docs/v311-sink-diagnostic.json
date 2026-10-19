@@ -1,0 +1,299 @@
+{
+  "groups": 2,
+  "dataset": "local_fitted_models_covariance_v1",
+  "warning": "alternative scorer assumptions only; not online evidence or a recalibrated main bank",
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "rows": 1,
+      "scores": {
+        "sink8": {
+          "base": 0.21236691000375105,
+          "qk_only": 0.21236691000375105,
+          "v_feedback_only": 0.21236691000375105,
+          "v_polish_only": 0.21236691000375105,
+          "combined": 0.21236691000375105
+        },
+        "sink16": {
+          "base": 0.21236691000375105,
+          "qk_only": 0.21236691000375105,
+          "v_feedback_only": 0.21236691000375105,
+          "v_polish_only": 0.21236691000375105,
+          "combined": 0.21236691000375105
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "rows": 10,
+      "scores": {
+        "sink8": {
+          "base": 0.1233571603132237,
+          "qk_only": 0.1233541368743849,
+          "v_feedback_only": 0.0761931687624232,
+          "v_polish_only": 0.03612826865113783,
+          "combined": 0.03612404724596668
+        },
+        "sink16": {
+          "base": 0.12330198152044312,
+          "qk_only": 0.12330198152044312,
+          "v_feedback_only": 0.07558359180796789,
+          "v_polish_only": 0.03541178081955696,
+          "combined": 0.03541178081955696
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "rows": 128,
+      "scores": {
+        "sink8": {
+          "base": 0.1015922300945922,
+          "qk_only": 0.10160460685540745,
+          "v_feedback_only": 0.10149442153672113,
+          "v_polish_only": 0.09722813600999271,
+          "combined": 0.09723970908504072
+        },
+        "sink16": {
+          "base": 0.10130942444398912,
+          "qk_only": 0.10130942444398912,
+          "v_feedback_only": 0.10055266244512034,
+          "v_polish_only": 0.09601135128214908,
+          "combined": 0.09601135128214908
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "rows": 512,
+      "scores": {
+        "sink8": {
+          "base": 0.15338632459235033,
+          "qk_only": 0.15340460576970427,
+          "v_feedback_only": 0.15382861379761156,
+          "v_polish_only": 0.1535603251677957,
+          "combined": 0.15357844164985815
+        },
+        "sink16": {
+          "base": 0.15212813522926258,
+          "qk_only": 0.15212813522926258,
+          "v_feedback_only": 0.15212831467361315,
+          "v_polish_only": 0.15212825485882964,
+          "combined": 0.15212825485882964
+        }
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "rows": 1024,
+      "scores": {
+        "sink8": {
+          "base": 0.22384184431609977,
+          "qk_only": 0.22389224177314412,
+          "v_feedback_only": 0.22423354668898005,
+          "v_polish_only": 0.22277554697430915,
+          "combined": 0.22282466205331167
+        },
+        "sink16": {
+          "base": 0.22137905557012064,
+          "qk_only": 0.22137905557012064,
+          "v_feedback_only": 0.221379197437757,
+          "v_polish_only": 0.22137862996721155,
+          "combined": 0.22137862996721155
+        }
+      }
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "rows": 1,
+      "scores": {
+        "sink8": {
+          "base": 0.12437852869301425,
+          "qk_only": 0.12437852869301425,
+          "v_feedback_only": 0.12437852869301425,
+          "v_polish_only": 0.12437852869301425,
+          "combined": 0.12437852869301425
+        },
+        "sink16": {
+          "base": 0.12437852869301425,
+          "qk_only": 0.12437852869301425,
+          "v_feedback_only": 0.12437852869301425,
+          "v_polish_only": 0.12437852869301425,
+          "combined": 0.12437852869301425
+        }
+      }
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "rows": 10,
+      "scores": {
+        "sink8": {
+          "base": 0.11262929036332922,
+          "qk_only": 0.11265795937017731,
+          "v_feedback_only": 0.03813420333740864,
+          "v_polish_only": 0.010688672901939698,
+          "combined": 0.010726544306047666
+        },
+        "sink16": {
+          "base": 0.11308343491669787,
+          "qk_only": 0.11308352204416369,
+          "v_feedback_only": 0.03729308207050058,
+          "v_polish_only": 0.00950186004070421,
+          "combined": 0.009501772913238383
+        }
+      }
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "rows": 128,
+      "scores": {
+        "sink8": {
+          "base": 0.20541983334859445,
+          "qk_only": 0.20563081381256834,
+          "v_feedback_only": 0.20358720651524048,
+          "v_polish_only": 0.20119279100707219,
+          "combined": 0.20143264191492916
+        },
+        "sink16": {
+          "base": 0.20316773914754802,
+          "qk_only": 0.20316764425732936,
+          "v_feedback_only": 0.20122448235962367,
+          "v_polish_only": 0.19830973951306516,
+          "combined": 0.1983098344032838
+        }
+      }
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "rows": 512,
+      "scores": {
+        "sink8": {
+          "base": 0.2610359185531951,
+          "qk_only": 0.26154182613934074,
+          "v_feedback_only": 0.2626693548056849,
+          "v_polish_only": 0.26330824160092137,
+          "combined": 0.2638186869711476
+        },
+        "sink16": {
+          "base": 0.25337863993074045,
+          "qk_only": 0.2533785663380606,
+          "v_feedback_only": 0.2533793758575387,
+          "v_polish_only": 0.2533795966355782,
+          "combined": 0.2533795966355782
+        }
+      }
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "rows": 1024,
+      "scores": {
+        "sink8": {
+          "base": 0.20781941974171383,
+          "qk_only": 0.20926517109937398,
+          "v_feedback_only": 0.20792800652735266,
+          "v_polish_only": 0.20174282513898315,
+          "combined": 0.2032386044964183
+        },
+        "sink16": {
+          "base": 0.1801832200096237,
+          "qk_only": 0.18018329392442506,
+          "v_feedback_only": 0.18018329392442506,
+          "v_polish_only": 0.1729200559682876,
+          "combined": 0.17292012988308897
+        }
+      }
+    }
+  ],
+  "hessian_diagnostics": [
+    {
+      "group": 0,
+      "variant": "base",
+      "role": "q",
+      "minimum_eigenvalue": 0.33625027537345886,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.00029564811848104
+    },
+    {
+      "group": 0,
+      "variant": "base",
+      "role": "k",
+      "minimum_eigenvalue": 7.528933048248291,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.0027619204483926296
+    },
+    {
+      "group": 0,
+      "variant": "qk_only",
+      "role": "q",
+      "minimum_eigenvalue": 0.33625027537345886,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.00029564811848104
+    },
+    {
+      "group": 0,
+      "variant": "qk_only",
+      "role": "k",
+      "minimum_eigenvalue": 7.528933048248291,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.0027619204483926296
+    },
+    {
+      "group": 1,
+      "variant": "base",
+      "role": "q",
+      "minimum_eigenvalue": -0.29102209210395813,
+      "negative_fraction": 0.013671875,
+      "most_negative_relative_to_max": -5.370173676055856e-05
+    },
+    {
+      "group": 1,
+      "variant": "base",
+      "role": "k",
+      "minimum_eigenvalue": 65.77082061767578,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.000944756087847054
+    },
+    {
+      "group": 1,
+      "variant": "qk_only",
+      "role": "q",
+      "minimum_eigenvalue": -0.29102209210395813,
+      "negative_fraction": 0.013671875,
+      "most_negative_relative_to_max": -5.370173676055856e-05
+    },
+    {
+      "group": 1,
+      "variant": "qk_only",
+      "role": "k",
+      "minimum_eigenvalue": 65.77082061767578,
+      "negative_fraction": 0.0,
+      "most_negative_relative_to_max": 0.000944756087847054
+    }
+  ],
+  "totals": {
+    "sink8": {
+      "base": 1.725827460019864,
+      "qk_only": 1.7280968003908665,
+      "v_feedback_only": 1.6048139606681877,
+      "v_polish_only": 1.5233702461489171,
+      "combined": 1.5257287764194853
+    },
+    "sink16": {
+      "base": 1.6846770694651907,
+      "qk_only": 1.6846770620245592,
+      "v_feedback_only": 1.5584694392733116,
+      "v_polish_only": 1.4757867077821476,
+      "combined": 1.4757867894597017
+    }
+  }
+}

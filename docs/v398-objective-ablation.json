@@ -1,0 +1,82 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "query_rows": 116,
+      "changed_queries": {
+        "parent": 0,
+        "cross": 115,
+        "anchor": 100
+      },
+      "methods": {
+        "parent": {
+          "union_query_loss_ratio": 1.0,
+          "twofold_head_passes": 0
+        },
+        "cross": {
+          "union_query_loss_ratio": 1.013682246208191,
+          "twofold_head_passes": 0
+        },
+        "anchor": {
+          "union_query_loss_ratio": 1.0026237964630127,
+          "twofold_head_passes": 0
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "query_rows": 40,
+      "changed_queries": {
+        "parent": 0,
+        "cross": 40,
+        "anchor": 1
+      },
+      "methods": {
+        "parent": {
+          "union_query_loss_ratio": 1.0,
+          "twofold_head_passes": 0
+        },
+        "cross": {
+          "union_query_loss_ratio": 1.020463466644287,
+          "twofold_head_passes": 0
+        },
+        "anchor": {
+          "union_query_loss_ratio": 1.0004361867904663,
+          "twofold_head_passes": 0
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "query_rows": 144,
+      "changed_queries": {
+        "parent": 0,
+        "cross": 131,
+        "anchor": 62
+      },
+      "methods": {
+        "parent": {
+          "union_query_loss_ratio": 1.0,
+          "twofold_head_passes": 0
+        },
+        "cross": {
+          "union_query_loss_ratio": 1.015402913093567,
+          "twofold_head_passes": 0
+        },
+        "anchor": {
+          "union_query_loss_ratio": 0.9999803900718689,
+          "twofold_head_passes": 0
+        }
+      }
+    }
+  ],
+  "hashes": {
+    "387": "20d5f35ac5b0559415bc4cca50ca58705cdf242d152fbfe0fab7642a0d6a1dfa",
+    "396": "477c2bc41251e9dd5102131d12d4e26107af032cdb34625f77ebfdce31156445",
+    "398": "cc0956c2b79a603489a2688e531390940a68e1c260747821587dcc64a7ce89ea"
+  }
+}

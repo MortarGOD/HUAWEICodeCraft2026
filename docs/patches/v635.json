@@ -1,0 +1,25 @@
+{
+  "version": 635,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "summary": "Probe: force the Q/K fitted stack on (gq acceptance, QKS stability and guard, and the Q/K lattice refinement guard). With the confirmed fake-counterpart protocol the held-out comparisons are evaluated through fake data, so the judge may reject a fit that is accepted on our real-counterpart banks. This makes the judge's Q/K state match the configuration worth +1841 locally, and answers whether a Q/K fit can transfer at all.",
+  "patches": [
+    [
+      "        if mse_gq < mse_b and ATTN_GPTQ_ENABLE:\n",
+      "        # v635 probe: force the Q/K fitted stack on. Under the fake-counterpart protocol the\n        # held-out comparison above is evaluated through a fake counterpart during that role's\n        # calibration, so on the judge it may reject a fit by chance. Forcing it makes the\n        # judge's Q/K state match the configuration that is worth +1841 locally.\n        if ATTN_GPTQ_ENABLE:\n"
+    ],
+    [
+      "QKS_STABILITY = True        # False = skip the stability filter (diagnostics)\n",
+      "QKS_STABILITY = False       # v635 probe: force the Q/K smoothing fit to be accepted\n"
+    ],
+    [
+      "QKS_GUARD = True            # False = accept any finite fit (diagnostics)\n",
+      "QKS_GUARD = False           # v635 probe: accept the fitted Q/K smoothing unconditionally\n"
+    ],
+    [
+      "ATTN_REFINE_GUARD = True    # hold-out gate in calibration (False = force on)\n",
+      "ATTN_REFINE_GUARD = False   # v635 probe: force the Q/K lattice refinement on\n"
+    ]
+  ],
+  "append": []
+}

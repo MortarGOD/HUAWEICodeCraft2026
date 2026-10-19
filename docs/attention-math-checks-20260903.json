@@ -1,0 +1,64 @@
+{
+  "scope": "mathematical identities and constructed counterexamples only",
+  "uses_contest_dataset": false,
+  "score_prediction_allowed": false,
+  "checks": {
+    "conditional_V_quadratic_64_candidates": {
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    "conditional_second_moment": {
+      "passed": true,
+      "max_abs_error": 6.938893903907228e-18
+    },
+    "uncertainty_covariance_PSD": {
+      "passed": true,
+      "min_eigenvalue": 3.1912620071113313e-18
+    },
+    "mean_probability_counterexample": {
+      "passed": true,
+      "true_expected_risk": 0.6400000000000001,
+      "mean_probability_risk": 0.0
+    },
+    "cross_role_linear_term_counterexample": {
+      "passed": true,
+      "true_loss_delta": -0.034375,
+      "curvature_only_delta": 0.015625
+    },
+    "Q_output_Jacobian": {
+      "passed": true,
+      "max_abs_error": 2.7755575615628914e-17
+    },
+    "softmax_constant_shift": {
+      "passed": true,
+      "max_abs_error": 1.6653345369377348e-16
+    },
+    "softmax_null_direction": {
+      "passed": true,
+      "max_abs_error": 1.3877787807814457e-17
+    },
+    "constant_V_zero_Q_sensitivity": {
+      "passed": true,
+      "max_abs_error": 5.588482541637033e-17
+    },
+    "K_token_output_Jacobian": {
+      "passed": true,
+      "max_abs_error": 8.673617379884035e-19
+    },
+    "correlated_rounding_sum_counterexample": {
+      "passed": true,
+      "nearest_aggregate_error": 0.9603999999999999,
+      "balanced_aggregate_error": 0.0004000000000000007,
+      "not_an_implementation_of_Gram_Schmidt_Walk": true
+    },
+    "low_rank_quadratic": {
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    "pair_increment": {
+      "passed": true,
+      "max_abs_error": 1.1102230246251565e-16
+    }
+  },
+  "all_passed": true
+}

@@ -1,0 +1,39 @@
+{
+  "population": "round029/diffuse-seedplus3",
+  "certificate_sha256": "07fc40ae5b1158559cc13d66811a7ce7c51a3f59ecedcb362cf4c42d6ae7c6b4",
+  "screened_versions": 50,
+  "cases": [
+    {
+      "population": "round029/diffuse-seedplus3",
+      "test": 2,
+      "margin": -223.28012399588584,
+      "in_complete_support": false
+    },
+    {
+      "population": "round029/diffuse-seedplus3",
+      "test": 3,
+      "margin": -594.8754486489099,
+      "in_complete_support": false
+    },
+    {
+      "population": "round029/diffuse-seedplus3",
+      "test": 1,
+      "margin": -1013.1146697542679,
+      "in_complete_support": false
+    },
+    {
+      "population": "round029/diffuse-seedplus3",
+      "test": 0,
+      "margin": -1424.4091148313705,
+      "in_complete_support": false
+    },
+    {
+      "population": "round029/diffuse-seedplus3",
+      "test": 4,
+      "margin": -2157.8839151950074,
+      "in_complete_support": false
+    }
+  ],
+  "promote_to_full": false,
+  "reason": "All measured case margins are negative; do not promote under this certificate. This does not rule out all usefulness under another support or objective."
+}

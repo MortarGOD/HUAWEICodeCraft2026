@@ -1,0 +1,35 @@
+{
+  "threads": 4,
+  "synthetic_only": true,
+  "max_selected_channels": 16,
+  "rows": [
+    {
+      "t": 128,
+      "kh": 2,
+      "d": 64,
+      "core_seconds": 0.008568666060455143,
+      "changed": 0
+    },
+    {
+      "t": 512,
+      "kh": 4,
+      "d": 128,
+      "core_seconds": 0.01837345794774592,
+      "changed": 2
+    },
+    {
+      "t": 2048,
+      "kh": 2,
+      "d": 128,
+      "core_seconds": 0.05946687504183501,
+      "changed": 2
+    },
+    {
+      "t": 4096,
+      "kh": 4,
+      "d": 128,
+      "core_seconds": 0.12608379207085818,
+      "changed": 2
+    }
+  ]
+}

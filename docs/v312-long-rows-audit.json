@@ -1,0 +1,445 @@
+{
+  "dataset_type": "checkpoint-projection + modeled hidden states; independent long-row boundary diagnostic",
+  "seed": 20264903,
+  "rows": [
+    1,
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "query_rows_for_score": 32,
+  "all_output_rows_format_checked": true,
+  "cpu_threads": 4,
+  "models": [
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+      "q_heads": 16,
+      "kv_heads": 2,
+      "head_dim": 256,
+      "versions": {
+        "307": {
+          "calibration_seconds": 13.725521624990506,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.2217557251908397,
+              "player_mse": 0.0031598806381225586,
+              "dynamic_seconds": {
+                "q": 0.015178125002421439,
+                "k": 0.004052500007674098,
+                "v": 0.0006204580131452531
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.26154706539851397,
+              "player_mse": 3.1158028832578566e-06,
+              "dynamic_seconds": {
+                "q": 0.19319162500323728,
+                "k": 0.044049166986951604,
+                "v": 0.022245458996621892
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.25093153988277356,
+              "player_mse": 1.8876381773225148e-06,
+              "dynamic_seconds": {
+                "q": 0.4269733340188395,
+                "k": 0.07905866700457409,
+                "v": 0.05301391601096839
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.4421269621161234,
+              "player_mse": 9.500496389591717e-07,
+              "dynamic_seconds": {
+                "q": 0.8162608749989886,
+                "k": 0.09436616601306014,
+                "v": 0.04166191702825017
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.39021758533827877,
+              "player_mse": 5.592191882897168e-07,
+              "dynamic_seconds": {
+                "q": 1.6294676669931505,
+                "k": 0.1819336249900516,
+                "v": 0.08974683299311437
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        },
+        "311": {
+          "calibration_seconds": 10.721309666987509,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.2217557251908397,
+              "player_mse": 0.0031598806381225586,
+              "dynamic_seconds": {
+                "q": 0.001834708993555978,
+                "k": 0.0006217500194907188,
+                "v": 0.0008490830077789724
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.9538143822918035,
+              "player_mse": 1.9487400493289897e-07,
+              "dynamic_seconds": {
+                "q": 0.28666350001003593,
+                "k": 0.055909833987243474,
+                "v": 0.040903625020291656
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.912890633423661,
+              "player_mse": 2.1951393591734814e-07,
+              "dynamic_seconds": {
+                "q": 0.3792230000253767,
+                "k": 0.09928525000577793,
+                "v": 0.12185091699939221
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8408068883999579,
+              "player_mse": 2.711035449465271e-07,
+              "dynamic_seconds": {
+                "q": 0.8391364160052035,
+                "k": 0.09859016697737388,
+                "v": 0.11560862499754876
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.7268603596009282,
+              "player_mse": 2.504908707123832e-07,
+              "dynamic_seconds": {
+                "q": 1.599061334010912,
+                "k": 0.2025217910122592,
+                "v": 0.21778783400077373
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        },
+        "312": {
+          "calibration_seconds": 7.123651000001701,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.2217557251908397,
+              "player_mse": 0.0031598806381225586,
+              "dynamic_seconds": {
+                "q": 0.0010658339888323098,
+                "k": 0.0006115410069469362,
+                "v": 0.0006284999835770577
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.9538143822918035,
+              "player_mse": 1.9487400493289897e-07,
+              "dynamic_seconds": {
+                "q": 0.2558046249905601,
+                "k": 0.0493632500001695,
+                "v": 0.05055704200640321
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.912890633423661,
+              "player_mse": 2.1951393591734814e-07,
+              "dynamic_seconds": {
+                "q": 0.3214514580031391,
+                "k": 0.07607904198812321,
+                "v": 0.08318745900760405
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8408661856397139,
+              "player_mse": 2.710025626129209e-07,
+              "dynamic_seconds": {
+                "q": 0.6664964579977095,
+                "k": 0.08920895800110884,
+                "v": 0.11429570900509134
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.7268614443045005,
+              "player_mse": 2.504898759525531e-07,
+              "dynamic_seconds": {
+                "q": 1.2869570000038948,
+                "k": 0.1518972919730004,
+                "v": 0.2152199580159504
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        }
+      },
+      "baseline_mse": [
+        0.004060268402099609,
+        4.219365564495092e-06,
+        2.519980853321613e-06,
+        1.7029854006977985e-06,
+        9.170798875857145e-07
+      ]
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+      "q_heads": 8,
+      "kv_heads": 1,
+      "head_dim": 512,
+      "versions": {
+        "307": {
+          "calibration_seconds": 4.938286624994362,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.14258589802726854,
+              "player_mse": 0.0023820698261260986,
+              "dynamic_seconds": {
+                "q": 0.007485000009182841,
+                "k": 0.00569637501030229,
+                "v": 0.0006078330043237656
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.7216812139890385,
+              "player_mse": 7.307942723855376e-06,
+              "dynamic_seconds": {
+                "q": 0.18923420799546875,
+                "k": 0.04046550000202842,
+                "v": 0.0217682920047082
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.7773787711391523,
+              "player_mse": 5.211657480685972e-06,
+              "dynamic_seconds": {
+                "q": 0.42047279098187573,
+                "k": 0.07566895798663609,
+                "v": 0.044898874999489635
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.7917559588305569,
+              "player_mse": 3.606032350944588e-06,
+              "dynamic_seconds": {
+                "q": 0.7543610830034595,
+                "k": 0.0910594999731984,
+                "v": 0.037920458998996764
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8118124753511404,
+              "player_mse": 3.091705366387032e-06,
+              "dynamic_seconds": {
+                "q": 1.6758789159939624,
+                "k": 0.18323775002500042,
+                "v": 0.08270700002321973
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        },
+        "311": {
+          "calibration_seconds": 4.992793999990681,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.14258589802726854,
+              "player_mse": 0.0023820698261260986,
+              "dynamic_seconds": {
+                "q": 0.0012425830063875765,
+                "k": 0.0006067909998819232,
+                "v": 0.0005992499936837703
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8250153028834817,
+              "player_mse": 4.59465263702441e-06,
+              "dynamic_seconds": {
+                "q": 0.25620345800416544,
+                "k": 0.0475052920228336,
+                "v": 0.03947000001790002
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8297360640626971,
+              "player_mse": 3.985951025242684e-06,
+              "dynamic_seconds": {
+                "q": 0.40873012502561323,
+                "k": 0.08250020898412913,
+                "v": 0.07884087497950532
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8204537757651728,
+              "player_mse": 3.109090130237746e-06,
+              "dynamic_seconds": {
+                "q": 0.7572539999964647,
+                "k": 0.09407395799644291,
+                "v": 0.10747133300174028
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8257255317787325,
+              "player_mse": 2.863129793695407e-06,
+              "dynamic_seconds": {
+                "q": 1.6568542919994798,
+                "k": 0.1893810830079019,
+                "v": 0.22858616700978018
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        },
+        "312": {
+          "calibration_seconds": 4.67155475000618,
+          "state_valid": true,
+          "tests": [
+            {
+              "rows": 1,
+              "query_rows_scored": 1,
+              "raw_sampled_score": 0.14258589802726854,
+              "player_mse": 0.0023820698261260986,
+              "dynamic_seconds": {
+                "q": 0.0012041250010952353,
+                "k": 0.0006000410066917539,
+                "v": 0.0005874999915249646
+              },
+              "valid_parameter_chunks": 3
+            },
+            {
+              "rows": 1024,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8249962348948972,
+              "player_mse": 4.595153313857736e-06,
+              "dynamic_seconds": {
+                "q": 0.23703533300431445,
+                "k": 0.04114333397592418,
+                "v": 0.034255457983817905
+              },
+              "valid_parameter_chunks": 12
+            },
+            {
+              "rows": 2048,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8297360640626971,
+              "player_mse": 3.985951025242684e-06,
+              "dynamic_seconds": {
+                "q": 0.35029612499056384,
+                "k": 0.06612566599505953,
+                "v": 0.07030670801759697
+              },
+              "valid_parameter_chunks": 24
+            },
+            {
+              "rows": 4096,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8204535525457051,
+              "player_mse": 3.1090939955902286e-06,
+              "dynamic_seconds": {
+                "q": 0.672733583021909,
+                "k": 0.08088562497869134,
+                "v": 0.10630870898603462
+              },
+              "valid_parameter_chunks": 48
+            },
+            {
+              "rows": 8192,
+              "query_rows_scored": 32,
+              "raw_sampled_score": 0.8257255317787325,
+              "player_mse": 2.863129793695407e-06,
+              "dynamic_seconds": {
+                "q": 1.4502963749982882,
+                "k": 0.16796849999809638,
+                "v": 0.2101148329966236
+              },
+              "valid_parameter_chunks": 96
+            }
+          ]
+        }
+      },
+      "baseline_mse": [
+        0.0027782022953033447,
+        2.6257454010192305e-05,
+        2.3410424546455033e-05,
+        1.731637712509837e-05,
+        1.6428853996330872e-05
+      ]
+    }
+  ],
+  "warning": "not added to main bank, not online scores, no aggregate online timing extrapolation"
+}

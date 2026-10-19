@@ -1,0 +1,467 @@
+[
+  {
+    "group": 49,
+    "order": [
+      0,
+      1,
+      2,
+      4,
+      3
+    ],
+    "differences": [
+      {
+        "path": "/k_state/H",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.bfloat16",
+          "torch.bfloat16"
+        ],
+        "max_abs_delta": 37888.0
+      },
+      {
+        "path": "/k_state/joint_transform",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_active",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_mode",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_probe",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/ts_active",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/ts_fallback",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/ts_variant",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/u",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.float32",
+          "torch.float32"
+        ],
+        "max_abs_delta": 0.0032588280737400055
+      },
+      {
+        "path": "/q_state/H",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.bfloat16",
+          "torch.bfloat16"
+        ],
+        "max_abs_delta": 1960.0
+      },
+      {
+        "path": "/q_state/joint_transform",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/temperature_gain",
+        "shapes": [
+          [
+            8
+          ],
+          [
+            8
+          ]
+        ],
+        "dtypes": [
+          "torch.float32",
+          "torch.float32"
+        ],
+        "max_abs_delta": 0.005558967590332031,
+        "values": [
+          [
+            0.9949069023132324,
+            1.0038341283798218,
+            1.0,
+            0.9965404868125916,
+            0.9961106777191162,
+            0.9973128437995911,
+            1.005558967590332,
+            1.0
+          ],
+          [
+            0.9923680424690247,
+            1.0069870948791504,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "path": "/q_state/u",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.float32",
+          "torch.float32"
+        ],
+        "max_abs_delta": 0.019479945302009583
+      }
+    ]
+  },
+  {
+    "group": 14,
+    "order": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "differences": [
+      {
+        "path": "/k_state/H",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/gq",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/joint_transform",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/ks",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_active",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_mode",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_probe",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_weighted",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/rf",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/rot",
+        "values": [
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/k_state/u",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/H",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.bfloat16",
+          "torch.bfloat16"
+        ],
+        "max_abs_delta": 13144.0
+      },
+      {
+        "path": "/q_state/gq",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/joint_transform",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/qs",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/rot",
+        "values": [
+          1,
+          0
+        ]
+      },
+      {
+        "path": "/q_state/temperature_gain",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/u",
+        "presence": [
+          true,
+          false
+        ]
+      }
+    ]
+  },
+  {
+    "group": 19,
+    "order": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "differences": [
+      {
+        "path": "/k_state/H",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.bfloat16",
+          "torch.bfloat16"
+        ],
+        "max_abs_delta": 48512.0
+      },
+      {
+        "path": "/k_state/ks",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_active",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_mode",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_probe",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/kt_weighted",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/k_state/u",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.float32",
+          "torch.float32"
+        ],
+        "max_abs_delta": 0.004180160351097584
+      },
+      {
+        "path": "/q_state/H",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/qs",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/rf",
+        "presence": [
+          true,
+          false
+        ]
+      },
+      {
+        "path": "/q_state/u",
+        "shapes": [
+          [
+            1,
+            512,
+            512
+          ],
+          [
+            1,
+            512,
+            512
+          ]
+        ],
+        "dtypes": [
+          "torch.float32",
+          "torch.float32"
+        ],
+        "max_abs_delta": 0.02750597894191742
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "version": 643,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "Encode V as the identity-optimal HiF4 of the exact tensor over a wider scale grid (offsets -2..2 x eight 1/8-step multipliers = 40 candidates, against the dynamic path's 6). Re-picking scales inside the parent grid is a wash, but widening it is not: online_v1 0.678008 -> 0.694902 and online_profiled_v2 0.678131 -> 0.693550, i.e. +422 and +385. _quantize_weighted already solves the per-block problem exactly inside a grid, so this needs no fitting, no counterpart and no state.",
+  "patches": [],
+  "append": [
+    "solution/v643_widegrid_core.py"
+  ]
+}

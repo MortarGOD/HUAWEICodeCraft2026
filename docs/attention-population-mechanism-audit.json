@@ -1,0 +1,319 @@
+{
+  "provenance": "real checkpoint projections plus explicitly modeled input transformations",
+  "scorer": "unchanged unmasked scaled-dot-product attention and official HiF4 baseline",
+  "seed": 202609041,
+  "source_group_indices": "0,25",
+  "profiles": {
+    "v_tail2_sink16": {
+      "config": {
+        "tail": 2,
+        "roles": "v",
+        "sink": 16
+      },
+      "scores": {
+        "309": [
+          0.21236691000375105,
+          0.174846888632744,
+          0.11564150321424738,
+          0.19981508343450996,
+          0.17866925497256253,
+          0.12437852869301425,
+          0.19944681913914308,
+          0.18112267987445085,
+          0.13264595823180425,
+          0.21601886614355442
+        ],
+        "310": [
+          0.21236691000375105,
+          0.16725066675261674,
+          0.11564160806313077,
+          0.19981513746260715,
+          0.17866930983434812,
+          0.12437852869301425,
+          0.18138574588743905,
+          0.18112292830295426,
+          0.13264595823180425,
+          0.2160190183880957
+        ],
+        "311": [
+          0.21236691000375105,
+          0.16620289436888852,
+          0.11564160806313077,
+          -0.04581798755279085,
+          -0.6093480971518833,
+          0.12437852869301425,
+          0.19155088294266834,
+          0.15263240224814545,
+          -0.27407327244961166,
+          -0.17019386819885574
+        ]
+      },
+      "features": [
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9999996423721313,
+          "effective_attention_tokens": 1.0000005960464478,
+          "leverage_quant_error_correlation": 0.980841875076294,
+          "value_token_rms_ratio": 1.7223104238510132
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9999948143959045,
+          "effective_attention_tokens": 1.0000104904174805,
+          "leverage_quant_error_correlation": 0.8755737543106079,
+          "value_token_rms_ratio": 2.006493091583252
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.9999833106994629,
+          "effective_attention_tokens": 1.0000332593917847,
+          "leverage_quant_error_correlation": 0.4086189270019531,
+          "value_token_rms_ratio": 2.055246114730835
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.999967098236084,
+          "effective_attention_tokens": 1.000065803527832,
+          "leverage_quant_error_correlation": 0.30283844470977783,
+          "value_token_rms_ratio": 2.086395263671875
+        },
+        {
+          "tokens": 1,
+          "mean_max_probability": 1.0,
+          "effective_attention_tokens": 1.0,
+          "leverage_quant_error_correlation": 0.0,
+          "value_token_rms_ratio": 1.0
+        },
+        {
+          "tokens": 10,
+          "mean_max_probability": 0.9999979138374329,
+          "effective_attention_tokens": 1.0000041723251343,
+          "leverage_quant_error_correlation": 0.9926907420158386,
+          "value_token_rms_ratio": 1.7391443252563477
+        },
+        {
+          "tokens": 128,
+          "mean_max_probability": 0.9999827146530151,
+          "effective_attention_tokens": 1.0000345706939697,
+          "leverage_quant_error_correlation": 0.9461373686790466,
+          "value_token_rms_ratio": 1.942851185798645
+        },
+        {
+          "tokens": 512,
+          "mean_max_probability": 0.9999366998672485,
+          "effective_attention_tokens": 1.000126600265503,
+          "leverage_quant_error_correlation": 0.3627302944660187,
+          "value_token_rms_ratio": 1.9931334257125854
+        },
+        {
+          "tokens": 1024,
+          "mean_max_probability": 0.9998763799667358,
+          "effective_attention_tokens": 1.0002473592758179,
+          "leverage_quant_error_correlation": 0.3400704264640808,
+          "value_token_rms_ratio": 1.9840718507766724
+        }
+      ],
+      "value_objectives": {
+        "309": [
+          {
+            "uniform_surrogate": 0.0065081119537353516,
+            "true_probability_mse": 0.0032540559768676758,
+            "baseline_full_mse": 0.004131436347961426,
+            "full_mse": 0.0032540559768676758
+          },
+          {
+            "uniform_surrogate": 0.08290475606918335,
+            "true_probability_mse": 0.012016767635941505,
+            "baseline_full_mse": 0.014563076198101044,
+            "full_mse": 0.012016767635941505
+          },
+          {
+            "uniform_surrogate": 0.872713565826416,
+            "true_probability_mse": 0.01571066863834858,
+            "baseline_full_mse": 0.017765045166015625,
+            "full_mse": 0.01571066863834858
+          },
+          {
+            "uniform_surrogate": 3.5161757469177246,
+            "true_probability_mse": 0.013793368823826313,
+            "baseline_full_mse": 0.017237745225429535,
+            "full_mse": 0.013793383724987507
+          },
+          {
+            "uniform_surrogate": 6.548276901245117,
+            "true_probability_mse": 0.013942750170826912,
+            "baseline_full_mse": 0.016975797712802887,
+            "full_mse": 0.013942744582891464
+          },
+          {
+            "uniform_surrogate": 0.004954814910888672,
+            "true_probability_mse": 0.002477407455444336,
+            "baseline_full_mse": 0.002829313278198242,
+            "full_mse": 0.002477407455444336
+          },
+          {
+            "uniform_surrogate": 0.06163746118545532,
+            "true_probability_mse": 0.008411848917603493,
+            "baseline_full_mse": 0.01050754077732563,
+            "full_mse": 0.008411845192313194
+          },
+          {
+            "uniform_surrogate": 0.6461326479911804,
+            "true_probability_mse": 0.009209554642438889,
+            "baseline_full_mse": 0.011246566660702229,
+            "full_mse": 0.009209558367729187
+          },
+          {
+            "uniform_surrogate": 2.5767078399658203,
+            "true_probability_mse": 0.008703440427780151,
+            "baseline_full_mse": 0.010034458711743355,
+            "full_mse": 0.008703428320586681
+          },
+          {
+            "uniform_surrogate": 5.071393013000488,
+            "true_probability_mse": 0.00959159154444933,
+            "baseline_full_mse": 0.012234561145305634,
+            "full_mse": 0.009591665118932724
+          }
+        ],
+        "310": [
+          {
+            "uniform_surrogate": 0.0065081119537353516,
+            "true_probability_mse": 0.0032540559768676758,
+            "baseline_full_mse": 0.004131436347961426,
+            "full_mse": 0.0032540559768676758
+          },
+          {
+            "uniform_surrogate": 0.055436551570892334,
+            "true_probability_mse": 0.012127391993999481,
+            "baseline_full_mse": 0.014563076198101044,
+            "full_mse": 0.012127391993999481
+          },
+          {
+            "uniform_surrogate": 0.5065516233444214,
+            "true_probability_mse": 0.01571066491305828,
+            "baseline_full_mse": 0.017765045166015625,
+            "full_mse": 0.01571066677570343
+          },
+          {
+            "uniform_surrogate": 2.6501221656799316,
+            "true_probability_mse": 0.013793369755148888,
+            "baseline_full_mse": 0.017237745225429535,
+            "full_mse": 0.013793382793664932
+          },
+          {
+            "uniform_surrogate": 6.0870866775512695,
+            "true_probability_mse": 0.013942750170826912,
+            "baseline_full_mse": 0.016975797712802887,
+            "full_mse": 0.01394274365156889
+          },
+          {
+            "uniform_surrogate": 0.004954814910888672,
+            "true_probability_mse": 0.002477407455444336,
+            "baseline_full_mse": 0.002829313278198242,
+            "full_mse": 0.002477407455444336
+          },
+          {
+            "uniform_surrogate": 0.04157501459121704,
+            "true_probability_mse": 0.008601626381278038,
+            "baseline_full_mse": 0.01050754077732563,
+            "full_mse": 0.00860162265598774
+          },
+          {
+            "uniform_surrogate": 0.377014696598053,
+            "true_probability_mse": 0.009209551848471165,
+            "baseline_full_mse": 0.011246566660702229,
+            "full_mse": 0.009209555573761463
+          },
+          {
+            "uniform_surrogate": 1.899545669555664,
+            "true_probability_mse": 0.008703440427780151,
+            "baseline_full_mse": 0.010034458711743355,
+            "full_mse": 0.008703428320586681
+          },
+          {
+            "uniform_surrogate": 4.3888044357299805,
+            "true_probability_mse": 0.009591590613126755,
+            "baseline_full_mse": 0.012234561145305634,
+            "full_mse": 0.009591663256287575
+          }
+        ],
+        "311": [
+          {
+            "uniform_surrogate": 0.0065081119537353516,
+            "true_probability_mse": 0.0032540559768676758,
+            "baseline_full_mse": 0.004131436347961426,
+            "full_mse": 0.0032540559768676758
+          },
+          {
+            "uniform_surrogate": 0.048715293407440186,
+            "true_probability_mse": 0.012142650783061981,
+            "baseline_full_mse": 0.014563076198101044,
+            "full_mse": 0.012142650783061981
+          },
+          {
+            "uniform_surrogate": 0.42660844326019287,
+            "true_probability_mse": 0.01571066677570343,
+            "baseline_full_mse": 0.017765045166015625,
+            "full_mse": 0.01571066677570343
+          },
+          {
+            "uniform_surrogate": 1.795849323272705,
+            "true_probability_mse": 0.018027545884251595,
+            "baseline_full_mse": 0.017237745225429535,
+            "full_mse": 0.018027544021606445
+          },
+          {
+            "uniform_surrogate": 3.5997869968414307,
+            "true_probability_mse": 0.027320019900798798,
+            "baseline_full_mse": 0.016975797712802887,
+            "full_mse": 0.02731996774673462
+          },
+          {
+            "uniform_surrogate": 0.004954814910888672,
+            "true_probability_mse": 0.002477407455444336,
+            "baseline_full_mse": 0.002829313278198242,
+            "full_mse": 0.002477407455444336
+          },
+          {
+            "uniform_surrogate": 0.03608423471450806,
+            "true_probability_mse": 0.008494814857840538,
+            "baseline_full_mse": 0.01050754077732563,
+            "full_mse": 0.008494812063872814
+          },
+          {
+            "uniform_surrogate": 0.31357353925704956,
+            "true_probability_mse": 0.009529974311590195,
+            "baseline_full_mse": 0.011246566660702229,
+            "full_mse": 0.009529976174235344
+          },
+          {
+            "uniform_surrogate": 1.2885932922363281,
+            "true_probability_mse": 0.01278464775532484,
+            "baseline_full_mse": 0.010034458711743355,
+            "full_mse": 0.01278463564813137
+          },
+          {
+            "uniform_surrogate": 2.6426916122436523,
+            "true_probability_mse": 0.014316830784082413,
+            "baseline_full_mse": 0.012234561145305634,
+            "full_mse": 0.014316808432340622
+          }
+        ]
+      },
+      "gptq_groups": 2,
+      "seconds": 9.283005917008268,
+      "mean_edges": {
+        "309->310": -0.0025656680720020433,
+        "310->311": -0.18459558106533044
+      }
+    }
+  }
+}

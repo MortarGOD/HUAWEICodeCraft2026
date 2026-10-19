@@ -1,0 +1,176 @@
+{
+  "completed": true,
+  "optimizer": "discrete",
+  "dataset": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1",
+  "groups": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "evaluate_weights": "docs/trace-value-policy-discrete-weights.pt",
+  "seed": 440,
+  "features": 8,
+  "hidden": 12,
+  "parameters": 121,
+  "train_samples": 10,
+  "validation_samples": 5,
+  "best_epoch": -1,
+  "best_validation_ratio": null,
+  "history": [],
+  "test": [
+    {
+      "group": 0,
+      "test": 0,
+      "output_ratio": 0.9957706332206726,
+      "changed_values": 167
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "output_ratio": 1.0144926309585571,
+      "changed_values": 147
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "output_ratio": 0.9961228370666504,
+      "changed_values": 676
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "output_ratio": 1.0062116384506226,
+      "changed_values": 144
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "output_ratio": 1.011046051979065,
+      "changed_values": 203
+    },
+    {
+      "group": 10,
+      "test": 0,
+      "output_ratio": 1.0049686431884766,
+      "changed_values": 132
+    },
+    {
+      "group": 10,
+      "test": 1,
+      "output_ratio": 0.9873099327087402,
+      "changed_values": 281
+    },
+    {
+      "group": 10,
+      "test": 2,
+      "output_ratio": 0.988348662853241,
+      "changed_values": 304
+    },
+    {
+      "group": 10,
+      "test": 3,
+      "output_ratio": 0.9973359704017639,
+      "changed_values": 277
+    },
+    {
+      "group": 10,
+      "test": 4,
+      "output_ratio": 0.994218111038208,
+      "changed_values": 250
+    },
+    {
+      "group": 20,
+      "test": 0,
+      "output_ratio": 1.0361448526382446,
+      "changed_values": 215
+    },
+    {
+      "group": 20,
+      "test": 1,
+      "output_ratio": 1.0450912714004517,
+      "changed_values": 119
+    },
+    {
+      "group": 20,
+      "test": 2,
+      "output_ratio": 1.0396252870559692,
+      "changed_values": 230
+    },
+    {
+      "group": 20,
+      "test": 3,
+      "output_ratio": 1.038712978363037,
+      "changed_values": 103
+    },
+    {
+      "group": 20,
+      "test": 4,
+      "output_ratio": 0.9916902184486389,
+      "changed_values": 138
+    },
+    {
+      "group": 30,
+      "test": 0,
+      "output_ratio": 1.0099793672561646,
+      "changed_values": 318
+    },
+    {
+      "group": 30,
+      "test": 1,
+      "output_ratio": 0.984462559223175,
+      "changed_values": 504
+    },
+    {
+      "group": 30,
+      "test": 2,
+      "output_ratio": 1.0195075273513794,
+      "changed_values": 349
+    },
+    {
+      "group": 30,
+      "test": 3,
+      "output_ratio": 0.9952816367149353,
+      "changed_values": 480
+    },
+    {
+      "group": 30,
+      "test": 4,
+      "output_ratio": 1.008874773979187,
+      "changed_values": 291
+    },
+    {
+      "group": 40,
+      "test": 0,
+      "output_ratio": 0.9905171394348145,
+      "changed_values": 588
+    },
+    {
+      "group": 40,
+      "test": 1,
+      "output_ratio": 0.9838943481445312,
+      "changed_values": 728
+    },
+    {
+      "group": 40,
+      "test": 2,
+      "output_ratio": 1.0298662185668945,
+      "changed_values": 749
+    },
+    {
+      "group": 40,
+      "test": 3,
+      "output_ratio": 1.0232244729995728,
+      "changed_values": 507
+    },
+    {
+      "group": 40,
+      "test": 4,
+      "output_ratio": 1.0086227655410767,
+      "changed_values": 517
+    }
+  ],
+  "mean_test_ratio": 1.008052821159363,
+  "warning": "Research serial hook only, not submission. Exact legal forward; STE mode uses approximate identity gradients, discrete mode searches 13 output-layer parameters with frozen random features. Parent calibration uses all calibration samples, including policy validation; test untouched until selection. One short-trace model source, not online or cross-source evidence."
+}

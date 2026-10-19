@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "qh": 2,
+      "kh": 1,
+      "d": 64,
+      "calibration_seconds": 0.04471258295234293,
+      "reference_exact": true,
+      "parent_fallback": false
+    },
+    {
+      "qh": 4,
+      "kh": 2,
+      "d": 128,
+      "calibration_seconds": 0.09074383298866451,
+      "reference_exact": true,
+      "parent_fallback": false
+    },
+    {
+      "qh": 2,
+      "kh": 2,
+      "d": 96,
+      "calibration_seconds": 0.1571473330259323,
+      "reference_exact": false,
+      "parent_fallback": true
+    }
+  ],
+  "forced_transform_routes": 5,
+  "linear_entry_bytecode_equal": true,
+  "state_input_rng_fresh_role_checks": true
+}

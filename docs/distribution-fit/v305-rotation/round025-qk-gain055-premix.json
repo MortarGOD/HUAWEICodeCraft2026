@@ -1,0 +1,127 @@
+{
+  "version": 305,
+  "atom": "qk-gain055",
+  "source_sha256": "20493e64853378e4600fd87d5d5b2697603c935c875282dafd516f18c5b881b8",
+  "data_sha256": "c5f0f3733dec839dbb3f26cf90d277f48eb558514b045a693b76f3d198406ff4",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 4,
+      "baseline_mse": 0.24456070363521576,
+      "player_mse": 4.608087062835693,
+      "quality": -17.842303748475754
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.2061522901058197,
+      "player_mse": 9.989941596984863,
+      "quality": -47.45903769420627
+    },
+    {
+      "test": 2,
+      "tokens": 32,
+      "baseline_mse": 0.16708090901374817,
+      "player_mse": 10.108677864074707,
+      "quality": -59.50169300457253
+    },
+    {
+      "test": 3,
+      "tokens": 128,
+      "baseline_mse": 0.10924915969371796,
+      "player_mse": 4.881288528442383,
+      "quality": -43.68033019317646
+    },
+    {
+      "test": 4,
+      "tokens": 512,
+      "baseline_mse": 0.036887504160404205,
+      "player_mse": 0.9672528505325317,
+      "quality": -25.221694108835926
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.000877446960657835,
+          "j_cand": 0.00011173174425493926
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": false,
+          "stab": "nan",
+          "j_base": 2.2733011064701714e-06,
+          "j_cand": 2.4062528609647416e-06
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00114698545075953,
+          "j_cand": 0.0001433949073543772
+        }
+      }
+    }
+  },
+  "calibration_seconds": 1.0548285830300301,
+  "mean_quality": -38.74101174985339,
+  "wall_seconds": 1.3987629580078647,
+  "experimental_override": "premix",
+  "limits": "Selected to diagnose existing fit contributions, not independent validation."
+}

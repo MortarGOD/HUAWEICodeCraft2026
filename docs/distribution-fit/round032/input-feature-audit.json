@@ -1,0 +1,690 @@
+{
+  "checks": [
+    "actual data hashes",
+    "QK encoding unchanged",
+    "unselected phase V unchanged"
+  ],
+  "records": [
+    {
+      "atom": "vmean1-test",
+      "phase": "calib",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "calib",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "calib",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "calib",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "calib",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "test",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.2538503804694824,
+        "rms": 2.51859099712135,
+        "mean_rms": 1.2689559777545416
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.8898050667947422,
+        "rms": 6.561541351053181,
+        "mean_rms": 6.189467791524587
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "test",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.12637418922339266,
+        "rms": 1.8475783121958265,
+        "mean_rms": 0.6567983404867839
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.2157249120145435,
+        "rms": 1.9515827336342861,
+        "mean_rms": 0.9064359409934453
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "test",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03231412585925224,
+        "rms": 1.0816834517834952,
+        "mean_rms": 0.19444482613341482
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.25623461503165923,
+        "rms": 1.2469673233700909,
+        "mean_rms": 0.6312101478806024
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "test",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.005688835157429605,
+        "rms": 0.7569207070161327,
+        "mean_rms": 0.057090265296635176
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.3928341197459873,
+        "rms": 0.9738727358145547,
+        "mean_rms": 0.6103891545491008
+      }
+    },
+    {
+      "atom": "vmean1-test",
+      "phase": "test",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0029941761226992924,
+        "rms": 0.7935886452071956,
+        "mean_rms": 0.04342442901005769
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.3663960140898504,
+        "rms": 0.9983761050414316,
+        "mean_rms": 0.604323591305737
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "calib",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "calib",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "calib",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "calib",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "calib",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "test",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.2538503804694824,
+        "rms": 2.51859099712135,
+        "mean_rms": 1.2689559777545416
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.9904523611481247,
+        "rms": 20.965662539908074,
+        "mean_rms": 20.865336208564567
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "test",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.12637418922339266,
+        "rms": 1.8475783121958265,
+        "mean_rms": 0.6567983404867839
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.6948970599422926,
+        "rms": 3.093593564557809,
+        "mean_rms": 2.5788346253196175
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "test",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03231412585925224,
+        "rms": 1.0816834517834952,
+        "mean_rms": 0.19444482613341482
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.8381443982320329,
+        "rms": 2.6813303996527424,
+        "mean_rms": 2.454764055577275
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "test",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.005688835157429605,
+        "rms": 0.7569207070161327,
+        "mean_rms": 0.057090265296635176
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.9055420561576356,
+        "rms": 2.551374708864114,
+        "mean_rms": 2.4278874975185394
+      }
+    },
+    {
+      "atom": "vmean4-test",
+      "phase": "test",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0029941761226992924,
+        "rms": 0.7935886452071956,
+        "mean_rms": 0.04342442901005769
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.8969113085754352,
+        "rms": 2.5593514234233607,
+        "mean_rms": 2.423844043035128
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "calib",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.3042164285627064,
+        "rms": 2.6225283544114886,
+        "mean_rms": 1.4464769724286382
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "calib",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.23318087219335346,
+        "rms": 1.9686894596721907,
+        "mean_rms": 0.9506566210869839
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "calib",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.27867884453356667,
+        "rms": 1.2293057698066507,
+        "mean_rms": 0.6489510218237349
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "calib",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.39978948953370036,
+        "rms": 0.9769225877643591,
+        "mean_rms": 0.6176974910828831
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "calib",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.3939209050930666,
+        "rms": 1.024207311193287,
+        "mean_rms": 0.6428244489880444
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "test",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.2538503804694824,
+        "rms": 2.51859099712135,
+        "mean_rms": 1.2689559777545416
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.8898050667947422,
+        "rms": 6.561541351053181,
+        "mean_rms": 6.189467791524587
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "test",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.12637418922339266,
+        "rms": 1.8475783121958265,
+        "mean_rms": 0.6567983404867839
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.2157249120145435,
+        "rms": 1.9515827336342861,
+        "mean_rms": 0.9064359409934453
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "test",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03231412585925224,
+        "rms": 1.0816834517834952,
+        "mean_rms": 0.19444482613341482
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.25623461503165923,
+        "rms": 1.2469673233700909,
+        "mean_rms": 0.6312101478806024
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "test",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.005688835157429605,
+        "rms": 0.7569207070161327,
+        "mean_rms": 0.057090265296635176
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.3928341197459873,
+        "rms": 0.9738727358145547,
+        "mean_rms": 0.6103891545491008
+      }
+    },
+    {
+      "atom": "vmean1-both",
+      "phase": "test",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0029941761226992924,
+        "rms": 0.7935886452071956,
+        "mean_rms": 0.04342442901005769
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.3663960140898504,
+        "rms": 0.9983761050414316,
+        "mean_rms": 0.604323591305737
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "calib",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.25449466756208317,
+        "rms": 2.515922259307213,
+        "mean_rms": 1.2692189888963916
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.6308380544265122,
+        "rms": 3.594489577113391,
+        "mean_rms": 2.8549346424311373
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "calib",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.13129200665745722,
+        "rms": 1.8389831441580773,
+        "mean_rms": 0.6663415452551875
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.7013266844579907,
+        "rms": 3.142235679769257,
+        "mean_rms": 2.6314731156720694
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "calib",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03030592274713473,
+        "rms": 1.0582216227228867,
+        "mean_rms": 0.18422153096882013
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.8424207030204859,
+        "rms": 2.690186214334426,
+        "mean_rms": 2.4691465009793823
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "calib",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.00709138832594341,
+        "rms": 0.7584385749378783,
+        "mean_rms": 0.06386840162080491
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.9085342490976115,
+        "rms": 2.5820999078668527,
+        "mean_rms": 2.4611817948248897
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "calib",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0018770483141415943,
+        "rms": 0.7947282502969621,
+        "mean_rms": 0.034431534391012986
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.9082334351335916,
+        "rms": 2.702640206766333,
+        "mean_rms": 2.5756507649655846
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "test",
+      "case": 0,
+      "before": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.2538503804694824,
+        "rms": 2.51859099712135,
+        "mean_rms": 1.2689559777545416
+      },
+      "after": {
+        "tokens": 4,
+        "mean_energy_fraction": 0.9904523611481247,
+        "rms": 20.965662539908074,
+        "mean_rms": 20.865336208564567
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "test",
+      "case": 1,
+      "before": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.12637418922339266,
+        "rms": 1.8475783121958265,
+        "mean_rms": 0.6567983404867839
+      },
+      "after": {
+        "tokens": 8,
+        "mean_energy_fraction": 0.6948970599422926,
+        "rms": 3.093593564557809,
+        "mean_rms": 2.5788346253196175
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "test",
+      "case": 2,
+      "before": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.03231412585925224,
+        "rms": 1.0816834517834952,
+        "mean_rms": 0.19444482613341482
+      },
+      "after": {
+        "tokens": 32,
+        "mean_energy_fraction": 0.8381443982320329,
+        "rms": 2.6813303996527424,
+        "mean_rms": 2.454764055577275
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "test",
+      "case": 3,
+      "before": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.005688835157429605,
+        "rms": 0.7569207070161327,
+        "mean_rms": 0.057090265296635176
+      },
+      "after": {
+        "tokens": 128,
+        "mean_energy_fraction": 0.9055420561576356,
+        "rms": 2.551374708864114,
+        "mean_rms": 2.4278874975185394
+      }
+    },
+    {
+      "atom": "vmean4-both",
+      "phase": "test",
+      "case": 4,
+      "before": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.0029941761226992924,
+        "rms": 0.7935886452071956,
+        "mean_rms": 0.04342442901005769
+      },
+      "after": {
+        "tokens": 512,
+        "mean_energy_fraction": 0.8969113085754352,
+        "rms": 2.5593514234233607,
+        "mean_rms": 2.423844043035128
+      }
+    }
+  ],
+  "limits": "Measured input features only; not predicted online improvements."
+}

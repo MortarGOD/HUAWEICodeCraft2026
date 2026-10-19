@@ -1,0 +1,71 @@
+{
+  "source_sha256": "a6e53f37abf2c7c51c99e6439df3e554fa57d75fbdc99f0c12f780a9e5691fcb",
+  "threads": 4,
+  "torch_version": "2.13.0",
+  "scope": "Gaussian synthetic data; sparse W search and recompilation separately. Excludes parent pipeline, sampling public dynamic calls, last-calibration dynamic gate, setup and result checks.",
+  "online_prediction_allowed": false,
+  "cases": [
+    {
+      "samples": 4,
+      "rows_per_sample": 32,
+      "inputs": 512,
+      "outputs": 2048,
+      "search_seconds": [
+        0.04556704196147621,
+        0.044701125007122755,
+        0.04643008403945714
+      ],
+      "search_median_seconds": 0.04556704196147621,
+      "compile_seconds": [
+        0.0064370420295745134,
+        0.007758707972243428,
+        0.006493874941952527
+      ],
+      "compile_median_seconds": 0.006493874941952527,
+      "proposed_rows": 1670,
+      "accepted_rows": 1633,
+      "lv3_changes": 1633,
+      "fixed_z_fold_loss_before": [
+        0.027265027165412903,
+        0.026804501190781593
+      ],
+      "fixed_z_fold_loss_after": [
+        0.02626473270356655,
+        0.02581178769469261
+      ],
+      "interpretation": "Synthetic fixed-Z acceptance only; no final public-dynamic gate or model-bank claim."
+    },
+    {
+      "samples": 4,
+      "rows_per_sample": 32,
+      "inputs": 4096,
+      "outputs": 8192,
+      "search_seconds": [
+        0.6959816250018775,
+        0.6938641250599176,
+        0.6973433749517426
+      ],
+      "search_median_seconds": 0.6959816250018775,
+      "compile_seconds": [
+        0.7391788339009508,
+        0.7540802919538692,
+        0.7470783329335973
+      ],
+      "compile_median_seconds": 0.7470783329335973,
+      "proposed_rows": 8192,
+      "accepted_rows": 8192,
+      "lv3_changes": 8192,
+      "fixed_z_fold_loss_before": [
+        0.02712159976363182,
+        0.027259312570095062
+      ],
+      "fixed_z_fold_loss_after": [
+        0.02586047351360321,
+        0.02599891647696495
+      ],
+      "interpretation": "Synthetic fixed-Z acceptance only; no final public-dynamic gate or model-bank claim."
+    }
+  ],
+  "complete": true,
+  "source_unchanged": true
+}

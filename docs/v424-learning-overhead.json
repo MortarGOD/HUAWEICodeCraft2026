@@ -1,0 +1,53 @@
+{
+  "source_sha256": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8",
+  "threads": 4,
+  "torch_version": "2.13.0",
+  "scope": "Synthetic Gaussian A/W; added learner only, excluding parent map, full pipeline, setup and checking.",
+  "online_prediction_allowed": false,
+  "cases": [
+    {
+      "rows": 128,
+      "inputs": 512,
+      "outputs": 2048,
+      "seconds": [
+        0.05068649991881102,
+        0.09078616695478559,
+        0.08538616704754531
+      ],
+      "median_seconds": 0.08538616704754531,
+      "changed_blocks": 8,
+      "blocks": 8,
+      "parent_losses": [
+        6.774171352386475,
+        7.058830261230469
+      ],
+      "candidate_losses": [
+        5.272739410400391,
+        6.456007480621338
+      ]
+    },
+    {
+      "rows": 128,
+      "inputs": 4096,
+      "outputs": 8192,
+      "seconds": [
+        0.43226958299055696,
+        0.47625929105561227,
+        0.4454982909373939
+      ],
+      "median_seconds": 0.4454982909373939,
+      "changed_blocks": 64,
+      "blocks": 64,
+      "parent_losses": [
+        55.02947998046875,
+        54.87651443481445
+      ],
+      "candidate_losses": [
+        43.11809539794922,
+        50.92980194091797
+      ]
+    }
+  ],
+  "source_unchanged": true,
+  "complete": true
+}

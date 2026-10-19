@@ -1,0 +1,336 @@
+{
+  "complete": true,
+  "reference": "64 equally spaced predicted queries with unchanged v400 residual scenarios; same standard V error; not raw Q/K or end-to-end accuracy",
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "test": 0,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.00013883228530175984,
+        "dense16": 5.935355511610396e-05,
+        "sketch16": 5.9012894780607894e-05
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "test": 1,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.00026277490542270243,
+        "dense16": 7.368609658442438e-05,
+        "sketch16": 7.391344115603715e-05
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "test": 2,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 6.76581694278866e-05,
+        "dense16": 0.0002922378189396113,
+        "sketch16": 0.00029253706452436745
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "test": 3,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0007226990419439971,
+        "dense16": 0.000276760634733364,
+        "sketch16": 0.0002769755374174565
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "test": 4,
+      "t": 64,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.000414840440498665,
+        "dense16": 0.00025507831014692783,
+        "sketch16": 0.00025755201932042837
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "test": 0,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.015567409805953503,
+        "dense16": 0.005848659668117762,
+        "sketch16": 0.005835670046508312
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "test": 1,
+      "t": 64,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.004418535158038139,
+        "dense16": 0.005751497112214565,
+        "sketch16": 0.005711396224796772
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "test": 2,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.024588599801063538,
+        "dense16": 0.002452621003612876,
+        "sketch16": 0.0024477674160152674
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "test": 3,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.00960683822631836,
+        "dense16": 0.005399299319833517,
+        "sketch16": 0.005384981166571379
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "test": 4,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0045346482656896114,
+        "dense16": 0.0024266892578452826,
+        "sketch16": 0.0024314585607498884
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 14,
+      "test": 0,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0011748906690627337,
+        "dense16": 0.0016347212949767709,
+        "sketch16": 0.0016357417916879058
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 14,
+      "test": 1,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0010655814548954368,
+        "dense16": 0.0009817583486437798,
+        "sketch16": 0.0009760654647834599
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 14,
+      "test": 2,
+      "t": 2048,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0023891888558864594,
+        "dense16": 0.002388441003859043,
+        "sketch16": 0.002388274995610118
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 14,
+      "test": 3,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0019897997844964266,
+        "dense16": 0.00043589912820607424,
+        "sketch16": 0.0004290906654205173
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 14,
+      "test": 4,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0012543537886813283,
+        "dense16": 0.0014214507536962628,
+        "sketch16": 0.0014199964934960008
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "test": 0,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.004664483945816755,
+        "dense16": 0.003370205406099558,
+        "sketch16": 0.0033726973924785852
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "test": 1,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0034593071322888136,
+        "dense16": 0.0019929760601371527,
+        "sketch16": 0.0019957779441028833
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "test": 2,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.004148756619542837,
+        "dense16": 0.0010480628116056323,
+        "sketch16": 0.0010508967097848654
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "test": 3,
+      "t": 64,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0029148885514587164,
+        "dense16": 0.0003600683994591236,
+        "sketch16": 0.00040872523095458746
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "test": 4,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.0012312866747379303,
+        "dense16": 0.00090336351422593,
+        "sketch16": 0.0009067701757885516
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "test": 0,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.34495237469673157,
+        "dense16": 0.004168940708041191,
+        "sketch16": 0.005601564887911081
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "test": 1,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.06404156237840652,
+        "dense16": 0.0477563813328743,
+        "sketch16": 0.05517430603504181
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "test": 2,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.033849574625492096,
+        "dense16": 0.23602285981178284,
+        "sketch16": 0.24915313720703125
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "test": 3,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.21185696125030518,
+        "dense16": 0.09314607828855515,
+        "sketch16": 0.0754024013876915
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "test": 4,
+      "t": 2048,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.07458627223968506,
+        "dense16": 0.16052357852458954,
+        "sketch16": 0.17626965045928955
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 47,
+      "test": 0,
+      "t": 128,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.26133957505226135,
+        "dense16": 0.03023298643529415,
+        "sketch16": 0.03029312938451767
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 47,
+      "test": 1,
+      "t": 256,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.9807161092758179,
+        "dense16": 0.9764578342437744,
+        "sketch16": 0.9764583706855774
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 47,
+      "test": 2,
+      "t": 512,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.9973218441009521,
+        "dense16": 0.9971853494644165,
+        "sketch16": 0.9971866011619568
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 47,
+      "test": 3,
+      "t": 1024,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.9960501790046692,
+        "dense16": 0.9961041212081909,
+        "sketch16": 0.9961096048355103
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 47,
+      "test": 4,
+      "t": 2048,
+      "relative_absolute_risk_error": {
+        "uniform4": 0.9981037378311157,
+        "dense16": 0.9983257055282593,
+        "sketch16": 0.9983326196670532
+      }
+    }
+  ]
+}

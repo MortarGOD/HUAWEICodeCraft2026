@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "analytic_cases": [
+    {
+      "shape": [
+        3,
+        2
+      ],
+      "rank": 2
+    },
+    {
+      "shape": [
+        3,
+        3
+      ],
+      "rank": 3
+    },
+    {
+      "shape": [
+        2,
+        4
+      ],
+      "rank": 2
+    },
+    {
+      "shape": [
+        3,
+        2
+      ],
+      "rank": 1
+    },
+    {
+      "shape": [
+        3,
+        2
+      ],
+      "rank": 0
+    }
+  ],
+  "production": [
+    {
+      "shape": [
+        128,
+        64
+      ],
+      "route": "exact_search",
+      "output_bit_exact": true,
+      "state_unchanged": true
+    },
+    {
+      "shape": [
+        64,
+        128
+      ],
+      "route": "direct_output",
+      "output_bit_exact": true,
+      "state_unchanged": true
+    }
+  ],
+  "valid_probe_returns": 8,
+  "orthogonal_identity": true,
+  "teacher_identity_includes_cross_term": true,
+  "rank_cutoff_disclosed": true,
+  "original_helper_restored_on_error": true,
+  "public_outputs_preserved": true,
+  "parents_and_inputs_immutable": true,
+  "evaluator_dtype_rounding_separated": true
+}

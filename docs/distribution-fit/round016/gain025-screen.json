@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round016/true-qk-gain0.25",
+      "test": 3,
+      "tokens": 128,
+      "price": -36211.50809463104,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -36658.792993461786
+    },
+    {
+      "population": "round016/true-qk-gain0.25",
+      "test": 2,
+      "tokens": 32,
+      "price": -53793.298208090055,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -54240.5831069208
+    },
+    {
+      "population": "round016/true-qk-gain0.25",
+      "test": 1,
+      "tokens": 8,
+      "price": -87329.74496862426,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -87777.029867455
+    },
+    {
+      "population": "round016/true-qk-gain0.25",
+      "test": 4,
+      "tokens": 512,
+      "price": -123002.4920679813,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -123449.77696681203
+    },
+    {
+      "population": "round016/true-qk-gain0.25",
+      "test": 0,
+      "tokens": 4,
+      "price": -143281.07951023866,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -143728.3644090694
+    }
+  ],
+  "promote": false,
+  "limits": "Fixed 390-column certificate only; other true QK scales remain unproven."
+}

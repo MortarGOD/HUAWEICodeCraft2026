@@ -1,0 +1,91 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": 2.4086828749859706,
+        "old": 2.5452810829738155
+      },
+      "stats": {
+        "hits": 5,
+        "calls": 10,
+        "peak_bytes": 51991552
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 1,
+      "equal": true,
+      "timing": {
+        "old": 6.335885207983665,
+        "new": 2.7759107499732636
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 43143168
+      }
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 14,
+      "equal": true,
+      "timing": {
+        "new": 2.0913823330192827,
+        "old": 2.1101907080155797
+      },
+      "stats": {
+        "hits": 1,
+        "calls": 8,
+        "peak_bytes": 60200966
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 0,
+      "equal": true,
+      "timing": {
+        "new": 1.29928833397571,
+        "old": 1.456087958009448
+      },
+      "stats": {
+        "hits": 5,
+        "calls": 10,
+        "peak_bytes": 28247040
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 24,
+      "equal": true,
+      "timing": {
+        "new": 1.5565150000038557,
+        "old": 1.7493472080095671
+      },
+      "stats": {
+        "hits": 3,
+        "calls": 10,
+        "peak_bytes": 28312588
+      }
+    },
+    {
+      "dataset": "local_fitted_models_covariance_v1",
+      "group": 25,
+      "equal": true,
+      "timing": {
+        "old": 1.789364000025671,
+        "new": 1.6507711670128629
+      },
+      "stats": {
+        "hits": 6,
+        "calls": 10,
+        "peak_bytes": 25526272
+      }
+    }
+  ],
+  "exception_cleanup": true,
+  "warning": "Six groups/30 K+V test pairs. Whole calibration single paired timings, not a speed guarantee or official new-version validation."
+}

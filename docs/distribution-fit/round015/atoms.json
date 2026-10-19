@@ -1,0 +1,186 @@
+{
+  "round": 15,
+  "atoms": [
+    {
+      "id": "sink-input-seed2026091600-seedplus4-v-decoy-gain0.25",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "decoy_gains": {
+        "v": {
+          "q": 0.25,
+          "k": 0.25
+        }
+      }
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus4-v-decoy-gain0.5",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "decoy_gains": {
+        "v": {
+          "q": 0.5,
+          "k": 0.5
+        }
+      }
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus4-v-decoy-gain2.0",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "decoy_gains": {
+        "v": {
+          "q": 2.0,
+          "k": 2.0
+        }
+      }
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus4-v-decoy-gain4.0",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b",
+      "decoy_gains": {
+        "v": {
+          "q": 4.0,
+          "k": 4.0
+        }
+      }
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    314,
+    315,
+    318,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    335,
+    341,
+    343,
+    345,
+    362,
+    363,
+    364,
+    365,
+    367,
+    374,
+    378,
+    379,
+    381,
+    382,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    392,
+    393,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    411,
+    412,
+    413,
+    414,
+    417,
+    418,
+    419,
+    426,
+    430,
+    435,
+    436,
+    437,
+    440
+  ],
+  "selection_evidence": "The seedplus4 population is nearest the current certificate boundary. Three subsequent permutation seeds fail. Probe V-calibration probability sharpness instead, holding true tensors and decoy permutation fixed.",
+  "limits": "Only V calibration fake Q/K amplitude changes. Same source data and protocol per version; no target offsets or tolerance changes. This is adaptive training support, not independent validation."
+}

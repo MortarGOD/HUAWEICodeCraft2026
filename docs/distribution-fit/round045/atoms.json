@@ -1,0 +1,133 @@
+{
+  "round": 45,
+  "atoms": [
+    {
+      "id": "covs-str8-len512",
+      "path": "local_distribution_fit/round045/covs-str8-len512.pt",
+      "sha256": "039a6cf5658984914eb5e9ea2650bbd1a5482ade99a668b3a6f42d5446db329c",
+      "seed": 2026091500,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 8,
+        "rows": [
+          512,
+          512,
+          512,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "id": "covs-str16-len512",
+      "path": "local_distribution_fit/round045/covs-str16-len512.pt",
+      "sha256": "da8559f697691450b5976e1a6031568c257a48ae13c33ea3b353aa0da5cc2fba",
+      "seed": 2026091501,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 16,
+        "rows": [
+          512,
+          512,
+          512,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "id": "covs-str32-len512",
+      "path": "local_distribution_fit/round045/covs-str32-len512.pt",
+      "sha256": "ebd25243d0b097b342fb70c5398d62117097e71fd2187baa9cf16d26aa5b8952",
+      "seed": 2026091502,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 32,
+        "rows": [
+          512,
+          512,
+          512,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "id": "covs-str16-len128",
+      "path": "local_distribution_fit/round045/covs-str16-len128.pt",
+      "sha256": "ee1d59ef2682ee0a284158a312f9b25e508877376402dacab0d2a77f058819b6",
+      "seed": 2026091503,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 16,
+        "structured_strength": 16,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "covs-str32-len128",
+      "path": "local_distribution_fit/round045/covs-str32-len128.pt",
+      "sha256": "995fd1a79b1bdf5081142f38345254f2f6a35b76dca047a3a8a65d5ae5bca33a",
+      "seed": 2026091504,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 32,
+        "structured_strength": 32,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    },
+    {
+      "id": "covs-str8-len128",
+      "path": "local_distribution_fit/round045/covs-str8-len128.pt",
+      "sha256": "a188dc16ec9cbfd7b5bb75a0e0ebd4b599547747de1e13f8ca3ef5a6ecf3a123",
+      "seed": 2026091505,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "model": "qwen3.6-35b-a3b",
+      "profile": {
+        "covariance_rank": 8,
+        "structured_strength": 8,
+        "rows": [
+          128,
+          128,
+          128,
+          128,
+          128
+        ]
+      }
+    }
+  ],
+  "mechanism": "v307 GPTQ-enable gain gradient vs persistent channel covariance strength; measure 306/307 first.",
+  "limits": "Synthetic checkpoint-projected covariance gradient; not online distribution evidence; no target tuning."
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "records": {
+    "joint_risk": {
+      "before": [
+        145.01704871566827,
+        87.6022985026112
+      ],
+      "after": [
+        122.0934704978973,
+        87.6022985026112
+      ],
+      "changed_nodes": 16,
+      "beta1_equals_v431": true
+    },
+    "guard": {
+      "parent_calls": 1,
+      "joint_guard_calls": 1,
+      "joint_head_mask": true
+    },
+    "scope": {
+      "unmarked_v_equals_parent": true,
+      "qk_calibration_equal": true,
+      "linear_qk_code_equal": true,
+      "input_rng_unchanged": true
+    }
+  }
+}

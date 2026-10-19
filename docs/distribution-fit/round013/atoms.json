@@ -1,0 +1,147 @@
+{
+  "round": 13,
+  "atoms": [
+    {
+      "id": "sink-input-seed2026091600-seedplus1",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090805,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus2",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090806,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus3",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090807,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    },
+    {
+      "id": "sink-input-seed2026091600-seedplus4",
+      "path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "seed": 2026090808,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "tail": 8,
+        "sink": 8,
+        "covariance_rank": 128,
+        "structured_strength": 4.0,
+        "rows": [
+          4,
+          8,
+          32,
+          128,
+          512
+        ]
+      },
+      "model": "qwen3.6-35b-a3b"
+    }
+  ],
+  "selection_evidence": {
+    "population": "round012/sink-input-seed2026091600",
+    "test": 2,
+    "tokens": 32,
+    "price": 105.5859864981474,
+    "required_lower_bound": 106.09783153451227,
+    "margin": -0.5118450363648606
+  },
+  "required_versions": [
+    283,
+    284,
+    303,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    314,
+    319,
+    320,
+    322,
+    333,
+    343,
+    345,
+    365,
+    367,
+    374,
+    378,
+    379,
+    382,
+    387,
+    388,
+    389,
+    398,
+    400,
+    402,
+    403,
+    404,
+    412,
+    413,
+    415,
+    419,
+    426,
+    429,
+    435,
+    436,
+    440
+  ],
+  "limits": "Adaptive supervised support search using certificate prices. True tensors unchanged; all versions share each fixed decoy seed. Breaking one certificate is not final feasibility."
+}

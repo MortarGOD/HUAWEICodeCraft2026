@@ -1,0 +1,561 @@
+{
+  "completed": true,
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "mse": [
+        0.000938231241889298,
+        0.000938231241889298
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "mse": [
+        0.0011933930218219757,
+        0.0011779805645346642
+      ],
+      "native_tensor_ratio": 0.990724941283736,
+      "output_ratio": 0.9870851789766786,
+      "changed_values": 249
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "mse": [
+        0.0011336992029100657,
+        0.0011237075086683035
+      ],
+      "native_tensor_ratio": 0.9862060859916923,
+      "output_ratio": 0.9911866443796425,
+      "changed_values": 317
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "mse": [
+        0.00102087645791471,
+        0.0010190880857408047
+      ],
+      "native_tensor_ratio": 0.9940230257464311,
+      "output_ratio": 0.9982481992213256,
+      "changed_values": 143
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "mse": [
+        0.0011300076730549335,
+        0.0011236182181164622
+      ],
+      "native_tensor_ratio": 0.9950091099268868,
+      "output_ratio": 0.9943456534934868,
+      "changed_values": 137
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "mse": [
+        0.003249343018978834,
+        0.003249343018978834
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "mse": [
+        0.0012867293553426862,
+        0.0012867293553426862
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "mse": [
+        0.0013317465782165527,
+        0.0013285926543176174
+      ],
+      "native_tensor_ratio": 0.9969437971317617,
+      "output_ratio": 0.9976317386877321,
+      "changed_values": 199
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "mse": [
+        0.0013473154976963997,
+        0.0013367420760914683
+      ],
+      "native_tensor_ratio": 0.9959962142744341,
+      "output_ratio": 0.9921522303996284,
+      "changed_values": 114
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "mse": [
+        0.0011999455746263266,
+        0.001203074585646391
+      ],
+      "native_tensor_ratio": 0.998492960139132,
+      "output_ratio": 1.002607627450969,
+      "changed_values": 6
+    },
+    {
+      "group": 2,
+      "test": 0,
+      "mse": [
+        0.0016060780035331845,
+        0.0016022676136344671
+      ],
+      "native_tensor_ratio": 0.9993666038743779,
+      "output_ratio": 0.9976275187815692,
+      "changed_values": 14
+    },
+    {
+      "group": 2,
+      "test": 1,
+      "mse": [
+        0.0018041087314486504,
+        0.0017942094709724188
+      ],
+      "native_tensor_ratio": 0.9944039907027066,
+      "output_ratio": 0.9945129357761698,
+      "changed_values": 3
+    },
+    {
+      "group": 2,
+      "test": 2,
+      "mse": [
+        0.0016021394403651357,
+        0.0016021394403651357
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 2,
+      "test": 3,
+      "mse": [
+        0.0015197888715192676,
+        0.0015218909829854965
+      ],
+      "native_tensor_ratio": 0.9997544819383836,
+      "output_ratio": 1.0013831601912755,
+      "changed_values": 69
+    },
+    {
+      "group": 2,
+      "test": 4,
+      "mse": [
+        0.0012305902782827616,
+        0.0012305902782827616
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 3,
+      "test": 0,
+      "mse": [
+        0.0007720434805378318,
+        0.0007720434805378318
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 3,
+      "test": 1,
+      "mse": [
+        0.0008462091209366918,
+        0.0008467821171507239
+      ],
+      "native_tensor_ratio": 0.9993511653805838,
+      "output_ratio": 1.0006771331103095,
+      "changed_values": 70
+    },
+    {
+      "group": 3,
+      "test": 2,
+      "mse": [
+        0.0007529529393650591,
+        0.0007516868063248694
+      ],
+      "native_tensor_ratio": 0.9986951304709013,
+      "output_ratio": 0.9983184433262756,
+      "changed_values": 70
+    },
+    {
+      "group": 3,
+      "test": 3,
+      "mse": [
+        0.0006900208536535501,
+        0.0006900208536535501
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 3,
+      "test": 4,
+      "mse": [
+        0.0007007205858826637,
+        0.0007007205858826637
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 4,
+      "test": 0,
+      "mse": [
+        0.0009014655370265245,
+        0.0009014655370265245
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 4,
+      "test": 1,
+      "mse": [
+        0.0011802492663264275,
+        0.0011796326143667102
+      ],
+      "native_tensor_ratio": 0.9990357709686066,
+      "output_ratio": 0.9994775239626824,
+      "changed_values": 74
+    },
+    {
+      "group": 4,
+      "test": 2,
+      "mse": [
+        0.0010223968420177698,
+        0.0010202988050878048
+      ],
+      "native_tensor_ratio": 0.9997840739903626,
+      "output_ratio": 0.9979479231119059,
+      "changed_values": 78
+    },
+    {
+      "group": 4,
+      "test": 3,
+      "mse": [
+        0.0006736052455380559,
+        0.0006727935397066176
+      ],
+      "native_tensor_ratio": 0.9993035590771748,
+      "output_ratio": 0.9987949829120022,
+      "changed_values": 86
+    },
+    {
+      "group": 4,
+      "test": 4,
+      "mse": [
+        0.001090408070012927,
+        0.0010916320607066154
+      ],
+      "native_tensor_ratio": 0.9994771559221498,
+      "output_ratio": 1.0011225070020564,
+      "changed_values": 67
+    },
+    {
+      "group": 5,
+      "test": 0,
+      "mse": [
+        0.0010229976614937186,
+        0.0010229976614937186
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 5,
+      "test": 1,
+      "mse": [
+        0.0012104397173970938,
+        0.0012100180611014366
+      ],
+      "native_tensor_ratio": 0.9996839329743892,
+      "output_ratio": 0.9996516503138513,
+      "changed_values": 4
+    },
+    {
+      "group": 5,
+      "test": 2,
+      "mse": [
+        0.0011917240917682648,
+        0.0011917240917682648
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 5,
+      "test": 3,
+      "mse": [
+        0.0010152719914913177,
+        0.0010152719914913177
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 5,
+      "test": 4,
+      "mse": [
+        0.0010636860970407724,
+        0.0010636860970407724
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 6,
+      "test": 0,
+      "mse": [
+        0.0009061954915523529,
+        0.0009011343936435878
+      ],
+      "native_tensor_ratio": 0.9968084992081416,
+      "output_ratio": 0.994415004316458,
+      "changed_values": 265
+    },
+    {
+      "group": 6,
+      "test": 1,
+      "mse": [
+        0.0010130167938768864,
+        0.0010130167938768864
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 6,
+      "test": 2,
+      "mse": [
+        0.0010135285556316376,
+        0.0010135285556316376
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 6,
+      "test": 3,
+      "mse": [
+        0.0007715956307947636,
+        0.0007715956307947636
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 6,
+      "test": 4,
+      "mse": [
+        0.0007571419700980186,
+        0.0007549486472271383
+      ],
+      "native_tensor_ratio": 0.9995595161930714,
+      "output_ratio": 0.9971031550785695,
+      "changed_values": 67
+    },
+    {
+      "group": 7,
+      "test": 0,
+      "mse": [
+        0.0014644651673734188,
+        0.0014578888658434153
+      ],
+      "native_tensor_ratio": 0.9956116621471754,
+      "output_ratio": 0.9955094175836231,
+      "changed_values": 162
+    },
+    {
+      "group": 7,
+      "test": 1,
+      "mse": [
+        0.0023221697192639112,
+        0.002326252171769738
+      ],
+      "native_tensor_ratio": 0.9970893036566496,
+      "output_ratio": 1.0017580336492895,
+      "changed_values": 90
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "mse": [
+        0.0011443127878010273,
+        0.0011432261671870947
+      ],
+      "native_tensor_ratio": 0.9986066738018452,
+      "output_ratio": 0.9990504164372569,
+      "changed_values": 123
+    },
+    {
+      "group": 7,
+      "test": 3,
+      "mse": [
+        0.0009634841699153185,
+        0.0009634841699153185
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "mse": [
+        0.0010823062621057034,
+        0.0010791356908157468
+      ],
+      "native_tensor_ratio": 0.9979628623830102,
+      "output_ratio": 0.9970705414899956,
+      "changed_values": 163
+    },
+    {
+      "group": 8,
+      "test": 0,
+      "mse": [
+        0.003826671279966831,
+        0.00381443090736866
+      ],
+      "native_tensor_ratio": 0.9980166384561643,
+      "output_ratio": 0.9968013002156074,
+      "changed_values": 12
+    },
+    {
+      "group": 8,
+      "test": 1,
+      "mse": [
+        0.003457228420302272,
+        0.003454753430560231
+      ],
+      "native_tensor_ratio": 0.9984366931855777,
+      "output_ratio": 0.9992841115942741,
+      "changed_values": 160
+    },
+    {
+      "group": 8,
+      "test": 2,
+      "mse": [
+        0.0034572756849229336,
+        0.0034572756849229336
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 8,
+      "test": 3,
+      "mse": [
+        0.003859467338770628,
+        0.0038510235026478767
+      ],
+      "native_tensor_ratio": 0.9990859785832952,
+      "output_ratio": 0.997812175779303,
+      "changed_values": 13
+    },
+    {
+      "group": 8,
+      "test": 4,
+      "mse": [
+        0.0036575652193278074,
+        0.003697620239108801
+      ],
+      "native_tensor_ratio": 0.9988377789058848,
+      "output_ratio": 1.0109512797117954,
+      "changed_values": 153
+    },
+    {
+      "group": 9,
+      "test": 0,
+      "mse": [
+        0.008495630696415901,
+        0.008498854003846645
+      ],
+      "native_tensor_ratio": 0.9996363097719063,
+      "output_ratio": 1.0003794076680033,
+      "changed_values": 8
+    },
+    {
+      "group": 9,
+      "test": 1,
+      "mse": [
+        0.011193669401109219,
+        0.01116137858480215
+      ],
+      "native_tensor_ratio": 0.9988188807861555,
+      "output_ratio": 0.9971152608541514,
+      "changed_values": 14
+    },
+    {
+      "group": 9,
+      "test": 2,
+      "mse": [
+        0.011912435293197632,
+        0.011912435293197632
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    },
+    {
+      "group": 9,
+      "test": 3,
+      "mse": [
+        0.013390427455306053,
+        0.01338386069983244
+      ],
+      "native_tensor_ratio": 0.9996088572528574,
+      "output_ratio": 0.9995095932900177,
+      "changed_values": 83
+    },
+    {
+      "group": 9,
+      "test": 4,
+      "mse": [
+        0.011643081903457642,
+        0.011643081903457642
+      ],
+      "native_tensor_ratio": 1.0,
+      "output_ratio": 1.0,
+      "changed_values": 0
+    }
+  ],
+  "mean_output_ratio": 0.9987906149753181,
+  "mean_native_tensor_ratio": 0.998486633082509,
+  "better": 23,
+  "worse": 7,
+  "changed_cases": 30,
+  "warning": "Offline serial hook only; no production mutable dispatch. Shared parent calibration, only V primitive grid differs. No acceptance gate; this is not an online score prediction."
+}

@@ -1,0 +1,57 @@
+{
+  "measured_cells": 20,
+  "failures": 0,
+  "remaining_targets": [
+    {
+      "from": 322,
+      "research_parent": 324,
+      "to": 374,
+      "parent_attention_proxy": true,
+      "online_total_delta": 226.0,
+      "linear_delta": 0.0,
+      "target": 226.0,
+      "tolerance": 11.3,
+      "direction_required": true,
+      "available_case_pairs": 235,
+      "minimum": {
+        "population": "round003/trace25-group40-correlated_noise",
+        "test": 0,
+        "tokens": 4,
+        "delta": -160.85581279732253
+      },
+      "maximum": {
+        "population": "round003/trace25-group40-correlated_noise",
+        "test": 1,
+        "tokens": 4,
+        "delta": 624.6796964738621
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 387,
+      "research_parent": 387,
+      "to": 396,
+      "parent_attention_proxy": false,
+      "online_total_delta": -2.0,
+      "linear_delta": 0.0,
+      "target": -2.0,
+      "tolerance": 1.0,
+      "direction_required": true,
+      "available_case_pairs": 235,
+      "minimum": {
+        "population": "round001/m0-base-row_permute",
+        "test": 0,
+        "tokens": 4,
+        "delta": 0.0
+      },
+      "maximum": {
+        "population": "round001/m0-sink-block_resample",
+        "test": 4,
+        "tokens": 512,
+        "delta": 30.35502937885348
+      },
+      "outside_available_support": true
+    }
+  ],
+  "decision": "Do not promote round007 based on this screen: it did not cover either remaining target interval."
+}

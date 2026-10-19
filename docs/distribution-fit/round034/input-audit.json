@@ -1,0 +1,262 @@
+[
+  {
+    "atom": "aligned-test",
+    "rows": [
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 2,
+        "weighted_energy_before": 944.9078369140625,
+        "weighted_energy_after": 944.9078369140625
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 5,
+        "weighted_energy_before": 1882.169677734375,
+        "weighted_energy_after": 1882.181640625
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 28,
+        "weighted_energy_before": 6820.59912109375,
+        "weighted_energy_after": 6820.60498046875
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 125,
+        "weighted_energy_before": 27975.58203125,
+        "weighted_energy_after": 27975.58203125
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 510,
+        "weighted_energy_before": 107264.34375,
+        "weighted_energy_after": 107271.3125
+      }
+    ]
+  },
+  {
+    "atom": "aligned-both",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 3,
+        "weighted_energy_before": 998.370361328125,
+        "weighted_energy_after": 998.370361328125
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 6,
+        "weighted_energy_before": 2083.631103515625,
+        "weighted_energy_after": 2083.665771484375
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 29,
+        "weighted_energy_before": 6037.8134765625,
+        "weighted_energy_after": 6037.82373046875
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 127,
+        "weighted_energy_before": 25450.224609375,
+        "weighted_energy_after": 25450.2265625
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 511,
+        "weighted_energy_before": 97885.0625,
+        "weighted_energy_after": 103485.4296875
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 2,
+        "weighted_energy_before": 944.9078369140625,
+        "weighted_energy_after": 944.9078369140625
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 5,
+        "weighted_energy_before": 1882.169677734375,
+        "weighted_energy_after": 1882.181640625
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 28,
+        "weighted_energy_before": 6820.59912109375,
+        "weighted_energy_after": 6820.60498046875
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 125,
+        "weighted_energy_before": 27975.58203125,
+        "weighted_energy_after": 27975.58203125
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 510,
+        "weighted_energy_before": 107264.34375,
+        "weighted_energy_after": 107271.3125
+      }
+    ]
+  },
+  {
+    "atom": "anti-test",
+    "rows": [
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 4,
+        "weighted_energy_before": 944.9078369140625,
+        "weighted_energy_after": 14.30067253112793
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 6,
+        "weighted_energy_before": 1882.169677734375,
+        "weighted_energy_after": 25.875017166137695
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 32,
+        "weighted_energy_before": 6820.59912109375,
+        "weighted_energy_after": 102.4180679321289
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 127,
+        "weighted_energy_before": 27975.58203125,
+        "weighted_energy_after": 395.013427734375
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 511,
+        "weighted_energy_before": 107264.34375,
+        "weighted_energy_after": 1182.18212890625
+      }
+    ]
+  },
+  {
+    "atom": "anti-both",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 3,
+        "weighted_energy_before": 998.370361328125,
+        "weighted_energy_after": 14.073942184448242
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 8,
+        "weighted_energy_before": 2083.631103515625,
+        "weighted_energy_after": 25.63252067565918
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 30,
+        "weighted_energy_before": 6037.8134765625,
+        "weighted_energy_after": 101.24916076660156
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 127,
+        "weighted_energy_before": 25450.224609375,
+        "weighted_energy_after": 365.7356872558594
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 512,
+        "weighted_energy_before": 97885.0625,
+        "weighted_energy_after": 1179.255126953125
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "moved_rows": 4,
+        "weighted_energy_before": 944.9078369140625,
+        "weighted_energy_after": 14.30067253112793
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "moved_rows": 6,
+        "weighted_energy_before": 1882.169677734375,
+        "weighted_energy_after": 25.875017166137695
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "moved_rows": 32,
+        "weighted_energy_before": 6820.59912109375,
+        "weighted_energy_after": 102.4180679321289
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "moved_rows": 127,
+        "weighted_energy_before": 27975.58203125,
+        "weighted_energy_after": 395.013427734375
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "moved_rows": 511,
+        "weighted_energy_before": 107264.34375,
+        "weighted_energy_after": 1182.18212890625
+      }
+    ]
+  }
+]

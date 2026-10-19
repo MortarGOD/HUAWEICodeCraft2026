@@ -1,0 +1,10 @@
+{
+  "version": 629,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "summary": "Same counterpart-free V objective as v628 (lam = 0.1 on ||1^T(V_hat-V)||^2) but with a single fully vectorised Jacobi pass instead of a Python loop over T, to remove the dynamic cost. Not provably monotone, so it is measured.",
+  "patches": [],
+  "append": [
+    "solution/v629_rank1_core.py"
+  ]
+}

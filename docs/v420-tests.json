@@ -1,0 +1,169 @@
+{
+  "parent_version": 419,
+  "candidate_version": 420,
+  "scope": {
+    "changed_definition": "_quantize_linear_exact_target",
+    "initial_candidate_region_only": true,
+    "other_module_statements_identical": 295,
+    "parent_sha256": "abfd6cf0024c8489f444c7db5050830de9f9df2374dd7feb9564ec05e14e7212",
+    "candidate_sha256": "c8a88f5377f0ab271cae4f872c49976128c4acad581aa83dc548d392605a72f2"
+  },
+  "prepared": {
+    "cases": [
+      "float32/vector",
+      "float32/strided-vector",
+      "float32/transposed",
+      "float32/prefix2-strided",
+      "float32/prefix3",
+      "float32/zero",
+      "float32/finite-endpoints",
+      "bfloat16/vector",
+      "bfloat16/strided-vector",
+      "bfloat16/transposed",
+      "bfloat16/prefix2-strided",
+      "bfloat16/prefix3",
+      "bfloat16/zero",
+      "bfloat16/finite-endpoints"
+    ],
+    "bitwise_comparisons": 288,
+    "inputs_and_rng_unchanged": true
+  },
+  "target": [
+    {
+      "mode": {
+        "prefix": [
+          3
+        ],
+        "alternate": false,
+        "full": false,
+        "extra": false,
+        "wide": false,
+        "task_rounding": false
+      },
+      "parent": {
+        "centers": 1,
+        "initial_candidates": 5,
+        "initial_peak_encodes": 5,
+        "later_quantizer_calls": 2
+      },
+      "candidate": {
+        "centers": 1,
+        "initial_candidates": 5,
+        "initial_peak_encodes": 1,
+        "later_quantizer_calls": 2
+      }
+    },
+    {
+      "mode": {
+        "prefix": [
+          2,
+          3
+        ],
+        "alternate": true,
+        "full": false,
+        "extra": false,
+        "wide": true,
+        "task_rounding": true
+      },
+      "parent": {
+        "centers": 2,
+        "initial_candidates": 24,
+        "initial_peak_encodes": 24,
+        "later_quantizer_calls": 2
+      },
+      "candidate": {
+        "centers": 2,
+        "initial_candidates": 24,
+        "initial_peak_encodes": 2,
+        "later_quantizer_calls": 2
+      }
+    },
+    {
+      "mode": {
+        "prefix": [
+          3
+        ],
+        "alternate": true,
+        "full": true,
+        "extra": true,
+        "wide": true,
+        "task_rounding": true
+      },
+      "parent": {
+        "centers": 2,
+        "initial_candidates": 24,
+        "initial_peak_encodes": 24,
+        "later_quantizer_calls": 6
+      },
+      "candidate": {
+        "centers": 2,
+        "initial_candidates": 24,
+        "initial_peak_encodes": 2,
+        "later_quantizer_calls": 6
+      }
+    }
+  ],
+  "real_linear": {
+    "dataset": "/Users/ee/Code/2026-huawei-alogorithm/local_fitted_models_attention_feedback_v2/linear.pt",
+    "group": 0,
+    "weight_shape": [
+      2048,
+      512
+    ],
+    "calibration_shapes": [
+      [
+        1,
+        512
+      ],
+      [
+        10,
+        512
+      ],
+      [
+        128,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        1024,
+        512
+      ]
+    ],
+    "test_shapes": [
+      [
+        1,
+        512
+      ],
+      [
+        10,
+        512
+      ],
+      [
+        128,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        1024,
+        512
+      ]
+    ],
+    "target_calls_during_calibration": [
+      2,
+      2
+    ],
+    "parent_calibration_changed_rng": true,
+    "candidate_calibration_rng_matches_parent": true,
+    "weight_state_and_activations_bitwise_equal": true,
+    "inputs_states_and_dynamic_rng_unchanged": true,
+    "fresh_module_accepts_frozen_state": true
+  },
+  "official_self_check": "not requested",
+  "passed_requested_checks": true
+}

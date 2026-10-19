@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 4,
+      "tokens": 512,
+      "price": -3352.535292776428,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -3553.5954052429115
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 3,
+      "tokens": 128,
+      "price": -3807.2065389229283,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -4008.266651389412
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 2,
+      "tokens": 32,
+      "price": -3910.7208378072587,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -4111.780950273743
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 1,
+      "tokens": 8,
+      "price": -7380.391349490789,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -7581.451461957273
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 0,
+      "tokens": 4,
+      "price": -14545.641033479837,
+      "required_lower_bound": 201.06011246648364,
+      "margin": -14746.701145946321
+    }
+  ],
+  "promote": false,
+  "limits": "Fixed 465-column certificate only."
+}

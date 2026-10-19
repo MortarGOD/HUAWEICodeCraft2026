@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "interface_checks": 32,
+  "geometry": [
+    {
+      "group": 14,
+      "rank": 0,
+      "identity_relative_error": 8.01462817889842e-07,
+      "continuous_relative_change": 3.929739705199609e-06
+    },
+    {
+      "group": 14,
+      "rank": 1,
+      "identity_relative_error": 1.1330879488014034e-06,
+      "continuous_relative_change": 0.001025492325425148
+    },
+    {
+      "group": 14,
+      "rank": 4,
+      "identity_relative_error": 1.0774639349619974e-06,
+      "continuous_relative_change": 0.00219444721005857
+    },
+    {
+      "group": 19,
+      "rank": 0,
+      "identity_relative_error": 8.692015285305388e-07,
+      "continuous_relative_change": 3.021099473698996e-06
+    },
+    {
+      "group": 19,
+      "rank": 1,
+      "identity_relative_error": 1.087674490918289e-06,
+      "continuous_relative_change": 0.0010144476545974612
+    },
+    {
+      "group": 19,
+      "rank": 4,
+      "identity_relative_error": 1.0893066928474582e-06,
+      "continuous_relative_change": 0.002007950795814395
+    }
+  ],
+  "parent_state_unchanged": true,
+  "inputs_and_rng_unchanged": true,
+  "independent_module_equal": true
+}

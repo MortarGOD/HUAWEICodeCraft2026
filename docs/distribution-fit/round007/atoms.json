@@ -1,0 +1,77 @@
+{
+  "round": 7,
+  "atoms": [
+    {
+      "id": "trace35-group7-gain0.75",
+      "path": "local_distribution_fit/round007/trace35-group7-gain0.75.pt",
+      "sha256": "743055572a1a242ccfc39ab389e2b39b5c9c51e6d69d971a2c9b123335ab936d",
+      "seed": 2026091400,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "profile": {
+        "gain": 0.75,
+        "test_only": false
+      }
+    },
+    {
+      "id": "trace35-group7-gain1.25",
+      "path": "local_distribution_fit/round007/trace35-group7-gain1.25.pt",
+      "sha256": "f4f3a8add8d9136b33557ce843b13e14ec6c23e73cc04ac2606b2e52624db51d",
+      "seed": 2026091401,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "profile": {
+        "gain": 1.25,
+        "test_only": false
+      }
+    },
+    {
+      "id": "trace35-group7-gain2.0",
+      "path": "local_distribution_fit/round007/trace35-group7-gain2.0.pt",
+      "sha256": "ea4fff1315814b849665f72304cbc2817b98dd0338949956a3eb7c9cbedfc7ea",
+      "seed": 2026091402,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "profile": {
+        "gain": 2.0,
+        "test_only": false
+      }
+    },
+    {
+      "id": "sink-drift-gain0.5",
+      "path": "local_distribution_fit/round007/sink-drift-gain0.5.pt",
+      "sha256": "93afb499387f4bc5ca7f2a82ecb52f67ec2e33fdd88594edea18033078552564",
+      "seed": 2026091403,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-sink.pt",
+      "source_sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "profile": {
+        "gain": 0.5,
+        "test_only": true
+      }
+    },
+    {
+      "id": "sink-drift-gain2.0",
+      "path": "local_distribution_fit/round007/sink-drift-gain2.0.pt",
+      "sha256": "4819346f1343b6b852fb8f6b0b83129ffbf8e9813b277dfd670c2c626c636027",
+      "seed": 2026091404,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-sink.pt",
+      "source_sha256": "7af3f2466e126ad992ddb258cb28173fe95ce8312a870c8b138513d79f888659",
+      "profile": {
+        "gain": 2.0,
+        "test_only": true
+      }
+    }
+  ],
+  "selection_evidence": "v374 max +206.59 vs target +226 on trace35/group7; v396 available differences nonnegative. Vary actual input gain and test drift without modifying candidate gates or scoring.",
+  "limits": "Adaptive synthetic distribution hypotheses; no hidden-distribution claim."
+}

@@ -1,0 +1,438 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/attention_history_fit_v1/attn.pt",
+  "versions": [
+    441,
+    501
+  ],
+  "groups_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "n_groups_total": 20,
+  "results": {
+    "441": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 32,
+          "weight": 3.0,
+          "quality": 0.9636002640837623
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.37646804799446426
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.686568362005858
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.2304095831754353
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 8,
+          "weight": 7.0,
+          "quality": 0.3483905889556784
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 8,
+          "weight": 10.0,
+          "quality": 0.4827986898522405
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 8,
+          "weight": 2.0,
+          "quality": 0.5280701380825163
+        },
+        {
+          "group": 6,
+          "test": 1,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3760706196604715
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.28832218551793537
+        },
+        {
+          "group": 7,
+          "test": 1,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.23098899914963697
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.7211138613750055
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.8119825909792522
+        },
+        {
+          "group": 10,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.723776332016446
+        },
+        {
+          "group": 11,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.17556867075621402
+        },
+        {
+          "group": 11,
+          "test": 1,
+          "tokens": 8,
+          "weight": 24.0,
+          "quality": 0.4225146873761276
+        },
+        {
+          "group": 11,
+          "test": 2,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.28940765533938984
+        },
+        {
+          "group": 12,
+          "test": 0,
+          "tokens": 4,
+          "weight": 27.0,
+          "quality": 0.22019761085537168
+        },
+        {
+          "group": 12,
+          "test": 1,
+          "tokens": 128,
+          "weight": 3.0,
+          "quality": 0.6991925941453764
+        },
+        {
+          "group": 13,
+          "test": 0,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.5280701380825163
+        },
+        {
+          "group": 13,
+          "test": 1,
+          "tokens": 8,
+          "weight": 6.0,
+          "quality": 0.4161538957173918
+        },
+        {
+          "group": 14,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.36896058288625905
+        },
+        {
+          "group": 15,
+          "test": 0,
+          "tokens": 8,
+          "weight": 40.0,
+          "quality": 0.20678971216108136
+        },
+        {
+          "group": 15,
+          "test": 1,
+          "tokens": 32,
+          "weight": 19.0,
+          "quality": 0.16416961832566454
+        },
+        {
+          "group": 15,
+          "test": 2,
+          "tokens": 512,
+          "weight": 16.0,
+          "quality": 0.6762839541404909
+        },
+        {
+          "group": 16,
+          "test": 0,
+          "tokens": 512,
+          "weight": 47.0,
+          "quality": 0.7870463966056596
+        },
+        {
+          "group": 17,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        },
+        {
+          "group": 18,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        },
+        {
+          "group": 19,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.43243452921447495,
+      "wall_seconds": 82.96421308303252
+    },
+    "501": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 32,
+          "weight": 3.0,
+          "quality": 0.9636306450612195
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.37646804799446426
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.6936204429245896
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.23650926287649052
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 8,
+          "weight": 7.0,
+          "quality": 0.3483905889556784
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 8,
+          "weight": 10.0,
+          "quality": 0.4934212454643638
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 8,
+          "weight": 2.0,
+          "quality": 0.5280701380825163
+        },
+        {
+          "group": 6,
+          "test": 1,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3760706196604715
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.293080662000328
+        },
+        {
+          "group": 7,
+          "test": 1,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.22868248559962137
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.7211138613750055
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.8119825909792522
+        },
+        {
+          "group": 10,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.7401327136691964
+        },
+        {
+          "group": 11,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.17556867075621402
+        },
+        {
+          "group": 11,
+          "test": 1,
+          "tokens": 8,
+          "weight": 24.0,
+          "quality": 0.4225146873761276
+        },
+        {
+          "group": 11,
+          "test": 2,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.28940765533938984
+        },
+        {
+          "group": 12,
+          "test": 0,
+          "tokens": 4,
+          "weight": 27.0,
+          "quality": 0.2223246782979765
+        },
+        {
+          "group": 12,
+          "test": 1,
+          "tokens": 128,
+          "weight": 3.0,
+          "quality": 0.7019733573825533
+        },
+        {
+          "group": 13,
+          "test": 0,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.5280701380825163
+        },
+        {
+          "group": 13,
+          "test": 1,
+          "tokens": 8,
+          "weight": 6.0,
+          "quality": 0.4161538957173918
+        },
+        {
+          "group": 14,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.36896058288625905
+        },
+        {
+          "group": 15,
+          "test": 0,
+          "tokens": 8,
+          "weight": 40.0,
+          "quality": 0.19042713287773763
+        },
+        {
+          "group": 15,
+          "test": 1,
+          "tokens": 32,
+          "weight": 19.0,
+          "quality": 0.16351465741051627
+        },
+        {
+          "group": 15,
+          "test": 2,
+          "tokens": 512,
+          "weight": 16.0,
+          "quality": 0.676992679074741
+        },
+        {
+          "group": 16,
+          "test": 0,
+          "tokens": 512,
+          "weight": 47.0,
+          "quality": 0.7868017030603438
+        },
+        {
+          "group": 17,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        },
+        {
+          "group": 18,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        },
+        {
+          "group": 19,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3951779530803702
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.4306429858269595,
+      "wall_seconds": 115.59085216699168
+    }
+  }
+}

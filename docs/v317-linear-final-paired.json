@@ -1,0 +1,577 @@
+{
+  "complete": true,
+  "source_unchanged_functions": 78,
+  "full_shape": false,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.7554657079745084,
+          "dynamic": 0.9015943330014125
+        },
+        "cleanup": {
+          "calibration": 0.2804297920083627,
+          "dynamic": 0.9109213340561837
+        },
+        "joint": {
+          "calibration": 1.273534167004982,
+          "dynamic": 0.9301445000164676
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.433542067574355,
+          "candidate": 0.4617445946054166,
+          "delta": 0.02820252703106163
+        },
+        {
+          "test": 1,
+          "parent": 0.4518763140863091,
+          "candidate": 0.4864979647210119,
+          "delta": 0.034621650634702794
+        },
+        {
+          "test": 2,
+          "parent": 0.46159749161843533,
+          "candidate": 0.49682949065185267,
+          "delta": 0.03523199903341734
+        },
+        {
+          "test": 3,
+          "parent": 0.4646964128417681,
+          "candidate": 0.500684462696783,
+          "delta": 0.035988049855014914
+        },
+        {
+          "test": 4,
+          "parent": 0.46850651665404863,
+          "candidate": 0.5046833676791613,
+          "delta": 0.0361768510251127
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.17022107757930938,
+      "adopted": true
+    },
+    {
+      "group": 1,
+      "shape": [
+        1024,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.00764579200767912,
+          "dynamic": 0.6264151260547806
+        },
+        "cleanup": {
+          "calibration": 0.007882083009462804,
+          "dynamic": 0.3795073759974912
+        },
+        "joint": {
+          "calibration": 0.00918804100365378,
+          "dynamic": 0.30103362500085495
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.9978373917388271,
+          "candidate": 0.9978373917388271,
+          "delta": 0.0
+        },
+        {
+          "test": 1,
+          "parent": 0.9975516025781402,
+          "candidate": 0.9975516025781402,
+          "delta": 0.0
+        },
+        {
+          "test": 2,
+          "parent": 0.9976617337595403,
+          "candidate": 0.9976617337595403,
+          "delta": 0.0
+        },
+        {
+          "test": 3,
+          "parent": 0.9976045453258402,
+          "candidate": 0.9976045453258402,
+          "delta": 0.0
+        },
+        {
+          "test": 4,
+          "parent": 0.9976401967500462,
+          "candidate": 0.9976401967500462,
+          "delta": 0.0
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0,
+      "adopted": false
+    },
+    {
+      "group": 2,
+      "shape": [
+        512,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.005307083978550509,
+          "dynamic": 1.2082610400102567
+        },
+        "cleanup": {
+          "calibration": 0.005188792012631893,
+          "dynamic": 0.3270214170042891
+        },
+        "joint": {
+          "calibration": 0.0045450830075424165,
+          "dynamic": 0.31938795803580433
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.9998483005350838,
+          "candidate": 0.9998483005350838,
+          "delta": 0.0
+        },
+        {
+          "test": 1,
+          "parent": 0.9998227045681388,
+          "candidate": 0.9998227045681388,
+          "delta": 0.0
+        },
+        {
+          "test": 2,
+          "parent": 0.9998206123088493,
+          "candidate": 0.9998206123088493,
+          "delta": 0.0
+        },
+        {
+          "test": 3,
+          "parent": 0.9998273403295677,
+          "candidate": 0.9998273403295677,
+          "delta": 0.0
+        },
+        {
+          "test": 4,
+          "parent": 0.9998268421883634,
+          "candidate": 0.9998268421883634,
+          "delta": 0.0
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0,
+      "adopted": false
+    },
+    {
+      "group": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.004704541002865881,
+          "dynamic": 1.2438334590697195
+        },
+        "cleanup": {
+          "calibration": 0.004889375006314367,
+          "dynamic": 0.32983912495546974
+        },
+        "joint": {
+          "calibration": 0.004700584016973153,
+          "dynamic": 0.32461204202263616
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.9998120028819573,
+          "candidate": 0.9998120028819573,
+          "delta": 0.0
+        },
+        {
+          "test": 1,
+          "parent": 0.9998250571363974,
+          "candidate": 0.9998250571363974,
+          "delta": 0.0
+        },
+        {
+          "test": 2,
+          "parent": 0.9998171391617153,
+          "candidate": 0.9998171391617153,
+          "delta": 0.0
+        },
+        {
+          "test": 3,
+          "parent": 0.9998193867532291,
+          "candidate": 0.9998193867532291,
+          "delta": 0.0
+        },
+        {
+          "test": 4,
+          "parent": 0.9998196259433656,
+          "candidate": 0.9998196259433656,
+          "delta": 0.0
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0,
+      "adopted": false
+    },
+    {
+      "group": 4,
+      "shape": [
+        2048,
+        512
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.7500723749981262,
+          "dynamic": 1.0448542079830077
+        },
+        "cleanup": {
+          "calibration": 0.34670529098366387,
+          "dynamic": 1.6031862090167124
+        },
+        "joint": {
+          "calibration": 1.3917227500060108,
+          "dynamic": 1.6312201239925344
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.5144626752355392,
+          "candidate": 0.5704869907905777,
+          "delta": 0.056024315555038506
+        },
+        {
+          "test": 1,
+          "parent": 0.5129806105474148,
+          "candidate": 0.549494477033079,
+          "delta": 0.036513866485664126
+        },
+        {
+          "test": 2,
+          "parent": 0.518998396981792,
+          "candidate": 0.5538047105141108,
+          "delta": 0.03480631353231889
+        },
+        {
+          "test": 3,
+          "parent": 0.5182799272944292,
+          "candidate": 0.5510287051304923,
+          "delta": 0.032748777836063114
+        },
+        {
+          "test": 4,
+          "parent": 0.5139944875827852,
+          "candidate": 0.5480374708341782,
+          "delta": 0.03404298325139299
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.19413625666047762,
+      "adopted": true
+    },
+    {
+      "group": 5,
+      "shape": [
+        512,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.015949749998981133,
+          "dynamic": 2.7093975400202908
+        },
+        "cleanup": {
+          "calibration": 0.014823750010691583,
+          "dynamic": 0.7294350429729093
+        },
+        "joint": {
+          "calibration": 0.014796749979723245,
+          "dynamic": 0.7084051249839831
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.9998307684559057,
+          "candidate": 0.9998307684559057,
+          "delta": 0.0
+        },
+        {
+          "test": 1,
+          "parent": 0.9997932270741179,
+          "candidate": 0.9997932270741179,
+          "delta": 0.0
+        },
+        {
+          "test": 2,
+          "parent": 0.9997984368720264,
+          "candidate": 0.9997984368720264,
+          "delta": 0.0
+        },
+        {
+          "test": 3,
+          "parent": 0.9998009156783119,
+          "candidate": 0.9998009156783119,
+          "delta": 0.0
+        },
+        {
+          "test": 4,
+          "parent": 0.9997999185755604,
+          "candidate": 0.9997999185755604,
+          "delta": 0.0
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0,
+      "adopted": false
+    },
+    {
+      "group": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 1.03721566699096,
+          "dynamic": 0.9547732080100104
+        },
+        "cleanup": {
+          "calibration": 0.37950179100153036,
+          "dynamic": 0.9622635009582154
+        },
+        "joint": {
+          "calibration": 1.371144375007134,
+          "dynamic": 0.942320166999707
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.48432100629694996,
+          "candidate": 0.506530285324067,
+          "delta": 0.022209279027117
+        },
+        {
+          "test": 1,
+          "parent": 0.4071506716333837,
+          "candidate": 0.4521869966041584,
+          "delta": 0.0450363249707747
+        },
+        {
+          "test": 2,
+          "parent": 0.41362556369944947,
+          "candidate": 0.45209712266777635,
+          "delta": 0.03847155896832688
+        },
+        {
+          "test": 3,
+          "parent": 0.4091884875531834,
+          "candidate": 0.44663997206063466,
+          "delta": 0.03745148450745128
+        },
+        {
+          "test": 4,
+          "parent": 0.4097832336628502,
+          "candidate": 0.4474083850334839,
+          "delta": 0.037625151370633714
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.18079379884430358,
+      "adopted": true
+    },
+    {
+      "group": 7,
+      "shape": [
+        2048,
+        512
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.9487634169927333,
+          "dynamic": 1.9820642080157995
+        },
+        "cleanup": {
+          "calibration": 0.36392787500517443,
+          "dynamic": 1.967484457010869
+        },
+        "joint": {
+          "calibration": 3.1057427909981925,
+          "dynamic": 1.4359954170067795
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.637272974913158,
+          "candidate": 0.6673234552958844,
+          "delta": 0.030050480382726397
+        },
+        {
+          "test": 1,
+          "parent": 0.3744300106216937,
+          "candidate": 0.4185403529819828,
+          "delta": 0.0441103423602891
+        },
+        {
+          "test": 2,
+          "parent": 0.3742709688288295,
+          "candidate": 0.4156584713075988,
+          "delta": 0.04138750247876932
+        },
+        {
+          "test": 3,
+          "parent": 0.3836794794530113,
+          "candidate": 0.4238168046844193,
+          "delta": 0.040137325231408005
+        },
+        {
+          "test": 4,
+          "parent": 0.37846928908678046,
+          "candidate": 0.417593383410773,
+          "delta": 0.03912409432399255
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.19480974477718538,
+      "adopted": true
+    },
+    {
+      "group": 8,
+      "shape": [
+        1024,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 0.009768541000084952,
+          "dynamic": 0.6156320839945693
+        },
+        "cleanup": {
+          "calibration": 0.009455792023800313,
+          "dynamic": 0.32724408197100274
+        },
+        "joint": {
+          "calibration": 0.009306917025242,
+          "dynamic": 0.31370258299284615
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.9976805158841208,
+          "candidate": 0.9976805158841208,
+          "delta": 0.0
+        },
+        {
+          "test": 1,
+          "parent": 0.9976065618761139,
+          "candidate": 0.9976065618761139,
+          "delta": 0.0
+        },
+        {
+          "test": 2,
+          "parent": 0.9976089054200937,
+          "candidate": 0.9976089054200937,
+          "delta": 0.0
+        },
+        {
+          "test": 3,
+          "parent": 0.9976246888033367,
+          "candidate": 0.9976246888033367,
+          "delta": 0.0
+        },
+        {
+          "test": 4,
+          "parent": 0.9976436777482974,
+          "candidate": 0.9976436777482974,
+          "delta": 0.0
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0,
+      "adopted": false
+    },
+    {
+      "group": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 1.633797374990536,
+          "dynamic": 1.8927995409758296
+        },
+        "cleanup": {
+          "calibration": 0.7554337920155376,
+          "dynamic": 1.7936418750323355
+        },
+        "joint": {
+          "calibration": 3.6361504170054104,
+          "dynamic": 1.8685706240066793
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.5851739511167389,
+          "candidate": 0.5975302890590698,
+          "delta": 0.01235633794233093
+        },
+        {
+          "test": 1,
+          "parent": 0.6087115446233817,
+          "candidate": 0.6247189791820794,
+          "delta": 0.016007434558697686
+        },
+        {
+          "test": 2,
+          "parent": 0.6058914347096385,
+          "candidate": 0.6226511391446925,
+          "delta": 0.016759704435054035
+        },
+        {
+          "test": 3,
+          "parent": 0.600020448514518,
+          "candidate": 0.617657683520636,
+          "delta": 0.017637235006118024
+        },
+        {
+          "test": 4,
+          "parent": 0.6010132739458427,
+          "candidate": 0.6182683037944474,
+          "delta": 0.01725502984860472
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.0800157417908054,
+      "adopted": true
+    }
+  ],
+  "validation_checks": 180,
+  "timing": "Serial algorithm calls only; scoring and checks excluded; not a 96-core forecast",
+  "wide_stress": false,
+  "delta": 0.8199766196520814,
+  "total_seconds": {
+    "parent": 18.348314997070702,
+    "cleanup": 11.498782752052648,
+    "joint": 19.596224040113157
+  }
+}

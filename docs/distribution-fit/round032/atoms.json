@@ -1,0 +1,173 @@
+{
+  "round": 32,
+  "atoms": [
+    {
+      "id": "vmean1-test",
+      "path": "local_distribution_fit/round032/vmean1-test.pt",
+      "sha256": "0bed36534f28bda3b83060d2355548add63dbc38473ac8990fc2be1d87a48962",
+      "seed": 2026090904,
+      "profile": {
+        "vmean": 1,
+        "phases": [
+          "test"
+        ],
+        "qk_encoding_preserved": true
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m1-sink.pt",
+      "source_sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0"
+    },
+    {
+      "id": "vmean4-test",
+      "path": "local_distribution_fit/round032/vmean4-test.pt",
+      "sha256": "9c4d7fa02820030812639562fd1e2295440383b36ebc95eee4a54cd5be795268",
+      "seed": 2026090904,
+      "profile": {
+        "vmean": 4,
+        "phases": [
+          "test"
+        ],
+        "qk_encoding_preserved": true
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m1-sink.pt",
+      "source_sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0"
+    },
+    {
+      "id": "vmean1-both",
+      "path": "local_distribution_fit/round032/vmean1-both.pt",
+      "sha256": "d80b77416a357a17142a9b538e889b4078076059e85dbd91af7c9a66f268f7be",
+      "seed": 2026090904,
+      "profile": {
+        "vmean": 1,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "qk_encoding_preserved": true
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m1-sink.pt",
+      "source_sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0"
+    },
+    {
+      "id": "vmean4-both",
+      "path": "local_distribution_fit/round032/vmean4-both.pt",
+      "sha256": "cc4f5d54ab4116337549aa3ed38e51286e035b12b429dccfcfafa4a1e149d5bd",
+      "seed": 2026090904,
+      "profile": {
+        "vmean": 4,
+        "phases": [
+          "calib",
+          "test"
+        ],
+        "qk_encoding_preserved": true
+      },
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m1-sink.pt",
+      "source_sha256": "b91053541c591c21b659001e42462ba0ac075afcb99ed1f181c8178d93c4bcb0"
+    }
+  ],
+  "required_versions": [
+    283,
+    287,
+    293,
+    302,
+    303,
+    305,
+    306,
+    308,
+    309,
+    310,
+    314,
+    315,
+    316,
+    318,
+    319,
+    320,
+    322,
+    323,
+    330,
+    333,
+    335,
+    337,
+    339,
+    341,
+    343,
+    345,
+    360,
+    364,
+    365,
+    367,
+    374,
+    378,
+    381,
+    382,
+    385,
+    387,
+    388,
+    389,
+    393,
+    394,
+    396,
+    399,
+    400,
+    401,
+    402,
+    405,
+    408,
+    409,
+    410,
+    412,
+    413,
+    417,
+    418,
+    419,
+    429,
+    430,
+    432,
+    435,
+    436,
+    437,
+    440
+  ],
+  "certificate_sha256": "8b06564651f6e7cab2cf643cf96dc3cdefb5117c513543acf3d10bc38d30ed0f",
+  "selection_evidence": "Target408 removes final V mean coordination; nearest certified support includes m1-sink-block_resample. Probe V mean and calibration/test drift with true QK and decoy seed frozen.",
+  "limits": "Same data per version. Require actual endpoint screening, full102 evaluation, and all98 joint verification."
+}

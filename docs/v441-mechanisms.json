@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "prefix_no_imports_four_apis_unchanged",
+    "gqa_sigma_temperature_gradient_curvature_packed_risk_sse_inactive",
+    "actual_parent_fit_qk_immutable_fresh_forced_model",
+    "rtn_calibration_uses_public_q"
+  ],
+  "cases": [
+    {
+      "t": 2,
+      "changed": 3,
+      "seconds": 0.01170295791234821
+    },
+    {
+      "t": 7,
+      "changed": 13,
+      "seconds": 0.008470000000670552
+    },
+    {
+      "t": 32,
+      "changed": 68,
+      "seconds": 0.002587334020063281
+    },
+    {
+      "t": 128,
+      "changed": 142,
+      "seconds": 0.005357624962925911
+    }
+  ],
+  "completed": true
+}

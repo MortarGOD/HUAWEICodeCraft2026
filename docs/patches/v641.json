@@ -1,0 +1,10 @@
+{
+  "version": 641,
+  "parent": 640,
+  "parent_sha256": "3c6b7631cc623666b13060de9f9a81268b1fec942db23bcbccc99a40c33a749e",
+  "summary": "v640 with the step bound widened 3 -> 7, i.e. the full identity optimum: every code moves to the nearest legal lattice point of the exact value, which is exactly plain nearest rounding and therefore drops the structured V refinement. The identity metric is monotone so the bound is only a hedge against the judge's metric deviating; full-bank sweeps give +1682 on online_profiled_v2 (against +1514 at 3 steps) and +3033 on online_v1 (against +2664).",
+  "patches": [],
+  "append": [
+    "solution/v641_identity_core.py"
+  ]
+}

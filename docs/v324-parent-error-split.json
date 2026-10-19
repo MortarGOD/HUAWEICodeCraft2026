@@ -1,0 +1,3785 @@
+{
+  "diagnostic_version": 1,
+  "version": 322,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "complete": true,
+  "score_prediction_allowed": false,
+  "submission_hashes": {
+    "/Users/ee/Code/2026-huawei-alogorithm/solution/solution_v322.py": "35258ef7d18af1706fdbf54da7cdf1aa02f0191651a57dc1b88e339dc8d2f1b8",
+    "/Users/ee/Code/2026-huawei-alogorithm/solution/solution.py": "76555bc45b95ac7825ebf307e6599ac9898f0ce93f056245743a0c1ca0653927"
+  },
+  "groups": [
+    {
+      "index": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          512
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 7.142181030708152e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 1.9982801279820637,
+        "condition_retained": 7.85966990411394
+      },
+      "calibration_seconds": 1.5138958750176243,
+      "factor_seconds": 0.06305104197235778,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/full_attn.q_proj_gated/20262903",
+        "profile": "qwen3.6-35b-a3b:full_attn.q_proj_gated",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.self_attn.q_proj.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 2.4504398803542253,
+        "normalized_error_sums": {
+          "official_current_mse": 2.5495601196457747,
+          "geometric_floor_mse": 0.9929895102753722,
+          "discrete_and_search_mse": 1.5557523217245186,
+          "teacher_bias_mse": 0.0013841701539744457,
+          "teacher_cross_mse": -0.0008840233468712064,
+          "evaluation_output_increment_mse": 0.0008183941455541816,
+          "mse_reduction_increment_mse": -1.0649966967993659e-07
+        },
+        "geometry_share_of_current_gap": 0.3894748363154245,
+        "continuous_raw_score_upper": 4.007010489724628,
+        "max_orthogonality_relative": 1.7745000873238964e-16,
+        "max_decomposition_identity_error": 7.295733002717704e-20,
+        "max_teacher_identity_error": 1.1689054672109345e-19,
+        "max_evaluation_identity_error": 7.295071258227662e-20
+      },
+      "case_ids": [
+        "0:0",
+        "0:1",
+        "0:2",
+        "0:3",
+        "0:4"
+      ]
+    },
+    {
+      "index": 1,
+      "shape": [
+        1024,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          1024,
+          2048
+        ],
+        "rank": 1024,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 1.3649080239232024e-12,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 0.5002440810494413,
+        "condition_retained": 6.0
+      },
+      "calibration_seconds": 0.008600333996582776,
+      "factor_seconds": 0.004068541980814189,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/full_attn.o_proj/20262904",
+        "profile": "qwen3.6-35b-a3b:full_attn.o_proj",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.self_attn.o_proj.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.988295470152394,
+        "normalized_error_sums": {
+          "official_current_mse": 0.011704529847605973,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 0.01068426691911219,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "evaluation_output_increment_mse": 0.001020262654765595,
+          "mse_reduction_increment_mse": 2.737281877987726e-10
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0,
+        "max_evaluation_identity_error": 0.0
+      },
+      "case_ids": [
+        "1:0",
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:4"
+      ]
+    },
+    {
+      "index": 2,
+      "shape": [
+        512,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          512,
+          2048
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 3.9809836347222394e-13,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 0.31265269974021903,
+        "condition_retained": 2.8
+      },
+      "calibration_seconds": 0.005114874977152795,
+      "factor_seconds": 0.0021684589446522295,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/shared_expert.gate_proj/20262905",
+        "profile": "qwen3.6-35b-a3b:shared_expert.gate_proj",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.mlp.shared_expert.gate_proj.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.999145799930003,
+        "normalized_error_sums": {
+          "official_current_mse": 0.000854200069997062,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 2.416705665771472e-07,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "evaluation_output_increment_mse": 0.0008539583827289062,
+          "mse_reduction_increment_mse": 1.670157863683284e-11
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0,
+        "max_evaluation_identity_error": 0.0
+      },
+      "case_ids": [
+        "2:0",
+        "2:1",
+        "2:2",
+        "2:3",
+        "2:4"
+      ]
+    },
+    {
+      "index": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          512,
+          2048
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 3.4122716869047766e-13,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 0.37518323968826284,
+        "condition_retained": 2.0
+      },
+      "calibration_seconds": 0.005175291036721319,
+      "factor_seconds": 0.0024240839993581176,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/shared_expert.up_proj/20262906",
+        "profile": "qwen3.6-35b-a3b:shared_expert.up_proj",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.mlp.shared_expert.up_proj.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.999093211876665,
+        "normalized_error_sums": {
+          "official_current_mse": 0.0009067881233352719,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 2.6040310088131073e-07,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "evaluation_output_increment_mse": 0.0009065277436058497,
+          "mse_reduction_increment_mse": -2.337145916809676e-11
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0,
+        "max_evaluation_identity_error": 0.0
+      },
+      "case_ids": [
+        "3:0",
+        "3:1",
+        "3:2",
+        "3:3",
+        "3:4"
+      ]
+    },
+    {
+      "index": 4,
+      "shape": [
+        2048,
+        512
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          512
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 3.963339508464366e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 1.436217157547599,
+        "condition_retained": 6.06835512510045
+      },
+      "calibration_seconds": 3.6981595829711296,
+      "factor_seconds": 0.10544387495610863,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/shared_expert.down_proj/20262907",
+        "profile": "qwen3.6-35b-a3b:shared_expert.down_proj",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.mlp.shared_expert.down_proj.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 2.772852354302438,
+        "normalized_error_sums": {
+          "official_current_mse": 2.227147645697562,
+          "geometric_floor_mse": 0.9009814185766619,
+          "discrete_and_search_mse": 1.3253317199121448,
+          "teacher_bias_mse": 0.0012704985120591103,
+          "teacher_cross_mse": 0.0015017562430917496,
+          "evaluation_output_increment_mse": 0.000834626007807651,
+          "mse_reduction_increment_mse": -1.1879905275268537e-07
+        },
+        "geometry_share_of_current_gap": 0.404544988437202,
+        "continuous_raw_score_upper": 4.099018581423338,
+        "max_orthogonality_relative": 1.7743696461728414e-16,
+        "max_decomposition_identity_error": 2.4074264547743317e-20,
+        "max_teacher_identity_error": 8.967961329054905e-20,
+        "max_evaluation_identity_error": 2.4087499437544166e-20
+      },
+      "case_ids": [
+        "4:0",
+        "4:1",
+        "4:2",
+        "4:3",
+        "4:4"
+      ]
+    },
+    {
+      "index": 5,
+      "shape": [
+        512,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          512,
+          2048
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 5.687119478174628e-13,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 1.000488639168701,
+        "condition_retained": 1.25
+      },
+      "calibration_seconds": 0.00548887497279793,
+      "factor_seconds": 0.0031807079794816673,
+      "provenance": {
+        "key": "linear/deepseek-v4-flash-0731/attn.wq_a/20263003",
+        "profile": "deepseek-v4-flash-0731:attn.wq_a",
+        "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "source_revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+        "weight_source": "checkpoint",
+        "source_tensor": "layers.0.attn.wq_a.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.9990232666559224,
+        "normalized_error_sums": {
+          "official_current_mse": 0.0009767333440777986,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 2.797395277371252e-07,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "evaluation_output_increment_mse": 0.0009764536008434417,
+          "mse_reduction_increment_mse": 3.706619817786574e-12
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0,
+        "max_evaluation_identity_error": 0.0
+      },
+      "case_ids": [
+        "5:0",
+        "5:1",
+        "5:2",
+        "5:3",
+        "5:4"
+      ]
+    },
+    {
+      "index": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          512
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 3.98654163992458e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 3.3471015706449783,
+        "condition_retained": 2.61913108711884
+      },
+      "calibration_seconds": 1.4713313749525696,
+      "factor_seconds": 0.06220266595482826,
+      "provenance": {
+        "key": "linear/deepseek-v4-flash-0731/attn.wq_b.tp8/20263004",
+        "profile": "deepseek-v4-flash-0731:attn.wq_b.tp8",
+        "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "source_revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+        "weight_source": "checkpoint",
+        "source_tensor": "layers.0.attn.wq_b.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 2.3048627616901203,
+        "normalized_error_sums": {
+          "official_current_mse": 2.6951372383098797,
+          "geometric_floor_mse": 1.0011877457372538,
+          "discrete_and_search_mse": 1.6934625984475553,
+          "teacher_bias_mse": 0.00139430651820655,
+          "teacher_cross_mse": -9.738895758306267e-05,
+          "evaluation_output_increment_mse": 0.0004870412987022601,
+          "mse_reduction_increment_mse": -1.471736318921859e-07
+        },
+        "geometry_share_of_current_gap": 0.37147931894002495,
+        "continuous_raw_score_upper": 3.9988122542627464,
+        "max_orthogonality_relative": 1.7231144866409832e-16,
+        "max_decomposition_identity_error": 3.4016843161732694e-19,
+        "max_teacher_identity_error": 3.5469504666273827e-19,
+        "max_evaluation_identity_error": 3.4018960744100837e-19
+      },
+      "case_ids": [
+        "6:0",
+        "6:1",
+        "6:2",
+        "6:3",
+        "6:4"
+      ]
+    },
+    {
+      "index": 7,
+      "shape": [
+        2048,
+        512
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          512
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 3.669007942824193e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 3.201796508145198,
+        "condition_retained": 2.5199083609936643
+      },
+      "calibration_seconds": 1.3479464169940911,
+      "factor_seconds": 0.057613166980445385,
+      "provenance": {
+        "key": "linear/deepseek-v4-flash-0731/attn.wo_b.tp8/20263005",
+        "profile": "deepseek-v4-flash-0731:attn.wo_b.tp8",
+        "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "source_revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+        "weight_source": "checkpoint",
+        "source_tensor": "layers.0.attn.wo_b.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 2.3429324676806584,
+        "normalized_error_sums": {
+          "official_current_mse": 2.6570675323193416,
+          "geometric_floor_mse": 1.051606649406214,
+          "discrete_and_search_mse": 1.6044755364764047,
+          "teacher_bias_mse": 0.001297737928988314,
+          "teacher_cross_mse": -0.00047760697980574744,
+          "evaluation_output_increment_mse": 0.0009853364633137477,
+          "mse_reduction_increment_mse": 9.973409508106444e-09
+        },
+        "geometry_share_of_current_gap": 0.3957771628364566,
+        "continuous_raw_score_upper": 3.9483933505937863,
+        "max_orthogonality_relative": 1.779885494260154e-16,
+        "max_decomposition_identity_error": 5.827586677109586e-19,
+        "max_teacher_identity_error": 2.8904999325053e-19,
+        "max_evaluation_identity_error": 5.827586677109586e-19
+      },
+      "case_ids": [
+        "7:0",
+        "7:1",
+        "7:2",
+        "7:3",
+        "7:4"
+      ]
+    },
+    {
+      "index": 8,
+      "shape": [
+        1024,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          1024,
+          2048
+        ],
+        "rank": 1024,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 9.099386826154683e-13,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 0.37518306078708097,
+        "condition_retained": 5.333333333333333
+      },
+      "calibration_seconds": 0.0075826249667443335,
+      "factor_seconds": 0.0035308750229887664,
+      "provenance": {
+        "key": "linear/deepseek-v4-flash-0731/shared_expert.w1/20263006",
+        "profile": "deepseek-v4-flash-0731:shared_expert.w1",
+        "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "source_revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+        "weight_source": "checkpoint",
+        "source_tensor": "layers.0.ffn.shared_experts.w1.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.988164349731963,
+        "normalized_error_sums": {
+          "official_current_mse": 0.011835650268037538,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 0.010856803996741507,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "evaluation_output_increment_mse": 0.000978846297177198,
+          "mse_reduction_increment_mse": -2.588116715985105e-11
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0,
+        "max_evaluation_identity_error": 0.0
+      },
+      "case_ids": [
+        "8:0",
+        "8:1",
+        "8:2",
+        "8:3",
+        "8:4"
+      ]
+    },
+    {
+      "index": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          1024
+        ],
+        "rank": 1024,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 4.847678715740588e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 1.6059101983577886,
+        "condition_retained": 6.6380786685700945
+      },
+      "calibration_seconds": 5.7904760420206,
+      "factor_seconds": 0.32277287502074614,
+      "provenance": {
+        "key": "linear/deepseek-v4-flash-0731/shared_expert.w2/20263007",
+        "profile": "deepseek-v4-flash-0731:shared_expert.w2",
+        "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "source_revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+        "weight_source": "checkpoint",
+        "source_tensor": "layers.0.ffn.shared_experts.w2.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 3.0808263947009253,
+        "normalized_error_sums": {
+          "official_current_mse": 1.9191736052990749,
+          "geometric_floor_mse": 0.6558466624763943,
+          "discrete_and_search_mse": 1.2622511000952457,
+          "teacher_bias_mse": 0.0012685351872308633,
+          "teacher_cross_mse": -0.00047001167209499104,
+          "evaluation_output_increment_mse": 0.0010759058459241398,
+          "mse_reduction_increment_mse": -6.311848837860149e-08
+        },
+        "geometry_share_of_current_gap": 0.3417338903919483,
+        "continuous_raw_score_upper": 4.344153337523606,
+        "max_orthogonality_relative": 1.7473359618115409e-16,
+        "max_decomposition_identity_error": 2.059984127722457e-19,
+        "max_teacher_identity_error": 4.533214454586609e-19,
+        "max_evaluation_identity_error": 2.0604076441960856e-19
+      },
+      "case_ids": [
+        "9:0",
+        "9:1",
+        "9:2",
+        "9:3",
+        "9:4"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "shape": [
+        1,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0020642343442887068,
+      "official_current_mse": 0.00111108529381454,
+      "dynamic_seconds": 0.03403383295517415,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011112688568744034,
+      "geometric_floor_mse": 0.00042015325508085123,
+      "discrete_and_search_mse": 0.0006911156017935542,
+      "orthogonality_cross_mse": -2.1133472033994793e-18,
+      "geometric_identity_error": 5.336307567702092e-20,
+      "normal_equation_relative": 1.703731511504136e-16,
+      "continuous_reconstruction_mse": 2.0373903363646204e-30,
+      "teacher_bias_mse": 5.915122254868372e-07,
+      "fit_to_teacher_mse": 0.0011114490514264274,
+      "teacher_cross_mse": -7.717067775109778e-07,
+      "teacher_identity_error": 1.1180834903756764e-19,
+      "actual_output_mse_double_reduction": 0.0011110853871016957,
+      "evaluation_output_increment_mse": -1.834697727076673e-07,
+      "evaluation_output_difference_mse": 3.7098069327612393e-07,
+      "mse_reduction_increment_mse": -9.328715577794355e-11,
+      "evaluation_identity_error": 5.336307567702092e-20,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0011110853871016957,
+          "true_target_cd": 0.0011099978152984136,
+          "teacher_target_cd": 0.0011099978152984136,
+          "continuous_rtn": 0.0012592597325422616
+        },
+        "best_retaining_parent_mse": 0.0011099978152984136,
+        "recoverable_witness_mse": 1.0875718032821169e-06,
+        "seconds": 0.0047217090032063425,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0020642343442887068
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "shape": [
+        10,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022743348963558674,
+      "official_current_mse": 0.0011678755981847644,
+      "dynamic_seconds": 0.05153012502705678,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011672730787063656,
+      "geometric_floor_mse": 0.00045529925304421193,
+      "discrete_and_search_mse": 0.0007119738256621531,
+      "orthogonality_cross_mse": 5.360024490225212e-19,
+      "geometric_identity_error": 6.098637220231001e-21,
+      "normal_equation_relative": 1.7703758800659097e-16,
+      "continuous_reconstruction_mse": 2.4911455552036095e-30,
+      "teacher_bias_mse": 6.479106449834664e-07,
+      "fit_to_teacher_mse": 0.0011664876302392483,
+      "teacher_cross_mse": 1.3753782213393395e-07,
+      "teacher_identity_error": -1.1689054672109345e-19,
+      "actual_output_mse_double_reduction": 0.001167875647565353,
+      "evaluation_output_increment_mse": 6.025688589874137e-07,
+      "evaluation_output_difference_mse": 4.522653229699358e-07,
+      "mse_reduction_increment_mse": -4.9380588593855856e-11,
+      "evaluation_identity_error": 6.1409888675936775e-21,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0011849192859409996,
+          "true_target_cd": 0.001183939978358417,
+          "teacher_target_cd": 0.001184337662950341,
+          "continuous_rtn": 0.0013618400234651773
+        },
+        "best_retaining_parent_mse": 0.001183939978358417,
+        "recoverable_witness_mse": 9.793075825825781e-07,
+        "seconds": 0.007348541985265911,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0023154960945248604
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "shape": [
+        128,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022430766839534044,
+      "official_current_mse": 0.0011286500375717878,
+      "dynamic_seconds": 0.21525758400093764,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.001128124179524466,
+      "geometric_floor_mse": 0.00044260531962585995,
+      "discrete_and_search_mse": 0.0006855188598986057,
+      "orthogonality_cross_mse": 1.5056010637445189e-19,
+      "geometric_identity_error": 6.6280328122649e-20,
+      "normal_equation_relative": 1.7745000873238964e-16,
+      "continuous_reconstruction_mse": 2.3267223133883634e-30,
+      "teacher_bias_mse": 6.105898140392545e-07,
+      "fit_to_teacher_mse": 0.0011280204000055252,
+      "teacher_cross_mse": -5.068102950985653e-07,
+      "teacher_identity_error": 2.244637310223896e-20,
+      "actual_output_mse_double_reduction": 0.0011286501296770557,
+      "evaluation_output_increment_mse": 5.259501525897714e-07,
+      "evaluation_output_difference_mse": 4.394271880328593e-07,
+      "mse_reduction_increment_mse": -9.210526785707884e-11,
+      "evaluation_identity_error": 6.6280328122649e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0011951380982893056,
+          "true_target_cd": 0.0011947934888842937,
+          "teacher_target_cd": 0.001194974654375791,
+          "continuous_rtn": 0.001383974112418862
+        },
+        "best_retaining_parent_mse": 0.001194660035403139,
+        "recoverable_witness_mse": 4.780628861666969e-07,
+        "seconds": 0.007110750011634082,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.002320646308362484
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "shape": [
+        512,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022240024991333485,
+      "official_current_mse": 0.0011104790028184652,
+      "dynamic_seconds": 0.2197506669908762,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011100195044317857,
+      "geometric_floor_mse": 0.00043833262167439614,
+      "discrete_and_search_mse": 0.0006716868827573899,
+      "orthogonality_cross_mse": -2.523033217184743e-19,
+      "geometric_identity_error": -7.295733002717704e-20,
+      "normal_equation_relative": 1.7700886537956777e-16,
+      "continuous_reconstruction_mse": 2.338198792852232e-30,
+      "teacher_bias_mse": 6.033788503409308e-07,
+      "fit_to_teacher_mse": 0.0011098371592840601,
+      "teacher_cross_mse": -4.2103370261545084e-07,
+      "teacher_identity_error": 7.099194889175105e-20,
+      "actual_output_mse_double_reduction": 0.001110478992919127,
+      "evaluation_output_increment_mse": 4.5948848734125164e-07,
+      "evaluation_output_difference_mse": 4.321195624665611e-07,
+      "mse_reduction_increment_mse": 9.899338293539728e-12,
+      "evaluation_identity_error": -7.295071258227662e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0010572769504948454,
+          "true_target_cd": 0.001055500714929991,
+          "teacher_target_cd": 0.0010557614935438053,
+          "continuous_rtn": 0.0012135223932494554
+        },
+        "best_retaining_parent_mse": 0.0010552235206064964,
+        "recoverable_witness_mse": 2.053429888349001e-06,
+        "seconds": 0.008323125017341226,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0020158677361905575
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "shape": [
+        1024,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022631718311458826,
+      "official_current_mse": 0.0011209866497665644,
+      "dynamic_seconds": 0.4012982500134967,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011205311928763123,
+      "geometric_floor_mse": 0.0004409733934454883,
+      "discrete_and_search_mse": 0.000679557799430824,
+      "orthogonality_cross_mse": -5.233075427255474e-20,
+      "geometric_identity_error": 5.233075427255474e-20,
+      "normal_equation_relative": 1.759820183111313e-16,
+      "continuous_reconstruction_mse": 2.336818962827779e-30,
+      "teacher_bias_mse": 6.093005092560927e-07,
+      "fit_to_teacher_mse": 0.0011202735733279615,
+      "teacher_cross_mse": -3.516809609052678e-07,
+      "teacher_identity_error": -1.6781840267475825e-20,
+      "actual_output_mse_double_reduction": 0.0011209866565211075,
+      "evaluation_output_increment_mse": 4.554636447951996e-07,
+      "evaluation_output_difference_mse": 4.351564238504538e-07,
+      "mse_reduction_increment_mse": -6.754543105391697e-12,
+      "evaluation_identity_error": 5.2304284492953046e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0011297695991752121,
+          "true_target_cd": 0.0011292461885306082,
+          "teacher_target_cd": 0.0011294726363191288,
+          "continuous_rtn": 0.0012725983786587847
+        },
+        "best_retaining_parent_mse": 0.001129038453766107,
+        "recoverable_witness_mse": 7.311454091052383e-07,
+        "seconds": 0.007891665969509631,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0022592509631067514
+      }
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.00841402355581522,
+      "official_current_mse": 1.819623685150873e-05,
+      "dynamic_seconds": 0.0030378749943338335,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.6550248290059244e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.6550248290059244e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 5.8308231791540166e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.6550248290059244e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.819623724941266e-05,
+      "evaluation_output_increment_mse": 1.6459889593534172e-06,
+      "evaluation_output_difference_mse": 1.545151462778449e-06,
+      "mse_reduction_increment_mse": -3.979039320256561e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.819623724941266e-05,
+          "true_target_cd": 1.819623724941266e-05,
+          "teacher_target_cd": 1.819623724941266e-05,
+          "continuous_rtn": 0.0034091468282326787
+        },
+        "best_retaining_parent_mse": 1.819623724941266e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.006384915963280946,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.00841402355581522
+      }
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.006740775890648365,
+      "official_current_mse": 1.650409831199795e-05,
+      "dynamic_seconds": 0.006144875020254403,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.4980691258870137e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.4980691258870137e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.579612285042797e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.4980691258870137e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.6504096703329196e-05,
+      "evaluation_output_increment_mse": 1.5234054444590583e-06,
+      "evaluation_output_difference_mse": 1.304608304053545e-06,
+      "mse_reduction_increment_mse": 1.6086687544384932e-12,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.6406331035057065e-05,
+          "true_target_cd": 1.6406331035057065e-05,
+          "teacher_target_cd": 1.6406331035057065e-05,
+          "continuous_rtn": 0.002944185786411424
+        },
+        "best_retaining_parent_mse": 1.6406331035057065e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.01142829196760431,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.006679844111204147
+      }
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007030748762190342,
+      "official_current_mse": 1.6439762475783937e-05,
+      "dynamic_seconds": 0.02992283401545137,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5055114208628595e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5055114208628595e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.998635244062617e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5055114208628595e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.643976221021859e-05,
+      "evaluation_output_increment_mse": 1.3846480015899942e-06,
+      "evaluation_output_difference_mse": 1.37241795528098e-06,
+      "mse_reduction_increment_mse": 2.6556534749033744e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.616430785134071e-05,
+          "true_target_cd": 1.616430785134071e-05,
+          "teacher_target_cd": 1.616430785134071e-05,
+          "continuous_rtn": 0.002948064284908014
+        },
+        "best_retaining_parent_mse": 1.616430785134071e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011865542037412524,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007145436014980078
+      }
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.006907172501087189,
+      "official_current_mse": 1.6545818652957678e-05,
+      "dynamic_seconds": 0.14686795801389962,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5178567959850398e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5178567959850398e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.9825811833762984e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5178567959850398e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.6545818869673212e-05,
+      "evaluation_output_increment_mse": 1.3672509098228147e-06,
+      "evaluation_output_difference_mse": 1.3874243194322844e-06,
+      "mse_reduction_increment_mse": -2.1671553440683056e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.6519494067779306e-05,
+          "true_target_cd": 1.6519494067779306e-05,
+          "teacher_target_cd": 1.6519494067779306e-05,
+          "continuous_rtn": 0.0029313900116108016
+        },
+        "best_retaining_parent_mse": 1.6519494067779306e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.012229583982843906,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0066970521584153175
+      }
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007010608911514282,
+      "official_current_mse": 1.6543657693546265e-05,
+      "dynamic_seconds": 0.20502729201689363,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5115236128793175e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5115236128793175e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.9676651021807916e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5115236128793175e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.654365716091677e-05,
+      "evaluation_output_increment_mse": 1.4284210321235946e-06,
+      "evaluation_output_difference_mse": 1.3913491585526572e-06,
+      "mse_reduction_increment_mse": 5.326294960639189e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.7025266096482028e-05,
+          "true_target_cd": 1.7025266096482028e-05,
+          "teacher_target_cd": 1.7025266096482028e-05,
+          "continuous_rtn": 0.0031219577461243375
+        },
+        "best_retaining_parent_mse": 1.7025266096482028e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.012714790995232761,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007338949479162693
+      }
+    },
+    {
+      "group": 2,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.0035382788628339767,
+      "official_current_mse": 5.367550102164387e-07,
+      "dynamic_seconds": 0.004254208004567772,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.4227907740860246e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.4227907740860246e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 1.7724250758492304e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.4227907740860246e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 5.367550102164387e-07,
+      "evaluation_output_increment_mse": 5.366127311390301e-07,
+      "evaluation_output_difference_mse": 5.381203322940564e-07,
+      "mse_reduction_increment_mse": 0.0,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 5.367550102164387e-07,
+          "true_target_cd": 5.367550102164387e-07,
+          "teacher_target_cd": 5.367550102164387e-07,
+          "continuous_rtn": 0.0011313713720255691
+        },
+        "best_retaining_parent_mse": 5.367550102164387e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.005536082957405597,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0035382788628339767
+      }
+    },
+    {
+      "group": 2,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.0039192261174321175,
+      "official_current_mse": 6.948608870516182e-07,
+      "dynamic_seconds": 0.007553541043307632,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.986243725049519e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.986243725049519e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.551191118714215e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.986243725049519e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 6.948608568535519e-07,
+      "evaluation_output_increment_mse": 6.94662232481047e-07,
+      "evaluation_output_difference_mse": 6.94553684221777e-07,
+      "mse_reduction_increment_mse": 3.019806626980426e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 6.823937437339112e-07,
+          "true_target_cd": 6.823937437339112e-07,
+          "teacher_target_cd": 6.823937437339112e-07,
+          "continuous_rtn": 0.0015400072122275787
+        },
+        "best_retaining_parent_mse": 6.823937437339112e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.00937849999172613,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.003970789723098278
+      }
+    },
+    {
+      "group": 2,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.0037988636177033186,
+      "official_current_mse": 6.814693733758759e-07,
+      "dynamic_seconds": 0.04341929202200845,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.9476255417455457e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.9476255417455457e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.6508477599008497e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.9476255417455457e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 6.814693801759919e-07,
+      "evaluation_output_increment_mse": 6.812746176218173e-07,
+      "evaluation_output_difference_mse": 6.813029232314097e-07,
+      "mse_reduction_increment_mse": -6.800116025829084e-15,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 6.700319445940295e-07,
+          "true_target_cd": 6.700319445940295e-07,
+          "teacher_target_cd": 6.700319445940295e-07,
+          "continuous_rtn": 0.001442143589230227
+        },
+        "best_retaining_parent_mse": 6.700319445940295e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.008861957991030067,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.00393493939191103
+      }
+    },
+    {
+      "group": 2,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.003862523939460516,
+      "official_current_mse": 6.669021104244166e-07,
+      "dynamic_seconds": 0.12489841599017382,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.9112493380470108e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.9112493380470108e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.616673536731875e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.9112493380470108e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 6.669021370099212e-07,
+      "evaluation_output_increment_mse": 6.667110120761165e-07,
+      "evaluation_output_difference_mse": 6.667672847418971e-07,
+      "mse_reduction_increment_mse": -2.6585504631082557e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 6.442021600605585e-07,
+          "true_target_cd": 6.442021600605585e-07,
+          "teacher_target_cd": 6.442021600605585e-07,
+          "continuous_rtn": 0.0014501632965107092
+        },
+        "best_retaining_parent_mse": 6.442021600605585e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.01034133299253881,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0040527270175516605
+      }
+    },
+    {
+      "group": 2,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.0038809399120509624,
+      "official_current_mse": 6.720150622641086e-07,
+      "dynamic_seconds": 0.23929454101016745,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.9416026447206802e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.9416026447206802e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.6061127494043947e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.9416026447206802e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 6.720149936900559e-07,
+      "evaluation_output_increment_mse": 6.718208334255838e-07,
+      "evaluation_output_difference_mse": 6.718885609535968e-07,
+      "mse_reduction_increment_mse": 6.857405268623218e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 7.331794318332641e-07,
+          "true_target_cd": 7.331794318332641e-07,
+          "teacher_target_cd": 7.331794318332641e-07,
+          "continuous_rtn": 0.001567238673914062
+        },
+        "best_retaining_parent_mse": 7.331794318332641e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.009716750006191432,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.003853105939924717
+      }
+    },
+    {
+      "group": 3,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.00448492681607604,
+      "official_current_mse": 8.431533160546678e-07,
+      "dynamic_seconds": 0.0047105830162763596,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 2.305879931441268e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 2.305879931441268e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.725429961213765e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 2.305879931441268e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 8.431533160546678e-07,
+      "evaluation_output_increment_mse": 8.429227280615237e-07,
+      "evaluation_output_difference_mse": 8.411349936565671e-07,
+      "mse_reduction_increment_mse": 0.0,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 8.431533160546678e-07,
+          "true_target_cd": 8.431533160546678e-07,
+          "teacher_target_cd": 8.431533160546678e-07,
+          "continuous_rtn": 0.0019508181032961147
+        },
+        "best_retaining_parent_mse": 8.431533160546678e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.004342833999544382,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.00448492681607604
+      }
+    },
+    {
+      "group": 3,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.004263124894350767,
+      "official_current_mse": 7.45803276913648e-07,
+      "dynamic_seconds": 0.009726166957989335,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 2.2324179171917536e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 2.2324179171917536e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.6230194599530334e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 2.2324179171917536e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 7.458032428075967e-07,
+      "evaluation_output_increment_mse": 7.455800010158775e-07,
+      "evaluation_output_difference_mse": 7.453449376915167e-07,
+      "mse_reduction_increment_mse": 3.4106051295308985e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 7.449943666415493e-07,
+          "true_target_cd": 7.449943666415493e-07,
+          "teacher_target_cd": 7.449943666415493e-07,
+          "continuous_rtn": 0.0016338515950593546
+        },
+        "best_retaining_parent_mse": 7.449943666415493e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.009472250007092953,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.004295700695365667
+      }
+    },
+    {
+      "group": 3,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.004218227695673704,
+      "official_current_mse": 7.713486525062763e-07,
+      "dynamic_seconds": 0.045377041038591415,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 2.230893117807775e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 2.230893117807775e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.8408951923801338e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 2.230893117807775e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 7.713486978172535e-07,
+      "evaluation_output_increment_mse": 7.711256085054727e-07,
+      "evaluation_output_difference_mse": 7.71087576762787e-07,
+      "mse_reduction_increment_mse": -4.53109771925142e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 7.408146558418593e-07,
+          "true_target_cd": 7.408146558418593e-07,
+          "teacher_target_cd": 7.408146558418593e-07,
+          "continuous_rtn": 0.0016310505788794671
+        },
+        "best_retaining_parent_mse": 7.408146558418593e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.009354583045933396,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0042030964978039265
+      }
+    },
+    {
+      "group": 3,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.004206095356494188,
+      "official_current_mse": 7.596765385642357e-07,
+      "dynamic_seconds": 0.1254218330141157,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 2.1722557021382205e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 2.1722557021382205e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.730826408290416e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 2.1722557021382205e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 7.596766144464615e-07,
+      "evaluation_output_increment_mse": 7.594593888762477e-07,
+      "evaluation_output_difference_mse": 7.595190146337041e-07,
+      "mse_reduction_increment_mse": -7.588222585008797e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 7.055334094729915e-07,
+          "true_target_cd": 7.055334094729915e-07,
+          "teacher_target_cd": 7.055334094729915e-07,
+          "continuous_rtn": 0.0016278967488148055
+        },
+        "best_retaining_parent_mse": 7.055334094729915e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.009063332981895655,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0041853864677250385
+      }
+    },
+    {
+      "group": 3,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.0042050499469041824,
+      "official_current_mse": 7.584819172734569e-07,
+      "dynamic_seconds": 0.5889757080003619,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 2.1904502680008403e-10,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 2.1904502680008403e-10,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.7424004156634658e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 2.1904502680008403e-10,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 7.584819281602562e-07,
+      "evaluation_output_increment_mse": 7.582628831334561e-07,
+      "evaluation_output_difference_mse": 7.582931559667414e-07,
+      "mse_reduction_increment_mse": -1.0886799274578696e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 7.714440677375478e-07,
+          "true_target_cd": 7.714440677375478e-07,
+          "teacher_target_cd": 7.714440677375478e-07,
+          "continuous_rtn": 0.0016601932797044583
+        },
+        "best_retaining_parent_mse": 7.714440677375478e-07,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.021813041996210814,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.004232719074934721
+      }
+    },
+    {
+      "group": 4,
+      "test": 0,
+      "shape": [
+        1,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.001087609794922173,
+      "official_current_mse": 0.0004671425558626652,
+      "dynamic_seconds": 0.05873133399290964,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0004668753545455928,
+      "geometric_floor_mse": 0.00018873021639901792,
+      "discrete_and_search_mse": 0.00027814513814657484,
+      "orthogonality_cross_mse": 3.218725199566341e-20,
+      "geometric_identity_error": 2.202285662861181e-20,
+      "normal_equation_relative": 1.659232795888126e-16,
+      "continuous_reconstruction_mse": 8.839775749235006e-31,
+      "teacher_bias_mse": 2.68574754588399e-07,
+      "fit_to_teacher_mse": 0.0004655567561309202,
+      "teacher_cross_mse": 1.0500236600841933e-06,
+      "teacher_identity_error": 2.964615315390051e-20,
+      "actual_output_mse_double_reduction": 0.0004671425955535824,
+      "evaluation_output_increment_mse": 2.672410079895826e-07,
+      "evaluation_output_difference_mse": 1.7533488794185814e-07,
+      "mse_reduction_increment_mse": -3.9690917219559196e-11,
+      "evaluation_identity_error": 2.202285662861181e-20,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0004671425955535824,
+          "true_target_cd": 0.0004671425955535824,
+          "teacher_target_cd": 0.0004671425955535824,
+          "continuous_rtn": 0.0005833524615468377
+        },
+        "best_retaining_parent_mse": 0.0004671425955535824,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.010856250009965152,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.001087609794922173
+      }
+    },
+    {
+      "group": 4,
+      "test": 1,
+      "shape": [
+        10,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.00096818374004215,
+      "official_current_mse": 0.0004361721221357584,
+      "dynamic_seconds": 0.09716883301734924,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0004362075052322556,
+      "geometric_floor_mse": 0.00017540242542418417,
+      "discrete_and_search_mse": 0.0002608050798080714,
+      "orthogonality_cross_mse": -9.317362419797304e-21,
+      "geometric_identity_error": 9.317362419797304e-21,
+      "normal_equation_relative": 1.7743696461728414e-16,
+      "continuous_reconstruction_mse": 9.472399788780558e-31,
+      "teacher_bias_mse": 2.4802852336251334e-07,
+      "fit_to_teacher_mse": 0.00043568300671231107,
+      "teacher_cross_mse": 2.764699965819949e-07,
+      "teacher_identity_error": 1.1487884347136448e-20,
+      "actual_output_mse_double_reduction": 0.0004361721351409997,
+      "evaluation_output_increment_mse": -3.5370091255881603e-08,
+      "evaluation_output_difference_mse": 1.7262066056566994e-07,
+      "mse_reduction_increment_mse": -1.300524130661701e-11,
+      "evaluation_identity_error": 9.317362419797304e-21,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0004328036535732327,
+          "true_target_cd": 0.0004327769748375676,
+          "teacher_target_cd": 0.0004328145207079803,
+          "continuous_rtn": 0.0005332590234896628
+        },
+        "best_retaining_parent_mse": 0.0004325819236143946,
+        "recoverable_witness_mse": 2.2172995883806834e-07,
+        "seconds": 0.00806537497555837,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0009481655433773994
+      }
+    },
+    {
+      "group": 4,
+      "test": 2,
+      "shape": [
+        128,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0010065489914268255,
+      "official_current_mse": 0.0004491174186114222,
+      "dynamic_seconds": 0.42761445796350017,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0004488467285270366,
+      "geometric_floor_mse": 0.0001831314628707978,
+      "discrete_and_search_mse": 0.0002657152656562388,
+      "orthogonality_cross_mse": 1.920382510103109e-20,
+      "geometric_identity_error": -1.920382510103109e-20,
+      "normal_equation_relative": 1.7564613486079727e-16,
+      "continuous_reconstruction_mse": 9.810142666986163e-31,
+      "teacher_bias_mse": 2.5576503296468836e-07,
+      "fit_to_teacher_mse": 0.00044845037432059007,
+      "teacher_cross_mse": 1.405891734817314e-07,
+      "teacher_identity_error": 8.967961329054905e-20,
+      "actual_output_mse_double_reduction": 0.00044911744029776934,
+      "evaluation_output_increment_mse": 2.707117707327622e-07,
+      "evaluation_output_difference_mse": 1.822232156729886e-07,
+      "mse_reduction_increment_mse": -2.1686347162486186e-11,
+      "evaluation_identity_error": -1.921705999083194e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.000429052691849785,
+          "true_target_cd": 0.00042882333092642,
+          "teacher_target_cd": 0.00042885852386653767,
+          "continuous_rtn": 0.0005140859120169594
+        },
+        "best_retaining_parent_mse": 0.00042873777909324673,
+        "recoverable_witness_mse": 3.14912756538277e-07,
+        "seconds": 0.007808958005625755,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0009662621305324137
+      }
+    },
+    {
+      "group": 4,
+      "test": 3,
+      "shape": [
+        512,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.001008876832202077,
+      "official_current_mse": 0.0004529567377176136,
+      "dynamic_seconds": 0.6614351670141332,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0004527778828717823,
+      "geometric_floor_mse": 0.0001833708487019042,
+      "discrete_and_search_mse": 0.0002694070341698779,
+      "orthogonality_cross_mse": 2.0072033871966748e-19,
+      "geometric_identity_error": 1.6120095777433403e-20,
+      "normal_equation_relative": 1.7503522156965325e-16,
+      "continuous_reconstruction_mse": 9.8903308883592e-31,
+      "teacher_bias_mse": 2.579417640647117e-07,
+      "fit_to_teacher_mse": 0.00045244093056844573,
+      "teacher_cross_mse": 7.90105392718441e-08,
+      "teacher_identity_error": 3.2848996485705835e-20,
+      "actual_output_mse_double_reduction": 0.0004529567684214697,
+      "evaluation_output_increment_mse": 1.7888554968738257e-07,
+      "evaluation_output_difference_mse": 1.8383555012817243e-07,
+      "mse_reduction_increment_mse": -3.0703856124247864e-11,
+      "evaluation_identity_error": 1.6120095777433403e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.00043049651338677997,
+          "true_target_cd": 0.0004298725821461069,
+          "teacher_target_cd": 0.0004299369151381516,
+          "continuous_rtn": 0.0005159256840059356
+        },
+        "best_retaining_parent_mse": 0.0004297533758621519,
+        "recoverable_witness_mse": 7.43137524628068e-07,
+        "seconds": 0.016621624992694706,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0009596935706213117
+      }
+    },
+    {
+      "group": 4,
+      "test": 4,
+      "shape": [
+        1024,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0010030135745182633,
+      "official_current_mse": 0.0004533245519269258,
+      "dynamic_seconds": 0.5121273749973625,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0004531448465199565,
+      "geometric_floor_mse": 0.0001831403372013481,
+      "discrete_and_search_mse": 0.0002700045093186083,
+      "orthogonality_cross_mse": 8.434595270080713e-20,
+      "geometric_identity_error": 2.4074264547743317e-20,
+      "normal_equation_relative": 1.7547026032676065e-16,
+      "continuous_reconstruction_mse": 9.890437789109504e-31,
+      "teacher_bias_mse": 2.5838214622287413e-07,
+      "fit_to_teacher_mse": 0.00045285359599490395,
+      "teacher_cross_mse": 3.286837882972516e-08,
+      "teacher_identity_error": -4.506479977188895e-20,
+      "actual_output_mse_double_reduction": 0.00045332456887161275,
+      "evaluation_output_increment_mse": 1.79722351656246e-07,
+      "evaluation_output_difference_mse": 1.8503061688119465e-07,
+      "mse_reduction_increment_mse": -1.6944686972997225e-11,
+      "evaluation_identity_error": 2.4087499437544166e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0004678751895554889,
+          "true_target_cd": 0.0004671959328501618,
+          "teacher_target_cd": 0.00046708551004503995,
+          "continuous_rtn": 0.0005549334364811642
+        },
+        "best_retaining_parent_mse": 0.00046694047638529135,
+        "recoverable_witness_mse": 9.347131701975542e-07,
+        "seconds": 0.008347208960913122,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0010870739351958036
+      }
+    },
+    {
+      "group": 5,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.02091330476105213,
+      "official_current_mse": 3.53919085682719e-06,
+      "dynamic_seconds": 0.004016459046397358,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.0465441846463364e-09,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.0465441846463364e-09,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.378246211588236e-32,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.0465441846463364e-09,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 3.5391907431403524e-06,
+      "evaluation_output_increment_mse": 3.538144198955706e-06,
+      "evaluation_output_difference_mse": 3.5456423006507976e-06,
+      "mse_reduction_increment_mse": 1.1368683772161603e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 3.5391907431403524e-06,
+          "true_target_cd": 3.5391907431403524e-06,
+          "teacher_target_cd": 3.5391907431403524e-06,
+          "continuous_rtn": 0.008024376817388656
+        },
+        "best_retaining_parent_mse": 3.5391907431403524e-06,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.0045596249983645976,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.02091330476105213
+      }
+    },
+    {
+      "group": 5,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.020167406648397446,
+      "official_current_mse": 4.170073680143105e-06,
+      "dynamic_seconds": 0.010152250004466623,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.168800700668271e-09,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.168800700668271e-09,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.4345245915413282e-32,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.168800700668271e-09,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 4.1700734300320615e-06,
+      "evaluation_output_increment_mse": 4.168904629331393e-06,
+      "evaluation_output_difference_mse": 4.169652115670886e-06,
+      "mse_reduction_increment_mse": 2.5011104332636844e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 4.074508694884571e-06,
+          "true_target_cd": 4.074508694884571e-06,
+          "teacher_target_cd": 4.074508694884571e-06,
+          "continuous_rtn": 0.008839446996645961
+        },
+        "best_retaining_parent_mse": 4.074508694884571e-06,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.010273416992276907,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.019816214218735695
+      }
+    },
+    {
+      "group": 5,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.019943680614233017,
+      "official_current_mse": 4.019910647912184e-06,
+      "dynamic_seconds": 0.05015662498772144,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.138920693866119e-09,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.138920693866119e-09,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.5523129608168037e-32,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.138920693866119e-09,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 4.019910513797242e-06,
+      "evaluation_output_increment_mse": 4.018771593103376e-06,
+      "evaluation_output_difference_mse": 4.017948204107502e-06,
+      "mse_reduction_increment_mse": 1.341149413747189e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 4.053657306712921e-06,
+          "true_target_cd": 4.053657306712921e-06,
+          "teacher_target_cd": 4.053657306712921e-06,
+          "continuous_rtn": 0.008698868623937983
+        },
+        "best_retaining_parent_mse": 4.053657306712921e-06,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011486458999570459,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.021156178787350655
+      }
+    },
+    {
+      "group": 5,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.019812200218439102,
+      "official_current_mse": 3.944298441638239e-06,
+      "dynamic_seconds": 0.16375470795901492,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.1343531391982964e-09,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.1343531391982964e-09,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.494547403337359e-32,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.1343531391982964e-09,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 3.9442987005144925e-06,
+      "evaluation_output_increment_mse": 3.943164347375294e-06,
+      "evaluation_output_difference_mse": 3.9437317391755045e-06,
+      "mse_reduction_increment_mse": -2.588762537669709e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 4.29710047811227e-06,
+          "true_target_cd": 4.29710047811227e-06,
+          "teacher_target_cd": 4.29710047811227e-06,
+          "continuous_rtn": 0.008705893981186819
+        },
+        "best_retaining_parent_mse": 4.29710047811227e-06,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.010782499972265214,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.019848063588142395
+      }
+    },
+    {
+      "group": 5,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.019923456013202667,
+      "official_current_mse": 3.986313458881341e-06,
+      "dynamic_seconds": 0.262868250021711,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.1432166203279026e-09,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.1432166203279026e-09,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 2.5180650205712464e-32,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.1432166203279026e-09,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 3.9863136140731725e-06,
+      "evaluation_output_increment_mse": 3.985170397452845e-06,
+      "evaluation_output_difference_mse": 3.985003611725255e-06,
+      "mse_reduction_increment_mse": -1.5519183160783712e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 4.151666956886402e-06,
+          "true_target_cd": 4.151666956886402e-06,
+          "teacher_target_cd": 4.151666956886402e-06,
+          "continuous_rtn": 0.009136944064692898
+        },
+        "best_retaining_parent_mse": 4.151666956886402e-06,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011386082973331213,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.019739121198654175
+      }
+    },
+    {
+      "group": 6,
+      "test": 0,
+      "shape": [
+        1,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0063771773129701614,
+      "official_current_mse": 0.0031469438690692186,
+      "dynamic_seconds": 0.033498749951831996,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.003148628808844478,
+      "geometric_floor_mse": 0.0011823402851890003,
+      "discrete_and_search_mse": 0.0019662885236554797,
+      "orthogonality_cross_mse": -2.087089182034596e-18,
+      "geometric_identity_error": -8.131516293641283e-20,
+      "normal_equation_relative": 1.6532928161432367e-16,
+      "continuous_reconstruction_mse": 6.387079635263535e-30,
+      "teacher_bias_mse": 1.7604468994662553e-06,
+      "fit_to_teacher_mse": 0.0031418929018701977,
+      "teacher_cross_mse": 4.9754600748139655e-06,
+      "teacher_identity_error": 8.131516293641283e-20,
+      "actual_output_mse_double_reduction": 0.003146943781217715,
+      "evaluation_output_increment_mse": -1.685027626763258e-06,
+      "evaluation_output_difference_mse": 1.1872590732764365e-06,
+      "mse_reduction_increment_mse": 8.785150384937879e-11,
+      "evaluation_identity_error": -8.131516293641283e-20,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.003146943781217715,
+          "true_target_cd": 0.0031460993765222156,
+          "teacher_target_cd": 0.003150461716273867,
+          "continuous_rtn": 0.003458051026314024
+        },
+        "best_retaining_parent_mse": 0.0031460993765222156,
+        "recoverable_witness_mse": 8.444046954991791e-07,
+        "seconds": 0.004194833978544921,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0063771773129701614
+      }
+    },
+    {
+      "group": 6,
+      "test": 1,
+      "shape": [
+        10,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005092345178127289,
+      "official_current_mse": 0.002789652906358242,
+      "dynamic_seconds": 0.05267875001300126,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002789179829034083,
+      "geometric_floor_mse": 0.0010310148725103396,
+      "discrete_and_search_mse": 0.0017581649565237413,
+      "orthogonality_cross_mse": 2.291732342091235e-18,
+      "geometric_identity_error": -3.4016843161732694e-19,
+      "normal_equation_relative": 1.7231144866409832e-16,
+      "continuous_reconstruction_mse": 5.6109162164064906e-30,
+      "teacher_bias_mse": 1.4383637978933135e-06,
+      "fit_to_teacher_mse": 0.0027895362795567124,
+      "teacher_cross_mse": -1.7948143205232548e-06,
+      "teacher_identity_error": 3.5469504666273827e-19,
+      "actual_output_mse_double_reduction": 0.002789653172195017,
+      "evaluation_output_increment_mse": 4.73343160934097e-07,
+      "evaluation_output_difference_mse": 9.852410727262395e-07,
+      "mse_reduction_increment_mse": -2.65836774902134e-10,
+      "evaluation_identity_error": -3.4018960744100837e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.002808611870538158,
+          "true_target_cd": 0.0028086046768471817,
+          "teacher_target_cd": 0.002809087797860599,
+          "continuous_rtn": 0.0031013791333309726
+        },
+        "best_retaining_parent_mse": 0.0028074159963438206,
+        "recoverable_witness_mse": 1.1958741943374207e-06,
+        "seconds": 0.007062082993797958,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005121671594679356
+      }
+    },
+    {
+      "group": 6,
+      "test": 2,
+      "shape": [
+        128,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.00536023173481226,
+      "official_current_mse": 0.002936886390671134,
+      "dynamic_seconds": 0.22676091600442305,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0029355145128077687,
+      "geometric_floor_mse": 0.0010897031989528139,
+      "discrete_and_search_mse": 0.0018458113138549543,
+      "orthogonality_cross_mse": 5.017611421297662e-19,
+      "geometric_identity_error": -6.808027313556439e-20,
+      "normal_equation_relative": 1.7124456480353734e-16,
+      "continuous_reconstruction_mse": 5.781334875320953e-30,
+      "teacher_bias_mse": 1.4842233244457376e-06,
+      "fit_to_teacher_mse": 0.0029354414903774158,
+      "teacher_cross_mse": -1.4112008940930601e-06,
+      "teacher_identity_error": 2.1027592915588006e-19,
+      "actual_output_mse_double_reduction": 0.0029368865723789495,
+      "evaluation_output_increment_mse": 1.372059571180806e-06,
+      "evaluation_output_difference_mse": 1.032343974971539e-06,
+      "mse_reduction_increment_mse": -1.8170781546089643e-10,
+      "evaluation_identity_error": -6.818615225397118e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0027359454421258533,
+          "true_target_cd": 0.002733782072468216,
+          "teacher_target_cd": 0.0027338224824120516,
+          "continuous_rtn": 0.0030117457895286748
+        },
+        "best_retaining_parent_mse": 0.002733782072468216,
+        "recoverable_witness_mse": 2.163369657637304e-06,
+        "seconds": 0.006973415962420404,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.004738733638077974
+      }
+    },
+    {
+      "group": 6,
+      "test": 3,
+      "shape": [
+        512,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005294725764542818,
+      "official_current_mse": 0.0029298895969986916,
+      "dynamic_seconds": 0.23277612501988187,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002928881876283842,
+      "geometric_floor_mse": 0.0010865128259514023,
+      "discrete_and_search_mse": 0.0018423690503324398,
+      "orthogonality_cross_mse": -2.0381730293306602e-19,
+      "geometric_identity_error": -1.3023131564034868e-20,
+      "normal_equation_relative": 1.7199651614519105e-16,
+      "continuous_reconstruction_mse": 5.8060956753909365e-30,
+      "teacher_bias_mse": 1.4818432918385162e-06,
+      "fit_to_teacher_mse": 0.0029279941624238822,
+      "teacher_cross_mse": -5.941294318790954e-07,
+      "teacher_identity_error": 2.0180559968333706e-19,
+      "actual_output_mse_double_reduction": 0.0029298898042832144,
+      "evaluation_output_increment_mse": 1.0079279993725765e-06,
+      "evaluation_output_difference_mse": 1.0330172524573855e-06,
+      "mse_reduction_increment_mse": -2.0728452287954724e-10,
+      "evaluation_identity_error": -1.3129010682441655e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.00297825603499291,
+          "true_target_cd": 0.002974159938332832,
+          "teacher_target_cd": 0.00297468060077577,
+          "continuous_rtn": 0.0032793258058489982
+        },
+        "best_retaining_parent_mse": 0.00297386455226345,
+        "recoverable_witness_mse": 4.3914827294599945e-06,
+        "seconds": 0.007079333008732647,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0051521132700145245
+      }
+    },
+    {
+      "group": 6,
+      "test": 4,
+      "shape": [
+        1024,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005318535957485437,
+      "official_current_mse": 0.002938978374004364,
+      "dynamic_seconds": 0.3840441250358708,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0029378511274043076,
+      "geometric_floor_mse": 0.0010893509576315435,
+      "discrete_and_search_mse": 0.0018485001697727637,
+      "orthogonality_cross_mse": 1.69062482316038e-19,
+      "geometric_identity_error": 2.6461838667816377e-19,
+      "normal_equation_relative": 1.7184805491357906e-16,
+      "continuous_reconstruction_mse": 5.8052137899040386e-30,
+      "teacher_bias_mse": 1.4840270972856687e-06,
+      "fit_to_teacher_mse": 0.002937163016551132,
+      "teacher_cross_mse": -7.959162441100955e-07,
+      "teacher_identity_error": 1.4717197458543468e-20,
+      "actual_output_mse_double_reduction": 0.002938978563864665,
+      "evaluation_output_increment_mse": 1.1274364603575115e-06,
+      "evaluation_output_difference_mse": 1.034896066537394e-06,
+      "mse_reduction_increment_mse": -1.8986030109191532e-10,
+      "evaluation_identity_error": 2.6469779601696886e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.002939163586745508,
+          "true_target_cd": 0.002938113615204685,
+          "teacher_target_cd": 0.002936859734113284,
+          "continuous_rtn": 0.003253304170605986
+        },
+        "best_retaining_parent_mse": 0.0029362211328276544,
+        "recoverable_witness_mse": 2.942453917853527e-06,
+        "seconds": 0.008141416998114437,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005175777245312929
+      }
+    },
+    {
+      "group": 7,
+      "test": 0,
+      "shape": [
+        1,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.012899494729936123,
+      "official_current_mse": 0.004291359335184097,
+      "dynamic_seconds": 0.03394824999850243,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.004289435491813265,
+      "geometric_floor_mse": 0.001973990308963823,
+      "discrete_and_search_mse": 0.0023154451828494467,
+      "orthogonality_cross_mse": -5.353248226647178e-18,
+      "geometric_identity_error": 5.827586677109586e-19,
+      "normal_equation_relative": 1.680875564694646e-16,
+      "continuous_reconstruction_mse": 8.68049606192581e-30,
+      "teacher_bias_mse": 2.3309453815424536e-06,
+      "fit_to_teacher_mse": 0.004284325000408092,
+      "teacher_cross_mse": 2.7795460236299206e-06,
+      "teacher_identity_error": 2.659683454378503e-19,
+      "actual_output_mse_double_reduction": 0.004291359397285532,
+      "evaluation_output_increment_mse": 1.9239054722675064e-06,
+      "evaluation_output_difference_mse": 1.7259013702641823e-06,
+      "mse_reduction_increment_mse": -6.210143510543276e-11,
+      "evaluation_identity_error": 5.827586677109586e-19,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.004291359397285532,
+          "true_target_cd": 0.004289155110541287,
+          "teacher_target_cd": 0.004289155110541287,
+          "continuous_rtn": 0.004620105213405168
+        },
+        "best_retaining_parent_mse": 0.004289155110541287,
+        "recoverable_witness_mse": 2.2042867442451097e-06,
+        "seconds": 0.00385804200777784,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.012899494729936123
+      }
+    },
+    {
+      "group": 7,
+      "test": 1,
+      "shape": [
+        10,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.00465455511584878,
+      "official_current_mse": 0.002706435974687338,
+      "dynamic_seconds": 0.05818274995544925,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002705448028400781,
+      "geometric_floor_mse": 0.001037609364632665,
+      "discrete_and_search_mse": 0.001667838663768116,
+      "orthogonality_cross_mse": -2.520770051028798e-19,
+      "geometric_identity_error": 3.5236570605778913e-20,
+      "normal_equation_relative": 1.779885494260154e-16,
+      "continuous_reconstruction_mse": 5.023007938926442e-30,
+      "teacher_bias_mse": 1.2955385352001626e-06,
+      "fit_to_teacher_mse": 0.0027055975065474677,
+      "teacher_cross_mse": -1.445016681886791e-06,
+      "teacher_identity_error": -1.8168856718604742e-19,
+      "actual_output_mse_double_reduction": 0.0027064359041077068,
+      "evaluation_output_increment_mse": 9.878757069258469e-07,
+      "evaluation_output_difference_mse": 9.180504420669422e-07,
+      "mse_reduction_increment_mse": 7.057963111525845e-11,
+      "evaluation_identity_error": 3.5151867311053464e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0027362657639180554,
+          "true_target_cd": 0.00273495189753703,
+          "teacher_target_cd": 0.002735697859524322,
+          "continuous_rtn": 0.00296960877629715
+        },
+        "best_retaining_parent_mse": 0.002734390307196577,
+        "recoverable_witness_mse": 1.8754567214784856e-06,
+        "seconds": 0.007661833020392805,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0047029415145516396
+      }
+    },
+    {
+      "group": 7,
+      "test": 2,
+      "shape": [
+        128,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.004776337184011936,
+      "official_current_mse": 0.0027910121716558933,
+      "dynamic_seconds": 0.23536154098110273,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0027900374774827985,
+      "geometric_floor_mse": 0.0010830429387206695,
+      "discrete_and_search_mse": 0.0017069945387621279,
+      "orthogonality_cross_mse": 1.066520359711571e-18,
+      "geometric_identity_error": 1.768181277393352e-20,
+      "normal_equation_relative": 1.7520942231269402e-16,
+      "continuous_reconstruction_mse": 5.182648567388239e-30,
+      "teacher_bias_mse": 1.3454911405791382e-06,
+      "fit_to_teacher_mse": 0.0027893732557140163,
+      "teacher_cross_mse": -6.812693717969433e-07,
+      "teacher_identity_error": 9.317362419797304e-21,
+      "actual_output_mse_double_reduction": 0.0027910121766461238,
+      "evaluation_output_increment_mse": 9.746991633252655e-07,
+      "evaluation_output_difference_mse": 9.445695623999661e-07,
+      "mse_reduction_increment_mse": -4.990230451085154e-12,
+      "evaluation_identity_error": 1.7787691892340307e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0028231344909670497,
+          "true_target_cd": 0.0028212671503560216,
+          "teacher_target_cd": 0.0028211276313392375,
+          "continuous_rtn": 0.0030980499095498715
+        },
+        "best_retaining_parent_mse": 0.002820588937282764,
+        "recoverable_witness_mse": 2.545553684285551e-06,
+        "seconds": 0.007319291995372623,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.004795448388904333
+      }
+    },
+    {
+      "group": 7,
+      "test": 3,
+      "shape": [
+        512,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.004881729371845722,
+      "official_current_mse": 0.002812770428135991,
+      "dynamic_seconds": 0.2501445829984732,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0028116413074721625,
+      "geometric_floor_mse": 0.001089847137145307,
+      "discrete_and_search_mse": 0.0017217941703268555,
+      "orthogonality_cross_mse": 1.2385209875633973e-19,
+      "geometric_identity_error": -1.2385209875633973e-19,
+      "normal_equation_relative": 1.7433739859745105e-16,
+      "continuous_reconstruction_mse": 5.210626648793418e-30,
+      "teacher_bias_mse": 1.3535473447180928e-06,
+      "fit_to_teacher_mse": 0.0028107159205201324,
+      "teacher_cross_mse": -4.281603926877792e-07,
+      "teacher_identity_error": -2.8904999325053e-19,
+      "actual_output_mse_double_reduction": 0.0028127704093164757,
+      "evaluation_output_increment_mse": 1.1291018443132517e-06,
+      "evaluation_output_difference_mse": 9.505842740592518e-07,
+      "mse_reduction_increment_mse": 1.88195153905113e-11,
+      "evaluation_identity_error": -1.2387856853594142e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0029307227152060022,
+          "true_target_cd": 0.002927974482435758,
+          "teacher_target_cd": 0.0029275407480966464,
+          "continuous_rtn": 0.003189597047871473
+        },
+        "best_retaining_parent_mse": 0.002927006079115557,
+        "recoverable_witness_mse": 3.7166360904450357e-06,
+        "seconds": 0.0073535420233383775,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0054201725870370865
+      }
+    },
+    {
+      "group": 7,
+      "test": 4,
+      "shape": [
+        1024,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.00478591863065958,
+      "official_current_mse": 0.0027873506769537926,
+      "dynamic_seconds": 0.38684154098154977,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002786448103912764,
+      "geometric_floor_mse": 0.0010799556274773423,
+      "discrete_and_search_mse": 0.0017064924764354221,
+      "orthogonality_cross_mse": -2.9868499302554766e-19,
+      "geometric_identity_error": 8.184455852844677e-20,
+      "normal_equation_relative": 1.7460274402801375e-16,
+      "continuous_reconstruction_mse": 5.1493273119807515e-30,
+      "teacher_bias_mse": 1.3387758714536603e-06,
+      "fit_to_teacher_mse": 0.00278583818023423,
+      "teacher_cross_mse": -7.288521929195959e-07,
+      "teacher_identity_error": 1.418780186650953e-19,
+      "actual_output_mse_double_reduction": 0.0027873506922027266,
+      "evaluation_output_increment_mse": 9.025882899624249e-07,
+      "evaluation_output_difference_mse": 9.453705778830757e-07,
+      "mse_reduction_increment_mse": -1.5248934059908237e-11,
+      "evaluation_identity_error": 8.184455852844677e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0027791686380922442,
+          "true_target_cd": 0.0027765127095342734,
+          "teacher_target_cd": 0.0027771669229856855,
+          "continuous_rtn": 0.0030408366699923306
+        },
+        "best_retaining_parent_mse": 0.0027764419602114287,
+        "recoverable_witness_mse": 2.7266778808154868e-06,
+        "seconds": 0.0075168340117670596,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0046915458515286446
+      }
+    },
+    {
+      "group": 8,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.00712526123970747,
+      "official_current_mse": 1.6526930266991258e-05,
+      "dynamic_seconds": 0.0029250410152599216,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5008152388418239e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5008152388418239e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.3732023084572306e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5008152388418239e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.6526930323834677e-05,
+      "evaluation_output_increment_mse": 1.5187779354164377e-06,
+      "evaluation_output_difference_mse": 1.3397802831605077e-06,
+      "mse_reduction_increment_mse": -5.684341886080802e-14,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.6526930323834677e-05,
+          "true_target_cd": 1.6526930323834677e-05,
+          "teacher_target_cd": 1.6526930323834677e-05,
+          "continuous_rtn": 0.0030546750422786317
+        },
+        "best_retaining_parent_mse": 1.6526930323834677e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.005694459017831832,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.00712526123970747
+      }
+    },
+    {
+      "group": 8,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007038440555334091,
+      "official_current_mse": 1.6846071957843378e-05,
+      "dynamic_seconds": 0.006373042007908225,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5481151018548188e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5481151018548188e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.66634569175685e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5481151018548188e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.6846071190457224e-05,
+      "evaluation_output_increment_mse": 1.3649201719090356e-06,
+      "evaluation_output_difference_mse": 1.3939570635557175e-06,
+      "mse_reduction_increment_mse": 7.673861546209082e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.678143264882692e-05,
+          "true_target_cd": 1.678143264882692e-05,
+          "teacher_target_cd": 1.678143264882692e-05,
+          "continuous_rtn": 0.0030774769700911975
+        },
+        "best_retaining_parent_mse": 1.678143264882692e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011456709005869925,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.006929386872798204
+      }
+    },
+    {
+      "group": 8,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007300626486539841,
+      "official_current_mse": 1.7456488421885297e-05,
+      "dynamic_seconds": 0.027534125023521483,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.6050299793235467e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.6050299793235467e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.753333734373835e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.6050299793235467e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.7456488174971696e-05,
+      "evaluation_output_increment_mse": 1.4061883817362286e-06,
+      "evaluation_output_difference_mse": 1.3733234709434328e-06,
+      "mse_reduction_increment_mse": 2.469136006766348e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.7837771984829942e-05,
+          "true_target_cd": 1.7837771984829942e-05,
+          "teacher_target_cd": 1.7837771984829942e-05,
+          "continuous_rtn": 0.0032298455421013728
+        },
+        "best_retaining_parent_mse": 1.7837771984829942e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011468209035228938,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007773471064865589
+      }
+    },
+    {
+      "group": 8,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007411409169435501,
+      "official_current_mse": 1.7604403183213435e-05,
+      "dynamic_seconds": 0.11560383398318663,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.6206852280237216e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.6206852280237216e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.6492506411966505e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.6206852280237216e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.7604402887033688e-05,
+      "evaluation_output_increment_mse": 1.3975506067964716e-06,
+      "evaluation_output_difference_mse": 1.3751166587638863e-06,
+      "mse_reduction_increment_mse": 2.9617974739437614e-13,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.9040955983484764e-05,
+          "true_target_cd": 1.9040955983484764e-05,
+          "teacher_target_cd": 1.9040955983484764e-05,
+          "continuous_rtn": 0.0035124869161862193
+        },
+        "best_retaining_parent_mse": 1.9040955983484764e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.012753290997352451,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007951072417199612
+      }
+    },
+    {
+      "group": 8,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007406055461615324,
+      "official_current_mse": 1.74510532815475e-05,
+      "dynamic_seconds": 0.20950245897984132,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.6039540891604753e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.6039540891604753e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 3.654622209629207e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.6039540891604753e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.7451054768052865e-05,
+      "evaluation_output_increment_mse": 1.4115138764481117e-06,
+      "evaluation_output_difference_mse": 1.3612276461572037e-06,
+      "mse_reduction_increment_mse": -1.4865053632462377e-12,
+      "evaluation_identity_error": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 1.7908747516059975e-05,
+          "true_target_cd": 1.7908747516059975e-05,
+          "teacher_target_cd": 1.7908747516059975e-05,
+          "continuous_rtn": 0.003317459506327225
+        },
+        "best_retaining_parent_mse": 1.7908747516059975e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.01278591703157872,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007179759442806244
+      }
+    },
+    {
+      "group": 9,
+      "test": 0,
+      "shape": [
+        1,
+        1024
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.004935870878398418,
+      "official_current_mse": 0.001986538525670767,
+      "dynamic_seconds": 0.118171916983556,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0019856251088441468,
+      "geometric_floor_mse": 0.0006607576186943404,
+      "discrete_and_search_mse": 0.0013248674901498122,
+      "orthogonality_cross_mse": -5.753047777751208e-18,
+      "geometric_identity_error": -1.0164395367051604e-19,
+      "normal_equation_relative": 1.6774386984590047e-16,
+      "continuous_reconstruction_mse": 8.215562467418522e-30,
+      "teacher_bias_mse": 1.2969002576751249e-06,
+      "fit_to_teacher_mse": 0.001984977696496127,
+      "teacher_cross_mse": -6.494879096551965e-07,
+      "teacher_identity_error": -1.6263032587282567e-19,
+      "actual_output_mse_double_reduction": 0.0019865385302182403,
+      "evaluation_output_increment_mse": 9.134213740935593e-07,
+      "evaluation_output_difference_mse": 9.662661142328943e-07,
+      "mse_reduction_increment_mse": -4.547473508864641e-12,
+      "evaluation_identity_error": -1.0164395367051604e-19,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0019865385302182403,
+          "true_target_cd": 0.0019865385302182403,
+          "teacher_target_cd": 0.0019865385302182403,
+          "continuous_rtn": 0.002542181491151041
+        },
+        "best_retaining_parent_mse": 0.0019865385302182403,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.007335583039093763,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.004935870878398418
+      }
+    },
+    {
+      "group": 9,
+      "test": 1,
+      "shape": [
+        10,
+        1024
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005316182039678097,
+      "official_current_mse": 0.0019950622227042913,
+      "dynamic_seconds": 0.11607708298834041,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0019936498754935528,
+      "geometric_floor_mse": 0.0006893677271322893,
+      "discrete_and_search_mse": 0.0013042821483612605,
+      "orthogonality_cross_mse": 3.241764495731658e-18,
+      "geometric_identity_error": -2.059984127722457e-19,
+      "normal_equation_relative": 1.7473359618115409e-16,
+      "continuous_reconstruction_mse": 9.618989479422124e-30,
+      "teacher_bias_mse": 1.322939329271888e-06,
+      "fit_to_teacher_mse": 0.0019928116906913255,
+      "teacher_cross_mse": -4.847545270447529e-07,
+      "teacher_identity_error": 1.725829630030637e-19,
+      "actual_output_mse_double_reduction": 0.0019950623934320787,
+      "evaluation_output_increment_mse": 1.41251793852595e-06,
+      "evaluation_output_difference_mse": 9.936724685744025e-07,
+      "mse_reduction_increment_mse": -1.7072778737622918e-10,
+      "evaluation_identity_error": -2.0604076441960856e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0019780713306056796,
+          "true_target_cd": 0.0019776132844562255,
+          "teacher_target_cd": 0.0019768939307454048,
+          "continuous_rtn": 0.0025648958345607653
+        },
+        "best_retaining_parent_mse": 0.001976454665616245,
+        "recoverable_witness_mse": 1.6166649894344687e-06,
+        "seconds": 0.012628624972421676,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005248884670436382
+      }
+    },
+    {
+      "group": 9,
+      "test": 2,
+      "shape": [
+        128,
+        1024
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005394055973738432,
+      "official_current_mse": 0.0020354408770799637,
+      "dynamic_seconds": 1.1619299580343068,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0020342014173178463,
+      "geometric_floor_mse": 0.0007055123162371161,
+      "discrete_and_search_mse": 0.001328689101080731,
+      "orthogonality_cross_mse": -8.172279754227896e-19,
+      "geometric_identity_error": 1.6670667193148699e-19,
+      "normal_equation_relative": 1.7267261813679103e-16,
+      "continuous_reconstruction_mse": 9.98910402880177e-30,
+      "teacher_bias_mse": 1.357144704734049e-06,
+      "fit_to_teacher_mse": 0.0020332363293718465,
+      "teacher_cross_mse": -3.920567587345408e-07,
+      "teacher_identity_error": 2.736975210815458e-19,
+      "actual_output_mse_double_reduction": 0.002035440808479505,
+      "evaluation_output_increment_mse": 1.2393911616587205e-06,
+      "evaluation_output_difference_mse": 1.0324850534954022e-06,
+      "mse_reduction_increment_mse": 6.86004586469835e-11,
+      "evaluation_identity_error": 1.666537323722836e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.0020471878566503676,
+          "true_target_cd": 0.0020474779490236017,
+          "teacher_target_cd": 0.0020472021358060033,
+          "continuous_rtn": 0.002677855272695595
+        },
+        "best_retaining_parent_mse": 0.0020463681655442656,
+        "recoverable_witness_mse": 8.196911061020273e-07,
+        "seconds": 0.011166667041834444,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005427657160907984
+      }
+    },
+    {
+      "group": 9,
+      "test": 3,
+      "shape": [
+        512,
+        1024
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005356063134968281,
+      "official_current_mse": 0.0020478495862334967,
+      "dynamic_seconds": 0.6202383749769069,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002046745385996817,
+      "geometric_floor_mse": 0.000701810036691587,
+      "discrete_and_search_mse": 0.0013449353493052304,
+      "orthogonality_cross_mse": -5.820969232209162e-19,
+      "geometric_identity_error": 1.4841605422671444e-19,
+      "normal_equation_relative": 1.721446260904558e-16,
+      "continuous_reconstruction_mse": 9.912572073231526e-30,
+      "teacher_bias_mse": 1.3560883407865155e-06,
+      "fit_to_teacher_mse": 0.002045946169881679,
+      "teacher_cross_mse": -5.568722256487957e-07,
+      "teacher_identity_error": 3.305546076659907e-19,
+      "actual_output_mse_double_reduction": 0.0020478497646839178,
+      "evaluation_output_increment_mse": 1.1043786871008099e-06,
+      "evaluation_output_difference_mse": 1.0294908353546128e-06,
+      "mse_reduction_increment_mse": -1.7845042110664622e-10,
+      "evaluation_identity_error": 1.4844252400631613e-19,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.002091465772352308,
+          "true_target_cd": 0.002089004843405462,
+          "teacher_target_cd": 0.002088993714469467,
+          "continuous_rtn": 0.002676087735107302
+        },
+        "best_retaining_parent_mse": 0.0020878522383220854,
+        "recoverable_witness_mse": 3.613534030222354e-06,
+        "seconds": 0.014982791035436094,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005522948689758778
+      }
+    },
+    {
+      "group": 9,
+      "test": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.005377508234232664,
+      "official_current_mse": 0.002052765339612961,
+      "dynamic_seconds": 0.9555644579813816,
+      "evaluation_output_dtype": "torch.bfloat16",
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.002051748049765753,
+      "geometric_floor_mse": 0.0007016537998313845,
+      "discrete_and_search_mse": 0.0013500942499343688,
+      "orthogonality_cross_mse": -1.6183623248477476e-19,
+      "geometric_identity_error": -5.500420201232613e-20,
+      "normal_equation_relative": 1.7226126035341615e-16,
+      "continuous_reconstruction_mse": 9.936243388160404e-30,
+      "teacher_bias_mse": 1.3559182217734782e-06,
+      "fit_to_teacher_mse": 0.0020507717198618323,
+      "teacher_cross_mse": -3.7958831785315505e-07,
+      "teacher_identity_error": 4.533214454586609e-19,
+      "actual_output_mse_double_reduction": 0.0020527653906066215,
+      "evaluation_output_increment_mse": 1.0173408408684081e-06,
+      "evaluation_output_difference_mse": 1.0311889040784394e-06,
+      "mse_reduction_increment_mse": -5.099366068295197e-11,
+      "evaluation_identity_error": -5.505714157152952e-20,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 32,
+        "true_mse": {
+          "parent": 0.002007628477972645,
+          "true_target_cd": 0.0020060843089986236,
+          "teacher_target_cd": 0.0020053868691078947,
+          "continuous_rtn": 0.0025787583606957654
+        },
+        "best_retaining_parent_mse": 0.0020046075803463737,
+        "recoverable_witness_mse": 3.020897626271335e-06,
+        "seconds": 0.010272708022966981,
+        "output_dtype": "torch.bfloat16",
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.005234501324594021
+      }
+    }
+  ],
+  "validated_public_returns": 60,
+  "validated_probe_returns": 200,
+  "production_score_matches": 0,
+  "provenance": "Checkpoint tensors with modeled activations; reduced dimensions, not online data.",
+  "warnings": [
+    "Current frozen Linear inferred 4397/5000; remaining 603 is NOT distributed using these proxy proportions. Historical source versions may differ.",
+    "Geometry + in-space remainder is orthogonal accounting. Teacher terms are a separate identity.",
+    "In-space remainder includes irreducible discrete error, not just search inefficiency."
+  ],
+  "summary": {
+    "cases": 50,
+    "scorable_cases": 50,
+    "raw_score_sum": 37.925635957075315,
+    "normalized_error_sums": {
+      "official_current_mse": 12.074364042924687,
+      "geometric_floor_mse": 4.602611986471896,
+      "discrete_and_search_mse": 7.462815129384918,
+      "teacher_bias_mse": 0.006615248300459283,
+      "teacher_cross_mse": -0.00042727471326325803,
+      "evaluation_output_increment_mse": 0.008937352440422972,
+      "mse_reduction_increment_mse": -4.253725494353774e-07
+    },
+    "geometry_share_of_current_gap": 0.38118877069711393,
+    "continuous_raw_score_upper": 45.3973880135281,
+    "max_orthogonality_relative": 1.779885494260154e-16,
+    "max_decomposition_identity_error": 5.827586677109586e-19,
+    "max_teacher_identity_error": 4.533214454586609e-19,
+    "max_evaluation_identity_error": 5.827586677109586e-19
+  },
+  "production_unchanged": true,
+  "wall_seconds": 27.216993290989194,
+  "by_route": {
+    "direct_output": {
+      "cases": 25,
+      "scorable_cases": 25,
+      "raw_score_sum": 24.973722098346947,
+      "normalized_error_sums": {
+        "official_current_mse": 0.026277901653053645,
+        "geometric_floor_mse": 0.0,
+        "discrete_and_search_mse": 0.021541852729048894,
+        "teacher_bias_mse": 0.0,
+        "teacher_cross_mse": 0.0,
+        "evaluation_output_increment_mse": 0.004736048679120991,
+        "mse_reduction_increment_mse": 2.4488375992544423e-10
+      },
+      "geometry_share_of_current_gap": 0.0,
+      "continuous_raw_score_upper": 25.0,
+      "max_orthogonality_relative": 0.0,
+      "max_decomposition_identity_error": 0.0,
+      "max_teacher_identity_error": 0.0,
+      "max_evaluation_identity_error": 0.0
+    },
+    "exact_search": {
+      "cases": 25,
+      "scorable_cases": 25,
+      "raw_score_sum": 12.951913858728368,
+      "normalized_error_sums": {
+        "official_current_mse": 12.048086141271632,
+        "geometric_floor_mse": 4.602611986471896,
+        "discrete_and_search_mse": 7.44127327665587,
+        "teacher_bias_mse": 0.006615248300459283,
+        "teacher_cross_mse": -0.00042727471326325803,
+        "evaluation_output_increment_mse": 0.004201303761301981,
+        "mse_reduction_increment_mse": -4.2561743319530285e-07
+      },
+      "geometry_share_of_current_gap": 0.38202017586057085,
+      "continuous_raw_score_upper": 20.397388013528104,
+      "max_orthogonality_relative": 1.779885494260154e-16,
+      "max_decomposition_identity_error": 5.827586677109586e-19,
+      "max_teacher_identity_error": 4.533214454586609e-19,
+      "max_evaluation_identity_error": 5.827586677109586e-19
+    }
+  },
+  "by_test_index": {
+    "0": {
+      "cases": 10,
+      "scorable_cases": 10,
+      "raw_score_sum": 7.79862459457091,
+      "normalized_error_sums": {
+        "official_current_mse": 2.2013754054290895,
+        "geometric_floor_mse": 0.8493658377871931,
+        "discrete_and_search_mse": 1.3508652668780767,
+        "teacher_bias_mse": 0.0012529980113171364,
+        "teacher_cross_mse": 0.0014556847391015767,
+        "evaluation_output_increment_mse": 0.0011443744591413056,
+        "mse_reduction_increment_mse": -7.369531878031371e-08
+      },
+      "geometry_share_of_current_gap": 0.3858341633564475,
+      "continuous_raw_score_upper": 9.150634162212807,
+      "max_orthogonality_relative": 1.703731511504136e-16,
+      "max_decomposition_identity_error": 5.827586677109586e-19,
+      "max_teacher_identity_error": 2.659683454378503e-19,
+      "max_evaluation_identity_error": 5.827586677109586e-19
+    },
+    "1": {
+      "cases": 10,
+      "scorable_cases": 10,
+      "raw_score_sum": 7.5260379237552195,
+      "normalized_error_sums": {
+        "official_current_mse": 2.4739620762447805,
+        "geometric_floor_mse": 0.9364170823563702,
+        "discrete_and_search_mse": 1.5357670229967204,
+        "teacher_bias_mse": 0.0013507036054259598,
+        "teacher_cross_mse": -0.0004080610965549187,
+        "evaluation_output_increment_mse": 0.0017780748150119919,
+        "mse_reduction_increment_mse": -1.0392332310958309e-07
+      },
+      "geometry_share_of_current_gap": 0.3785090690548316,
+      "continuous_raw_score_upper": 9.063582917643629,
+      "max_orthogonality_relative": 1.779885494260154e-16,
+      "max_decomposition_identity_error": 3.4016843161732694e-19,
+      "max_teacher_identity_error": 3.5469504666273827e-19,
+      "max_evaluation_identity_error": 3.4018960744100837e-19
+    },
+    "2": {
+      "cases": 10,
+      "scorable_cases": 10,
+      "raw_score_sum": 7.535747761808256,
+      "normalized_error_sums": {
+        "official_current_mse": 2.4642522381917438,
+        "geometric_floor_mse": 0.9401007991181234,
+        "discrete_and_search_mse": 1.5220050838080648,
+        "teacher_bias_mse": 0.001336506548722853,
+        "teacher_cross_mse": -0.0005648595569588146,
+        "evaluation_output_increment_mse": 0.002146440033281059,
+        "mse_reduction_increment_mse": -8.476772578684259e-08
+      },
+      "geometry_share_of_current_gap": 0.38149536177674925,
+      "continuous_raw_score_upper": 9.059899200881876,
+      "max_orthogonality_relative": 1.7745000873238964e-16,
+      "max_decomposition_identity_error": 1.6670667193148699e-19,
+      "max_teacher_identity_error": 2.736975210815458e-19,
+      "max_evaluation_identity_error": 1.666537323722836e-19
+    },
+    "3": {
+      "cases": 10,
+      "scorable_cases": 10,
+      "raw_score_sum": 7.534504504983251,
+      "normalized_error_sums": {
+        "official_current_mse": 2.465495495016749,
+        "geometric_floor_mse": 0.9383369976461856,
+        "discrete_and_search_mse": 1.525208115066343,
+        "teacher_bias_mse": 0.0013373024456625783,
+        "teacher_cross_mse": -0.0004148868553739435,
+        "evaluation_output_increment_mse": 0.0019504769278037356,
+        "mse_reduction_increment_mse": -9.46235828694153e-08
+      },
+      "geometry_share_of_current_gap": 0.38058759366737804,
+      "continuous_raw_score_upper": 9.061663002353814,
+      "max_orthogonality_relative": 1.7700886537956777e-16,
+      "max_decomposition_identity_error": 1.4841605422671444e-19,
+      "max_teacher_identity_error": 3.305546076659907e-19,
+      "max_evaluation_identity_error": 1.4844252400631613e-19
+    },
+    "4": {
+      "cases": 10,
+      "scorable_cases": 10,
+      "raw_score_sum": 7.530721171957677,
+      "normalized_error_sums": {
+        "official_current_mse": 2.4692788280423232,
+        "geometric_floor_mse": 0.9383912695640237,
+        "discrete_and_search_mse": 1.5289696406357134,
+        "teacher_bias_mse": 0.0013377376893307558,
+        "teacher_cross_mse": -0.0004951519434771578,
+        "evaluation_output_increment_mse": 0.0019179862051848795,
+        "mse_reduction_increment_mse": -6.836259888922273e-08
+      },
+      "geometry_share_of_current_gap": 0.3800264510055321,
+      "continuous_raw_score_upper": 9.061608730435976,
+      "max_orthogonality_relative": 1.759820183111313e-16,
+      "max_decomposition_identity_error": 2.6461838667816377e-19,
+      "max_teacher_identity_error": 4.533214454586609e-19,
+      "max_evaluation_identity_error": 2.6469779601696886e-19
+    }
+  }
+}

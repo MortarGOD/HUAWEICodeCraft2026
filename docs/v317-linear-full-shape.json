@@ -1,0 +1,128 @@
+{
+  "complete": true,
+  "source_unchanged_functions": 79,
+  "full_shape": true,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        8192,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 11.730262375000166,
+          "dynamic": 6.445813958038343
+        },
+        "cleanup": {
+          "calibration": 4.851311458012788,
+          "dynamic": 6.575490332033951
+        },
+        "joint": {
+          "calibration": 15.082058959000278,
+          "dynamic": 6.53769679099787
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.507917204176535,
+          "candidate": 0.5371385582741786,
+          "delta": 0.029221354097643593
+        },
+        {
+          "test": 1,
+          "parent": 0.5271336249830667,
+          "candidate": 0.5584224883725255,
+          "delta": 0.0312888633894588
+        },
+        {
+          "test": 2,
+          "parent": 0.5320085366057057,
+          "candidate": 0.5638429705767058,
+          "delta": 0.031834433971000164
+        },
+        {
+          "test": 3,
+          "parent": 0.5320614790170435,
+          "candidate": 0.5641548581778719,
+          "delta": 0.03209337916082844
+        },
+        {
+          "test": 4,
+          "parent": 0.5235286869282336,
+          "candidate": 0.5555044323108558,
+          "delta": 0.031975745382622156
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.15641377600155315,
+      "adopted": true
+    },
+    {
+      "group": 9,
+      "shape": [
+        4096,
+        2048
+      ],
+      "timing": {
+        "parent": {
+          "calibration": 6.866537167021306,
+          "dynamic": 4.884923249977874
+        },
+        "cleanup": {
+          "calibration": 2.5980659170018043,
+          "dynamic": 5.121602874016389
+        },
+        "joint": {
+          "calibration": 9.159999333001906,
+          "dynamic": 4.968102331040427
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "parent": 0.617344712093128,
+          "candidate": 0.645818206565806,
+          "delta": 0.028473494472677996
+        },
+        {
+          "test": 1,
+          "parent": 0.6361555256592925,
+          "candidate": 0.6559381145598837,
+          "delta": 0.019782588900591258
+        },
+        {
+          "test": 2,
+          "parent": 0.6455087550111038,
+          "candidate": 0.6624815434017413,
+          "delta": 0.016972788390637428
+        },
+        {
+          "test": 3,
+          "parent": 0.6374582647233731,
+          "candidate": 0.6547401372991654,
+          "delta": 0.01728187257579228
+        },
+        {
+          "test": 4,
+          "parent": 0.6356339409379432,
+          "candidate": 0.6524633524612878,
+          "delta": 0.016829411523344606
+        }
+      ],
+      "cleanup_bitexact": true,
+      "delta": 0.09934015586304357,
+      "adopted": true
+    }
+  ],
+  "validation_checks": 36,
+  "timing": "Serial algorithm calls only; scoring and checks excluded; not a 96-core forecast",
+  "delta": 0.2557539318645967,
+  "total_seconds": {
+    "parent": 29.92753675003769,
+    "cleanup": 19.146470581064932,
+    "joint": 35.74785741404048
+  }
+}

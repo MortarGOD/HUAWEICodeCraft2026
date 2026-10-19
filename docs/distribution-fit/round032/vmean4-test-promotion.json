@@ -1,0 +1,37 @@
+{
+  "certificate_sha256": "8b06564651f6e7cab2cf643cf96dc3cdefb5117c513543acf3d10bc38d30ed0f",
+  "cases": [
+    {
+      "population": "round032/vmean4-test",
+      "test": 4,
+      "margin": 32940.35747112312,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean4-test",
+      "test": 0,
+      "margin": 187.44770770170572,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean4-test",
+      "test": 2,
+      "margin": -1274.5944115043646,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean4-test",
+      "test": 3,
+      "margin": -6548.142436997082,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean4-test",
+      "test": 1,
+      "margin": -34635.548579833056,
+      "in_complete_support": false
+    }
+  ],
+  "action": "Complete102 and actual data/source audit before combining with first candidate",
+  "limits": "Screening against pre-expansion certificate, not guaranteed new fit gain."
+}

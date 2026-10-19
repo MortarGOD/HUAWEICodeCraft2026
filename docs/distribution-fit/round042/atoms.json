@@ -1,0 +1,86 @@
+{
+  "round": 42,
+  "atoms": [
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee",
+      "seed": 2026091003,
+      "id": "round003-paired-0",
+      "mode": "paired",
+      "noise": 0,
+      "fit_eligible": false,
+      "source_atom": "trace35-group3-correlated_noise"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee",
+      "seed": 2026091003,
+      "id": "round003-correlated_noise-0",
+      "mode": "correlated_noise",
+      "noise": 0,
+      "fit_eligible": false,
+      "source_atom": "trace35-group3-correlated_noise"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee",
+      "seed": 2026091003,
+      "id": "round003-correlated_noise-0.005",
+      "mode": "correlated_noise",
+      "noise": 0.005,
+      "fit_eligible": false,
+      "source_atom": "trace35-group3-correlated_noise"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "sha256": "131e896829be0fb28bc1be309bd377401d1532d96b6d66fa964fdd72dbd874ee",
+      "seed": 2026091003,
+      "id": "round003-correlated_noise-0.05",
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_atom": "trace35-group3-correlated_noise"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "seed": 2026091010,
+      "id": "round021-paired-0",
+      "mode": "paired",
+      "noise": 0,
+      "fit_eligible": false,
+      "source_atom": "trace35-group7-seedplus3"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "seed": 2026091010,
+      "id": "round021-correlated_noise-0",
+      "mode": "correlated_noise",
+      "noise": 0,
+      "fit_eligible": false,
+      "source_atom": "trace35-group7-seedplus3"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "seed": 2026091010,
+      "id": "round021-correlated_noise-0.005",
+      "mode": "correlated_noise",
+      "noise": 0.005,
+      "fit_eligible": false,
+      "source_atom": "trace35-group7-seedplus3"
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "sha256": "1698d80ea1700db9fd96da42fd3db1a64d4fbd86c7a4fc5ed6bbc9a3978d3a42",
+      "seed": 2026091010,
+      "id": "round021-correlated_noise-0.05",
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": false,
+      "source_atom": "trace35-group7-seedplus3"
+    }
+  ],
+  "limits": "Fixed original input tensors; predeclared calibration perturbation axis. Diagnostic only, no fitted columns or online prevalence claim."
+}

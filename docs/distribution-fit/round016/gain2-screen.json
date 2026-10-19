@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round016/true-qk-gain2.0",
+      "test": 3,
+      "tokens": 128,
+      "price": 23364.6232455143,
+      "required_lower_bound": 447.2848988307447,
+      "margin": 22917.338346683555
+    },
+    {
+      "population": "round016/true-qk-gain2.0",
+      "test": 2,
+      "tokens": 32,
+      "price": 8172.070968411833,
+      "required_lower_bound": 447.2848988307447,
+      "margin": 7724.786069581088
+    },
+    {
+      "population": "round016/true-qk-gain2.0",
+      "test": 0,
+      "tokens": 4,
+      "price": -11776.525376549096,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -12223.810275379841
+    },
+    {
+      "population": "round016/true-qk-gain2.0",
+      "test": 1,
+      "tokens": 8,
+      "price": -50821.12540140565,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -51268.41030023639
+    },
+    {
+      "population": "round016/true-qk-gain2.0",
+      "test": 4,
+      "tokens": 512,
+      "price": -140740.88426223252,
+      "required_lower_bound": 447.2848988307447,
+      "margin": -141188.16916106327
+    }
+  ],
+  "promote": true,
+  "limits": "Fixed 390-column certificate only; breaking it is not joint feasibility."
+}

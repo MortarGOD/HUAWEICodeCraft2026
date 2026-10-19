@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "population": "round018/v-token-reverse",
+      "test": 3,
+      "tokens": 128,
+      "price": 190.36865799120687,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -55.43059547138628
+    },
+    {
+      "population": "round018/v-token-reverse",
+      "test": 4,
+      "tokens": 512,
+      "price": 89.70733951648454,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -156.0919139461086
+    },
+    {
+      "population": "round018/v-token-reverse",
+      "test": 2,
+      "tokens": 32,
+      "price": -2535.8451073501433,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -2781.6443608127365
+    },
+    {
+      "population": "round018/v-token-reverse",
+      "test": 1,
+      "tokens": 8,
+      "price": -24483.34643711227,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -24729.145690574864
+    },
+    {
+      "population": "round018/v-token-reverse",
+      "test": 0,
+      "tokens": 4,
+      "price": -122264.11070114048,
+      "required_lower_bound": 245.79925346259316,
+      "margin": -122509.90995460308
+    }
+  ],
+  "promote": false,
+  "limits": "Fixed 460-column certificate only; not general impossibility."
+}

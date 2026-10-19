@@ -1,0 +1,593 @@
+{
+  "rows": [
+    {
+      "group": 0,
+      "fit_triggered": false
+    },
+    {
+      "group": 10,
+      "fit_triggered": false
+    },
+    {
+      "group": 19,
+      "test": 0,
+      "tokens": 128,
+      "temperature": [
+        1.1820068359375
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.128694087266922
+          ],
+          "KL": [
+            0.06406155228614807
+          ],
+          "top1": [
+            0.4375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.007017962634563446
+          ],
+          "KL": [
+            0.06580622494220734
+          ],
+          "top1": [
+            0.4375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 19,
+      "test": 1,
+      "tokens": 1024,
+      "temperature": [
+        1.1820068359375
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.18249782919883728
+          ],
+          "KL": [
+            0.07870712876319885
+          ],
+          "top1": [
+            0.15625
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.07901989668607712
+          ],
+          "KL": [
+            0.07824599742889404
+          ],
+          "top1": [
+            0.15625
+          ]
+        }
+      ]
+    },
+    {
+      "group": 19,
+      "test": 2,
+      "tokens": 512,
+      "temperature": [
+        1.1820068359375
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.16249513626098633
+          ],
+          "KL": [
+            0.07165982574224472
+          ],
+          "top1": [
+            0.34375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.04481255263090134
+          ],
+          "KL": [
+            0.07312347739934921
+          ],
+          "top1": [
+            0.34375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 19,
+      "test": 3,
+      "tokens": 256,
+      "temperature": [
+        1.1820068359375
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.174874946475029
+          ],
+          "KL": [
+            0.06025591865181923
+          ],
+          "top1": [
+            0.25
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.06622527539730072
+          ],
+          "KL": [
+            0.05762132257223129
+          ],
+          "top1": [
+            0.25
+          ]
+        }
+      ]
+    },
+    {
+      "group": 19,
+      "test": 4,
+      "tokens": 64,
+      "temperature": [
+        1.1820068359375
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.15798117220401764
+          ],
+          "KL": [
+            0.07152703404426575
+          ],
+          "top1": [
+            0.46875
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.0390390083193779
+          ],
+          "KL": [
+            0.07173404842615128
+          ],
+          "top1": [
+            0.46875
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "test": 0,
+      "tokens": 256,
+      "temperature": [
+        1.2369384765625,
+        1.1856689453125
+      ],
+      "proposal_active": [
+        true,
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.005585444625467062,
+            0.006514563225209713
+          ],
+          "KL": [
+            0.0031697191298007965,
+            0.0029662875458598137
+          ],
+          "top1": [
+            0.0625,
+            0.4375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.0021289559081196785,
+            0.002311933320015669
+          ],
+          "KL": [
+            0.003554753726348281,
+            0.003049338236451149
+          ],
+          "top1": [
+            0.0625,
+            0.4375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "test": 1,
+      "tokens": 1024,
+      "temperature": [
+        1.2369384765625,
+        1.1856689453125
+      ],
+      "proposal_active": [
+        true,
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.00966345239430666,
+            0.006745867896825075
+          ],
+          "KL": [
+            0.0032352798152714968,
+            0.002993583446368575
+          ],
+          "top1": [
+            0.125,
+            0.1875
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.003466468071565032,
+            0.0038169058971107006
+          ],
+          "KL": [
+            0.0031159333884716034,
+            0.003003191202878952
+          ],
+          "top1": [
+            0.125,
+            0.1875
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "test": 2,
+      "tokens": 512,
+      "temperature": [
+        1.2369384765625,
+        1.1856689453125
+      ],
+      "proposal_active": [
+        true,
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.007518109865486622,
+            0.007136896718293428
+          ],
+          "KL": [
+            0.0031212838366627693,
+            0.003010381944477558
+          ],
+          "top1": [
+            0.375,
+            0.1875
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.0016163530526682734,
+            0.003641552058979869
+          ],
+          "KL": [
+            0.003200467908754945,
+            0.003010994754731655
+          ],
+          "top1": [
+            0.375,
+            0.1875
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "test": 3,
+      "tokens": 128,
+      "temperature": [
+        1.2369384765625,
+        1.1856689453125
+      ],
+      "proposal_active": [
+        true,
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.007784847170114517,
+            0.007932211272418499
+          ],
+          "KL": [
+            0.0031061989720910788,
+            0.0029301373288035393
+          ],
+          "top1": [
+            0.5,
+            0.375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.000409161759307608,
+            0.004480130970478058
+          ],
+          "KL": [
+            0.0032997201196849346,
+            0.002843721304088831
+          ],
+          "top1": [
+            0.5,
+            0.375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "test": 4,
+      "tokens": 64,
+      "temperature": [
+        1.2369384765625,
+        1.1856689453125
+      ],
+      "proposal_active": [
+        true,
+        true
+      ],
+      "final_selected": false,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.009525040164589882,
+            0.008200681768357754
+          ],
+          "KL": [
+            0.0031532144639641047,
+            0.002668211702257395
+          ],
+          "top1": [
+            0.4375,
+            0.375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.0015589819522574544,
+            0.0042091854847967625
+          ],
+          "KL": [
+            0.0031711787451058626,
+            0.002547838957980275
+          ],
+          "top1": [
+            0.4375,
+            0.375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "test": 0,
+      "tokens": 128,
+      "temperature": [
+        1.2332763671875
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": true,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.1499587744474411
+          ],
+          "KL": [
+            0.07238101959228516
+          ],
+          "top1": [
+            0.3125
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.0018329500453546643
+          ],
+          "KL": [
+            0.07525999844074249
+          ],
+          "top1": [
+            0.3125
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "test": 1,
+      "tokens": 1024,
+      "temperature": [
+        1.2332763671875
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": true,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.24094954133033752
+          ],
+          "KL": [
+            0.07478731125593185
+          ],
+          "top1": [
+            0.34375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.06340962648391724
+          ],
+          "KL": [
+            0.07293546199798584
+          ],
+          "top1": [
+            0.34375
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "test": 2,
+      "tokens": 256,
+      "temperature": [
+        1.2332763671875
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": true,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.12585078179836273
+          ],
+          "KL": [
+            0.06358426809310913
+          ],
+          "top1": [
+            0.3125
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.03848554939031601
+          ],
+          "KL": [
+            0.06810436397790909
+          ],
+          "top1": [
+            0.3125
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "test": 3,
+      "tokens": 64,
+      "temperature": [
+        1.2332763671875
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": true,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.1352081298828125
+          ],
+          "KL": [
+            0.06891623139381409
+          ],
+          "top1": [
+            0.25
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.022898538038134575
+          ],
+          "KL": [
+            0.07282418012619019
+          ],
+          "top1": [
+            0.25
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "test": 4,
+      "tokens": 512,
+      "temperature": [
+        1.2332763671875
+      ],
+      "proposal_active": [
+        true
+      ],
+      "final_selected": true,
+      "metrics": [
+        {
+          "concentration_log_error": [
+            0.15468278527259827
+          ],
+          "KL": [
+            0.06570462882518768
+          ],
+          "top1": [
+            0.34375
+          ]
+        },
+        {
+          "concentration_log_error": [
+            0.007565418723970652
+          ],
+          "KL": [
+            0.06686834990978241
+          ],
+          "top1": [
+            0.34375
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "Selected systematic/known diagnostic groups; parent vs calibrated proposal, not an online forecast. Real test Q/K are used only by this diagnostic."
+}

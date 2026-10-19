@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "checks": 35,
+  "sha256": "76555bc45b95ac7825ebf307e6599ac9898f0ce93f056245743a0c1ca0653927",
+  "changed_symbols": [
+    "_kt_guard",
+    "hif4_dynamic_quantize_k",
+    "_ts_quant",
+    "_ts_guard",
+    "hif4_dynamic_quantize_k"
+  ],
+  "source_security_audit": true,
+  "short_state_and_params_equal": true,
+  "independent_modules": true,
+  "inputs_rng_unchanged": true,
+  "long_calibration": [
+    {
+      "group": 14,
+      "rows": 8192,
+      "kt": {
+        "accepted": 1,
+        "error": false,
+        "guard_rows": 32,
+        "minimum_gain": 0.01,
+        "modes": [
+          {
+            "mode": 4,
+            "ratios": [
+              0.7061790227890015
+            ],
+            "accepted": 1
+          }
+        ],
+        "chosen": [
+          4
+        ]
+      },
+      "ts": {
+        "accepted": 0,
+        "error": false,
+        "ratio": [
+          1.0286450386047363
+        ]
+      }
+    },
+    {
+      "group": 48,
+      "rows": 8192,
+      "kt": {
+        "accepted": 0,
+        "error": false,
+        "guard_rows": 32,
+        "minimum_gain": 0.01,
+        "modes": [
+          {
+            "mode": 4,
+            "ratios": [
+              0.9286823868751526
+            ],
+            "accepted": 0
+          }
+        ],
+        "chosen": [
+          0
+        ]
+      },
+      "ts": {
+        "accepted": 1,
+        "error": false,
+        "ratio": [
+          0.9224711060523987
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "row_permute",
+      "head_dim": 256,
+      "shared_parent_seconds": 8.957180124998558,
+      "parent_v_layers": {
+        "vm": 2,
+        "vr": 2
+      },
+      "versions": {
+        "400": {
+          "scores": [
+            0.9167901983890268,
+            0.9362788924392502,
+            0.9453802586985757,
+            0.9455392299041309,
+            0.9183824960261723
+          ],
+          "seconds_including_instrumentation": 1.2985847080126405,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        },
+        "409": {
+          "scores": [
+            0.4971512971023268,
+            0.8348577173582086,
+            0.7355235202253707,
+            0.8413092502140987,
+            0.8357155820647303
+          ],
+          "seconds_including_instrumentation": 1.3297879580059089,
+          "checks": 15,
+          "changed_v_values": 22397,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2
+          }
+        },
+        "410": {
+          "scores": [
+            0.9208866519547357,
+            0.9320886426421988,
+            0.9399067707860607,
+            0.9404886451704195,
+            0.9180142218160411
+          ],
+          "seconds_including_instrumentation": 1.100588500034064,
+          "checks": 15,
+          "changed_v_values": 14737,
+          "v_values": 1015808,
+          "v_layers": {
+            "vr": 2
+          }
+        },
+        "411": {
+          "scores": [
+            0.9167901983890268,
+            0.9362788924392502,
+            0.9453802586985757,
+            0.9455392299041309,
+            0.9183824960261723
+          ],
+          "seconds_including_instrumentation": 1.1513674169545993,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 10,
+      "mode": "block_resample",
+      "head_dim": 256,
+      "shared_parent_seconds": 4.5930525829899125,
+      "parent_v_layers": {
+        "vm": 2,
+        "vr": 2
+      },
+      "versions": {
+        "400": {
+          "scores": [
+            0.9153992522254019,
+            0.9333450367260123,
+            0.9378943190344977,
+            0.9496316618094126,
+            0.9119734644150372
+          ],
+          "seconds_including_instrumentation": 2.5123316250392236,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        },
+        "409": {
+          "scores": [
+            0.4935819869839155,
+            0.8328967373040222,
+            0.7329613342169498,
+            0.8390825722891121,
+            0.8343031029350623
+          ],
+          "seconds_including_instrumentation": 3.1460568749462254,
+          "checks": 15,
+          "changed_v_values": 21813,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2
+          }
+        },
+        "410": {
+          "scores": [
+            0.9127061471695642,
+            0.9332333203998076,
+            0.9347498455807515,
+            0.9392507515993219,
+            0.9119734644150372
+          ],
+          "seconds_including_instrumentation": 2.890395709022414,
+          "checks": 15,
+          "changed_v_values": 14711,
+          "v_values": 1015808,
+          "v_layers": {
+            "vr": 2
+          }
+        },
+        "411": {
+          "scores": [
+            0.9153992522254019,
+            0.9333450367260123,
+            0.9378943190344977,
+            0.9496316618094126,
+            0.9119734644150372
+          ],
+          "seconds_including_instrumentation": 2.3351553339743987,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 1015808,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "row_permute",
+      "head_dim": 512,
+      "shared_parent_seconds": 4.704603667021729,
+      "parent_v_layers": {
+        "vr": 1
+      },
+      "versions": {
+        "400": {
+          "scores": [
+            0.48091458527653025,
+            0.5096605620652401,
+            0.5203594403744269,
+            0.5012346147870669,
+            0.4925585205379681
+          ],
+          "seconds_including_instrumentation": 1.9073310000239871,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vr": 1
+          }
+        },
+        "409": {
+          "scores": [
+            0.3555289497605634,
+            0.40728985373222826,
+            0.4805035891710393,
+            0.43991023494277476,
+            0.3536527558757505
+          ],
+          "seconds_including_instrumentation": 1.8645804590196349,
+          "checks": 15,
+          "changed_v_values": 82311,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "410": {
+          "scores": [
+            0.48091458527653025,
+            0.5096605620652401,
+            0.5203594403744269,
+            0.5012346147870669,
+            0.4925585205379681
+          ],
+          "seconds_including_instrumentation": 2.079279791971203,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vr": 1
+          }
+        },
+        "411": {
+          "scores": [
+            0.48091458527653025,
+            0.5096605620652401,
+            0.5203594403744269,
+            0.5012346147870669,
+            0.4925585205379681
+          ],
+          "seconds_including_instrumentation": 4.758612749981694,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vr": 1
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 11,
+      "mode": "block_resample",
+      "head_dim": 512,
+      "shared_parent_seconds": 6.163447875005659,
+      "parent_v_layers": {},
+      "versions": {
+        "400": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 3.684834250016138,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "409": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 2.3297594159957953,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "410": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 1.9360973329748958,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "411": {
+          "scores": [
+            0.26525526380875225,
+            0.34131360960855295,
+            0.42649510485338277,
+            0.38358807045406157,
+            0.27790269638145915
+          ],
+          "seconds_including_instrumentation": 1.9544485840015113,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "row_permute",
+      "head_dim": 256,
+      "shared_parent_seconds": 18.837616749980953,
+      "parent_v_layers": {
+        "vm": 2,
+        "vr": 2
+      },
+      "versions": {
+        "400": {
+          "scores": [
+            0.8621054064754782,
+            0.8141215653064262,
+            0.7675013168064869,
+            0.5211681131754266,
+            0.12280238194979248
+          ],
+          "seconds_including_instrumentation": 1.3391899170237593,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        },
+        "409": {
+          "scores": [
+            0.780169624020477,
+            0.7229388662683235,
+            0.6143289735770923,
+            0.24456869520858412,
+            -0.2114152006093411
+          ],
+          "seconds_including_instrumentation": 1.3099542090203613,
+          "checks": 15,
+          "changed_v_values": 40407,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2
+          }
+        },
+        "410": {
+          "scores": [
+            0.8525506827329362,
+            0.7937832376894741,
+            0.7450739833345779,
+            0.5032511348782613,
+            0.09942152228486037
+          ],
+          "seconds_including_instrumentation": 1.2500513339764439,
+          "checks": 15,
+          "changed_v_values": 22217,
+          "v_values": 2031616,
+          "v_layers": {
+            "vr": 2
+          }
+        },
+        "411": {
+          "scores": [
+            0.8621054064754782,
+            0.8141215653064262,
+            0.7675013168064869,
+            0.5211681131754266,
+            0.12280238194979248
+          ],
+          "seconds_including_instrumentation": 1.3715152500080876,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "mode": "block_resample",
+      "head_dim": 256,
+      "shared_parent_seconds": 8.559322750021238,
+      "parent_v_layers": {
+        "vm": 2,
+        "vr": 2
+      },
+      "versions": {
+        "400": {
+          "scores": [
+            0.9281489012029314,
+            0.9183115554011632,
+            0.9133033465552141,
+            0.8479559624625724,
+            0.7949978081848926
+          ],
+          "seconds_including_instrumentation": 1.3757545829867013,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        },
+        "409": {
+          "scores": [
+            0.8414930701730305,
+            0.8235185585965547,
+            0.7468789163641207,
+            0.5229197400191681,
+            0.38564009717016395
+          ],
+          "seconds_including_instrumentation": 1.54232220799895,
+          "checks": 15,
+          "changed_v_values": 46797,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2
+          }
+        },
+        "410": {
+          "scores": [
+            0.923455421248276,
+            0.9125227378161048,
+            0.900388407461298,
+            0.8358530324061029,
+            0.7795787696513335
+          ],
+          "seconds_including_instrumentation": 1.495221416989807,
+          "checks": 15,
+          "changed_v_values": 20983,
+          "v_values": 2031616,
+          "v_layers": {
+            "vr": 2
+          }
+        },
+        "411": {
+          "scores": [
+            0.9281489012029314,
+            0.9183115554011632,
+            0.9133033465552141,
+            0.8479559624625724,
+            0.7949978081848926
+          ],
+          "seconds_including_instrumentation": 1.7918217499973252,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {
+            "vm": 2,
+            "vr": 2
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "row_permute",
+      "head_dim": 512,
+      "shared_parent_seconds": 8.729142167023383,
+      "parent_v_layers": {},
+      "versions": {
+        "400": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 1.8512137500219978,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "409": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 1.7338370000361465,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "410": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 1.754497917019762,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "411": {
+          "scores": [
+            -46.870299315622795,
+            -49.064069608510636,
+            -37.43118658661074,
+            -35.93313830830826,
+            -32.72917448446396
+          ],
+          "seconds_including_instrumentation": 1.7619066249462776,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "mode": "block_resample",
+      "head_dim": 512,
+      "shared_parent_seconds": 8.318761957983952,
+      "parent_v_layers": {},
+      "versions": {
+        "400": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 1.7984262079698965,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "409": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 2.1272390419617295,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "410": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 2.16601195797557,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        },
+        "411": {
+          "scores": [
+            -1.3306591919722455,
+            -1.0986058406384582,
+            -1.3056806655817155,
+            -1.4667673491135331,
+            -1.770033165881159
+          ],
+          "seconds_including_instrumentation": 1.718872666999232,
+          "checks": 15,
+          "changed_v_values": 0,
+          "v_values": 2031616,
+          "v_layers": {}
+        }
+      }
+    }
+  ],
+  "warning": "Unknown judge decoy source; modes are sensitivity hypotheses. Shared parent avoids repeated numerical baseline drift. Timings are local, not online forecasts.",
+  "hashes": {
+    "400": "c7b0106870460e2c56d84a8bd35d8dd90753f3069fea08464407dd7123093f41",
+    "409": "456d249e9ba069ce09490feb86fd327f8f0e53348ff67a10b355d94eb735dc40",
+    "410": "1cbaeef6548a4b7a3d8e99901c4d71030d53a7698b259b162ce2c30812803e1f",
+    "411": "b30f8f5f1dda511fa1ab92250372d873b9da2f096b87672b75e3213697b77dc2"
+  }
+}

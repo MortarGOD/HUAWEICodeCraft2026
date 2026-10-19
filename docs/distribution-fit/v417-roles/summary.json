@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "atom": "trace35-group9-row_permute",
+      "off_parent_mse_exact": true,
+      "quality": {
+        "parent412": 0.26892853711192044,
+        "native417": 0.2622966622000512,
+        "q_only417": -15.190253044949916,
+        "k_only417": -13.720309762258413,
+        "off417": 0.26892853711192044
+      }
+    },
+    {
+      "atom": "trace25-group40-row_permute",
+      "off_parent_mse_exact": true,
+      "quality": {
+        "parent412": 0.43639880195545244,
+        "native417": 0.05070189891037328,
+        "q_only417": -183.23656334006392,
+        "k_only417": -170.82391459964555,
+        "off417": 0.43639880195545244
+      }
+    }
+  ],
+  "limits": "Role ablations are not isolated quantization effects because one-sided transforms may alter unquantized logits. No online magnitude estimate."
+}

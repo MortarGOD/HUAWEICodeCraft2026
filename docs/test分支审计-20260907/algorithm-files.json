@@ -1,0 +1,1489 @@
+[
+  {
+    "ast_sha256": "1a5960e2444e8b90a4293d548a36d23b0f0b32b9e263e598badf3105302d6582",
+    "locations": [
+      {
+        "branch": "base3.07",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base3.07",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "base_1.7",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/attention-fisher-objective",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-fisher-objective",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/attention-learned-rotation",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-learned-rotation",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/block-hessian-objective",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--block-hessian-objective",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/joint-output-optimization",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--joint-output-optimization",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/linear-residual-fit-v2",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--linear-residual-fit-v2",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/non-rrs-paper-baselines",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--non-rrs-paper-baselines",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/output-aware-rounding",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--output-aware-rounding",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/paper-solution-suite",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--paper-solution-suite",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/pca-hadamard-attention",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--pca-hadamard-attention",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/qwen-channel-balance",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--qwen-channel-balance",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/smoothrot-19k",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-19k",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/smoothrot-32k",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/smoothrot-32k-v2",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k-v2",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/soar-hif4",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--soar-hif4",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "feature/hif4-solution",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/feature--hif4-solution",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      },
+      {
+        "branch": "main",
+        "path": "examples/baseline_solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/main",
+        "sha256": "47f00a6d9fdfa5a9053cfcda2283121e3211d5262a073d10a60a166868089c74"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b",
+    "locations": [
+      {
+        "branch": "base3.07",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base3.07",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "base3.07",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base3.07",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "base3.07",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base3.07",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "base_1.7",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "base_1.7",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-fisher-objective",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-fisher-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-fisher-objective",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-fisher-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-fisher-objective",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-fisher-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-learned-rotation",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-learned-rotation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-learned-rotation",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-learned-rotation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/attention-learned-rotation",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--attention-learned-rotation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/block-hessian-objective",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--block-hessian-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/block-hessian-objective",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--block-hessian-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/block-hessian-objective",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--block-hessian-objective",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/joint-output-optimization",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--joint-output-optimization",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/joint-output-optimization",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--joint-output-optimization",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/joint-output-optimization",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--joint-output-optimization",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/linear-residual-fit-v2",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--linear-residual-fit-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/linear-residual-fit-v2",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--linear-residual-fit-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/linear-residual-fit-v2",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--linear-residual-fit-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/non-rrs-paper-baselines",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--non-rrs-paper-baselines",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/non-rrs-paper-baselines",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--non-rrs-paper-baselines",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/non-rrs-paper-baselines",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--non-rrs-paper-baselines",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/output-aware-rounding",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--output-aware-rounding",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/output-aware-rounding",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--output-aware-rounding",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/output-aware-rounding",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--output-aware-rounding",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/paper-solution-suite",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--paper-solution-suite",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/paper-solution-suite",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--paper-solution-suite",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/paper-solution-suite",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--paper-solution-suite",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/pca-hadamard-attention",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--pca-hadamard-attention",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/pca-hadamard-attention",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--pca-hadamard-attention",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/pca-hadamard-attention",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--pca-hadamard-attention",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/qwen-channel-balance",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--qwen-channel-balance",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/qwen-channel-balance",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--qwen-channel-balance",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/qwen-channel-balance",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--qwen-channel-balance",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-19k",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-19k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-19k",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-19k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-19k",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-19k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k-v2",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k-v2",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/smoothrot-32k-v2",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--smoothrot-32k-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/soar-hif4",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--soar-hif4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/soar-hif4",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--soar-hif4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/soar-hif4",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--soar-hif4",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "feature/hif4-solution",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/feature--hif4-solution",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "feature/hif4-solution",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/feature--hif4-solution",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "feature/hif4-solution",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/feature--hif4-solution",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "main",
+        "path": "legal-solutions/tensor-recon-baseline-v1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/main",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "main",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/main",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      },
+      {
+        "branch": "main",
+        "path": "_archives/legal-solutions/zips/legal-rht-adaptive-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/main",
+        "sha256": "fba7dbaac16d0a80a5cb0479c2a6b5f8ee919b7a43a6e6a7878ddde2d25f5b8b"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "8c07a5fce4c1dd8a7693cf990f9c2df988ef4404fe204aea84ea7e354f69cfb3",
+    "locations": [
+      {
+        "branch": "base_1.7",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "3eefa057de8bc2d86c19b76b40ead53ecc3655cab67224059dbd1c69890b6726"
+      },
+      {
+        "branch": "base_1.7",
+        "path": "_archives/solution/submission-attention-compensated-v2.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "0800ef8754b61911603a7dcda2e23fc85ed8a68c62e858931fd8557d9cdeab0f"
+      },
+      {
+        "branch": "base_1.7",
+        "path": "_archives/solution/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "0800ef8754b61911603a7dcda2e23fc85ed8a68c62e858931fd8557d9cdeab0f"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "a912ae2494b7b74594392ede47974a98de63e2dbc746f8353a896565765e6061",
+    "locations": [
+      {
+        "branch": "base_1.7",
+        "path": "_archives/solution/submission-attention-joint-v1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/base_1.7",
+        "sha256": "f3ab44e6b77ea4897e43359ff0c13a4ec77073a6dd2cd0dd690aca44f8a9f970"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "64dd674ccf4fde105a1e385890a66c37182d7733ca0630f491c392f088b3c9c6",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "paper-solutions/attention-calhessian-linear-inputonly-safe/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "1baa046dcd792cc92777d25c3f6fa038c63e2bf6ffb6b09a8b5d83a89ca4d607"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission-aonly-v4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "4213027b6749e2b828bab6a5c91c914a528c86939118183bab93ee2bb37cf806"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission-aonly-v4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "4213027b6749e2b828bab6a5c91c914a528c86939118183bab93ee2bb37cf806"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission-aonly-v4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "4213027b6749e2b828bab6a5c91c914a528c86939118183bab93ee2bb37cf806"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "e0c791252b093f8cf1cedf590e5254928352a1a865a5cb74af987ad9abeb2fa7",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v4",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v4",
+        "sha256": "7ec5e2998df9bf2a5cbdc404a5506173cf192e50b857220251cc1f2d0e6b6fcb"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "7ec5e2998df9bf2a5cbdc404a5506173cf192e50b857220251cc1f2d0e6b6fcb"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "paper-solutions/attention-calhessian-linear-inputonly-safe/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "edef3fe82da7d8cab67f9a8604653119d096316f88b789da03196a9b0abc5a46"
+      },
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "7ec5e2998df9bf2a5cbdc404a5506173cf192e50b857220251cc1f2d0e6b6fcb"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "7ec5e2998df9bf2a5cbdc404a5506173cf192e50b857220251cc1f2d0e6b6fcb"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c700ce9c0faa5635fb03ef03f7f98475372c3eb53c8393403ddc8e5a27e10f82",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "paper-solutions/attention-calhessian-linear-inputonly-safe/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "b7f746599e939a16ff932e6d813b01428343633a635460d8d426dc72cf1bed9d"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission-v5.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "887ff7ec908c4da199248703c447ffe6631116424334c72afe03d6ac9a33f514"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/attention-calhessian-linear-inputonly-safe/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "b7f746599e939a16ff932e6d813b01428343633a635460d8d426dc72cf1bed9d"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/paper-solutions/attention-calhessian-linear-inputonly-safe/submission-v5.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "887ff7ec908c4da199248703c447ffe6631116424334c72afe03d6ac9a33f514"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "0e3cd9aac2706ef68be40e8579a48a45ac864149c33aec03ed8cd45c1a613c23",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "paper-solutions/attention-quotient-givens-linear-inputonly-safe/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "44c976ede4d97a92c450c2ca4dab908e06ba19e2a6cc5af78b5ef41ab858d038"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/paper-solutions/attention-quotient-givens-linear-inputonly-safe/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "ad564c76c0a52d72a50629970325731ac8fa08cc90bed670e4c892c1ecad2135"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "d529e269ee9918ee0660f0b69522e0d7131b43eb75c37f02e44f39f56f5890b9",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/runtime_backend.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "8b0086c1c1c4233f5fb4885bfd8ee9494a92d352f76779e444fa678c5e3b3bc8"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/runtime_backend.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "8b0086c1c1c4233f5fb4885bfd8ee9494a92d352f76779e444fa678c5e3b3bc8"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/runtime_backend.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "8b0086c1c1c4233f5fb4885bfd8ee9494a92d352f76779e444fa678c5e3b3bc8"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-runtime170-ood-guard.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "373decd160f734f37b867c95df72a7c51108d027d6c20e1b8092f77003da5550"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "e352481303ce6d4aba128f8b297a3cd7df0670129370dbb8ac84ad5a7a9b1583",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "b6a4610c4a5490b8814832e0c522ed4dfc98dca8b094eeba4c5e9373f1367e21"
+      },
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "_archives/paper-solutions/runtime170-logitbasis-headadaptive-36k/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "05bf2c8ce4adbed22a2761507644861057a1b20dbca63283e369441a66d0b120"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "b6a4610c4a5490b8814832e0c522ed4dfc98dca8b094eeba4c5e9373f1367e21"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/paper-solutions/runtime170-logitbasis-headadaptive-36k/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "05bf2c8ce4adbed22a2761507644861057a1b20dbca63283e369441a66d0b120"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c9e22b1c92fc9c05404c48419547577e9fec6b5ba6a5478dd8451480034fcb0f",
+    "locations": [
+      {
+        "branch": "experiment/legal-inputisolated-v5",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/solution_multifile.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-inputisolated-v5",
+        "sha256": "778a3866587f8af07e856242684a0bf2d2714cc447e4f8a5ac5cae97fdd49ade"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-36k/solution_multifile.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "778a3866587f8af07e856242684a0bf2d2714cc447e4f8a5ac5cae97fdd49ade"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "287209de5c37ce9dd8c8dd64f0ec23a5c2501f53a42063d677c64713552a6793",
+    "locations": [
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "legal-solutions/legal-tensor-recon-v2/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "144eae003c3b243955fffddf70531480db1680a7ab51a37ce1fb079755ea1061"
+      },
+      {
+        "branch": "experiment/legal-tensor-recon-v2",
+        "path": "_archives/legal-solutions/zips/legal-aonly-smooth-rht-v2-1024.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--legal-tensor-recon-v2",
+        "sha256": "144eae003c3b243955fffddf70531480db1680a7ab51a37ce1fb079755ea1061"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "af89c4cc7095a12d03b2ff1b7921e8c2e3e26f315fc6c3bd5437db984d6e2f8a",
+    "locations": [
+      {
+        "branch": "experiment/new-paper-implementation",
+        "path": "_archives/paper-solutions/target20-attention-affinefit-safe/submission-attention-quotient-givens.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--new-paper-implementation",
+        "sha256": "2094accea15b76048df665b6937b8d4b14244f3d07ef8fcde2605f62213a1576"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "b576c13f6d3d8700923035230e228b85b88e136e365db20ed89f63b63717eefe",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "5727e415daef74b12ab9020b0eda500d6a34923d9a8fb6b67ca158543569d96c"
+      },
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "_archives/paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "eedb5f6a889418f952580a242a98cd3e3b9527c9d24ec99a240563d2f8eed20d"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "9a71a988bd3dab1d3221f52476059130e526ced4edb2ea607f1a75580dcc730e",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/solution_multifile.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "08076fd27b8c6cfe8e53083ddaa41a78eff7f60e190fb604cfc823a913dd9e50"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "83d176219a1c9384f5b8b11fe0559fc2b69f57859e6a17e7cab48dc73c062be3",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-headadaptive-v2",
+        "path": "paper-solutions/runtime170-logitbasis-headadaptive-v2-36k/strong_attention_backend.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-headadaptive-v2",
+        "sha256": "d879fb6f757e13473463b2a2b5bdcc73c7501457b8d0bcf38e1a8aa3cd702789"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-unrestricted-attention-psot2-mincal2-kexact16-vhigh3-vectorized-vpostpair-fast-vexact4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d879fb6f757e13473463b2a2b5bdcc73c7501457b8d0bcf38e1a8aa3cd702789"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/combo-unrestricted-attention-psot2-mincal2-kexact16-vhigh3-vectorized-vpostpair-fast-vexact4/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "f1d05f3d7140f7f95a3ef1e9c2900eab92667462b2cb92695aad5e9ef99d93b1"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "e2f265e640fac564dd3a0fd5feb496007f92a53889993a75d7eb4f280a87f0cc",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/awq-fast/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a6cced0903c1c8aa4cf3b2809f1d14d0d3ddb134296b6fa484da7bfa31a70a79"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/awq-fast.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "acc3ed55adcf836e9244c56dccf9280bc86b382f371f9d7b91737fd2fa981844"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c6595934fcbbd4d830e5ca972c22b1c9e6a96d7363d3397d03795be35b310a4b",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-cross-adaptive/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "17c011595a2d0fcf863dc811071f3bb4e2b0b198d383fda448f67dc7ec71a8e8"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-cross-adaptive.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "24042183e5fabb705b33d41bdc9c2197bf305ba6a098ba33e9de27f311d5659c"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "adb1bf808a493602279d82c50cddec8a380e624e8bb155963bd44620a4550445",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-cross-refine20/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "3a22ed3c8fa25828490668041af9f283b23fdd0bd6ffd626df57f36ffd9102aa"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-cross-refine20.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a5774ad2589824f48b30882f9ecb86230a87d697b3c152417c41226ed7234d21"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "289114fe0e3b8c198e1ac4c62cbf120a8967d8dd4c098645260ebc197e7a2e34",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-cross-refine4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "77622d8064655248c52626748db90b779019b556a9f2b3cf327ccfecd612d4d8"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-cross-refine4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "26b9c9af0e642371b23543c88bd4df3534edc5f4a24cff4402b29769cca07a3e"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "2642274a7ba71cc728360ba8673f1124e051b7a8fbb98bf9d9d4f4f6096d69c0",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-100/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "5a260abe3ddda2b1bbcf375252c9ceaee596127344122c6ac366153856d5607b"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-100.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "71652dff0af55585ec61e4993ba1e717cc24084c8047abc9129c69318e66ccc6"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "6aa7779894835fb372356d5b5a8a7da27a393f5938669c1d1a6aece0848f31a8",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-refine4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "71e2da1832cb4ce08773b4b7cfd533ec54334a1aff77e19c768509fa7ddf0f53"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-refine4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "cfe6c3a19d0b164e503cdb45317984b99bda4a947d6d5654ae921ca10c586505"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "e31c7078f45381e1c4a6303ce19e5f8eedd0bc1f75bded65f9f759ecd5f12359",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-target-group128/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "f17adc3959536d99f38753f133ed154c7ff0efe80a34a471251ef82e3bc1f6d4"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-target-group128.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "679f36206a1cfe569622bc5edfd33f1ab0e042e8e53dd3ee29cff2b0389292a8"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "37d4ad6e52c84ab1116f8a78fbaf7c2fde01e1ad25d6dfb7186e5660ca5b4661",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-target-refine20/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "bec986d936b0a6ccd5e0056e338ccffe24d9a8b86e59200e3d809002d56bd208"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-target-refine20.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "00a2981fdc3f855298f509d564dae595629c6681a806a85b42d420e83983109f"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "491cdb5f7e0533b5e0a0df6975a7375f54e060c551d93c039e016fd672f507df",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-target0-group96-batch8-scalar1024/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a093b18d53ad5259be38731723e2f290687b12751bb1976f0155fc4caf855713"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-target0-group96-batch8-scalar1024.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "ea23f3ba042e783e6cdcaa5d529214230f2d6762d9bc21423d0d1debbb402a87"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "df3478cba38ee51b00cba741fe513e3e25a366d1874f6cbbc41993ad5ed130cc",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-target8-group132-fast/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "42aaea48ffce22dbfef6107923251f12093d5d874d2fe762d7d6c2ae75fc3e1d"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-target8-group132-fast.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "dcd3d44f6d1187efc33531b557bf1b78b64627d1c4561ff194355aa429962ef0"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "84e6dbe77776a26c24aa7f77e63ea8ba80715a738a9c040aad9b3fdf5e18187d",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-projection-target8-group136-batch4-scalar512/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "2712be28490344846ca6c49fd9b1249e80c59bdaa5228ff965ab3cc52f56bb45"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-projection-target8-group136-batch4-scalar512.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d51d49f2d7894d91557d1d232ae4fea51e340953e074f120a56e63db17eca765"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "5011ae65811c0a6ee869c4328ba5737325c1cea40289a11d2cb42836b024e5a9",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-runtime-khessian-efficient/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a1319650038af15e20b65414185e7aef77a031b1df11cb0286f8f7a8c2f1acb3"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-runtime-khessian-efficient.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "e19b8713b217419811a6282f99a95aab3df42549ef6206836bad542821a9f343"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "450e12288faa7730c3a1e6978560a20ee9a26c23d77d6ae4865a363c85f37d23",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-runtime160-fixed-attn4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "115666cd4d9e1677ad34a319c12b4102ae6c48171069ee18fc6fcd6e3cc5b152"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-runtime160-fixed-attn4.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "38d668e02e5770ed6bd2f97e6aec5eb2740bb3d1f084db661958423640328d3f"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "a3a5973ad41e43faeb8330d30931a1ddc76226d7ab5f694c281ea639a3b8e727",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-runtime160-online-state-factor-fp16/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "f4a3382a27ac25d8f60bfe31f5a5ab8d3fe400b7fb1f77d34ad7c6b573984fcd"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/combo-runtime160-online-state-factor-fp16.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "5363d209e41580850632fa4c7a0fbeb004bdf35b807a74eeffb630f851c2bc82"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "dc3982309ad35d013614c2b94ca4a34f670a9cd01908fe16488844ca9cc8cbd0",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-runtime170-ood-guard/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a75522d671fc6b0b24ad77b20469fd7abc81345e6428d6b9c397836894d0b25d"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "394cfe1cc28496acf85906afa2ceb4f974b1056b3840658ccbb2e0fcc69331d3",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-unrestricted-attention-kexact16-vhigh3-vexact4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "f00fa42f486dcdb2e672649b61f28643c1c1c812e87b48c7809afabaff0e9fa2"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/combo-unrestricted-attention-kexact16-vhigh3-vexact4/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "bd59c489f359271a0a17a4324c15744cdef4cef74b800414a7597aa314cfd1b9"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "5f5a46aefce3194e8ed8118cb6df8800768bdc0df88d5f02ca4d9df3e5eb486a",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-unrestricted-attention-kexact4-vexact4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "95d79fca6fa4abe605896138b88512ecfc91de54eeae1c41d0e44e8095a296ac"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/combo-unrestricted-attention-kexact4-vexact4/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "e28a3157466a8c7954a3b15419a1b0c88580ac266738bc96a7c9493b621629f4"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "11e889a905c80bf8fc11eb88cc5fc00f6ae2443c0129f6dedd052d231bb3ed95",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/combo-unrestricted-attention-vexact4/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "1b52b3e8920780ed777533b6d3d58fb41863128c0721c7bbdabda6a45113d845"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/combo-unrestricted-attention-vexact4/submission.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "8dfec0e73d10919bd9dc11472decffdc9bc4b1ff94d6307670d469f5079985e9"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c4a7e7077c0b33eff4f9838314d7303aa911038cd052d336a3b1f16e60ab10fb",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/focus-dgs/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "593eb7cd6de32c23c3e976a84d269c6e179ed9c7e81fcc917dc5a10f8fe34e0b"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/focus-dgs.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "c8c796086f4cb264302ffc0cbcc55b12a5ad1edc093d9484386bb204289b9655"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "85cf51e811c41e5a435bf4897d73ff02b7a420fc4f08982614ab3e9ad6797e1f",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/infoquant-fit-weight-fast/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "fb630ced5204d224f166a3033dfbf2872752b76bd5e8348a88ff361c53c107f6"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/infoquant-fit-weight-fast.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "90da6fc7831365ab85a61827913f460a116d90ec313f1fcdfb44e3d642c4c811"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "71309a9a20d6c35b68d61ebe2971b3fac34237a253a6c5d0daf8d4af78d21379",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/infoquant-per-layer-alpha/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "5ece1a4f9595866a82c7de76b75f3814a298f1acca7873938925362aee1b407f"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/infoquant-per-layer-alpha.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "5c8b8376f84116360acb2987b00890c044129175a9e8a638b5ecd95d12a21d8e"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "f01cb233cc4b1e5aeef99c58be49a0546261b37fe9b52bd7d7e90871250f8de4",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/infoquant-rank1/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "1eb9d8ecc2e0c7b8e30e8ec20e2c238a2077928d432bd0ab52ac6f04968606aa"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/infoquant-rank1.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "16cc18f76c9505fcd81a74e42f2f442ed3c336b37c1511794e4b3f2c21ccc4d0"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c54196cd151a8dbed509fe148eb15bf824e8a8cd47043d50ef4425f14165809d",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/infoquant-rank2/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "f36e5404c8358fe4f79c19812cadcc517e75c73add1c9778d629351b387b9f2b"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/infoquant-rank2.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d05dd7deb14ca4f526d9394e475b417cb5b35a57c456fe1f194cbb342082fc81"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "5e96ec333b725b576d67c425b2b7b35db7bc292453955cc66c56877be9b26263",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/let/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "99dab596ad1f28972a18d31b09ed59e538907579d1d7ef84aa949a393f0b5704"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/let.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "1a65787645158f4b0443c7f784ff11a513f4d4fc13db6fa4499ee4c7cc6083a0"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "a5d24e581bc98b0d322979b7430309bffb1d8695b915270c36c7cd99b8f0f677",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/qqq-fast/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "65c06f5d4bac1aae2e593b0a61f104b2c2c6e814c6b213ecb9a3ef10b57f7606"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/qqq-fast.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "8d8cb9b7d46995545e73c6cdbf4c37154a26f1b3203023199f2a45eb7b66bf81"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "859308becd3c1f03358298fae4bba381d9b1e922d0babc087c22ceaad11612c9",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rht/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d743fb98478725c51eb6c7dc9c59e0fcb134594c67cc0da3a60f9626db9fa539"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rht.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "c15657e4bdf583cb7d49bba70068a5fa90409f67197cc6848a96d7e3d7e1a940"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "71dd190f02a176155065121d267ebd1b413cf1ecf7247add3f6b47f2695453e5",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rrs-fast-fp16/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "3140ce9bc5d52a9e65d84601d82460ab50cde5c10ccb10b5a0cfc0201ec8723e"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rrs-fast-fp16.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "0a59481ee008bd7b48d9551728cec54fadcb7254ee2a79f2c6a029bd518b994a"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "dbc773e0b1073570dea5221ef9c79c4174862ecf0fb3b978e8aebb5c3797c013",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rrs-fast/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "50461d489431a1a3b039094827552133e656e2df3a2b1a6f08fb11bae9f470b0"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rrs-fast.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d7770443e02a8ed003ba722cd9243a9885e76ba78f88536005d710c2cb4dcf9b"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "0a9d811f1c1ec8f6815fe7926278089a792dd60b516eb1e66151acbc8a8a3fa3",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rrs-let/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "37d494a00da7ffd37a8a2a4db1cf0caca04480e990b25b340e52c9283fa37602"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rrs-let.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "70a69d788844d4a37e5cefc9cb59b63bcbcbe7c2b148b6526de259bb76fcf152"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "eb8f223ccc39a0973c5aa6f87bd3f4313ce634946a46c01fcff98d27eba70a1e",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rrs-lite/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "bbca0d6ff7c08db2faa0275ef432cfb6431e75a574264399fbd907aaa55f061f"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rrs-lite.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "d5f052025e91dc7e43216fce23df0212f27a2c91ba3d4c5fe22b4747adcbc78b"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "e6f3fd486d4139b4c07efe9e76ee836a4f1050f2928774f4cf9e812cb11857c3",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/rrs/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "171a739de85d1db81865037a414d5f30cf515720567f79ed7f3aa111ccd1a26a"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/rrs.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "38879436b6f34f3e13e2fa57df0bd0ef01941b875a8a988ad08349845e9a1c24"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "6c719d27d202b82471ee89874e60238d7092ccebead213d3b12eb475c1d7d3fc",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "paper-solutions/spin-lwc/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "c6bdf144d072d18672ae74b08a02601ce64be8661d8675f1a6201706c4513dc3"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/spin-lwc.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "fc513dd1685566f2fb9499e8b3f70c8191f92f33c683803f076acdcc18146cae"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "solution/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "c9bd68b97fd18ff7778745d4c532707b84f6907188af372d87750e42d4764fff"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/paper-solutions/zips/baseline-block-hessian.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "701ee875747cfe8905114551f29bd320e3400bc01c55c954e096da9dd74c8c4a"
+      },
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/solution.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "701ee875747cfe8905114551f29bd320e3400bc01c55c954e096da9dd74c8c4a"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_001_score_8972.133354277346.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "16348bad885a6d4ea8103062f7043b6a66e93b0ff028b07c5844f43d73749f82"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "3f63335adff9b1a91a83e155377348dc89de1d935e9a1d88132ec4bb8aef2257",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_002_score_9545.285635925295.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "6dc31738ddcccb141a8efe2284205f83b8eeaec2d73de12bd8d305d85a94396e"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "a5154cce2ba0d4f12d7700eb0bcbe3c7fe260e940fb99ed2e760d1043b1373d2",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_003_score_9545.285635925295.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "a604ef88a14fe47c616ddd6e21057e895417fcff04d7ccac866dcdafe155f4c7"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "da357100bcb0a2b5f1ac003473d47b0ed92ae55be09e0148ea879077646bded5",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_004_score_9545.285635925295.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "aec3ccd8edaa8bd208a981d503ce078b0ab320ecf955346460c530545be28311"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "b15f38d2863004a0aec77c937959d65f3c476e96b36f99909ebfb6ea9f6ca267",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_005_score_9731.699839527024.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "616d593f84d27fe21a231e216856f7000498d3700d4d802bbdfc5c8ebbd5f55f"
+      }
+    ]
+  },
+  {
+    "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f",
+    "locations": [
+      {
+        "branch": "experiment/unrestricted-highscore-v1",
+        "path": "_archives/auto-commit/data/archive/trial_006_score_9731.699839527024.zip/solution.py",
+        "snapshot": "docs/papers/hif4-public-references/test-branch-snapshots-20260907/experiment--unrestricted-highscore-v1",
+        "sha256": "8ec0988ed03488db391536396d28f6603b474940bcfbd2b001c3319ff84862a0"
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "certificate_columns": 470,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    315,
+    316,
+    319,
+    320,
+    322,
+    330,
+    343,
+    345,
+    365,
+    378,
+    381,
+    382,
+    387,
+    388,
+    392,
+    393,
+    399,
+    400,
+    401,
+    403,
+    404,
+    409,
+    412,
+    413,
+    418,
+    419,
+    435,
+    436,
+    438
+  ],
+  "cases": [
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 2,
+      "tokens": 8,
+      "price": 363.2102298240957,
+      "required_lower_bound": 305.056816691099,
+      "margin": 58.15341313299666
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 0,
+      "tokens": 8,
+      "price": 12.73396347434711,
+      "required_lower_bound": 305.056816691099,
+      "margin": -292.3228532167519
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 4,
+      "tokens": 8,
+      "price": 4.011154863998859,
+      "required_lower_bound": 305.056816691099,
+      "margin": -301.04566182710016
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 3,
+      "tokens": 8,
+      "price": -261.29283743110415,
+      "required_lower_bound": 305.056816691099,
+      "margin": -566.3496541222032
+    },
+    {
+      "population": "round007/trace35-group7-gain1.25",
+      "test": 1,
+      "tokens": 8,
+      "price": -461.81118199448207,
+      "required_lower_bound": 305.056816691099,
+      "margin": -766.8679986855811
+    }
+  ],
+  "action": "Promoted to full 102-version measurements; screen has advanced to scale 2.0, avoiding duplicate cells.",
+  "limits": "Breaks one certificate only; joint feasibility is not established."
+}

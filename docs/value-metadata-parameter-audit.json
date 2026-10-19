@@ -1,0 +1,69 @@
+{
+  "group": 7,
+  "dataset": "local_fitted_models_covariance_v1",
+  "variance": 8,
+  "cap": 1.1,
+  "cases": [
+    {
+      "rows": 1,
+      "changed": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 0,
+        "mant": 0
+      },
+      "changed_effective_steps": 0,
+      "max_channel_mse_ratio": 1.0
+    },
+    {
+      "rows": 10,
+      "changed": {
+        "scale_factor": 0,
+        "scale_lv2": 0,
+        "scale_lv3": 0,
+        "sign": 6,
+        "mant": 48
+      },
+      "changed_effective_steps": 0,
+      "max_channel_mse_ratio": 1.0507246255874634
+    },
+    {
+      "rows": 128,
+      "changed": {
+        "scale_factor": 21,
+        "scale_lv2": 51,
+        "scale_lv3": 53,
+        "sign": 50,
+        "mant": 796
+      },
+      "changed_effective_steps": 1176,
+      "max_channel_mse_ratio": 1.0894157886505127
+    },
+    {
+      "rows": 512,
+      "changed": {
+        "scale_factor": 54,
+        "scale_lv2": 105,
+        "scale_lv3": 142,
+        "sign": 122,
+        "mant": 1969
+      },
+      "changed_effective_steps": 3456,
+      "max_channel_mse_ratio": 1.079546570777893
+    },
+    {
+      "rows": 1024,
+      "changed": {
+        "scale_factor": 56,
+        "scale_lv2": 107,
+        "scale_lv3": 172,
+        "sign": 148,
+        "mant": 2132
+      },
+      "changed_effective_steps": 3584,
+      "max_channel_mse_ratio": 1.057174563407898
+    }
+  ],
+  "warning": "Checks parameter changes, not an isolated online attribution."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 648,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "patch_summary": "Widen the dynamic HiF4 scale grid to keep only the legal E6M2 multipliers: fills in the two legal candidates (1,1.5) and (1,1.75) that CAND_GRID omitted: 8 candidates instead of 6, so only 1.33x the candidate cost.",
+  "source_sha256": "d225b3f24cda0fe4de2d621dd0c2857e280a13c4b2c3b69c77ad848dc34534a9",
+  "archive_sha256": "7902fe293030aba69e008cd8bbb6392cd28f379612b217b20bc68a1ee2eb50ce",
+  "archive_members": [
+    "solution.py"
+  ]
+}

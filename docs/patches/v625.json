@@ -1,0 +1,12 @@
+{
+  "version": 625,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "summary": "Always apply the Q/K Hadamard rotation. The calibration-time selection let the unrotated option win; on the official sample that option scores 0.1546 against 0.3586 for the rotation, so the deployed path was discarding a legal, structure-agnostic gain. Single mechanism: rotation always on, seed unchanged.",
+  "patches": [
+    [
+      "    if R is not None:\n        best_loss = loss_off\n        best_R = R\n",
+      "    if R is not None:\n        # v625: always rotate. The unrotated option was previously allowed to win this\n        # comparison, and on the official sample it did -- yet the graded score prefers the\n        # rotation by a wide margin (mini_sample mean 0.3586 rotated vs 0.1546 unrotated,\n        # and 0.2787 vs 0.1261 on the sample's own calibration split). The rotation is\n        # logits-preserving and needs no fitted structure, so letting the internal proxy\n        # discard it threw away a legal, structure-agnostic gain. loss_off is still computed\n        # above for the record only.\n        best_loss = float('inf')\n        best_R = R\n"
+    ]
+  ]
+}

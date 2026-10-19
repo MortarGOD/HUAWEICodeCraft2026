@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "records": {
+    "scope": {
+      "qk_and_linear_preserved": true,
+      "unmarked_v_preserved": true,
+      "input_rng_unchanged": true
+    },
+    "two_levels": {
+      "rows": [
+        {
+          "seed": 431,
+          "risk": [
+            [
+              75.24428729665837,
+              83.49823248192212
+            ],
+            [
+              66.930402844241,
+              83.49823248192212
+            ],
+            [
+              58.576874039941416,
+              83.49823248192212
+            ]
+          ],
+          "probability_calls": 1,
+          "fine_changed_values": 55
+        },
+        {
+          "seed": 432,
+          "risk": [
+            [
+              85.00569402825457,
+              87.6022985026112
+            ],
+            [
+              75.07108145467927,
+              87.6022985026112
+            ],
+            [
+              67.18042356440924,
+              87.6022985026112
+            ]
+          ],
+          "probability_calls": 1,
+          "fine_changed_values": 47
+        },
+        {
+          "seed": 433,
+          "risk": [
+            [
+              82.3865388586108,
+              91.86451861675107
+            ],
+            [
+              69.63234680555138,
+              91.86451861675107
+            ],
+            [
+              59.87021884793712,
+              91.86451861675107
+            ]
+          ],
+          "probability_calls": 1,
+          "fine_changed_values": 55
+        },
+        {
+          "seed": 434,
+          "risk": [
+            [
+              81.63619704376018,
+              84.26580337589729
+            ],
+            [
+              75.39709523645831,
+              84.26580337589729
+            ],
+            [
+              68.15246518899755,
+              84.26580337589729
+            ]
+          ],
+          "probability_calls": 1,
+          "fine_changed_values": 58
+        }
+      ],
+      "original_cap_at_both_stages": true,
+      "input_state_rng_unchanged": true
+    }
+  }
+}

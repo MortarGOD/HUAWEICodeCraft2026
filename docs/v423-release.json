@@ -1,0 +1,77 @@
+{
+  "version": 423,
+  "parent": 422,
+  "parent_online_result": {
+    "score": 21298,
+    "seconds": 257
+  },
+  "source": "solution/solution_v423.py",
+  "source_sha256": "d847b80494a04373065b0cb63805888c81be655da57ea1d9c4fd9241c9498f82",
+  "parent_sha256": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+  "archive": "solution/submission_v423.zip",
+  "archive_sha256": "ca630fbdbeef8e3a6fdc2d5b40847cceee93b63467cce25ee415128c41deef27",
+  "archive_members": [
+    "solution.py"
+  ],
+  "code_publish_commit": "77eecaa10d6eee61d7da48010deaf89ce9a61d6e",
+  "self_check": {
+    "interfaces": 6,
+    "format_passed": 22,
+    "format_failed": 0
+  },
+  "mechanism_tests": 9,
+  "online_status": "user reported same integer score as v422, slower single-run time; not inherited by v424",
+  "local_validation": {
+    "report": "docs/v423-report.md",
+    "results": {
+      "v423-linear-paired": {
+        "score_comparison": {
+          "parent": 37.66699625510222,
+          "candidate": 37.66809984954541,
+          "delta": 0.001103594443193856
+        },
+        "case_outcomes": {
+          "improved": 16,
+          "worsened": 0,
+          "equal_within_tolerance": 34,
+          "score_tolerance": 1e-12
+        },
+        "row_outcomes": {
+          "improved": 737,
+          "worsened": 0,
+          "equal_within_tolerance": 16013,
+          "strict_worsened": 0
+        },
+        "validation_checks": 220
+      },
+      "v423-linear-alternate": {
+        "score_comparison": {
+          "parent": 12.420766248110315,
+          "candidate": 12.422100763798575,
+          "delta": 0.0013345156882600406
+        },
+        "case_outcomes": {
+          "improved": 13,
+          "worsened": 0,
+          "equal_within_tolerance": 12,
+          "score_tolerance": 1e-12
+        },
+        "row_outcomes": {
+          "improved": 20,
+          "worsened": 0,
+          "equal_within_tolerance": 1155,
+          "strict_worsened": 0
+        },
+        "validation_checks": 110
+      }
+    },
+    "overhead_report": "docs/v423-search-overhead.json",
+    "disposition": "Both local banks showed small gains without row regressions, but user reported v423=21298/260: same integer score and 3 seconds slower than v422. Do not inherit v423 in v424; v422 remains parent."
+  },
+  "online_result": {
+    "score": 21298,
+    "seconds": 260,
+    "reported_on": "2026-09-07",
+    "comparison_to_v422": "same integer score, +3 seconds"
+  }
+}

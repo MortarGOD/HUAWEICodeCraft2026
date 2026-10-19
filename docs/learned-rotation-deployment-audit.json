@@ -1,0 +1,42 @@
+{
+  "group": 5,
+  "records": [
+    {
+      "sample": "fit",
+      "rows": 1024,
+      "full_numpy_branch": false,
+      "subset_numpy_branch": true,
+      "different_quantized_values": 0,
+      "quantized_max_error": 0.0,
+      "continuous_logit_relative_mse": 2.9636332992723224e-13
+    },
+    {
+      "sample": "hold",
+      "rows": 2048,
+      "full_numpy_branch": false,
+      "subset_numpy_branch": true,
+      "different_quantized_values": 0,
+      "quantized_max_error": 0.0,
+      "continuous_logit_relative_mse": 3.13630387936345e-13
+    },
+    {
+      "sample": "test_short",
+      "rows": 128,
+      "full_numpy_branch": true,
+      "subset_numpy_branch": true,
+      "different_quantized_values": 0,
+      "quantized_max_error": 0.0,
+      "continuous_logit_relative_mse": 2.845473964958878e-13
+    },
+    {
+      "sample": "test_long",
+      "rows": 2048,
+      "full_numpy_branch": false,
+      "subset_numpy_branch": true,
+      "different_quantized_values": 0,
+      "quantized_max_error": 0.0,
+      "continuous_logit_relative_mse": 3.1128187050546985e-13
+    }
+  ],
+  "warning": "Selected-group numerical audit only; does not prove every shape/backend is bit-exact."
+}

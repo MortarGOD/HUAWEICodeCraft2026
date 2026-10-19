@@ -1,0 +1,238 @@
+{
+  "complete": true,
+  "frontier": false,
+  "stable_joint": true,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "rows": [
+    {
+      "group": 0,
+      "variants": {
+        "base": {
+          "scores": [
+            0.9447490534324507,
+            0.9534791623094634,
+            0.950413671478476,
+            0.9333121941660414,
+            0.9187357483851305
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 1.5068660559336422e-06
+          },
+          "calibration_seconds": 3.804113124962896
+        },
+        "auxiliary": {
+          "scores": [
+            0.9422256755031395,
+            0.9540798320089553,
+            0.9530470195775321,
+            0.9333244969846866,
+            0.9204943726592121
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 1.5068660559336422e-06
+          },
+          "calibration_seconds": 4.652416125056334
+        }
+      },
+      "delta": 0.002481566961963111
+    },
+    {
+      "group": 6,
+      "variants": {
+        "base": {
+          "scores": [
+            0.12184906731450879,
+            0.20757654069019277,
+            0.43602836090896513,
+            0.6851593068019767,
+            0.8879062482592659
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.007236341945827007
+          },
+          "calibration_seconds": 3.8756924589979462
+        },
+        "auxiliary": {
+          "scores": [
+            0.12184901126504535,
+            0.20757553451652297,
+            0.43602737926944735,
+            0.6851586504837852,
+            0.8879069027389392
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.007236341945827007
+          },
+          "calibration_seconds": 2.290795208013151
+        }
+      },
+      "delta": -2.0457011693508775e-06
+    },
+    {
+      "group": 14,
+      "variants": {
+        "base": {
+          "scores": [
+            0.09619425528475818,
+            0.16475316221739233,
+            0.2495638428676172,
+            0.3150466562071148,
+            0.4596664199924689
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.00415952131152153
+          },
+          "calibration_seconds": 2.6484603749704547
+        },
+        "auxiliary": {
+          "scores": [
+            0.09653932864083324,
+            0.16508776821376542,
+            0.24897616820883645,
+            0.31474429480772403,
+            0.4613335499753968
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.00415952131152153
+          },
+          "calibration_seconds": 2.6893979590386152
+        }
+      },
+      "delta": 0.0014567732772043929
+    },
+    {
+      "group": 20,
+      "variants": {
+        "base": {
+          "scores": [
+            0.16673176930023925,
+            0.14757375123705108,
+            0.23532591414062354,
+            0.34859164154785444,
+            0.43512987769347344
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.004188284277915955
+          },
+          "calibration_seconds": 2.7984042079770006
+        },
+        "auxiliary": {
+          "scores": [
+            0.1676455397880778,
+            0.14741232385494338,
+            0.2359520755373296,
+            0.34792154081423327,
+            0.4360963054266739
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.004188284277915955
+          },
+          "calibration_seconds": 2.6699595829704776
+        }
+      },
+      "delta": 0.0016748315020163052
+    },
+    {
+      "group": 21,
+      "variants": {
+        "base": {
+          "scores": [
+            0.1394841629843364,
+            0.18998588694382887,
+            0.2557346804612432,
+            0.3535950790627088,
+            0.43979888974610337
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.004648127593100071
+          },
+          "calibration_seconds": 2.5986375409993343
+        },
+        "auxiliary": {
+          "scores": [
+            0.13949127646011442,
+            0.18993064043077254,
+            0.2556980328058066,
+            0.35354552423673213,
+            0.4397397378755457
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.004648127593100071
+          },
+          "calibration_seconds": 2.5311321670305915
+        }
+      },
+      "delta": -0.00019348738924929165
+    },
+    {
+      "group": 49,
+      "variants": {
+        "base": {
+          "scores": [
+            0.6891787589432776,
+            0.6607089935491609,
+            0.6574633747419436,
+            0.6382693136210819,
+            0.6148557885032547
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.3316253423690796
+          },
+          "calibration_seconds": 1.8662018330069259
+        },
+        "auxiliary": {
+          "scores": [
+            0.6946419205263767,
+            0.6625184471621354,
+            0.6648439512880806,
+            0.643167806472843,
+            0.6182156212089713
+          ],
+          "joint_debug": {
+            "balance_heads": 1,
+            "kernel_heads": 0,
+            "error": false,
+            "hold_base": 0.3316253423690796
+          },
+          "calibration_seconds": 1.9449183749966323
+        }
+      },
+      "delta": 0.0229115172996881
+    }
+  ],
+  "delta": 0.028329155950453266,
+  "warning": "Frontier uses only original held-out costs; auxiliary variant uses an in-training sample. Modeled activations; no online forecast."
+}

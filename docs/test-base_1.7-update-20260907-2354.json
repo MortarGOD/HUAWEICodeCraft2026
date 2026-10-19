@@ -1,0 +1,126 @@
+{
+  "old": "c09ab6f2f1a5b0fef97d2957b95f12dd21deb4cd",
+  "new": "d759c10b926b72dee7ddc98214dc17f7e37d2c53",
+  "changed_top_level_bindings": [
+    "_ATTENTION_VALUE_GRAM_MAX_WORK",
+    "_ATTENTION_VALUE_REGRESSION_MAX_WORK",
+    "_attention_value_features",
+    "_attention_value_risk_probabilities",
+    "_calibrate_attention_head_quantization",
+    "_calibrate_attention_value_risk",
+    "_fit_attention_value_risk",
+    "_refine_attention_head_codes",
+    "_refine_attention_head_quantization",
+    "_refine_attention_value_risk",
+    "_refine_attention_value_risk_codes",
+    "hif4_calibration_attention",
+    "hif4_dynamic_quantize_v"
+  ],
+  "linear_reachable_names": [
+    "_BASE_RADIUS",
+    "_ENHANCED_RADIUS",
+    "_IMPORTANCE_MAX",
+    "_IMPORTANCE_MIN",
+    "_LINEAR_COMPENSATION_MAX_OUTPUT",
+    "_LINEAR_DENSE_STATE_MAX_ELEMENTS",
+    "_LINEAR_HADAMARD_SIZE",
+    "_LINEAR_OUTPUT_COORDINATES",
+    "_LINEAR_OUTPUT_EXACT_ROUNDS",
+    "_LINEAR_OUTPUT_LARGE_COORDINATES",
+    "_LINEAR_OUTPUT_LARGE_ROUNDS",
+    "_LINEAR_OUTPUT_LARGE_SELECTED",
+    "_LINEAR_OUTPUT_PACK_BLOCK",
+    "_LINEAR_OUTPUT_PCA_BLOCK",
+    "_LINEAR_OUTPUT_PCA_MIN_SELECTED",
+    "_LINEAR_OUTPUT_PCA_ROUNDS",
+    "_LINEAR_OUTPUT_PCA_SELECTED",
+    "_LINEAR_OUTPUT_SKETCH_MAX_ELEMENTS",
+    "_LINEAR_OUTPUT_SKETCH_ROUNDS",
+    "_LINEAR_OUTPUT_SKETCH_WORK_ELEMENTS",
+    "_LINEAR_OUTPUT_WIDE_COORDINATES",
+    "_LINEAR_SMOOTH_ALPHA",
+    "_LINEAR_SMOOTH_CENTER_WIDTH",
+    "_LINEAR_SMOOTH_LOG2_LIMIT",
+    "_MANTISSA_MAX",
+    "_MANTISSA_STEP",
+    "_MAX_SCALE_FACTOR",
+    "_MIN_SCALE_FACTOR",
+    "_PSOT_MAX_RANK",
+    "_STABILITY_STANDARD_DEVIATIONS",
+    "_SWITCH_MEAN_GAIN",
+    "_SWITCH_WORST_GAIN",
+    "_apply_linear_family",
+    "_apply_reflectors",
+    "_block_second_moment",
+    "_dequantize_src",
+    "_dequantize_tgt",
+    "_e6m2_candidates",
+    "_expand_importance",
+    "_finalize_candidate",
+    "_fwht",
+    "_linear_auxiliary_state",
+    "_linear_channel_stability",
+    "_linear_output",
+    "_linear_output_state",
+    "_linear_smooth_balance",
+    "_mse",
+    "_normalize_importance",
+    "_peak_suppression_reflectors",
+    "_prepare_block_quadratic",
+    "_quadratic_block_error",
+    "_quantize_hierarchical",
+    "_quantize_hierarchical_multi",
+    "_quantize_multiplier",
+    "_reduce_quartet_error",
+    "_refine_block_mantissa",
+    "_refine_linear_activation_output",
+    "_refine_linear_activation_output_exact",
+    "_relative_gains",
+    "_select_at_scale",
+    "_select_candidate",
+    "_stability_threshold",
+    "_unpack_linear_output_weights",
+    "_update_best_candidate",
+    "hif4_calibration_and_quantize_weight",
+    "hif4_dynamic_quantize_activation"
+  ],
+  "linear_reachable_changed": [],
+  "source_sha256": "c0c8d3f6f7430dbf7d41e12e3ef87f4dc081f893737092d072062e06e185185e",
+  "packages": {
+    "submission.zip": {
+      "sha256": "d4cc8eae88fef150b80ba273f41a4e70869bf19ef6c67e6524aad541d512f734",
+      "entry_sha256": "1b0803e8405f4c5ecae13d330f2d88adc38f313bc8d38f09ffee4c3a34bcc509",
+      "normalized_identical": true
+    },
+    "submission-attention-value-risk-v7.zip": {
+      "sha256": "d4cc8eae88fef150b80ba273f41a4e70869bf19ef6c67e6524aad541d512f734",
+      "entry_sha256": "1b0803e8405f4c5ecae13d330f2d88adc38f313bc8d38f09ffee4c3a34bcc509",
+      "normalized_identical": true
+    }
+  },
+  "v419_reproduction": {
+    "reference_sha256": "abfd6cf0024c8489f444c7db5050830de9f9df2374dd7feb9564ec05e14e7212",
+    "local_sha256": "abfd6cf0024c8489f444c7db5050830de9f9df2374dd7feb9564ec05e14e7212",
+    "normalized_identical": true
+  },
+  "final_public_definitions": {
+    "hif4_calibration_and_quantize_weight": [
+      1122
+    ],
+    "hif4_dynamic_quantize_activation": [
+      1999
+    ],
+    "hif4_calibration_attention": [
+      2525
+    ],
+    "hif4_dynamic_quantize_q": [
+      4091
+    ],
+    "hif4_dynamic_quantize_k": [
+      4275
+    ],
+    "hif4_dynamic_quantize_v": [
+      5504
+    ]
+  }
+}

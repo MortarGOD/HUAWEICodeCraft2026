@@ -1,0 +1,384 @@
+{
+  "completed": true,
+  "parent": 435,
+  "observations": [
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 2.8360445701869352e-05,
+      "rms_identity_residual": 1.0514583426842075e-06,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 1.05798771453669e-05,
+      "rms_identity_residual": 4.925818498852919e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 3.245767727415544e-05,
+      "rms_identity_residual": 1.1101664304564038e-06,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 2.2642022834418185e-05,
+      "rms_identity_residual": 4.5026151365103873e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 1.5705391872428515e-05,
+      "rms_identity_residual": 9.141690323057719e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 7.452341612778699e-06,
+      "rms_identity_residual": 9.103711153718134e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 4.485120766561934e-06,
+      "rms_identity_residual": 1.0590167580826033e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 9.71005619765375e-06,
+      "rms_identity_residual": 6.990676260460927e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 5.675965436768848e-06,
+      "rms_identity_residual": 7.424731673101018e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 5.860087592021332e-06,
+      "rms_identity_residual": 6.29205442494714e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 7.68782608973062e-06,
+      "rms_identity_residual": 2.9035176160844906e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 2.7628832675041792e-06,
+      "rms_identity_residual": 3.5669979427475814e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 5.767051772243015e-06,
+      "rms_identity_residual": 1.6357430811000333e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 2.9230347738939955e-06,
+      "rms_identity_residual": 4.290624128807933e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 4.37235235462019e-06,
+      "rms_identity_residual": 1.5930606236430495e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 1.1351332671289025e-05,
+      "rms_identity_residual": 9.642638943523535e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 3.7686929437669374e-06,
+      "rms_identity_residual": 3.6943092295843725e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 6.843224930415135e-06,
+      "rms_identity_residual": 5.7677114101182146e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 5.156074048162651e-06,
+      "rms_identity_residual": 3.471211446217358e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 7.11816474177181e-06,
+      "rms_identity_residual": 8.166994556942894e-08,
+      "factor_finite": true
+    }
+  ],
+  "raw_metric_observations": [
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "uses_carried_H": false,
+      "relative_recovery_difference": 1.9580005274401542e-07,
+      "recovered_minimum_eigenvalue": -8.011438761131644e-05,
+      "returned_minimum_eigenvalue": -9.561550028360869e-05
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "uses_carried_H": false,
+      "relative_recovery_difference": 2.91924786063435e-07,
+      "recovered_minimum_eigenvalue": -0.00023015296480588274,
+      "returned_minimum_eigenvalue": -0.0002970350908169026
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": false,
+      "relative_recovery_difference": 3.0513096603426893e-07,
+      "recovered_minimum_eigenvalue": 30.26604825487205,
+      "returned_minimum_eigenvalue": 30.266020829591973
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": true,
+      "relative_recovery_difference": 0.001592618627682543,
+      "recovered_minimum_eigenvalue": 162.01704446021213,
+      "returned_minimum_eigenvalue": 161.1919559707465
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": true,
+      "relative_recovery_difference": 0.0016723952948041706,
+      "recovered_minimum_eigenvalue": 8.031539368525694,
+      "returned_minimum_eigenvalue": 7.555144674306499
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": true,
+      "relative_recovery_difference": 0.0013403478624334365,
+      "recovered_minimum_eigenvalue": 625.5724371204128,
+      "returned_minimum_eigenvalue": 625.9142844097067
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": false,
+      "relative_recovery_difference": 3.078714260797023e-07,
+      "recovered_minimum_eigenvalue": 28.26627417545823,
+      "returned_minimum_eigenvalue": 28.266277491294584
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "uses_carried_H": true,
+      "relative_recovery_difference": 0.0015769891723042687,
+      "recovered_minimum_eigenvalue": 598.8344131916405,
+      "returned_minimum_eigenvalue": 599.5595003328433
+    }
+  ],
+  "none": 0,
+  "max_residual": 3.245767727415544e-05,
+  "over_001": 0,
+  "warning": "Instrumented read-only factor observation on this host. Residual threshold is diagnostic, not a proof of online numerical behavior. Returned factors and calibration outputs were not replaced."
+}

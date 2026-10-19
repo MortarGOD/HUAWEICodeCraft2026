@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "decode_checks": 66,
+  "states_and_decisions_exact": true,
+  "groups": [
+    {
+      "group": 0,
+      "guard_seconds": {
+        "old": 1.8359964170085732,
+        "new": 1.2264176669996232
+      },
+      "chosen": [
+        0,
+        4
+      ]
+    },
+    {
+      "group": 1,
+      "guard_seconds": {
+        "old": 0.8028917089977767,
+        "new": 0.8929007080150768
+      },
+      "chosen": [
+        4
+      ]
+    },
+    {
+      "group": 14,
+      "guard_seconds": {
+        "old": 0.7410165000183042,
+        "new": 0.7249843750032596
+      },
+      "chosen": [
+        4
+      ]
+    },
+    {
+      "group": 19,
+      "guard_seconds": {
+        "old": 1.7906803750083782,
+        "new": 1.5737648330105003
+      },
+      "chosen": [
+        4
+      ]
+    },
+    {
+      "group": 47,
+      "guard_seconds": {
+        "old": 1.469846583000617,
+        "new": 0.8067735419899691
+      },
+      "chosen": [
+        4,
+        4
+      ]
+    },
+    {
+      "group": 49,
+      "guard_seconds": {
+        "old": 0.8831945839920081,
+        "new": 0.9571457080019172
+      },
+      "chosen": [
+        2
+      ]
+    }
+  ],
+  "warning": "Concurrent screening timing only; not the serial full-bank timing result."
+}

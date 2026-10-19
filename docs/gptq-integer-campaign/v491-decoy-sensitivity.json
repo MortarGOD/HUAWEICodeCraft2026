@@ -1,0 +1,208 @@
+{
+  "complete": true,
+  "group": 15,
+  "bank": "reference-history-v1",
+  "test_tokens": 8,
+  "warning": "Role-separated calibration confirmed by user; decoy sources UNKNOWN. Both corruption types below are only sensitivity hypotheses.",
+  "rows": [
+    {
+      "version": 441,
+      "mode": "row_permute",
+      "scores": [
+        0.20229366920556494
+      ],
+      "sum": 0.20229366920556494,
+      "calibration_seconds": 10.655692166998051,
+      "evaluate_seconds": 0.03797391592524946,
+      "format_checks": 3,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "temperature_gain",
+          "u"
+        ],
+        "k": [
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_mode",
+          "kt_probe",
+          "kvh",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "v435_content_parent"
+        ]
+      }
+    },
+    {
+      "version": 441,
+      "mode": "block_resample",
+      "scores": [
+        0.18885241964172408
+      ],
+      "sum": 0.18885241964172408,
+      "calibration_seconds": 9.194029291975312,
+      "evaluate_seconds": 0.029486791929230094,
+      "format_checks": 3,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_mode",
+          "kt_probe",
+          "kvh",
+          "rf",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "v435_content_parent"
+        ]
+      }
+    },
+    {
+      "version": 491,
+      "mode": "row_permute",
+      "scores": [
+        0.22794504746841548
+      ],
+      "sum": 0.22794504746841548,
+      "calibration_seconds": 8.600078832940198,
+      "evaluate_seconds": 0.05891441705171019,
+      "format_checks": 3,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gptq_dynamic_order",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "temperature_gain",
+          "u"
+        ],
+        "k": [
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_mode",
+          "kt_probe",
+          "kvh",
+          "quotient_gptq",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "concentration_logits",
+          "gptq_joint_metadata",
+          "token_gptq_beam",
+          "token_gptq_rho",
+          "v435_content_parent"
+        ]
+      }
+    },
+    {
+      "version": 491,
+      "mode": "block_resample",
+      "scores": [
+        0.23009542265039915
+      ],
+      "sum": 0.23009542265039915,
+      "calibration_seconds": 9.802789791952819,
+      "evaluate_seconds": 0.06988654099404812,
+      "format_checks": 3,
+      "debug": {
+        "q": {},
+        "k": {},
+        "v": {}
+      },
+      "state_keys": {
+        "q": [
+          "H",
+          "gptq_dynamic_order",
+          "gq",
+          "kvh",
+          "qs",
+          "rf",
+          "rot",
+          "rseed",
+          "temperature_gain",
+          "u"
+        ],
+        "k": [
+          "H",
+          "gq",
+          "ks",
+          "kt_active",
+          "kt_mode",
+          "kt_probe",
+          "kvh",
+          "quotient_gptq",
+          "rf",
+          "rot",
+          "rseed",
+          "ts_active",
+          "ts_fallback",
+          "ts_variant",
+          "u"
+        ],
+        "v": [
+          "concentration_logits",
+          "gptq_joint_metadata",
+          "token_gptq_beam",
+          "token_gptq_rho",
+          "v435_content_parent"
+        ]
+      }
+    }
+  ]
+}

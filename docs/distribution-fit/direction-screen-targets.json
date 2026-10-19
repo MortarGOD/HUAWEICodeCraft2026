@@ -1,0 +1,57 @@
+{
+  "stage": "direction_first",
+  "current_passed": 95,
+  "total": 98,
+  "required_versions": [
+    322,
+    363,
+    412,
+    413,
+    414
+  ],
+  "edges": [
+    {
+      "from": 322,
+      "research_parent": 324,
+      "to": 363,
+      "parent_attention_proxy": true,
+      "online_total_delta": 0.75,
+      "linear_delta": 0.0,
+      "target": 0.75,
+      "tolerance": 1.0,
+      "direction_required": false,
+      "predicted_attention_delta": -0.11620198229995775,
+      "predicted_total_delta": -0.11620198229995775,
+      "direction_passed": false
+    },
+    {
+      "from": 412,
+      "research_parent": 412,
+      "to": 413,
+      "parent_attention_proxy": false,
+      "online_total_delta": -57.0,
+      "linear_delta": 0.0,
+      "target": -57.0,
+      "tolerance": 8.549999999999999,
+      "direction_required": true,
+      "predicted_attention_delta": 0.10994204352685549,
+      "predicted_total_delta": 0.10994204352685549,
+      "direction_passed": false
+    },
+    {
+      "from": 412,
+      "research_parent": 412,
+      "to": 414,
+      "parent_attention_proxy": false,
+      "online_total_delta": 1.0,
+      "linear_delta": 0.0,
+      "target": 1.0,
+      "tolerance": 1.0,
+      "direction_required": false,
+      "predicted_attention_delta": -0.09478956762922186,
+      "predicted_total_delta": -0.09478956762922186,
+      "direction_passed": false
+    }
+  ],
+  "purpose": "Remaining direction constraints after full shared-mixture line search. Every proposed change still requires all 98 checks."
+}

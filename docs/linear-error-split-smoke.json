@@ -1,0 +1,850 @@
+{
+  "superseded_by": "linear-error-split-smoke-corrected.json",
+  "invalid_for_production_score_comparison": true,
+  "diagnostic_version": 1,
+  "version": 316,
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "complete": true,
+  "score_prediction_allowed": false,
+  "submission_hashes": {
+    "/Users/ee/Code/2026-huawei-alogorithm/solution/solution_v316.py": "4351f0cc8c11ef5718fa1102e43dbeac8f5dda565e814b6e7ad4a0d374e5fb8d",
+    "/Users/ee/Code/2026-huawei-alogorithm/solution/solution.py": "4351f0cc8c11ef5718fa1102e43dbeac8f5dda565e814b6e7ad4a0d374e5fb8d"
+  },
+  "groups": [
+    {
+      "index": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "geometry": {
+        "method": "svd",
+        "shape": [
+          2048,
+          512
+        ],
+        "rank": 512,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 7.1559000394379936e-12,
+        "full_output_rank": false,
+        "numerically_truncated": false,
+        "smallest_retained": 1.991081740490411,
+        "condition_retained": 7.90323685920287
+      },
+      "calibration_seconds": 0.8087014159827959,
+      "factor_seconds": 0.060383375006495044,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/full_attn.q_proj_gated/20262903",
+        "profile": "qwen3.6-35b-a3b:full_attn.q_proj_gated",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.self_attn.q_proj.weight"
+      },
+      "route": "exact_search",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 2.2811090895083725,
+        "normalized_error_sums": {
+          "official_current_mse": 2.7188909104916275,
+          "geometric_floor_mse": 1.1598934022408245,
+          "discrete_and_search_mse": 1.5589976251466697,
+          "teacher_bias_mse": 0.0013841701539744457,
+          "teacher_cross_mse": -0.001418251465522862,
+          "fp32_output_increment_mse": 0.0
+        },
+        "geometry_share_of_current_gap": 0.4266053477044776,
+        "continuous_raw_score_upper": 3.8401065977591755,
+        "max_orthogonality_relative": 1.8494455788203293e-16,
+        "max_decomposition_identity_error": 4.1941365778888715e-20,
+        "max_teacher_identity_error": 2.1705219273391446e-19
+      },
+      "case_ids": [
+        "0:0",
+        "0:1",
+        "0:2",
+        "0:3",
+        "0:4"
+      ]
+    },
+    {
+      "index": 1,
+      "shape": [
+        1024,
+        2048
+      ],
+      "geometry": {
+        "method": "disjoint_rows",
+        "shape": [
+          1024,
+          2048
+        ],
+        "rank": 1024,
+        "rank_rtol": 4.547473508864641e-13,
+        "rank_atol": 1.3649080239232024e-12,
+        "full_output_rank": true,
+        "numerically_truncated": false,
+        "smallest_retained": 0.5002440810494413,
+        "condition_retained": 6.0
+      },
+      "calibration_seconds": 0.011475292005343363,
+      "factor_seconds": 0.004897333012195304,
+      "provenance": {
+        "key": "linear/qwen3.6-35b-a3b/full_attn.o_proj/20262904",
+        "profile": "qwen3.6-35b-a3b:full_attn.o_proj",
+        "source_model": "Qwen/Qwen3.6-35B-A3B",
+        "source_revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+        "weight_source": "checkpoint",
+        "source_tensor": "model.language_model.layers.3.self_attn.o_proj.weight"
+      },
+      "route": "direct_output",
+      "summary": {
+        "cases": 5,
+        "scorable_cases": 5,
+        "raw_score_sum": 4.989315733065933,
+        "normalized_error_sums": {
+          "official_current_mse": 0.01068426693406755,
+          "geometric_floor_mse": 0.0,
+          "discrete_and_search_mse": 0.01068426691911219,
+          "teacher_bias_mse": 0.0,
+          "teacher_cross_mse": 0.0,
+          "fp32_output_increment_mse": 0.0
+        },
+        "geometry_share_of_current_gap": 0.0,
+        "continuous_raw_score_upper": 5.0,
+        "max_orthogonality_relative": 0.0,
+        "max_decomposition_identity_error": 0.0,
+        "max_teacher_identity_error": 0.0
+      },
+      "case_ids": [
+        "1:0",
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:4"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "shape": [
+        1,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0020642343442887068,
+      "official_current_mse": 0.0011692503467202187,
+      "dynamic_seconds": 0.03399595897644758,
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011692503447164881,
+      "geometric_floor_mse": 0.0004863655869073325,
+      "discrete_and_search_mse": 0.0006828847578091545,
+      "orthogonality_cross_mse": 1.0901314031162845e-18,
+      "geometric_identity_error": -5.929230630780102e-21,
+      "normal_equation_relative": 1.7683859350981738e-16,
+      "continuous_reconstruction_mse": 1.779882629477302e-30,
+      "teacher_bias_mse": 5.915122254868372e-07,
+      "fit_to_teacher_mse": 0.0011701103836608494,
+      "teacher_cross_mse": -1.4515511698482366e-06,
+      "teacher_identity_error": 1.1180834903756764e-19,
+      "actual_output_mse_double_reduction": 0.0011692503447164881,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 0.0011692503447164881,
+          "true_target_cd": 0.0011678408646247362,
+          "teacher_target_cd": 0.0011678408646247362,
+          "continuous_rtn": 0.001323617717753578
+        },
+        "best_retaining_parent_mse": 0.0011678408646247362,
+        "recoverable_witness_mse": 1.4094800917519024e-06,
+        "seconds": 0.0022937500034458935,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0020642343442887068
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "shape": [
+        10,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022743348963558674,
+      "official_current_mse": 0.0012460986617952585,
+      "dynamic_seconds": 0.05601795902475715,
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.001246098756725722,
+      "geometric_floor_mse": 0.0005385007769019035,
+      "discrete_and_search_mse": 0.0007075979798238187,
+      "orthogonality_cross_mse": -2.358139725155972e-19,
+      "geometric_identity_error": 1.8973538018496308e-20,
+      "normal_equation_relative": 1.8344786335975432e-16,
+      "continuous_reconstruction_mse": 2.518063619861227e-30,
+      "teacher_bias_mse": 6.479106449834664e-07,
+      "fit_to_teacher_mse": 0.0012449789442341933,
+      "teacher_cross_mse": 4.7190184654514057e-07,
+      "teacher_identity_error": 4.0234064994579266e-20,
+      "actual_output_mse_double_reduction": 0.001246098756725722,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 0.0012624606196156574,
+          "true_target_cd": 0.0012623644730946904,
+          "teacher_target_cd": 0.0012623808484144572,
+          "continuous_rtn": 0.0014342753913476614
+        },
+        "best_retaining_parent_mse": 0.0012623631470869423,
+        "recoverable_witness_mse": 9.747252871505907e-08,
+        "seconds": 0.004920959006994963,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0023154960945248604
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "shape": [
+        128,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022430766839534044,
+      "official_current_mse": 0.0012071131495758891,
+      "dynamic_seconds": 0.2482400840090122,
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0012071132125503203,
+      "geometric_floor_mse": 0.0005159166457151224,
+      "discrete_and_search_mse": 0.0006911965668351973,
+      "orthogonality_cross_mse": 6.475566881759126e-19,
+      "geometric_identity_error": 2.964615315390051e-21,
+      "normal_equation_relative": 1.8494455788203293e-16,
+      "continuous_reconstruction_mse": 2.4024878872793118e-30,
+      "teacher_bias_mse": 6.105898140392545e-07,
+      "fit_to_teacher_mse": 0.0012071684267780463,
+      "teacher_cross_mse": -6.658040417653718e-07,
+      "teacher_identity_error": 1.7364175418713157e-19,
+      "actual_output_mse_double_reduction": 0.0012071132125503203,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 0.0012722193540599669,
+          "true_target_cd": 0.0012721239425625974,
+          "teacher_target_cd": 0.0012721573830236643,
+          "continuous_rtn": 0.0014424521646221322
+        },
+        "best_retaining_parent_mse": 0.0012721239425625974,
+        "recoverable_witness_mse": 9.541149736946863e-08,
+        "seconds": 0.008737957978155464,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.002320646308362484
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "shape": [
+        512,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022240024991333485,
+      "official_current_mse": 0.001190104754641652,
+      "dynamic_seconds": 0.456770583987236,
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.0011901047783669958,
+      "geometric_floor_mse": 0.0005110742038190873,
+      "discrete_and_search_mse": 0.0006790305745479082,
+      "orthogonality_cross_mse": 3.6720201752454005e-19,
+      "geometric_identity_error": -4.1941365778888715e-20,
+      "normal_equation_relative": 1.802121746064988e-16,
+      "continuous_reconstruction_mse": 2.3614824156069227e-30,
+      "teacher_bias_mse": 6.033788503409308e-07,
+      "fit_to_teacher_mse": 0.0011902436434218693,
+      "teacher_cross_mse": -7.422439052145889e-07,
+      "teacher_identity_error": 2.1705219273391446e-19,
+      "actual_output_mse_double_reduction": 0.0011901047783669958,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 0.0011295359055785714,
+          "true_target_cd": 0.0011282226693716813,
+          "teacher_target_cd": 0.0011283133404743073,
+          "continuous_rtn": 0.0012898376640922415
+        },
+        "best_retaining_parent_mse": 0.0011281474814873182,
+        "recoverable_witness_mse": 1.388424091253171e-06,
+        "seconds": 0.008845500007737428,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0020158677361905575
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "shape": [
+        1024,
+        512
+      ],
+      "route": "exact_search",
+      "baseline_mse": 0.0022631718311458826,
+      "official_current_mse": 0.0012024074094370008,
+      "dynamic_seconds": 0.6290490420069546,
+      "internal_decoder_max_error": 0.0,
+      "teacher_audit": {
+        "route": "exact_search",
+        "extra_transformed_teacher": true,
+        "captured_vs_rebuilt_teacher_mse": 0.0,
+        "teacher_weight_dtype": "torch.bfloat16",
+        "transform_dtype": "torch.bfloat16"
+      },
+      "total_exact_decoder_mse": 0.001202407494042954,
+      "geometric_floor_mse": 0.0005153281697313257,
+      "discrete_and_search_mse": 0.0006870793243116285,
+      "orthogonality_cross_mse": -1.1006134358385565e-19,
+      "geometric_identity_error": 1.641126335305207e-21,
+      "normal_equation_relative": 1.797810480688409e-16,
+      "continuous_reconstruction_mse": 2.3728312723442753e-30,
+      "teacher_bias_mse": 6.093005092560927e-07,
+      "fit_to_teacher_mse": 0.0012024589985057238,
+      "teacher_cross_mse": -6.608049720259003e-07,
+      "teacher_identity_error": 2.9434394917086937e-20,
+      "actual_output_mse_double_reduction": 0.001202407494042954,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 0.001204062845609144,
+          "true_target_cd": 0.0012033945557385906,
+          "teacher_target_cd": 0.0012034747001203883,
+          "continuous_rtn": 0.0013780442650630498
+        },
+        "best_retaining_parent_mse": 0.0012033945557385906,
+        "recoverable_witness_mse": 6.682898705534512e-07,
+        "seconds": 0.006703208986436948,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0022592509631067514
+      }
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "shape": [
+        1,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.00841402355581522,
+      "official_current_mse": 1.6550249711144716e-05,
+      "dynamic_seconds": 0.0034884999913629144,
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.6550248290059244e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.6550248290059244e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 5.8308231791540166e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.6550248290059244e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.6550248290059244e-05,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 1,
+        "indices": [
+          0
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 1.6550248290059244e-05,
+          "true_target_cd": 1.6550248290059244e-05,
+          "teacher_target_cd": 1.6550248290059244e-05,
+          "continuous_rtn": 0.00340571591346972
+        },
+        "best_retaining_parent_mse": 1.6550248290059244e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.004729042004328221,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.00841402355581522
+      }
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "shape": [
+        10,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.006740775890648365,
+      "official_current_mse": 1.498069195804419e-05,
+      "dynamic_seconds": 0.020733959012432024,
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.4980691258870137e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.4980691258870137e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.579612285042797e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.4980691258870137e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.4980691258870137e-05,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 1.491942429510118e-05,
+          "true_target_cd": 1.491942429510118e-05,
+          "teacher_target_cd": 1.491942429510118e-05,
+          "continuous_rtn": 0.0029432281278927164
+        },
+        "best_retaining_parent_mse": 1.491942429510118e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.012264249991858378,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.006679844111204147
+      }
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "shape": [
+        128,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007030748762190342,
+      "official_current_mse": 1.5055113181006163e-05,
+      "dynamic_seconds": 0.0725594999967143,
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5055114208628595e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5055114208628595e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.998635244062617e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5055114208628595e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.5055114208628595e-05,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          18,
+          36,
+          54,
+          72,
+          90,
+          108,
+          127
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 1.4668622895896988e-05,
+          "true_target_cd": 1.4668622895896988e-05,
+          "teacher_target_cd": 1.4668622895896988e-05,
+          "continuous_rtn": 0.0029471573777066773
+        },
+        "best_retaining_parent_mse": 1.4668622895896988e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.015430625004228204,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007145436014980078
+      }
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.006907172501087189,
+      "official_current_mse": 1.5178567082330119e-05,
+      "dynamic_seconds": 0.3000535420142114,
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5178567959850398e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5178567959850398e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.9825811833762984e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5178567959850398e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.5178567959850398e-05,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          73,
+          146,
+          219,
+          292,
+          365,
+          438,
+          511
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 1.535859206569512e-05,
+          "true_target_cd": 1.535859206569512e-05,
+          "teacher_target_cd": 1.535859206569512e-05,
+          "continuous_rtn": 0.0029304554955986717
+        },
+        "best_retaining_parent_mse": 1.535859206569512e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011354542017215863,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.0066970521584153175
+      }
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "route": "direct_output",
+      "baseline_mse": 0.007010608911514282,
+      "official_current_mse": 1.5115236237761565e-05,
+      "dynamic_seconds": 0.4929562920005992,
+      "internal_decoder_max_error": null,
+      "teacher_audit": {
+        "route": "direct_output",
+        "extra_transformed_teacher": false
+      },
+      "total_exact_decoder_mse": 1.5115236128793175e-05,
+      "geometric_floor_mse": 0.0,
+      "discrete_and_search_mse": 1.5115236128793175e-05,
+      "orthogonality_cross_mse": 0.0,
+      "geometric_identity_error": 0.0,
+      "normal_equation_relative": 0.0,
+      "continuous_reconstruction_mse": 4.9676651021807916e-33,
+      "teacher_bias_mse": 0.0,
+      "fit_to_teacher_mse": 1.5115236128793175e-05,
+      "teacher_cross_mse": -0.0,
+      "teacher_identity_error": 0.0,
+      "actual_output_mse_double_reduction": 1.5115236128793175e-05,
+      "fp32_output_increment_mse": 0.0,
+      "fp32_output_difference_mse": 0.0,
+      "search_witness": {
+        "sample_rows": 8,
+        "indices": [
+          0,
+          146,
+          292,
+          438,
+          584,
+          730,
+          876,
+          1023
+        ],
+        "channel_budget": 8,
+        "true_mse": {
+          "parent": 1.564505695483831e-05,
+          "true_target_cd": 1.564505695483831e-05,
+          "teacher_target_cd": 1.564505695483831e-05,
+          "continuous_rtn": 0.003122026091049168
+        },
+        "best_retaining_parent_mse": 1.564505695483831e-05,
+        "recoverable_witness_mse": 0.0,
+        "seconds": 0.011675333982566372,
+        "scope": "Sampled rows only. No inference that remaining gap is search-recoverable.",
+        "baseline_sample_mse": 0.007338949479162693
+      }
+    }
+  ],
+  "validated_public_returns": 12,
+  "validated_probe_returns": 40,
+  "provenance": "Checkpoint tensors with modeled activations; reduced dimensions, not online data.",
+  "warnings": [
+    "Online confirmed Linear 9378/10000; remaining 622 is NOT distributed using these proxy proportions.",
+    "Geometry + in-space remainder is orthogonal accounting. Teacher terms are a separate identity.",
+    "In-space remainder includes irreducible discrete error, not just search inefficiency."
+  ],
+  "summary": {
+    "cases": 10,
+    "scorable_cases": 10,
+    "raw_score_sum": 7.270424822574305,
+    "normalized_error_sums": {
+      "official_current_mse": 2.729575177425695,
+      "geometric_floor_mse": 1.1598934022408245,
+      "discrete_and_search_mse": 1.5696818920657818,
+      "teacher_bias_mse": 0.0013841701539744457,
+      "teacher_cross_mse": -0.001418251465522862,
+      "fp32_output_increment_mse": 0.0
+    },
+    "geometry_share_of_current_gap": 0.4249355034561598,
+    "continuous_raw_score_upper": 8.840106597759176,
+    "max_orthogonality_relative": 1.8494455788203293e-16,
+    "max_decomposition_identity_error": 4.1941365778888715e-20,
+    "max_teacher_identity_error": 2.1705219273391446e-19
+  },
+  "production_unchanged": true,
+  "wall_seconds": 3.7824751250154804,
+  "by_route": {
+    "direct_output": {
+      "cases": 5,
+      "scorable_cases": 5,
+      "raw_score_sum": 4.989315733065933,
+      "normalized_error_sums": {
+        "official_current_mse": 0.01068426693406755,
+        "geometric_floor_mse": 0.0,
+        "discrete_and_search_mse": 0.01068426691911219,
+        "teacher_bias_mse": 0.0,
+        "teacher_cross_mse": 0.0,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.0,
+      "continuous_raw_score_upper": 5.0,
+      "max_orthogonality_relative": 0.0,
+      "max_decomposition_identity_error": 0.0,
+      "max_teacher_identity_error": 0.0
+    },
+    "exact_search": {
+      "cases": 5,
+      "scorable_cases": 5,
+      "raw_score_sum": 2.2811090895083725,
+      "normalized_error_sums": {
+        "official_current_mse": 2.7188909104916275,
+        "geometric_floor_mse": 1.1598934022408245,
+        "discrete_and_search_mse": 1.5589976251466697,
+        "teacher_bias_mse": 0.0013841701539744457,
+        "teacher_cross_mse": -0.001418251465522862,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.4266053477044776,
+      "continuous_raw_score_upper": 3.8401065977591755,
+      "max_orthogonality_relative": 1.8494455788203293e-16,
+      "max_decomposition_identity_error": 4.1941365778888715e-20,
+      "max_teacher_identity_error": 2.1705219273391446e-19
+    }
+  },
+  "by_test_index": {
+    "0": {
+      "cases": 2,
+      "scorable_cases": 2,
+      "raw_score_sum": 1.431600067165685,
+      "normalized_error_sums": {
+        "official_current_mse": 0.5683999328343151,
+        "geometric_floor_mse": 0.2356154901951911,
+        "discrete_and_search_mse": 0.3327844414995392,
+        "teacher_bias_mse": 0.0002865528456705628,
+        "teacher_cross_mse": -0.0007031910760831817,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.4145241344774604,
+      "continuous_raw_score_upper": 1.7643845098048088,
+      "max_orthogonality_relative": 1.7683859350981738e-16,
+      "max_decomposition_identity_error": 5.929230630780102e-21,
+      "max_teacher_identity_error": 1.1180834903756764e-19
+    },
+    "1": {
+      "cases": 2,
+      "scorable_cases": 2,
+      "raw_score_sum": 1.4498817465951186,
+      "normalized_error_sums": {
+        "official_current_mse": 0.5501182534048814,
+        "geometric_floor_mse": 0.23677285951366933,
+        "discrete_and_search_mse": 0.3133454355273681,
+        "teacher_bias_mse": 0.0002848791732570273,
+        "teacher_cross_mse": 0.00020749004348535557,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.43040356877488833,
+      "continuous_raw_score_upper": 1.7632271404863307,
+      "max_orthogonality_relative": 1.8344786335975432e-16,
+      "max_decomposition_identity_error": 1.8973538018496308e-20,
+      "max_teacher_identity_error": 4.0234064994579266e-20
+    },
+    "2": {
+      "cases": 2,
+      "scorable_cases": 2,
+      "raw_score_sum": 1.4597080372424063,
+      "normalized_error_sums": {
+        "official_current_mse": 0.5402919627575937,
+        "geometric_floor_mse": 0.23000401609356638,
+        "discrete_and_search_mse": 0.3102879748852119,
+        "teacher_bias_mse": 0.00027221085146455847,
+        "teacher_cross_mse": -0.0002968262505372298,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.42570319743356894,
+      "continuous_raw_score_upper": 1.7699959839064336,
+      "max_orthogonality_relative": 1.8494455788203293e-16,
+      "max_decomposition_identity_error": 2.964615315390051e-21,
+      "max_teacher_identity_error": 1.7364175418713157e-19
+    },
+    "3": {
+      "cases": 2,
+      "scorable_cases": 2,
+      "raw_score_sum": 1.4626840489284942,
+      "normalized_error_sums": {
+        "official_current_mse": 0.5373159510715058,
+        "geometric_floor_mse": 0.22979929384892472,
+        "discrete_and_search_mse": 0.30751666801748406,
+        "teacher_bias_mse": 0.0002713031350351702,
+        "teacher_cross_mse": -0.0003337423881060508,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.42768001469277644,
+      "continuous_raw_score_upper": 1.7702007061510754,
+      "max_orthogonality_relative": 1.802121746064988e-16,
+      "max_decomposition_identity_error": 4.1941365778888715e-20,
+      "max_teacher_identity_error": 2.1705219273391446e-19
+    },
+    "4": {
+      "cases": 2,
+      "scorable_cases": 2,
+      "raw_score_sum": 1.4665509226426008,
+      "normalized_error_sums": {
+        "official_current_mse": 0.5334490773573991,
+        "geometric_floor_mse": 0.22770174258947284,
+        "discrete_and_search_mse": 0.30574737213617853,
+        "teacher_bias_mse": 0.00026922414854712706,
+        "teacher_cross_mse": -0.0002919817942817552,
+        "fp32_output_increment_mse": 0.0
+      },
+      "geometry_share_of_current_gap": 0.42684813275423045,
+      "continuous_raw_score_upper": 1.7722982574105273,
+      "max_orthogonality_relative": 1.797810480688409e-16,
+      "max_decomposition_identity_error": 1.641126335305207e-21,
+      "max_teacher_identity_error": 2.9434394917086937e-20
+    }
+  }
+}

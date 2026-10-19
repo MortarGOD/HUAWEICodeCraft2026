@@ -1,0 +1,37 @@
+{
+  "certificate_sha256": "8b06564651f6e7cab2cf643cf96dc3cdefb5117c513543acf3d10bc38d30ed0f",
+  "cases": [
+    {
+      "population": "round032/vmean1-test",
+      "test": 4,
+      "margin": 76933.93354007826,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean1-test",
+      "test": 2,
+      "margin": 10138.27274644634,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean1-test",
+      "test": 0,
+      "margin": 7193.727585078346,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean1-test",
+      "test": 3,
+      "margin": -9054.260236859354,
+      "in_complete_support": false
+    },
+    {
+      "population": "round032/vmean1-test",
+      "test": 1,
+      "margin": -69451.07885891742,
+      "in_complete_support": false
+    }
+  ],
+  "action": "Full102 evaluation, actual hash audit, expansion and all-direction joint fitting, Decimal validation",
+  "limits": "Large certificate margins do not imply online gain or guaranteed additional matches."
+}

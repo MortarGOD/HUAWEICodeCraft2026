@@ -1,0 +1,113 @@
+{
+  "rows": [
+    {
+      "dataset": "qwen2_5_14b_online_profiled_v2",
+      "n_cases": 250,
+      "n_edges": 25,
+      "pooled_corr": 0.5150478126603056,
+      "percase_corr_median": 0.4891689530327876,
+      "percase_corr_p25": 0.3433166451232564,
+      "percase_corr_p75": 0.5839861206504503,
+      "percase_frac_positive": 0.96,
+      "percase_frac_gt_0.5": 0.464,
+      "split_half_reliability": 0.995425353341513
+    },
+    {
+      "dataset": "qwen3_8b_profiled_v1",
+      "n_cases": 250,
+      "n_edges": 25,
+      "pooled_corr": 0.4748333531554186,
+      "percase_corr_median": 0.3749968556038371,
+      "percase_corr_p25": 0.2538594047701671,
+      "percase_corr_p75": 0.4813917444471058,
+      "percase_frac_positive": 0.96,
+      "percase_frac_gt_0.5": 0.22,
+      "split_half_reliability": 0.9933261000379057
+    },
+    {
+      "dataset": "qwen2_5_14b_online_v1",
+      "n_cases": 250,
+      "n_edges": 25,
+      "pooled_corr": 0.4628689490128596,
+      "percase_corr_median": 0.42503665809520397,
+      "percase_corr_p25": 0.2710802526168441,
+      "percase_corr_p75": 0.5337064200629489,
+      "percase_frac_positive": 0.964,
+      "percase_frac_gt_0.5": 0.312,
+      "split_half_reliability": 0.9924113363526811
+    },
+    {
+      "dataset": "v419_mini_sample",
+      "n_cases": 5,
+      "n_edges": 25,
+      "pooled_corr": -0.38638288712760416,
+      "percase_corr_median": -0.3940943119993532,
+      "percase_corr_p25": -0.3983149842617245,
+      "percase_corr_p75": -0.3742492112933803,
+      "percase_frac_positive": 0.0,
+      "percase_frac_gt_0.5": 0.0,
+      "split_half_reliability": 0.9915377631682699
+    },
+    {
+      "dataset": "public_quantizer",
+      "n_cases": 5,
+      "n_edges": 25,
+      "pooled_corr": 0.7841713745235057,
+      "percase_corr_median": 0.7650497805009838,
+      "percase_corr_p25": 0.6977924922590526,
+      "percase_corr_p75": 0.813892080171215,
+      "percase_frac_positive": 1.0,
+      "percase_frac_gt_0.5": 1.0,
+      "split_half_reliability": 0.9490301943117406
+    },
+    {
+      "dataset": "qwen3_5_35b_a3b_v1",
+      "n_cases": 50,
+      "n_edges": 25,
+      "pooled_corr": 0.3270488356457227,
+      "percase_corr_median": 0.08841926741844965,
+      "percase_corr_p25": -0.09330644372150679,
+      "percase_corr_p75": 0.30314291679370625,
+      "percase_frac_positive": 0.62,
+      "percase_frac_gt_0.5": 0.08,
+      "split_half_reliability": 0.8740963281394349
+    },
+    {
+      "dataset": "attention_history_fit_v1",
+      "n_cases": 28,
+      "n_edges": 25,
+      "pooled_corr": 0.5408805483977679,
+      "percase_corr_median": 0.2530044129202558,
+      "percase_corr_p25": 0.05716586084944655,
+      "percase_corr_p75": 0.5083845823791313,
+      "percase_frac_positive": 0.8214285714285714,
+      "percase_frac_gt_0.5": 0.25,
+      "split_half_reliability": 0.802350754562553
+    },
+    {
+      "dataset": "attention_history_fit_v1_localonline",
+      "n_cases": 28,
+      "n_edges": 25,
+      "pooled_corr": 0.5882252470648022,
+      "percase_corr_median": 0.2530044129202558,
+      "percase_corr_p25": 0.05716586084944655,
+      "percase_corr_p75": 0.5083845823791313,
+      "percase_frac_positive": 0.8214285714285714,
+      "percase_frac_gt_0.5": 0.25,
+      "split_half_reliability": 0.7931791726369011
+    },
+    {
+      "dataset": "v1",
+      "n_cases": 10,
+      "n_edges": 25,
+      "pooled_corr": 0.393175782282619,
+      "percase_corr_median": 0.3041179312394615,
+      "percase_corr_p25": 0.18263252469289068,
+      "percase_corr_p75": 0.3855796761300148,
+      "percase_frac_positive": 0.9,
+      "percase_frac_gt_0.5": 0.1,
+      "split_half_reliability": 0.37301339192963295
+    }
+  ],
+  "reading": "split_half_reliability is the median correlation between two disjoint halves of the dataset's own cases; it is an upper bound on how well that dataset can predict anything, because it measures self-consistency, not online truth."
+}

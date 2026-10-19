@@ -1,0 +1,4623 @@
+{
+  "attention": {
+    "cases": [
+      {
+        "case_id": "attention-00-00",
+        "elapsed_seconds": 0.05234359949827194,
+        "error": null,
+        "mse_baseline": 0.00044372561387717724,
+        "mse_test": 0.00020189415954519063,
+        "score": 0.5450022418559891,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-00-01",
+        "elapsed_seconds": 0.04543739929795265,
+        "error": null,
+        "mse_baseline": 0.0008648235234431922,
+        "mse_test": 0.00031390663934871554,
+        "score": 0.6370280978263247,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-00-02",
+        "elapsed_seconds": 0.04989990219473839,
+        "error": null,
+        "mse_baseline": 0.0005790767609141767,
+        "mse_test": 0.00022588219144381583,
+        "score": 0.6099270309393522,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-00-03",
+        "elapsed_seconds": 0.04314590245485306,
+        "error": null,
+        "mse_baseline": 0.0007396943983621895,
+        "mse_test": 0.0005436119390651584,
+        "score": 0.2650857701926517,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-00-04",
+        "elapsed_seconds": 0.04489310085773468,
+        "error": null,
+        "mse_baseline": 0.0004714811220765114,
+        "mse_test": 0.00039835614734329283,
+        "score": 0.1550962940173709,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-01-00",
+        "elapsed_seconds": 0.04738229885697365,
+        "error": null,
+        "mse_baseline": 0.0006305837887339294,
+        "mse_test": 0.0003036649723071605,
+        "score": 0.5184383459700866,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-01-01",
+        "elapsed_seconds": 0.04707610234618187,
+        "error": null,
+        "mse_baseline": 0.0008985836175270379,
+        "mse_test": 0.00042988889617845416,
+        "score": 0.5215927735678766,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-01-02",
+        "elapsed_seconds": 0.04733889922499657,
+        "error": null,
+        "mse_baseline": 0.00037506761145778,
+        "mse_test": 0.0004366460198070854,
+        "score": -0.16417948782612238,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-01-03",
+        "elapsed_seconds": 0.04870989918708801,
+        "error": null,
+        "mse_baseline": 0.0017341736238449812,
+        "mse_test": 0.0006298382068052888,
+        "score": 0.6368078731304759,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-01-04",
+        "elapsed_seconds": 0.04296249896287918,
+        "error": null,
+        "mse_baseline": 0.0010385315399616957,
+        "mse_test": 0.0007619397947564721,
+        "score": 0.2663296535177209,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-02-00",
+        "elapsed_seconds": 0.04461349919438362,
+        "error": null,
+        "mse_baseline": 1.34337242343463e-05,
+        "mse_test": 1.021566004055785e-05,
+        "score": 0.23955115779143019,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-02-01",
+        "elapsed_seconds": 0.0605413019657135,
+        "error": null,
+        "mse_baseline": 1.6046171367634088e-05,
+        "mse_test": 1.1008441106241662e-05,
+        "score": 0.3139521662814704,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-02-02",
+        "elapsed_seconds": 0.05089249834418297,
+        "error": null,
+        "mse_baseline": 1.4719547834829427e-05,
+        "mse_test": 8.61040643940214e-06,
+        "score": 0.41503594159134577,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-02-03",
+        "elapsed_seconds": 0.049619100987911224,
+        "error": null,
+        "mse_baseline": 1.3775090337730944e-05,
+        "mse_test": 9.980465620174073e-06,
+        "score": 0.275470042266302,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-02-04",
+        "elapsed_seconds": 0.05845030024647713,
+        "error": null,
+        "mse_baseline": 1.7538084648549557e-05,
+        "mse_test": 1.2364859685476404e-05,
+        "score": 0.29497091995738495,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-03-00",
+        "elapsed_seconds": 0.049704600125551224,
+        "error": null,
+        "mse_baseline": 6.377910904120654e-05,
+        "mse_test": 3.983176429755986e-05,
+        "score": 0.37547317771677763,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-03-01",
+        "elapsed_seconds": 0.04876450076699257,
+        "error": null,
+        "mse_baseline": 5.5489043006673455e-05,
+        "mse_test": 4.215757508063689e-05,
+        "score": 0.24025406104829095,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-03-02",
+        "elapsed_seconds": 0.044446397572755814,
+        "error": null,
+        "mse_baseline": 5.3540767112281173e-05,
+        "mse_test": 4.254800660419278e-05,
+        "score": 0.20531570802927246,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-03-03",
+        "elapsed_seconds": 0.05922209843993187,
+        "error": null,
+        "mse_baseline": 8.465765131404623e-05,
+        "mse_test": 5.979277193546295e-05,
+        "score": 0.2937109522014078,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-03-04",
+        "elapsed_seconds": 0.04762529954314232,
+        "error": null,
+        "mse_baseline": 5.415638588601723e-05,
+        "mse_test": 4.087946217623539e-05,
+        "score": 0.24515896865285172,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-04-00",
+        "elapsed_seconds": 0.05477580055594444,
+        "error": null,
+        "mse_baseline": 0.0002130337816197425,
+        "mse_test": 0.00013266471796669066,
+        "score": 0.37725971459544233,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-04-01",
+        "elapsed_seconds": 0.04385079815983772,
+        "error": null,
+        "mse_baseline": 0.0001516488118795678,
+        "mse_test": 0.00013817328726872802,
+        "score": 0.08886007377058383,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-04-02",
+        "elapsed_seconds": 0.047499001026153564,
+        "error": null,
+        "mse_baseline": 0.0002344168460695073,
+        "mse_test": 0.00019382605387363583,
+        "score": 0.17315646412133637,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-04-03",
+        "elapsed_seconds": 0.046163398772478104,
+        "error": null,
+        "mse_baseline": 0.0003303673001937568,
+        "mse_test": 0.00024843355640769005,
+        "score": 0.24800803147894335,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-04-04",
+        "elapsed_seconds": 0.04360990226268768,
+        "error": null,
+        "mse_baseline": 0.000156441776198335,
+        "mse_test": 0.00014648132491856813,
+        "score": 0.0636687432335153,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-05-00",
+        "elapsed_seconds": 0.04654490202665329,
+        "error": null,
+        "mse_baseline": 0.0001914469467010349,
+        "mse_test": 0.00017850376025307924,
+        "score": 0.06760717092118398,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-05-01",
+        "elapsed_seconds": 0.05409440025687218,
+        "error": null,
+        "mse_baseline": 0.00018126561190001667,
+        "mse_test": 0.00018193962750956416,
+        "score": -0.003718386529482892,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-05-02",
+        "elapsed_seconds": 0.04620080068707466,
+        "error": null,
+        "mse_baseline": 0.0003236790653318167,
+        "mse_test": 0.0002205921773565933,
+        "score": 0.3184848790561872,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-05-03",
+        "elapsed_seconds": 0.045086801052093506,
+        "error": null,
+        "mse_baseline": 0.00034237082581967115,
+        "mse_test": 0.0003346620360389352,
+        "score": 0.022515907312722485,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-05-04",
+        "elapsed_seconds": 0.037277400493621826,
+        "error": null,
+        "mse_baseline": 0.00023558377870358527,
+        "mse_test": 0.00018894013192038983,
+        "score": 0.19799175919443548,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-06-00",
+        "elapsed_seconds": 0.045357201248407364,
+        "error": null,
+        "mse_baseline": 0.00012650250573642552,
+        "mse_test": 7.719378481851891e-05,
+        "score": 0.38978453929318896,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-06-01",
+        "elapsed_seconds": 0.055538300424814224,
+        "error": null,
+        "mse_baseline": 8.287212403956801e-05,
+        "mse_test": 3.7104076909599826e-05,
+        "score": 0.552273127549088,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-06-02",
+        "elapsed_seconds": 0.0468766987323761,
+        "error": null,
+        "mse_baseline": 8.761523349676281e-05,
+        "mse_test": 4.4071759475627914e-05,
+        "score": 0.4969851963328242,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-06-03",
+        "elapsed_seconds": 0.04684469848871231,
+        "error": null,
+        "mse_baseline": 0.00017120313714258373,
+        "mse_test": 7.229917537188157e-05,
+        "score": 0.577699471057774,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-06-04",
+        "elapsed_seconds": 0.04131469875574112,
+        "error": null,
+        "mse_baseline": 9.714084444567561e-05,
+        "mse_test": 4.859000182477757e-05,
+        "score": 0.4997984410980623,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-07-00",
+        "elapsed_seconds": 0.045983098447322845,
+        "error": null,
+        "mse_baseline": 9.238016355084255e-05,
+        "mse_test": 0.00010374389967182651,
+        "score": -0.12301056508445979,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-07-01",
+        "elapsed_seconds": 0.046886298805475235,
+        "error": null,
+        "mse_baseline": 0.0001501215301686898,
+        "mse_test": 0.0001245186140295118,
+        "score": 0.1705479294702651,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-07-02",
+        "elapsed_seconds": 0.04194820299744606,
+        "error": null,
+        "mse_baseline": 0.00012188511027488858,
+        "mse_test": 0.00011486125731607899,
+        "score": 0.05762683352354218,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-07-03",
+        "elapsed_seconds": 0.04540159925818443,
+        "error": null,
+        "mse_baseline": 0.0002636701974552125,
+        "mse_test": 0.00033557447022758424,
+        "score": -0.27270534731019636,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-07-04",
+        "elapsed_seconds": 0.04775239899754524,
+        "error": null,
+        "mse_baseline": 0.00017114503134507686,
+        "mse_test": 0.00012242092634551227,
+        "score": 0.28469482646751804,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-08-00",
+        "elapsed_seconds": 0.051324501633644104,
+        "error": null,
+        "mse_baseline": 0.0002144875907106325,
+        "mse_test": 8.250114478869364e-05,
+        "score": 0.6153570259456324,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-08-01",
+        "elapsed_seconds": 0.055846597999334335,
+        "error": null,
+        "mse_baseline": 0.00017306601512245834,
+        "mse_test": 7.135541818570346e-05,
+        "score": 0.5876982656865725,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-08-02",
+        "elapsed_seconds": 0.049969397485256195,
+        "error": null,
+        "mse_baseline": 0.00017510683392174542,
+        "mse_test": 7.976173219503835e-05,
+        "score": 0.5444967485924418,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-08-03",
+        "elapsed_seconds": 0.04495199769735336,
+        "error": null,
+        "mse_baseline": 0.00024198232858907431,
+        "mse_test": 0.00011916891526198015,
+        "score": 0.5075305045751977,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-08-04",
+        "elapsed_seconds": 0.04593060165643692,
+        "error": null,
+        "mse_baseline": 0.00020961409609299153,
+        "mse_test": 0.00010616062354529276,
+        "score": 0.49354253590752545,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-09-00",
+        "elapsed_seconds": 0.04990420117974281,
+        "error": null,
+        "mse_baseline": 0.00029003966483287513,
+        "mse_test": 7.427688979078084e-05,
+        "score": 0.7439078209058744,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-09-01",
+        "elapsed_seconds": 0.04277050122618675,
+        "error": null,
+        "mse_baseline": 0.0001677536783972755,
+        "mse_test": 8.592019730713218e-05,
+        "score": 0.4878192947658928,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-09-02",
+        "elapsed_seconds": 0.046546101570129395,
+        "error": null,
+        "mse_baseline": 0.0002184472105000168,
+        "mse_test": 7.254492084030062e-05,
+        "score": 0.6679063986477638,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-09-03",
+        "elapsed_seconds": 0.0480664037168026,
+        "error": null,
+        "mse_baseline": 0.00016616839275229722,
+        "mse_test": 8.663985499879345e-05,
+        "score": 0.47860207610032574,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-09-04",
+        "elapsed_seconds": 0.046623099595308304,
+        "error": null,
+        "mse_baseline": 0.0001919867063406855,
+        "mse_test": 0.00011521016858750954,
+        "score": 0.39990548937765485,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-10-00",
+        "elapsed_seconds": 0.04556169733405113,
+        "error": null,
+        "mse_baseline": 0.0002277480234624818,
+        "mse_test": 0.00011764660303015262,
+        "score": 0.483435240220501,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-10-01",
+        "elapsed_seconds": 0.04655139893293381,
+        "error": null,
+        "mse_baseline": 0.00029055916820652783,
+        "mse_test": 9.739352390170097e-05,
+        "score": 0.6648065710579327,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-10-02",
+        "elapsed_seconds": 0.05078969895839691,
+        "error": null,
+        "mse_baseline": 0.00017377862241119146,
+        "mse_test": 7.079755596350878e-05,
+        "score": 0.5925991644933803,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-10-03",
+        "elapsed_seconds": 0.04229559749364853,
+        "error": null,
+        "mse_baseline": 0.000310805655317381,
+        "mse_test": 0.00011239187006140128,
+        "score": 0.638385376396605,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-10-04",
+        "elapsed_seconds": 0.043881699442863464,
+        "error": null,
+        "mse_baseline": 0.00012852663348894566,
+        "mse_test": 6.23312225798145e-05,
+        "score": 0.5150326365221767,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-11-00",
+        "elapsed_seconds": 0.05670600011944771,
+        "error": null,
+        "mse_baseline": 0.0002974846865981817,
+        "mse_test": 0.00012335086648818105,
+        "score": 0.5853538953593486,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-11-01",
+        "elapsed_seconds": 0.04717100039124489,
+        "error": null,
+        "mse_baseline": 0.00022999197244644165,
+        "mse_test": 0.00013846826914232224,
+        "score": 0.39794303397016423,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-11-02",
+        "elapsed_seconds": 0.048967599868774414,
+        "error": null,
+        "mse_baseline": 0.0002648106892593205,
+        "mse_test": 8.092282223515213e-05,
+        "score": 0.6944125538833251,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-11-03",
+        "elapsed_seconds": 0.04788079857826233,
+        "error": null,
+        "mse_baseline": 0.00046940514585003257,
+        "mse_test": 0.0001682557922322303,
+        "score": 0.6415552881774642,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-11-04",
+        "elapsed_seconds": 0.046844299882650375,
+        "error": null,
+        "mse_baseline": 0.00016707717441022396,
+        "mse_test": 6.365955050569028e-05,
+        "score": 0.6189811640614222,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-12-00",
+        "elapsed_seconds": 0.0466609001159668,
+        "error": null,
+        "mse_baseline": 0.0004739282594528049,
+        "mse_test": 0.0001157100559794344,
+        "score": 0.7558490052628796,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-12-01",
+        "elapsed_seconds": 0.057059500366449356,
+        "error": null,
+        "mse_baseline": 0.0002961059217341244,
+        "mse_test": 9.856396354734898e-05,
+        "score": 0.6671327511111033,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-12-02",
+        "elapsed_seconds": 0.04077930003404617,
+        "error": null,
+        "mse_baseline": 0.0004306706541683525,
+        "mse_test": 9.406364551978186e-05,
+        "score": 0.7815879846714338,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-12-03",
+        "elapsed_seconds": 0.07273099943995476,
+        "error": null,
+        "mse_baseline": 0.0006227908888831735,
+        "mse_test": 0.00015099463053047657,
+        "score": 0.7575516385584103,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-12-04",
+        "elapsed_seconds": 0.09719159826636314,
+        "error": null,
+        "mse_baseline": 0.0005004223203286529,
+        "mse_test": 8.146190521074459e-05,
+        "score": 0.8372136855181751,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-13-00",
+        "elapsed_seconds": 0.05227980017662048,
+        "error": null,
+        "mse_baseline": 0.00047899354831315577,
+        "mse_test": 0.00015436079411301762,
+        "score": 0.6777393043045753,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-13-01",
+        "elapsed_seconds": 0.04807870090007782,
+        "error": null,
+        "mse_baseline": 0.00048538524424657226,
+        "mse_test": 0.00011420434020692483,
+        "score": 0.7647140254867125,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-13-02",
+        "elapsed_seconds": 0.04494199901819229,
+        "error": null,
+        "mse_baseline": 0.00027851253980770707,
+        "mse_test": 9.865353058557957e-05,
+        "score": 0.6457842413354431,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-13-03",
+        "elapsed_seconds": 0.06393279880285263,
+        "error": null,
+        "mse_baseline": 0.00041726036579348147,
+        "mse_test": 0.00012418525875546038,
+        "score": 0.7023794519297226,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-13-04",
+        "elapsed_seconds": 0.04690270125865936,
+        "error": null,
+        "mse_baseline": 0.0005200206069275737,
+        "mse_test": 0.00018210100824944675,
+        "score": 0.6498196305616615,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-14-00",
+        "elapsed_seconds": 0.046494901180267334,
+        "error": null,
+        "mse_baseline": 0.00042365904664620757,
+        "mse_test": 0.00037661538226529956,
+        "score": 0.11104133088462902,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-14-01",
+        "elapsed_seconds": 0.049249500036239624,
+        "error": null,
+        "mse_baseline": 0.0005250907270237803,
+        "mse_test": 0.00028654636116698384,
+        "score": 0.45429171299380666,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-14-02",
+        "elapsed_seconds": 0.0520097017288208,
+        "error": null,
+        "mse_baseline": 0.00043662256211973727,
+        "mse_test": 0.00015230386634357274,
+        "score": 0.6511772877604853,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-14-03",
+        "elapsed_seconds": 0.04860270023345947,
+        "error": null,
+        "mse_baseline": 0.0008943598950281739,
+        "mse_test": 0.0002730746928136796,
+        "score": 0.6946702392049039,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-14-04",
+        "elapsed_seconds": 0.05004329979419708,
+        "error": null,
+        "mse_baseline": 0.00026820326456800103,
+        "mse_test": 0.00017201006994582713,
+        "score": 0.3586578067090783,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-15-00",
+        "elapsed_seconds": 0.040547002106904984,
+        "error": null,
+        "mse_baseline": 0.0003457484708633274,
+        "mse_test": 8.60642030602321e-05,
+        "score": 0.7510785721037857,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-15-01",
+        "elapsed_seconds": 0.049973100423812866,
+        "error": null,
+        "mse_baseline": 0.00043791328789666295,
+        "mse_test": 0.00012570313992910087,
+        "score": 0.7129497016798362,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-15-02",
+        "elapsed_seconds": 0.052870798856019974,
+        "error": null,
+        "mse_baseline": 0.0003428347990848124,
+        "mse_test": 0.00011016903590643778,
+        "score": 0.678652703282949,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-15-03",
+        "elapsed_seconds": 0.0532165989279747,
+        "error": null,
+        "mse_baseline": 0.0005371831357479095,
+        "mse_test": 0.00012275823974050581,
+        "score": 0.7714778600233011,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-15-04",
+        "elapsed_seconds": 0.05051200091838837,
+        "error": null,
+        "mse_baseline": 0.00036648797686211765,
+        "mse_test": 9.230278374161571e-05,
+        "score": 0.7481423960155112,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-16-00",
+        "elapsed_seconds": 0.04736999794840813,
+        "error": null,
+        "mse_baseline": 0.0005916478694416583,
+        "mse_test": 0.00019039497419726104,
+        "score": 0.6781954536962367,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-16-01",
+        "elapsed_seconds": 0.06187180057168007,
+        "error": null,
+        "mse_baseline": 0.0005788934649899602,
+        "mse_test": 0.00018417763931211084,
+        "score": 0.6818453645606363,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-16-02",
+        "elapsed_seconds": 0.055872898548841476,
+        "error": null,
+        "mse_baseline": 0.0003937357687391341,
+        "mse_test": 0.00010804189514601603,
+        "score": 0.7255979676624245,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-16-03",
+        "elapsed_seconds": 0.04410959780216217,
+        "error": null,
+        "mse_baseline": 0.0006869431817904115,
+        "mse_test": 0.00017899839440360665,
+        "score": 0.7394276569758289,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-16-04",
+        "elapsed_seconds": 0.044790301471948624,
+        "error": null,
+        "mse_baseline": 0.0005319631891325116,
+        "mse_test": 0.00023991828493308276,
+        "score": 0.5489945736201696,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-17-00",
+        "elapsed_seconds": 0.05035989731550217,
+        "error": null,
+        "mse_baseline": 0.0004970425507053733,
+        "mse_test": 0.0001677555701462552,
+        "score": 0.6624925372924583,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-17-01",
+        "elapsed_seconds": 0.046795397996902466,
+        "error": null,
+        "mse_baseline": 0.0005632644752040505,
+        "mse_test": 0.00018276112677995116,
+        "score": 0.6755323035173781,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-17-02",
+        "elapsed_seconds": 0.04689539968967438,
+        "error": null,
+        "mse_baseline": 0.0004608856397680938,
+        "mse_test": 0.00015837664250284433,
+        "score": 0.6563645537263094,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-17-03",
+        "elapsed_seconds": 0.04741179943084717,
+        "error": null,
+        "mse_baseline": 0.0003829609777312726,
+        "mse_test": 0.00024024731828831136,
+        "score": 0.37265848935424634,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-17-04",
+        "elapsed_seconds": 0.045920901000499725,
+        "error": null,
+        "mse_baseline": 0.0005653516273014247,
+        "mse_test": 0.0001968556025531143,
+        "score": 0.6517997065069769,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-18-00",
+        "elapsed_seconds": 0.050796300172805786,
+        "error": null,
+        "mse_baseline": 0.0003139629552606493,
+        "mse_test": 0.00011484223796287552,
+        "score": 0.6342172347449893,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-18-01",
+        "elapsed_seconds": 0.05318950116634369,
+        "error": null,
+        "mse_baseline": 0.000735790585167706,
+        "mse_test": 0.0002040648105321452,
+        "score": 0.7226591170833839,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-18-02",
+        "elapsed_seconds": 0.05071009695529938,
+        "error": null,
+        "mse_baseline": 0.000447883881861344,
+        "mse_test": 0.0001484563254052773,
+        "score": 0.6685383613531409,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-18-03",
+        "elapsed_seconds": 0.05214359983801842,
+        "error": null,
+        "mse_baseline": 0.0005549687193706632,
+        "mse_test": 0.0002216120919911191,
+        "score": 0.6006764268760443,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-18-04",
+        "elapsed_seconds": 0.04713500291109085,
+        "error": null,
+        "mse_baseline": 0.0004148223379161209,
+        "mse_test": 0.0001592860498931259,
+        "score": 0.6160138079995723,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-19-00",
+        "elapsed_seconds": 0.04959360137581825,
+        "error": null,
+        "mse_baseline": 0.0005378442583605647,
+        "mse_test": 0.0002779377973638475,
+        "score": 0.4832373999658445,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-19-01",
+        "elapsed_seconds": 0.04842899739742279,
+        "error": null,
+        "mse_baseline": 0.0004431822744663805,
+        "mse_test": 0.0002456726797390729,
+        "score": 0.4456622164438359,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-19-02",
+        "elapsed_seconds": 0.04833010211586952,
+        "error": null,
+        "mse_baseline": 0.0009380294941365719,
+        "mse_test": 0.0002596006088424474,
+        "score": 0.723248991140303,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-19-03",
+        "elapsed_seconds": 0.045065801590681076,
+        "error": null,
+        "mse_baseline": 0.0007687906036153436,
+        "mse_test": 0.000320471910526976,
+        "score": 0.5831479872153578,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-19-04",
+        "elapsed_seconds": 0.06959619745612144,
+        "error": null,
+        "mse_baseline": 0.0009035316179506481,
+        "mse_test": 0.00038236298132687807,
+        "score": 0.5768128378350085,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-20-00",
+        "elapsed_seconds": 0.05237489938735962,
+        "error": null,
+        "mse_baseline": 0.0004869532713200897,
+        "mse_test": 0.0002081904822262004,
+        "score": 0.5724631202049154,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-20-01",
+        "elapsed_seconds": 0.048072699457407,
+        "error": null,
+        "mse_baseline": 0.0004524418618530035,
+        "mse_test": 0.0001950677251443267,
+        "score": 0.5688557103327821,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-20-02",
+        "elapsed_seconds": 0.06292980164289474,
+        "error": null,
+        "mse_baseline": 0.0005492306663654745,
+        "mse_test": 0.00012944017362315208,
+        "score": 0.7643245697118108,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-20-03",
+        "elapsed_seconds": 0.05065099895000458,
+        "error": null,
+        "mse_baseline": 0.0004611496697179973,
+        "mse_test": 0.00022948006517253816,
+        "score": 0.5023740008035351,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-20-04",
+        "elapsed_seconds": 0.04522320255637169,
+        "error": null,
+        "mse_baseline": 0.0010405349312350154,
+        "mse_test": 0.0002456395304761827,
+        "score": 0.7639295682417581,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-21-00",
+        "elapsed_seconds": 0.0479344017803669,
+        "error": null,
+        "mse_baseline": 0.000662430829834193,
+        "mse_test": 0.00018428552721161395,
+        "score": 0.7218041206540149,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-21-01",
+        "elapsed_seconds": 0.050857797265052795,
+        "error": null,
+        "mse_baseline": 0.0007700987625867128,
+        "mse_test": 0.00023649907961953431,
+        "score": 0.6928977280457523,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-21-02",
+        "elapsed_seconds": 0.047086797654628754,
+        "error": null,
+        "mse_baseline": 0.0007614899659529328,
+        "mse_test": 0.00018292210006620735,
+        "score": 0.7597839653247465,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-21-03",
+        "elapsed_seconds": 0.04714919999241829,
+        "error": null,
+        "mse_baseline": 0.0004968007560819387,
+        "mse_test": 0.00015304166299756616,
+        "score": 0.6919455916199843,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-21-04",
+        "elapsed_seconds": 0.04516599699854851,
+        "error": null,
+        "mse_baseline": 0.0012338872766122222,
+        "mse_test": 0.00039800727972760797,
+        "score": 0.6774362721201063,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-22-00",
+        "elapsed_seconds": 0.04780399799346924,
+        "error": null,
+        "mse_baseline": 0.0007281064754351974,
+        "mse_test": 0.0004084830288775265,
+        "score": 0.4389789918660294,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-22-01",
+        "elapsed_seconds": 0.04520629718899727,
+        "error": null,
+        "mse_baseline": 0.0006184918456710875,
+        "mse_test": 0.0004453691653907299,
+        "score": 0.27991101498276477,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-22-02",
+        "elapsed_seconds": 0.05411339923739433,
+        "error": null,
+        "mse_baseline": 0.0006522159674204886,
+        "mse_test": 0.0003251629532314837,
+        "score": 0.501448953300696,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-22-03",
+        "elapsed_seconds": 0.047857001423835754,
+        "error": null,
+        "mse_baseline": 0.0004919097991660237,
+        "mse_test": 0.0003212416195310652,
+        "score": 0.34695015208948204,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-22-04",
+        "elapsed_seconds": 0.05356509983539581,
+        "error": null,
+        "mse_baseline": 0.0007347190985456109,
+        "mse_test": 0.0005830003065057099,
+        "score": 0.20649904479171832,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-23-00",
+        "elapsed_seconds": 0.05542520061135292,
+        "error": null,
+        "mse_baseline": 0.0009564297506585717,
+        "mse_test": 0.00035143367131240666,
+        "score": 0.6325567339677389,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-23-01",
+        "elapsed_seconds": 0.05884779989719391,
+        "error": null,
+        "mse_baseline": 0.0013871921692043543,
+        "mse_test": 0.0005439043161459267,
+        "score": 0.6079099001417435,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-23-02",
+        "elapsed_seconds": 0.042554598301649094,
+        "error": null,
+        "mse_baseline": 0.0006612512515857816,
+        "mse_test": 0.00026862305821850896,
+        "score": 0.5937655201796446,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-23-03",
+        "elapsed_seconds": 0.05323929712176323,
+        "error": null,
+        "mse_baseline": 0.000517440028488636,
+        "mse_test": 0.00021836857195012271,
+        "score": 0.5779828387302307,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-23-04",
+        "elapsed_seconds": 0.05097130313515663,
+        "error": null,
+        "mse_baseline": 0.0006758567178621888,
+        "mse_test": 0.00042584334732964635,
+        "score": 0.3699206709424492,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-24-00",
+        "elapsed_seconds": 0.04471519961953163,
+        "error": null,
+        "mse_baseline": 0.0010289830388501287,
+        "mse_test": 0.000449357699835673,
+        "score": 0.5632992159542078,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-24-01",
+        "elapsed_seconds": 0.047595199197530746,
+        "error": null,
+        "mse_baseline": 0.0011950165499001741,
+        "mse_test": 0.0005871768807992339,
+        "score": 0.5086453983852492,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-24-02",
+        "elapsed_seconds": 0.045531000941991806,
+        "error": null,
+        "mse_baseline": 0.0006111358525231481,
+        "mse_test": 0.0002963211154565215,
+        "score": 0.5151305323797908,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-24-03",
+        "elapsed_seconds": 0.04432690143585205,
+        "error": null,
+        "mse_baseline": 0.0007692170329391956,
+        "mse_test": 0.0006976287695579231,
+        "score": 0.09306640429909903,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-24-04",
+        "elapsed_seconds": 0.05084190145134926,
+        "error": null,
+        "mse_baseline": 0.0011666066711768508,
+        "mse_test": 0.0004113909672014415,
+        "score": 0.6473610366153332,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-25-00",
+        "elapsed_seconds": 0.04890340194106102,
+        "error": null,
+        "mse_baseline": 0.0006639616331085563,
+        "mse_test": 0.00031808638595975935,
+        "score": 0.5209265564479493,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-25-01",
+        "elapsed_seconds": 0.0487871989607811,
+        "error": null,
+        "mse_baseline": 0.0005876609357073903,
+        "mse_test": 0.00026786798844113946,
+        "score": 0.5441793521315206,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-25-02",
+        "elapsed_seconds": 0.04618009924888611,
+        "error": null,
+        "mse_baseline": 0.00038561277324333787,
+        "mse_test": 0.00019302041619084775,
+        "score": 0.4994449624493021,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-25-03",
+        "elapsed_seconds": 0.052369002252817154,
+        "error": null,
+        "mse_baseline": 0.001138527994044125,
+        "mse_test": 0.0003246913547627628,
+        "score": 0.71481478148865,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-25-04",
+        "elapsed_seconds": 0.04850210249423981,
+        "error": null,
+        "mse_baseline": 0.0009354862268082798,
+        "mse_test": 0.0003012289816979319,
+        "score": 0.6779974166742422,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-26-00",
+        "elapsed_seconds": 0.0509210005402565,
+        "error": null,
+        "mse_baseline": 0.0024745953269302845,
+        "mse_test": 0.00026605516904965043,
+        "score": 0.8924853829010945,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-26-01",
+        "elapsed_seconds": 0.07014770060777664,
+        "error": null,
+        "mse_baseline": 0.001015347195789218,
+        "mse_test": 0.00030773464823141694,
+        "score": 0.6969168285413757,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-26-02",
+        "elapsed_seconds": 0.05857359990477562,
+        "error": null,
+        "mse_baseline": 0.0015519580338150263,
+        "mse_test": 0.00015496184641961008,
+        "score": 0.9001507495414147,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-26-03",
+        "elapsed_seconds": 0.07338549941778183,
+        "error": null,
+        "mse_baseline": 0.0013748339843004942,
+        "mse_test": 0.00022927671670913696,
+        "score": 0.8332331617291295,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-26-04",
+        "elapsed_seconds": 0.05864910036325455,
+        "error": null,
+        "mse_baseline": 0.0024190039839595556,
+        "mse_test": 0.0002903512795455754,
+        "score": 0.8799707311476549,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-27-00",
+        "elapsed_seconds": 0.04996789991855621,
+        "error": null,
+        "mse_baseline": 0.0010423269122838974,
+        "mse_test": 0.0004956320626661181,
+        "score": 0.5244946121748765,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-27-01",
+        "elapsed_seconds": 0.04963249713182449,
+        "error": null,
+        "mse_baseline": 0.0012356413062661886,
+        "mse_test": 0.0005418883520178497,
+        "score": 0.5614517341967903,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-27-02",
+        "elapsed_seconds": 0.047728098928928375,
+        "error": null,
+        "mse_baseline": 0.0007956625195220113,
+        "mse_test": 0.0004146472201682627,
+        "score": 0.47886546117899437,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-27-03",
+        "elapsed_seconds": 0.04702319949865341,
+        "error": null,
+        "mse_baseline": 0.0015950581291690469,
+        "mse_test": 0.00045949610648676753,
+        "score": 0.7119251655573554,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-27-04",
+        "elapsed_seconds": 0.04852079972624779,
+        "error": null,
+        "mse_baseline": 0.0011517470702528954,
+        "mse_test": 0.000527688825968653,
+        "score": 0.5418361899086181,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-28-00",
+        "elapsed_seconds": 0.05210240185260773,
+        "error": null,
+        "mse_baseline": 0.0010665407171472907,
+        "mse_test": 0.00034711090847849846,
+        "score": 0.6745450943430208,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-28-01",
+        "elapsed_seconds": 0.04523120075464249,
+        "error": null,
+        "mse_baseline": 0.001580171869136393,
+        "mse_test": 0.0005341739160940051,
+        "score": 0.6619520151400077,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-28-02",
+        "elapsed_seconds": 0.04278070107102394,
+        "error": null,
+        "mse_baseline": 0.000833860773127526,
+        "mse_test": 0.0003305923310108483,
+        "score": 0.6035401332396177,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-28-03",
+        "elapsed_seconds": 0.04828919842839241,
+        "error": null,
+        "mse_baseline": 0.0007080080104060471,
+        "mse_test": 0.0004964512772858143,
+        "score": 0.2988055643592276,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-28-04",
+        "elapsed_seconds": 0.04412670060992241,
+        "error": null,
+        "mse_baseline": 0.001229780027642846,
+        "mse_test": 0.00040566734969615936,
+        "score": 0.6701301528910716,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-29-00",
+        "elapsed_seconds": 0.048367202281951904,
+        "error": null,
+        "mse_baseline": 0.0006891750963404775,
+        "mse_test": 0.00046356715029105544,
+        "score": 0.32735940002388525,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-29-01",
+        "elapsed_seconds": 0.049730200320482254,
+        "error": null,
+        "mse_baseline": 0.0033733821474015713,
+        "mse_test": 0.0006827609031461179,
+        "score": 0.7976034515769194,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-29-02",
+        "elapsed_seconds": 0.05008139833807945,
+        "error": null,
+        "mse_baseline": 0.0012960743624716997,
+        "mse_test": 0.0005467321607284248,
+        "score": 0.5781629692251837,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-29-03",
+        "elapsed_seconds": 0.0527586005628109,
+        "error": null,
+        "mse_baseline": 0.0013357584830373526,
+        "mse_test": 0.00040366165922023356,
+        "score": 0.697803409563714,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-29-04",
+        "elapsed_seconds": 0.05300920084118843,
+        "error": null,
+        "mse_baseline": 0.0022956416942179203,
+        "mse_test": 0.0006048631039448082,
+        "score": 0.7365167632787428,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-30-00",
+        "elapsed_seconds": 0.049573201686143875,
+        "error": null,
+        "mse_baseline": 0.0017183521995320916,
+        "mse_test": 0.0004291078948881477,
+        "score": 0.7502794275789364,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-30-01",
+        "elapsed_seconds": 0.05132899805903435,
+        "error": null,
+        "mse_baseline": 0.0019999337382614613,
+        "mse_test": 0.0007689328631386161,
+        "score": 0.6155208303015839,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-30-02",
+        "elapsed_seconds": 0.05799820274114609,
+        "error": null,
+        "mse_baseline": 0.000622780411504209,
+        "mse_test": 0.0003095062857028097,
+        "score": 0.5030250149402493,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-30-03",
+        "elapsed_seconds": 0.058034300804138184,
+        "error": null,
+        "mse_baseline": 0.001469970098696649,
+        "mse_test": 0.00042059161933138967,
+        "score": 0.7138774321298728,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-30-04",
+        "elapsed_seconds": 0.048457201570272446,
+        "error": null,
+        "mse_baseline": 0.0013390063541010022,
+        "mse_test": 0.0005523919826373458,
+        "score": 0.5874612686149521,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-31-00",
+        "elapsed_seconds": 0.06191220134496689,
+        "error": null,
+        "mse_baseline": 0.001568390754982829,
+        "mse_test": 0.0003833030932582915,
+        "score": 0.7556074007446646,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-31-01",
+        "elapsed_seconds": 0.05713210254907608,
+        "error": null,
+        "mse_baseline": 0.0032083827536553144,
+        "mse_test": 0.0008940811967477202,
+        "score": 0.7213296338383902,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-31-02",
+        "elapsed_seconds": 0.047026798129081726,
+        "error": null,
+        "mse_baseline": 0.0012949472293257713,
+        "mse_test": 0.0004542709211818874,
+        "score": 0.6491973488229257,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-31-03",
+        "elapsed_seconds": 0.04570059850811958,
+        "error": null,
+        "mse_baseline": 0.0014064039569348097,
+        "mse_test": 0.00035009250859729946,
+        "score": 0.7510725799148708,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-31-04",
+        "elapsed_seconds": 0.04818050190806389,
+        "error": null,
+        "mse_baseline": 0.0014926707372069359,
+        "mse_test": 0.000359096477041021,
+        "score": 0.7594268661600768,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-32-00",
+        "elapsed_seconds": 0.05896720290184021,
+        "error": null,
+        "mse_baseline": 0.0018183635547757149,
+        "mse_test": 0.0005016945651732385,
+        "score": 0.724095567217239,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-32-01",
+        "elapsed_seconds": 0.051251400262117386,
+        "error": null,
+        "mse_baseline": 0.002850991440936923,
+        "mse_test": 0.0007836439763195813,
+        "score": 0.7251328204401583,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-32-02",
+        "elapsed_seconds": 0.047859497368335724,
+        "error": null,
+        "mse_baseline": 0.0013543248642235994,
+        "mse_test": 0.000413422763813287,
+        "score": 0.6947388512649866,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-32-03",
+        "elapsed_seconds": 0.0811976008117199,
+        "error": null,
+        "mse_baseline": 0.0020407678093761206,
+        "mse_test": 0.0007568648434244096,
+        "score": 0.6291274098174895,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-32-04",
+        "elapsed_seconds": 0.05058800056576729,
+        "error": null,
+        "mse_baseline": 0.0030482520814985037,
+        "mse_test": 0.0004630799521692097,
+        "score": 0.8480834459263086,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-33-00",
+        "elapsed_seconds": 0.06081639975309372,
+        "error": null,
+        "mse_baseline": 0.0024771136231720448,
+        "mse_test": 0.0002405658597126603,
+        "score": 0.9028846083351615,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-33-01",
+        "elapsed_seconds": 0.04818490147590637,
+        "error": null,
+        "mse_baseline": 0.0018876425456255674,
+        "mse_test": 0.000637536053545773,
+        "score": 0.6622580609749434,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-33-02",
+        "elapsed_seconds": 0.047123998403549194,
+        "error": null,
+        "mse_baseline": 0.0024165629874914885,
+        "mse_test": 0.0005572832887992263,
+        "score": 0.7693901248658477,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-33-03",
+        "elapsed_seconds": 0.04702260345220566,
+        "error": null,
+        "mse_baseline": 0.0017305456567555666,
+        "mse_test": 0.00025343571905978024,
+        "score": 0.8535515557937243,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-33-04",
+        "elapsed_seconds": 0.04715380072593689,
+        "error": null,
+        "mse_baseline": 0.0013496580068022013,
+        "mse_test": 0.0002658239973243326,
+        "score": 0.8030434406460049,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-34-00",
+        "elapsed_seconds": 0.04218020290136337,
+        "error": null,
+        "mse_baseline": 0.001555784372612834,
+        "mse_test": 0.0005297564202919602,
+        "score": 0.6594923887798986,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-34-01",
+        "elapsed_seconds": 0.049573399126529694,
+        "error": null,
+        "mse_baseline": 0.004897543229162693,
+        "mse_test": 0.0009687780402600765,
+        "score": 0.8021910180411611,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-34-02",
+        "elapsed_seconds": 0.044771499931812286,
+        "error": null,
+        "mse_baseline": 0.000874963472597301,
+        "mse_test": 0.0004867400857619941,
+        "score": 0.4437023932929202,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-34-03",
+        "elapsed_seconds": 0.08740440011024475,
+        "error": null,
+        "mse_baseline": 0.004023983143270016,
+        "mse_test": 0.0005802307859994471,
+        "score": 0.8558068547156156,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-34-04",
+        "elapsed_seconds": 0.06002449989318848,
+        "error": null,
+        "mse_baseline": 0.0014042459661141038,
+        "mse_test": 0.0004914053715765476,
+        "score": 0.6500574803598063,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-35-00",
+        "elapsed_seconds": 0.052607499063014984,
+        "error": null,
+        "mse_baseline": 0.001139619154855609,
+        "mse_test": 0.000462695665191859,
+        "score": 0.5939909721414931,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-35-01",
+        "elapsed_seconds": 0.04640039801597595,
+        "error": null,
+        "mse_baseline": 0.002813817700371146,
+        "mse_test": 0.0007002242491580546,
+        "score": 0.7511479691574567,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-35-02",
+        "elapsed_seconds": 0.04717810079455376,
+        "error": null,
+        "mse_baseline": 0.0010945451213046908,
+        "mse_test": 0.0003814718802459538,
+        "score": 0.6514790730680506,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-35-03",
+        "elapsed_seconds": 0.04117659851908684,
+        "error": null,
+        "mse_baseline": 0.0013082067016512156,
+        "mse_test": 0.00028592883609235287,
+        "score": 0.7814345120450353,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-35-04",
+        "elapsed_seconds": 0.04602940008044243,
+        "error": null,
+        "mse_baseline": 0.001709967851638794,
+        "mse_test": 0.00026674900436773896,
+        "score": 0.8440034974271049,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-36-00",
+        "elapsed_seconds": 0.05230090022087097,
+        "error": null,
+        "mse_baseline": 0.004477643873542547,
+        "mse_test": 0.0007109242724254727,
+        "score": 0.8412280448147799,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-36-01",
+        "elapsed_seconds": 0.050630100071430206,
+        "error": null,
+        "mse_baseline": 0.004782197065651417,
+        "mse_test": 0.0009939197916537523,
+        "score": 0.7921625190244301,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-36-02",
+        "elapsed_seconds": 0.05859670042991638,
+        "error": null,
+        "mse_baseline": 0.0044790287502110004,
+        "mse_test": 0.0011899708770215511,
+        "score": 0.7343239029297381,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-36-03",
+        "elapsed_seconds": 0.04824269935488701,
+        "error": null,
+        "mse_baseline": 0.0033312055747956038,
+        "mse_test": 0.0011746434029191732,
+        "score": 0.647381893268101,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-36-04",
+        "elapsed_seconds": 0.056843001395463943,
+        "error": null,
+        "mse_baseline": 0.004495758563280106,
+        "mse_test": 0.0009024951723404229,
+        "score": 0.7992563079984522,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-37-00",
+        "elapsed_seconds": 0.047818899154663086,
+        "error": null,
+        "mse_baseline": 0.0015166434459388256,
+        "mse_test": 0.00035119272070005536,
+        "score": 0.7684408147211808,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-37-01",
+        "elapsed_seconds": 0.045116301625967026,
+        "error": null,
+        "mse_baseline": 0.002807535929605365,
+        "mse_test": 0.0010797390714287758,
+        "score": 0.6154139791968586,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-37-02",
+        "elapsed_seconds": 0.05087609961628914,
+        "error": null,
+        "mse_baseline": 0.0010942973894998431,
+        "mse_test": 0.000742571777664125,
+        "score": 0.32141684263404574,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-37-03",
+        "elapsed_seconds": 0.04741490259766579,
+        "error": null,
+        "mse_baseline": 0.002219497226178646,
+        "mse_test": 0.0007156107458285987,
+        "score": 0.6775797971774533,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-37-04",
+        "elapsed_seconds": 0.04801440238952637,
+        "error": null,
+        "mse_baseline": 0.005153517238795757,
+        "mse_test": 0.0008686500368639827,
+        "score": 0.8314452059411441,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-38-00",
+        "elapsed_seconds": 0.04595169797539711,
+        "error": null,
+        "mse_baseline": 0.002952545415610075,
+        "mse_test": 0.0005417544161900878,
+        "score": 0.8165127576612918,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-38-01",
+        "elapsed_seconds": 0.049848902970552444,
+        "error": null,
+        "mse_baseline": 0.003751534502953291,
+        "mse_test": 0.0011588747147470713,
+        "score": 0.6910931476613691,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-38-02",
+        "elapsed_seconds": 0.04965589940547943,
+        "error": null,
+        "mse_baseline": 0.0017568847397342324,
+        "mse_test": 0.0008638422004878521,
+        "score": 0.5083102602288371,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-38-03",
+        "elapsed_seconds": 0.04789219796657562,
+        "error": null,
+        "mse_baseline": 0.001918449648655951,
+        "mse_test": 0.0008586334297433496,
+        "score": 0.5524336902222581,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-38-04",
+        "elapsed_seconds": 0.04784559831023216,
+        "error": null,
+        "mse_baseline": 0.005044876132160425,
+        "mse_test": 0.0012337785447016358,
+        "score": 0.7554392789078687,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-39-00",
+        "elapsed_seconds": 0.05306510254740715,
+        "error": null,
+        "mse_baseline": 0.0021000781562179327,
+        "mse_test": 0.00040356809040531516,
+        "score": 0.8078318708232707,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-39-01",
+        "elapsed_seconds": 0.04525110125541687,
+        "error": null,
+        "mse_baseline": 0.0036195958964526653,
+        "mse_test": 0.0009944371413439512,
+        "score": 0.7252629382416597,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-39-02",
+        "elapsed_seconds": 0.04464749991893768,
+        "error": null,
+        "mse_baseline": 0.004088110290467739,
+        "mse_test": 0.0010817593429237604,
+        "score": 0.7353889043927943,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-39-03",
+        "elapsed_seconds": 0.05074620246887207,
+        "error": null,
+        "mse_baseline": 0.00303182122297585,
+        "mse_test": 0.0006870560464449227,
+        "score": 0.7733850395800876,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-39-04",
+        "elapsed_seconds": 0.04653950035572052,
+        "error": null,
+        "mse_baseline": 0.002540028188377619,
+        "mse_test": 0.0009203343652188778,
+        "score": 0.6376676568275729,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-40-00",
+        "elapsed_seconds": 0.05222420021891594,
+        "error": null,
+        "mse_baseline": 0.0014082106063142419,
+        "mse_test": 0.0006799122202210128,
+        "score": 0.5171800175539293,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-40-01",
+        "elapsed_seconds": 0.041591301560401917,
+        "error": null,
+        "mse_baseline": 0.002413130598142743,
+        "mse_test": 0.0008298807078972459,
+        "score": 0.6560978885535824,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-40-02",
+        "elapsed_seconds": 0.04539509862661362,
+        "error": null,
+        "mse_baseline": 0.0024507027119398117,
+        "mse_test": 0.0006179235060699284,
+        "score": 0.7478586435395007,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-40-03",
+        "elapsed_seconds": 0.04908699914813042,
+        "error": null,
+        "mse_baseline": 0.001877499045804143,
+        "mse_test": 0.0007507555419579148,
+        "score": 0.6001300007924306,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-40-04",
+        "elapsed_seconds": 0.06667150184512138,
+        "error": null,
+        "mse_baseline": 0.0046439520083367825,
+        "mse_test": 0.0011774466838687658,
+        "score": 0.7464558889163747,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-41-00",
+        "elapsed_seconds": 0.04938570037484169,
+        "error": null,
+        "mse_baseline": 0.0008600279688835144,
+        "mse_test": 0.00035279052099213004,
+        "score": 0.5897918047361628,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-41-01",
+        "elapsed_seconds": 0.04877079650759697,
+        "error": null,
+        "mse_baseline": 0.0021168887615203857,
+        "mse_test": 0.0007521783700212836,
+        "score": 0.6446774229737721,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-41-02",
+        "elapsed_seconds": 0.057097598910331726,
+        "error": null,
+        "mse_baseline": 0.0024938960559666157,
+        "mse_test": 0.0007462158100679517,
+        "score": 0.7007831147241925,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-41-03",
+        "elapsed_seconds": 0.05059169977903366,
+        "error": null,
+        "mse_baseline": 0.0032145660370588303,
+        "mse_test": 0.0018199046608060598,
+        "score": 0.433856813073536,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-41-04",
+        "elapsed_seconds": 0.053081199526786804,
+        "error": null,
+        "mse_baseline": 0.0010369089432060719,
+        "mse_test": 0.0006938209407962859,
+        "score": 0.33087572892271006,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-42-00",
+        "elapsed_seconds": 0.06120520085096359,
+        "error": null,
+        "mse_baseline": 0.001555171562358737,
+        "mse_test": 0.0006759114912711084,
+        "score": 0.5653781822978103,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-42-01",
+        "elapsed_seconds": 0.05580969899892807,
+        "error": null,
+        "mse_baseline": 0.004314164165407419,
+        "mse_test": 0.0015599813777953386,
+        "score": 0.6384047249977522,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-42-02",
+        "elapsed_seconds": 0.06657449901103973,
+        "error": null,
+        "mse_baseline": 0.0014076723018661141,
+        "mse_test": 0.000793151673860848,
+        "score": 0.43655091258854234,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-42-03",
+        "elapsed_seconds": 0.047598399221897125,
+        "error": null,
+        "mse_baseline": 0.0019171802559867501,
+        "mse_test": 0.00022796262055635452,
+        "score": 0.8810948423631534,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-42-04",
+        "elapsed_seconds": 0.04516899958252907,
+        "error": null,
+        "mse_baseline": 0.0016142999520525336,
+        "mse_test": 0.00036681286292150617,
+        "score": 0.7727727969915908,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-43-00",
+        "elapsed_seconds": 0.05068010091781616,
+        "error": null,
+        "mse_baseline": 0.001385170267894864,
+        "mse_test": 0.0010247693862766027,
+        "score": 0.26018525662262926,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-43-01",
+        "elapsed_seconds": 0.058396100997924805,
+        "error": null,
+        "mse_baseline": 0.003788410220295191,
+        "mse_test": 0.0019087258260697126,
+        "score": 0.4961670687497549,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-43-02",
+        "elapsed_seconds": 0.048648402094841,
+        "error": null,
+        "mse_baseline": 0.0035200989805161953,
+        "mse_test": 0.001484352513216436,
+        "score": 0.5783208025023299,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-43-03",
+        "elapsed_seconds": 0.05184699967503548,
+        "error": null,
+        "mse_baseline": 0.0016833886038511992,
+        "mse_test": 0.0011959964176639915,
+        "score": 0.289530406153498,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-43-04",
+        "elapsed_seconds": 0.0489622987806797,
+        "error": null,
+        "mse_baseline": 0.004101558122783899,
+        "mse_test": 0.001490734750404954,
+        "score": 0.6365442824949827,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-44-00",
+        "elapsed_seconds": 0.04320480301976204,
+        "error": null,
+        "mse_baseline": 0.0008945207227952778,
+        "mse_test": 0.00030849623726680875,
+        "score": 0.6551267853216499,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-44-01",
+        "elapsed_seconds": 0.0530502013862133,
+        "error": null,
+        "mse_baseline": 0.003116735490038991,
+        "mse_test": 0.0015528296353295445,
+        "score": 0.5017768943523281,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-44-02",
+        "elapsed_seconds": 0.06080459803342819,
+        "error": null,
+        "mse_baseline": 0.003061724128201604,
+        "mse_test": 0.0007436989690177143,
+        "score": 0.7570979820920221,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-44-03",
+        "elapsed_seconds": 0.051760002970695496,
+        "error": null,
+        "mse_baseline": 0.0024243711959570646,
+        "mse_test": 0.0005695006111636758,
+        "score": 0.7650934757377964,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-44-04",
+        "elapsed_seconds": 0.05352899804711342,
+        "error": null,
+        "mse_baseline": 0.006298867054283619,
+        "mse_test": 0.0008092542993836105,
+        "score": 0.871523832395658,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-45-00",
+        "elapsed_seconds": 0.05466560274362564,
+        "error": null,
+        "mse_baseline": 0.004979920107871294,
+        "mse_test": 0.001945040887221694,
+        "score": 0.6094232748538777,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-45-01",
+        "elapsed_seconds": 0.05234000086784363,
+        "error": null,
+        "mse_baseline": 0.004476896021515131,
+        "mse_test": 0.0025088980328291655,
+        "score": 0.439589836178489,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-45-02",
+        "elapsed_seconds": 0.05160989984869957,
+        "error": null,
+        "mse_baseline": 0.006014111451804638,
+        "mse_test": 0.0030357111245393753,
+        "score": 0.49523530635128854,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-45-03",
+        "elapsed_seconds": 0.063257597386837,
+        "error": null,
+        "mse_baseline": 0.004570194985717535,
+        "mse_test": 0.0019804195035248995,
+        "score": 0.5666662998594211,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-45-04",
+        "elapsed_seconds": 0.05329610034823418,
+        "error": null,
+        "mse_baseline": 0.006824166979640722,
+        "mse_test": 0.002536498475819826,
+        "score": 0.6283065048983653,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-46-00",
+        "elapsed_seconds": 0.04770699888467789,
+        "error": null,
+        "mse_baseline": 0.00663452735170722,
+        "mse_test": 0.0019278780091553926,
+        "score": 0.7094174299154401,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-46-01",
+        "elapsed_seconds": 0.0553801991045475,
+        "error": null,
+        "mse_baseline": 0.009965469129383564,
+        "mse_test": 0.004140791948884726,
+        "score": 0.584485999091057,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-46-02",
+        "elapsed_seconds": 0.0492745004594326,
+        "error": null,
+        "mse_baseline": 0.009746595285832882,
+        "mse_test": 0.003754009958356619,
+        "score": 0.6148388387672932,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-46-03",
+        "elapsed_seconds": 0.04351390153169632,
+        "error": null,
+        "mse_baseline": 0.005708274897187948,
+        "mse_test": 0.001912477659061551,
+        "score": 0.6649639876307132,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-46-04",
+        "elapsed_seconds": 0.04631530120968819,
+        "error": null,
+        "mse_baseline": 0.009061692282557487,
+        "mse_test": 0.004454062320291996,
+        "score": 0.5084734527053568,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-47-00",
+        "elapsed_seconds": 0.06297750025987625,
+        "error": null,
+        "mse_baseline": 0.014046341180801392,
+        "mse_test": 0.00519728334620595,
+        "score": 0.6299902387883314,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-47-01",
+        "elapsed_seconds": 0.04746820032596588,
+        "error": null,
+        "mse_baseline": 0.01886957697570324,
+        "mse_test": 0.007138493005186319,
+        "score": 0.6216930027430952,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-47-02",
+        "elapsed_seconds": 0.05170939862728119,
+        "error": null,
+        "mse_baseline": 0.010336012579500675,
+        "mse_test": 0.005947710946202278,
+        "score": 0.42456426978443096,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-47-03",
+        "elapsed_seconds": 0.05122699961066246,
+        "error": null,
+        "mse_baseline": 0.008015784434974194,
+        "mse_test": 0.003418073058128357,
+        "score": 0.573582213212379,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-47-04",
+        "elapsed_seconds": 0.05592399835586548,
+        "error": null,
+        "mse_baseline": 0.01950642466545105,
+        "mse_test": 0.005563533864915371,
+        "score": 0.7147845409738636,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-48-00",
+        "elapsed_seconds": 0.04859299957752228,
+        "error": null,
+        "mse_baseline": 0.01703503541648388,
+        "mse_test": 0.017809953540563583,
+        "score": -0.04548966909278381,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-48-01",
+        "elapsed_seconds": 0.05256269872188568,
+        "error": null,
+        "mse_baseline": 0.027420789003372192,
+        "mse_test": 0.01833784207701683,
+        "score": 0.33124309170091154,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-48-02",
+        "elapsed_seconds": 0.06088169664144516,
+        "error": null,
+        "mse_baseline": 0.025392379611730576,
+        "mse_test": 0.02238275483250618,
+        "score": 0.1185247237653155,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-48-03",
+        "elapsed_seconds": 0.04541439935564995,
+        "error": null,
+        "mse_baseline": 0.012765583582222462,
+        "mse_test": 0.012296955101191998,
+        "score": 0.036710306114252626,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-48-04",
+        "elapsed_seconds": 0.04889850318431854,
+        "error": null,
+        "mse_baseline": 0.01858196035027504,
+        "mse_test": 0.015476214699447155,
+        "score": 0.16713767505062593,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-49-00",
+        "elapsed_seconds": 0.04828779771924019,
+        "error": null,
+        "mse_baseline": 0.02582860365509987,
+        "mse_test": 0.016327494755387306,
+        "score": 0.36785220860503487,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-49-01",
+        "elapsed_seconds": 0.0504893995821476,
+        "error": null,
+        "mse_baseline": 0.020639613270759583,
+        "mse_test": 0.016991999000310898,
+        "score": 0.1767288089460624,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-49-02",
+        "elapsed_seconds": 0.048134397715330124,
+        "error": null,
+        "mse_baseline": 0.0484888032078743,
+        "mse_test": 0.04097192361950874,
+        "score": 0.15502299687909923,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-49-03",
+        "elapsed_seconds": 0.04680969938635826,
+        "error": null,
+        "mse_baseline": 0.018007386475801468,
+        "mse_test": 0.014026811346411705,
+        "score": 0.22105235175237148,
+        "status": "passed"
+      },
+      {
+        "case_id": "attention-49-04",
+        "elapsed_seconds": 0.044394999742507935,
+        "error": null,
+        "mse_baseline": 0.032002709805965424,
+        "mse_test": 0.02090141549706459,
+        "score": 0.3468860723422712,
+        "status": "passed"
+      }
+    ],
+    "expected_cases": 250,
+    "failed_cases": 0,
+    "name": "attention",
+    "passed_cases": 250,
+    "reference_cases": 250,
+    "score": 138.8995530261668,
+    "weighted_score": 138.8995530261668
+  },
+  "baseline": "hierarchical_v1",
+  "config_digest": "1a4b9d1e208e177dd386bdf3070cb944879d8dd7f883ab3a8464591e13e95328",
+  "dataset_digest": "4b03511cece2c862ce2665e86817c73f8b412bc84ba9f69b5ca7258c30766123",
+  "delta": null,
+  "environment": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.14.7",
+    "torch": "2.13.0+cpu"
+  },
+  "issue": null,
+  "linear": {
+    "cases": [
+      {
+        "case_id": "linear-00-00",
+        "elapsed_seconds": 0.048436302691698074,
+        "error": null,
+        "mse_baseline": 0.024099677801132202,
+        "mse_test": 0.003323909593746066,
+        "score": 0.8620765961613849,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-00-01",
+        "elapsed_seconds": 0.020689602941274643,
+        "error": null,
+        "mse_baseline": 0.015485255047678947,
+        "mse_test": 0.002672853646799922,
+        "score": 0.8273936310012181,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-00-02",
+        "elapsed_seconds": 0.02875329926609993,
+        "error": null,
+        "mse_baseline": 0.0048934705555438995,
+        "mse_test": 0.002367007313296199,
+        "score": 0.5162927238594346,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-00-03",
+        "elapsed_seconds": 0.026149999350309372,
+        "error": null,
+        "mse_baseline": 0.0065511972643435,
+        "mse_test": 0.002556351711973548,
+        "score": 0.6097886220146171,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-00-04",
+        "elapsed_seconds": 0.017985500395298004,
+        "error": null,
+        "mse_baseline": 0.007185419090092182,
+        "mse_test": 0.0029395439196377993,
+        "score": 0.5909015350696701,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-01-00",
+        "elapsed_seconds": 0.03750789910554886,
+        "error": null,
+        "mse_baseline": 0.002208912745118141,
+        "mse_test": 0.0004991955356672406,
+        "score": 0.7740084859528746,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-01-01",
+        "elapsed_seconds": 0.019616298377513885,
+        "error": null,
+        "mse_baseline": 0.0028137394692748785,
+        "mse_test": 0.000208544748602435,
+        "score": 0.9258834192434389,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-01-02",
+        "elapsed_seconds": 0.020837698131799698,
+        "error": null,
+        "mse_baseline": 0.0031514738220721483,
+        "mse_test": 0.0002542226284276694,
+        "score": 0.9193321465508751,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-01-03",
+        "elapsed_seconds": 0.017928801476955414,
+        "error": null,
+        "mse_baseline": 0.0025907778181135654,
+        "mse_test": 0.00026322712074033916,
+        "score": 0.8983984196174708,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-01-04",
+        "elapsed_seconds": 0.018431201577186584,
+        "error": null,
+        "mse_baseline": 0.003131215227767825,
+        "mse_test": 0.0002892990305554122,
+        "score": 0.9076080660345897,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-02-00",
+        "elapsed_seconds": 0.018369100987911224,
+        "error": null,
+        "mse_baseline": 0.013312073424458504,
+        "mse_test": 0.00289729330688715,
+        "score": 0.7823559700651964,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-02-01",
+        "elapsed_seconds": 0.01811850070953369,
+        "error": null,
+        "mse_baseline": 0.00778132164850831,
+        "mse_test": 0.00386839359998703,
+        "score": 0.5028616249620518,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-02-02",
+        "elapsed_seconds": 0.018575001507997513,
+        "error": null,
+        "mse_baseline": 0.018346020951867104,
+        "mse_test": 0.002407956402748823,
+        "score": 0.868747756853305,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-02-03",
+        "elapsed_seconds": 0.019127100706100464,
+        "error": null,
+        "mse_baseline": 0.01668008789420128,
+        "mse_test": 0.004701035097241402,
+        "score": 0.7181648485871777,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-02-04",
+        "elapsed_seconds": 0.019206900149583817,
+        "error": null,
+        "mse_baseline": 0.008251670747995377,
+        "mse_test": 0.0044121574610471725,
+        "score": 0.46530131947896225,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-03-00",
+        "elapsed_seconds": 0.019652098417282104,
+        "error": null,
+        "mse_baseline": 0.07241306453943253,
+        "mse_test": 0.02983878180384636,
+        "score": 0.5879364864112655,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-03-01",
+        "elapsed_seconds": 0.015640299767255783,
+        "error": null,
+        "mse_baseline": 0.049124397337436676,
+        "mse_test": 0.011078848503530025,
+        "score": 0.7744735995959574,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-03-02",
+        "elapsed_seconds": 0.018611997365951538,
+        "error": null,
+        "mse_baseline": 0.05101338028907776,
+        "mse_test": 0.016544252634048462,
+        "score": 0.6756879755801896,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-03-03",
+        "elapsed_seconds": 0.01929130032658577,
+        "error": null,
+        "mse_baseline": 0.0392836257815361,
+        "mse_test": 0.02625618688762188,
+        "score": 0.3316251653134654,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-03-04",
+        "elapsed_seconds": 0.019297901540994644,
+        "error": null,
+        "mse_baseline": 0.048412032425403595,
+        "mse_test": 0.02203351818025112,
+        "score": 0.544875166846139,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-04-00",
+        "elapsed_seconds": 0.019236300140619278,
+        "error": null,
+        "mse_baseline": 0.06251125037670135,
+        "mse_test": 0.011408471502363682,
+        "score": 0.8174973075468068,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-04-01",
+        "elapsed_seconds": 0.020445097237825394,
+        "error": null,
+        "mse_baseline": 0.053073808550834656,
+        "mse_test": 0.010889955796301365,
+        "score": 0.7948148796242718,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-04-02",
+        "elapsed_seconds": 0.021478500217199326,
+        "error": null,
+        "mse_baseline": 0.05152840167284012,
+        "mse_test": 0.014247806742787361,
+        "score": 0.7234960472236581,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-04-03",
+        "elapsed_seconds": 0.01910959929227829,
+        "error": null,
+        "mse_baseline": 0.04311256855726242,
+        "mse_test": 0.01084095984697342,
+        "score": 0.7485429374829667,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-04-04",
+        "elapsed_seconds": 0.017774797976017,
+        "error": null,
+        "mse_baseline": 0.04122506082057953,
+        "mse_test": 0.013822009786963463,
+        "score": 0.6647182681641182,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-05-00",
+        "elapsed_seconds": 0.01898849755525589,
+        "error": null,
+        "mse_baseline": 0.09224371612071991,
+        "mse_test": 0.02900717966258526,
+        "score": 0.6855376075198077,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-05-01",
+        "elapsed_seconds": 0.02225010097026825,
+        "error": null,
+        "mse_baseline": 0.09105169773101807,
+        "mse_test": 0.013928089290857315,
+        "score": 0.8470309764898265,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-05-02",
+        "elapsed_seconds": 0.01902579888701439,
+        "error": null,
+        "mse_baseline": 0.051508162170648575,
+        "mse_test": 0.024430572986602783,
+        "score": 0.5256951139964317,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-05-03",
+        "elapsed_seconds": 0.021883297711610794,
+        "error": null,
+        "mse_baseline": 0.04112561047077179,
+        "mse_test": 0.024795930832624435,
+        "score": 0.3970683827235331,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-05-04",
+        "elapsed_seconds": 0.017638500779867172,
+        "error": null,
+        "mse_baseline": 0.05511217564344406,
+        "mse_test": 0.022357314825057983,
+        "score": 0.5943307524329694,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-06-00",
+        "elapsed_seconds": 0.019614100456237793,
+        "error": null,
+        "mse_baseline": 0.047318074852228165,
+        "mse_test": 0.11387741565704346,
+        "score": -1.4066367030500835,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-06-01",
+        "elapsed_seconds": 0.04690299928188324,
+        "error": null,
+        "mse_baseline": 0.05530573055148125,
+        "mse_test": 0.02326142229139805,
+        "score": 0.5794030372721468,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-06-02",
+        "elapsed_seconds": 0.020026102662086487,
+        "error": null,
+        "mse_baseline": 0.067293182015419,
+        "mse_test": 0.019225189462304115,
+        "score": 0.7143070235867429,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-06-03",
+        "elapsed_seconds": 0.04573719948530197,
+        "error": null,
+        "mse_baseline": 0.060637444257736206,
+        "mse_test": 0.03241264820098877,
+        "score": 0.4654681014717483,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-06-04",
+        "elapsed_seconds": 0.020926397293806076,
+        "error": null,
+        "mse_baseline": 0.05747941881418228,
+        "mse_test": 0.04644842818379402,
+        "score": 0.19191200707941936,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-07-00",
+        "elapsed_seconds": 0.04640830308198929,
+        "error": null,
+        "mse_baseline": 0.06065806373953819,
+        "mse_test": 0.011793138459324837,
+        "score": 0.805580037800682,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-07-01",
+        "elapsed_seconds": 0.03495509922504425,
+        "error": null,
+        "mse_baseline": 0.04036913439631462,
+        "mse_test": 0.009844589047133923,
+        "score": 0.7561357409726215,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-07-02",
+        "elapsed_seconds": 0.030693400651216507,
+        "error": null,
+        "mse_baseline": 0.07838919013738632,
+        "mse_test": 0.018492814153432846,
+        "score": 0.7640897409321106,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-07-03",
+        "elapsed_seconds": 0.023433398455381393,
+        "error": null,
+        "mse_baseline": 0.052732914686203,
+        "mse_test": 0.018404725939035416,
+        "score": 0.6509821987167568,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-07-04",
+        "elapsed_seconds": 0.017469897866249084,
+        "error": null,
+        "mse_baseline": 0.057150229811668396,
+        "mse_test": 0.015909191220998764,
+        "score": 0.7216250700403907,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-08-00",
+        "elapsed_seconds": 0.03211509808897972,
+        "error": null,
+        "mse_baseline": 0.06563885509967804,
+        "mse_test": 0.019077615812420845,
+        "score": 0.7093548358902679,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-08-01",
+        "elapsed_seconds": 0.017010200768709183,
+        "error": null,
+        "mse_baseline": 0.13407421112060547,
+        "mse_test": 0.009410283528268337,
+        "score": 0.929812874156661,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-08-02",
+        "elapsed_seconds": 0.018375501036643982,
+        "error": null,
+        "mse_baseline": 0.09261520951986313,
+        "mse_test": 0.03145652264356613,
+        "score": 0.6603525186992135,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-08-03",
+        "elapsed_seconds": 0.01864830031991005,
+        "error": null,
+        "mse_baseline": 0.08094728738069534,
+        "mse_test": 0.0201164111495018,
+        "score": 0.7514875198362824,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-08-04",
+        "elapsed_seconds": 0.02175299823284149,
+        "error": null,
+        "mse_baseline": 0.07815022021532059,
+        "mse_test": 0.042701393365859985,
+        "score": 0.4535985535522676,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-09-00",
+        "elapsed_seconds": 0.018183402717113495,
+        "error": null,
+        "mse_baseline": 0.0395679846405983,
+        "mse_test": 0.018356993794441223,
+        "score": 0.5360644733063753,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-09-01",
+        "elapsed_seconds": 0.018600497394800186,
+        "error": null,
+        "mse_baseline": 0.036957718431949615,
+        "mse_test": 0.012417389079928398,
+        "score": 0.6640109398854644,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-09-02",
+        "elapsed_seconds": 0.019388999789953232,
+        "error": null,
+        "mse_baseline": 0.04448596388101578,
+        "mse_test": 0.008827141486108303,
+        "score": 0.8015746829782584,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-09-03",
+        "elapsed_seconds": 0.018393099308013916,
+        "error": null,
+        "mse_baseline": 0.025372762233018875,
+        "mse_test": 0.01683255285024643,
+        "score": 0.33658965879791497,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-09-04",
+        "elapsed_seconds": 0.026457201689481735,
+        "error": null,
+        "mse_baseline": 0.023798415437340736,
+        "mse_test": 0.012204131111502647,
+        "score": 0.4871872396868137,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-10-00",
+        "elapsed_seconds": 0.028466999530792236,
+        "error": null,
+        "mse_baseline": 0.012203632853925228,
+        "mse_test": 0.005303884856402874,
+        "score": 0.565384757154759,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-10-01",
+        "elapsed_seconds": 0.023228101432323456,
+        "error": null,
+        "mse_baseline": 0.020657479763031006,
+        "mse_test": 0.004634497687220573,
+        "score": 0.7756503823126307,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-10-02",
+        "elapsed_seconds": 0.03607969731092453,
+        "error": null,
+        "mse_baseline": 0.009602684527635574,
+        "mse_test": 0.006004115100950003,
+        "score": 0.37474618856104724,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-10-03",
+        "elapsed_seconds": 0.04630719870328903,
+        "error": null,
+        "mse_baseline": 0.022804757580161095,
+        "mse_test": 0.002984685357660055,
+        "score": 0.8691200576384741,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-10-04",
+        "elapsed_seconds": 0.027994200587272644,
+        "error": null,
+        "mse_baseline": 0.010041434317827225,
+        "mse_test": 0.005160687491297722,
+        "score": 0.4860607232040934,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-11-00",
+        "elapsed_seconds": 0.018253400921821594,
+        "error": null,
+        "mse_baseline": 0.10403551161289215,
+        "mse_test": 0.018322497606277466,
+        "score": 0.8238822751749035,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-11-01",
+        "elapsed_seconds": 0.019734200090169907,
+        "error": null,
+        "mse_baseline": 0.04331012815237045,
+        "mse_test": 0.014586521312594414,
+        "score": 0.6632076159812502,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-11-02",
+        "elapsed_seconds": 0.019787397235631943,
+        "error": null,
+        "mse_baseline": 0.07491373270750046,
+        "mse_test": 0.017785757780075073,
+        "score": 0.76258347919307,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-11-03",
+        "elapsed_seconds": 0.02026759833097458,
+        "error": null,
+        "mse_baseline": 0.07793877273797989,
+        "mse_test": 0.012578503228724003,
+        "score": 0.838610452964004,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-11-04",
+        "elapsed_seconds": 0.022186901420354843,
+        "error": null,
+        "mse_baseline": 0.061481036245822906,
+        "mse_test": 0.014933597296476364,
+        "score": 0.7571023813462323,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-12-00",
+        "elapsed_seconds": 0.022459499537944794,
+        "error": null,
+        "mse_baseline": 0.05718141049146652,
+        "mse_test": 0.10314417630434036,
+        "score": -0.8038060869403195,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-12-01",
+        "elapsed_seconds": 0.018280699849128723,
+        "error": null,
+        "mse_baseline": 0.07838723063468933,
+        "mse_test": 0.03981274738907814,
+        "score": 0.4921016208032806,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-12-02",
+        "elapsed_seconds": 0.03155820071697235,
+        "error": null,
+        "mse_baseline": 0.05888034403324127,
+        "mse_test": 0.017856677994132042,
+        "score": 0.6967293875855932,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-12-03",
+        "elapsed_seconds": 0.017481796443462372,
+        "error": null,
+        "mse_baseline": 0.03610044717788696,
+        "mse_test": 0.053008075803518295,
+        "score": -0.4683495620516292,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-12-04",
+        "elapsed_seconds": 0.020483601838350296,
+        "error": null,
+        "mse_baseline": 0.046335216611623764,
+        "mse_test": 0.029321245849132538,
+        "score": 0.36719307703037823,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-13-00",
+        "elapsed_seconds": 0.01745859906077385,
+        "error": null,
+        "mse_baseline": 0.0863037258386612,
+        "mse_test": 0.016689350828528404,
+        "score": 0.80662073779146,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-13-01",
+        "elapsed_seconds": 0.021836597472429276,
+        "error": null,
+        "mse_baseline": 0.05713663250207901,
+        "mse_test": 0.01180529035627842,
+        "score": 0.7933849119328329,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-13-02",
+        "elapsed_seconds": 0.019723698496818542,
+        "error": null,
+        "mse_baseline": 0.05608407407999039,
+        "mse_test": 0.012046131305396557,
+        "score": 0.7852129770705377,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-13-03",
+        "elapsed_seconds": 0.02069520205259323,
+        "error": null,
+        "mse_baseline": 0.04544449597597122,
+        "mse_test": 0.013317001983523369,
+        "score": 0.706961168838472,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-13-04",
+        "elapsed_seconds": 0.031240500509738922,
+        "error": null,
+        "mse_baseline": 0.06656365096569061,
+        "mse_test": 0.009457467123866081,
+        "score": 0.8579184436752003,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-14-00",
+        "elapsed_seconds": 0.019912101328372955,
+        "error": null,
+        "mse_baseline": 0.04229971766471863,
+        "mse_test": 0.007035043556243181,
+        "score": 0.8336858034844291,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-14-01",
+        "elapsed_seconds": 0.01960650086402893,
+        "error": null,
+        "mse_baseline": 0.02413010783493519,
+        "mse_test": 0.017749305814504623,
+        "score": 0.2644332161331057,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-14-02",
+        "elapsed_seconds": 0.019570600241422653,
+        "error": null,
+        "mse_baseline": 0.017971782013773918,
+        "mse_test": 0.008465087041258812,
+        "score": 0.5289789830095308,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-14-03",
+        "elapsed_seconds": 0.019343998283147812,
+        "error": null,
+        "mse_baseline": 0.032191500067710876,
+        "mse_test": 0.0059305657632648945,
+        "score": 0.8157723078828052,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-14-04",
+        "elapsed_seconds": 0.0195591002702713,
+        "error": null,
+        "mse_baseline": 0.020527562126517296,
+        "mse_test": 0.011886261403560638,
+        "score": 0.42096088516005087,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-15-00",
+        "elapsed_seconds": 0.019898999482393265,
+        "error": null,
+        "mse_baseline": 0.01231233961880207,
+        "mse_test": 0.004675264935940504,
+        "score": 0.6202781046746837,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-15-01",
+        "elapsed_seconds": 0.01891550049185753,
+        "error": null,
+        "mse_baseline": 0.019600315019488335,
+        "mse_test": 0.005012552719563246,
+        "score": 0.7442616246433116,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-15-02",
+        "elapsed_seconds": 0.02423129975795746,
+        "error": null,
+        "mse_baseline": 0.01601305603981018,
+        "mse_test": 0.0031241229735314846,
+        "score": 0.804901515003471,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-15-03",
+        "elapsed_seconds": 0.022086400538682938,
+        "error": null,
+        "mse_baseline": 0.020422760397195816,
+        "mse_test": 0.0026935015339404345,
+        "score": 0.868112758434444,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-15-04",
+        "elapsed_seconds": 0.026503201574087143,
+        "error": null,
+        "mse_baseline": 0.013112479820847511,
+        "mse_test": 0.0049078017473220825,
+        "score": 0.6257152106713502,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-16-00",
+        "elapsed_seconds": 0.02315540239214897,
+        "error": null,
+        "mse_baseline": 0.03535767272114754,
+        "mse_test": 0.018875375390052795,
+        "score": 0.4661589992385621,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-16-01",
+        "elapsed_seconds": 0.02001439779996872,
+        "error": null,
+        "mse_baseline": 0.024341722950339317,
+        "mse_test": 0.03064693510532379,
+        "score": -0.2590290000361943,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-16-02",
+        "elapsed_seconds": 0.018298998475074768,
+        "error": null,
+        "mse_baseline": 0.032182395458221436,
+        "mse_test": 0.013906043954193592,
+        "score": 0.5678990405718508,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-16-03",
+        "elapsed_seconds": 0.018317699432373047,
+        "error": null,
+        "mse_baseline": 0.028691358864307404,
+        "mse_test": 0.006877064239233732,
+        "score": 0.760308869588295,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-16-04",
+        "elapsed_seconds": 0.018780600279569626,
+        "error": null,
+        "mse_baseline": 0.034113768488168716,
+        "mse_test": 0.028246205300092697,
+        "score": 0.17199985366937687,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-17-00",
+        "elapsed_seconds": 0.04119979962706566,
+        "error": null,
+        "mse_baseline": 0.02993808686733246,
+        "mse_test": 0.003579821903258562,
+        "score": 0.8804258295086732,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-17-01",
+        "elapsed_seconds": 0.019962601363658905,
+        "error": null,
+        "mse_baseline": 0.024051593616604805,
+        "mse_test": 0.007646245416253805,
+        "score": 0.6820898632274008,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-17-02",
+        "elapsed_seconds": 0.0179843008518219,
+        "error": null,
+        "mse_baseline": 0.024552538990974426,
+        "mse_test": 0.004529790952801704,
+        "score": 0.8155062108050468,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-17-03",
+        "elapsed_seconds": 0.018656902015209198,
+        "error": null,
+        "mse_baseline": 0.042114004492759705,
+        "mse_test": 0.004625475034117699,
+        "score": 0.8901677698468946,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-17-04",
+        "elapsed_seconds": 0.019464101642370224,
+        "error": null,
+        "mse_baseline": 0.024120468646287918,
+        "mse_test": 0.0063767582178115845,
+        "score": 0.7356287594854443,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-18-00",
+        "elapsed_seconds": 0.021457500755786896,
+        "error": null,
+        "mse_baseline": 0.054690420627593994,
+        "mse_test": 0.010306896641850471,
+        "score": 0.8115410976259682,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-18-01",
+        "elapsed_seconds": 0.035784099251031876,
+        "error": null,
+        "mse_baseline": 0.04797102138400078,
+        "mse_test": 0.009193595498800278,
+        "score": 0.8083510579187603,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-18-02",
+        "elapsed_seconds": 0.019711900502443314,
+        "error": null,
+        "mse_baseline": 0.054854147136211395,
+        "mse_test": 0.014131315052509308,
+        "score": 0.7423838343996298,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-18-03",
+        "elapsed_seconds": 0.03891659900546074,
+        "error": null,
+        "mse_baseline": 0.030181150883436203,
+        "mse_test": 0.005850481800734997,
+        "score": 0.8061544497315437,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-18-04",
+        "elapsed_seconds": 0.020676299929618835,
+        "error": null,
+        "mse_baseline": 0.029605291783809662,
+        "mse_test": 0.014250870794057846,
+        "score": 0.518637718617208,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-19-00",
+        "elapsed_seconds": 0.023373398929834366,
+        "error": null,
+        "mse_baseline": 0.12813208997249603,
+        "mse_test": 0.018365513533353806,
+        "score": 0.8566673380782596,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-19-01",
+        "elapsed_seconds": 0.02413100004196167,
+        "error": null,
+        "mse_baseline": 0.07387542724609375,
+        "mse_test": 0.018761122599244118,
+        "score": 0.7460438024033744,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-19-02",
+        "elapsed_seconds": 0.019756700843572617,
+        "error": null,
+        "mse_baseline": 0.09661953896284103,
+        "mse_test": 0.022229984402656555,
+        "score": 0.7699224748815454,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-19-03",
+        "elapsed_seconds": 0.01918730139732361,
+        "error": null,
+        "mse_baseline": 0.06348887830972672,
+        "mse_test": 0.017219608649611473,
+        "score": 0.7287775574549193,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-19-04",
+        "elapsed_seconds": 0.021948300302028656,
+        "error": null,
+        "mse_baseline": 0.07354915887117386,
+        "mse_test": 0.03431922197341919,
+        "score": 0.5333838958847709,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-20-00",
+        "elapsed_seconds": 0.021634899079799652,
+        "error": null,
+        "mse_baseline": 0.06762948632240295,
+        "mse_test": 0.027578501030802727,
+        "score": 0.5922118807862796,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-20-01",
+        "elapsed_seconds": 0.022136401385068893,
+        "error": null,
+        "mse_baseline": 0.086362823843956,
+        "mse_test": 0.013450248166918755,
+        "score": 0.8442588191509204,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-20-02",
+        "elapsed_seconds": 0.019963398575782776,
+        "error": null,
+        "mse_baseline": 0.08216015994548798,
+        "mse_test": 0.05097823590040207,
+        "score": 0.3795260874099398,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-20-03",
+        "elapsed_seconds": 0.021346598863601685,
+        "error": null,
+        "mse_baseline": 0.07555490732192993,
+        "mse_test": 0.017213257029652596,
+        "score": 0.7721755258555334,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-20-04",
+        "elapsed_seconds": 0.0178213007748127,
+        "error": null,
+        "mse_baseline": 0.07044970989227295,
+        "mse_test": 0.030605226755142212,
+        "score": 0.5655734168112019,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-21-00",
+        "elapsed_seconds": 0.019194502383470535,
+        "error": null,
+        "mse_baseline": 0.050077613443136215,
+        "mse_test": 0.007867376320064068,
+        "score": 0.8428963407172433,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-21-01",
+        "elapsed_seconds": 0.01808900013566017,
+        "error": null,
+        "mse_baseline": 0.04874103143811226,
+        "mse_test": 0.011533869430422783,
+        "score": 0.7633642725622737,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-21-02",
+        "elapsed_seconds": 0.018238097429275513,
+        "error": null,
+        "mse_baseline": 0.032343775033950806,
+        "mse_test": 0.005931124556809664,
+        "score": 0.8166223778583717,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-21-03",
+        "elapsed_seconds": 0.022335298359394073,
+        "error": null,
+        "mse_baseline": 0.03549923375248909,
+        "mse_test": 0.007666849531233311,
+        "score": 0.7840277459313967,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-21-04",
+        "elapsed_seconds": 0.01758980005979538,
+        "error": null,
+        "mse_baseline": 0.03475804626941681,
+        "mse_test": 0.009076623246073723,
+        "score": 0.7388626743943276,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-22-00",
+        "elapsed_seconds": 0.018418598920106888,
+        "error": null,
+        "mse_baseline": 0.02516339160501957,
+        "mse_test": 0.012030063197016716,
+        "score": 0.521922029198283,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-22-01",
+        "elapsed_seconds": 0.01883699744939804,
+        "error": null,
+        "mse_baseline": 0.04379983991384506,
+        "mse_test": 0.012186925858259201,
+        "score": 0.7217586666473881,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-22-02",
+        "elapsed_seconds": 0.020745903253555298,
+        "error": null,
+        "mse_baseline": 0.028362806886434555,
+        "mse_test": 0.006200292147696018,
+        "score": 0.7813935633196617,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-22-03",
+        "elapsed_seconds": 0.018218401819467545,
+        "error": null,
+        "mse_baseline": 0.029946817085146904,
+        "mse_test": 0.00813659094274044,
+        "score": 0.7282986395647354,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-22-04",
+        "elapsed_seconds": 0.027262799441814423,
+        "error": null,
+        "mse_baseline": 0.026966508477926254,
+        "mse_test": 0.005121252965182066,
+        "score": 0.8100883928160694,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-23-00",
+        "elapsed_seconds": 0.01898689940571785,
+        "error": null,
+        "mse_baseline": 0.02979717217385769,
+        "mse_test": 0.00887267105281353,
+        "score": 0.7022311043127141,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-23-01",
+        "elapsed_seconds": 0.020724598318338394,
+        "error": null,
+        "mse_baseline": 0.03052164800465107,
+        "mse_test": 0.005316354800015688,
+        "score": 0.8258169152856507,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-23-02",
+        "elapsed_seconds": 0.019453901797533035,
+        "error": null,
+        "mse_baseline": 0.030560005456209183,
+        "mse_test": 0.0031784549355506897,
+        "score": 0.8959929853381328,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-23-03",
+        "elapsed_seconds": 0.023704998195171356,
+        "error": null,
+        "mse_baseline": 0.02519175410270691,
+        "mse_test": 0.006406436208635569,
+        "score": 0.7456931271035555,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-23-04",
+        "elapsed_seconds": 0.01994509994983673,
+        "error": null,
+        "mse_baseline": 0.015355413779616356,
+        "mse_test": 0.008471408858895302,
+        "score": 0.4483112613910327,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-24-00",
+        "elapsed_seconds": 0.016981400549411774,
+        "error": null,
+        "mse_baseline": 0.06981460750102997,
+        "mse_test": 0.008784894831478596,
+        "score": 0.87416824149088,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-24-01",
+        "elapsed_seconds": 0.018354598432779312,
+        "error": null,
+        "mse_baseline": 0.03630487993359566,
+        "mse_test": 0.0075395358726382256,
+        "score": 0.792327205421734,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-24-02",
+        "elapsed_seconds": 0.02142930030822754,
+        "error": null,
+        "mse_baseline": 0.039270490407943726,
+        "mse_test": 0.015433486551046371,
+        "score": 0.6069953191130903,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-24-03",
+        "elapsed_seconds": 0.01787150278687477,
+        "error": null,
+        "mse_baseline": 0.06712356209754944,
+        "mse_test": 0.009861401282250881,
+        "score": 0.8530858468458589,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-24-04",
+        "elapsed_seconds": 0.01890919730067253,
+        "error": null,
+        "mse_baseline": 0.03573991358280182,
+        "mse_test": 0.012897832319140434,
+        "score": 0.6391196556964559,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-25-00",
+        "elapsed_seconds": 0.018897302448749542,
+        "error": null,
+        "mse_baseline": 0.05413811653852463,
+        "mse_test": 0.009707820601761341,
+        "score": 0.8206841829295397,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-25-01",
+        "elapsed_seconds": 0.0183911994099617,
+        "error": null,
+        "mse_baseline": 0.059583112597465515,
+        "mse_test": 0.014066973701119423,
+        "score": 0.7639100562578232,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-25-02",
+        "elapsed_seconds": 0.019513897597789764,
+        "error": null,
+        "mse_baseline": 0.08845274150371552,
+        "mse_test": 0.008723386563360691,
+        "score": 0.9013779967125806,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-25-03",
+        "elapsed_seconds": 0.033419203013181686,
+        "error": null,
+        "mse_baseline": 0.08690297603607178,
+        "mse_test": 0.01485348492860794,
+        "score": 0.8290796747577144,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-25-04",
+        "elapsed_seconds": 0.03647569939494133,
+        "error": null,
+        "mse_baseline": 0.05835270136594772,
+        "mse_test": 0.0075964173302054405,
+        "score": 0.8698189260756589,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-26-00",
+        "elapsed_seconds": 0.018890298902988434,
+        "error": null,
+        "mse_baseline": 0.038923539221286774,
+        "mse_test": 0.008459343574941158,
+        "score": 0.7826676673246904,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-26-01",
+        "elapsed_seconds": 0.027874097228050232,
+        "error": null,
+        "mse_baseline": 0.026568766683340073,
+        "mse_test": 0.011005356907844543,
+        "score": 0.5857784051848577,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-26-02",
+        "elapsed_seconds": 0.01680229976773262,
+        "error": null,
+        "mse_baseline": 0.04258403927087784,
+        "mse_test": 0.008741233497858047,
+        "score": 0.794729817849009,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-26-03",
+        "elapsed_seconds": 0.01837639883160591,
+        "error": null,
+        "mse_baseline": 0.03347434848546982,
+        "mse_test": 0.01140817441046238,
+        "score": 0.6591965213179782,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-26-04",
+        "elapsed_seconds": 0.017572201788425446,
+        "error": null,
+        "mse_baseline": 0.023765087127685547,
+        "mse_test": 0.008665202185511589,
+        "score": 0.6353810049609744,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-27-00",
+        "elapsed_seconds": 0.020616497844457626,
+        "error": null,
+        "mse_baseline": 0.12185805290937424,
+        "mse_test": 0.04195496812462807,
+        "score": 0.6557062325964624,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-27-01",
+        "elapsed_seconds": 0.019983496516942978,
+        "error": null,
+        "mse_baseline": 0.0793769359588623,
+        "mse_test": 0.033851850777864456,
+        "score": 0.5735303918079121,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-27-02",
+        "elapsed_seconds": 0.018770799040794373,
+        "error": null,
+        "mse_baseline": 0.10437370091676712,
+        "mse_test": 0.04278477653861046,
+        "score": 0.5900808713036897,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-27-03",
+        "elapsed_seconds": 0.01646459847688675,
+        "error": null,
+        "mse_baseline": 0.10703697055578232,
+        "mse_test": 0.0161226037889719,
+        "score": 0.8493735042644017,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-27-04",
+        "elapsed_seconds": 0.02130109816789627,
+        "error": null,
+        "mse_baseline": 0.1112595722079277,
+        "mse_test": 0.039166733622550964,
+        "score": 0.6479697625535166,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-28-00",
+        "elapsed_seconds": 0.01910410076379776,
+        "error": null,
+        "mse_baseline": 0.05026751384139061,
+        "mse_test": 0.007343580946326256,
+        "score": 0.8539100029992034,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-28-01",
+        "elapsed_seconds": 0.025005798786878586,
+        "error": null,
+        "mse_baseline": 0.05018341541290283,
+        "mse_test": 0.01401793397963047,
+        "score": 0.7206660036130926,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-28-02",
+        "elapsed_seconds": 0.017273399978876114,
+        "error": null,
+        "mse_baseline": 0.05397190898656845,
+        "mse_test": 0.01986280269920826,
+        "score": 0.6319788743408844,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-28-03",
+        "elapsed_seconds": 0.020499300211668015,
+        "error": null,
+        "mse_baseline": 0.05241977423429489,
+        "mse_test": 0.013515890575945377,
+        "score": 0.7421604580833391,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-28-04",
+        "elapsed_seconds": 0.021369799971580505,
+        "error": null,
+        "mse_baseline": 0.040436845272779465,
+        "mse_test": 0.024642130360007286,
+        "score": 0.39060205627377603,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-29-00",
+        "elapsed_seconds": 0.01914750039577484,
+        "error": null,
+        "mse_baseline": 0.09021557122468948,
+        "mse_test": 0.010823377408087254,
+        "score": 0.8800276131807588,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-29-01",
+        "elapsed_seconds": 0.021452397108078003,
+        "error": null,
+        "mse_baseline": 0.08507944643497467,
+        "mse_test": 0.024183552712202072,
+        "score": 0.7157532903004334,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-29-02",
+        "elapsed_seconds": 0.023426998406648636,
+        "error": null,
+        "mse_baseline": 0.11859987676143646,
+        "mse_test": 0.02089834399521351,
+        "score": 0.8237911828757587,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-29-03",
+        "elapsed_seconds": 0.01684659719467163,
+        "error": null,
+        "mse_baseline": 0.09779873490333557,
+        "mse_test": 0.018874766305088997,
+        "score": 0.8070039829886875,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-29-04",
+        "elapsed_seconds": 0.021043498069047928,
+        "error": null,
+        "mse_baseline": 0.0951072946190834,
+        "mse_test": 0.0467522069811821,
+        "score": 0.5084266967278323,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-30-00",
+        "elapsed_seconds": 0.017223600298166275,
+        "error": null,
+        "mse_baseline": 0.03716041147708893,
+        "mse_test": 0.012832333333790302,
+        "score": 0.6546773078198551,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-30-01",
+        "elapsed_seconds": 0.021077603101730347,
+        "error": null,
+        "mse_baseline": 0.030886907130479813,
+        "mse_test": 0.008285729214549065,
+        "score": 0.7317397569285096,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-30-02",
+        "elapsed_seconds": 0.03435849770903587,
+        "error": null,
+        "mse_baseline": 0.08292708545923233,
+        "mse_test": 0.010389197617769241,
+        "score": 0.8747188863537636,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-30-03",
+        "elapsed_seconds": 0.02179339900612831,
+        "error": null,
+        "mse_baseline": 0.06175179034471512,
+        "mse_test": 0.01082530990242958,
+        "score": 0.8246964202657155,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-30-04",
+        "elapsed_seconds": 0.019127298146486282,
+        "error": null,
+        "mse_baseline": 0.05002853274345398,
+        "mse_test": 0.012543781660497189,
+        "score": 0.7492674485413828,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-31-00",
+        "elapsed_seconds": 0.017877601087093353,
+        "error": null,
+        "mse_baseline": 0.031575512140989304,
+        "mse_test": 0.005267500877380371,
+        "score": 0.8331776582479421,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-31-01",
+        "elapsed_seconds": 0.028027698397636414,
+        "error": null,
+        "mse_baseline": 0.03037077747285366,
+        "mse_test": 0.01081191934645176,
+        "score": 0.6440025496181062,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-31-02",
+        "elapsed_seconds": 0.018104001879692078,
+        "error": null,
+        "mse_baseline": 0.027984196320176125,
+        "mse_test": 0.004545711912214756,
+        "score": 0.8375614628983511,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-31-03",
+        "elapsed_seconds": 0.017662398517131805,
+        "error": null,
+        "mse_baseline": 0.03910735622048378,
+        "mse_test": 0.009832327254116535,
+        "score": 0.7485811314198088,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-31-04",
+        "elapsed_seconds": 0.03694360330700874,
+        "error": null,
+        "mse_baseline": 0.03672356158494949,
+        "mse_test": 0.006030037999153137,
+        "score": 0.835799205226749,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-32-00",
+        "elapsed_seconds": 0.04199960082769394,
+        "error": null,
+        "mse_baseline": 0.09178543835878372,
+        "mse_test": 0.00919250026345253,
+        "score": 0.8998479450790483,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-32-01",
+        "elapsed_seconds": 0.021897301077842712,
+        "error": null,
+        "mse_baseline": 0.0455796979367733,
+        "mse_test": 0.014473437331616879,
+        "score": 0.6824586825543696,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-32-02",
+        "elapsed_seconds": 0.018410999327898026,
+        "error": null,
+        "mse_baseline": 0.07274909317493439,
+        "mse_test": 0.023805737495422363,
+        "score": 0.6727692888462753,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-32-03",
+        "elapsed_seconds": 0.018404200673103333,
+        "error": null,
+        "mse_baseline": 0.058749113231897354,
+        "mse_test": 0.011221447959542274,
+        "score": 0.8089937474417966,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-32-04",
+        "elapsed_seconds": 0.020372800529003143,
+        "error": null,
+        "mse_baseline": 0.05708978325128555,
+        "mse_test": 0.01235186867415905,
+        "score": 0.783641345776507,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-33-00",
+        "elapsed_seconds": 0.018348000943660736,
+        "error": null,
+        "mse_baseline": 0.045536864548921585,
+        "mse_test": 0.007790927309542894,
+        "score": 0.828909447615286,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-33-01",
+        "elapsed_seconds": 0.02125139907002449,
+        "error": null,
+        "mse_baseline": 0.031092440709471703,
+        "mse_test": 0.006678796373307705,
+        "score": 0.7851954937949551,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-33-02",
+        "elapsed_seconds": 0.021734900772571564,
+        "error": null,
+        "mse_baseline": 0.03193133324384689,
+        "mse_test": 0.007340017706155777,
+        "score": 0.7701311858761744,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-33-03",
+        "elapsed_seconds": 0.018199797719717026,
+        "error": null,
+        "mse_baseline": 0.03321041539311409,
+        "mse_test": 0.007193134166300297,
+        "score": 0.7834072810847246,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-33-04",
+        "elapsed_seconds": 0.020156800746917725,
+        "error": null,
+        "mse_baseline": 0.027319204062223434,
+        "mse_test": 0.004811699502170086,
+        "score": 0.8238711680175328,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-34-00",
+        "elapsed_seconds": 0.021512798964977264,
+        "error": null,
+        "mse_baseline": 0.05762041360139847,
+        "mse_test": 0.021592020988464355,
+        "score": 0.6252713293966999,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-34-01",
+        "elapsed_seconds": 0.020544201135635376,
+        "error": null,
+        "mse_baseline": 0.059532929211854935,
+        "mse_test": 0.04473675414919853,
+        "score": 0.24853766240868935,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-34-02",
+        "elapsed_seconds": 0.018556401133537292,
+        "error": null,
+        "mse_baseline": 0.054541341960430145,
+        "mse_test": 0.01301708072423935,
+        "score": 0.7613355253766351,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-34-03",
+        "elapsed_seconds": 0.03446720167994499,
+        "error": null,
+        "mse_baseline": 0.051874883472919464,
+        "mse_test": 0.012700846418738365,
+        "score": 0.755163856409072,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-34-04",
+        "elapsed_seconds": 0.021727900952100754,
+        "error": null,
+        "mse_baseline": 0.04575761780142784,
+        "mse_test": 0.030033888295292854,
+        "score": 0.34363085889590034,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-35-00",
+        "elapsed_seconds": 0.01874389871954918,
+        "error": null,
+        "mse_baseline": 0.12388299405574799,
+        "mse_test": 0.021255454048514366,
+        "score": 0.8284231487095856,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-35-01",
+        "elapsed_seconds": 0.019461002200841904,
+        "error": null,
+        "mse_baseline": 0.1218281090259552,
+        "mse_test": 0.02202341891825199,
+        "score": 0.8192254719018913,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-35-02",
+        "elapsed_seconds": 0.017606500536203384,
+        "error": null,
+        "mse_baseline": 0.16835486888885498,
+        "mse_test": 0.021379128098487854,
+        "score": 0.8730115247655713,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-35-03",
+        "elapsed_seconds": 0.019699599593877792,
+        "error": null,
+        "mse_baseline": 0.13166697323322296,
+        "mse_test": 0.014659419655799866,
+        "score": 0.8886628947577195,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-35-04",
+        "elapsed_seconds": 0.02191239967942238,
+        "error": null,
+        "mse_baseline": 0.09535615891218185,
+        "mse_test": 0.017464807257056236,
+        "score": 0.8168465733488653,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-36-00",
+        "elapsed_seconds": 0.020469099283218384,
+        "error": null,
+        "mse_baseline": 0.07727600634098053,
+        "mse_test": 0.02651386149227619,
+        "score": 0.6568939992151803,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-36-01",
+        "elapsed_seconds": 0.02183229848742485,
+        "error": null,
+        "mse_baseline": 0.11740356683731079,
+        "mse_test": 0.0252646803855896,
+        "score": 0.7848048311803036,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-36-02",
+        "elapsed_seconds": 0.020729999989271164,
+        "error": null,
+        "mse_baseline": 0.12984704971313477,
+        "mse_test": 0.030308248475193977,
+        "score": 0.7665850048795669,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-36-03",
+        "elapsed_seconds": 0.021246399730443954,
+        "error": null,
+        "mse_baseline": 0.06906179338693619,
+        "mse_test": 0.01667303591966629,
+        "score": 0.7585780052618764,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-36-04",
+        "elapsed_seconds": 0.01921989768743515,
+        "error": null,
+        "mse_baseline": 0.10051612555980682,
+        "mse_test": 0.016337376087903976,
+        "score": 0.8374651231639119,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-37-00",
+        "elapsed_seconds": 0.018488097935914993,
+        "error": null,
+        "mse_baseline": 0.12165391445159912,
+        "mse_test": 0.014466749504208565,
+        "score": 0.8810827455127697,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-37-01",
+        "elapsed_seconds": 0.021638400852680206,
+        "error": null,
+        "mse_baseline": 0.08940047025680542,
+        "mse_test": 0.025018541142344475,
+        "score": 0.7201520185466811,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-37-02",
+        "elapsed_seconds": 0.020805198699235916,
+        "error": null,
+        "mse_baseline": 0.14084434509277344,
+        "mse_test": 0.03710981085896492,
+        "score": 0.7365189860159392,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-37-03",
+        "elapsed_seconds": 0.02390040084719658,
+        "error": null,
+        "mse_baseline": 0.11134655773639679,
+        "mse_test": 0.022349383682012558,
+        "score": 0.7992808746281788,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-37-04",
+        "elapsed_seconds": 0.027061600238084793,
+        "error": null,
+        "mse_baseline": 0.08365420997142792,
+        "mse_test": 0.03091350756585598,
+        "score": 0.6304608270592181,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-38-00",
+        "elapsed_seconds": 0.020629100501537323,
+        "error": null,
+        "mse_baseline": 0.07800683379173279,
+        "mse_test": 0.012677760794758797,
+        "score": 0.8374788441150345,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-38-01",
+        "elapsed_seconds": 0.018794499337673187,
+        "error": null,
+        "mse_baseline": 0.05551359802484512,
+        "mse_test": 0.017234496772289276,
+        "score": 0.689544591136464,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-38-02",
+        "elapsed_seconds": 0.01750360056757927,
+        "error": null,
+        "mse_baseline": 0.049018312245607376,
+        "mse_test": 0.01335957832634449,
+        "score": 0.7274573987899458,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-38-03",
+        "elapsed_seconds": 0.022857699543237686,
+        "error": null,
+        "mse_baseline": 0.03861691430211067,
+        "mse_test": 0.0099901482462883,
+        "score": 0.7413012296080251,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-38-04",
+        "elapsed_seconds": 0.01979139819741249,
+        "error": null,
+        "mse_baseline": 0.0806560069322586,
+        "mse_test": 0.021967897191643715,
+        "score": 0.7276347041319052,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-39-00",
+        "elapsed_seconds": 0.02024579793214798,
+        "error": null,
+        "mse_baseline": 0.05202241986989975,
+        "mse_test": 0.015029575675725937,
+        "score": 0.711094260641611,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-39-01",
+        "elapsed_seconds": 0.0205656997859478,
+        "error": null,
+        "mse_baseline": 0.046440061181783676,
+        "mse_test": 0.01840999536216259,
+        "score": 0.6035751268694712,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-39-02",
+        "elapsed_seconds": 0.018080398440361023,
+        "error": null,
+        "mse_baseline": 0.040876127779483795,
+        "mse_test": 0.0132543183863163,
+        "score": 0.6757442765170923,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-39-03",
+        "elapsed_seconds": 0.01861400157213211,
+        "error": null,
+        "mse_baseline": 0.04402831196784973,
+        "mse_test": 0.00952844973653555,
+        "score": 0.7835835781418694,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-39-04",
+        "elapsed_seconds": 0.019315000623464584,
+        "error": null,
+        "mse_baseline": 0.043632641434669495,
+        "mse_test": 0.013286415487527847,
+        "score": 0.6954936705488849,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-40-00",
+        "elapsed_seconds": 0.016160201281309128,
+        "error": null,
+        "mse_baseline": 0.06845825165510178,
+        "mse_test": 0.02476128563284874,
+        "score": 0.6383009347419781,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-40-01",
+        "elapsed_seconds": 0.028328601270914078,
+        "error": null,
+        "mse_baseline": 0.13641034066677094,
+        "mse_test": 0.02117316797375679,
+        "score": 0.8447832629823899,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-40-02",
+        "elapsed_seconds": 0.05411649867892265,
+        "error": null,
+        "mse_baseline": 0.10238442569971085,
+        "mse_test": 0.013329608365893364,
+        "score": 0.8698082420759136,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-40-03",
+        "elapsed_seconds": 0.03899120166897774,
+        "error": null,
+        "mse_baseline": 0.05779045820236206,
+        "mse_test": 0.013578937388956547,
+        "score": 0.7650314980821257,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-40-04",
+        "elapsed_seconds": 0.020343098789453506,
+        "error": null,
+        "mse_baseline": 0.09537477791309357,
+        "mse_test": 0.03546019643545151,
+        "score": 0.6282015307258363,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-41-00",
+        "elapsed_seconds": 0.023897599428892136,
+        "error": null,
+        "mse_baseline": 0.1500609815120697,
+        "mse_test": 0.04497405141592026,
+        "score": 0.7002948337219632,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-41-01",
+        "elapsed_seconds": 0.022567197680473328,
+        "error": null,
+        "mse_baseline": 0.15668122470378876,
+        "mse_test": 0.03520739823579788,
+        "score": 0.7752928067650819,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-41-02",
+        "elapsed_seconds": 0.015845399349927902,
+        "error": null,
+        "mse_baseline": 0.12251947075128555,
+        "mse_test": 0.07599818706512451,
+        "score": 0.3797052288986721,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-41-03",
+        "elapsed_seconds": 0.021216902881860733,
+        "error": null,
+        "mse_baseline": 0.10073397308588028,
+        "mse_test": 0.01977822557091713,
+        "score": 0.8036588355940721,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-41-04",
+        "elapsed_seconds": 0.02118690311908722,
+        "error": null,
+        "mse_baseline": 0.13906903564929962,
+        "mse_test": 0.052206702530384064,
+        "score": 0.6245986585968896,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-42-00",
+        "elapsed_seconds": 0.021289698779582977,
+        "error": null,
+        "mse_baseline": 0.08370210230350494,
+        "mse_test": 0.031154058873653412,
+        "score": 0.6277983704556382,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-42-01",
+        "elapsed_seconds": 0.034240998327732086,
+        "error": null,
+        "mse_baseline": 0.07876497507095337,
+        "mse_test": 0.027465317398309708,
+        "score": 0.6513003733757512,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-42-02",
+        "elapsed_seconds": 0.031767502427101135,
+        "error": null,
+        "mse_baseline": 0.15259358286857605,
+        "mse_test": 0.03510327264666557,
+        "score": 0.7699557741107704,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-42-03",
+        "elapsed_seconds": 0.03103259950876236,
+        "error": null,
+        "mse_baseline": 0.07453269511461258,
+        "mse_test": 0.030129700899124146,
+        "score": 0.5957518931417651,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-42-04",
+        "elapsed_seconds": 0.019732601940631866,
+        "error": null,
+        "mse_baseline": 0.12058860063552856,
+        "mse_test": 0.03189997375011444,
+        "score": 0.7354644337690749,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-43-00",
+        "elapsed_seconds": 0.019575100392103195,
+        "error": null,
+        "mse_baseline": 0.06133982166647911,
+        "mse_test": 0.011781232431530952,
+        "score": 0.8079350067956076,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-43-01",
+        "elapsed_seconds": 0.016510501503944397,
+        "error": null,
+        "mse_baseline": 0.08013392984867096,
+        "mse_test": 0.013758320361375809,
+        "score": 0.8283084283104831,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-43-02",
+        "elapsed_seconds": 0.023566201329231262,
+        "error": null,
+        "mse_baseline": 0.0629563182592392,
+        "mse_test": 0.016614407300949097,
+        "score": 0.7360962686455884,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-43-03",
+        "elapsed_seconds": 0.02567390352487564,
+        "error": null,
+        "mse_baseline": 0.047576915472745895,
+        "mse_test": 0.009424455463886261,
+        "score": 0.8019111712005585,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-43-04",
+        "elapsed_seconds": 0.022166099399328232,
+        "error": null,
+        "mse_baseline": 0.0707879364490509,
+        "mse_test": 0.0181224774569273,
+        "score": 0.7439891828183066,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-44-00",
+        "elapsed_seconds": 0.01630060002207756,
+        "error": null,
+        "mse_baseline": 0.0582113079726696,
+        "mse_test": 0.013758919201791286,
+        "score": 0.763638377473821,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-44-01",
+        "elapsed_seconds": 0.016101498156785965,
+        "error": null,
+        "mse_baseline": 0.05513963848352432,
+        "mse_test": 0.010206609033048153,
+        "score": 0.814895249338679,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-44-02",
+        "elapsed_seconds": 0.019666500389575958,
+        "error": null,
+        "mse_baseline": 0.06589178740978241,
+        "mse_test": 0.013145973905920982,
+        "score": 0.8004914660431672,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-44-03",
+        "elapsed_seconds": 0.019409798085689545,
+        "error": null,
+        "mse_baseline": 0.03256535157561302,
+        "mse_test": 0.010704681277275085,
+        "score": 0.6712861750495757,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-44-04",
+        "elapsed_seconds": 0.02047010138630867,
+        "error": null,
+        "mse_baseline": 0.06447797268629074,
+        "mse_test": 0.010694134049117565,
+        "score": 0.8341428304337593,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-45-00",
+        "elapsed_seconds": 0.02230750024318695,
+        "error": null,
+        "mse_baseline": 0.05396256595849991,
+        "mse_test": 0.022237621247768402,
+        "score": 0.5879065264451968,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-45-01",
+        "elapsed_seconds": 0.0172853022813797,
+        "error": null,
+        "mse_baseline": 0.05849725753068924,
+        "mse_test": 0.021865172311663628,
+        "score": 0.6262188479486825,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-45-02",
+        "elapsed_seconds": 0.016232598572969437,
+        "error": null,
+        "mse_baseline": 0.0611354261636734,
+        "mse_test": 0.015517126768827438,
+        "score": 0.7461843689895189,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-45-03",
+        "elapsed_seconds": 0.019995398819446564,
+        "error": null,
+        "mse_baseline": 0.03842189908027649,
+        "mse_test": 0.007602394092828035,
+        "score": 0.8021338279780488,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-45-04",
+        "elapsed_seconds": 0.022382400929927826,
+        "error": null,
+        "mse_baseline": 0.0307603869587183,
+        "mse_test": 0.009545393288135529,
+        "score": 0.6896855263574597,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-46-00",
+        "elapsed_seconds": 0.01920289918780327,
+        "error": null,
+        "mse_baseline": 0.07939845323562622,
+        "mse_test": 0.017916489392518997,
+        "score": 0.7743471231190202,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-46-01",
+        "elapsed_seconds": 0.019884899258613586,
+        "error": null,
+        "mse_baseline": 0.05453578010201454,
+        "mse_test": 0.006814328022301197,
+        "score": 0.8750484909255112,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-46-02",
+        "elapsed_seconds": 0.024383798241615295,
+        "error": null,
+        "mse_baseline": 0.07412047684192657,
+        "mse_test": 0.010716438293457031,
+        "score": 0.8554186541957697,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-46-03",
+        "elapsed_seconds": 0.022126201540231705,
+        "error": null,
+        "mse_baseline": 0.055356916040182114,
+        "mse_test": 0.007608241401612759,
+        "score": 0.8625602373497444,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-46-04",
+        "elapsed_seconds": 0.017801597714424133,
+        "error": null,
+        "mse_baseline": 0.04558071494102478,
+        "mse_test": 0.008854829706251621,
+        "score": 0.8057329790085881,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-47-00",
+        "elapsed_seconds": 0.019651897251605988,
+        "error": null,
+        "mse_baseline": 1.3010523319244385,
+        "mse_test": 0.06043834984302521,
+        "score": 0.9535465650688867,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-47-01",
+        "elapsed_seconds": 0.01958709955215454,
+        "error": null,
+        "mse_baseline": 1.3858747482299805,
+        "mse_test": 0.06358525156974792,
+        "score": 0.9541190488888277,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-47-02",
+        "elapsed_seconds": 0.017898600548505783,
+        "error": null,
+        "mse_baseline": 1.2422369718551636,
+        "mse_test": 0.07789819687604904,
+        "score": 0.9372919993198113,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-47-03",
+        "elapsed_seconds": 0.019232098013162613,
+        "error": null,
+        "mse_baseline": 1.2393838167190552,
+        "mse_test": 0.0657343789935112,
+        "score": 0.946962048312422,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-47-04",
+        "elapsed_seconds": 0.020129002630710602,
+        "error": null,
+        "mse_baseline": 1.0429586172103882,
+        "mse_test": 0.04156869649887085,
+        "score": 0.9601434843023254,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-48-00",
+        "elapsed_seconds": 0.020469199866056442,
+        "error": null,
+        "mse_baseline": 0.003829075489193201,
+        "mse_test": 0.0006614101002924144,
+        "score": 0.8272663722198447,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-48-01",
+        "elapsed_seconds": 0.018283698707818985,
+        "error": null,
+        "mse_baseline": 0.002146004932001233,
+        "mse_test": 0.0004871485580224544,
+        "score": 0.7729974657755472,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-48-02",
+        "elapsed_seconds": 0.019854698330163956,
+        "error": null,
+        "mse_baseline": 0.0061306762509047985,
+        "mse_test": 0.002150256186723709,
+        "score": 0.6492628058109637,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-48-03",
+        "elapsed_seconds": 0.032955601811409,
+        "error": null,
+        "mse_baseline": 0.0073639024049043655,
+        "mse_test": 0.002561078639701009,
+        "score": 0.6522117623401245,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-48-04",
+        "elapsed_seconds": 0.03172310069203377,
+        "error": null,
+        "mse_baseline": 0.0030194774735718966,
+        "mse_test": 0.0014078323729336262,
+        "score": 0.5337496685251875,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-49-00",
+        "elapsed_seconds": 0.0391337014734745,
+        "error": null,
+        "mse_baseline": 14.43206787109375,
+        "mse_test": 11.156198501586914,
+        "score": 0.22698544649087565,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-49-01",
+        "elapsed_seconds": 0.030071798712015152,
+        "error": null,
+        "mse_baseline": 12.120254516601562,
+        "mse_test": 8.773706436157227,
+        "score": 0.2761120301442882,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-49-02",
+        "elapsed_seconds": 0.0208515003323555,
+        "error": null,
+        "mse_baseline": 14.63444995880127,
+        "mse_test": 10.153278350830078,
+        "score": 0.3062070402773273,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-49-03",
+        "elapsed_seconds": 0.021551698446273804,
+        "error": null,
+        "mse_baseline": 15.93602466583252,
+        "mse_test": 12.657454490661621,
+        "score": 0.20573325179398633,
+        "status": "passed"
+      },
+      {
+        "case_id": "linear-49-04",
+        "elapsed_seconds": 0.035076502710580826,
+        "error": null,
+        "mse_baseline": 19.216876983642578,
+        "mse_test": 8.992807388305664,
+        "score": 0.532035960059465,
+        "status": "passed"
+      }
+    ],
+    "expected_cases": 250,
+    "failed_cases": 0,
+    "name": "linear",
+    "passed_cases": 250,
+    "reference_cases": 250,
+    "score": 171.1168961977201,
+    "weighted_score": 171.1168961977201
+  },
+  "primary_metric": "linear",
+  "primary_score": 171.1168961977201,
+  "schema_version": 1,
+  "solution_digest": "caa4b54d9e5fbb26c67fcdf3ec7d843dc8ec5149a217325ef2fb3c5d261821f7",
+  "state_safety": {
+    "call_order_permutations": "passed",
+    "checks": [
+      {
+        "call_order": "V(A)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "V(B)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "K(A)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "K(B)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q(A)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q(B)",
+        "kind": "fresh_interface",
+        "status": "passed"
+      },
+      {
+        "call_order": "V-Q-K",
+        "kind": "call_order",
+        "status": "passed"
+      },
+      {
+        "call_order": "K-V-Q",
+        "kind": "call_order",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q-V-K",
+        "kind": "call_order",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q-K-V",
+        "kind": "call_order",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q(A)-K(A)-V(B)",
+        "kind": "cross_sample",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q(A)-K(B)-V(A)",
+        "kind": "cross_sample",
+        "status": "passed"
+      },
+      {
+        "call_order": "Q(A)-K(A)-V(A)-V(B)",
+        "kind": "cross_sample",
+        "status": "passed"
+      }
+    ],
+    "cross_sample_global_mutation": false,
+    "cross_sample_state": "passed",
+    "errors": [],
+    "fresh_interface_calls": "passed",
+    "profile": "fresh_module_per_interface"
+  },
+  "status": "valid",
+  "timing": {
+    "archive_seconds": 0.0,
+    "dataset_seconds": 0.0,
+    "report_seconds": 0.0,
+    "total_seconds": 58.428128000348806,
+    "worker_seconds": 56.18759490177035
+  },
+  "total_score": 310.0164492238869,
+  "transfer_gate": null
+}

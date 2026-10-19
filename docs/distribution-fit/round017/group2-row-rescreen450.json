@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "population": "round017/trace35-group2-row_permute",
+      "test": 3,
+      "tokens": 8,
+      "price": 22507.441549902014,
+      "required_lower_bound": 339.2210730237448,
+      "margin": 22168.22047687827
+    },
+    {
+      "population": "round017/trace35-group2-row_permute",
+      "test": 1,
+      "tokens": 8,
+      "price": 16253.234650728009,
+      "required_lower_bound": 339.2210730237448,
+      "margin": 15914.013577704263
+    },
+    {
+      "population": "round017/trace35-group2-row_permute",
+      "test": 4,
+      "tokens": 8,
+      "price": 10304.941322336494,
+      "required_lower_bound": 339.2210730237448,
+      "margin": 9965.720249312748
+    },
+    {
+      "population": "round017/trace35-group2-row_permute",
+      "test": 2,
+      "tokens": 8,
+      "price": -2986.40375083924,
+      "required_lower_bound": 339.2210730237448,
+      "margin": -3325.6248238629846
+    },
+    {
+      "population": "round017/trace35-group2-row_permute",
+      "test": 0,
+      "tokens": 8,
+      "price": -9034.717996228748,
+      "required_lower_bound": 339.2210730237448,
+      "margin": -9373.939069252494
+    }
+  ],
+  "promote": true,
+  "certificate_columns": 450,
+  "limits": "New endpoint measurements; previous fixed-certificate result retained. No joint feasibility claim."
+}

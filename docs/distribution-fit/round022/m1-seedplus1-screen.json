@@ -1,0 +1,83 @@
+{
+  "certificate_columns": 490,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    374,
+    387,
+    389,
+    392,
+    399,
+    400,
+    402,
+    403,
+    410,
+    412,
+    413,
+    418,
+    419,
+    434,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 0,
+      "tokens": 4,
+      "price": -55821.84278054475,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -56045.916560103
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -69031.63977925036,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -69255.71355880861
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 2,
+      "tokens": 32,
+      "price": -77124.38117958739,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -77348.45495914565
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 3,
+      "tokens": 128,
+      "price": -146223.20936271135,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -146447.2831422696
+    },
+    {
+      "population": "round022/m1-base-row_permute-seedplus1",
+      "test": 4,
+      "tokens": 512,
+      "price": -245794.97853591252,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -246019.05231547076
+    }
+  ],
+  "limits": "Fixed-certificate screen only; other seeds remain unmeasured."
+}

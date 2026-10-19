@@ -1,0 +1,58 @@
+{
+  "diagnostic_only": true,
+  "rows": [
+    {
+      "tokens": 512,
+      "sweeps": [
+        {
+          "sweep": 1,
+          "proxy_before": 4.858953952789307,
+          "proxy_after": 4.19648551940918,
+          "true_metric_error": 3.5649044513702393
+        },
+        {
+          "sweep": 2,
+          "proxy_before": 4.19648551940918,
+          "proxy_after": 4.070290565490723,
+          "true_metric_error": 3.5454275608062744
+        },
+        {
+          "sweep": 3,
+          "proxy_before": 4.070290565490723,
+          "proxy_after": 3.9890613555908203,
+          "true_metric_error": 3.5354654788970947
+        },
+        {
+          "sweep": 4,
+          "proxy_before": 3.9890613555908203,
+          "proxy_after": 3.9282732009887695,
+          "true_metric_error": 3.529546022415161
+        },
+        {
+          "sweep": 5,
+          "proxy_before": 3.9282732009887695,
+          "proxy_after": 3.8790793418884277,
+          "true_metric_error": 3.5269737243652344
+        },
+        {
+          "sweep": 6,
+          "proxy_before": 3.8790793418884277,
+          "proxy_after": 3.838654041290283,
+          "true_metric_error": 3.5263171195983887
+        },
+        {
+          "sweep": 7,
+          "proxy_before": 3.838654041290283,
+          "proxy_after": 3.8049519062042236,
+          "true_metric_error": 3.5248711109161377
+        },
+        {
+          "sweep": 8,
+          "proxy_before": 3.8049519062042236,
+          "proxy_after": 3.7775444984436035,
+          "true_metric_error": 3.525453805923462
+        }
+      ]
+    }
+  ]
+}

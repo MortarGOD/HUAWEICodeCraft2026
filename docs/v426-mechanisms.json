@@ -1,0 +1,203 @@
+{
+  "forced_role_routes": [
+    false,
+    false,
+    true,
+    true
+  ],
+  "compression_limit": {
+    "all_20_seeds": [
+      {
+        "seed": 426100,
+        "before": 3.252078829812739,
+        "compressed": 2.3644833039384427,
+        "rechecked": 2.2011405682888583
+      },
+      {
+        "seed": 426101,
+        "before": 5.675994580189432,
+        "compressed": 2.7080986200268384,
+        "rechecked": 2.6699060694016836
+      },
+      {
+        "seed": 426102,
+        "before": 4.014577002731304,
+        "compressed": 2.4214074602976767,
+        "rechecked": 2.4214074602976767
+      },
+      {
+        "seed": 426103,
+        "before": 7.383420401596293,
+        "compressed": 2.810014816397904,
+        "rechecked": 2.1362995036037984
+      },
+      {
+        "seed": 426104,
+        "before": 4.497546358174901,
+        "compressed": 2.930536102440987,
+        "rechecked": 2.930536102440987
+      },
+      {
+        "seed": 426105,
+        "before": 4.451865815306639,
+        "compressed": 2.3150502939417246,
+        "rechecked": 1.8078628674242019
+      },
+      {
+        "seed": 426106,
+        "before": 6.270205116980114,
+        "compressed": 3.5562275251085778,
+        "rechecked": 2.6395823200936706
+      },
+      {
+        "seed": 426107,
+        "before": 4.231552268531849,
+        "compressed": 2.3428698009839586,
+        "rechecked": 2.331560362624437
+      },
+      {
+        "seed": 426108,
+        "before": 2.8968527614436894,
+        "compressed": 1.536912927576338,
+        "rechecked": 1.387047802032511
+      },
+      {
+        "seed": 426109,
+        "before": 6.122610649331444,
+        "compressed": 1.835701555677034,
+        "rechecked": 1.835701555677034
+      },
+      {
+        "seed": 426110,
+        "before": 5.729866699987058,
+        "compressed": 3.6456659352060967,
+        "rechecked": 3.2122290255869235
+      },
+      {
+        "seed": 426111,
+        "before": 5.7519075161613005,
+        "compressed": 2.9338181996933796,
+        "rechecked": 2.7474561954398844
+      },
+      {
+        "seed": 426112,
+        "before": 3.8463651589768975,
+        "compressed": 3.0385313003784105,
+        "rechecked": 2.851141704188897
+      },
+      {
+        "seed": 426113,
+        "before": 3.095933513713452,
+        "compressed": 2.0012243977223916,
+        "rechecked": 1.9215035460769776
+      },
+      {
+        "seed": 426114,
+        "before": 4.203997817609224,
+        "compressed": 2.8047300250653615,
+        "rechecked": 2.3822012279471036
+      },
+      {
+        "seed": 426115,
+        "before": 3.3702552241672645,
+        "compressed": 2.3124585031021816,
+        "rechecked": 2.3124585031021816
+      },
+      {
+        "seed": 426116,
+        "before": 5.0071110247573145,
+        "compressed": 3.145544559388163,
+        "rechecked": 2.9538776374939815
+      },
+      {
+        "seed": 426117,
+        "before": 4.5289306819204755,
+        "compressed": 3.2746599223374186,
+        "rechecked": 2.6356442447603214
+      },
+      {
+        "seed": 426118,
+        "before": 4.952727587431542,
+        "compressed": 2.0378356157682336,
+        "rechecked": 1.8273279745968691
+      },
+      {
+        "seed": 426119,
+        "before": 4.630553885268144,
+        "compressed": 2.2940513480598916,
+        "rechecked": 1.9571465753809236
+      }
+    ],
+    "note": "Same budget without freezing, not a global optimum or a general error bound."
+  },
+  "scope": {
+    "changed_k_calls": 3,
+    "other_parent_ast_identical": true,
+    "new_imports": 0
+  },
+  "random_risk_and_false_path": [
+    [
+      2,
+      1,
+      1.3498040385712597,
+      0.35386023108079334
+    ],
+    [
+      2,
+      4,
+      7.4301918610833,
+      2.097487059164051
+    ],
+    [
+      8,
+      1,
+      10.42480826084114,
+      4.527812805627027
+    ],
+    [
+      8,
+      4,
+      40.530005343736136,
+      18.214489774749175
+    ],
+    [
+      33,
+      1,
+      47.71774463351231,
+      26.2411221178756
+    ],
+    [
+      33,
+      4,
+      186.78008556554366,
+      103.63807492194663
+    ]
+  ],
+  "coupled_barrier": {
+    "proposed_batch_delta": 0.5,
+    "retained_moves": 1,
+    "parent_codes": [
+      0.0,
+      0.0
+    ],
+    "child_codes": [
+      -1.0,
+      0.0
+    ],
+    "softmax_output_sse_before": 0.06421002000570297,
+    "after": 0.005383044481277466
+  },
+  "delta": {
+    "cases": 64,
+    "worst_absolute_float64_error": 3.979039320256561e-13
+  },
+  "role_isolation": {
+    "three_separate_calibrations": true,
+    "fresh_reversed_role_replay": true,
+    "input_state_rng_preserved": true,
+    "limitation": "Shuffled dummy peers are a stress assumption; actual online dummy source is unknown."
+  },
+  "tests_run": 7,
+  "passed": true,
+  "source_sha256": "cd8d1de312a863cd5951f53b7169dc92f439884251788fcee8721dc55eb7523f"
+}

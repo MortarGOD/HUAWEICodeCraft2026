@@ -1,0 +1,2594 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/v1/attn.pt",
+  "versions": [
+    283,
+    284,
+    302,
+    303,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    314,
+    315,
+    320,
+    321,
+    322,
+    333,
+    365,
+    374,
+    400,
+    408,
+    412,
+    417,
+    418,
+    419,
+    426,
+    435,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444
+  ],
+  "groups_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_groups_total": 10,
+  "results": {
+    "283": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.01969554743519716
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.17724500689307218
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -7.4438975423530955
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": -0.8155767289979263
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": -0.6946493673083914
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.17939528862692994
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.1269111756913665
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.4160392671043589
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.31150827654930435
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": -0.1849892843470746
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.8262808374492403,
+      "wall_seconds": 1.4125944169936702
+    },
+    "284": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": -0.022615423183752346
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.017139079509506137
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -9.191435553794117
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": -0.0003862428434874341
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.4759716951800241
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.17440175043119607
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.09214599767775655
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.37906253858997324
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3139778316245692
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.19345427937431625
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.7602562206453027,
+      "wall_seconds": 1.3493275409564376
+    },
+    "302": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 1.985993791022338
+    },
+    "303": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.1465080823681752
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": -0.043202738174697136
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5457790565181265
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.34904516997686313
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": -0.08779213055675807
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.0672223979768911,
+      "wall_seconds": 1.4591948749730363
+    },
+    "306": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 2.528129749931395
+    },
+    "307": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 2.0947784159798175
+    },
+    "308": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 1.6528661249903962
+    },
+    "309": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 1.6103112499695271
+    },
+    "310": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.3266063750488684
+    },
+    "311": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.4106498961527542
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.38907319889190317
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3007351080396297
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5639245510862281
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.10944326759519876
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3309962764847078
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.8002943918602421
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5704182477509635
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.43284453350944346
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026196425230466468
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.1333105680522278,
+      "wall_seconds": 1.4597560409456491
+    },
+    "314": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.3482241249876097
+    },
+    "315": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.5333793750032783
+    },
+    "320": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.1781515839975327
+    },
+    "321": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.1790619170060381
+    },
+    "322": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.2362157499883324
+    },
+    "333": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.1393374169711024
+    },
+    "365": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 0.9488330839667469
+    },
+    "374": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 0.9186605409486219
+    },
+    "400": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.0104855000972748
+    },
+    "408": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": -0.001849989879499409
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3107111157512197
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.24680053788295386
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20975477153334168
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19216504404265183
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5730564763937972
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3703047017834779
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02667291285473528
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.03675767808651558,
+      "wall_seconds": 0.9621226660674438
+    },
+    "412": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 0.9748228749958798
+    },
+    "417": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.412566439792899
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.10728479494335805
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.19319109136566096
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": -0.1583377067590976
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.023531617426532696,
+      "wall_seconds": 0.9843107500346377
+    },
+    "418": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.02866595719600815
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -0.28467292810996786
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.35103175408670506
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": -0.44236779723649483
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3127278593606614
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6022794304670884
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.18270988951510903,
+      "wall_seconds": 1.1146168750710785
+    },
+    "419": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.2368608328979462
+    },
+    "426": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.3035918155246087
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11391535985601149
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3247962435325499
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6899978247758481
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.570615691585342
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42641192757244806
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.026379993622517982
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09400461743095966,
+      "wall_seconds": 1.04059883300215
+    },
+    "435": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.2187396659282967
+    },
+    "438": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.02866595719600815
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -0.281752700695104
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.35103175408670506
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": -0.4421781467105729
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3130467765503961
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6047817650373081
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.18332684278137554,
+      "wall_seconds": 1.4980128339957446
+    },
+    "439": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.2081752934867605
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.03937870317426248
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.307440852978054
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3237385069285626
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11805458678784501
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.20100065177718765
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.19886276515336007
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5636541202717555
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.3637715110415573
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": -0.21361586332397134
+        }
+      ],
+      "complete": true,
+      "mean_quality": -0.05044205776807344,
+      "wall_seconds": 1.7949188750935718
+    },
+    "440": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.1546339170308784
+    },
+    "441": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.4031899170950055
+    },
+    "442": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.0507965830620378
+    },
+    "443": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.1320609169779345
+    },
+    "444": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.3324808617246114
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 5,
+          "weight": 1.0,
+          "quality": 0.23602700660678194
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 11,
+          "weight": 1.0,
+          "quality": -2.30737057560882
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.5230130805580944
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 9,
+          "weight": 1.0,
+          "quality": 0.11398582753082179
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 40,
+          "weight": 1.0,
+          "quality": 0.3246826391025859
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 27,
+          "weight": 1.0,
+          "quality": 0.6921161315645319
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 45,
+          "weight": 1.0,
+          "quality": 0.5706202069329057
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 37,
+          "weight": 1.0,
+          "quality": 0.42664617989222386
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 42,
+          "weight": 1.0,
+          "quality": 0.02637962891710331
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.09385809872208403,
+      "wall_seconds": 1.4384361669654027
+    }
+  }
+}

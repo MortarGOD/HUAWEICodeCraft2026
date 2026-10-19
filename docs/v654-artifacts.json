@@ -1,0 +1,11 @@
+{
+  "version": 654,
+  "parent": 635,
+  "parent_sha256": "1834d739029be4712531a8779e0be86b20fe41ccbde881c5b9bdeab2342c1f56",
+  "patch_summary": "v635 with the JOINT (GL(d)) acceptance bar relaxed from 1% to 0.1%. The bar was only ever tested on T<=4 banks and the uniform mirror; the official sample has a realistic T and an 86% Q/K share, so it is the bank that should decide.",
+  "source_sha256": "101f096426037d48c98d885ebd7e4b0b7fd4b10d668fa8957cc199bebb1869bd",
+  "archive_sha256": "2741902b7232a8ee1d58cde38fab5e620f37fe1c5fbdd101e242ebed71ab6eeb",
+  "archive_members": [
+    "solution.py"
+  ]
+}

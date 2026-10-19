@@ -1,0 +1,170 @@
+{
+  "complete": true,
+  "sha256": "2892edb7ce7356866d556421d3c9fc8349efe16a8ebf23c9eec4f04541849d8b",
+  "shape": "bank",
+  "rows": [
+    {
+      "group": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "parent": {
+        "calibration": 1.3146826659794897,
+        "dynamic": 0.947599041974172
+      },
+      "candidate": {
+        "calibration": 1.3242254999931902,
+        "dynamic": 0.8137166659580544
+      }
+    },
+    {
+      "group": 1,
+      "shape": [
+        1024,
+        2048
+      ],
+      "candidate": {
+        "calibration": 0.00956016598502174,
+        "dynamic": 0.3482010409934446
+      },
+      "parent": {
+        "calibration": 0.009000499965623021,
+        "dynamic": 0.3069152500247583
+      }
+    },
+    {
+      "group": 2,
+      "shape": [
+        512,
+        2048
+      ],
+      "parent": {
+        "calibration": 0.005843249964527786,
+        "dynamic": 0.34261262498330325
+      },
+      "candidate": {
+        "calibration": 0.005441749992314726,
+        "dynamic": 0.35947104200022295
+      }
+    },
+    {
+      "group": 3,
+      "shape": [
+        512,
+        2048
+      ],
+      "candidate": {
+        "calibration": 0.0062481670174747705,
+        "dynamic": 0.3532460000133142
+      },
+      "parent": {
+        "calibration": 0.006033040990587324,
+        "dynamic": 0.34059641702333465
+      }
+    },
+    {
+      "group": 4,
+      "shape": [
+        2048,
+        512
+      ],
+      "parent": {
+        "calibration": 1.3668079999624752,
+        "dynamic": 0.9781174170202576
+      },
+      "candidate": {
+        "calibration": 1.3222786669502966,
+        "dynamic": 0.8115949170314707
+      }
+    },
+    {
+      "group": 5,
+      "shape": [
+        512,
+        2048
+      ],
+      "candidate": {
+        "calibration": 0.006198750052135438,
+        "dynamic": 0.3400706249522045
+      },
+      "parent": {
+        "calibration": 0.005532084032893181,
+        "dynamic": 0.37165133300004527
+      }
+    },
+    {
+      "group": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "parent": {
+        "calibration": 1.3382301250239834,
+        "dynamic": 0.9895020829862915
+      },
+      "candidate": {
+        "calibration": 1.3573255829978734,
+        "dynamic": 0.8204316659830511
+      }
+    },
+    {
+      "group": 7,
+      "shape": [
+        2048,
+        512
+      ],
+      "candidate": {
+        "calibration": 1.3365596670191735,
+        "dynamic": 0.8077710419893265
+      },
+      "parent": {
+        "calibration": 1.3484344169846736,
+        "dynamic": 1.006921207997948
+      }
+    },
+    {
+      "group": 8,
+      "shape": [
+        1024,
+        2048
+      ],
+      "parent": {
+        "calibration": 0.00925925001502037,
+        "dynamic": 0.3207950420328416
+      },
+      "candidate": {
+        "calibration": 0.0089427909697406,
+        "dynamic": 0.31245508400024846
+      }
+    },
+    {
+      "group": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "candidate": {
+        "calibration": 2.7054730829549953,
+        "dynamic": 1.7048377079772763
+      },
+      "parent": {
+        "calibration": 2.64967308298219,
+        "dynamic": 1.8722519170260057
+      }
+    }
+  ],
+  "totals": {
+    "parent": {
+      "calibration": 8.053496415901463,
+      "dynamic": 7.476962334068958
+    },
+    "candidate": {
+      "calibration": 8.082254123932216,
+      "dynamic": 6.671795790898614
+    }
+  },
+  "ratio": 0.9500073470050542,
+  "score_prediction_allowed": false,
+  "warning": "Linear-only Mac 4-thread timing; do not multiply whole online runtime by this ratio. wide=transposed checkpoint runtime stress, not actual layer quality."
+}

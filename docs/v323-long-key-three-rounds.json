@@ -1,0 +1,80 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "group": 4,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.5700199219513478,
+        "candidate": 0.5660664426157855
+      },
+      "key_seconds": {
+        "parent": 0.11181933298939839,
+        "candidate": 0.30081716598942876
+      },
+      "delta": -0.003953479335562227
+    },
+    {
+      "group": 14,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.3212237371704262,
+        "candidate": 0.4570080243263275
+      },
+      "key_seconds": {
+        "parent": 0.15614808403188363,
+        "candidate": 0.49755983403883874
+      },
+      "delta": 0.1357842871559013
+    },
+    {
+      "group": 19,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.22684215713717898,
+        "candidate": 0.3573358632717198
+      },
+      "key_seconds": {
+        "parent": 0.13336662499932572,
+        "candidate": 0.3270560830133036
+      },
+      "delta": 0.1304937061345408
+    },
+    {
+      "group": 48,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.5405470307858674,
+        "candidate": 0.57722403373709
+      },
+      "key_seconds": {
+        "parent": 0.14423258398892358,
+        "candidate": 0.35140916699310765
+      },
+      "delta": 0.03667700295122256
+    },
+    {
+      "group": 49,
+      "rows": 8192,
+      "source_rows": 2048,
+      "scores": {
+        "parent": 0.547717868650858,
+        "candidate": 0.6282089586726333
+      },
+      "key_seconds": {
+        "parent": 0.1349516250193119,
+        "candidate": 0.34358133299974725
+      },
+      "delta": 0.08049109002177524
+    }
+  ],
+  "delta": 0.3794926069278777,
+  "long_rounds": 3,
+  "sha256": "13cc2ef560b0c20b24a5ff460d7b9dda354afeef783870dacfff420c7572ba5e",
+  "score_prediction_allowed": false,
+  "warning": "Repeated existing projected token sequences, fixed 64 query evaluation, not independent samples or online length-frequency evidence."
+}

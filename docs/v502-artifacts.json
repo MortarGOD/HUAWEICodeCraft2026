@@ -1,0 +1,11 @@
+{
+  "version": 502,
+  "parent": 501,
+  "parent_sha256": "0cae5cf67ff1526d2367e890bc5d0ef62e5bb610b97e88f2a59619ee8b5e137f",
+  "patch": "K-side balancing factor (qs reciprocal) carried fp32; restores exact q*k gauge cancellation between calibration and deployment",
+  "source_sha256": "73444a2484d4f78dd5180ce29f479e752a1636bf86e4a9ef7f2818586fc09b1f",
+  "archive_sha256": "457f171fa0b6169ce447effdd64a1fa5cbbffa99cc4f1e4f60b12a7c766d66f9",
+  "archive_members": [
+    "solution.py"
+  ]
+}

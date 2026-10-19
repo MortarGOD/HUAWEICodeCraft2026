@@ -1,0 +1,118 @@
+{
+  "complete": true,
+  "parent_unchanged": true,
+  "all_states_equal": false,
+  "groups": [
+    {
+      "group": 0,
+      "refinement": 1,
+      "states_equal": true,
+      "full_chosen": [
+        0,
+        4
+      ],
+      "pruned_chosen": [
+        0,
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 1,
+      "refinement": 1,
+      "states_equal": true,
+      "full_chosen": [
+        4
+      ],
+      "pruned_chosen": [
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 11,
+      "refinement": 1,
+      "states_equal": true,
+      "full_chosen": [
+        4,
+        4
+      ],
+      "pruned_chosen": [
+        4,
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 14,
+      "refinement": 1,
+      "states_equal": true,
+      "full_chosen": [
+        4
+      ],
+      "pruned_chosen": [
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 19,
+      "refinement": 1,
+      "states_equal": true,
+      "full_chosen": [
+        4
+      ],
+      "pruned_chosen": [
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 47,
+      "refinement": 0,
+      "states_equal": true,
+      "full_chosen": [
+        4,
+        4
+      ],
+      "pruned_chosen": [
+        4,
+        4
+      ],
+      "old_candidates": 2,
+      "new_candidates": 2
+    },
+    {
+      "group": 48,
+      "refinement": 1,
+      "states_equal": false,
+      "full_chosen": [
+        2
+      ],
+      "pruned_chosen": [
+        0
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    },
+    {
+      "group": 49,
+      "refinement": 1,
+      "states_equal": false,
+      "full_chosen": [
+        2
+      ],
+      "pruned_chosen": [
+        0
+      ],
+      "old_candidates": 2,
+      "new_candidates": 1
+    }
+  ],
+  "warning": "Empirical calibration equality on listed groups, not a proof of global pruning equivalence."
+}

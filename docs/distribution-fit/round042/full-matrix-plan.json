@@ -1,0 +1,13 @@
+{
+  "atoms": [
+    "round003-paired-0",
+    "round003-correlated_noise-0",
+    "round021-paired-0",
+    "round021-correlated_noise-0"
+  ],
+  "versions": 102,
+  "hypothesis": "Actual paired inputs and zero-noise peer reencoding differ materially in role transform selection; measure both sources and both conditions across versions.",
+  "selection": "All source by paired/reencoded-zero controls from predeclared round042; neither source nor adverse control dropped.",
+  "fit_eligible": false,
+  "limits": "Original input hashes preserved; calibration protocol differs. Synthetic protocol coverage, not evidence of online protocol frequency."
+}

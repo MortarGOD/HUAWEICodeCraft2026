@@ -1,0 +1,1352 @@
+[
+  {
+    "branch": "base3.07",
+    "main_versions": [
+      {
+        "commit": "7837ec1b1b7f84167151920ac9c82ed65f8159e2",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "base_1.7",
+    "main_versions": [
+      {
+        "commit": "52b490459d117c7982d2ed7d14cbe791a756c193",
+        "date": "2026-09-06",
+        "message": "Compensate attention Q error in K and refine long-sequence V",
+        "ast_sha256": "8c07a5fce4c1dd8a7693cf990f9c2df988ef4404fe204aea84ea7e354f69cfb3"
+      },
+      {
+        "commit": "fc878866dad2e4619baabc64188b7dc5d3feb8b6",
+        "date": "2026-09-06",
+        "message": "Improve attention with joint value reconstruction",
+        "ast_sha256": "a912ae2494b7b74594392ede47974a98de63e2dbc746f8353a896565765e6061"
+      },
+      {
+        "commit": "8af4fc40909a4d8f7fe39b2e80ba8d5acddb8930",
+        "date": "2026-09-04",
+        "message": "fit attention values by sequence features",
+        "ast_sha256": "177777e7b5ca9edf37445dc44f397389540ea61ea8efccd1f25238e7f13c7b8b"
+      },
+      {
+        "commit": "60d1436200fbf84b042e969238c4505d1a56aa66",
+        "date": "2026-09-04",
+        "message": "Revert \"route attention quantization by tensor features\"",
+        "ast_sha256": "c0d85aa72cf0185ea70d2bb9b97bde73755af45b6a58d00c850e751e0e1f228f"
+      },
+      {
+        "commit": "a9431765d045f022c924bde00db7815bf3031e4e",
+        "date": "2026-09-04",
+        "message": "route attention quantization by tensor features",
+        "ast_sha256": "b60ccdd046c48f83dc5805888e57e8975e396c8282073ed867c5bd0061ad6246"
+      },
+      {
+        "commit": "3cdb42131d99bff08b3208d3e82dba6b66b3dfcd",
+        "date": "2026-09-03",
+        "message": "support variable-row GPTQ and jointly refine attention V",
+        "ast_sha256": "cfcb82ea83a8e215b925338ff74ab630187747bb94a586f0fa1d9a56cf5deb63"
+      },
+      {
+        "commit": "8274b41cb72977dba018bd28f6c970e97e8c0570",
+        "date": "2026-09-03",
+        "message": "probe attention GPTQ on all compatible groups",
+        "ast_sha256": "555b68ea5addf7bb2374b7fffd4d048c3115a0089227db30b15734b52493a5e4"
+      },
+      {
+        "commit": "9d3bb6b50834501fdc0a23c8b084bc9f882ae533",
+        "date": "2026-09-03",
+        "message": "guard linear output fitting by shape",
+        "ast_sha256": "8812a483eec267f9d6f111a1304454aadda9cd1ccb59477208e9821f33353e6a"
+      },
+      {
+        "commit": "761fb1fb65119e642ea721a455f14dd748dd8531",
+        "date": "2026-09-03",
+        "message": "refine attention with feature-gated GPTQ",
+        "ast_sha256": "bf5c79d84faf59ebb6721743856d894b4027d5411f0485040334ad475db7fbd2"
+      },
+      {
+        "commit": "251526d983ac25a347203fb286eb5519a1bc67e9",
+        "date": "2026-09-03",
+        "message": "refine linear coordinates and key centering",
+        "ast_sha256": "3f54a490946a53cd268d018a4ba68fcfcde8e5401de4bbd84f9cb41cb5ec69c4"
+      },
+      {
+        "commit": "fc0d0c83fd1d268ec7c71a542b3d8563d2a7b976",
+        "date": "2026-09-03",
+        "message": "fit adaptive PCA output sketches",
+        "ast_sha256": "41cf9019fa508484dfb38981b7f4c7003bb46b0201bb89569f7f1c0843b327c6"
+      },
+      {
+        "commit": "f96e4dca29aee44a4d82558684737a47d1b8dca1",
+        "date": "2026-09-03",
+        "message": "fit packed linear output sketches",
+        "ast_sha256": "3bb8464c7baa618276214c007a2a975bb85390bd9e162b3f914f36858568add2"
+      },
+      {
+        "commit": "88681a7dff49e5649340957bbc341b5cf1a405c2",
+        "date": "2026-09-03",
+        "message": "fit bounded linear and attention outputs",
+        "ast_sha256": "5c37ad654bf4dda938b6caab80f2935a21db487e2b02c92ccd341f4ede937cda"
+      },
+      {
+        "commit": "e595685ded3580325a8c6ac206d149486db0715a",
+        "date": "2026-09-03",
+        "message": "fit linear outputs with bounded spectral sketches",
+        "ast_sha256": "7bf68321d9191c18f133ee083c81d1633fc8780095760abd9b75e8b7167a1879"
+      },
+      {
+        "commit": "2fabdefe7a204cb1228567c1e7f40120ba0a02f8",
+        "date": "2026-09-03",
+        "message": "optimize long-sequence attention outputs",
+        "ast_sha256": "65e8815801348c5ec169d3bbaa1374d3096f10343925ef698c43234fec2d33b8"
+      },
+      {
+        "commit": "98d74e5d5cc46d41d7f6266db8768f51c96f8ec9",
+        "date": "2026-09-02",
+        "message": "refine linear activations with compact output metric",
+        "ast_sha256": "ed5b81660709aa19db430789fd0a56b618222848779c567baee1ec4a08fa185d"
+      },
+      {
+        "commit": "4ebfb6e3755a50407e840b098e791d2167cb56f5",
+        "date": "2026-09-02",
+        "message": "remove unsupported dynamic linear output fitting",
+        "ast_sha256": "6b6e3b41e050bcaad7a64cd8e90c1c4ac0a422cc1e4792efafda4a11708ed096"
+      },
+      {
+        "commit": "e492b66e21261ec4ee71041b6d5736eb941d690c",
+        "date": "2026-09-02",
+        "message": "refine linear and attention outputs per sample",
+        "ast_sha256": "2a64af344db1650566cbc1c606ebbc96b72328b5c37a1f9610b6cab8787d4ed1"
+      },
+      {
+        "commit": "35eb44468c71c0293f070a89c4661f0b84fec3d8",
+        "date": "2026-09-02",
+        "message": "handle variable attention sequence lengths",
+        "ast_sha256": "066389a8bb69a78d8713ea014706fbe3d3f719311a058add44244e66f88c590c"
+      },
+      {
+        "commit": "8dfa0025692fc074a063e43311a920d1a74829a4",
+        "date": "2026-09-02",
+        "message": "optimize attention value quantization",
+        "ast_sha256": "74c6bbb72f9241a3415035dd38f4ad3fae1281dd482113443b07893c6c788c01"
+      },
+      {
+        "commit": "c1abc31ba0d8f91742e0eb75856fbec21d0d838a",
+        "date": "2026-09-02",
+        "message": "Revert \"regularize attention Hessian refinement\"",
+        "ast_sha256": "7a85301f0924e01d9608bd55dc728bc3a14a3d772e3919e4e51cf9c1a53e98a6"
+      },
+      {
+        "commit": "8c97350aeeb8a50625e147000ed59431c65e98b6",
+        "date": "2026-09-01",
+        "message": "regularize attention Hessian refinement",
+        "ast_sha256": "00b297a4400f5fc0afef8ac42cf4164985efa49ec4364bdffda8f64e24b02cea"
+      },
+      {
+        "commit": "e76538883dc38668aeae035c0895207a595b50dc",
+        "date": "2026-09-01",
+        "message": "extend attention fitting to longer sequences",
+        "ast_sha256": "1b9b634bc94ce8dcf25c4f7d5b1631c0e04fdad4a773d363871d2e54730bf27f"
+      },
+      {
+        "commit": "b954a89993e627a962aafa41b4e64fafd7d439ca",
+        "date": "2026-09-01",
+        "message": "refine attention logits and output fitting",
+        "ast_sha256": "6d728d52448a59823bd75698a7c5f9330af94d583e80767c8235457e2fb63c4b"
+      },
+      {
+        "commit": "87b049e1c2b4bc542e8320116b7ed4dd3d414510",
+        "date": "2026-09-01",
+        "message": "optimize linear and attention quantization",
+        "ast_sha256": "f91d5dd46241492eaae11419f1b08c1215706dd3369e27d4e78886c52b1d1905"
+      },
+      {
+        "commit": "bde080a4ce332bcce938b1e432d3a728fef5c64a",
+        "date": "2026-09-01",
+        "message": "update: 更新文件 solution.py",
+        "ast_sha256": "068cd0ed7d1bff7c26a6c08210c4e5f953adfdd04e0855860621bc8d74c6464f"
+      },
+      {
+        "commit": "bfecb8f7f83059819faf76f7ac1a959780e2a56f",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/attention-fisher-objective",
+    "main_versions": [
+      {
+        "commit": "7fa03a51d2f9ff6492ceefeb8fbbb169912b7332",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/attention-learned-rotation",
+    "main_versions": [
+      {
+        "commit": "52b729c2bd640d44a187b280f60c8f6186ae9755",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/block-hessian-objective",
+    "main_versions": [
+      {
+        "commit": "7e3bd585f5480362d8bb3779f542af617d4a22b2",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/joint-output-optimization",
+    "main_versions": [
+      {
+        "commit": "f56c10e7b7987e34d73cdb96e20551597fdf099f",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/legal-inputisolated-v4",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/legal-inputisolated-v5",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/legal-tensor-recon-v2",
+    "main_versions": [
+      {
+        "commit": "6380429301793f9bca8a3df95d2e395afd8deecc",
+        "date": "2026-08-31",
+        "message": "Repair tree and remove stale remote result records",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/linear-residual-fit-v2",
+    "main_versions": [
+      {
+        "commit": "d7ca50c70b4ff3249b60c825370106c021607675",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/new-paper-implementation",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/non-rrs-paper-baselines",
+    "main_versions": [
+      {
+        "commit": "b64938b70eee593fffac29ef009af908d8000786",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/output-aware-rounding",
+    "main_versions": [
+      {
+        "commit": "829e66b1aae72e26b0a2553da99fa92ff72917dd",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/paper-solution-suite",
+    "main_versions": [
+      {
+        "commit": "ee36324e92af3335392c1cdd5680ea8db3f35db6",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/pca-hadamard-attention",
+    "main_versions": [
+      {
+        "commit": "c6b1e6bf709dd1a4fbee29d5ef367abbf3b37c00",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/qwen-channel-balance",
+    "main_versions": [
+      {
+        "commit": "f173dd32dc8145d8a15f35fae54baed7e7af88c1",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/smoothrot-19k",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/smoothrot-32k",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/smoothrot-32k-v2",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/soar-hif4",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/unrestricted-headadaptive-v2",
+    "main_versions": [
+      {
+        "commit": "30a2f78f724c021cdd3fc9ee34669231cd87defd",
+        "date": "2026-08-26",
+        "message": "add legal adaptive RHT baseline",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "experiment/unrestricted-highscore-v1",
+    "main_versions": [
+      {
+        "commit": "9f7745d27b5336f460eee9e7adf542cde40aa277",
+        "date": "2026-08-20",
+        "message": "optimize Linear quantization with block Hessian objectives",
+        "ast_sha256": "c752cdb37bb27557eedb67a9ba88a9cff3fc53195698924204363fb7ba49cba7"
+      },
+      {
+        "commit": "66b754dfe155c4528f8619b034ebcc4f34ce775a",
+        "date": "2026-08-20",
+        "message": "optimize HiF4 quantization with equivalent channel balancing",
+        "ast_sha256": "0932fb54481f797650936ddc687879b7041adf6e8081e441ce332029b75163c0"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "feature/hif4-solution",
+    "main_versions": [
+      {
+        "commit": "0356893b085e3b439efbcf05f29c43786dace6f0",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  },
+  {
+    "branch": "main",
+    "main_versions": [
+      {
+        "commit": "bfecb8f7f83059819faf76f7ac1a959780e2a56f",
+        "date": "2026-08-29",
+        "message": "Remove failed and constraint-violating solutions",
+        "ast_sha256": "f13c814558c8e3ec688382d80c1ad28db8110510633e8c8d3276494a0722835b"
+      },
+      {
+        "commit": "0817734dc81919fe4a44610673720f9c42ce9462",
+        "date": "2026-08-20",
+        "message": "增加混合尺度与Attention等价变换候选",
+        "ast_sha256": "0138443853547ac098cd1833c709cd57a03430d7411118b32269ea3655fff84f"
+      },
+      {
+        "commit": "cc0cc0f1cb7ef8f00633c8303ff1c0a08709e732",
+        "date": "2026-08-20",
+        "message": "增加Linear固定Hadamard量化候选",
+        "ast_sha256": "5abdcc75c1a1339faa02c4400ffc1715dc95d0610c98b7266aef04b8839a9ec2"
+      },
+      {
+        "commit": "8f02278e54b8c15ebe274c738b2860c172ceaed9",
+        "date": "2026-08-20",
+        "message": "优化分层量化搜索性能",
+        "ast_sha256": "f4f50f953de8acb2e199c9d27b6ba1091efb47ed521b00bd127dfdeb31747ad2"
+      },
+      {
+        "commit": "204528a52cf34f8ee5a641e4c3cb424dd0a1b4dc",
+        "date": "2026-08-19",
+        "message": "添加自动调参框架并更新量化参数",
+        "ast_sha256": "8b0248b912563d09bf09738926d8f72b6d748509c748abe7282d4c0c206b887f"
+      },
+      {
+        "commit": "92dadaaba1d791204b9fc5ab90cf39f7df77e861",
+        "date": "2026-08-19",
+        "message": "实现六接口分层4Bit量化算法",
+        "ast_sha256": "a63865ec4445055c2a41fd8c54b4d41952c0c32c89e77578ad52b53839761059"
+      }
+    ]
+  }
+]

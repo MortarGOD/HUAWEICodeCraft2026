@@ -1,0 +1,92 @@
+{
+  "artifact_sha256": "387a94d7c82197f6b36e4674a8c26e456c0c46f51984628c9dec2b0b3c17171a",
+  "profiles": {
+    "public_integer": {
+      "attention_scores": {
+        "435": 10641.594725307832,
+        "441": 10671.353123468873,
+        "442": 10671.353123468873,
+        "443": 10621.484329578825,
+        "444": 10687.651753674605
+      },
+      "rows": [
+        {
+          "version": 441,
+          "online_total": 21308,
+          "online_delta": 4,
+          "local_delta": 29.75839816104053,
+          "direct_total_linear4450": 15121.353123468873,
+          "parent_anchored_total": 21333.758398161037
+        },
+        {
+          "version": 442,
+          "online_total": 21305,
+          "online_delta": 1,
+          "local_delta": 29.75839816104053,
+          "direct_total_linear4450": 15121.353123468873,
+          "parent_anchored_total": 21333.758398161037
+        },
+        {
+          "version": 443,
+          "online_total": 21304,
+          "online_delta": 0,
+          "local_delta": -20.110395729006996,
+          "direct_total_linear4450": 15071.484329578825,
+          "parent_anchored_total": 21283.88960427099
+        },
+        {
+          "version": 444,
+          "online_total": 21304,
+          "online_delta": 0,
+          "local_delta": 46.05702836677301,
+          "direct_total_linear4450": 15137.651753674605,
+          "parent_anchored_total": 21350.05702836677
+        }
+      ]
+    },
+    "reference_default": {
+      "attention_scores": {
+        "435": 9537.878730740056,
+        "441": 9627.15392522318,
+        "442": 9627.15392522318,
+        "443": 9532.699560992345,
+        "444": 9608.991273671596
+      },
+      "rows": [
+        {
+          "version": 441,
+          "online_total": 21308,
+          "online_delta": 4,
+          "local_delta": 89.27519448312341,
+          "direct_total_linear4450": 14077.15392522318,
+          "parent_anchored_total": 21393.275194483125
+        },
+        {
+          "version": 442,
+          "online_total": 21305,
+          "online_delta": 1,
+          "local_delta": 89.27519448312341,
+          "direct_total_linear4450": 14077.15392522318,
+          "parent_anchored_total": 21393.275194483125
+        },
+        {
+          "version": 443,
+          "online_total": 21304,
+          "online_delta": 0,
+          "local_delta": -5.179169747711057,
+          "direct_total_linear4450": 13982.699560992345,
+          "parent_anchored_total": 21298.82083025229
+        },
+        {
+          "version": 444,
+          "online_total": 21304,
+          "online_delta": 0,
+          "local_delta": 71.11254293153979,
+          "direct_total_linear4450": 14058.991273671596,
+          "parent_anchored_total": 21375.11254293154
+        }
+      ]
+    }
+  },
+  "limits": "Exact materialized tensors evaluated for five versions. Historical original-bank matches are separate; new online receipts not used to refit weights. Anchored totals are diagnostics, not independent forecasts."
+}

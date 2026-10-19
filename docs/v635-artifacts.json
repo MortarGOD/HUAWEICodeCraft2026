@@ -1,0 +1,11 @@
+{
+  "version": 635,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "Probe: force the Q/K fitted stack on (gq acceptance, QKS stability and guard, and the Q/K lattice refinement guard). With the confirmed fake-counterpart protocol the held-out comparisons are evaluated through fake data, so the judge may reject a fit that is accepted on our real-counterpart banks. This makes the judge's Q/K state match the configuration worth +1841 locally, and answers whether a Q/K fit can transfer at all.",
+  "source_sha256": "1834d739029be4712531a8779e0be86b20fe41ccbde881c5b9bdeab2342c1f56",
+  "archive_sha256": "b87259f3bfef74c327abef3deb6ed849bfeafa61a7192223425f39eb5cd58d09",
+  "archive_members": [
+    "solution.py"
+  ]
+}

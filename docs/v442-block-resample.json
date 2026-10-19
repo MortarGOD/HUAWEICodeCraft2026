@@ -1,0 +1,281 @@
+{
+  "complete": true,
+  "source_sha256": "db2b614cbdc1cb3624a1ad15b2dba1722134bff22a4746be531d5f631994ddcb",
+  "dataset": "local_fitted_models_attention_feedback_v2",
+  "mode": "block_resample",
+  "data_sha256": "94cfa5b375c88d53661d9d76f6bc4ea574dfad25e625c93f5671c4e8690a3e10",
+  "groups": [
+    {
+      "group": 0,
+      "fitting": {
+        "calls": 1,
+        "models": 1,
+        "errors": 0
+      },
+      "extra_calibration_seconds": 0.3019372500712052,
+      "active_heads": 2,
+      "cases": [
+        {
+          "test": 0,
+          "mse": [
+            1.5449609236384276e-06,
+            9.354793917282223e-08
+          ],
+          "baseline_mse": 2.3503635020460933e-06,
+          "quality_delta": 0.6175270264374372,
+          "mse_ratio": 0.06055035939194768,
+          "changed": 2055,
+          "v_seconds": [
+            0.0586330828955397,
+            0.17378095805179328
+          ]
+        },
+        {
+          "test": 1,
+          "mse": [
+            2.203581971116364e-06,
+            1.6833905647217762e-07
+          ],
+          "baseline_mse": 5.588915882981382e-06,
+          "quality_delta": 0.364157013141249,
+          "mse_ratio": 0.07639337164611798,
+          "changed": 1306,
+          "v_seconds": [
+            0.051075999974273145,
+            0.09616120799910277
+          ]
+        },
+        {
+          "test": 2,
+          "mse": [
+            2.5900121727318037e-06,
+            3.233472511965374e-07
+          ],
+          "baseline_mse": 1.0000811016652733e-05,
+          "quality_delta": 0.22664811061432477,
+          "mse_ratio": 0.12484391177802394,
+          "changed": 847,
+          "v_seconds": [
+            0.028571750037372112,
+            0.043634916888549924
+          ]
+        },
+        {
+          "test": 3,
+          "mse": [
+            7.431711310346145e-06,
+            1.671103291300824e-06
+          ],
+          "baseline_mse": 3.8701589801348746e-05,
+          "quality_delta": 0.14884680574141596,
+          "mse_ratio": 0.2248611687828048,
+          "changed": 441,
+          "v_seconds": [
+            0.017512209014967084,
+            0.018292416003532708
+          ]
+        },
+        {
+          "test": 4,
+          "mse": [
+            3.6124331472819904e-06,
+            6.903288749526837e-07
+          ],
+          "baseline_mse": 1.7697899238555692e-05,
+          "quality_delta": 0.16511023330742935,
+          "mse_ratio": 0.19109803470607892,
+          "changed": 577,
+          "v_seconds": [
+            0.017813166952691972,
+            0.027994041913188994
+          ]
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "fitting": {
+        "calls": 1,
+        "models": 1,
+        "errors": 0
+      },
+      "extra_calibration_seconds": 3.906025083968416,
+      "active_heads": 2,
+      "cases": [
+        {
+          "test": 0,
+          "mse": [
+            3.275757990195416e-06,
+            6.612286256313382e-07
+          ],
+          "baseline_mse": 1.4585060853278264e-05,
+          "quality_delta": 0.1792607786052818,
+          "mse_ratio": 0.20185515157421396,
+          "changed": 843,
+          "v_seconds": [
+            0.08860195800662041,
+            0.1459700419800356
+          ]
+        },
+        {
+          "test": 1,
+          "mse": [
+            2.353904392293771e-06,
+            4.447342973890045e-07
+          ],
+          "baseline_mse": 7.810009265085682e-06,
+          "quality_delta": 0.24445170679113415,
+          "mse_ratio": 0.1889347327975507,
+          "changed": 2285,
+          "v_seconds": [
+            0.17111766699235886,
+            0.5999566660029814
+          ]
+        },
+        {
+          "test": 2,
+          "mse": [
+            2.905390374507988e-06,
+            5.243517762210104e-07
+          ],
+          "baseline_mse": 1.07371915873955e-05,
+          "quality_delta": 0.22175618073930087,
+          "mse_ratio": 0.18047549851534375,
+          "changed": 1341,
+          "v_seconds": [
+            0.10270241694524884,
+            0.22469004103913903
+          ]
+        },
+        {
+          "test": 3,
+          "mse": [
+            4.857604835706297e-06,
+            9.891514309856575e-07
+          ],
+          "baseline_mse": 2.7083024178864434e-05,
+          "quality_delta": 0.14283683310889547,
+          "mse_ratio": 0.20362945617041625,
+          "changed": 604,
+          "v_seconds": [
+            0.04754999990109354,
+            0.07274245901498944
+          ]
+        },
+        {
+          "test": 4,
+          "mse": [
+            7.3817918746499345e-06,
+            1.9210317532269983e-06
+          ],
+          "baseline_mse": 4.704761158791371e-05,
+          "quality_delta": 0.11606880640941565,
+          "mse_ratio": 0.2602392191283636,
+          "changed": 427,
+          "v_seconds": [
+            0.02874058298766613,
+            0.08786145795602351
+          ]
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "fitting": {
+        "calls": 1,
+        "models": 0,
+        "errors": 0
+      },
+      "extra_calibration_seconds": 7.191603071987629e-05,
+      "active_heads": 0,
+      "cases": [
+        {
+          "test": 0,
+          "mse": [
+            0.005874980241060257,
+            0.005874980241060257
+          ],
+          "baseline_mse": 7.355123671004549e-05,
+          "quality_delta": 0.0,
+          "mse_ratio": 1.0,
+          "changed": 0,
+          "v_seconds": [
+            0.027083249995484948,
+            0.03287112503312528
+          ]
+        },
+        {
+          "test": 1,
+          "mse": [
+            0.0038507545832544565,
+            0.0038507545832544565
+          ],
+          "baseline_mse": 2.2727090254193172e-05,
+          "quality_delta": 0.0,
+          "mse_ratio": 1.0,
+          "changed": 0,
+          "v_seconds": [
+            0.1093760000076145,
+            0.12806054204702377
+          ]
+        },
+        {
+          "test": 2,
+          "mse": [
+            0.004917009733617306,
+            0.004917009733617306
+          ],
+          "baseline_mse": 4.675583113566972e-05,
+          "quality_delta": 0.0,
+          "mse_ratio": 1.0,
+          "changed": 0,
+          "v_seconds": [
+            0.16674479097127914,
+            0.05898412491660565
+          ]
+        },
+        {
+          "test": 3,
+          "mse": [
+            0.008252919651567936,
+            0.008252919651567936
+          ],
+          "baseline_mse": 0.00013193530321586877,
+          "quality_delta": 0.0,
+          "mse_ratio": 1.0,
+          "changed": 0,
+          "v_seconds": [
+            0.0162650840356946,
+            0.023763124947436154
+          ]
+        },
+        {
+          "test": 4,
+          "mse": [
+            0.0044629438780248165,
+            0.0044629438780248165
+          ],
+          "baseline_mse": 3.3076514228014275e-05,
+          "quality_delta": 0.0,
+          "mse_ratio": 1.0,
+          "changed": 0,
+          "v_seconds": [
+            0.07927787501830608,
+            0.08475562499370426
+          ]
+        }
+      ]
+    }
+  ],
+  "return_checks": 60,
+  "state_checks": 15,
+  "limits": "Same retained parent states; V selection uses only V calibration context. Full dynamic inputs, <=64 query scoring. No online score estimate; local timing includes verification overhead separately.",
+  "summary": {
+    "cases": 15,
+    "better": 10,
+    "worse": 0,
+    "changed": 10,
+    "quality_delta": 2.4266634948958843,
+    "mean_mse_ratio": 0.44752539363272414
+  }
+}

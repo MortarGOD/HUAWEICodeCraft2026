@@ -1,0 +1,68 @@
+[
+  {
+    "version": 556,
+    "test": 0,
+    "min_eigenvalue": 0.02576020679295986,
+    "max_eigenvalue": 0.13903944037218807,
+    "condition": 5.3974504742790685,
+    "proxy_before": 0.4304966330528259,
+    "proxy_after": 0.42636924982070923,
+    "mse_before": 0.0020654164254665375,
+    "mse_after": 0.002065759152173996
+  },
+  {
+    "version": 556,
+    "test": 1,
+    "min_eigenvalue": 0.009406534831943151,
+    "max_eigenvalue": 0.34154582553714014,
+    "condition": 36.309420167913785,
+    "proxy_before": 0.7014827728271484,
+    "proxy_after": 0.6963174343109131,
+    "mse_before": 0.0026189805939793587,
+    "mse_after": 0.0026190700009465218
+  },
+  {
+    "version": 556,
+    "test": 2,
+    "min_eigenvalue": 0.022945013431446008,
+    "max_eigenvalue": 0.14698763663369016,
+    "condition": 6.406081960808288,
+    "proxy_before": 0.38090401887893677,
+    "proxy_after": 0.37797975540161133,
+    "mse_before": 0.0017692893743515015,
+    "mse_after": 0.0017723888158798218
+  },
+  {
+    "version": 562,
+    "test": 0,
+    "min_eigenvalue": 0.00041684884825233913,
+    "max_eigenvalue": 0.3085187780059083,
+    "condition": 726.7619736815029,
+    "proxy_before": 0.40835076570510864,
+    "proxy_after": 0.3673715889453888,
+    "mse_before": 0.003653045743703842,
+    "mse_after": 0.00496978685259819
+  },
+  {
+    "version": 562,
+    "test": 1,
+    "min_eigenvalue": 9.871444804524018e-05,
+    "max_eigenvalue": 0.5008944466799908,
+    "condition": 5074.175630809729,
+    "proxy_before": 0.292731374502182,
+    "proxy_after": 0.26128262281417847,
+    "mse_before": 0.024225611239671707,
+    "mse_after": 0.04103503003716469
+  },
+  {
+    "version": 562,
+    "test": 2,
+    "min_eigenvalue": 0.0001138604747297916,
+    "max_eigenvalue": 0.4190191011463558,
+    "condition": 3680.1102589880516,
+    "proxy_before": 0.1913086175918579,
+    "proxy_after": 0.17921829223632812,
+    "mse_before": 0.017276287078857422,
+    "mse_after": 0.019725725054740906
+  }
+]

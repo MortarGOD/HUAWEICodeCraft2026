@@ -1,0 +1,262 @@
+{
+  "before": "52b490459d117c7982d2ed7d14cbe791a756c193",
+  "after": "c09ab6f2f1a5b0fef97d2957b95f12dd21deb4cd",
+  "commits": [
+    "c09ab6f2f1a5b0fef97d2957b95f12dd21deb4cd Extend attention K compensation to medium sequences",
+    "0246ea6bb6ca1a1d4c9af413b417f60bcb8be5a1 Add complete multi-dataset scoring and record V4 online feedback",
+    "341565f05364b184a0a0ba0e94aed25e6f847ffb Add native attention refinement candidate with output guards"
+  ],
+  "source_sha256": {
+    "before": "3eefa057de8bc2d86c19b76b40ead53ecc3655cab67224059dbd1c69890b6726",
+    "after": "35ef5dc700ca47246cc8c1698783fea1c03b68cb05e35b84e7d1b21075ef2282"
+  },
+  "duplicate_top_level_function_names": {},
+  "function_changes": [
+    {
+      "name": "_attention_head_gptq_candidate",
+      "kind": "added",
+      "start": 1561,
+      "end": 1603
+    },
+    {
+      "name": "_attention_k_compensated_gptq",
+      "kind": "changed",
+      "start": 4090,
+      "end": 4171
+    },
+    {
+      "name": "_attention_value_variance_ratio",
+      "kind": "added",
+      "start": 2346,
+      "end": 2365
+    },
+    {
+      "name": "_block_second_moment",
+      "kind": "changed",
+      "start": 1010,
+      "end": 1051
+    },
+    {
+      "name": "_calibrate_attention_head_quantization",
+      "kind": "added",
+      "start": 2251,
+      "end": 2343
+    },
+    {
+      "name": "_calibrate_attention_v_mean",
+      "kind": "added",
+      "start": 2368,
+      "end": 2410
+    },
+    {
+      "name": "_refine_attention_head_quantization",
+      "kind": "added",
+      "start": 1606,
+      "end": 1652
+    },
+    {
+      "name": "_refine_attention_v_cached_mean",
+      "kind": "added",
+      "start": 5001,
+      "end": 5057
+    },
+    {
+      "name": "_refine_attention_v_cached_output",
+      "kind": "added",
+      "start": 5060,
+      "end": 5134
+    },
+    {
+      "name": "_refine_attention_v_compressed_output",
+      "kind": "changed",
+      "start": 4441,
+      "end": 4546
+    },
+    {
+      "name": "_refine_attention_v_mean",
+      "kind": "added",
+      "start": 4955,
+      "end": 4998
+    },
+    {
+      "name": "hif4_calibration_attention",
+      "kind": "changed",
+      "start": 2427,
+      "end": 2889
+    },
+    {
+      "name": "hif4_dynamic_quantize_k",
+      "kind": "changed",
+      "start": 4174,
+      "end": 4414
+    },
+    {
+      "name": "hif4_dynamic_quantize_q",
+      "kind": "changed",
+      "start": 3990,
+      "end": 4064
+    },
+    {
+      "name": "hif4_dynamic_quantize_v",
+      "kind": "changed",
+      "start": 5137,
+      "end": 5159
+    }
+  ],
+  "linear_static_call_scope": {
+    "entrypoints_unchanged": true,
+    "old_function_count": 34,
+    "new_function_count": 34,
+    "closure_names_same": true,
+    "changed_reachable_functions": [
+      "_block_second_moment"
+    ],
+    "block_moment_default_substitution_ast_equal": true,
+    "caveat": "Static direct Name-call closure only; shared block moment default semantics inspected separately."
+  },
+  "block_second_moment_calls": [
+    {
+      "line": 2276,
+      "call": "_block_second_moment(queries, block_size=head_dim)"
+    },
+    {
+      "line": 2277,
+      "call": "_block_second_moment(keys, block_size=head_dim)"
+    },
+    {
+      "line": 1201,
+      "call": "_block_second_moment(smoothed_activations, require_independent_samples=True)"
+    },
+    {
+      "line": 1217,
+      "call": "_block_second_moment([weight_value])"
+    },
+    {
+      "line": 1294,
+      "call": "_block_second_moment(family_activations, require_independent_samples=True)"
+    },
+    {
+      "line": 1320,
+      "call": "_block_second_moment([family_weight])"
+    }
+  ],
+  "imports": {
+    "before": [
+      "from __future__ import annotations",
+      "import math",
+      "from typing import Any",
+      "import torch"
+    ],
+    "after": [
+      "from __future__ import annotations",
+      "import math",
+      "from typing import Any",
+      "import torch"
+    ]
+  },
+  "archives": {
+    "submission.zip": {
+      "zip_sha256": "964d2bbfe8b41f5ecc3d7da98781aa433fd1dc203e8eb6299e227f044ef6f929",
+      "source_sha256": "4a6290da7736de1bba24b2ecf09669d323903c3dbbcf0d3c7201258609b9b5ce",
+      "source_bytes": 203132,
+      "matches_worktree_bytes": false,
+      "matches_worktree_normalized_newlines": true,
+      "matches_worktree_ast": true
+    },
+    "submission-attention-native-v4.zip": {
+      "zip_sha256": "ddb132dc6a090b1bf17ca3d65b8e957c305a0a2b22b736d76e3ab43f697a94a9",
+      "source_sha256": "e24120ff483d77aa7857f4528acd4b8e8ff37236d1f794e9975506f4060272a6",
+      "source_bytes": 203028,
+      "matches_worktree_bytes": false,
+      "matches_worktree_normalized_newlines": false,
+      "matches_worktree_ast": false
+    },
+    "submission-attention-medium-v5.zip": {
+      "zip_sha256": "964d2bbfe8b41f5ecc3d7da98781aa433fd1dc203e8eb6299e227f044ef6f929",
+      "source_sha256": "4a6290da7736de1bba24b2ecf09669d323903c3dbbcf0d3c7201258609b9b5ce",
+      "source_bytes": 203132,
+      "matches_worktree_bytes": false,
+      "matches_worktree_normalized_newlines": true,
+      "matches_worktree_ast": true
+    }
+  },
+  "dataset_hash_checks": {
+    "public_quantizer": {
+      "linear": {
+        "sha256": "9cef09de4e30c2dcef8be85e7d108a4ff026714f2797ada5775992e3d3f6d775",
+        "bytes": 59140090,
+        "matches_manifest": true
+      },
+      "attention": {
+        "sha256": "e18727fbcb45c90a637aea2c17f4fbd7d0358b39e4c2c7f95e143de542769049",
+        "bytes": 58721250,
+        "matches_manifest": true
+      }
+    },
+    "v419_mini_sample": {
+      "linear": {
+        "sha256": "9f815ee72fe9d12b090ecb76ca634c91264d9fb35a83310d5cf2d540c8247bd8",
+        "bytes": 50236229,
+        "matches_manifest": true,
+        "identical_to_root_mini_sample": true
+      },
+      "attention": {
+        "sha256": "c3c301791cbb3c0b06ceed3076463937ae9ed89f62c7dd14d980c26f7d0db245",
+        "bytes": 36461161,
+        "matches_manifest": true,
+        "identical_to_root_mini_sample": true
+      }
+    }
+  },
+  "graph": {
+    "project": "Users-ee-Code-2026-huawei-alogorithm",
+    "generation": "2026-09-07T09:00:46Z",
+    "reference_freshness": "metadata_changed",
+    "root_v422_v419_freshness": "metadata_match",
+    "fallback": "Direct source for changed reference functions and actual call routes; ZIPs read as data."
+  },
+  "donor_recorded_package": {
+    "source_sha256": "4a6290da7736de1bba24b2ecf09669d323903c3dbbcf0d3c7201258609b9b5ce",
+    "prototype_sha256": "c1149254ab174c5b3a34dcafb2853dc801e8a7a2a10ac9bde8b7e3d4553a87c3",
+    "zip_sha256": "964d2bbfe8b41f5ecc3d7da98781aa433fd1dc203e8eb6299e227f044ef6f929",
+    "changed_functions": [
+      "_attention_k_compensated_gptq",
+      "hif4_dynamic_quantize_k"
+    ],
+    "source_bytes": 203132,
+    "zip_bytes": 35544
+  },
+  "recorded_package_identity": {
+    "archive_digest_matches": true,
+    "archived_source_digest_matches": true,
+    "worktree_digest_matches_recorded_prototype": false,
+    "note": "The recorded prototype digest is not the current Git source identity; current source and ZIP are compared directly above."
+  },
+  "donor_recorded_v5_original_attention": {
+    "not_reexecuted": true,
+    "cases": 820,
+    "wins": 2,
+    "ties": 818,
+    "regressions": 0
+  },
+  "compression_difference_math": {
+    "random_cases": 400,
+    "passed": true,
+    "minimum_lower_bound_margin": 0.27105919609933604,
+    "shared_error_example": {
+      "separate_accepts": false,
+      "difference_accepts": true,
+      "approximate_decrease": 0.01990000000000003,
+      "difference_bound": 0.004221
+    },
+    "scope": "Binary64 vector diagnostics of the analytic bound, not donor execution, HiF4, BF16 scoring, or online validation."
+  },
+  "project_source_sha256": {
+    "solution.py": "bd4848d2b9ce1340bef64bcbcf9e4d1b6a225b52b66b7044ff6adaa15b824d86",
+    "solution_v419.py": "abfd6cf0024c8489f444c7db5050830de9f9df2374dd7feb9564ec05e14e7212",
+    "solution_v422.py": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+    "solution_v424.py": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8"
+  },
+  "donor_code_executed": false,
+  "complete": true
+}

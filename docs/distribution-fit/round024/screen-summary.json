@@ -1,0 +1,87 @@
+{
+  "acceptance_relative_tolerance": 0.15,
+  "certificate_columns": 495,
+  "cases": [
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 2,
+      "tokens": 8,
+      "price": 179.92465283431594,
+      "required_lower_bound": 160.3854742483741,
+      "margin": 19.53917858594184
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 4,
+      "tokens": 8,
+      "price": 30.25513683607197,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -130.13033741230214
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 3,
+      "tokens": 8,
+      "price": -46.019073299379485,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -206.40454754775357
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 0,
+      "tokens": 8,
+      "price": -291.79035983903947,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -452.1758340874136
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": -652.2895525886494,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -812.6750268370234
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 1,
+      "tokens": 8,
+      "price": -3537.1605602471154,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -3697.5460344954895
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 2,
+      "tokens": 8,
+      "price": -4227.865378137763,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -4388.250852386138
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 4,
+      "tokens": 8,
+      "price": -6237.101828661266,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -6397.487302909641
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 3,
+      "tokens": 8,
+      "price": -8026.63763142466,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -8187.0231056730345
+    },
+    {
+      "population": "round024/trace35-gain125-seedplus2",
+      "test": 0,
+      "tokens": 8,
+      "price": -10464.9145131437,
+      "required_lower_bound": 160.3854742483741,
+      "margin": -10625.299987392074
+    }
+  ],
+  "limits": "Fixed certificate screening, not joint feasibility."
+}

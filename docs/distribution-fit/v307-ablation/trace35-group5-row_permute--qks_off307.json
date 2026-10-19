@@ -1,0 +1,112 @@
+{
+  "version": 307,
+  "atom": "trace35-group5-row_permute",
+  "source_sha256": "8ea7886a7e86ecbd6eaefb50a2d48158d457e9d2680b829e980f07adb432fd94",
+  "data_sha256": "45fd5e757a25b01a79604e3a0d09da874ef984c894f81a1d179cc007a1a8ba9d",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.0019779487047344446,
+      "player_mse": 0.0011262763291597366,
+      "quality": 0.43058365140417115
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.0014464575797319412,
+      "player_mse": 0.0012897085398435593,
+      "quality": 0.1083675332652554
+    },
+    {
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.002069236012175679,
+      "player_mse": 0.0012590910773724318,
+      "quality": 0.3915188649512377
+    },
+    {
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.001564233680255711,
+      "player_mse": 0.0011223091278225183,
+      "quality": 0.28251824392436664
+    },
+    {
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0017180787399411201,
+      "player_mse": 0.001044982927851379,
+      "quality": 0.3917723887979713
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {}
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {}
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "rf": 1
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {}
+      }
+    }
+  },
+  "calibration_seconds": 0.11888324993196875,
+  "mean_quality": 0.32095213646860044,
+  "wall_seconds": 0.1734771669143811,
+  "experimental_override": "qks_off307",
+  "not_unmodified_version_measurement": true
+}

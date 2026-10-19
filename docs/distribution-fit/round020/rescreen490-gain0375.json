@@ -1,0 +1,83 @@
+{
+  "certificate_columns": 490,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    374,
+    387,
+    389,
+    392,
+    399,
+    400,
+    402,
+    403,
+    410,
+    412,
+    413,
+    418,
+    419,
+    434,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 4,
+      "tokens": 512,
+      "price": -131.20527753622747,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -355.2790570944778
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 3,
+      "tokens": 128,
+      "price": -136.16843310233574,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -360.2422126605861
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 2,
+      "tokens": 32,
+      "price": -153.39118709638436,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -377.46496665463474
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 1,
+      "tokens": 8,
+      "price": -179.13986846887934,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -403.2136480271297
+    },
+    {
+      "population": "round020/true-qk-gain0.375",
+      "test": 0,
+      "tokens": 4,
+      "price": -504.6763270152211,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -728.7501065734715
+    }
+  ],
+  "limits": "Fixed-certificate screening only; joint feasibility requires all-version measurements and fitting."
+}

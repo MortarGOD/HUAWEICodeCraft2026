@@ -1,0 +1,112 @@
+{
+  "round": 23,
+  "atoms": [
+    {
+      "id": "half-scale-seedplus3",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090811,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    },
+    {
+      "id": "half-scale-seedplus4",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090812,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    },
+    {
+      "id": "half-scale-seedplus5",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090813,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    },
+    {
+      "id": "half-scale-seedplus6",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090814,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    374,
+    387,
+    389,
+    392,
+    399,
+    400,
+    402,
+    403,
+    410,
+    412,
+    413,
+    418,
+    419,
+    434,
+    435,
+    436,
+    438,
+    440
+  ],
+  "selection_evidence": "Half-scale seedplus1 is nearest the 490-column certificate boundary; test four unmeasured decoy seeds while preserving exact true data bytes.",
+  "limits": "Adaptive shared-input screening; no per-version adjustment or joint-feasibility claim."
+}

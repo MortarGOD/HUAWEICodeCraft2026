@@ -1,0 +1,485 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 10,
+      "key": "structural-v3/10",
+      "shared_parent_seconds": 4.328941916988697,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 3.239578958018683,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 2.46336799999699,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 14,
+            "error": false,
+            "mode": "scale",
+            "ratios": [
+              0.9997364282608032,
+              1.0004194974899292
+            ]
+          }
+        },
+        "code": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 2.41805395798292,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 11,
+            "error": false,
+            "mode": "code",
+            "ratios": [
+              1.000619649887085,
+              0.9999361634254456
+            ]
+          }
+        },
+        "joint": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 2.4238188749877736,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 36,
+            "error": false,
+            "mode": "joint",
+            "ratios": [
+              0.9999381303787231,
+              0.9994280338287354
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 12,
+      "key": "structural-v3/12",
+      "shared_parent_seconds": 5.4704723749891855,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 2.072441374999471,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 3.389506292005535,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 5,
+            "error": false,
+            "mode": "scale",
+            "ratios": [
+              0.995498538017273,
+              0.9991761445999146
+            ]
+          }
+        },
+        "code": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 3.092730499978643,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 108,
+            "error": false,
+            "mode": "code",
+            "ratios": [
+              0.9984951615333557,
+              0.9976189732551575
+            ]
+          }
+        },
+        "joint": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 2.53765775001375,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 109,
+            "error": false,
+            "mode": "joint",
+            "ratios": [
+              0.9984027147293091,
+              0.9975610971450806
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 19,
+      "key": "structural-v3/19",
+      "shared_parent_seconds": 4.354020999977365,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 1.2990103340125643,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 1.331355625006836,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "scale"
+          }
+        },
+        "code": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 1.4178077089600265,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "code"
+          }
+        },
+        "joint": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 1.5919071669923142,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "joint"
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 0,
+      "key": "attention/qwen3.6-35b-a3b/202609143/feedback/base",
+      "shared_parent_seconds": 9.415938916965388,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.9458725429668555,
+            0.9523787290971174,
+            0.955432015955053,
+            0.9424514641839117,
+            0.921141888192291
+          ],
+          "seconds": 3.4139942500041798,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.9458761279265938,
+            0.9523757444971049,
+            0.9554375404880155,
+            0.9424535381752842,
+            0.9211420028749568
+          ],
+          "seconds": 4.0759450000477955,
+          "checks": 18,
+          "debug": {
+            "accepted": 1,
+            "changed_queries": 30,
+            "error": false,
+            "mode": "scale",
+            "ratios": [
+              1.0025802850723267,
+              0.9802529215812683
+            ]
+          }
+        },
+        "code": {
+          "scores": [
+            0.9458725429668555,
+            0.9523787290971174,
+            0.955432015955053,
+            0.9424514641839117,
+            0.921141888192291
+          ],
+          "seconds": 2.7513510410208255,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 126,
+            "error": false,
+            "mode": "code",
+            "ratios": [
+              0.9962811470031738,
+              0.9951205253601074
+            ]
+          }
+        },
+        "joint": {
+          "scores": [
+            0.9458725429668555,
+            0.9523787290971174,
+            0.955432015955053,
+            0.9424514641839117,
+            0.921141888192291
+          ],
+          "seconds": 2.318798166990746,
+          "checks": 18,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 126,
+            "error": false,
+            "mode": "joint",
+            "ratios": [
+              0.9974721670150757,
+              0.9966821074485779
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 19,
+      "key": "attention/deepseek-v4-flash-0731/203309365/feedback/v_tail2_sink8",
+      "shared_parent_seconds": 4.839655500021763,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.29436936188171137,
+            0.14655366029183595,
+            0.23436900109163544,
+            0.3593345222066559,
+            0.3673251682605456
+          ],
+          "seconds": 5.670481875014957,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.29436936188171137,
+            0.14655366029183595,
+            0.23436900109163544,
+            0.3593345222066559,
+            0.3673251682605456
+          ],
+          "seconds": 5.744955125031993,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "scale"
+          }
+        },
+        "code": {
+          "scores": [
+            0.29436936188171137,
+            0.14655366029183595,
+            0.23436900109163544,
+            0.3593345222066559,
+            0.3673251682605456
+          ],
+          "seconds": 6.218294542049989,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "code"
+          }
+        },
+        "joint": {
+          "scores": [
+            0.29436936188171137,
+            0.14655366029183595,
+            0.23436900109163544,
+            0.3593345222066559,
+            0.3673251682605456
+          ],
+          "seconds": 4.832898207998369,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "joint"
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 49,
+      "key": "attention/deepseek-v4-flash-0731/203709180/feedback/tail8",
+      "shared_parent_seconds": 5.009160500019789,
+      "versions": {
+        "parent": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 3.2756430419976823,
+          "checks": 16,
+          "debug": {}
+        },
+        "scale": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 5.166289750020951,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "scale"
+          }
+        },
+        "code": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 5.7234234170173295,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "code"
+          }
+        },
+        "joint": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 5.822865833994001,
+          "checks": 16,
+          "debug": {
+            "accepted": 0,
+            "changed_queries": 0,
+            "error": false,
+            "mode": "joint"
+          }
+        }
+      }
+    }
+  ],
+  "timing": "Shared full v387 calibration recorded separately; local timings are not online predictions.",
+  "hashes": {
+    "387": "20d5f35ac5b0559415bc4cca50ca58705cdf242d152fbfe0fab7642a0d6a1dfa",
+    "395": "201f57736402603fba451ad0de299d8aa72c13b5f22d5085ff37be109bcc80be"
+  }
+}

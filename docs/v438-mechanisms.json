@@ -1,0 +1,30 @@
+{
+  "dual_metric_checks": [
+    {
+      "d": 64,
+      "u_max_error": 5.056085150556555e-08,
+      "fallback": false
+    },
+    {
+      "d": 96,
+      "u_max_error": 1.3706034551752566e-07,
+      "fallback": false
+    },
+    {
+      "d": 128,
+      "u_max_error": 5.12052208412328e-08,
+      "fallback": false
+    },
+    {
+      "d": 512,
+      "u_max_error": 5.021850668640582e-08,
+      "fallback": false
+    }
+  ],
+  "changed_values": {
+    "q": 1988,
+    "k": 1001,
+    "v": 0
+  },
+  "fresh_role_state_input_rng_checks": true
+}

@@ -1,0 +1,360 @@
+{
+  "warning": "oracle diagnostics only; component gains are not additive or deployable",
+  "cases": [
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1,
+      "player": 0.21236691000375105,
+      "perfect_qk": 0.21236691000375105,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 10,
+      "player": 0.2465210949251221,
+      "perfect_qk": 0.25293922092494303,
+      "perfect_v": 0.9937002095993717
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 128,
+      "player": 0.18123400256100253,
+      "perfect_qk": 0.19082662673469789,
+      "perfect_v": 0.9907202734028253
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 512,
+      "player": 0.19310698102166607,
+      "perfect_qk": 0.2101013177575516,
+      "perfect_v": 0.9837785253758344
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1024,
+      "player": 0.37003023270775975,
+      "perfect_qk": 0.3970786894993931,
+      "perfect_v": 0.9745311440365654
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1,
+      "player": 0.10569380786859024,
+      "perfect_qk": 0.10569380786859024,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 10,
+      "player": 0.21063085624223668,
+      "perfect_qk": 0.21705848322476887,
+      "perfect_v": 0.9923480192734416
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 128,
+      "player": 0.346630550611238,
+      "perfect_qk": 0.3555888346856824,
+      "perfect_v": 0.9910302027365356
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 512,
+      "player": 0.26456137156839754,
+      "perfect_qk": 0.2814900085097529,
+      "perfect_v": 0.9839878652863556
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1024,
+      "player": 0.2790551582607371,
+      "perfect_qk": 0.30829928876343143,
+      "perfect_v": 0.9715644607087011
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1,
+      "player": 0.17219003476245653,
+      "perfect_qk": 0.17219003476245653,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 10,
+      "player": 0.07350002683026892,
+      "perfect_qk": 0.08062515225498121,
+      "perfect_v": 0.9921716690250253
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 128,
+      "player": 0.24685856863514957,
+      "perfect_qk": 0.2559749415011535,
+      "perfect_v": 0.991234446709641
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 512,
+      "player": 0.22083650374191946,
+      "perfect_qk": 0.2386232951727275,
+      "perfect_v": 0.9827821694089749
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1024,
+      "player": 0.23491445254310853,
+      "perfect_qk": 0.26379041755598953,
+      "perfect_v": 0.9725530785533104
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1,
+      "player": 0.04922581222590173,
+      "perfect_qk": 0.04922581222590173,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 10,
+      "player": 0.2664735257728237,
+      "perfect_qk": 0.2727345510883226,
+      "perfect_v": 0.9939558352077619
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 128,
+      "player": 0.07141710256653186,
+      "perfect_qk": 0.08156424058680682,
+      "perfect_v": 0.9896973778690854
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 512,
+      "player": 0.20288841109468234,
+      "perfect_qk": 0.21995019249919825,
+      "perfect_v": 0.9833454940503149
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1024,
+      "player": 0.21601722837482945,
+      "perfect_qk": 0.2442483519168829,
+      "perfect_v": 0.9726887771388222
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1,
+      "player": 0.17861542251786156,
+      "perfect_qk": 0.17861542251786156,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 10,
+      "player": 0.1844300859419108,
+      "perfect_qk": 0.19406848015819803,
+      "perfect_v": 0.9923812299414441
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 128,
+      "player": 0.27237421474254664,
+      "perfect_qk": 0.28199940964476283,
+      "perfect_v": 0.9912549160858121
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 512,
+      "player": 0.27729413822422055,
+      "perfect_qk": 0.292248399238294,
+      "perfect_v": 0.9856749151147077
+    },
+    {
+      "model": "Qwen/Qwen3.6-35B-A3B",
+      "rows": 1024,
+      "player": 0.2231715514689236,
+      "perfect_qk": 0.25129363296439206,
+      "perfect_v": 0.9729773908414
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1,
+      "player": 0.12437852869301425,
+      "perfect_qk": 0.12437852869301425,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 10,
+      "player": 0.34011079660243976,
+      "perfect_qk": 0.47229156423985336,
+      "perfect_v": 0.8594798230590825
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 128,
+      "player": 0.47129750074083765,
+      "perfect_qk": 0.6013955629812093,
+      "perfect_v": 0.8710183885914219
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 512,
+      "player": 0.6423909208239225,
+      "perfect_qk": 0.7583670909791105,
+      "perfect_v": 0.8874823839212298
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1024,
+      "player": 0.725503786770969,
+      "perfect_qk": 0.8361891144525272,
+      "perfect_v": 0.8943552304453094
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1,
+      "player": 0.08975544163375074,
+      "perfect_qk": 0.08975544163375074,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 10,
+      "player": 0.4101346208339756,
+      "perfect_qk": 0.5218532228974047,
+      "perfect_v": 0.8890068910043821
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 128,
+      "player": 0.5213588700232784,
+      "perfect_qk": 0.6435582352751273,
+      "perfect_v": 0.8789450669126622
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 512,
+      "player": 0.6491013705521436,
+      "perfect_qk": 0.7629383725654009,
+      "perfect_v": 0.8898854654197846
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1024,
+      "player": 0.7423829543408106,
+      "perfect_qk": 0.8481722770973018,
+      "perfect_v": 0.899915646153172
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1,
+      "player": 0.11368363437328954,
+      "perfect_qk": 0.11368363437328954,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 10,
+      "player": 0.3920324122109858,
+      "perfect_qk": 0.5153889909302277,
+      "perfect_v": 0.8742631706238113
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 128,
+      "player": 0.5442193250559869,
+      "perfect_qk": 0.6625974046391564,
+      "perfect_v": 0.8831303643908848
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 512,
+      "player": 0.6651420009170069,
+      "perfect_qk": 0.7767774015869424,
+      "perfect_v": 0.8931605903281803
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1024,
+      "player": 0.7327927216735011,
+      "perfect_qk": 0.8401399030660593,
+      "perfect_v": 0.8995048293799629
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1,
+      "player": 0.17496184063901712,
+      "perfect_qk": 0.17496184063901712,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 10,
+      "player": 0.4295738437532436,
+      "perfect_qk": 0.5157993281791893,
+      "perfect_v": 0.9102024051544533
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 128,
+      "player": 0.48273546480257495,
+      "perfect_qk": 0.6127714243160156,
+      "perfect_v": 0.8709158706135325
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 512,
+      "player": 0.6545972387625023,
+      "perfect_qk": 0.7726496271984924,
+      "perfect_v": 0.8860806961319898
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1024,
+      "player": 0.6969672547483604,
+      "perfect_qk": 0.8241318759970406,
+      "perfect_v": 0.8774906029679435
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1,
+      "player": 0.1075451011661517,
+      "perfect_qk": 0.1075451011661517,
+      "perfect_v": 1.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 10,
+      "player": 0.27895311239971216,
+      "perfect_qk": 0.4088014939771896,
+      "perfect_v": 0.8709019765166252
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 128,
+      "player": 0.5211118711929966,
+      "perfect_qk": 0.6401780054789044,
+      "perfect_v": 0.8829146702965774
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 512,
+      "player": 0.691845081106687,
+      "perfect_qk": 0.786070910737834,
+      "perfect_v": 0.9088628920103192
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "rows": 1024,
+      "player": 0.7360647461804167,
+      "perfect_qk": 0.8403154926180666,
+      "perfect_v": 0.9004775424284007
+    }
+  ],
+  "totals": {
+    "player": 17.23867848521121,
+    "perfect_qk": 19.85930736777877,
+    "perfect_v": 47.430372506715656
+  }
+}

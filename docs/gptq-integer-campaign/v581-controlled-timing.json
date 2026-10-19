@@ -1,0 +1,30 @@
+{
+  "order": "ABBA, sequential, same group15, 4 torch threads",
+  "rows": [
+    {
+      "version": 581,
+      "calibration_seconds": 8.673867292003706,
+      "dynamic_and_validation_seconds": 3.0265136669622734,
+      "total_seconds": 11.70038095896598
+    },
+    {
+      "version": 554,
+      "calibration_seconds": 18.381326291011646,
+      "dynamic_and_validation_seconds": 22.35898204194382,
+      "total_seconds": 40.740308332955465
+    },
+    {
+      "version": 554,
+      "calibration_seconds": 22.237959625083022,
+      "dynamic_and_validation_seconds": 21.525363124907017,
+      "total_seconds": 43.76332274999004
+    },
+    {
+      "version": 581,
+      "calibration_seconds": 22.866946791065857,
+      "dynamic_and_validation_seconds": 2.724113959004171,
+      "total_seconds": 25.591060750070028
+    }
+  ],
+  "limits": "Local relative timings only; no proof of online 300-second limit"
+}

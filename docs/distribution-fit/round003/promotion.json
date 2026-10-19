@@ -1,0 +1,82 @@
+{
+  "atom": "trace35-group3-row_permute",
+  "decision": "fill all 102 retained versions, reusing 30 screening measurements",
+  "evidence": [
+    {
+      "from": 387,
+      "research_parent": 387,
+      "to": 388,
+      "parent_attention_proxy": false,
+      "online_total_delta": -44.0,
+      "linear_delta": 0.0,
+      "target": -44.0,
+      "tolerance": 2.2,
+      "direction_required": true,
+      "available_case_pairs": 75,
+      "minimum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 2,
+        "tokens": 8,
+        "delta": -154.68890694123743
+      },
+      "maximum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 3,
+        "tokens": 8,
+        "delta": 306.8124928587906
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 387,
+      "research_parent": 387,
+      "to": 390,
+      "parent_attention_proxy": false,
+      "online_total_delta": -60.0,
+      "linear_delta": 0.0,
+      "target": -60.0,
+      "tolerance": 3.0,
+      "direction_required": true,
+      "available_case_pairs": 75,
+      "minimum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 2,
+        "tokens": 8,
+        "delta": -154.68890694123743
+      },
+      "maximum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 3,
+        "tokens": 8,
+        "delta": 306.8124928587906
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 387,
+      "research_parent": 387,
+      "to": 393,
+      "parent_attention_proxy": false,
+      "online_total_delta": -88.0,
+      "linear_delta": 0.0,
+      "target": -88.0,
+      "tolerance": 4.4,
+      "direction_required": true,
+      "available_case_pairs": 65,
+      "minimum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 0,
+        "tokens": 8,
+        "delta": -124.81240617852468
+      },
+      "maximum": {
+        "population": "round003/trace35-group3-row_permute",
+        "test": 3,
+        "tokens": 8,
+        "delta": 31.95558722815933
+      },
+      "outside_available_support": false
+    }
+  ],
+  "limits": "Per-edge range coverage is not joint feasibility; complete matrix fitting pending."
+}

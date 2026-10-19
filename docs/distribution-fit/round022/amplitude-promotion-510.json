@@ -1,0 +1,39 @@
+{
+  "certificate_sha256": "56ada319b6bc316ead45ea8e3e4fdf675569bffd4b4cc1d1cb80488154f93ed8",
+  "current_directions": 98,
+  "current_amplitude_matches": 64,
+  "cases": [
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 4,
+      "margin": 24.874818177745112,
+      "in_complete_support": false
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 3,
+      "margin": 7.439975446652539,
+      "in_complete_support": false
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 0,
+      "margin": -33.71144438980244,
+      "in_complete_support": false
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 1,
+      "margin": -48.00911648847193,
+      "in_complete_support": false
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 2,
+      "margin": -127.59372244096826,
+      "in_complete_support": false
+    }
+  ],
+  "action": "Complete all 102 versions for this immutable atom, then jointly fit while preserving directions.",
+  "limits": "Positive certificate margin is a screening result, not proof of score-fit improvement."
+}

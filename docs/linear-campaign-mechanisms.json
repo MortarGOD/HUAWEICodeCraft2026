@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "records": {
+    "L1": {
+      "scales": 255,
+      "octet_assignments": 8,
+      "blocks": 5,
+      "max_relative_error": 1.9507287687378467e-16
+    },
+    "L2_joint": {
+      "before": [
+        0.0132312485948205,
+        0.01314454898238182
+      ],
+      "fractions": [
+        0,
+        0.25,
+        1
+      ],
+      "actual_reencoded_losses": [
+        [
+          0.013062817975878716,
+          0.013144643977284431
+        ],
+        [
+          0.013063360005617142,
+          0.01316354051232338
+        ],
+        [
+          0.01312217302620411,
+          0.01327250711619854
+        ]
+      ],
+      "changed_A_values": [
+        86,
+        164,
+        164
+      ]
+    },
+    "L4": {
+      "equivalent_blocks": 200,
+      "transformed_input_rejected": true,
+      "same_scales_different_distributions": true
+    },
+    "L3_rotation": {
+      "pairs_per_block": 8,
+      "orthogonal": true,
+      "continuous_aw_preserved": true
+    },
+    "deployment": {
+      "same_w_all_grams_p_and_actual_A_equal": true,
+      "rotation_changed_W_values": 184,
+      "parent_fold_loss": [
+        0.014779986813664436,
+        0.014668460935354233
+      ],
+      "trial_fold_loss": [
+        0.015123052522540092,
+        0.016037344932556152
+      ],
+      "state_and_rng_unchanged": true
+    },
+    "scope": {
+      "versions": [
+        427,
+        428
+      ],
+      "v422_prefix": true,
+      "attention_and_dynamic_code_unchanged": true,
+      "overbudget_skips": true
+    }
+  }
+}

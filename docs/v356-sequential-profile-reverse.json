@@ -1,0 +1,33 @@
+{
+  "groups": [
+    0,
+    1,
+    5,
+    14,
+    19,
+    49
+  ],
+  "results": {
+    "356": {
+      "timing": {
+        "calibration": 20.974024668044876,
+        "q": 5.507386210025288,
+        "k": 2.06859675119631,
+        "v": 1.727140037168283
+      },
+      "score": 17.80524433884444,
+      "evaluation_seconds": 33.38131158304168
+    },
+    "353": {
+      "timing": {
+        "calibration": 14.472286582924426,
+        "q": 4.362190207990352,
+        "k": 1.7260579970898107,
+        "v": 1.0564554142183624
+      },
+      "score": 17.80228200861345,
+      "evaluation_seconds": 24.128983917005826
+    }
+  },
+  "warning": "Local 4-thread single pass; not an online 96-core or whole-suite guarantee."
+}

@@ -1,0 +1,172 @@
+{
+  "pending_full_matrix": [
+    {
+      "round": "round003",
+      "atom": "trace25-group1-row_permute"
+    },
+    {
+      "round": "round003",
+      "atom": "trace25-group8-correlated_noise"
+    },
+    {
+      "round": "round005",
+      "atom": "rank8-strength4-length128"
+    }
+  ],
+  "evidence": [
+    {
+      "from": 310,
+      "research_parent": 310,
+      "to": 311,
+      "parent_attention_proxy": false,
+      "online_total_delta": -4995.0,
+      "linear_delta": 0.0,
+      "target": -4995.0,
+      "tolerance": 249.75,
+      "direction_required": true,
+      "available_case_pairs": 210,
+      "minimum": {
+        "population": "round003/trace25-group8-correlated_noise",
+        "test": 1,
+        "tokens": 4,
+        "delta": -18892.733432701054
+      },
+      "maximum": {
+        "population": "round001/m0-diffuse-row_permute",
+        "test": 4,
+        "tokens": 512,
+        "delta": 9288.092245635693
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 321,
+      "research_parent": 321,
+      "to": 322,
+      "parent_attention_proxy": false,
+      "online_total_delta": 160.0,
+      "linear_delta": 0.0,
+      "target": 160.0,
+      "tolerance": 8.0,
+      "direction_required": true,
+      "available_case_pairs": 135,
+      "minimum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 1,
+        "tokens": 4,
+        "delta": -731.8439688728251
+      },
+      "maximum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 3,
+        "tokens": 4,
+        "delta": 652.6680140175046
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 322,
+      "research_parent": 324,
+      "to": 341,
+      "parent_attention_proxy": true,
+      "online_total_delta": -83.0,
+      "linear_delta": 0.0,
+      "target": -83.0,
+      "tolerance": 4.15,
+      "direction_required": true,
+      "available_case_pairs": 135,
+      "minimum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 0,
+        "tokens": 4,
+        "delta": -177.49022368002133
+      },
+      "maximum": {
+        "population": "round001/m0-diffuse-row_permute",
+        "test": 0,
+        "tokens": 4,
+        "delta": 14775.000934382577
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 322,
+      "research_parent": 324,
+      "to": 365,
+      "parent_attention_proxy": true,
+      "online_total_delta": 231.0,
+      "linear_delta": 0.0,
+      "target": 231.0,
+      "tolerance": 11.55,
+      "direction_required": true,
+      "available_case_pairs": 125,
+      "minimum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 3,
+        "tokens": 4,
+        "delta": -214.5338006997413
+      },
+      "maximum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 2,
+        "tokens": 4,
+        "delta": 408.1178358186388
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 365,
+      "research_parent": 365,
+      "to": 381,
+      "parent_attention_proxy": false,
+      "online_total_delta": 65.0,
+      "linear_delta": 0.0,
+      "target": 65.0,
+      "tolerance": 3.25,
+      "direction_required": true,
+      "available_case_pairs": 120,
+      "minimum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 4,
+        "tokens": 4,
+        "delta": -498.58121194963354
+      },
+      "maximum": {
+        "population": "round003/trace25-group1-row_permute",
+        "test": 0,
+        "tokens": 4,
+        "delta": 372.1607520376202
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 419,
+      "research_parent": 422,
+      "to": 430,
+      "parent_attention_proxy": true,
+      "online_total_delta": 5.0,
+      "linear_delta": 0.0,
+      "target": 5.0,
+      "tolerance": 1.0,
+      "direction_required": true,
+      "available_case_pairs": 120,
+      "minimum": {
+        "population": "round005/rank8-strength4-length128",
+        "test": 4,
+        "tokens": 128,
+        "delta": -42.463870205416974
+      },
+      "maximum": {
+        "population": "round005/rank8-strength4-length128",
+        "test": 0,
+        "tokens": 128,
+        "delta": 148.49451184532901
+      },
+      "outside_available_support": false
+    }
+  ],
+  "decision": "Promote after currently active full-matrix job completes; do not duplicate screening cells while their atom is active.",
+  "remaining_outside_available_support": 6,
+  "execution_status": "Started sequential full-matrix jobs after prior promoted job completed; raw progress remains authoritative.",
+  "run_log": "/tmp/distribution-fit-key-populations.log"
+}

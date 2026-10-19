@@ -1,0 +1,1033 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 10,
+      "key": "structural-v3/10",
+      "shared_parent_seconds": 0.4995956660131924,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 1.9399191249976866,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0140457153320312,
+              1.0105456113815308
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 2.240060332987923,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0139886140823364,
+              1.0092641115188599
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 1,
+            "relative": [
+              0.0052545140497386456,
+              0.004191847518086433,
+              0.0031671898905187845,
+              0.0030703151132911444
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 11,
+      "key": "structural-v3/11",
+      "shared_parent_seconds": 0.5278747090487741,
+      "versions": {
+        "387": {
+          "scores": [
+            0.5071074667754081,
+            0.5199067903517314,
+            0.5147307675473505,
+            0.5116021336463602,
+            0.5135538812880331
+          ],
+          "seconds": 2.641859084018506,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0532734394073486
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.5071074667754081,
+            0.5199067903517314,
+            0.5147307675473505,
+            0.5116021336463602,
+            0.5135538812880331
+          ],
+          "seconds": 5.787377749977168,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.049654245376587
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 215,
+            "relative": [
+              0.006681881379336119,
+              0.0033949115313589573
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 12,
+      "key": "structural-v3/12",
+      "shared_parent_seconds": 2.843378124991432,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9364986458182312,
+            0.9277651639015136,
+            0.9550607792350242,
+            0.9582633071767305,
+            0.9509549199570335
+          ],
+          "seconds": 3.4660907079814933,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.956413984298706,
+              0.9713926315307617
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.9364493253768728,
+            0.9277591868356009,
+            0.9550415029696914,
+            0.9582729791078286,
+            0.9509642284192122
+          ],
+          "seconds": 2.1245696249534376,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9570152759552002,
+              0.9720982909202576
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 0,
+            "relative": [
+              0.00037424315814860165,
+              0.0002169775980291888,
+              0.00010223665594821796,
+              7.373635889962316e-05
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 13,
+      "key": "structural-v3/13",
+      "shared_parent_seconds": 0.7396782910218462,
+      "versions": {
+        "387": {
+          "scores": [
+            0.8180891683405568,
+            0.9138918004540028,
+            0.7742728826685803,
+            0.8610877336913172,
+            0.8885984125075786
+          ],
+          "seconds": 1.9460321250371635,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9978842735290527
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.8180891683405568,
+            0.9138918004540028,
+            0.7742728826685803,
+            0.8610877336913172,
+            0.8885984125075786
+          ],
+          "seconds": 2.119831542018801,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.000519037246704
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 201,
+            "relative": [
+              0.0004672985814977437,
+              0.0014900675741955638
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 14,
+      "key": "structural-v3/14",
+      "shared_parent_seconds": 0.4519917090074159,
+      "versions": {
+        "387": {
+          "scores": [
+            0.956393173850707,
+            0.9741254740751851,
+            0.9722766939931763,
+            0.9729003448616879,
+            0.9602245858826801
+          ],
+          "seconds": 8.957686999987345,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0006297826766968,
+              1.0041272640228271
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.956393173850707,
+            0.9741254740751851,
+            0.9722766939931763,
+            0.9729003448616879,
+            0.9602245858826801
+          ],
+          "seconds": 4.4172288330155425,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9999287128448486,
+              1.004091739654541
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 206,
+            "relative": [
+              0.00017354365263599902,
+              0.00024223644868470728,
+              0.000829222786705941,
+              0.0012882801238447428
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 15,
+      "key": "structural-v3/15",
+      "shared_parent_seconds": 0.8965885840007104,
+      "versions": {
+        "387": {
+          "scores": [
+            0.7283229530188025,
+            0.5242167977159821,
+            0.8175225451296024,
+            0.6002262488513233,
+            0.4966025257300138
+          ],
+          "seconds": 2.0524594170274213,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.99945068359375
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.7283229530188025,
+            0.5242167977159821,
+            0.8175225451296024,
+            0.6002262488513233,
+            0.4966025257300138
+          ],
+          "seconds": 2.092068083002232,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0013352632522583
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 1,
+            "relative": [
+              0.0019846537616103888,
+              0.0012053991667926311
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 16,
+      "key": "structural-v3/16",
+      "shared_parent_seconds": 0.6680404170183465,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9820608106149371,
+            0.981143935200381,
+            0.9587540759129289,
+            0.9817289828251087,
+            0.9375957118902909
+          ],
+          "seconds": 2.3478914580191486,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9987467527389526,
+              0.9985967874526978
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.9820608106149371,
+            0.981143935200381,
+            0.9587540759129289,
+            0.9817289828251087,
+            0.9375957118902909
+          ],
+          "seconds": 2.720255916006863,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9983749985694885,
+              0.9980953931808472
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 71,
+            "relative": [
+              0.0023234793916344643,
+              0.0032621435821056366,
+              0.0013056659372523427,
+              0.0023668750654906034
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 17,
+      "key": "structural-v3/17",
+      "shared_parent_seconds": 0.994752791011706,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9509711538062112,
+            0.9384267216550704,
+            0.9527748149345985,
+            0.9063261233398482,
+            0.8715431092583891
+          ],
+          "seconds": 3.928189374972135,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9994156360626221
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.9509711538062112,
+            0.9384267216550704,
+            0.9527748149345985,
+            0.9063261233398482,
+            0.8715431092583891
+          ],
+          "seconds": 7.122837707982399,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9991431832313538
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 0,
+            "relative": [
+              0.0007362072356045246,
+              0.0011150153586640954
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 18,
+      "key": "structural-v3/18",
+      "shared_parent_seconds": 4.771557374973781,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9477473998875338,
+            0.9421300414890258,
+            0.958450280278001,
+            0.9272738889773786,
+            0.9469498612026174
+          ],
+          "seconds": 3.9713713750243187,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9756916165351868,
+              0.989881694316864
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.9476659586653324,
+            0.9421588243934993,
+            0.9584611190885273,
+            0.9272556988091175,
+            0.9469816207583328
+          ],
+          "seconds": 3.868137250014115,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9748847484588623,
+              0.9913420677185059
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 152,
+            "relative": [
+              0.0019815219566226006,
+              0.0020579954143613577,
+              0.0004872312711086124,
+              0.0006490405648946762
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "path": "local_fitted_models_attention_feedback_v2",
+      "schema": "structural-v3",
+      "group": 19,
+      "key": "structural-v3/19",
+      "shared_parent_seconds": 1.2358788340352476,
+      "versions": {
+        "387": {
+          "scores": [
+            0.7761543817701906,
+            0.8786606767897425,
+            0.8435193068694639,
+            0.8073223988522872,
+            0.7375169440739969
+          ],
+          "seconds": 2.298579082998913,
+          "checks": 30,
+          "debug": {
+            "accepted": 1,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9890247583389282
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.7763557949403538,
+            0.8790716542557502,
+            0.8439073032545771,
+            0.807105794175976,
+            0.7367354596735023
+          ],
+          "seconds": 2.3704424999887124,
+          "checks": 30,
+          "debug": {
+            "accepted": 1,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9884251356124878
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 138,
+            "relative": [
+              0.0013048822293058038,
+              0.000980609213002026
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 0,
+      "key": "attention/qwen3.6-35b-a3b/202609143/feedback/base",
+      "shared_parent_seconds": 1.4290545410476625,
+      "versions": {
+        "387": {
+          "scores": [
+            0.9458725429668555,
+            0.9523787290971174,
+            0.955432015955053,
+            0.9424514641839117,
+            0.921141888192291
+          ],
+          "seconds": 2.8778027079533786,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9278206825256348,
+              0.9038925170898438
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.945865856671498,
+            0.9523977987784549,
+            0.9554573398844035,
+            0.9424601037692744,
+            0.9211038766227367
+          ],
+          "seconds": 2.9568819170235656,
+          "checks": 30,
+          "debug": {
+            "accepted": 2,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9266771078109741,
+              0.8998897671699524
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 0,
+            "relative": [
+              0.0006264983676373959,
+              0.0005890699103474617,
+              0.0004161820688750595,
+              0.000300466432236135
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 4,
+      "key": "attention/qwen3.6-35b-a3b/203009143/feedback/gain8",
+      "shared_parent_seconds": 1.4899034589761868,
+      "versions": {
+        "387": {
+          "scores": [
+            0.499661398965626,
+            0.4928489606859647,
+            0.5582841407313746,
+            0.6383444769568666,
+            0.6601349159189793
+          ],
+          "seconds": 4.296843583986629,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0671360492706299,
+              0.9757109880447388
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.499661398965626,
+            0.4928489606859647,
+            0.5582841407313746,
+            0.6383444769568666,
+            0.6601349159189793
+          ],
+          "seconds": 8.474787332990672,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0681688785552979,
+              0.9798183441162109
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 0,
+            "relative": [
+              0.013946556486189365,
+              0.0032312520779669285,
+              0.019998660311102867,
+              0.0019359552534297109
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 14,
+      "key": "attention/deepseek-v4-flash-0731/203309180/feedback/v_tail2_sink8",
+      "shared_parent_seconds": 1.6387823749682866,
+      "versions": {
+        "387": {
+          "scores": [
+            0.09839215848785203,
+            0.1670490933870197,
+            0.2453756676785251,
+            0.3123069717244378,
+            0.4704380610329976
+          ],
+          "seconds": 3.9948422919842415,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9927868843078613
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.09839215848785203,
+            0.1670490933870197,
+            0.2453756676785251,
+            0.3123069717244378,
+            0.4704380610329976
+          ],
+          "seconds": 3.8329257909790613,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9935671091079712
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 23,
+            "relative": [
+              0.020749151706695557,
+              0.007885807193815708
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 19,
+      "key": "attention/deepseek-v4-flash-0731/203309365/feedback/v_tail2_sink8",
+      "shared_parent_seconds": 1.1820006250054576,
+      "versions": {
+        "387": {
+          "scores": [
+            0.29436936188171137,
+            0.14655366029183595,
+            0.23436900109163544,
+            0.3593345222066559,
+            0.3673251682605456
+          ],
+          "seconds": 3.476434917014558,
+          "checks": 30,
+          "debug": {
+            "accepted": 1,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9671406745910645
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.2943458017492471,
+            0.14654666299308483,
+            0.23437949872052777,
+            0.3593141187097627,
+            0.36736492597114284
+          ],
+          "seconds": 3.87757504201727,
+          "checks": 30,
+          "debug": {
+            "accepted": 1,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9660696387290955
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 367,
+            "relative": [
+              0.013899329118430614,
+              0.00045609648805111647
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 24,
+      "key": "attention/qwen3.6-35b-a3b/203409143/feedback/v_tail2_sink16",
+      "shared_parent_seconds": 0.8487794589600526,
+      "versions": {
+        "387": {
+          "scores": [
+            0.11947486456546547,
+            0.1193020568308631,
+            0.15034443967788513,
+            0.15146040850863454,
+            0.1144478591900481
+          ],
+          "seconds": 2.2967380000045523,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0000032186508179,
+              1.0000014305114746
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.11947486456546547,
+            0.1193020568308631,
+            0.15034443967788513,
+            0.15146040850863454,
+            0.1144478591900481
+          ],
+          "seconds": 2.2027499589603394,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9999964237213135,
+              0.9999999403953552
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 608,
+            "relative": [
+              292.2607727050781,
+              452.17120361328125,
+              1030.59716796875,
+              66.54569244384766
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 47,
+      "key": "attention/qwen3.6-35b-a3b/203609143/feedback/tail8",
+      "shared_parent_seconds": 1.4511704579927027,
+      "versions": {
+        "387": {
+          "scores": [
+            0.338081953777114,
+            0.23596040590828307,
+            0.8311635304313892,
+            0.5330301430895656,
+            0.5371750653324303
+          ],
+          "seconds": 8.06732870900305,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              0.9958136677742004,
+              0.9667116403579712
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.338081953777114,
+            0.23596040590828307,
+            0.8311635304313892,
+            0.5330301430895656,
+            0.5371750653324303
+          ],
+          "seconds": 6.654333625047002,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.0333130359649658,
+              0.9620541334152222
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 92,
+            "relative": [
+              0.08270151168107986,
+              0.027880538254976273,
+              0.01655242033302784,
+              0.029775844886898994
+            ]
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "path": "local_fitted_archive/attention_feedback_v2_before_structural_20260906",
+      "schema": "legacy",
+      "group": 49,
+      "key": "attention/deepseek-v4-flash-0731/203709180/feedback/tail8",
+      "shared_parent_seconds": 1.5255945830140263,
+      "versions": {
+        "387": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 3.6374489170266315,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.1129616498947144
+            ]
+          },
+          "curvature": {}
+        },
+        "393": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 3.4002882500062697,
+          "checks": 30,
+          "debug": {
+            "accepted": 0,
+            "error": false,
+            "role": "q",
+            "ratios": [
+              1.1025965213775635
+            ]
+          },
+          "curvature": {
+            "folds": 2,
+            "finite": true,
+            "negative": 383,
+            "relative": [
+              0.02476518787443638,
+              0.04517538845539093
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "timing": "Shared early v387 calibration recorded separately; local timings are not online predictions.",
+  "hashes": {
+    "387": "20d5f35ac5b0559415bc4cca50ca58705cdf242d152fbfe0fab7642a0d6a1dfa",
+    "393": "a7e6f8aeca2a0c86f76ef2239149814ff8364f83f2c8d78b13ee6b2489054fa6"
+  }
+}

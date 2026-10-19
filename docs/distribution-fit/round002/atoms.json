@@ -1,0 +1,187 @@
+{
+  "round": 2,
+  "atoms": [
+    {
+      "id": "projected-gain1-noise0.05",
+      "path": "local_distribution_fit/round002/projected-gain1.pt",
+      "sha256": "3c16ab46dbe1a37dfcffc736658d6b12ff9ededaf9b5827ff76edac8490078c5",
+      "seed": 2026090901,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "source_group": null,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "projected-gain1-noise0.5",
+      "path": "local_distribution_fit/round002/projected-gain1.pt",
+      "sha256": "3c16ab46dbe1a37dfcffc736658d6b12ff9ededaf9b5827ff76edac8490078c5",
+      "seed": 2026090901,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "source_group": null,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "projected-gain4-noise0.05",
+      "path": "local_distribution_fit/round002/projected-gain4.pt",
+      "sha256": "de1b947ab18e401073af02568e2304365125a651cf49b86e34f3c21fb428c381",
+      "seed": 2026090904,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "source_group": null,
+      "profile": {
+        "gain": 4
+      }
+    },
+    {
+      "id": "projected-gain4-noise0.5",
+      "path": "local_distribution_fit/round002/projected-gain4.pt",
+      "sha256": "de1b947ab18e401073af02568e2304365125a651cf49b86e34f3c21fb428c381",
+      "seed": 2026090904,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "source_group": null,
+      "profile": {
+        "gain": 4
+      }
+    },
+    {
+      "id": "trace35-gain1-noise0.05",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "trace35-gain1-noise0.5",
+      "path": "local_distribution_fit/round002/trace35-gain1.pt",
+      "sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+      "seed": 2026091001,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "trace35-gain4-noise0.05",
+      "path": "local_distribution_fit/round002/trace35-gain4.pt",
+      "sha256": "73b8294388175939ca1898d1d856a35f4b48a183ee9787a75be2e0a5dd5722e8",
+      "seed": 2026091004,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 4
+      }
+    },
+    {
+      "id": "trace35-gain4-noise0.5",
+      "path": "local_distribution_fit/round002/trace35-gain4.pt",
+      "sha256": "73b8294388175939ca1898d1d856a35f4b48a183ee9787a75be2e0a5dd5722e8",
+      "seed": 2026091004,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1/attn.pt",
+      "source_sha256": "dfcd01029d4643a5d2a621f636b888da17d6a477e8940236ad49f4b5aae2965c",
+      "source_group": 0,
+      "profile": {
+        "gain": 4
+      }
+    },
+    {
+      "id": "trace25-gain1-noise0.05",
+      "path": "local_distribution_fit/round002/trace25-gain1.pt",
+      "sha256": "a192d8f5223249d9bf160c0779d24da9af86a6ea56e234ec566fefa90d35d26e",
+      "seed": 2026091101,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "trace25-gain1-noise0.5",
+      "path": "local_distribution_fit/round002/trace25-gain1.pt",
+      "sha256": "a192d8f5223249d9bf160c0779d24da9af86a6ea56e234ec566fefa90d35d26e",
+      "seed": 2026091101,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 0,
+      "profile": {
+        "gain": 1
+      }
+    },
+    {
+      "id": "trace25-gain4-noise0.05",
+      "path": "local_distribution_fit/round002/trace25-gain4.pt",
+      "sha256": "fce96f698f2f80d0fc60ced071d1bcde6bfb6ca2d3dee6263ab039ecf5971ab9",
+      "seed": 2026091104,
+      "mode": "correlated_noise",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 0,
+      "profile": {
+        "gain": 4
+      }
+    },
+    {
+      "id": "trace25-gain4-noise0.5",
+      "path": "local_distribution_fit/round002/trace25-gain4.pt",
+      "sha256": "fce96f698f2f80d0fc60ced071d1bcde6bfb6ca2d3dee6263ab039ecf5971ab9",
+      "seed": 2026091104,
+      "mode": "correlated_noise",
+      "noise": 0.5,
+      "fit_eligible": true,
+      "source_path": "docs/papers/hif4-public-references/test/datasets/qwen2_5_14b_online_v1/attn.pt",
+      "source_sha256": "832a65886125c8299790da7dcc7d404ab4f365bb646b05b1514c791a72004a3d",
+      "source_group": 0,
+      "profile": {
+        "gain": 4
+      }
+    }
+  ],
+  "selection_evidence": "round001 first7 populations: 36/100 edges outside convex support; v310->311 wrong direction and v439 drop too large.",
+  "limits": "Real trace groups are reused, not independent holdout. Fake peer correlation is an adjustable hypothesis; only own-role calibration state survives."
+}

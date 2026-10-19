@@ -1,0 +1,234 @@
+{
+  "dataset": "docs/papers/hif4-public-references/test/datasets/attention_history_fit_v1/attn.pt",
+  "versions": [
+    500
+  ],
+  "groups_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "n_groups_total": 20,
+  "results": {
+    "500": {
+      "cases": [
+        {
+          "group": 0,
+          "test": 0,
+          "tokens": 32,
+          "weight": 3.0,
+          "quality": 0.9635730237558733
+        },
+        {
+          "group": 1,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.4111705345377465
+        },
+        {
+          "group": 2,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.6773814495257623
+        },
+        {
+          "group": 3,
+          "test": 0,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.2304095831754353
+        },
+        {
+          "group": 4,
+          "test": 0,
+          "tokens": 8,
+          "weight": 7.0,
+          "quality": 0.3442689780491893
+        },
+        {
+          "group": 5,
+          "test": 0,
+          "tokens": 8,
+          "weight": 10.0,
+          "quality": 0.4827986898522405
+        },
+        {
+          "group": 6,
+          "test": 0,
+          "tokens": 8,
+          "weight": 2.0,
+          "quality": 0.5217965206347764
+        },
+        {
+          "group": 6,
+          "test": 1,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3773786354629579
+        },
+        {
+          "group": 7,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.28832218551793537
+        },
+        {
+          "group": 7,
+          "test": 1,
+          "tokens": 8,
+          "weight": 5.0,
+          "quality": 0.23098899914963697
+        },
+        {
+          "group": 8,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.7175265773468711
+        },
+        {
+          "group": 9,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.8157630621857423
+        },
+        {
+          "group": 10,
+          "test": 0,
+          "tokens": 4,
+          "weight": 1.0,
+          "quality": 0.7257145801055539
+        },
+        {
+          "group": 11,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.17556867075621402
+        },
+        {
+          "group": 11,
+          "test": 1,
+          "tokens": 8,
+          "weight": 24.0,
+          "quality": 0.4225146873761276
+        },
+        {
+          "group": 11,
+          "test": 2,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.28940765533938984
+        },
+        {
+          "group": 12,
+          "test": 0,
+          "tokens": 4,
+          "weight": 27.0,
+          "quality": 0.22021887267070803
+        },
+        {
+          "group": 12,
+          "test": 1,
+          "tokens": 128,
+          "weight": 3.0,
+          "quality": 0.6991397004429861
+        },
+        {
+          "group": 13,
+          "test": 0,
+          "tokens": 8,
+          "weight": 9.0,
+          "quality": 0.5217965206347764
+        },
+        {
+          "group": 13,
+          "test": 1,
+          "tokens": 8,
+          "weight": 6.0,
+          "quality": 0.42208276337268663
+        },
+        {
+          "group": 14,
+          "test": 0,
+          "tokens": 8,
+          "weight": 4.0,
+          "quality": 0.36896058288625905
+        },
+        {
+          "group": 15,
+          "test": 0,
+          "tokens": 8,
+          "weight": 40.0,
+          "quality": 0.20675827011059655
+        },
+        {
+          "group": 15,
+          "test": 1,
+          "tokens": 32,
+          "weight": 19.0,
+          "quality": 0.16442789833997754
+        },
+        {
+          "group": 15,
+          "test": 2,
+          "tokens": 512,
+          "weight": 16.0,
+          "quality": 0.6758673506438244
+        },
+        {
+          "group": 16,
+          "test": 0,
+          "tokens": 512,
+          "weight": 47.0,
+          "quality": 0.7838246122831616
+        },
+        {
+          "group": 17,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3842281483763561
+        },
+        {
+          "group": 18,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3842281483763561
+        },
+        {
+          "group": 19,
+          "test": 0,
+          "tokens": 8,
+          "weight": 1.0,
+          "quality": 0.3842281483763561
+        }
+      ],
+      "complete": true,
+      "mean_quality": 0.43155337535349103,
+      "wall_seconds": 327.1179995839484
+    }
+  }
+}

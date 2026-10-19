@@ -1,0 +1,315 @@
+{
+  "completed": true,
+  "parent": 435,
+  "observations": [
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 2.8360445701869352e-05,
+      "rms_identity_residual": 1.0514583426842075e-06,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 1.05798771453669e-05,
+      "rms_identity_residual": 4.925818498852919e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": true,
+      "caller": "_joint_balanced_states",
+      "minimum_damped_eigenvalue": -80.44558842184423,
+      "double_cholesky_info": [
+        64,
+        0
+      ]
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": true,
+      "caller": "_joint_balanced_states",
+      "minimum_damped_eigenvalue": -1582.8161993925405,
+      "double_cholesky_info": [
+        121,
+        97
+      ]
+    },
+    {
+      "dataset": "docs/papers/hif4-public-references/test/datasets/qwen3_5_35b_a3b_v1",
+      "group": 0,
+      "isolated": false,
+      "shape": [
+        2,
+        256,
+        256
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 1.5705391872428515e-05,
+      "rms_identity_residual": 9.141690323057719e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 7.452341612778699e-06,
+      "rms_identity_residual": 9.103711153718134e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 4.485120766561934e-06,
+      "rms_identity_residual": 1.0590167580826033e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": true,
+      "caller": "_joint_balanced_states",
+      "minimum_damped_eigenvalue": -44367.214607572416,
+      "double_cholesky_info": [
+        94
+      ]
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 3.908066187108261e-06,
+      "rms_identity_residual": 7.261203658371268e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 1.4035503571152574e-05,
+      "rms_identity_residual": 8.394723540677099e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 7.68782608973062e-06,
+      "rms_identity_residual": 2.9035176160844906e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 2.7628832675041792e-06,
+      "rms_identity_residual": 3.5669979427475814e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 5.767051772243015e-06,
+      "rms_identity_residual": 1.6357430811000333e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 2.9230347738939955e-06,
+      "rms_identity_residual": 4.290624128807933e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 4.37235235462019e-06,
+      "rms_identity_residual": 1.5930606236430495e-07,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 1.1351332671289025e-05,
+      "rms_identity_residual": 9.642638943523535e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "hif4_calibration_attention",
+      "max_identity_residual": 3.7686929437669374e-06,
+      "rms_identity_residual": 3.6943092295843725e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 6.843224930415135e-06,
+      "rms_identity_residual": 5.7677114101182146e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_joint_balanced_states",
+      "max_identity_residual": 5.156074048162651e-06,
+      "rms_identity_residual": 3.471211446217358e-08,
+      "factor_finite": true
+    },
+    {
+      "dataset": "local_fitted_models_attention_feedback_v2",
+      "group": 49,
+      "isolated": true,
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "returned_none": false,
+      "caller": "_oj_state",
+      "max_identity_residual": 7.11816474177181e-06,
+      "rms_identity_residual": 8.166994556942894e-08,
+      "factor_finite": true
+    }
+  ],
+  "none": 3,
+  "max_residual": 2.8360445701869352e-05,
+  "over_001": 0,
+  "warning": "Instrumented read-only factor observation on this host. Residual threshold is diagnostic, not a proof of online numerical behavior. Returned factors and calibration outputs were not replaced."
+}

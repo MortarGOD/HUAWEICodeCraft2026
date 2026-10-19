@@ -1,0 +1,142 @@
+{
+  "round": 29,
+  "atoms": [
+    {
+      "id": "diffuse-seedplus3",
+      "path": "local_distribution_fit/round001/m0-diffuse.pt",
+      "sha256": "19d9151a96b65f02a3e175fd111f19f8f446f3380e5e04ca65ba096638b0a00b",
+      "seed": 2026090804,
+      "profile": {
+        "gain": 0.25
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round028/m0-diffuse-block-seedplus1"
+    },
+    {
+      "id": "diffuse-seedplus4",
+      "path": "local_distribution_fit/round001/m0-diffuse.pt",
+      "sha256": "19d9151a96b65f02a3e175fd111f19f8f446f3380e5e04ca65ba096638b0a00b",
+      "seed": 2026090805,
+      "profile": {
+        "gain": 0.25
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round028/m0-diffuse-block-seedplus1"
+    },
+    {
+      "id": "diffuse-half-qk-scale",
+      "path": "local_distribution_fit/round029/diffuse-half-qk-scale.pt",
+      "sha256": "3c10dbdb528ea23ab6f2a0ad09554adcbd30ebdf1a5536ee59da9df37de41a0a",
+      "seed": 2026090802,
+      "profile": {
+        "relative_qk_product_gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round028/m0-diffuse-block-seedplus1"
+    },
+    {
+      "id": "diffuse-double-qk-scale",
+      "path": "local_distribution_fit/round029/diffuse-double-qk-scale.pt",
+      "sha256": "f95ab71347325aa68ee74d5ca79a6b396b277d4d632c5131a4a8bd7a5551bba2",
+      "seed": 2026090802,
+      "profile": {
+        "relative_qk_product_gain": 2.0,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_atom": "round028/m0-diffuse-block-seedplus1"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    310,
+    314,
+    315,
+    316,
+    318,
+    319,
+    320,
+    321,
+    322,
+    325,
+    330,
+    333,
+    337,
+    341,
+    344,
+    360,
+    365,
+    374,
+    378,
+    381,
+    382,
+    387,
+    388,
+    389,
+    392,
+    394,
+    400,
+    401,
+    402,
+    403,
+    404,
+    409,
+    412,
+    413,
+    415,
+    418,
+    419,
+    430,
+    434,
+    435,
+    436,
+    438,
+    439,
+    440
+  ],
+  "certificate_sha256": "07fc40ae5b1158559cc13d66811a7ce7c51a3f59ecedcb362cf4c42d6ae7c6b4",
+  "selection_evidence": "Nearest measured column is round028 seedplus1/test2 at margin -1.082. Probe two immutable calibration seeds and two QK product scales with original V encoding. All versions share each population.",
+  "limits": "Adaptive screening only; positive price requires full evaluation and joint fit."
+}

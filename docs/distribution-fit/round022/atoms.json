@@ -1,0 +1,114 @@
+{
+  "round": 22,
+  "atoms": [
+    {
+      "id": "m1-base-row_permute-seedplus1",
+      "path": "local_distribution_fit/round001/m1-base.pt",
+      "sha256": "9f3c02d689c8dd654aff0eff08f373319d0903b95a57cac994992229bdadea91",
+      "seed": 2026090901,
+      "profile": {},
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "source_atom": "round001/m1-base-row_permute"
+    },
+    {
+      "id": "m1-base-row_permute-seedplus2",
+      "path": "local_distribution_fit/round001/m1-base.pt",
+      "sha256": "9f3c02d689c8dd654aff0eff08f373319d0903b95a57cac994992229bdadea91",
+      "seed": 2026090902,
+      "profile": {},
+      "model": "deepseek-v4-flash-0731",
+      "rows": [
+        4,
+        8,
+        32,
+        128,
+        512
+      ],
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "source_atom": "round001/m1-base-row_permute"
+    },
+    {
+      "id": "true-qk-gain0.5-seedplus1",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090809,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    },
+    {
+      "id": "true-qk-gain0.5-seedplus2",
+      "path": "local_distribution_fit/round016/true-qk-gain0.5.pt",
+      "sha256": "cd3d25dff0473a1a118afbda3ad6e75bccad242e82d2638a6673becb269f479a",
+      "seed": 2026090810,
+      "input_seed": 2026091600,
+      "mode": "row_permute",
+      "fit_eligible": true,
+      "profile": {
+        "gain": 0.5,
+        "v_encoding_preserved": true
+      },
+      "model": "qwen3.6-35b-a3b",
+      "source_path": "local_distribution_fit/round012/sink-input-seed2026091600.pt",
+      "source_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+      "source_atom": "round016/true-qk-gain0.5"
+    }
+  ],
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    374,
+    387,
+    389,
+    392,
+    399,
+    400,
+    402,
+    403,
+    410,
+    412,
+    413,
+    418,
+    419,
+    434,
+    435,
+    436,
+    438,
+    440
+  ],
+  "selection_evidence": "Half-scale sink and second model base are among the nearest populations to the verified 490-column boundary. Vary only two calibration decoy seeds per source, preserving exact true input bytes.",
+  "limits": "Adaptive shared-distribution search; no version-specific inputs or target changes. Certificate breakthrough is not joint feasibility."
+}

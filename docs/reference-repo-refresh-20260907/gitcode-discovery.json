@@ -1,0 +1,357 @@
+{
+  "generated_at": "2026-09-07T12:35:51.524328+00:00",
+  "scope": "Public GitCode repository discovery, metadata and remote branch refs only; no reference algorithm executed or clone/mirror modified by this discovery agent.",
+  "new_confirmed_related_count": 3,
+  "confirmed_related_remote_count_in_this_audit": 5,
+  "confirmed_related_total_branches": 44,
+  "unresolved_candidate_count": 0,
+  "web_search": {
+    "backend": "web.run search_query",
+    "query_count": 16,
+    "queries": [
+      "site:gitcode.com \"hif4_calibration_and_quantize_weight\"",
+      "site:gitcode.com \"hif4_dynamic_quantize_activation\"",
+      "site:gitcode.com \"hif4_calibration_attention\"",
+      "site:gitcode.com \"2026\" \"4Bit\"",
+      "site:gitcode.com \"hif4_dynamic_quantize_q\"",
+      "site:gitcode.com \"hif4_dynamic_quantize_k\"",
+      "site:gitcode.com \"hif4_dynamic_quantize_v\"",
+      "site:gitcode.com \"高精度4Bit数值转换\"",
+      "site:gitcode.com \"hif4\"",
+      "site:gitcode.com \"NVFP4\" \"华为\"",
+      "site:gitcode.com \"2026华为算法大赛\"",
+      "site:gitcode.com \"HiFloat4\"",
+      "site:gitcode.com \"NVFP4\" \"quantizer\"",
+      "\"hif4_calibration_attention\" gitcode -site:github.com",
+      "\"高精度4Bit数值转换\" 仓库",
+      "\"2026\" \"算法大赛\" \"HiF4\" gitcode"
+    ],
+    "pagination": "Search engine tool returns merged ranked results without exhaustive per-query totals or pagination; no all-repositories claim.",
+    "confirmed_related_indexed_urls": [
+      "https://gitcode.com/qq_41888214/quantizer"
+    ]
+  },
+  "gitcode_site_search": [
+    {
+      "query": "hif4_calibration_and_quantize_weight",
+      "displayed_project_count": 0,
+      "pages_checked": [
+        1
+      ],
+      "relevant_results": [],
+      "url": "https://gitcode.com/search?q=hif4_calibration_and_quantize_weight&type=repo"
+    },
+    {
+      "query": "hif4",
+      "displayed_project_count": 6,
+      "pages_checked": [
+        1
+      ],
+      "rendered_cards": 6,
+      "relevant_results": [],
+      "note": "Fuzzy metadata hits: hifi projects, HiFV3Dsolver, Wan14b-hif8-training; not this six-API contest.",
+      "url": "https://gitcode.com/search?q=hif4&type=repo"
+    },
+    {
+      "query": "nvfp4",
+      "displayed_project_count": 2,
+      "pages_checked": [
+        1
+      ],
+      "rendered_cards": 2,
+      "relevant_results": [],
+      "visible_names": [
+        "microsoft/Tutel",
+        "intel/neural-compressor"
+      ],
+      "url": "https://gitcode.com/search?q=nvfp4&type=repo"
+    },
+    {
+      "query": "华为算法大赛",
+      "displayed_project_count": 7,
+      "pages_checked": [
+        1
+      ],
+      "rendered_cards": 7,
+      "relevant_results": [],
+      "note": "All visible results were CANN competition entry/regional pages, a different track.",
+      "url": "https://gitcode.com/search?q=%E5%8D%8E%E4%B8%BA%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B&type=repo"
+    },
+    {
+      "query": "quantizer",
+      "displayed_project_count": 17,
+      "pages_checked": [
+        1,
+        2
+      ],
+      "rendered_cards_by_page": [
+        6,
+        5
+      ],
+      "relevant_results": [
+        "Curiosi/quantizer",
+        "Austrini/Quantize"
+      ],
+      "note": "Displayed total and rendered card counts differ; not exhaustive indexed-source coverage.",
+      "url": "https://gitcode.com/search?q=quantizer&type=repo"
+    },
+    {
+      "query": "高精度4Bit数值转换",
+      "displayed_project_count": 1,
+      "pages_checked": [
+        1
+      ],
+      "rendered_cards": 1,
+      "relevant_results": [],
+      "visible_names": [
+        "炎核CAX开源开放平台/DynaFEM-GPH"
+      ],
+      "url": "https://gitcode.com/search?q=%E9%AB%98%E7%B2%BE%E5%BA%A64Bit%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2&type=repo"
+    },
+    {
+      "query": "hifloat4",
+      "displayed_project_count": 4,
+      "pages_checked": [
+        1
+      ],
+      "rendered_cards": 4,
+      "relevant_results": [],
+      "visible_names": [
+        "全球计算联盟/HiFloat4",
+        "gcw_VUeOJOl2/HiFloat8",
+        "hifloat/resources",
+        "YUZIWEI/dsv4-hifloat8-readme"
+      ],
+      "note": "Official format simulator/background resources, not an additional six-API contest solution.",
+      "url": "https://gitcode.com/search?q=hifloat4&type=repo"
+    },
+    {
+      "query": "2026华为算法大赛",
+      "displayed_project_count": 17,
+      "pages_checked": [
+        1,
+        2
+      ],
+      "rendered_cards_by_page": [
+        10,
+        7
+      ],
+      "relevant_results": [],
+      "note": "One result repeated between pages. Visible results concern CANN, terminal/developer contests, EDA and RISC-V, not this contest.",
+      "url": "https://gitcode.com/search?q=2026%E5%8D%8E%E4%B8%BA%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B&type=repo"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Curiosi/quantizer",
+      "status": "new_confirmed_related",
+      "url": "https://gitcode.com/Curiosi/quantizer",
+      "default_branch": "main",
+      "head": "4e916451f682748fc35bde0baa3f8f2a21005c30",
+      "branch_count": 2,
+      "branches": [
+        {
+          "commit": "4e916451f682748fc35bde0baa3f8f2a21005c30",
+          "name": "main"
+        },
+        {
+          "commit": "467925a8ddaf435003148b02ce4d4d3c35ddda17",
+          "name": "submission"
+        }
+      ],
+      "evidence": [
+        "GitCode public quantizer search first page",
+        "Public repository README contains six APIs and NVFP4/HiF4 self-check protocol",
+        "git ls-remote --symref HEAD refs/heads/*"
+      ],
+      "forks": [
+        "yuchunfei/quantizer",
+        "qq_41888214/quantizer"
+      ],
+      "fork_page": "https://gitcode.com/Curiosi/quantizer/forks",
+      "fork_count": 2,
+      "fork_pages_checked": [
+        1
+      ],
+      "page_commit_count": 217
+    },
+    {
+      "name": "yuchunfei/quantizer",
+      "status": "new_confirmed_related",
+      "url": "https://gitcode.com/yuchunfei/quantizer",
+      "default_branch": "main",
+      "head": "f7985440100ffe3a494c88b425e45c8a3494cdb9",
+      "branch_count": 8,
+      "branches": [
+        {
+          "commit": "1a31bc05daa772e223d9722ae27d93f6b7b59089",
+          "name": "codex/hif4-v10-kunpeng"
+        },
+        {
+          "commit": "085cfcc379d7fb1426c32caae797e4fcd929a254",
+          "name": "codex/hif4-v10-runtime-6scan-under90"
+        },
+        {
+          "commit": "c3c65c16c09b8f9f39e0183af975bf2b04fbc283",
+          "name": "codex/hif4-v10-runtime-7plus3-under90"
+        },
+        {
+          "commit": "22ea690e1126a0ba28ca60868e822ca7c40a2fce",
+          "name": "codex/hif4-v10-runtime-diagonal-under20"
+        },
+        {
+          "commit": "409f54d31cccd9fca2e07eb711ebbb73bb01e44f",
+          "name": "codex/hif4-v10-runtime-hessian-k4m4-under20"
+        },
+        {
+          "commit": "51dfb3ac934172c263c37ab89a279c6bde2b7b67",
+          "name": "codex/hif4-v10-runtime-local-hessian-under20"
+        },
+        {
+          "commit": "230d42beae904d7fb9a7669f3df6c9d4f0d7e921",
+          "name": "codex/hif4-v11-canary-20260902"
+        },
+        {
+          "commit": "f7985440100ffe3a494c88b425e45c8a3494cdb9",
+          "name": "main"
+        }
+      ],
+      "fork_of": "Curiosi/quantizer",
+      "evidence": [
+        "Existing test/datasets/public_quantizer/README.md source URL; live verification independently performed",
+        "Public repository page shows fork source Curiosi/quantizer and eight branches",
+        "git ls-remote --symref HEAD refs/heads/*"
+      ],
+      "page_commit_count": 175,
+      "head_subject": "Fix large-data timeout: drop block-Hessian weight search"
+    },
+    {
+      "name": "qq_41888214/quantizer",
+      "status": "known_related_refreshed_read_only",
+      "url": "https://gitcode.com/qq_41888214/quantizer",
+      "default_branch": "main",
+      "head": "8b85f229cc673dc421f98eeae8d068da6ca29e4e",
+      "branch_count": 9,
+      "fork_of": "Curiosi/quantizer",
+      "branches": [
+        {
+          "commit": "a168fd0fe11a5c4f0cf714b4a2f2b2f3268a3034",
+          "name": "codex/r4-block-task-diagnostic"
+        },
+        {
+          "commit": "605ebbdb33a24675231a040008ea640e6f9c3d84",
+          "name": "harness跟踪版本"
+        },
+        {
+          "commit": "63653bad84899b6cfa172d6553ea09c30ac4858b",
+          "name": "hif4-fshq"
+        },
+        {
+          "commit": "8b85f229cc673dc421f98eeae8d068da6ca29e4e",
+          "name": "main"
+        },
+        {
+          "commit": "d044a48f3f3a19e27775718e2c4659d8974d4049",
+          "name": "p116-submit"
+        },
+        {
+          "commit": "5640478d7b5e22b6d7737fe7d20135d42b2b7f74",
+          "name": "p126-submit"
+        },
+        {
+          "commit": "cb74df90ecf7ebdd82469ccbe12595ae352fbd6a",
+          "name": "p127-submit"
+        },
+        {
+          "commit": "304ba16a768562d18428e19ec2aa86beaa87a889",
+          "name": "p128-submit"
+        },
+        {
+          "commit": "420b23464acd8fd18c3897e95978aa0b9aa8b184",
+          "name": "p140-submit"
+        }
+      ],
+      "evidence": [
+        "External web-search exact API queries",
+        "git ls-remote --symref HEAD refs/heads/*",
+        "Curiosi/quantizer public fork page"
+      ]
+    },
+    {
+      "name": "Mrxxx7/test",
+      "status": "known_related_refreshed_read_only",
+      "url": "https://gitcode.com/Mrxxx7/test",
+      "default_branch": "main",
+      "head": "2ffcfe109f5b0d5be373aa252b65c7a52b8cef10",
+      "branch_count": 24,
+      "base_1.7": "916c56b93dd0fb9e5e1dd797e7758b7b6b629f4b",
+      "branch_inventory_owner": "Parent task all-branch refresh",
+      "evidence": [
+        "git ls-remote --symref HEAD refs/heads/* succeeded with 24 branches"
+      ]
+    },
+    {
+      "name": "Austrini/Quantize",
+      "status": "new_confirmed_related",
+      "url": "https://gitcode.com/Austrini/Quantize",
+      "default_branch": "main",
+      "head": "675c4b69c82d3fc08a21e33180ad639d1801a561",
+      "branch_count": 1,
+      "branches": [
+        {
+          "commit": "675c4b69c82d3fc08a21e33180ad639d1801a561",
+          "name": "main"
+        }
+      ],
+      "page_commit_count": 7,
+      "evidence": [
+        "GitCode quantizer search first page",
+        "Public page Python 100%, pytorch tag, empty README",
+        "git ls-remote --symref HEAD refs/heads/* succeeded",
+        "Parent task verified existing Git blob HEAD:solution.py at fixed HEAD, no code execution; six API definitions at lines 960, 1258, 1319, 1722, 1747, 1763; NVFP4 and HiF4 header at lines 21-24."
+      ],
+      "static_source_evidence": {
+        "mirror": "docs/papers/hif4-public-references/gitcode-Austrini-Quantize",
+        "commit": "675c4b69c82d3fc08a21e33180ad639d1801a561",
+        "path": "solution.py",
+        "api_lines": {
+          "hif4_calibration_and_quantize_weight": 960,
+          "hif4_dynamic_quantize_activation": 1258,
+          "hif4_calibration_attention": 1319,
+          "hif4_dynamic_quantize_q": 1722,
+          "hif4_dynamic_quantize_k": 1747,
+          "hif4_dynamic_quantize_v": 1763
+        },
+        "format_header_lines": [
+          21,
+          24
+        ],
+        "verified_by": "parent task via git show, no execution"
+      }
+    }
+  ],
+  "limitations": [
+    "Global GitCode search UI showed project/model/dataset/issues/PR/org/user/tag categories, no global code search; project matching is fuzzy and omits known related repositories.",
+    "Direct public frontend API was observed in index-0e021784.js and search chunk index-e12b0320.js, but unauthenticated urllib request returned HTTP 418; no bypass attempted.",
+    "Web tool openings intermittently time out or return safety errors; live Git transport and available browser pages used for verification.",
+    "Some repo file trees render current repository has no content despite valid refs and README; not interpreted as an empty Git repository.",
+    "Repository pages cached by web search contained stale branch counts: yuchunfei page 2 versus live Git/browser 8; branch inventories rely on live git ls-remote.",
+    "No private repositories, login-gated commit pages, deleted refs, hidden branches, unpublished local work, or exhaustive GitCode source index coverage are claimed."
+  ],
+  "observed_api_provenance": {
+    "page": "https://gitcode.com/search?q=hif4&type=repo",
+    "scripts": [
+      "https://cdn-static.gitcode.com/assets/index-0e021784.js",
+      "https://cdn-static.gitcode.com/assets/index-e12b0320.js"
+    ],
+    "endpoint": "https://web-api.gitcode.com/api/v1/search/nauth/query",
+    "params": {
+      "q": "hif4",
+      "type": "repo",
+      "p": 1,
+      "pp": 10,
+      "o": "desc"
+    },
+    "result": "HTTP 418"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 624,
+  "parent": 435,
+  "parent_sha256": "cdf094ec4b3de9d5fe835ea085ab25a8f70c049a7f771308ec0a3834262917ba",
+  "patch_summary": "Structure-agnostic probe: force Q/K GPTQ on (skip the holdout comparison that rejects it on structureless data)",
+  "source_sha256": "252fc7eec519bad77d6bdd775d25ecd604f6b5c82f847064552a3e10a4a903a5",
+  "archive_sha256": "fe93396b055cefd40ce7502bead5f4b35103acbabd2b8873b188111418af339c",
+  "archive_members": [
+    "solution.py"
+  ]
+}

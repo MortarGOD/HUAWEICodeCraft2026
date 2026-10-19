@@ -1,0 +1,306 @@
+{
+  "version": 549,
+  "atom": "group15",
+  "source_sha256": "6b57d8a0dea7fe4fd849910fdb8e26fc45ecc8b72d1f021277344c89d4292025",
+  "data_sha256": "3316d33feaf0ab3ddabe8377d6e092adabaa744ae91fb7afcaf3991566cc2341",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.26255422830581665,
+      "player_mse": 0.2056916058063507,
+      "quality": 0.21657477339589357,
+      "perfect_qk_quality": 0.23024184952810817,
+      "perfect_v_quality": 0.9822102942805662,
+      "diagnostic_only": true
+    },
+    {
+      "test": 1,
+      "tokens": 32,
+      "baseline_mse": 0.18906265497207642,
+      "player_mse": 0.15977077186107635,
+      "quality": 0.15493214731024654,
+      "perfect_qk_quality": 0.17247209519711093,
+      "perfect_v_quality": 0.9805955144438192,
+      "diagnostic_only": true
+    },
+    {
+      "test": 2,
+      "tokens": 512,
+      "baseline_mse": 0.561417818069458,
+      "player_mse": 0.1804252564907074,
+      "quality": 0.6786257032041948,
+      "perfect_qk_quality": 0.6858102024964784,
+      "perfect_v_quality": 0.992785838344997,
+      "diagnostic_only": true
+    }
+  ],
+  "format_checks": 9,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "gptq_dynamic_order": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1,
+          "quotient_gptq": 1
+        },
+        "v": {
+          "v435_content_parent": null,
+          "token_gptq_beam": 1,
+          "gptq_joint_metadata": 1,
+          "self_geometry_final": true
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.0002755590248852968,
+          "j_cand": 0.0001511258742539212
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 8.932730997912586e-05
+        },
+        "TEMP_DEBUG": {
+          "heads": 3,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 2,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "gptq_dynamic_order": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1,
+          "quotient_gptq": 1
+        },
+        "v": {
+          "v435_content_parent": null,
+          "token_gptq_beam": 1,
+          "gptq_joint_metadata": 1,
+          "self_geometry_final": true
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 1.2622775102499872e-05,
+          "j_cand": 7.931257641757838e-06
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 0.00011037870717700571
+        },
+        "TEMP_DEBUG": {
+          "heads": 1,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 1,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "rf": 1,
+          "gptq_dynamic_order": 1
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2,
+          "gq": 1,
+          "kt_mode": 4,
+          "ts_variant": 1,
+          "quotient_gptq": 1
+        },
+        "v": {
+          "v435_content_parent": null,
+          "token_gptq_beam": 1,
+          "gptq_joint_metadata": 1,
+          "self_geometry_final": true
+        }
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": "nan",
+          "j_base": 0.00032518652733415365,
+          "j_cand": 0.00017674191622063518
+        },
+        "JOINT_DEBUG": {
+          "balance_heads": 0,
+          "kernel_heads": 0,
+          "error": false,
+          "hold_base": 0.00020436031627468765
+        },
+        "TEMP_DEBUG": {
+          "heads": 1,
+          "error": false,
+          "centered_groups": 0
+        },
+        "VM_DEBUG": {
+          "accepted": 1,
+          "error": false,
+          "eligible_heads": 1
+        },
+        "VR_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "target": "cross",
+          "eligible_heads": 1
+        },
+        "KT_DEBUG": {
+          "accepted": 2,
+          "error": false,
+          "guard_rows": 64,
+          "minimum_gain": 0.005
+        },
+        "TS_DEBUG": {
+          "accepted": 1,
+          "error": false
+        },
+        "OJ_DEBUG": {
+          "accepted": 0,
+          "error": false,
+          "role": "q"
+        },
+        "CO_DEBUG": {
+          "order": "OJ-KT-TS",
+          "error": false
+        },
+        "LT_DEBUG": {
+          "order": "V-OJ-KT-TS-TEMP",
+          "error": false
+        },
+        "DM_DEBUG": {
+          "folds": 2,
+          "finite": true,
+          "point": "quantized-QKV"
+        }
+      }
+    }
+  },
+  "calibration_seconds": 25.69715004193131,
+  "mean_quality": 0.35004420797011165,
+  "wall_seconds": 43.583439708920196
+}

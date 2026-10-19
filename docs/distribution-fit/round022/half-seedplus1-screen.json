@@ -1,0 +1,83 @@
+{
+  "certificate_columns": 490,
+  "required_versions": [
+    283,
+    284,
+    302,
+    303,
+    305,
+    306,
+    315,
+    316,
+    319,
+    320,
+    321,
+    322,
+    330,
+    333,
+    337,
+    343,
+    345,
+    374,
+    387,
+    389,
+    392,
+    399,
+    400,
+    402,
+    403,
+    410,
+    412,
+    413,
+    418,
+    419,
+    434,
+    435,
+    436,
+    438,
+    440
+  ],
+  "cases": [
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 3,
+      "tokens": 128,
+      "price": 220.76796104188116,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -3.3058185163692144
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 1,
+      "tokens": 8,
+      "price": 183.18430854150324,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -40.88947101674714
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 4,
+      "tokens": 512,
+      "price": 173.39693309339413,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -50.676846464856254
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 0,
+      "tokens": 4,
+      "price": 103.9445342374269,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -120.12924532082349
+    },
+    {
+      "population": "round022/true-qk-gain0.5-seedplus1",
+      "test": 2,
+      "tokens": 32,
+      "price": 30.039488233888655,
+      "required_lower_bound": 224.07377955825038,
+      "margin": -194.03429132436173
+    }
+  ],
+  "limits": "Nearer to this certificate boundary but still negative; no joint feasibility or online-score claim."
+}

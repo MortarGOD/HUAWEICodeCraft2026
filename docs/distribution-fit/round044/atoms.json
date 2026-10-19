@@ -1,0 +1,91 @@
+{
+  "round": 44,
+  "atoms": [
+    {
+      "id": "tie-noise05-paired",
+      "path": "local_distribution_fit/round044/tie-noise05.pt",
+      "sha256": "0bc6039adc5d41b1f1d34a46d21417f1f3e2482f277e436989f99681c9445673",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.05,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.05
+      }
+    },
+    {
+      "id": "tie-noise08-paired",
+      "path": "local_distribution_fit/round044/tie-noise08.pt",
+      "sha256": "ac272568e1c03aa76c7d3e8762f9bbff0baf38b1b2fce36d9d480d26c74f9a12",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.08,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.08
+      }
+    },
+    {
+      "id": "tie-noise12-paired",
+      "path": "local_distribution_fit/round044/tie-noise12.pt",
+      "sha256": "b11c2f60d597ab5cc07055e38fd528cadd307c04ae5659d9424ff90b566955a0",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.12,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.12
+      }
+    },
+    {
+      "id": "tie-noise18-paired",
+      "path": "local_distribution_fit/round044/tie-noise18.pt",
+      "sha256": "f3e92586484b192e34fdd42695ae4d91f35c5d37d011003f48ced5ed0dbe5d7c",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.18,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.18
+      }
+    },
+    {
+      "id": "tie-noise25-paired",
+      "path": "local_distribution_fit/round044/tie-noise25.pt",
+      "sha256": "b2f5f7dfe7395ee7f3f72c35bd95bd2fc677f6be03596aad5b3f2719f39e6f32",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.25,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.25
+      }
+    },
+    {
+      "id": "tie-noise35-paired",
+      "path": "local_distribution_fit/round044/tie-noise35.pt",
+      "sha256": "f27442ac0172804b30f2b82947d1823c3a3aff2ac11cc9a31c2e397d1cc75f3f",
+      "mode": "paired",
+      "fit_eligible": false,
+      "seed": 2026091100,
+      "noise": 0.35,
+      "profile": {
+        "tokens": 16,
+        "all_tied": true,
+        "row_noise": 0.35
+      }
+    }
+  ],
+  "mechanism": "v311 all-tied repeated-V strength gradient (row_noise), target band near -4995pt",
+  "limits": "Controlled mechanism gradient, not online distribution evidence; measure 310/311 first."
+}

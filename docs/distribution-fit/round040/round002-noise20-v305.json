@@ -1,0 +1,125 @@
+{
+  "version": 305,
+  "atom": "round002-noise20",
+  "source_sha256": "20493e64853378e4600fd87d5d5b2697603c935c875282dafd516f18c5b881b8",
+  "data_sha256": "0bae4e9d9bf96c3d054c0c91be63e5e964ac884690705cb69700c227b80d884d",
+  "complete": true,
+  "cases": [
+    {
+      "test": 0,
+      "tokens": 8,
+      "baseline_mse": 0.002033801283687353,
+      "player_mse": 0.0010314633836969733,
+      "quality": 0.4928396436908064
+    },
+    {
+      "test": 1,
+      "tokens": 8,
+      "baseline_mse": 0.0019165705889463425,
+      "player_mse": 0.001500455429777503,
+      "quality": 0.217114444711167
+    },
+    {
+      "test": 2,
+      "tokens": 8,
+      "baseline_mse": 0.0017658984288573265,
+      "player_mse": 0.0013625237625092268,
+      "quality": 0.22842461364502967
+    },
+    {
+      "test": 3,
+      "tokens": 8,
+      "baseline_mse": 0.0014486380387097597,
+      "player_mse": 0.0009435634128749371,
+      "quality": 0.3486548139276193
+    },
+    {
+      "test": 4,
+      "tokens": 8,
+      "baseline_mse": 0.0015743093099445105,
+      "player_mse": 0.001139953499659896,
+      "quality": 0.27590245928223867
+    }
+  ],
+  "format_checks": 15,
+  "calibration_diagnostics": {
+    "q": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.728845477104187,
+          "j_base": 0.0006017480045557022,
+          "j_cand": 0.0002903650456573814
+        }
+      }
+    },
+    "k": {
+      "state_flags": {
+        "q": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 1,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.7424024343490601,
+          "j_base": 0.0005346567486412823,
+          "j_cand": 0.00041133377817459404
+        }
+      }
+    },
+    "v": {
+      "state_flags": {
+        "q": {
+          "rot": 0,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "k": {
+          "rot": 0,
+          "rseed": 0,
+          "kvh": 2
+        },
+        "v": {}
+      },
+      "debug": {
+        "SMOOTH_DEBUG": {},
+        "QKS_DEBUG": {
+          "fitted": true,
+          "accepted": true,
+          "stab": 0.7106269598007202,
+          "j_base": 0.0005195772973820567,
+          "j_cand": 0.000387161853723228
+        }
+      }
+    }
+  },
+  "calibration_seconds": 0.09197649999987334,
+  "mean_quality": 0.3125871950513722,
+  "wall_seconds": 0.15150358295068145
+}

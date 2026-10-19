@@ -1,0 +1,128 @@
+{
+  "round": 38,
+  "atoms": [
+    {
+      "id": "repeat00-first-paired",
+      "path": "local_distribution_fit/round038/repeat00-first.pt",
+      "sha256": "daf1752cdce39a655b18d83264cbf9272ce04af647d55ff53b9b41e5993b8536",
+      "mode": "paired",
+      "seed": 2026091100,
+      "noise": 0,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0,
+        "reverse_kv": false
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat00-first-row_permute",
+      "path": "local_distribution_fit/round038/repeat00-first.pt",
+      "sha256": "daf1752cdce39a655b18d83264cbf9272ce04af647d55ff53b9b41e5993b8536",
+      "mode": "row_permute",
+      "seed": 2026091100,
+      "noise": 0,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0,
+        "reverse_kv": false
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat00-reverse-paired",
+      "path": "local_distribution_fit/round038/repeat00-reverse.pt",
+      "sha256": "70ebe83798fce1dc1ae81d41353cac9e5372f55dc5c87ebca19ebb68b3fd8e70",
+      "mode": "paired",
+      "seed": 2026091100,
+      "noise": 0,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0,
+        "reverse_kv": true
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat00-reverse-row_permute",
+      "path": "local_distribution_fit/round038/repeat00-reverse.pt",
+      "sha256": "70ebe83798fce1dc1ae81d41353cac9e5372f55dc5c87ebca19ebb68b3fd8e70",
+      "mode": "row_permute",
+      "seed": 2026091100,
+      "noise": 0,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0,
+        "reverse_kv": true
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat03-first-paired",
+      "path": "local_distribution_fit/round038/repeat03-first.pt",
+      "sha256": "efcb2d935216fb60cb198ee1a2da92fa935999eae8d965fd8d0abb5695815385",
+      "mode": "paired",
+      "seed": 2026091100,
+      "noise": 0.03,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0.03,
+        "reverse_kv": false
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat03-first-row_permute",
+      "path": "local_distribution_fit/round038/repeat03-first.pt",
+      "sha256": "efcb2d935216fb60cb198ee1a2da92fa935999eae8d965fd8d0abb5695815385",
+      "mode": "row_permute",
+      "seed": 2026091100,
+      "noise": 0.03,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0.03,
+        "reverse_kv": false
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat03-reverse-paired",
+      "path": "local_distribution_fit/round038/repeat03-reverse.pt",
+      "sha256": "601418173b58c20cb149b87a0711bac1fd0a14812f97cfa7b720b15e37fc12c5",
+      "mode": "paired",
+      "seed": 2026091100,
+      "noise": 0.03,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0.03,
+        "reverse_kv": true
+      },
+      "fit_eligible": false
+    },
+    {
+      "id": "repeat03-reverse-row_permute",
+      "path": "local_distribution_fit/round038/repeat03-reverse.pt",
+      "sha256": "601418173b58c20cb149b87a0711bac1fd0a14812f97cfa7b720b15e37fc12c5",
+      "mode": "row_permute",
+      "seed": 2026091100,
+      "noise": 0.03,
+      "profile": {
+        "tokens": 16,
+        "fixed_key_sink": true,
+        "repeated_v_noise": 0.03,
+        "reverse_kv": true
+      },
+      "fit_eligible": false
+    }
+  ],
+  "reference_reversal_max_difference": 1.1920928955078125e-06,
+  "mechanism": "V311 argmin token-position sensitivity on repeated/near-repeated V; fixed first key preference, no selection using quantizer errors. Calibration/test RNG separated.",
+  "limits": "Controlled synthetic probe, not online distribution evidence; measure 310/311 first, no fit promotion without mechanism result."
+}

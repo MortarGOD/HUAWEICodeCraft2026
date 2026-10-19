@@ -1,0 +1,11 @@
+{
+  "version": 627,
+  "parent": 625,
+  "parent_sha256": "1100489e69addd205a6b282917e3d99344f68197cb2b78d2003bb5617f7aa2d3",
+  "patch_summary": "Combined delivery: v625 (attention Q/K rotation always on) + v626 (Linear refinement guards on the last non-degenerate calibration activation). Both come from the same root cause -- the official layout puts a degenerate sample last -- but live in different subsystems, so each is separately attributable from the v625 and v626 receipts and this version is only their sum.",
+  "source_sha256": "063c00a1a39f79a5ebc545d59d9123b87abec20baa5d4b75656f394b669e723f",
+  "archive_sha256": "cd46faa636c2bad1b8cf65c450cfda100589ff5273411282c9a40d878c6abc1d",
+  "archive_members": [
+    "solution.py"
+  ]
+}

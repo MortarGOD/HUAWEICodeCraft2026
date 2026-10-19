@@ -1,0 +1,4037 @@
+{
+  "complete": true,
+  "passed": true,
+  "parent": 422,
+  "candidate": 424,
+  "versions": [
+    422,
+    424
+  ],
+  "dataset": "/Users/ee/Code/2026-huawei-alogorithm/local_fitted_models_realw_v41",
+  "sha256": {
+    "422": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+    "424": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8"
+  },
+  "linear_sha256": "35a3a238c8874491a62f773de84050012a003eea664d297977a5f248c990b366",
+  "harness_sha256": "998adc1d457d339aa491a5dc857d7a4f7920bbdf045f1bb7eb3dc33ae9755350",
+  "source_scope": {
+    "parent_full_prefix_unchanged": true,
+    "parent_prefix_bytes": 214478,
+    "suffix_bindings": [
+      "_v424_parent_joint_block_transform",
+      "_v424_proxy_pair",
+      "_v424_procrustes_step",
+      "_v424_two_fold_improves",
+      "_v424_learn_block_transform",
+      "_v422_joint_block_transform"
+    ],
+    "attention_functions_redefined": false,
+    "interpretation": "Exact parent source plus v424 helpers and the Linear joint block transform hook; pair factorization and public Attention definitions are unchanged. Six-API validation is separate."
+  },
+  "torch_version": "2.13.0",
+  "python": "/opt/miniconda3/envs/codecraft/bin/python",
+  "threads": 4,
+  "seed": 20260907424,
+  "selected_groups": [
+    0,
+    4,
+    6,
+    7,
+    9
+  ],
+  "score_prediction_allowed": false,
+  "scoring": "FP32 NVFP4 teacher and Algorithm1 baseline GEMM; actual decoded BF16 player GEMM, then FP32 MSE.",
+  "timing": "Serial public API wall time, excluding input/state cloning, checks, scoring and replay. Includes lightweight call counters and nested pair/learning timers. Stage times overlap and must not be summed. No online-time conversion.",
+  "validation_policy": "Independent calibrations with identical starting RNG. Down is bitexact; up/square losses may rise and negative cases are retained. Dynamic input/state/RNG must remain unchanged.",
+  "groups": [
+    {
+      "group": 0,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "Qwen/Qwen3.6-35B-A3B",
+      "source_tensor": "model.language_model.layers.3.self_attn.q_proj.weight",
+      "calibration_order": [
+        422,
+        424
+      ],
+      "timing": {
+        "422": {
+          "calibration": 0.8896430409513414,
+          "dynamic": 0.4940347090596333,
+          "isolation": 0.06326062500011176,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.008259541005827487
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_learn_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_procrustes_step": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_two_fold_improves": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "accepted": 0,
+              "rejected": 0
+            }
+          }
+        },
+        "424": {
+          "calibration": 0.9985091669950634,
+          "dynamic": 0.4901255420409143,
+          "isolation": 0.06304191716481,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.03780983400065452
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.0016185420099645853
+            },
+            "_v424_learn_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.03377849992830306,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": true,
+              "calls": 5,
+              "seconds": 0.026005664956755936
+            },
+            "_v424_procrustes_step": {
+              "present": true,
+              "calls": 2,
+              "seconds": 0.003790999995544553
+            },
+            "_v424_two_fold_improves": {
+              "present": true,
+              "calls": 4,
+              "seconds": 3.1415955163538456e-05,
+              "accepted": 4,
+              "rejected": 0
+            }
+          }
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "424": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        },
+        "424": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        }
+      },
+      "transforms": {
+        "422": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 0,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        },
+        "424": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 8,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0021683541126549244,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0010283112060278654,
+              "score": 0.525764172915094,
+              "dynamic_seconds": 0.031698458013124764,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0010178062366321683,
+              "score": 0.5306088471933349,
+              "dynamic_seconds": 0.030529582989402115,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.525764172915094,
+            "candidate": 0.5306088471933349,
+            "delta": 0.004844674278240868
+          },
+          "activation_decoded_changes": {
+            "changed_values": 322,
+            "values": 512,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 3,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 5,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 18,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 43,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 268,
+                "values": 512
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 2015,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 1,
+              "mean": 0.0010283112060278654,
+              "min": 0.0010283112060278654,
+              "p05": 0.0010283112060278654,
+              "median": 0.0010283112060278654,
+              "p95": 0.0010283112060278654,
+              "max": 0.0010283112060278654
+            },
+            "candidate_mse_distribution": {
+              "count": 1,
+              "mean": 0.0010178062366321683,
+              "min": 0.0010178062366321683,
+              "p05": 0.0010178062366321683,
+              "median": 0.0010178062366321683,
+              "p95": 0.0010178062366321683,
+              "max": 0.0010178062366321683
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 1,
+              "mean": -1.0504969395697117e-05,
+              "min": -1.0504969395697117e-05,
+              "p05": -1.0504969395697117e-05,
+              "median": -1.0504969395697117e-05,
+              "p95": -1.0504969395697117e-05,
+              "max": -1.0504969395697117e-05
+            },
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 1.0504969395697117e-05
+          }
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.0023401505313813686,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0011805460089817643,
+              "score": 0.49552561121574545,
+              "dynamic_seconds": 0.048379666986875236,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0011813384480774403,
+              "score": 0.4951869838133416,
+              "dynamic_seconds": 0.04766629193909466,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4951869838133416,
+            "candidate": 0.49552561121574545,
+            "delta": 0.00033862740240386824
+          },
+          "activation_decoded_changes": {
+            "changed_values": 3719,
+            "values": 5120,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 57,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 171,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 221,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 475,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 3019,
+                "values": 5120
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 20159,
+            "values": 20480,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 10,
+              "mean": 0.001181338564492762,
+              "min": 0.0009865534957498312,
+              "p05": 0.0009917685529217124,
+              "median": 0.0011506825685501099,
+              "p95": 0.0014349749544635415,
+              "max": 0.0014390074647963047
+            },
+            "candidate_mse_distribution": {
+              "count": 10,
+              "mean": 0.0011805461253970861,
+              "min": 0.0009627451654523611,
+              "p05": 0.0009878716664388776,
+              "median": 0.0011440909001976252,
+              "p95": 0.0014515918446704745,
+              "max": 0.0015352284535765648
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 10,
+              "mean": -7.924739975351258e-07,
+              "min": -0.0001327714417129755,
+              "p05": -0.00010932893201243132,
+              "median": 2.084416337311268e-06,
+              "p95": 0.00011097013339167461,
+              "max": 0.00012303760740906
+            },
+            "improved": 5,
+            "worsened": 5,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00012303760740906,
+            "max_mse_decrease": 0.0001327714417129755
+          }
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.002239119028672576,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0011437510838732123,
+              "score": 0.4891959430351204,
+              "dynamic_seconds": 0.077954167034477,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0011424184776842594,
+              "score": 0.4897910905783678,
+              "dynamic_seconds": 0.0798637920524925,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4891959430351204,
+            "candidate": 0.4897910905783678,
+            "delta": 0.0005951475432474096
+          },
+          "activation_decoded_changes": {
+            "changed_values": 11581,
+            "values": 16384,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 155,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 466,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 663,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1385,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 9433,
+                "values": 16384
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 64544,
+            "values": 65536,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 32,
+              "mean": 0.0011437510838732123,
+              "min": 0.0009606629610061646,
+              "p05": 0.0009839446283876896,
+              "median": 0.0010985275730490685,
+              "p95": 0.0013861714396625757,
+              "max": 0.0018441908759996295
+            },
+            "candidate_mse_distribution": {
+              "count": 32,
+              "mean": 0.0011424184776842594,
+              "min": 0.0010023105423897505,
+              "p05": 0.0010065651731565595,
+              "median": 0.0010965047404170036,
+              "p95": 0.0013607395812869072,
+              "max": 0.0017642718739807606
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 32,
+              "mean": -1.3324824976734817e-06,
+              "min": -0.00011748634278774261,
+              "p05": -7.857632590457797e-05,
+              "median": 3.181456122547388e-06,
+              "p95": 6.603469228139147e-05,
+              "max": 8.496700320392847e-05
+            },
+            "improved": 16,
+            "worsened": 16,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 8.496700320392847e-05,
+            "max_mse_decrease": 0.00011748634278774261
+          }
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.0022540013305842876,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0011499542742967606,
+              "score": 0.48981650600948556,
+              "dynamic_seconds": 0.1116107499692589,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0011640136362984776,
+              "score": 0.48357899327559883,
+              "dynamic_seconds": 0.11012754205148667,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.48357899327559883,
+            "candidate": 0.48981650600948556,
+            "delta": 0.00623751273388673
+          },
+          "activation_decoded_changes": {
+            "changed_values": 23661,
+            "values": 32768,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 328,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 983,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 1323,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 2758,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 19142,
+                "values": 32768
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 129065,
+            "values": 131072,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 64,
+              "mean": 0.0011640136362984776,
+              "min": 0.0009848183253780007,
+              "p05": 0.0010160921374335885,
+              "median": 0.0011223689652979374,
+              "p95": 0.001498876721598208,
+              "max": 0.0019686883315443993
+            },
+            "candidate_mse_distribution": {
+              "count": 64,
+              "mean": 0.0011499542742967606,
+              "min": 0.0009732735925354064,
+              "p05": 0.000998862786218524,
+              "median": 0.0011235014535486698,
+              "p95": 0.0014871959574520588,
+              "max": 0.0020777261815965176
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 64,
+              "mean": -1.405934654030716e-05,
+              "min": -0.00010620779357850552,
+              "p05": -9.321155084762722e-05,
+              "median": -1.1189840734004974e-05,
+              "p95": 6.269455479923636e-05,
+              "max": 0.0001090378500521183
+            },
+            "improved": 40,
+            "worsened": 24,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0001090378500521183,
+            "max_mse_decrease": 0.00010620779357850552
+          }
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.0022271398920565844,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0011597230331972241,
+              "score": 0.4792769698331283,
+              "dynamic_seconds": 0.22658825002145022,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.001153840683400631,
+              "score": 0.4819181823665545,
+              "dynamic_seconds": 0.21974175004288554,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4792769698331283,
+            "candidate": 0.4819181823665545,
+            "delta": 0.002641212533426196
+          },
+          "activation_decoded_changes": {
+            "changed_values": 46746,
+            "values": 65536,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 638,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 1900,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 2664,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 5601,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 38040,
+                "values": 65536
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 258124,
+            "values": 262144,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 128,
+              "mean": 0.0011597230331972241,
+              "min": 0.0009718184010125697,
+              "p05": 0.0010066278045997024,
+              "median": 0.0011202627792954445,
+              "p95": 0.0015319890808314085,
+              "max": 0.0019216862274333835
+            },
+            "candidate_mse_distribution": {
+              "count": 128,
+              "mean": 0.001153840683400631,
+              "min": 0.0009550846880301833,
+              "p05": 0.0010037379106506705,
+              "median": 0.0011151290964335203,
+              "p95": 0.0014742884086444974,
+              "max": 0.0020438856445252895
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 128,
+              "mean": -5.8824166444537695e-06,
+              "min": -0.00012065446935594082,
+              "p05": -8.773805166129023e-05,
+              "median": -5.733512807637453e-06,
+              "p95": 8.711302507435903e-05,
+              "max": 0.00012219941709190607
+            },
+            "improved": 69,
+            "worsened": 59,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00012219941709190607,
+            "max_mse_decrease": 0.00012065446935594082
+          }
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 542378,
+        "values": 1048576,
+        "changed_rows": 2048,
+        "any_changed": true
+      },
+      "weight_parameter_changes": {
+        "bitexact": false,
+        "fields": {
+          "scale_factor": {
+            "changed_values": 7584,
+            "values": 16384
+          },
+          "scale_lv2": {
+            "changed_values": 24277,
+            "values": 131072
+          },
+          "scale_lv3": {
+            "changed_values": 29766,
+            "values": 262144
+          },
+          "sign": {
+            "changed_values": 51242,
+            "values": 1048576
+          },
+          "mant": {
+            "changed_values": 447363,
+            "values": 1048576
+          }
+        },
+        "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+      },
+      "calibration_bitexact": false,
+      "transform_comparison": {
+        "present": true,
+        "bitexact": false,
+        "blocks": 8,
+        "changed_blocks": 8,
+        "changed_values": 32256,
+        "max_abs_delta": 0.0255126953125,
+        "frobenius_delta": 1.1658939123153687,
+        "interpretation": "Candidate versus actual parent frozen transform; parent nonidentity blocks are not counted as newly learned."
+      },
+      "isolation_replays": {
+        "422": true,
+        "424": true
+      },
+      "score_sums": {
+        "422": 2.473003062872283,
+        "424": 2.487660237363488
+      },
+      "score_comparison": {
+        "parent": 2.473003062872283,
+        "candidate": 2.487660237363488,
+        "delta": 0.014657174491204739
+      }
+    },
+    {
+      "group": 4,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "Qwen/Qwen3.6-35B-A3B",
+      "source_tensor": "model.language_model.layers.3.mlp.shared_expert.down_proj.weight",
+      "calibration_order": [
+        424,
+        422
+      ],
+      "timing": {
+        "422": {
+          "calibration": 2.06777116691228,
+          "dynamic": 1.087889541988261,
+          "isolation": 0.13066991697996855,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.004442083998583257
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_learn_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_procrustes_step": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_two_fold_improves": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "accepted": 0,
+              "rejected": 0
+            }
+          }
+        },
+        "424": {
+          "calibration": 1.2021315000019968,
+          "dynamic": 1.0910351659404114,
+          "isolation": 0.1393309999257326,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.04349800001364201
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.0017932499758899212
+            },
+            "_v424_learn_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.037994583952240646,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": true,
+              "calls": 5,
+              "seconds": 0.029708125861361623
+            },
+            "_v424_procrustes_step": {
+              "present": true,
+              "calls": 2,
+              "seconds": 0.003785333945415914
+            },
+            "_v424_two_fold_improves": {
+              "present": true,
+              "calls": 4,
+              "seconds": 3.4458120353519917e-05,
+              "accepted": 4,
+              "rejected": 0
+            }
+          }
+        }
+      },
+      "calibration_rng_unchanged": {
+        "424": false,
+        "422": false
+      },
+      "calibration_counts": {
+        "424": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        },
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        }
+      },
+      "transforms": {
+        "424": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 8,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        },
+        "422": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 0,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0010937852784991264,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0005211165989749134,
+              "score": 0.5235659052844626,
+              "dynamic_seconds": 0.05215387500356883,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0005187238566577435,
+              "score": 0.5257534848434535,
+              "dynamic_seconds": 0.05672908294945955,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5257534848434535,
+            "candidate": 0.5235659052844626,
+            "delta": -0.0021875795589909597
+          },
+          "activation_decoded_changes": {
+            "changed_values": 404,
+            "values": 512,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 6,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 16,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 18,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 47,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 320,
+                "values": 512
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 2015,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 1,
+              "mean": 0.0005187238566577435,
+              "min": 0.0005187238566577435,
+              "p05": 0.0005187238566577435,
+              "median": 0.0005187238566577435,
+              "p95": 0.0005187238566577435,
+              "max": 0.0005187238566577435
+            },
+            "candidate_mse_distribution": {
+              "count": 1,
+              "mean": 0.0005211165989749134,
+              "min": 0.0005211165989749134,
+              "p05": 0.0005211165989749134,
+              "median": 0.0005211165989749134,
+              "p95": 0.0005211165989749134,
+              "max": 0.0005211165989749134
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 1,
+              "mean": 2.3927423171699047e-06,
+              "min": 2.3927423171699047e-06,
+              "p05": 2.3927423171699047e-06,
+              "median": 2.3927423171699047e-06,
+              "p95": 2.3927423171699047e-06,
+              "max": 2.3927423171699047e-06
+            },
+            "improved": 0,
+            "worsened": 1,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 2.3927423171699047e-06,
+            "max_mse_decrease": 0.0
+          }
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.0009714054176583886,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.00046074073179624975,
+              "score": 0.5256967653043529,
+              "dynamic_seconds": 0.10471341700758785,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0004652810748666525,
+              "score": 0.5210227713283389,
+              "dynamic_seconds": 0.12009341700468212,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5256967653043529,
+            "candidate": 0.5210227713283389,
+            "delta": -0.00467399397601409
+          },
+          "activation_decoded_changes": {
+            "changed_values": 3923,
+            "values": 5120,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 58,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 167,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 214,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 483,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 3138,
+                "values": 5120
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 20134,
+            "values": 20480,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 10,
+              "mean": 0.00046074073179624975,
+              "min": 0.00040290376637130976,
+              "p05": 0.00041095877531915903,
+              "median": 0.00044423952931538224,
+              "p95": 0.0005564356106333435,
+              "max": 0.0005863371770828962
+            },
+            "candidate_mse_distribution": {
+              "count": 10,
+              "mean": 0.0004652810748666525,
+              "min": 0.0004147782165091485,
+              "p05": 0.0004174918867647648,
+              "median": 0.00045470421900972724,
+              "p95": 0.0005506016896106303,
+              "max": 0.0006009209319017828
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 10,
+              "mean": 4.5403867261484265e-06,
+              "min": -3.078882582485676e-05,
+              "p05": -2.516513086447958e-05,
+              "median": 1.203466672450304e-05,
+              "p95": 3.012316483363975e-05,
+              "max": 3.649131394922733e-05
+            },
+            "improved": 4,
+            "worsened": 6,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 3.649131394922733e-05,
+            "max_mse_decrease": 3.078882582485676e-05
+          }
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.0010301298461854458,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0004751276574097574,
+              "score": 0.5387691569474009,
+              "dynamic_seconds": 0.17710779095068574,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0004743085883092135,
+              "score": 0.5395642694311105,
+              "dynamic_seconds": 0.1774519580649212,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5395642694311105,
+            "candidate": 0.5387691569474009,
+            "delta": -0.0007951124837095591
+          },
+          "activation_decoded_changes": {
+            "changed_values": 12134,
+            "values": 16384,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 168,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 487,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 670,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1443,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 9863,
+                "values": 16384
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 64496,
+            "values": 65536,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 32,
+              "mean": 0.0004743085883092135,
+              "min": 0.00037733683711849153,
+              "p05": 0.0004189382598269731,
+              "median": 0.00045651657273992896,
+              "p95": 0.0005925201112404466,
+              "max": 0.0006160081829875708
+            },
+            "candidate_mse_distribution": {
+              "count": 32,
+              "mean": 0.0004751276574097574,
+              "min": 0.0003990284458268434,
+              "p05": 0.0004058154590893537,
+              "median": 0.000460929935798049,
+              "p95": 0.0006152783753350377,
+              "max": 0.0006448113708756864
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 32,
+              "mean": 8.190563676180318e-07,
+              "min": -5.140941357240081e-05,
+              "p05": -2.712103923840914e-05,
+              "median": -1.1442461982369423e-06,
+              "p95": 3.392854341655038e-05,
+              "max": 6.414001109078526e-05
+            },
+            "improved": 17,
+            "worsened": 15,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 6.414001109078526e-05,
+            "max_mse_decrease": 5.140941357240081e-05
+          }
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.001046565710566938,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0004766477213706821,
+              "score": 0.5445601584706268,
+              "dynamic_seconds": 0.2581411669962108,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0004767361097037792,
+              "score": 0.5444757028724692,
+              "dynamic_seconds": 0.2875573330093175,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5445601584706268,
+            "candidate": 0.5444757028724692,
+            "delta": -8.445559815761783e-05
+          },
+          "activation_decoded_changes": {
+            "changed_values": 24090,
+            "values": 32768,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 329,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 946,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 1360,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 3082,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 19635,
+                "values": 32768
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 129113,
+            "values": 131072,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 64,
+              "mean": 0.0004766477213706821,
+              "min": 0.0003687588614411652,
+              "p05": 0.0004187926824670285,
+              "median": 0.00045778509229421616,
+              "p95": 0.0005878485389985144,
+              "max": 0.0008657828439027071
+            },
+            "candidate_mse_distribution": {
+              "count": 64,
+              "mean": 0.00047673608059994876,
+              "min": 0.0003924171905964613,
+              "p05": 0.0004146053397562355,
+              "median": 0.00045756081817671657,
+              "p95": 0.0006059419247321784,
+              "max": 0.000884230132214725
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 64,
+              "mean": 8.834422260406427e-08,
+              "min": -0.00011282303603366017,
+              "p05": -3.466486668912694e-05,
+              "median": -5.222434992901981e-06,
+              "p95": 4.511089719017036e-05,
+              "max": 6.682780804112554e-05
+            },
+            "improved": 36,
+            "worsened": 28,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 6.682780804112554e-05,
+            "max_mse_decrease": 0.00011282303603366017
+          }
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.0010278187692165375,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0004747890052385628,
+              "score": 0.5380615537888316,
+              "dynamic_seconds": 0.4541227499721572,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.000474034808576107,
+              "score": 0.5387953374917996,
+              "dynamic_seconds": 0.4908539169700816,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5387953374917996,
+            "candidate": 0.5380615537888316,
+            "delta": -0.0007337837029680605
+          },
+          "activation_decoded_changes": {
+            "changed_values": 48541,
+            "values": 65536,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 665,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 1909,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 2638,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 5983,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 39261,
+                "values": 65536
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 258059,
+            "values": 262144,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 128,
+              "mean": 0.000474034808576107,
+              "min": 0.0003966685035265982,
+              "p05": 0.0004107486456632614,
+              "median": 0.0004579130036290735,
+              "p95": 0.0006376433302648365,
+              "max": 0.0007813410484232008
+            },
+            "candidate_mse_distribution": {
+              "count": 128,
+              "mean": 0.0004747890052385628,
+              "min": 0.00037734146462753415,
+              "p05": 0.00041359919123351574,
+              "median": 0.00046067056246101856,
+              "p95": 0.0006033372483216226,
+              "max": 0.0008157767588272691
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 128,
+              "mean": 7.542080311395694e-07,
+              "min": -4.868116229772568e-05,
+              "p05": -3.8337955629685894e-05,
+              "median": 3.493711119517684e-06,
+              "p95": 3.4455082641215995e-05,
+              "max": 6.660370854660869e-05
+            },
+            "improved": 57,
+            "worsened": 71,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 6.660370854660869e-05,
+            "max_mse_decrease": 4.868116229772568e-05
+          }
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 539993,
+        "values": 1048576,
+        "changed_rows": 2048,
+        "any_changed": true
+      },
+      "weight_parameter_changes": {
+        "bitexact": false,
+        "fields": {
+          "scale_factor": {
+            "changed_values": 7516,
+            "values": 16384
+          },
+          "scale_lv2": {
+            "changed_values": 24620,
+            "values": 131072
+          },
+          "scale_lv3": {
+            "changed_values": 30147,
+            "values": 262144
+          },
+          "sign": {
+            "changed_values": 50963,
+            "values": 1048576
+          },
+          "mant": {
+            "changed_values": 446670,
+            "values": 1048576
+          }
+        },
+        "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+      },
+      "calibration_bitexact": false,
+      "transform_comparison": {
+        "present": true,
+        "bitexact": false,
+        "blocks": 8,
+        "changed_blocks": 8,
+        "changed_values": 32256,
+        "max_abs_delta": 0.0250244140625,
+        "frobenius_delta": 1.155759334564209,
+        "interpretation": "Candidate versus actual parent frozen transform; parent nonidentity blocks are not counted as newly learned."
+      },
+      "isolation_replays": {
+        "422": true,
+        "424": true
+      },
+      "score_sums": {
+        "422": 2.6743700155413435,
+        "424": 2.665895090221503
+      },
+      "score_comparison": {
+        "parent": 2.6743700155413435,
+        "candidate": 2.665895090221503,
+        "delta": -0.008474925319840398
+      }
+    },
+    {
+      "group": 6,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.attn.wq_b.weight",
+      "calibration_order": [
+        422,
+        424
+      ],
+      "timing": {
+        "422": {
+          "calibration": 2.307496333029121,
+          "dynamic": 1.0675398339517415,
+          "isolation": 0.13980645791161805,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.009220250067301095
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_learn_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_procrustes_step": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_two_fold_improves": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "accepted": 0,
+              "rejected": 0
+            }
+          }
+        },
+        "424": {
+          "calibration": 2.381140041979961,
+          "dynamic": 1.0453655009623617,
+          "isolation": 0.14340595807880163,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.09270770906005055
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.0027939589926972985
+            },
+            "_v424_learn_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.08388175000436604,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": true,
+              "calls": 5,
+              "seconds": 0.0698524167528376
+            },
+            "_v424_procrustes_step": {
+              "present": true,
+              "calls": 2,
+              "seconds": 0.006436708034016192
+            },
+            "_v424_two_fold_improves": {
+              "present": true,
+              "calls": 4,
+              "seconds": 6.629107519984245e-05,
+              "accepted": 4,
+              "rejected": 0
+            }
+          }
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "424": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        },
+        "424": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        }
+      },
+      "transforms": {
+        "422": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 0,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        },
+        "424": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 8,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.004913214594125748,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0028464840725064278,
+              "score": 0.4206473138971598,
+              "dynamic_seconds": 0.05592995893675834,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.002760327886790037,
+              "score": 0.4381829179433171,
+              "dynamic_seconds": 0.06926266592927277,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4206473138971598,
+            "candidate": 0.4381829179433171,
+            "delta": 0.017535604046157283
+          },
+          "activation_decoded_changes": {
+            "changed_values": 323,
+            "values": 512,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 4,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 8,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 16,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 39,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 264,
+                "values": 512
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 2019,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 1,
+              "mean": 0.0028464840725064278,
+              "min": 0.0028464840725064278,
+              "p05": 0.0028464840725064278,
+              "median": 0.0028464840725064278,
+              "p95": 0.0028464840725064278,
+              "max": 0.0028464840725064278
+            },
+            "candidate_mse_distribution": {
+              "count": 1,
+              "mean": 0.002760327886790037,
+              "min": 0.002760327886790037,
+              "p05": 0.002760327886790037,
+              "median": 0.002760327886790037,
+              "p95": 0.002760327886790037,
+              "max": 0.002760327886790037
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 1,
+              "mean": -8.615618571639061e-05,
+              "min": -8.615618571639061e-05,
+              "p05": -8.615618571639061e-05,
+              "median": -8.615618571639061e-05,
+              "p95": -8.615618571639061e-05,
+              "max": -8.615618571639061e-05
+            },
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 8.615618571639061e-05
+          }
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.005476970691233873,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0029388763941824436,
+              "score": 0.46341206483243713,
+              "dynamic_seconds": 0.1017057920107618,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002943882253021002,
+              "score": 0.4624980816981892,
+              "dynamic_seconds": 0.10893662495072931,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4624980816981892,
+            "candidate": 0.46341206483243713,
+            "delta": 0.0009139831342479532
+          },
+          "activation_decoded_changes": {
+            "changed_values": 3569,
+            "values": 5120,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 48,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 141,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 228,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 381,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 2893,
+                "values": 5120
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 20153,
+            "values": 20480,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 10,
+              "mean": 0.002943882253021002,
+              "min": 0.002683777129277587,
+              "p05": 0.0026968501042574644,
+              "median": 0.002902279607951641,
+              "p95": 0.0033192059490829706,
+              "max": 0.0033275627065449953
+            },
+            "candidate_mse_distribution": {
+              "count": 10,
+              "mean": 0.0029388763941824436,
+              "min": 0.002623776439577341,
+              "p05": 0.0026278358418494463,
+              "median": 0.002878212369978428,
+              "p95": 0.003301390912383795,
+              "max": 0.003395696170628071
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 10,
+              "mean": -5.005952061765129e-06,
+              "min": -0.00014143367297947407,
+              "p05": -0.00013978515926282853,
+              "median": 1.2553995475172997e-05,
+              "p95": 0.00011209563672309741,
+              "max": 0.00011328188702464104
+            },
+            "improved": 4,
+            "worsened": 6,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00011328188702464104,
+            "max_mse_decrease": 0.00014143367297947407
+          }
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.0054969158954918385,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0029640216380357742,
+              "score": 0.46078461188270237,
+              "dynamic_seconds": 0.17585020803380758,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0029635420069098473,
+              "score": 0.4608718664696464,
+              "dynamic_seconds": 0.16092854202724993,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.46078461188270237,
+            "candidate": 0.4608718664696464,
+            "delta": 8.725458694402999e-05
+          },
+          "activation_decoded_changes": {
+            "changed_values": 11727,
+            "values": 16384,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 166,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 460,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 662,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1315,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 9409,
+                "values": 16384
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 64572,
+            "values": 65536,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 32,
+              "mean": 0.0029640216380357742,
+              "min": 0.0024746512062847614,
+              "p05": 0.002666645450517535,
+              "median": 0.0028226589784026146,
+              "p95": 0.0039056430105119944,
+              "max": 0.004913579672574997
+            },
+            "candidate_mse_distribution": {
+              "count": 32,
+              "mean": 0.002963542239740491,
+              "min": 0.0024165762588381767,
+              "p05": 0.002578259911388159,
+              "median": 0.0028163644019514322,
+              "p95": 0.004018845967948437,
+              "max": 0.005372766405344009
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 32,
+              "mean": -4.794856067746878e-07,
+              "min": -0.00026928912848234177,
+              "p05": -0.00019785243785008788,
+              "median": 4.684552550315857e-07,
+              "p95": 0.00021909154020249844,
+              "max": 0.00045918673276901245
+            },
+            "improved": 16,
+            "worsened": 16,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00045918673276901245,
+            "max_mse_decrease": 0.00026928912848234177
+          }
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.005329258739948273,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0029379099141806364,
+              "score": 0.44872072129694485,
+              "dynamic_seconds": 0.23748816701117903,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002927748952060938,
+              "score": 0.45062735833889056,
+              "dynamic_seconds": 0.2670777919702232,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.45062735833889056,
+            "candidate": 0.44872072129694485,
+            "delta": -0.0019066370419457135
+          },
+          "activation_decoded_changes": {
+            "changed_values": 23003,
+            "values": 32768,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 326,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 999,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 1273,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 2575,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 18732,
+                "values": 32768
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 129164,
+            "values": 131072,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 64,
+              "mean": 0.0029277491848915815,
+              "min": 0.002580548170953989,
+              "p05": 0.0026035059709101915,
+              "median": 0.00282209157012403,
+              "p95": 0.0035158793907612562,
+              "max": 0.004548803903162479
+            },
+            "candidate_mse_distribution": {
+              "count": 64,
+              "mean": 0.00293791014701128,
+              "min": 0.0025382658932358027,
+              "p05": 0.002584879519417882,
+              "median": 0.0028238282538950443,
+              "p95": 0.003613109001889825,
+              "max": 0.004417755641043186
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 64,
+              "mean": 1.0161107638850808e-05,
+              "min": -0.00024874252267181873,
+              "p05": -0.00017044844571501017,
+              "median": -3.8053840398788452e-06,
+              "p95": 0.00020509662863332778,
+              "max": 0.0003827714826911688
+            },
+            "improved": 33,
+            "worsened": 31,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0003827714826911688,
+            "max_mse_decrease": 0.00024874252267181873
+          }
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.005229185800999403,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0029243077151477337,
+              "score": 0.4407718856367966,
+              "dynamic_seconds": 0.45974525006022304,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0029031275771558285,
+              "score": 0.4448222557704906,
+              "dynamic_seconds": 0.47598033398389816,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4407718856367966,
+            "candidate": 0.4448222557704906,
+            "delta": 0.004050370133694026
+          },
+          "activation_decoded_changes": {
+            "changed_values": 45715,
+            "values": 65536,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 647,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 1957,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 2489,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 5138,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 37184,
+                "values": 65536
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 258237,
+            "values": 262144,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 128,
+              "mean": 0.0029243077151477337,
+              "min": 0.0024679063353687525,
+              "p05": 0.002539263106882572,
+              "median": 0.00283587328158319,
+              "p95": 0.003547128289937973,
+              "max": 0.004629652015864849
+            },
+            "candidate_mse_distribution": {
+              "count": 128,
+              "mean": 0.002903127809986472,
+              "min": 0.00243805767968297,
+              "p05": 0.002540348330512643,
+              "median": 0.0028195229824632406,
+              "p95": 0.003523261984810233,
+              "max": 0.004371030256152153
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 128,
+              "mean": -2.117980875482317e-05,
+              "min": -0.0004249280318617821,
+              "p05": -0.000223979601287283,
+              "median": -2.5011366233229637e-05,
+              "p95": 0.000202067123609595,
+              "max": 0.00031737424433231354
+            },
+            "improved": 73,
+            "worsened": 55,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00031737424433231354,
+            "max_mse_decrease": 0.0004249280318617821
+          }
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 550828,
+        "values": 1048576,
+        "changed_rows": 2048,
+        "any_changed": true
+      },
+      "weight_parameter_changes": {
+        "bitexact": false,
+        "fields": {
+          "scale_factor": {
+            "changed_values": 7638,
+            "values": 16384
+          },
+          "scale_lv2": {
+            "changed_values": 24607,
+            "values": 131072
+          },
+          "scale_lv3": {
+            "changed_values": 30522,
+            "values": 262144
+          },
+          "sign": {
+            "changed_values": 52796,
+            "values": 1048576
+          },
+          "mant": {
+            "changed_values": 455844,
+            "values": 1048576
+          }
+        },
+        "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+      },
+      "calibration_bitexact": false,
+      "transform_comparison": {
+        "present": true,
+        "bitexact": false,
+        "blocks": 8,
+        "changed_blocks": 8,
+        "changed_values": 32256,
+        "max_abs_delta": 0.0262451171875,
+        "frobenius_delta": 1.1571406126022339,
+        "interpretation": "Candidate versus actual parent frozen transform; parent nonidentity blocks are not counted as newly learned."
+      },
+      "isolation_replays": {
+        "422": true,
+        "424": true
+      },
+      "score_sums": {
+        "422": 2.2353292514537384,
+        "424": 2.256009826312836
+      },
+      "score_comparison": {
+        "parent": 2.2353292514537384,
+        "candidate": 2.256009826312836,
+        "delta": 0.02068057485909769
+      }
+    },
+    {
+      "group": 7,
+      "shape": [
+        2048,
+        512
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.attn.wo_b.weight",
+      "calibration_order": [
+        424,
+        422
+      ],
+      "timing": {
+        "422": {
+          "calibration": 2.368918582913466,
+          "dynamic": 1.0329182498389855,
+          "isolation": 0.1104592919582501,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.007708833902142942
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_learn_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_procrustes_step": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_two_fold_improves": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "accepted": 0,
+              "rejected": 0
+            }
+          }
+        },
+        "424": {
+          "calibration": 2.3275862080045044,
+          "dynamic": 1.0466325408779085,
+          "isolation": 0.1444495419273153,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.0910424169851467
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.002860083943232894
+            },
+            "_v424_learn_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.08222662494517863,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": true,
+              "calls": 5,
+              "seconds": 0.06809670873917639
+            },
+            "_v424_procrustes_step": {
+              "present": true,
+              "calls": 2,
+              "seconds": 0.006470541935414076
+            },
+            "_v424_two_fold_improves": {
+              "present": true,
+              "calls": 4,
+              "seconds": 6.271002348512411e-05,
+              "accepted": 4,
+              "rejected": 0
+            }
+          }
+        }
+      },
+      "calibration_rng_unchanged": {
+        "424": false,
+        "422": false
+      },
+      "calibration_counts": {
+        "424": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        },
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        }
+      },
+      "transforms": {
+        "424": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 8,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        },
+        "422": {
+          "present": true,
+          "shape": [
+            8,
+            64,
+            64
+          ],
+          "numel": 32768,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 8,
+          "nonidentity_blocks": 0,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.004277434200048447,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.0025887168012559414,
+              "score": 0.3947968150564136,
+              "dynamic_seconds": 0.05875970795750618,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0026128520257771015,
+              "score": 0.38915436133476744,
+              "dynamic_seconds": 0.0584821249358356,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.38915436133476744,
+            "candidate": 0.3947968150564136,
+            "delta": 0.005642453721646179
+          },
+          "activation_decoded_changes": {
+            "changed_values": 390,
+            "values": 512,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 6,
+                "values": 8
+              },
+              "scale_lv2": {
+                "changed_values": 12,
+                "values": 64
+              },
+              "scale_lv3": {
+                "changed_values": 15,
+                "values": 128
+              },
+              "sign": {
+                "changed_values": 28,
+                "values": 512
+              },
+              "mant": {
+                "changed_values": 265,
+                "values": 512
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 2022,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 1,
+              "mean": 0.0026128520257771015,
+              "min": 0.0026128520257771015,
+              "p05": 0.0026128520257771015,
+              "median": 0.0026128520257771015,
+              "p95": 0.0026128520257771015,
+              "max": 0.0026128520257771015
+            },
+            "candidate_mse_distribution": {
+              "count": 1,
+              "mean": 0.0025887168012559414,
+              "min": 0.0025887168012559414,
+              "p05": 0.0025887168012559414,
+              "median": 0.0025887168012559414,
+              "p95": 0.0025887168012559414,
+              "max": 0.0025887168012559414
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 1,
+              "mean": -2.4135224521160126e-05,
+              "min": -2.4135224521160126e-05,
+              "p05": -2.4135224521160126e-05,
+              "median": -2.4135224521160126e-05,
+              "p95": -2.4135224521160126e-05,
+              "max": -2.4135224521160126e-05
+            },
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 2.4135224521160126e-05
+          }
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.004474572371691465,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.002640628255903721,
+              "score": 0.40985908002969274,
+              "dynamic_seconds": 0.10466441605240107,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0025625776033848524,
+              "score": 0.42730223348334084,
+              "dynamic_seconds": 0.11162320792209357,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.40985908002969274,
+            "candidate": 0.42730223348334084,
+            "delta": 0.017443153453648108
+          },
+          "activation_decoded_changes": {
+            "changed_values": 3416,
+            "values": 5120,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 46,
+                "values": 80
+              },
+              "scale_lv2": {
+                "changed_values": 129,
+                "values": 640
+              },
+              "scale_lv3": {
+                "changed_values": 180,
+                "values": 1280
+              },
+              "sign": {
+                "changed_values": 397,
+                "values": 5120
+              },
+              "mant": {
+                "changed_values": 2731,
+                "values": 5120
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 20161,
+            "values": 20480,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 10,
+              "mean": 0.002640628255903721,
+              "min": 0.0022875210270285606,
+              "p05": 0.0023657125420868397,
+              "median": 0.00266857398673892,
+              "p95": 0.0028470326215028763,
+              "max": 0.002896311692893505
+            },
+            "candidate_mse_distribution": {
+              "count": 10,
+              "mean": 0.0025625776033848524,
+              "min": 0.0022700000554323196,
+              "p05": 0.0023255448322743177,
+              "median": 0.002620472339913249,
+              "p95": 0.0027366220019757748,
+              "max": 0.00274357246235013
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 10,
+              "mean": -7.805053610354662e-05,
+              "min": -0.00025599938817322254,
+              "p05": -0.00021648268739227206,
+              "median": -5.2180723287165165e-05,
+              "p95": 3.3563377655809745e-05,
+              "max": 3.83276492357254e-05
+            },
+            "improved": 8,
+            "worsened": 2,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 3.83276492357254e-05,
+            "max_mse_decrease": 0.00025599938817322254
+          }
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.004551691468805075,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.002721268218010664,
+              "score": 0.40214132775456757,
+              "dynamic_seconds": 0.1686542920069769,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0027274545282125473,
+              "score": 0.4007822043947614,
+              "dynamic_seconds": 0.16717637493275106,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4007822043947614,
+            "candidate": 0.40214132775456757,
+            "delta": 0.001359123359806147
+          },
+          "activation_decoded_changes": {
+            "changed_values": 11084,
+            "values": 16384,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 151,
+                "values": 256
+              },
+              "scale_lv2": {
+                "changed_values": 459,
+                "values": 2048
+              },
+              "scale_lv3": {
+                "changed_values": 582,
+                "values": 4096
+              },
+              "sign": {
+                "changed_values": 1264,
+                "values": 16384
+              },
+              "mant": {
+                "changed_values": 9062,
+                "values": 16384
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 64559,
+            "values": 65536,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 32,
+              "mean": 0.0027274545282125473,
+              "min": 0.002333668526262045,
+              "p05": 0.0024333889596164227,
+              "median": 0.0027371239848434925,
+              "p95": 0.0031277101952582598,
+              "max": 0.0036357787903398275
+            },
+            "candidate_mse_distribution": {
+              "count": 32,
+              "mean": 0.0027212684508413076,
+              "min": 0.002359104808419943,
+              "p05": 0.002421480370685458,
+              "median": 0.002698830794543028,
+              "p95": 0.003063708543777466,
+              "max": 0.0037491973489522934
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 32,
+              "mean": -6.186273822095245e-06,
+              "min": -0.00019767135381698608,
+              "p05": -0.00017488840967416763,
+              "median": -2.0610634237527847e-05,
+              "p95": 0.00016366926138289273,
+              "max": 0.00021359347738325596
+            },
+            "improved": 20,
+            "worsened": 12,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00021359347738325596,
+            "max_mse_decrease": 0.00019767135381698608
+          }
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.004675779491662979,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0027845462318509817,
+              "score": 0.40447443323281373,
+              "dynamic_seconds": 0.24496916693169624,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.002788127399981022,
+              "score": 0.4037085356671938,
+              "dynamic_seconds": 0.2602614579955116,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.40447443323281373,
+            "candidate": 0.4037085356671938,
+            "delta": -0.0007658975656199551
+          },
+          "activation_decoded_changes": {
+            "changed_values": 21634,
+            "values": 32768,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 291,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 967,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 1192,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 2466,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 17748,
+                "values": 32768
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 129139,
+            "values": 131072,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 64,
+              "mean": 0.002784545999020338,
+              "min": 0.002396620810031891,
+              "p05": 0.0024791222531348467,
+              "median": 0.0027075735852122307,
+              "p95": 0.0033398568630218506,
+              "max": 0.0038210838101804256
+            },
+            "candidate_mse_distribution": {
+              "count": 64,
+              "mean": 0.002788127399981022,
+              "min": 0.002428470877930522,
+              "p05": 0.0024427033495157957,
+              "median": 0.002717389026656747,
+              "p95": 0.0033362857066094875,
+              "max": 0.0037559298798441887
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 64,
+              "mean": 3.581255441531539e-06,
+              "min": -0.0002184002660214901,
+              "p05": -0.00018131067918147892,
+              "median": 1.8128310330212116e-05,
+              "p95": 0.00015146436635404825,
+              "max": 0.00021808315068483353
+            },
+            "improved": 29,
+            "worsened": 35,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00021808315068483353,
+            "max_mse_decrease": 0.0002184002660214901
+          }
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.004572543315589428,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.002720209304243326,
+              "score": 0.4050992814066595,
+              "dynamic_seconds": 0.4473338749958202,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002720498014241457,
+              "score": 0.4050361414912548,
+              "dynamic_seconds": 0.45762616698630154,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.4050361414912548,
+            "candidate": 0.4050992814066595,
+            "delta": 6.313991540474184e-05
+          },
+          "activation_decoded_changes": {
+            "changed_values": 44311,
+            "values": 65536,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 614,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 1780,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 2398,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 5021,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 35840,
+                "values": 65536
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 258163,
+            "values": 262144,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 128,
+              "mean": 0.002720498014241457,
+              "min": 0.0022654877975583076,
+              "p05": 0.002384227467700839,
+              "median": 0.002695762552320957,
+              "p95": 0.0030974876135587692,
+              "max": 0.003936317749321461
+            },
+            "candidate_mse_distribution": {
+              "count": 128,
+              "mean": 0.0027202090714126825,
+              "min": 0.002330286428332329,
+              "p05": 0.002433378016576171,
+              "median": 0.002673321170732379,
+              "p95": 0.0030903141014277935,
+              "max": 0.004024526569992304
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 128,
+              "mean": -2.88715455099009e-07,
+              "min": -0.00039467494934797287,
+              "p05": -0.0001991275930777192,
+              "median": 3.84659506380558e-06,
+              "p95": 0.00017327516980003566,
+              "max": 0.00026241340674459934
+            },
+            "improved": 63,
+            "worsened": 65,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00026241340674459934,
+            "max_mse_decrease": 0.00039467494934797287
+          }
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 533219,
+        "values": 1048576,
+        "changed_rows": 2048,
+        "any_changed": true
+      },
+      "weight_parameter_changes": {
+        "bitexact": false,
+        "fields": {
+          "scale_factor": {
+            "changed_values": 7490,
+            "values": 16384
+          },
+          "scale_lv2": {
+            "changed_values": 22646,
+            "values": 131072
+          },
+          "scale_lv3": {
+            "changed_values": 29547,
+            "values": 262144
+          },
+          "sign": {
+            "changed_values": 48306,
+            "values": 1048576
+          },
+          "mant": {
+            "changed_values": 441496,
+            "values": 1048576
+          }
+        },
+        "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+      },
+      "calibration_bitexact": false,
+      "transform_comparison": {
+        "present": true,
+        "bitexact": false,
+        "blocks": 8,
+        "changed_blocks": 8,
+        "changed_values": 32256,
+        "max_abs_delta": 0.02783203125,
+        "frobenius_delta": 1.1309871673583984,
+        "interpretation": "Candidate versus actual parent frozen transform; parent nonidentity blocks are not counted as newly learned."
+      },
+      "isolation_replays": {
+        "422": true,
+        "424": true
+      },
+      "score_sums": {
+        "422": 2.00930622048329,
+        "424": 2.033048193368175
+      },
+      "score_comparison": {
+        "parent": 2.00930622048329,
+        "candidate": 2.033048193368175,
+        "delta": 0.023741972884885332
+      }
+    },
+    {
+      "group": 9,
+      "shape": [
+        2048,
+        1024
+      ],
+      "is_down": false,
+      "source_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "source_tensor": "layers.0.ffn.shared_experts.w2.weight",
+      "calibration_order": [
+        422,
+        424
+      ],
+      "timing": {
+        "422": {
+          "calibration": 4.427984833950177,
+          "dynamic": 1.1030193748883903,
+          "isolation": 0.13366308400873095,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.017516415915451944
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_learn_block_transform": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_procrustes_step": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0
+            },
+            "_v424_two_fold_improves": {
+              "present": false,
+              "calls": 0,
+              "seconds": 0.0,
+              "accepted": 0,
+              "rejected": 0
+            }
+          }
+        },
+        "424": {
+          "calibration": 5.223117250017822,
+          "dynamic": 1.1457200008444488,
+          "isolation": 0.12968629191163927,
+          "pair_factorization": {
+            "calls": 1,
+            "seconds": 0.16209983301814646
+          },
+          "learning_stages": {
+            "_v424_parent_joint_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.005650500068441033
+            },
+            "_v424_learn_block_transform": {
+              "present": true,
+              "calls": 1,
+              "seconds": 0.14508558297529817,
+              "returned_parent_object": 0
+            },
+            "_v424_proxy_pair": {
+              "present": true,
+              "calls": 5,
+              "seconds": 0.11768170888535678
+            },
+            "_v424_procrustes_step": {
+              "present": true,
+              "calls": 2,
+              "seconds": 0.012692666030488908
+            },
+            "_v424_two_fold_improves": {
+              "present": true,
+              "calls": 4,
+              "seconds": 6.124901119619608e-05,
+              "accepted": 4,
+              "rejected": 0
+            }
+          }
+        }
+      },
+      "calibration_rng_unchanged": {
+        "422": false,
+        "424": false
+      },
+      "calibration_counts": {
+        "422": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        },
+        "424": {
+          "refine_calls": 0,
+          "prefix_calls": 0,
+          "refine_same_object": 0,
+          "polar_fallback_calls": 0
+        }
+      },
+      "transforms": {
+        "422": {
+          "present": true,
+          "shape": [
+            16,
+            64,
+            64
+          ],
+          "numel": 65536,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 16,
+          "nonidentity_blocks": 0,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        },
+        "424": {
+          "present": true,
+          "shape": [
+            16,
+            64,
+            64
+          ],
+          "numel": 65536,
+          "dtype": "torch.bfloat16",
+          "block_width": 64,
+          "blocks": 16,
+          "nonidentity_blocks": 16,
+          "interpretation": "Nonidentity is structural coverage only, not evidence of learning or quality gain."
+        }
+      },
+      "cases": [
+        {
+          "test": 0,
+          "rows": 1,
+          "baseline_mse": 0.0045280857011675835,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0018876193789765239,
+              "score": 0.5831308187277033,
+              "dynamic_seconds": 0.06552970793563873,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.001866713399067521,
+              "score": 0.587747776375747,
+              "dynamic_seconds": 0.06799987494014204,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 1,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.5831308187277033,
+            "candidate": 0.587747776375747,
+            "delta": 0.004616957648043707
+          },
+          "activation_decoded_changes": {
+            "changed_values": 768,
+            "values": 1024,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 11,
+                "values": 16
+              },
+              "scale_lv2": {
+                "changed_values": 26,
+                "values": 128
+              },
+              "scale_lv3": {
+                "changed_values": 52,
+                "values": 256
+              },
+              "sign": {
+                "changed_values": 93,
+                "values": 1024
+              },
+              "mant": {
+                "changed_values": 612,
+                "values": 1024
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 2011,
+            "values": 2048,
+            "changed_rows": 1,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 1,
+              "mean": 0.0018876193789765239,
+              "min": 0.0018876193789765239,
+              "p05": 0.0018876193789765239,
+              "median": 0.0018876193789765239,
+              "p95": 0.0018876193789765239,
+              "max": 0.0018876193789765239
+            },
+            "candidate_mse_distribution": {
+              "count": 1,
+              "mean": 0.001866713399067521,
+              "min": 0.001866713399067521,
+              "p05": 0.001866713399067521,
+              "median": 0.001866713399067521,
+              "p95": 0.001866713399067521,
+              "max": 0.001866713399067521
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 1,
+              "mean": -2.090597990900278e-05,
+              "min": -2.090597990900278e-05,
+              "p05": -2.090597990900278e-05,
+              "median": -2.090597990900278e-05,
+              "p95": -2.090597990900278e-05,
+              "max": -2.090597990900278e-05
+            },
+            "improved": 1,
+            "worsened": 0,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0,
+            "max_mse_decrease": 2.090597990900278e-05
+          }
+        },
+        {
+          "test": 1,
+          "rows": 10,
+          "baseline_mse": 0.005506165325641632,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.002059035701677203,
+              "score": 0.626049059571733,
+              "dynamic_seconds": 0.10304483398795128,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.002111899433657527,
+              "score": 0.6164482341598728,
+              "dynamic_seconds": 0.09626108396332711,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6164482341598728,
+            "candidate": 0.626049059571733,
+            "delta": 0.009600825411860137
+          },
+          "activation_decoded_changes": {
+            "changed_values": 7972,
+            "values": 10240,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 113,
+                "values": 160
+              },
+              "scale_lv2": {
+                "changed_values": 296,
+                "values": 1280
+              },
+              "scale_lv3": {
+                "changed_values": 434,
+                "values": 2560
+              },
+              "sign": {
+                "changed_values": 1047,
+                "values": 10240
+              },
+              "mant": {
+                "changed_values": 6447,
+                "values": 10240
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 20110,
+            "values": 20480,
+            "changed_rows": 10,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 10,
+              "mean": 0.002111899433657527,
+              "min": 0.0019405899802222848,
+              "p05": 0.0019509494304656982,
+              "median": 0.002092677168548107,
+              "p95": 0.0023307306692004204,
+              "max": 0.0024439047556370497
+            },
+            "candidate_mse_distribution": {
+              "count": 10,
+              "mean": 0.002059035934507847,
+              "min": 0.0018776084762066603,
+              "p05": 0.0019030909752473235,
+              "median": 0.0019991188310086727,
+              "p95": 0.0023658028803765774,
+              "max": 0.0024880398996174335
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 10,
+              "mean": -5.286360465106554e-05,
+              "min": -0.00017415895126760006,
+              "p05": -0.00016506269457750022,
+              "median": -4.563515540212393e-05,
+              "p95": 5.877563307876699e-05,
+              "max": 7.075420580804348e-05
+            },
+            "improved": 7,
+            "worsened": 3,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 7.075420580804348e-05,
+            "max_mse_decrease": 0.00017415895126760006
+          }
+        },
+        {
+          "test": 2,
+          "rows": 32,
+          "baseline_mse": 0.005477576982229948,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.0021054588723927736,
+              "score": 0.6156222214268852,
+              "dynamic_seconds": 0.1700781669933349,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.002110831905156374,
+              "score": 0.6146413072779775,
+              "dynamic_seconds": 0.178518540924415,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6156222214268852,
+            "candidate": 0.6146413072779775,
+            "delta": -0.0009809141489076634
+          },
+          "activation_decoded_changes": {
+            "changed_values": 24958,
+            "values": 32768,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 337,
+                "values": 512
+              },
+              "scale_lv2": {
+                "changed_values": 950,
+                "values": 4096
+              },
+              "scale_lv3": {
+                "changed_values": 1363,
+                "values": 8192
+              },
+              "sign": {
+                "changed_values": 3387,
+                "values": 32768
+              },
+              "mant": {
+                "changed_values": 20576,
+                "values": 32768
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 64352,
+            "values": 65536,
+            "changed_rows": 32,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 32,
+              "mean": 0.00210545863956213,
+              "min": 0.0018658660119399428,
+              "p05": 0.0018765779677778482,
+              "median": 0.002044584136456251,
+              "p95": 0.0024077731650322676,
+              "max": 0.0031218810472637415
+            },
+            "candidate_mse_distribution": {
+              "count": 32,
+              "mean": 0.002110831905156374,
+              "min": 0.001781494589522481,
+              "p05": 0.0018636563327163458,
+              "median": 0.0020720376633107662,
+              "p95": 0.0023321579210460186,
+              "max": 0.0030411528423428535
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 32,
+              "mean": 5.373309249989688e-06,
+              "min": -0.0001324338372796774,
+              "p05": -9.793700883165002e-05,
+              "median": 5.948822945356369e-07,
+              "p95": 0.0001899988274089992,
+              "max": 0.0002894778735935688
+            },
+            "improved": 16,
+            "worsened": 16,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0002894778735935688,
+            "max_mse_decrease": 0.0001324338372796774
+          }
+        },
+        {
+          "test": 3,
+          "rows": 64,
+          "baseline_mse": 0.005288080777972937,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            424,
+            422
+          ],
+          "versions": {
+            "424": {
+              "mse": 0.002091236412525177,
+              "score": 0.6045377330021036,
+              "dynamic_seconds": 0.2843077089637518,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "422": {
+              "mse": 0.0020797678735107183,
+              "score": 0.6067064856168953,
+              "dynamic_seconds": 0.2510159999364987,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6067064856168953,
+            "candidate": 0.6045377330021036,
+            "delta": -0.002168752614791769
+          },
+          "activation_decoded_changes": {
+            "changed_values": 50569,
+            "values": 65536,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 689,
+                "values": 1024
+              },
+              "scale_lv2": {
+                "changed_values": 2019,
+                "values": 8192
+              },
+              "scale_lv3": {
+                "changed_values": 2833,
+                "values": 16384
+              },
+              "sign": {
+                "changed_values": 6934,
+                "values": 65536
+              },
+              "mant": {
+                "changed_values": 41421,
+                "values": 65536
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 128745,
+            "values": 131072,
+            "changed_rows": 64,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 64,
+              "mean": 0.0020797678735107183,
+              "min": 0.0017964740982279181,
+              "p05": 0.001876701833680272,
+              "median": 0.0020399619825184345,
+              "p95": 0.0023931246250867844,
+              "max": 0.0028555740136653185
+            },
+            "candidate_mse_distribution": {
+              "count": 64,
+              "mean": 0.002091236412525177,
+              "min": 0.0017481738468632102,
+              "p05": 0.001854654517956078,
+              "median": 0.002056003315374255,
+              "p95": 0.0023827862460166216,
+              "max": 0.0027361041866242886
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 64,
+              "mean": 1.1468464435893111e-05,
+              "min": -0.00017478526569902897,
+              "p05": -0.00014888972509652376,
+              "median": 9.87079693004489e-06,
+              "p95": 0.00017121265409514308,
+              "max": 0.00019460194744169712
+            },
+            "improved": 27,
+            "worsened": 37,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.00019460194744169712,
+            "max_mse_decrease": 0.00017478526569902897
+          }
+        },
+        {
+          "test": 4,
+          "rows": 128,
+          "baseline_mse": 0.005410346668213606,
+          "baseline_output_dtype": "torch.float32",
+          "order": [
+            422,
+            424
+          ],
+          "versions": {
+            "422": {
+              "mse": 0.00212707812897861,
+              "score": 0.6068499378283035,
+              "dynamic_seconds": 0.5201344160595909,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            },
+            "424": {
+              "mse": 0.0021188464015722275,
+              "score": 0.6083714165636209,
+              "dynamic_seconds": 0.5118490420281887,
+              "output_dtype": "torch.bfloat16",
+              "counts": {
+                "refine_calls": 1,
+                "prefix_calls": 1,
+                "refine_same_object": 0,
+                "polar_fallback_calls": 0
+              },
+              "state_input_rng_unchanged": true
+            }
+          },
+          "score_comparison": {
+            "parent": 0.6068499378283035,
+            "candidate": 0.6083714165636209,
+            "delta": 0.001521478735317383
+          },
+          "activation_decoded_changes": {
+            "changed_values": 98912,
+            "values": 131072,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "activation_parameter_changes": {
+            "bitexact": false,
+            "fields": {
+              "scale_factor": {
+                "changed_values": 1295,
+                "values": 2048
+              },
+              "scale_lv2": {
+                "changed_values": 3841,
+                "values": 16384
+              },
+              "scale_lv3": {
+                "changed_values": 5512,
+                "values": 32768
+              },
+              "sign": {
+                "changed_values": 13545,
+                "values": 131072
+              },
+              "mant": {
+                "changed_values": 81754,
+                "values": 131072
+              }
+            },
+            "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+          },
+          "output_changes": {
+            "changed_values": 257415,
+            "values": 262144,
+            "changed_rows": 128,
+            "any_changed": true
+          },
+          "row_loss_summary": {
+            "parent_mse_distribution": {
+              "count": 128,
+              "mean": 0.0021270783618092537,
+              "min": 0.0017978561809286475,
+              "p05": 0.0018795841606333852,
+              "median": 0.0020822954829782248,
+              "p95": 0.002620261861011386,
+              "max": 0.0029389180708676577
+            },
+            "candidate_mse_distribution": {
+              "count": 128,
+              "mean": 0.0021188464015722275,
+              "min": 0.0018305671401321888,
+              "p05": 0.0018888256745412946,
+              "median": 0.0020762267522513866,
+              "p95": 0.002546723699197173,
+              "max": 0.0027873790822923183
+            },
+            "candidate_minus_parent_distribution": {
+              "count": 128,
+              "mean": -8.231802894442808e-06,
+              "min": -0.0002858059015125036,
+              "p05": -0.00016764103202149272,
+              "median": -9.207520633935928e-06,
+              "p95": 0.00014310124970506877,
+              "max": 0.0003367362078279257
+            },
+            "improved": 67,
+            "worsened": 61,
+            "equal_within_tolerance": 0,
+            "max_mse_increase": 0.0003367362078279257,
+            "max_mse_decrease": 0.0002858059015125036
+          }
+        }
+      ],
+      "complete": true,
+      "calibration_end_rng_equal": true,
+      "weight_decoded_changes": {
+        "changed_values": 1041915,
+        "values": 2097152,
+        "changed_rows": 2048,
+        "any_changed": true
+      },
+      "weight_parameter_changes": {
+        "bitexact": false,
+        "fields": {
+          "scale_factor": {
+            "changed_values": 15051,
+            "values": 32768
+          },
+          "scale_lv2": {
+            "changed_values": 45960,
+            "values": 262144
+          },
+          "scale_lv3": {
+            "changed_values": 56958,
+            "values": 524288
+          },
+          "sign": {
+            "changed_values": 90289,
+            "values": 2097152
+          },
+          "mant": {
+            "changed_values": 856475,
+            "values": 2097152
+          }
+        },
+        "interpretation": "Exact changes in the five legal HiF4 parameter fields, not inferred from decoded values."
+      },
+      "calibration_bitexact": false,
+      "transform_comparison": {
+        "present": true,
+        "bitexact": false,
+        "blocks": 16,
+        "changed_blocks": 16,
+        "changed_values": 64512,
+        "max_abs_delta": 0.0291748046875,
+        "frobenius_delta": 1.5979338884353638,
+        "interpretation": "Candidate versus actual parent frozen transform; parent nonidentity blocks are not counted as newly learned."
+      },
+      "isolation_replays": {
+        "422": true,
+        "424": true
+      },
+      "score_sums": {
+        "422": 3.0287576977596604,
+        "424": 3.041347292791182
+      },
+      "score_comparison": {
+        "parent": 3.0287576977596604,
+        "candidate": 3.041347292791182,
+        "delta": 0.012589595031521572
+      }
+    }
+  ],
+  "validation_checks": 80,
+  "final_sha256": {
+    "422": "6a8d25e04de554aebc6a422d6cd3e107c00ad1292a909244e8418628b1e00ff7",
+    "424": "db6fba9ab99c270ecc5f8875c50accd189b06c478e391deec69900541017a5d8"
+  },
+  "final_harness_sha256": "998adc1d457d339aa491a5dc857d7a4f7920bbdf045f1bb7eb3dc33ae9755350",
+  "score_sums": {
+    "422": 12.420766248110315,
+    "424": 12.483960640057184
+  },
+  "score_comparison": {
+    "parent": 12.420766248110315,
+    "candidate": 12.483960640057184,
+    "delta": 0.06319439194686893
+  },
+  "total_interface_seconds": {
+    "422": 16.847215667483397,
+    "424": 16.951362917665392
+  },
+  "total_pair_factorization": {
+    "422": {
+      "calls": 5,
+      "seconds": 0.047147124889306724
+    },
+    "424": {
+      "calls": 5,
+      "seconds": 0.42715779307764024
+    }
+  },
+  "total_learning_stages": {
+    "422": {
+      "_v424_parent_joint_block_transform": {
+        "present": false,
+        "calls": 0,
+        "seconds": 0.0
+      },
+      "_v424_learn_block_transform": {
+        "present": false,
+        "calls": 0,
+        "seconds": 0.0,
+        "returned_parent_object": 0
+      },
+      "_v424_proxy_pair": {
+        "present": false,
+        "calls": 0,
+        "seconds": 0.0
+      },
+      "_v424_procrustes_step": {
+        "present": false,
+        "calls": 0,
+        "seconds": 0.0
+      },
+      "_v424_two_fold_improves": {
+        "present": false,
+        "calls": 0,
+        "seconds": 0.0,
+        "accepted": 0,
+        "rejected": 0
+      }
+    },
+    "424": {
+      "_v424_parent_joint_block_transform": {
+        "present": true,
+        "calls": 5,
+        "seconds": 0.014716334990225732
+      },
+      "_v424_learn_block_transform": {
+        "present": true,
+        "calls": 5,
+        "seconds": 0.38296704180538654,
+        "returned_parent_object": 0
+      },
+      "_v424_proxy_pair": {
+        "present": true,
+        "calls": 25,
+        "seconds": 0.31134462519548833
+      },
+      "_v424_procrustes_step": {
+        "present": true,
+        "calls": 10,
+        "seconds": 0.03317624994087964
+      },
+      "_v424_two_fold_improves": {
+        "present": true,
+        "calls": 20,
+        "seconds": 0.000256124185398221,
+        "accepted": 20,
+        "rejected": 0
+      }
+    }
+  },
+  "transform_coverage": {
+    "groups_with_changed_transform": 5,
+    "changed_blocks": 48,
+    "compared_blocks": 48,
+    "interpretation": "Relative to each independently calibrated parent transform, not relative to identity."
+  },
+  "case_outcomes": {
+    "improved": 16,
+    "worsened": 9,
+    "equal_within_tolerance": 0,
+    "score_tolerance": 1e-12
+  },
+  "source_unchanged": true
+}

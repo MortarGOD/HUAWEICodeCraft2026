@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "atom": "trace35-group9-anisotropy1",
+      "quality_delta": -0.006631874911869229,
+      "mse_worse": 3,
+      "max_encoding_mse": 0.0,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 9.010005742311477e-05,
+      "baseline_mse": [
+        0.011937467381358147,
+        0.013590816408395767,
+        0.015490591526031494,
+        0.015937939286231995,
+        0.015437674708664417
+      ]
+    },
+    {
+      "atom": "trace35-group9-anisotropy4",
+      "quality_delta": -0.0011569226510459996,
+      "mse_worse": 4,
+      "max_encoding_mse": 0.0011985356686636806,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 2.025766298174858e-05,
+      "baseline_mse": [
+        0.011798830702900887,
+        0.014359756372869015,
+        0.016076957806944847,
+        0.014765739440917969,
+        0.013978652656078339
+      ]
+    },
+    {
+      "atom": "trace35-group9-anisotropy16",
+      "quality_delta": -0.0004247209474390057,
+      "mse_worse": 2,
+      "max_encoding_mse": 0.0012922463938593864,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 5.411729216575623e-06,
+      "baseline_mse": [
+        0.011693589389324188,
+        0.014336129650473595,
+        0.016051767393946648,
+        0.014744861051440239,
+        0.013963465578854084
+      ]
+    },
+    {
+      "atom": "trace25-group40-anisotropy1",
+      "quality_delta": -0.38569690304507914,
+      "mse_worse": 5,
+      "max_encoding_mse": 0.0,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 0.0011256656842306256,
+      "baseline_mse": [
+        0.0017421500524505973,
+        0.0030157524161040783,
+        0.0027377749793231487,
+        0.0032472130842506886,
+        0.00482337037101388
+      ]
+    },
+    {
+      "atom": "trace25-group40-anisotropy4",
+      "quality_delta": -0.5523129386328383,
+      "mse_worse": 5,
+      "max_encoding_mse": 0.0007951419102028012,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 0.0061877256259322165,
+      "baseline_mse": [
+        0.007813001982867718,
+        0.022581342607736588,
+        0.007433879189193249,
+        0.026163693517446518,
+        0.015320186503231525
+      ]
+    },
+    {
+      "atom": "trace25-group40-anisotropy16",
+      "quality_delta": -1.5572407157297392,
+      "mse_worse": 5,
+      "max_encoding_mse": 0.0007922660443000495,
+      "max_continuous_mse": 0.0,
+      "mean_absolute_mse_delta": 0.11691474991384894,
+      "baseline_mse": [
+        0.08038906753063202,
+        0.11370036751031876,
+        0.06003807112574577,
+        0.06770702451467514,
+        0.07011556625366211
+      ]
+    }
+  ],
+  "limits": "Reciprocal QK scaling preserves pre-encoding product; NVFP4 re-encoding can change inputs, explicitly measured. Fixed V, fixed source, no outcome-guided strengths. Mechanism only, no fitting promotion."
+}

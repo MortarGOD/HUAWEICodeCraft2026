@@ -1,0 +1,413 @@
+{
+  "complete": true,
+  "online_prediction": null,
+  "rows": [
+    {
+      "bank": "structural",
+      "group": 10,
+      "key": "structural-v3/10",
+      "shared_parent_seconds": 1.2875936249620281,
+      "versions": {
+        "402": {
+          "scores": [
+            0.9439839547808706,
+            0.9357302258365504,
+            0.946407524521742,
+            0.9534042443488163,
+            0.9111314721238626
+          ],
+          "seconds": 1.2243711249902844,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.9451699910941008,
+            0.9407434872161301,
+            0.9486067971490552,
+            0.9557512803419534,
+            0.9234297964992453
+          ],
+          "seconds": 1.7162124579772353,
+          "checks": 19,
+          "activity": {
+            "calls": 6,
+            "changed_values": 3436,
+            "values": 1081344
+          },
+          "debug": {
+            "accepted": 2,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.9384114146232605,
+              0.8913378715515137
+            ],
+            "changed_values": 268
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 12,
+      "key": "structural-v3/12",
+      "shared_parent_seconds": 2.5581102920114063,
+      "versions": {
+        "402": {
+          "scores": [
+            0.9308989268340834,
+            0.9254547687669372,
+            0.9527644493403982,
+            0.9562221827258985,
+            0.9531262767305648
+          ],
+          "seconds": 1.6623283750377595,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.9365560905790283,
+            0.9367722610603931,
+            0.9534217950688877,
+            0.9581306791803824,
+            0.9528246005057013
+          ],
+          "seconds": 3.2904355420032516,
+          "checks": 19,
+          "activity": {
+            "calls": 6,
+            "changed_values": 5728,
+            "values": 1540096
+          },
+          "debug": {
+            "accepted": 2,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.9733386635780334,
+              0.9709329605102539
+            ],
+            "changed_values": 1909
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 16,
+      "key": "structural-v3/16",
+      "shared_parent_seconds": 5.66740158299217,
+      "versions": {
+        "402": {
+          "scores": [
+            0.9820608106149371,
+            0.981143935200381,
+            0.9587540759129289,
+            0.9817289828251087,
+            0.9375957118902909
+          ],
+          "seconds": 1.5756868749740534,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.9821263141464197,
+            0.9818979016660876,
+            0.9600053596184522,
+            0.9820996591699799,
+            0.9451791426464826
+          ],
+          "seconds": 1.9339070830028504,
+          "checks": 19,
+          "activity": {
+            "calls": 6,
+            "changed_values": 614,
+            "values": 1277952
+          },
+          "debug": {
+            "accepted": 1,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.9954207539558411,
+              0.9810412526130676
+            ],
+            "changed_values": 210
+          }
+        }
+      }
+    },
+    {
+      "bank": "structural",
+      "group": 18,
+      "key": "structural-v3/18",
+      "shared_parent_seconds": 2.797368291998282,
+      "versions": {
+        "402": {
+          "scores": [
+            0.9481667216729662,
+            0.9434179437770667,
+            0.9612969146668544,
+            0.9269896140668313,
+            0.9439154113612527
+          ],
+          "seconds": 0.620899332978297,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.951799843843632,
+            0.9447477547905572,
+            0.9637750788310897,
+            0.9380328434545273,
+            0.9465619071770021
+          ],
+          "seconds": 1.0091214169515297,
+          "checks": 19,
+          "activity": {
+            "calls": 6,
+            "changed_values": 4196,
+            "values": 2064384
+          },
+          "debug": {
+            "accepted": 2,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.9601328372955322,
+              0.9923590421676636
+            ],
+            "changed_values": 1694
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 0,
+      "key": "attention/qwen3.6-35b-a3b/202609143/feedback/base",
+      "shared_parent_seconds": 6.971944374963641,
+      "versions": {
+        "402": {
+          "scores": [
+            0.9447967671738916,
+            0.9533436499202624,
+            0.9558167151681981,
+            0.9384644857571527,
+            0.9163971738704813
+          ],
+          "seconds": 3.1525767499697395,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.9528005275586833,
+            0.9567155333626746,
+            0.9586831815306034,
+            0.9401657661535211,
+            0.9176927726158345
+          ],
+          "seconds": 4.062472374993376,
+          "checks": 19,
+          "activity": {
+            "calls": 6,
+            "changed_values": 9216,
+            "values": 3080192
+          },
+          "debug": {
+            "accepted": 2,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.9795308709144592,
+              0.9883480072021484
+            ],
+            "changed_values": 3002
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 4,
+      "key": "attention/qwen3.6-35b-a3b/203009143/feedback/gain8",
+      "shared_parent_seconds": 3.712209791992791,
+      "versions": {
+        "402": {
+          "scores": [
+            0.498881497599989,
+            0.49443624932016206,
+            0.5591838778595297,
+            0.638574323360426,
+            0.6612095782812089
+          ],
+          "seconds": 1.1037705829949118,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.498881497599989,
+            0.49443624932016206,
+            0.5591838778595297,
+            0.638574323360426,
+            0.6612095782812089
+          ],
+          "seconds": 1.440882374998182,
+          "checks": 19,
+          "activity": {
+            "calls": 1,
+            "changed_values": 5234,
+            "values": 1048576
+          },
+          "debug": {
+            "accepted": 0,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              0.999257504940033,
+              1.000792145729065
+            ],
+            "changed_values": 5234
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 24,
+      "key": "attention/qwen3.6-35b-a3b/203409143/feedback/v_tail2_sink16",
+      "shared_parent_seconds": 1.7944744999986142,
+      "versions": {
+        "402": {
+          "scores": [
+            0.11947486456546547,
+            0.1193020568308631,
+            0.15034443967788513,
+            0.15146040850863454,
+            0.1144478591900481
+          ],
+          "seconds": 0.8858845839858986,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.11947486456546547,
+            0.1193020568308631,
+            0.15034443967788513,
+            0.15146040850863454,
+            0.1144478591900481
+          ],
+          "seconds": 1.1976508329971693,
+          "checks": 19,
+          "activity": {
+            "calls": 1,
+            "changed_values": 1665,
+            "values": 1048576
+          },
+          "debug": {
+            "accepted": 0,
+            "eligible": true,
+            "error": false,
+            "ratios": [
+              1.0000457763671875,
+              0.9998745918273926
+            ],
+            "changed_values": 1665
+          }
+        }
+      }
+    },
+    {
+      "bank": "stress",
+      "group": 49,
+      "key": "attention/deepseek-v4-flash-0731/203709180/feedback/tail8",
+      "shared_parent_seconds": 8.354777458007447,
+      "versions": {
+        "402": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 3.8663704589707777,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {}
+        },
+        "405": {
+          "scores": [
+            0.5466436662698234,
+            0.556868633535149,
+            0.6059804676161621,
+            0.6037556445013452,
+            0.5899214229136678
+          ],
+          "seconds": 2.628872582979966,
+          "checks": 16,
+          "activity": {
+            "calls": 0,
+            "changed_values": 0,
+            "values": 0
+          },
+          "debug": {
+            "accepted": 0,
+            "eligible": false,
+            "error": false
+          }
+        }
+      }
+    }
+  ],
+  "same_operator": true,
+  "source_hash": "2944a841df00c2f0265659552cdf0d99b104f46d6a1e2d9cc356388c21ff532e",
+  "parent_hash": "bb6e2043aef9cc06a92b21faca6f7ce988e52be19e547a3ff20c692af1f0f82b",
+  "timing": "Same complete parent calibration is recorded separately; fixed version order and single local run are not an online prediction."
+}

@@ -1,0 +1,350 @@
+{
+  "dataset": "local_fitted_models_covariance_v1",
+  "records": [
+    {
+      "group": 7,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.756117384485781,
+        "key_over_hif4": 99.51702716662261,
+        "output_over_hif4": 4.322586190128276
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.8649693706098006,
+          "key_over_hif4": 113.61134316582346,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.69641211712988,
+          "key_over_hif4": 91.71060583379051,
+          "output_over_hif4": 1.5405053237487587
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.7024652411049092,
+          "key_over_hif4": 91.5409383602606,
+          "output_over_hif4": 2.053187828649712
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.7296216014755411,
+          "key_over_hif4": 95.78920372892217,
+          "output_over_hif4": 3.20769567274899
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.7554722866629533,
+          "key_over_hif4": 99.67097752696962,
+          "output_over_hif4": 4.9358233210125695
+        }
+      ]
+    },
+    {
+      "group": 7,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.3105241409246853,
+        "key_over_hif4": 40.869896662024416,
+        "output_over_hif4": 2.0342210875345197
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.2695606589465588,
+          "key_over_hif4": 35.40604970323094,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.2755110306239781,
+          "key_over_hif4": 36.282084861692205,
+          "output_over_hif4": 0.596880025522702
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.2757692500816799,
+          "key_over_hif4": 35.93654809692182,
+          "output_over_hif4": 0.8862847743931904
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.28804628637834245,
+          "key_over_hif4": 37.816485084124054,
+          "output_over_hif4": 1.236886143808024
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.3031937313386998,
+          "key_over_hif4": 40.000958494536825,
+          "output_over_hif4": 2.2517453512984207
+        }
+      ]
+    },
+    {
+      "group": 16,
+      "ridge": 0.0001,
+      "identity": false,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.6295869271386755,
+        "key_over_hif4": 82.9279145772143,
+        "output_over_hif4": 3.3239043406054107
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.633927236139982,
+          "key_over_hif4": 80.16449518439393,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.6164273731799869,
+          "key_over_hif4": 82.31391149013182,
+          "output_over_hif4": 1.3074149412465146
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.6387776702796174,
+          "key_over_hif4": 84.32760484008183,
+          "output_over_hif4": 1.798550386005204
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.6158837170888453,
+          "key_over_hif4": 80.51523665024388,
+          "output_over_hif4": 2.344892637849059
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.6425726174441677,
+          "key_over_hif4": 84.32201465752492,
+          "output_over_hif4": 3.530173881325248
+        }
+      ]
+    },
+    {
+      "group": 16,
+      "ridge": 0.01,
+      "identity": false,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.2802022791588706,
+        "key_over_hif4": 36.90767655553525,
+        "output_over_hif4": 1.6229112852905798
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.24639161290530015,
+          "key_over_hif4": 31.157928134610767,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.2708622192144754,
+          "key_over_hif4": 36.16927104230171,
+          "output_over_hif4": 0.6117189949119305
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.2563290193563637,
+          "key_over_hif4": 33.83902296376006,
+          "output_over_hif4": 0.7654288169116957
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.2556415227020215,
+          "key_over_hif4": 33.42033102494366,
+          "output_over_hif4": 0.9838654047015517
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.28114639012456316,
+          "key_over_hif4": 36.8936200912008,
+          "output_over_hif4": 1.7248200709134964
+        }
+      ]
+    },
+    {
+      "group": 27,
+      "ridge": 0.0001,
+      "identity": true,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 27,
+      "ridge": 0.01,
+      "identity": true,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 38,
+      "ridge": 0.0001,
+      "identity": true,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    },
+    {
+      "group": 38,
+      "ridge": 0.01,
+      "identity": true,
+      "hold": {
+        "rows": 1024,
+        "key_nmse": 0.0,
+        "key_over_hif4": 0.0,
+        "output_over_hif4": 0.0
+      },
+      "tests": [
+        {
+          "rows": 1,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 10,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 128,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 512,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        },
+        {
+          "rows": 1024,
+          "key_nmse": 0.0,
+          "key_over_hif4": 0.0,
+          "output_over_hif4": 0.0
+        }
+      ]
+    }
+  ],
+  "warning": "Modeled hidden states; current Q/V used only by the diagnostic scorer. No full-output teacher claim."
+}

@@ -1,0 +1,10 @@
+{
+  "version": 645,
+  "parent": 642,
+  "parent_sha256": "c82831c4331971e61df0f48e1908f9a1e59124d1d9a3bd8122c511d0ae2fd148",
+  "summary": "V encoded as the identity-optimal HiF4 over a wider LEGAL scale grid: exponents (-2, -1, 0, 1, 2) x the four E6M2-legal multipliers = 20 candidates, against the dynamic path's 6. v643's wider non-legal grid failed self_check 17/22, which showed its gain came from leaving the legal set; this stays inside it.",
+  "patches": [],
+  "append": [
+    "solution/v645_legalgrid_core.py"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "diagnostic_only": true,
+  "version": 556,
+  "complete": true,
+  "cases": [
+    {
+      "group": "group15",
+      "test": 0,
+      "tokens": 8,
+      "current_quality": 0.2108547606556201,
+      "oracle_metric": {
+        "quality": 0.22745917130559878,
+        "mse": 0.2028338611125946
+      },
+      "oracle_probability_compensation": {
+        "quality": 0.24855928438347133,
+        "mse": 0.1972939372062683
+      }
+    },
+    {
+      "group": "group15",
+      "test": 1,
+      "tokens": 32,
+      "current_quality": 0.15506778963695778,
+      "oracle_metric": {
+        "quality": 0.2335620573496703,
+        "mse": 0.14490479230880737
+      },
+      "oracle_probability_compensation": {
+        "quality": 0.24691506315525646,
+        "mse": 0.1423802375793457
+      }
+    },
+    {
+      "group": "group15",
+      "test": 2,
+      "tokens": 512,
+      "current_quality": 0.6788580785618219,
+      "oracle_metric": {
+        "quality": 0.8258631357715467,
+        "mse": 0.0977635383605957
+      },
+      "oracle_probability_compensation": {
+        "quality": 0.8268014889646788,
+        "mse": 0.09723673015832901
+      }
+    },
+    {
+      "group": "group16",
+      "test": 0,
+      "tokens": 512,
+      "current_quality": 0.8104864428175298,
+      "oracle_metric": {
+        "quality": 0.9219055945791802,
+        "mse": 0.003457418642938137
+      },
+      "oracle_probability_compensation": {
+        "quality": 0.9307890192350315,
+        "mse": 0.0030641290359199047
+      }
+    }
+  ],
+  "diagnostic_weighted_metric_gain": 974.4348560693851,
+  "diagnostic_weighted_compensation_gain": 153.02462433361652,
+  "warning": "Four selected inputs only; oracle information unavailable in submission. Finite solver outcomes, not mathematical optimum or online forecast."
+}

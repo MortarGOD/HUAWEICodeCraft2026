@@ -1,0 +1,111 @@
+{
+  "atoms": [
+    "trace35-group7-row_permute",
+    "trace35-group9-correlated_noise"
+  ],
+  "decision": "fill all retained versions; screen driver already passed both atoms",
+  "evidence": [
+    {
+      "from": 365,
+      "research_parent": 365,
+      "to": 379,
+      "parent_attention_proxy": false,
+      "online_total_delta": 4.0,
+      "linear_delta": 0.0,
+      "target": 4.0,
+      "tolerance": 1.0,
+      "direction_required": true,
+      "available_case_pairs": 100,
+      "minimum": {
+        "population": "round003/trace35-group9-correlated_noise",
+        "test": 0,
+        "tokens": 8,
+        "delta": -1867.8461553104598
+      },
+      "maximum": {
+        "population": "round003/trace35-group9-correlated_noise",
+        "test": 1,
+        "tokens": 8,
+        "delta": 906.4876734286909
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 382,
+      "research_parent": 382,
+      "to": 385,
+      "parent_attention_proxy": false,
+      "online_total_delta": -28.0,
+      "linear_delta": 0.0,
+      "target": -28.0,
+      "tolerance": 1.4000000000000001,
+      "direction_required": true,
+      "available_case_pairs": 100,
+      "minimum": {
+        "population": "round003/trace35-group7-row_permute",
+        "test": 0,
+        "tokens": 8,
+        "delta": -312.1855804505719
+      },
+      "maximum": {
+        "population": "round003/trace35-group7-row_permute",
+        "test": 3,
+        "tokens": 8,
+        "delta": 334.6982166566592
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 400,
+      "research_parent": 400,
+      "to": 411,
+      "parent_attention_proxy": false,
+      "online_total_delta": -145.0,
+      "linear_delta": 0.0,
+      "target": -145.0,
+      "tolerance": 7.25,
+      "direction_required": true,
+      "available_case_pairs": 100,
+      "minimum": {
+        "population": "round003/trace35-group7-row_permute",
+        "test": 0,
+        "tokens": 8,
+        "delta": -286.3327603364385
+      },
+      "maximum": {
+        "population": "round003/trace35-group9-correlated_noise",
+        "test": 0,
+        "tokens": 8,
+        "delta": 2651.0408450526324
+      },
+      "outside_available_support": false
+    },
+    {
+      "from": 412,
+      "research_parent": 412,
+      "to": 413,
+      "parent_attention_proxy": false,
+      "online_total_delta": -57.0,
+      "linear_delta": 0.0,
+      "target": -57.0,
+      "tolerance": 2.85,
+      "direction_required": true,
+      "available_case_pairs": 100,
+      "minimum": {
+        "population": "round003/trace35-group9-correlated_noise",
+        "test": 2,
+        "tokens": 8,
+        "delta": -979.3123217988864
+      },
+      "maximum": {
+        "population": "round002/projected-gain1-noise0.05",
+        "test": 4,
+        "tokens": 512,
+        "delta": 5700.1634499998845
+      },
+      "outside_available_support": false
+    }
+  ],
+  "remaining_outside_available_support": 12,
+  "limits": "Training support selection only; shared feasible weights not yet found."
+}

@@ -1,0 +1,1506 @@
+{
+  "cases": [
+    {
+      "path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_group": 1,
+      "test": 0,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6923054456710815,
+      "v_equal_first_fraction": 0.15380859375,
+      "first_key_mass": 0.5314348936080933,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7125683426856995,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.00048789381980895996,
+          "quality_delta": 0.11360555016303664
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -2.9899878427386284e-05,
+          "quality_delta": 0.006962154470169513
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_group": 1,
+      "test": 1,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.5942150950431824,
+      "v_equal_first_fraction": 0.134521484375,
+      "first_key_mass": 0.12467058002948761,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7471587657928467,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00012531131505966187,
+          "quality_delta": -0.07171794505690343
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 2.6498339138925076e-05,
+          "quality_delta": -0.01516548150148922
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_group": 1,
+      "test": 2,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6320024132728577,
+      "v_equal_first_fraction": 0.135009765625,
+      "first_key_mass": 0.11535491794347763,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6904493570327759,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 3.460049629211426e-05,
+          "quality_delta": -0.01999495309344468
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 7.390044629573822e-06,
+          "quality_delta": -0.004270562898267161
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_group": 1,
+      "test": 3,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6103237271308899,
+      "v_equal_first_fraction": 0.136474609375,
+      "first_key_mass": 0.13318711519241333,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7037704586982727,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.00013568997383117676,
+          "quality_delta": 0.08688161860665389
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 3.7404242902994156e-06,
+          "quality_delta": -0.002394975158748175
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group1.pt",
+      "source_group": 1,
+      "test": 4,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.590398907661438,
+      "v_equal_first_fraction": 0.13427734375,
+      "first_key_mass": 0.11689461022615433,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.65821373462677,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.0001568049192428589,
+          "quality_delta": 0.09787583886423334
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 7.293070666491985e-06,
+          "quality_delta": -0.004552251375950278
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_group": 3,
+      "test": 0,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.64621502161026,
+      "v_equal_first_fraction": 0.13232421875,
+      "first_key_mass": 0.09642431139945984,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7420922517776489,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 2.3069442249834538e-05,
+          "quality_delta": -0.019470750102136336
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 2.24136165343225e-05,
+          "quality_delta": -0.018917229194305052
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_group": 3,
+      "test": 1,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.542717695236206,
+      "v_equal_first_fraction": 0.1376953125,
+      "first_key_mass": 0.10457822680473328,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6628835797309875,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.3050041161477566e-05,
+          "quality_delta": -0.009611636683408753
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.2468372005969286e-05,
+          "quality_delta": -0.009183224809184543
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_group": 3,
+      "test": 2,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6119540929794312,
+      "v_equal_first_fraction": 0.1318359375,
+      "first_key_mass": 0.2127220183610916,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7400797605514526,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 6.52362359687686e-06,
+          "quality_delta": -0.005484623967427438
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 7.025431841611862e-06,
+          "quality_delta": -0.005906510589985536
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_group": 3,
+      "test": 3,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6568097472190857,
+      "v_equal_first_fraction": 0.133056640625,
+      "first_key_mass": 0.12134795635938644,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7513167858123779,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.123693073168397e-05,
+          "quality_delta": -0.0117203270804766
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.4539982657879591e-05,
+          "quality_delta": -0.015165471476504155
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group3.pt",
+      "source_group": 3,
+      "test": 4,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6355493664741516,
+      "v_equal_first_fraction": 0.134765625,
+      "first_key_mass": 0.13097062706947327,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7641292810440063,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.1081690900027752e-05,
+          "quality_delta": -0.01035123247314651
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.1292810086160898e-05,
+          "quality_delta": -0.010548435571023917
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group5.pt",
+      "source_group": 5,
+      "test": 0,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6283835768699646,
+      "v_equal_first_fraction": 0.136962890625,
+      "first_key_mass": 0.11457417160272598,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7247644662857056,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 2.4138949811458588e-05,
+          "quality_delta": -0.012204032265183962
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.0088784620165825e-05,
+          "quality_delta": -0.005100630059827749
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group5.pt",
+      "source_group": 5,
+      "test": 1,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.5839946866035461,
+      "v_equal_first_fraction": 0.133544921875,
+      "first_key_mass": 0.10758525133132935,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.8646498918533325,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 3.6971643567085266e-05,
+          "quality_delta": -0.025560129854576452
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 3.250571899116039e-05,
+          "quality_delta": -0.022472638981354986
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group5.pt",
+      "source_group": 5,
+      "test": 2,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.5981236100196838,
+      "v_equal_first_fraction": 0.13232421875,
+      "first_key_mass": 0.13113699853420258,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7815969586372375,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 3.725290298461914e-06,
+          "quality_delta": -0.0018003216049509163
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.668266486376524e-05,
+          "quality_delta": -0.00806223396732031
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group5.pt",
+      "source_group": 5,
+      "test": 3,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6276344656944275,
+      "v_equal_first_fraction": 0.136962890625,
+      "first_key_mass": 0.09549195319414139,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7450731992721558,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -1.5391968190670013e-05,
+          "quality_delta": 0.009839941681957676
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 7.283291779458523e-06,
+          "quality_delta": -0.004656140493195293
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group5.pt",
+      "source_group": 5,
+      "test": 4,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6036633253097534,
+      "v_equal_first_fraction": 0.13916015625,
+      "first_key_mass": 0.1543387770652771,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6863251328468323,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -2.323649823665619e-05,
+          "quality_delta": 0.013524699244838345
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.757056452333927e-05,
+          "quality_delta": -0.010226868021160296
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_group": 7,
+      "test": 0,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6611474752426147,
+      "v_equal_first_fraction": 0.13671875,
+      "first_key_mass": 0.23280446231365204,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.673762857913971,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 3.784382715821266e-05,
+          "quality_delta": -0.018257943409563993
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.0647228918969631e-05,
+          "quality_delta": -0.005136808765628081
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_group": 7,
+      "test": 1,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6624773144721985,
+      "v_equal_first_fraction": 0.15625,
+      "first_key_mass": 0.6348063945770264,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7559605836868286,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 8.802860975265503e-05,
+          "quality_delta": -0.017889876567044993
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 4.1354214772582054e-05,
+          "quality_delta": -0.008404333544370313
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_group": 7,
+      "test": 2,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6002179384231567,
+      "v_equal_first_fraction": 0.14111328125,
+      "first_key_mass": 0.150681272149086,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6470996141433716,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 7.534399628639221e-06,
+          "quality_delta": -0.004357450145673569
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 8.77829734236002e-06,
+          "quality_delta": -0.005076846851584049
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_group": 7,
+      "test": 3,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6239062547683716,
+      "v_equal_first_fraction": 0.1357421875,
+      "first_key_mass": 0.13160231709480286,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7001142501831055,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.993263140320778e-05,
+          "quality_delta": -0.012907896931023455
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 2.4418462999165058e-05,
+          "quality_delta": -0.015812814536695308
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group7.pt",
+      "source_group": 7,
+      "test": 4,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.6042628884315491,
+      "v_equal_first_fraction": 0.136474609375,
+      "first_key_mass": 0.0877007246017456,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6750580668449402,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -5.194451659917831e-06,
+          "quality_delta": 0.0028021277079436357
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.2391596101224422e-05,
+          "quality_delta": -0.006684600618929837
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_group": 9,
+      "test": 0,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.09896846860647202,
+      "v_equal_first_fraction": 0.17041015625,
+      "first_key_mass": 0.16264738142490387,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.5077204704284668,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00024455785751342773,
+          "quality_delta": -0.020486578073951378
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -0.0002805488184094429,
+          "quality_delta": 0.02350153591603149
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_group": 9,
+      "test": 1,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.11113390326499939,
+      "v_equal_first_fraction": 0.170654296875,
+      "first_key_mass": 0.16841495037078857,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6687675714492798,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00048607587814331055,
+          "quality_delta": -0.035765024229378994
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -0.0001426003873348236,
+          "quality_delta": 0.010492407744300908
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_group": 9,
+      "test": 2,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.1187065988779068,
+      "v_equal_first_fraction": 0.171142578125,
+      "first_key_mass": 0.09149535000324249,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.685860812664032,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0009478628635406494,
+          "quality_delta": -0.061189584784273165
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -0.00014008954167366028,
+          "quality_delta": 0.009043524350780513
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_group": 9,
+      "test": 3,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.0892627015709877,
+      "v_equal_first_fraction": 0.208251953125,
+      "first_key_mass": 0.7390493154525757,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.8134962916374207,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.0007000863552093506,
+          "quality_delta": 0.04392577626482286
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00043753720819950104,
+          "quality_delta": -0.027452558347832834
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace35-group9.pt",
+      "source_group": 9,
+      "test": 4,
+      "tokens": 8,
+      "q_heads": 16,
+      "kv_heads": 2,
+      "v_centered_energy_fraction": 0.11826702952384949,
+      "v_equal_first_fraction": 0.158203125,
+      "first_key_mass": 0.13526557385921478,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.627695620059967,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.0006027817726135254,
+          "quality_delta": 0.03904615066640815
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -9.9964439868927e-05,
+          "quality_delta": 0.006475356020607281
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_group": 1,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6394712328910828,
+      "v_equal_first_fraction": 0.26171875,
+      "first_key_mass": 0.15029171109199524,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7665185928344727,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.7019221559166908e-05,
+          "quality_delta": -0.020428283546431336
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 1.9144732505083084e-05,
+          "quality_delta": -0.0229795483109958
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_group": 1,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6419130563735962,
+      "v_equal_first_fraction": 0.260986328125,
+      "first_key_mass": 0.2145138680934906,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6856094598770142,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 4.9807713367044926e-06,
+          "quality_delta": -0.004497368401689017
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -1.859152689576149e-06,
+          "quality_delta": 0.0016787148003359897
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_group": 1,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6520050168037415,
+      "v_equal_first_fraction": 0.2626953125,
+      "first_key_mass": 0.1778842657804489,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7294528484344482,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 4.521629307419062e-06,
+          "quality_delta": -0.004477508877088865
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 3.8656871765851974e-06,
+          "quality_delta": -0.0038279671933321158
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_group": 1,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.5191773176193237,
+      "v_equal_first_fraction": 0.50732421875,
+      "first_key_mass": 0.2412124127149582,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7513842582702637,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 4.752888344228268e-06,
+          "quality_delta": -0.002224534644156173
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 4.3280888348817825e-06,
+          "quality_delta": -0.0020257121267895917
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group1.pt",
+      "source_group": 1,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6041272282600403,
+      "v_equal_first_fraction": 0.2587890625,
+      "first_key_mass": 0.25710028409957886,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6796078681945801,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 1.0385643690824509e-05,
+          "quality_delta": -0.006763903144837324
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -3.430387005209923e-05,
+          "quality_delta": 0.022341230012587365
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group8.pt",
+      "source_group": 8,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7021090984344482,
+      "v_equal_first_fraction": 0.259033203125,
+      "first_key_mass": 0.9227008819580078,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9355916976928711,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 8.477184746880084e-05,
+          "quality_delta": -0.3165614772369364
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 8.21443391032517e-05,
+          "quality_delta": -0.30674963575316117
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group8.pt",
+      "source_group": 8,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7375825643539429,
+      "v_equal_first_fraction": 0.2587890625,
+      "first_key_mass": 0.9483358263969421,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9574791193008423,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00012895259715151042,
+          "quality_delta": -0.7557093373080421
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00012838392285630107,
+          "quality_delta": -0.7523766981501674
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group8.pt",
+      "source_group": 8,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7555966973304749,
+      "v_equal_first_fraction": 0.25927734375,
+      "first_key_mass": 0.9459193348884583,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9574636220932007,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00010465354716870934,
+          "quality_delta": -0.5066112651867423
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00010429426038172096,
+          "quality_delta": -0.5048720146917004
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group8.pt",
+      "source_group": 8,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6951925158500671,
+      "v_equal_first_fraction": 0.2578125,
+      "first_key_mass": 0.9374666213989258,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9448598623275757,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0001415876322425902,
+          "quality_delta": -0.6459047223904871
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00014429046132136136,
+          "quality_delta": -0.6582346839707578
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group8.pt",
+      "source_group": 8,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.71112459897995,
+      "v_equal_first_fraction": 0.259765625,
+      "first_key_mass": 0.914698600769043,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9275326728820801,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00011111954518128186,
+          "quality_delta": -0.677666147003616
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00011364817328285426,
+          "quality_delta": -0.6930870674186709
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group16.pt",
+      "source_group": 16,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6804900765419006,
+      "v_equal_first_fraction": 0.263671875,
+      "first_key_mass": 0.9204385876655579,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9270061254501343,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0002671588445082307,
+          "quality_delta": -0.6890889822953943
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0002670310786925256,
+          "quality_delta": -0.6887594329739845
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group16.pt",
+      "source_group": 16,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7363250255584717,
+      "v_equal_first_fraction": 0.2626953125,
+      "first_key_mass": 0.9346308708190918,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9438315629959106,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00022756197722628713,
+          "quality_delta": -0.41963720751002676
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00022854222333990037,
+          "quality_delta": -0.4214448370042114
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group16.pt",
+      "source_group": 16,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7412705421447754,
+      "v_equal_first_fraction": 0.26416015625,
+      "first_key_mass": 0.9377961158752441,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9394384622573853,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0001780989987310022,
+          "quality_delta": -0.41942574217794726
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00017865729751065373,
+          "quality_delta": -0.42074054395494126
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group16.pt",
+      "source_group": 16,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7064484357833862,
+      "v_equal_first_fraction": 0.264404296875,
+      "first_key_mass": 0.9054182767868042,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9160093069076538,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00020564388250932097,
+          "quality_delta": -0.3972585842266662
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00020424858666956425,
+          "quality_delta": -0.39456318068188057
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group16.pt",
+      "source_group": 16,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6937361359596252,
+      "v_equal_first_fraction": 0.264892578125,
+      "first_key_mass": 0.8921025395393372,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.902972400188446,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0002063281717710197,
+          "quality_delta": -0.275697092227122
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00020421019871719182,
+          "quality_delta": -0.2728670423733204
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group24.pt",
+      "source_group": 24,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7138796448707581,
+      "v_equal_first_fraction": 0.2626953125,
+      "first_key_mass": 0.9041614532470703,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.913730263710022,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0002701894845813513,
+          "quality_delta": -0.2795500767557925
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0002729079278651625,
+          "quality_delta": -0.2823626992744786
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group24.pt",
+      "source_group": 24,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6966319680213928,
+      "v_equal_first_fraction": 0.26708984375,
+      "first_key_mass": 0.8797070384025574,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9134214520454407,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00025051680859178305,
+          "quality_delta": -0.206375564412291
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00025059754261747,
+          "quality_delta": -0.20644207304383588
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group24.pt",
+      "source_group": 24,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7398825287818909,
+      "v_equal_first_fraction": 0.26513671875,
+      "first_key_mass": 0.9053945541381836,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9204238057136536,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00018140440806746483,
+          "quality_delta": -0.16362681185025174
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00017803593073040247,
+          "quality_delta": -0.16058844462794936
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group24.pt",
+      "source_group": 24,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7241443991661072,
+      "v_equal_first_fraction": 0.26416015625,
+      "first_key_mass": 0.903527557849884,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9145833253860474,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00034309300826862454,
+          "quality_delta": -0.26082415095648764
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0003352504572831094,
+          "quality_delta": -0.2548621329239651
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group24.pt",
+      "source_group": 24,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.729246973991394,
+      "v_equal_first_fraction": 0.268310546875,
+      "first_key_mass": 0.8734240531921387,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.8865730166435242,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00018147501396015286,
+          "quality_delta": -0.2750783400347488
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00018703879322856665,
+          "quality_delta": -0.2835118710871892
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group32.pt",
+      "source_group": 32,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6676662564277649,
+      "v_equal_first_fraction": 0.265380859375,
+      "first_key_mass": 0.8912385702133179,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9074691534042358,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00033693353179842234,
+          "quality_delta": -0.2651011955139831
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.000325962551869452,
+          "quality_delta": -0.25646916687733795
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group32.pt",
+      "source_group": 32,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6991937756538391,
+      "v_equal_first_fraction": 0.261962890625,
+      "first_key_mass": 0.8838489651679993,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9026018381118774,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00036019529215991497,
+          "quality_delta": -0.12799306814217126
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0003629628336057067,
+          "quality_delta": -0.12897649610074724
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group32.pt",
+      "source_group": 32,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7481606006622314,
+      "v_equal_first_fraction": 0.259521484375,
+      "first_key_mass": 0.9170166850090027,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9315096139907837,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0003226340631954372,
+          "quality_delta": -0.18061806003658365
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00032420887146145105,
+          "quality_delta": -0.18149967436806452
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group32.pt",
+      "source_group": 32,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6947628259658813,
+      "v_equal_first_fraction": 0.262939453125,
+      "first_key_mass": 0.8668121099472046,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.8985350728034973,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0002543058362789452,
+          "quality_delta": -0.11594972199292053
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0002554078819230199,
+          "quality_delta": -0.1164521952665335
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group32.pt",
+      "source_group": 32,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6610157489776611,
+      "v_equal_first_fraction": 0.261474609375,
+      "first_key_mass": 0.885521411895752,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.8911493420600891,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00023050879826769233,
+          "quality_delta": -0.11599512060869721
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0002305713715031743,
+          "quality_delta": -0.11602660830049538
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_group": 40,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6484986543655396,
+      "v_equal_first_fraction": 0.26318359375,
+      "first_key_mass": 0.9184853434562683,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9381582140922546,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0006196293979883194,
+          "quality_delta": -0.35566936218652145
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0006410571513697505,
+          "quality_delta": -0.36796896482481906
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_group": 40,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.68789142370224,
+      "v_equal_first_fraction": 0.257080078125,
+      "first_key_mass": 0.9246360659599304,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.931834876537323,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0007191747426986694,
+          "quality_delta": -0.23847274028805732
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0005935843801125884,
+          "quality_delta": -0.19682795475611842
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_group": 40,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7510077357292175,
+      "v_equal_first_fraction": 0.25830078125,
+      "first_key_mass": 0.9258643388748169,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9351900815963745,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0008760597556829453,
+          "quality_delta": -0.31998968589432053
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0008168824715539813,
+          "quality_delta": -0.2983745843699457
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_group": 40,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6391206383705139,
+      "v_equal_first_fraction": 0.260009765625,
+      "first_key_mass": 0.9095914959907532,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9307628870010376,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00020734965801239014,
+          "quality_delta": -0.06385465093684672
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0005736412713304162,
+          "quality_delta": -0.17665649171981795
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_group": 40,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6796694397926331,
+      "v_equal_first_fraction": 0.257568359375,
+      "first_key_mass": 0.8996967077255249,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.9186911582946777,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0004009753465652466,
+          "quality_delta": -0.08313177627306345
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0005005456041544676,
+          "quality_delta": -0.1037750712992111
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group49.pt",
+      "source_group": 49,
+      "test": 0,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7266553640365601,
+      "v_equal_first_fraction": 0.25390625,
+      "first_key_mass": 0.2647816836833954,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6783124804496765,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.00011670496314764023,
+          "quality_delta": 0.004266392642810812
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -0.00013149715960025787,
+          "quality_delta": 0.004807152147928262
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group49.pt",
+      "source_group": 49,
+      "test": 1,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6999128460884094,
+      "v_equal_first_fraction": 0.2529296875,
+      "first_key_mass": 0.20049282908439636,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6960414052009583,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.00032744649797677994,
+          "quality_delta": -0.01642135341548534
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.00033493805676698685,
+          "quality_delta": -0.016797053065006673
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group49.pt",
+      "source_group": 49,
+      "test": 2,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.7368957996368408,
+      "v_equal_first_fraction": 0.25439453125,
+      "first_key_mass": 0.21313977241516113,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.7876516580581665,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 0.0008983276784420013,
+          "quality_delta": -0.01505013215666573
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 0.0009248480200767517,
+          "quality_delta": -0.015494440682408961
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group49.pt",
+      "source_group": 49,
+      "test": 3,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.550566554069519,
+      "v_equal_first_fraction": 0.2626953125,
+      "first_key_mass": 0.2665518820285797,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.728251576423645,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": 7.033348083496094e-06,
+          "quality_delta": -0.000250272011741548
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": 3.428012132644653e-05,
+          "quality_delta": -0.0012198109385836986
+        }
+      ]
+    },
+    {
+      "path": "local_distribution_fit/round003/trace25-group49.pt",
+      "source_group": 49,
+      "test": 4,
+      "tokens": 4,
+      "q_heads": 40,
+      "kv_heads": 8,
+      "v_centered_energy_fraction": 0.6022000908851624,
+      "v_equal_first_fraction": 0.255126953125,
+      "first_key_mass": 0.24181731045246124,
+      "first_eight_key_mass": 1.0,
+      "mean_max_probability": 0.6146683692932129,
+      "measurements": [
+        {
+          "mode": "correlated_noise",
+          "mse_delta": -0.0003456585109233856,
+          "quality_delta": 0.009856331280316044
+        },
+        {
+          "mode": "row_permute",
+          "mse_delta": -0.000293828547000885,
+          "quality_delta": 0.008378418026271484
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "limits": "Selected existing round003 source groups only; not a random online sample. Features measured before joining historical results; no data modified. Matrix cap fixed at16M elements."
+}

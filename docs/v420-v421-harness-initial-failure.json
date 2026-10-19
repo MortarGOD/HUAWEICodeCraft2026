@@ -1,0 +1,42 @@
+{
+  "complete": false,
+  "passed": false,
+  "versions": [
+    419,
+    420,
+    421
+  ],
+  "dataset": "/Users/ee/Code/2026-huawei-alogorithm/local_fitted_models_attention_feedback_v2",
+  "linear_sha256": "5dd3c0af95a472982f1688d99ef7451fbab73d0f84750f9f3d67efe0f2678a9c",
+  "sha256": {
+    "419": "abfd6cf0024c8489f444c7db5050830de9f9df2374dd7feb9564ec05e14e7212",
+    "420": "c8a88f5377f0ab271cae4f872c49976128c4acad581aa83dc548d392605a72f2",
+    "421": "f5efee215846d4b9c79271bccd07611f4c5364d74a49a9f7b46a8b23786793fe"
+  },
+  "harness_sha256": "5ab782d0aa3dabb84bdaab9a67033884a256374efa13a9e913dda03d8dab2833",
+  "torch_version": "2.13.0",
+  "python": "/opt/miniconda3/envs/codecraft/bin/python",
+  "threads": 4,
+  "seed": 20260907420,
+  "selected_groups": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "score_prediction_allowed": false,
+  "scoring": "FP32 NVFP4 teacher; decoded BF16 baseline/player GEMM then FP32 MSE, as evaluate_local.py",
+  "timing": "Serial API wall time; excludes cloning, validation, scoring, fresh-module replay; includes lightweight Python call counters. Not an online-time prediction.",
+  "groups": [],
+  "validation_checks": 0,
+  "failure": {
+    "type": "AssertionError",
+    "message": ""
+  }
+}

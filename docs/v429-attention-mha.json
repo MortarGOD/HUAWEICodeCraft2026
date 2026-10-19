@@ -1,0 +1,501 @@
+{
+  "dataset": "/var/folders/l9/42p6bwy57_b9c8716h5gpgp80000gn/T/attention-campaign-mha-xhj_eydy",
+  "groups": [
+    0,
+    1,
+    2
+  ],
+  "role_isolated": false,
+  "source_sha256": "025429636b775df25c1d85078163a8fdaa28bb258f1f9ba7ffdc082728bec5ee",
+  "candidate": 429,
+  "decoy_mode": "row_permute",
+  "completed": true,
+  "cases": [
+    {
+      "group": 0,
+      "test": 0,
+      "tokens": 1024,
+      "baseline_mse": 2.356937784497859e-06,
+      "mse": [
+        1.5436742160090944e-06,
+        1.5436111198141589e-06
+      ],
+      "quality": [
+        0.34505092745247357,
+        0.34507769786421316
+      ],
+      "delta": 2.6770411739596156e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 1,
+      "tokens": 512,
+      "baseline_mse": 5.5813970902818255e-06,
+      "mse": [
+        2.2007275219948497e-06,
+        2.200960580012179e-06
+      ],
+      "quality": [
+        0.6057031086667,
+        0.6056613524516234
+      ],
+      "delta": -4.175621507651606e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 2,
+      "tokens": 256,
+      "baseline_mse": 1.001786677079508e-05,
+      "mse": [
+        2.590479653008515e-06,
+        2.5903752884914866e-06
+      ],
+      "quality": [
+        0.7414140442992816,
+        0.7414244621376714
+      ],
+      "delta": 1.0417838389842338e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 3,
+      "tokens": 64,
+      "baseline_mse": 3.8460315408883616e-05,
+      "mse": [
+        7.493933480873238e-06,
+        7.50226536183618e-06
+      ],
+      "quality": [
+        0.8051515334390035,
+        0.8049348976450854
+      ],
+      "delta": -0.00021663579391806298,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 0,
+      "test": 4,
+      "tokens": 128,
+      "baseline_mse": 1.7636753909755498e-05,
+      "mse": [
+        3.5271323213237338e-06,
+        3.524182830005884e-06
+      ],
+      "quality": [
+        0.8000123866686853,
+        0.8001796221663819
+      ],
+      "delta": 0.00016723549769659396,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 1,
+      "test": 0,
+      "tokens": 256,
+      "baseline_mse": 1.4585357348551042e-05,
+      "mse": [
+        1.2585639979079133e-06,
+        1.2591212907864247e-06
+      ],
+      "quality": [
+        0.9137104448090233,
+        0.9136722357432325
+      ],
+      "delta": -3.820906579077299e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 1,
+      "test": 1,
+      "tokens": 1024,
+      "baseline_mse": 7.828766683815047e-06,
+      "mse": [
+        6.634630835833377e-07,
+        6.635006002397859e-07
+      ],
+      "quality": [
+        0.915253179666861,
+        0.9152483875127501
+      ],
+      "delta": -4.792154110977442e-06,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 1,
+      "test": 2,
+      "tokens": 512,
+      "baseline_mse": 1.0772528185043484e-05,
+      "mse": [
+        1.087354689843778e-06,
+        1.087674490918289e-06
+      ],
+      "quality": [
+        0.8990622562163768,
+        0.899032569492052
+      ],
+      "delta": -2.9686724324795577e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 1,
+      "test": 3,
+      "tokens": 128,
+      "baseline_mse": 2.704801590880379e-05,
+      "mse": [
+        2.5319293399661547e-06,
+        2.5354540866828756e-06
+      ],
+      "quality": [
+        0.9063913098652814,
+        0.9062609954374651
+      ],
+      "delta": -0.00013031442781630265,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 1,
+      "test": 4,
+      "tokens": 64,
+      "baseline_mse": 4.744053148897365e-05,
+      "mse": [
+        5.123029950482305e-06,
+        5.128301381773781e-06
+      ],
+      "quality": [
+        0.8920115397174033,
+        0.8919004231020109
+      ],
+      "delta": -0.0001111166153924259,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 0,
+      "tokens": 128,
+      "baseline_mse": 6.751692853868008e-05,
+      "mse": [
+        1.1108033504569903e-05,
+        1.1147782061016187e-05
+      ],
+      "quality": [
+        0.8354778017159626,
+        0.8348890818599711
+      ],
+      "delta": -0.0005887198559915152,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 1,
+      "tokens": 1024,
+      "baseline_mse": 2.1198575268499553e-05,
+      "mse": [
+        2.276138275192352e-06,
+        2.2773251657781657e-06
+      ],
+      "quality": [
+        0.8926277711420245,
+        0.8925717819743196
+      ],
+      "delta": -5.5989167704884046e-05,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 2,
+      "tokens": 256,
+      "baseline_mse": 4.255391104379669e-05,
+      "mse": [
+        6.201806627359474e-06,
+        6.20707805865095e-06
+      ],
+      "quality": [
+        0.8542600086516949,
+        0.8541361321110392
+      ],
+      "delta": -0.00012387654065570963,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 3,
+      "tokens": 64,
+      "baseline_mse": 0.0001221375132445246,
+      "mse": [
+        2.2383655959856696e-05,
+        2.2324516976368614e-05
+      ],
+      "quality": [
+        0.8167339798785354,
+        0.8172181798750564
+      ],
+      "delta": 0.00048419999652105083,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    },
+    {
+      "group": 2,
+      "test": 4,
+      "tokens": 512,
+      "baseline_mse": 2.900067738664802e-05,
+      "mse": [
+        3.7377340049715713e-06,
+        3.731866854650434e-06
+      ],
+      "quality": [
+        0.8711156310199695,
+        0.8713179418226764
+      ],
+      "delta": 0.0002023108027069398,
+      "output_parameters_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "dequantized_values_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      }
+    }
+  ],
+  "calibrations": [
+    {
+      "group": 0,
+      "qh": 2,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {},
+      "kt_mode": [
+        0,
+        0
+      ]
+    },
+    {
+      "group": 1,
+      "qh": 2,
+      "kh": 2,
+      "dim": 256,
+      "state_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {},
+      "kt_mode": [
+        0,
+        0
+      ]
+    },
+    {
+      "group": 2,
+      "qh": 1,
+      "kh": 1,
+      "dim": 512,
+      "state_same": {
+        "q": true,
+        "k": false,
+        "v": true
+      },
+      "rf_k": [
+        1,
+        1
+      ],
+      "new_v_state_keys": [],
+      "unexpected_role_differences": {},
+      "kt_mode": [
+        4,
+        4
+      ]
+    }
+  ],
+  "timing": {
+    "422": {
+      "calibration": 13.933013958972879,
+      "dynamic": 1.4623653771122918
+    },
+    "429": {
+      "calibration": 8.653675208799541,
+      "dynamic": 1.6095930013107136
+    }
+  },
+  "quotient": {
+    "calls": 15,
+    "seconds": 0.2938176648458466,
+    "changed_calls": 15,
+    "changed_elements": 85156,
+    "changed_heads": 25,
+    "heads": 25,
+    "batch_proposals": 416,
+    "nondecreasing_batches": 0
+  },
+  "validated_returns": 96,
+  "state_checks": 15,
+  "warnings": [
+    "Instrumented local timings, not Kunpeng online estimates.",
+    "Modeled paired bank or row-permuted dummy peers; online dummy generation is unknown."
+  ],
+  "summary": {
+    "cases": 15,
+    "parent_quality": 12.093975923209277,
+    "child_quality": 12.093525761195549,
+    "delta": -0.0004501620137279394,
+    "better": 5,
+    "worse": 10,
+    "equal": 0,
+    "changed_role_cases": {
+      "q": 0,
+      "k": 15,
+      "v": 0
+    }
+  },
+  "synthetic_mha_source_groups": [
+    0,
+    24,
+    49
+  ],
+  "construction": "One existing encoded Q head per KV group; unchanged K/V. Reconstructible shape pressure, not sampled online MHA."
+}

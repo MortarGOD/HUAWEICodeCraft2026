@@ -1,0 +1,148 @@
+{
+  "diagnostic_only": "Uses known test answers to select each complete measured candidate; not deployable or a valid estimate for a constructed solution",
+  "complete_versions": 28,
+  "weighted_cases": 250,
+  "candidate_pool_oracle_conditional_score": 21818.109534949042,
+  "cases": {
+    "round001/m0-diffuse-block_resample/test2-tokens32": {
+      "version": 464,
+      "points": 298.49224589845585,
+      "count": 3
+    },
+    "round002/trace35-gain4-noise0.5/test1-tokens8": {
+      "version": 458,
+      "points": 40.84401262096736,
+      "count": 1
+    },
+    "round002/trace25-gain1-noise0.5/test4-tokens4": {
+      "version": 445,
+      "points": 73.68055704912365,
+      "count": 1
+    },
+    "round003/trace35-group1-row_permute/test2-tokens8": {
+      "version": 456,
+      "points": 132.41328311901248,
+      "count": 5
+    },
+    "round003/trace35-group3-correlated_noise/test0-tokens8": {
+      "version": 456,
+      "points": 252.90040632472926,
+      "count": 7
+    },
+    "round003/trace35-group5-row_permute/test0-tokens8": {
+      "version": 473,
+      "points": 491.0287838167912,
+      "count": 10
+    },
+    "round003/trace35-group7-row_permute/test1-tokens8": {
+      "version": 472,
+      "points": 113.20566071126078,
+      "count": 2
+    },
+    "round003/trace35-group7-row_permute/test3-tokens8": {
+      "version": 471,
+      "points": 39.0405117383308,
+      "count": 1
+    },
+    "round003/trace35-group9-row_permute/test0-tokens8": {
+      "version": 471,
+      "points": 39.256498679410235,
+      "count": 1
+    },
+    "round003/trace35-group9-row_permute/test2-tokens8": {
+      "version": 473,
+      "points": 151.23307450488477,
+      "count": 5
+    },
+    "round003/trace25-group16-row_permute/test3-tokens4": {
+      "version": 462,
+      "points": 3.2855339892287305,
+      "count": 1
+    },
+    "round003/trace25-group24-correlated_noise/test0-tokens4": {
+      "version": 445,
+      "points": 74.19136011023446,
+      "count": 1
+    },
+    "round003/trace25-group32-row_permute/test2-tokens4": {
+      "version": 469,
+      "points": 79.88175973022959,
+      "count": 1
+    },
+    "round007/trace35-group7-gain0.75/test0-tokens8": {
+      "version": 471,
+      "points": 73.415976709658,
+      "count": 4
+    },
+    "round007/trace35-group7-gain0.75/test1-tokens8": {
+      "version": 449,
+      "points": 1234.6399434097711,
+      "count": 24
+    },
+    "round007/trace35-group7-gain0.75/test2-tokens8": {
+      "version": 473,
+      "points": 261.60710661641883,
+      "count": 9
+    },
+    "round016/true-qk-gain0.5/test0-tokens4": {
+      "version": 454,
+      "points": 587.5408419856055,
+      "count": 27
+    },
+    "round016/true-qk-gain0.5/test3-tokens128": {
+      "version": 445,
+      "points": 211.07255759945534,
+      "count": 3
+    },
+    "round021/trace35-group7-seedplus3/test1-tokens8": {
+      "version": 457,
+      "points": 496.414747224107,
+      "count": 9
+    },
+    "round021/trace35-group7-seedplus3/test4-tokens8": {
+      "version": 467,
+      "points": 271.886319274004,
+      "count": 6
+    },
+    "round024/trace35-gain125-seedplus1/test3-tokens8": {
+      "version": 469,
+      "points": 154.6188349354189,
+      "count": 4
+    },
+    "round025/calib-only-gain05/test1-tokens8": {
+      "version": 473,
+      "points": 867.5933255677901,
+      "count": 40
+    },
+    "round025/calib-only-gain05/test2-tokens32": {
+      "version": 468,
+      "points": 309.39718374688084,
+      "count": 19
+    },
+    "round025/calib-only-gain05/test4-tokens512": {
+      "version": 455,
+      "points": 1085.6520651600144,
+      "count": 16
+    },
+    "round022/true-qk-gain0.5-seedplus1/test4-tokens512": {
+      "version": 472,
+      "points": 3709.6729504435025,
+      "count": 47
+    },
+    "round041/round002-noise005-seed101/test1-tokens8": {
+      "version": 473,
+      "points": 42.83237248420965,
+      "count": 1
+    },
+    "round041/round002-noise005-seed202/test1-tokens8": {
+      "version": 473,
+      "points": 42.83237248420965,
+      "count": 1
+    },
+    "round041/round002-noise005-seed303/test1-tokens8": {
+      "version": 473,
+      "points": 42.83237248420965,
+      "count": 1
+    }
+  }
+}

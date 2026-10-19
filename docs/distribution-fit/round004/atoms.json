@@ -1,0 +1,63 @@
+{
+  "round": 4,
+  "atoms": [
+    {
+      "id": "sink16-tail8",
+      "path": "local_distribution_fit/round004/sink16-tail8.pt",
+      "sha256": "ece54a41aafa0b6f8b9fa2e3a56000059622487c07f1113e48769894bf823099",
+      "seed": 2026091100,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "profile": {
+        "tail": 8,
+        "sink": 16
+      }
+    },
+    {
+      "id": "sink16-tail32",
+      "path": "local_distribution_fit/round004/sink16-tail32.pt",
+      "sha256": "05c88ae83281276e0e2a254bd836b8130fdf20dd650932a011b8a2a7ad4ff26d",
+      "seed": 2026091101,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "profile": {
+        "tail": 32,
+        "sink": 16
+      }
+    },
+    {
+      "id": "sink32-tail32",
+      "path": "local_distribution_fit/round004/sink32-tail32.pt",
+      "sha256": "e7d3bd19d3261613e33b9d8036fb106d25432a755708184f3eee2bfd8ef3a915",
+      "seed": 2026091102,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "profile": {
+        "tail": 32,
+        "sink": 32
+      }
+    },
+    {
+      "id": "sink32-tail128",
+      "path": "local_distribution_fit/round004/sink32-tail128.pt",
+      "sha256": "afff65402225aae135c262f5a07a3b95215277f5b7e1adbee4ddf023babae5b3",
+      "seed": 2026091103,
+      "mode": "block_resample",
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round001/m0-base.pt",
+      "source_sha256": "22ec4b6b2dfac21315546ca4a746017501b783c9e461c0e46948f04ce69c6c61",
+      "profile": {
+        "tail": 128,
+        "sink": 32
+      }
+    }
+  ],
+  "selection_evidence": "Observed round001 sink/block-resample 512-token case v310->v311 delta about -1878; target -4995. Test larger sink/tail amplitudes with unchanged judge and isolated roles.",
+  "limits": "Adaptive training support; transformed checkpoint projections are hypotheses, not captured hidden activations."
+}

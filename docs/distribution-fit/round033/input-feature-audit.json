@@ -1,0 +1,382 @@
+[
+  {
+    "atom": "source",
+    "data_sha256": "8b59659c90e13005b372a2a30dd872af8d392b29a7eb5f21f50fa19dfd4dff1f",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9989818334579468,
+        "effective_attention_tokens": 1.0020370483398438
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9772530794143677,
+        "effective_attention_tokens": 1.0345991849899292
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9729016423225403,
+        "effective_attention_tokens": 1.042982578277588
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9535948634147644,
+        "effective_attention_tokens": 1.0930010080337524
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.876740038394928,
+        "effective_attention_tokens": 1.2833287715911865
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9992356896400452,
+        "effective_attention_tokens": 1.0015252828598022
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9859055280685425,
+        "effective_attention_tokens": 1.018593430519104
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9798614978790283,
+        "effective_attention_tokens": 1.0359487533569336
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9663816094398499,
+        "effective_attention_tokens": 1.0694845914840698
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.867030143737793,
+        "effective_attention_tokens": 1.3067752122879028
+      }
+    ]
+  },
+  {
+    "atom": "test-sharp2",
+    "data_sha256": "7cc6a59b8d35ca0b5358b727032344cf58930dadb746144cc2e7fb0748bfedb3",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9989818334579468,
+        "effective_attention_tokens": 1.0020370483398438
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9772530794143677,
+        "effective_attention_tokens": 1.0345991849899292
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9729016423225403,
+        "effective_attention_tokens": 1.042982578277588
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9535948634147644,
+        "effective_attention_tokens": 1.0930010080337524
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.876740038394928,
+        "effective_attention_tokens": 1.2833287715911865
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9999983310699463,
+        "effective_attention_tokens": 1.000003457069397
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9904012680053711,
+        "effective_attention_tokens": 1.0115602016448975
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9970201253890991,
+        "effective_attention_tokens": 1.0035417079925537
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9999912977218628,
+        "effective_attention_tokens": 1.000017523765564
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.999322772026062,
+        "effective_attention_tokens": 1.000878095626831
+      }
+    ]
+  },
+  {
+    "atom": "test-sharp4",
+    "data_sha256": "00880d1dcc4fe0cc7ca3b9cff760040695c38d99e1f1ac0895ce40179f6eab1e",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9989818334579468,
+        "effective_attention_tokens": 1.0020370483398438
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9772530794143677,
+        "effective_attention_tokens": 1.0345991849899292
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9729016423225403,
+        "effective_attention_tokens": 1.042982578277588
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9535948634147644,
+        "effective_attention_tokens": 1.0930010080337524
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.876740038394928,
+        "effective_attention_tokens": 1.2833287715911865
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 1.0,
+        "effective_attention_tokens": 1.0
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9937639832496643,
+        "effective_attention_tokens": 1.0088777542114258
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9979400634765625,
+        "effective_attention_tokens": 1.0024266242980957
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 1.0,
+        "effective_attention_tokens": 1.0
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.9996298551559448,
+        "effective_attention_tokens": 1.0004963874816895
+      }
+    ]
+  },
+  {
+    "atom": "both-sharp2",
+    "data_sha256": "684ea09ec7cd6c807bf3ab09f7875809010733019247aeb01610b60161467b41",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9999996423721313,
+        "effective_attention_tokens": 1.0000007152557373
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9928440451622009,
+        "effective_attention_tokens": 1.012381672859192
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9890859723091125,
+        "effective_attention_tokens": 1.013100504875183
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9981836080551147,
+        "effective_attention_tokens": 1.0020887851715088
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.9998446702957153,
+        "effective_attention_tokens": 1.0002756118774414
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 0.9999983310699463,
+        "effective_attention_tokens": 1.000003457069397
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9904012680053711,
+        "effective_attention_tokens": 1.0115602016448975
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9970201253890991,
+        "effective_attention_tokens": 1.0035417079925537
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9999912977218628,
+        "effective_attention_tokens": 1.000017523765564
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.999322772026062,
+        "effective_attention_tokens": 1.000878095626831
+      }
+    ]
+  },
+  {
+    "atom": "both-sharp4",
+    "data_sha256": "2067b3f7528842264e86900d74ef3d48ca325f260be31fdbfc6ba4847af9eed8",
+    "rows": [
+      {
+        "phase": "calib",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 1.0,
+        "effective_attention_tokens": 1.0
+      },
+      {
+        "phase": "calib",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9992924332618713,
+        "effective_attention_tokens": 1.001387596130371
+      },
+      {
+        "phase": "calib",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9925259351730347,
+        "effective_attention_tokens": 1.0094854831695557
+      },
+      {
+        "phase": "calib",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 0.9986028671264648,
+        "effective_attention_tokens": 1.0017921924591064
+      },
+      {
+        "phase": "calib",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.9999978542327881,
+        "effective_attention_tokens": 1.0000044107437134
+      },
+      {
+        "phase": "test",
+        "test": 0,
+        "tokens": 4,
+        "mean_max_probability": 1.0,
+        "effective_attention_tokens": 1.0
+      },
+      {
+        "phase": "test",
+        "test": 1,
+        "tokens": 8,
+        "mean_max_probability": 0.9937639832496643,
+        "effective_attention_tokens": 1.0088777542114258
+      },
+      {
+        "phase": "test",
+        "test": 2,
+        "tokens": 32,
+        "mean_max_probability": 0.9979400634765625,
+        "effective_attention_tokens": 1.0024266242980957
+      },
+      {
+        "phase": "test",
+        "test": 3,
+        "tokens": 128,
+        "mean_max_probability": 1.0,
+        "effective_attention_tokens": 1.0
+      },
+      {
+        "phase": "test",
+        "test": 4,
+        "tokens": 512,
+        "mean_max_probability": 0.9996298551559448,
+        "effective_attention_tokens": 1.0004963874816895
+      }
+    ]
+  }
+]

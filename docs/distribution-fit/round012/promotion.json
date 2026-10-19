@@ -1,0 +1,37 @@
+{
+  "evidence": {
+    "population": "round012/sink-input-seed2026091600",
+    "test": 2,
+    "tokens": 32,
+    "price": 207.86508035968785,
+    "required_lower_bound": 18.453854092219178,
+    "margin": 189.41122626746866
+  },
+  "required_versions": [
+    283,
+    284,
+    310,
+    314,
+    318,
+    319,
+    320,
+    322,
+    333,
+    343,
+    345,
+    364,
+    387,
+    388,
+    400,
+    412,
+    415,
+    416,
+    419,
+    429,
+    435,
+    436,
+    440
+  ],
+  "decision": "Complete all remaining retained versions for this atom. Screening job already passed this atom; complement excludes all screened versions.",
+  "limits": "Breaks one fixed reduced certificate only; full shared-mixture feasibility remains unproven."
+}

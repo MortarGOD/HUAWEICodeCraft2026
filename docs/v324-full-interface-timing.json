@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "sha256": "2892edb7ce7356866d556421d3c9fc8349efe16a8ebf23c9eec4f04541849d8b",
+  "shape": "full",
+  "rows": [
+    {
+      "group": 0,
+      "shape": [
+        8192,
+        2048
+      ],
+      "parent": {
+        "calibration": 14.028358792013023,
+        "dynamic": 6.298055791994557
+      },
+      "candidate": {
+        "calibration": 14.22043179202592,
+        "dynamic": 3.5308310840046033
+      }
+    },
+    {
+      "group": 9,
+      "shape": [
+        4096,
+        2048
+      ],
+      "candidate": {
+        "calibration": 8.78361208399292,
+        "dynamic": 3.5308315830188803
+      },
+      "parent": {
+        "calibration": 8.747278792026918,
+        "dynamic": 4.620031915954314
+      }
+    }
+  ],
+  "totals": {
+    "parent": {
+      "calibration": 22.77563758403994,
+      "dynamic": 10.918087707948871
+    },
+    "candidate": {
+      "calibration": 23.00404387601884,
+      "dynamic": 7.061662667023484
+    }
+  },
+  "ratio": 0.8923236086984687,
+  "score_prediction_allowed": false,
+  "warning": "Linear-only Mac 4-thread timing; do not multiply whole online runtime by this ratio. wide=transposed checkpoint runtime stress, not actual layer quality."
+}

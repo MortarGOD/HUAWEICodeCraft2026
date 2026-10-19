@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "atom": "trace35-group9-row_permute",
+      "quality": {
+        "parent306": 0.2353634234886648,
+        "native307": 0.22988556761560391,
+        "gptq_off307": 0.2353634234886648,
+        "torch307": 0.22988556761560391,
+        "q_only307": 0.23250383977832006,
+        "k_only307": 0.23172008850273831,
+        "qks_off307": 0.22988556761560391,
+        "both_off307": 0.2353634234886648
+      },
+      "off_vs_parent_mse_exact": true,
+      "torch_vs_native_mse_exact": true
+    },
+    {
+      "atom": "trace25-group40-row_permute",
+      "quality": {
+        "parent306": 0.7193987141820694,
+        "native307": 0.7500698434381221,
+        "gptq_off307": 0.7193987141820694,
+        "torch307": 0.7500698434381221,
+        "q_only307": 0.7500698434381221,
+        "k_only307": 0.7193987141820694,
+        "qks_off307": 0.7091946362993863,
+        "both_off307": 0.6591345319846007
+      },
+      "off_vs_parent_mse_exact": true,
+      "torch_vs_native_mse_exact": true
+    }
+  ],
+  "limits": "Two preselected existing trace groups, independent role calibration. Overrides diagnostic only; not fitting cells or global backend equivalence proof."
+}

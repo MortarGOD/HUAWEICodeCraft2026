@@ -1,0 +1,521 @@
+{
+  "round": 36,
+  "atoms": [
+    {
+      "id": "perm0132",
+      "path": "local_distribution_fit/round036/perm0132.pt",
+      "sha256": "e037c4cb364d03d44433150e5965adb88f984a4ba54d959eac15116cdca8cecc",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm0213",
+      "path": "local_distribution_fit/round036/perm0213.pt",
+      "sha256": "cd1e739c6fa7ee704f59779733b7eed23bded7f66c785fbfb0f00513a70beadd",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm0231",
+      "path": "local_distribution_fit/round036/perm0231.pt",
+      "sha256": "91295180ccec5cad61cfe45b3b184f6a55627b6d4b80734c7334bf7115bf1bdf",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm0312",
+      "path": "local_distribution_fit/round036/perm0312.pt",
+      "sha256": "5431645af81709725d8e9567080697217cb6653da74f5fdbe6748834c6a77535",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm0321",
+      "path": "local_distribution_fit/round036/perm0321.pt",
+      "sha256": "a0f94c4f0971d911549b17197920036880b01a1cfc715eca1d44c369d6a5826e",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1023",
+      "path": "local_distribution_fit/round036/perm1023.pt",
+      "sha256": "510db9286f27bb1dacae690d3e50edf33807ee1e259a798d31928ee1208d7382",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1032",
+      "path": "local_distribution_fit/round036/perm1032.pt",
+      "sha256": "0bff8f9deb082789ace7c0de74d1e734b603dbab611151af64ac61694a271445",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1203",
+      "path": "local_distribution_fit/round036/perm1203.pt",
+      "sha256": "5e2f763090c7000eaa60780c29bf9e81369b81005b7f1aae343c53eaedc0bebf",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1230",
+      "path": "local_distribution_fit/round036/perm1230.pt",
+      "sha256": "9d7330db8f4986811cc8f8ac33effe49f21b0416cc6e84f9c257f980b850378f",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1302",
+      "path": "local_distribution_fit/round036/perm1302.pt",
+      "sha256": "4cf29800baebdb690c45ca5419a043131442ca6adb349a4238439fcf9d1b7cdd",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm1320",
+      "path": "local_distribution_fit/round036/perm1320.pt",
+      "sha256": "fd3bf1ce5732aabbceb55efa52617e9800b6a4697e201b1d4b774c8aaaa4504f",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2013",
+      "path": "local_distribution_fit/round036/perm2013.pt",
+      "sha256": "dd912c3efd7eb4b77e006b93e2f59a04dd7bfebdab3e5e39755957b49c46ffde",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2031",
+      "path": "local_distribution_fit/round036/perm2031.pt",
+      "sha256": "671108392aedcb16019dda59b29e384df7d7c026b1cfc85d5c9e52a584ef4c19",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2103",
+      "path": "local_distribution_fit/round036/perm2103.pt",
+      "sha256": "1826612d861f5699d5eee4dabdf0413b7ff13102e2bd068c30e5b974e631a06c",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2130",
+      "path": "local_distribution_fit/round036/perm2130.pt",
+      "sha256": "e26b5e62b24dcbcdce5dc2635cd82df1002a7261c09aa33a8ee1bcb2a8594446",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2301",
+      "path": "local_distribution_fit/round036/perm2301.pt",
+      "sha256": "989bfea367053d96e6c3946da4d67a8d82aa5afa76272284dc80b6fc917a44b1",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm2310",
+      "path": "local_distribution_fit/round036/perm2310.pt",
+      "sha256": "05da231f4fd9bd2c829d56100ab487e2c7c37bc83b6254089fb01474fadc8c0f",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3012",
+      "path": "local_distribution_fit/round036/perm3012.pt",
+      "sha256": "e0fb39b5441cd46f85d7b281172268d968dcb24e79de01299e8b70e3ec6cf5be",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3021",
+      "path": "local_distribution_fit/round036/perm3021.pt",
+      "sha256": "84b8553a5074bdd762329e8d16850f61e3f99bb984af71732d4b23cbda1b078f",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3102",
+      "path": "local_distribution_fit/round036/perm3102.pt",
+      "sha256": "b1821ee459fc11f16469b3ca97a4a36202f1db2d26f893f2712257cce04cfc92",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3120",
+      "path": "local_distribution_fit/round036/perm3120.pt",
+      "sha256": "81b82899d1b3b1bee3efd0971e34d5e0f4b042118db8fa60f699c8f51e0b1772",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3201",
+      "path": "local_distribution_fit/round036/perm3201.pt",
+      "sha256": "5e8ba234181c320af99ead3a6392635a18dd638709d38d1d04865b351ae4bbc7",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "calibration_unchanged": true
+      }
+    },
+    {
+      "id": "perm3210",
+      "path": "local_distribution_fit/round036/perm3210.pt",
+      "sha256": "ffb4149138a19573f8d8fcf3ce5b2f7b22eaa1b03b6c3dec5827d5861d6b8b97",
+      "seed": 2026091040,
+      "mode": "row_permute",
+      "noise": 0.05,
+      "fit_eligible": true,
+      "source_path": "local_distribution_fit/round003/trace25-group40.pt",
+      "source_sha256": "e96b17c7508ba1d4c67dd5484d596764642b2667e541396a48a950d9215bd652",
+      "source_group": 40,
+      "profile": {
+        "test_v_row_permutation": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "calibration_unchanged": true
+      }
+    }
+  ],
+  "certificate_sha256": "43b90ceda87319477b6b74bef8b558ab8f5b1b72e63807489ad84ff73fa8830e",
+  "required_versions": [
+    308,
+    309,
+    310,
+    311,
+    322,
+    326,
+    330,
+    337,
+    340,
+    341,
+    365,
+    367,
+    379,
+    381,
+    382,
+    386,
+    387,
+    392,
+    399,
+    402,
+    403,
+    404,
+    412,
+    418,
+    419,
+    429,
+    435,
+    436
+  ],
+  "selection_evidence": "Enumerate all 23 nonidentity permutations on current closest four-token source. Identity already measured. No candidate errors or outputs choose the order.",
+  "limits": "Exhaustive only for fixed-source test V row permutations, not all datasets or calibration protocols. Positive separator margin still requires complete measurement and joint verification."
+}

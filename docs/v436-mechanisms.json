@@ -1,0 +1,94 @@
+{
+  "checks": {
+    "woodbury_dense_and_probability_permutation": true,
+    "legal_full_grid_changes_risk_caps_and_immutability": true,
+    "public_parent_preserved_fresh_role_replay_rng": true
+  },
+  "reconstructions": [
+    {
+      "shape": [
+        16,
+        1,
+        64
+      ],
+      "changed_values": 13,
+      "risk_before": 0.49859021490120536,
+      "risk_after": 0.4544646592967022
+    },
+    {
+      "shape": [
+        64,
+        2,
+        128
+      ],
+      "changed_values": 199,
+      "risk_before": 0.6342005031874457,
+      "risk_after": 0.6284024487618749
+    },
+    {
+      "shape": [
+        257,
+        1,
+        64
+      ],
+      "changed_values": 12,
+      "risk_before": 0.07533001439622823,
+      "risk_after": 0.07222244533113743
+    },
+    {
+      "shape": [
+        1,
+        1,
+        64
+      ],
+      "changed_values": 0,
+      "risk_before": 6.49999994437862,
+      "risk_after": 6.49999994437862
+    }
+  ],
+  "costs": [
+    {
+      "shape": [
+        128,
+        2,
+        64
+      ],
+      "seconds": 0.003176916972734034,
+      "changed_values": 9
+    },
+    {
+      "shape": [
+        512,
+        4,
+        128
+      ],
+      "seconds": 0.020225291955284774,
+      "changed_values": 674
+    },
+    {
+      "shape": [
+        2048,
+        4,
+        128
+      ],
+      "seconds": 0.08649450005032122,
+      "changed_values": 3473
+    },
+    {
+      "shape": [
+        4096,
+        4,
+        128
+      ],
+      "seconds": 0.00023737491574138403,
+      "changed_values": 0
+    }
+  ],
+  "field_changes": {
+    "scale_factor": 0,
+    "scale_lv2": 18,
+    "scale_lv3": 38,
+    "sign": 1948,
+    "mant": 299
+  }
+}

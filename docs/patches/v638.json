@@ -1,0 +1,25 @@
+{
+  "version": 638,
+  "parent": 637,
+  "parent_sha256": "e03a21d484ac449f2e5639de6080b40ed0293d103df4823e9f69efd5b5629e48",
+  "summary": "Max-shot combination: v637 (Linear block 4 + ridge 1e-2 + exponent 0.30) plus v635's forced Q/K fitted stack. The Linear part is verified to improve two banks and is legally grounded (real calibration data); the attention part is the high-variance probe. Bundling means a Q/K loss can erase the Linear gain.",
+  "patches": [
+    [
+      "        if mse_gq < mse_b and ATTN_GPTQ_ENABLE:\n",
+      "        # v635 probe: force the Q/K fitted stack on. Under the fake-counterpart protocol the\n        # held-out comparison above is evaluated through a fake counterpart during that role's\n        # calibration, so on the judge it may reject a fit by chance. Forcing it makes the\n        # judge's Q/K state match the configuration that is worth +1841 locally.\n        if ATTN_GPTQ_ENABLE:\n"
+    ],
+    [
+      "QKS_STABILITY = True        # False = skip the stability filter (diagnostics)\n",
+      "QKS_STABILITY = False       # v635 probe: force the Q/K smoothing fit to be accepted\n"
+    ],
+    [
+      "QKS_GUARD = True            # False = accept any finite fit (diagnostics)\n",
+      "QKS_GUARD = False           # v635 probe: accept the fitted Q/K smoothing unconditionally\n"
+    ],
+    [
+      "ATTN_REFINE_GUARD = True    # hold-out gate in calibration (False = force on)\n",
+      "ATTN_REFINE_GUARD = False   # v635 probe: force the Q/K lattice refinement on\n"
+    ]
+  ],
+  "append": []
+}

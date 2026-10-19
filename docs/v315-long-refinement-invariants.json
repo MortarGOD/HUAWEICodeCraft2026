@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "rows": 1,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 1,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 128,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 128,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 1024,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 1024,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 1025,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 1025,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 2048,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 2048,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 4096,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 4096,
+      "role": "k",
+      "valid": true
+    },
+    {
+      "rows": 4097,
+      "role": "q",
+      "valid": true
+    },
+    {
+      "rows": 4097,
+      "role": "k",
+      "valid": true
+    }
+  ],
+  "note": "Prototype checks, not new submission self_check."
+}

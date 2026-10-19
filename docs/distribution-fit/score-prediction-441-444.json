@@ -1,0 +1,46 @@
+{
+  "anchor_version": 435,
+  "anchor_online_total": 21304.0,
+  "linear_assumed": 4450.0,
+  "scale_on_fit_passed_edges": 0.9629050566333495,
+  "method": "fitted 675-col mixture (amplitude-20pct-vmean-growth.json); local_delta over common columns scaled by weight coverage; online_delta = scale*local_delta",
+  "predictions": {
+    "441": {
+      "local_delta": 94.97349598866931,
+      "coverage": 0.999998842331556,
+      "missing_columns": 0,
+      "online_delta": 91.45045953363682,
+      "est_online_total": 21395.450459533637,
+      "est_attention": 16945.450459533637,
+      "complete": true
+    },
+    "442": {
+      "local_delta": 96.6531896498462,
+      "coverage": 0.999998842331556,
+      "missing_columns": 0,
+      "online_delta": 93.06784505357902,
+      "est_online_total": 21397.067845053578,
+      "est_attention": 16947.067845053578,
+      "complete": true
+    },
+    "443": {
+      "local_delta": -1.785565068138184,
+      "coverage": 0.964544476126775,
+      "missing_columns": 1,
+      "online_delta": -1.7193296330581287,
+      "est_online_total": 21302.28067036694,
+      "est_attention": 16852.28067036694,
+      "complete": false
+    },
+    "444": {
+      "local_delta": 112.07871210829859,
+      "coverage": 0.999998842331556,
+      "missing_columns": 0,
+      "online_delta": 107.92115863003413,
+      "est_online_total": 21411.921158630033,
+      "est_attention": 16961.921158630033,
+      "complete": true
+    }
+  },
+  "limits": "Extrapolation from training-support fit (77/98 amplitude matched, direction 98/98). Fit residual RMSE on passed edges ~158; small-magnitude band (<100) ~28. v443 has incomplete column coverage."
+}

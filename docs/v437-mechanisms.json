@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "independent_H_U_transport_parent_product_nested_boundary_rng": true,
+    "parent_calibration_preserved_V_equal_public_fresh_replay": true
+  },
+  "transport": [
+    {
+      "d": 64,
+      "seconds": 0.01070979202631861,
+      "parent_product_max_error": 2.384185791015625e-07
+    },
+    {
+      "d": 96,
+      "seconds": 0.001056583016179502,
+      "parent_product_max_error": 2.384185791015625e-07
+    },
+    {
+      "d": 128,
+      "seconds": 0.001785582979209721,
+      "parent_product_max_error": 2.5331974029541016e-07
+    },
+    {
+      "d": 256,
+      "seconds": 0.007178707979619503,
+      "parent_product_max_error": 3.427267074584961e-07
+    },
+    {
+      "d": 512,
+      "seconds": 0.06457920803222805,
+      "parent_product_max_error": 3.5762786865234375e-07
+    }
+  ],
+  "synthetic_changed_values": {
+    "q": 1990,
+    "k": 993,
+    "v": 0
+  }
+}
